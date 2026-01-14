@@ -8,7 +8,7 @@
 
   <section class="content-header">
     <div class="container-fluid">
-      <h3 class="mb-0">Judul halaman ini (Mahasiswa) </h3>
+      <h3 class="mb-0">Judul halaman ini (Mahasiswa)</h3>
         <p class="text-muted mb-0">Keterangan singkat cara baca informasi halaman ini</p>
     </div>
   </section>
@@ -22,7 +22,9 @@
           <!-- ========== CARD : Filter & Export ========== -->
           <div class="card">
             <div class="card-header">
-              <h5 class="card-title mb-0"><i class="fas fa-filter "></i> Judul Tabel yang terdampak tombol aksi ini</h5>
+              <h5 class="card-title mb-0"><i class="fas fa-filter "></i> Judul Tabel yang terdampak tombol aksi ini<button type="button" class="btn btn-tool" data-bs-toggle="modal" data-bs-target="#modalBantuan" title="Bantuan">
+                <i class="fas fa-question-circle"></i>
+              </button> </h5>
               <div class="card-tools ms-auto">
                 <button class="btn btn-outline-info btn-sm " data-bs-toggle="modal" data-bs-target="#modalFilter">
                   <i class="fas fa-filter me-1"></i> Filter
@@ -30,15 +32,19 @@
                 <button type="button" class="btn btn-outline-primary btn-sm " data-bs-toggle="modal" data-bs-target="#modalTambahData">
                   <i class="fas fa-plus me-1"></i> Add
                 </button>
-                <button type="button" class="btn btn-outline-primary btn-sm ">
+                <button type="button" class="btn btn-outline-primary btn-sm " data-bs-toggle="modal" data-bs-target="#modalImpor">
                   <i class="fas fa-file-upload me-1"></i> Import
-                </button>
+                </button>                
                 <button type="button" class="btn btn-outline-success btn-sm">
                   <i class="fas fa-file-download me-1"></i> Export
                 </button>
+                 <button type="button" class="btn btn-outline-danger btn-sm">
+                  <i class="fas fa-ban me-1"></i> Reset
+                </button>
+                
               </div>
             </div>
-            <div class="card-body">
+            <div class="card-body ">
               <div class="row">
 
                 <div class="col-md-6">
@@ -153,7 +159,55 @@
                     <td>annisa.sintowati@univ.ac.id</td>
                     <td class="text-center"><img style="width: 40px;" alt="Foto"></td>
                     <td class="text-center"><span class="badge bg-info">Aktif</span></td>
-                    <td class="text-center"><button type="button" class="btn btn-sm btn-outline-warning">🔑</button></td>
+                    <td class="text-center">
+                      <div class="btn-group">
+                        <!-- Tombol utama (View) -->
+                        <a href="portfolio_cpmk_detail2.php" target="_blank" 
+                        class="btn btn-sm btn-outline-info">
+                        <i class="fas fa-external-link-alt"></i> View
+                      </a>
+
+                      <!-- Tombol dropdown -->
+                      <button type="button" 
+                      class="btn btn-sm btn-outline-info dropdown-toggle dropdown-toggle-split"
+                      data-bs-toggle="dropdown" aria-expanded="false">
+                      <span class="visually-hidden">Toggle Dropdown</span>
+                    </button>
+
+                    <!-- Menu dropdown -->
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a class="dropdown-item" href="#">
+                          <i class="fas fa-edit text-primary"></i> Edit Link
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">
+                          <i class="fas fa-trash-alt text-danger"></i> Hapus Data
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">
+                          <i class="fas fa-key text-warning"></i> Ubah Password
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">
+                          <i class="fas fa-upload text-primary"></i> Upload File
+                        </a>
+                      </li>
+
+                      <li><hr class="dropdown-divider"></li>
+
+                      <li>
+                        <a class="dropdown-item" href="#">
+                          <i class="fas fa-download text-success"></i> Download File
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+
+</td>
                   </tr>
                   <tr>
                     <td class="text-center">4</td>
@@ -286,7 +340,10 @@
       </div>
     </div>
   </section>
+  </div>
+  <!-- /.content-wrapper -->
 
+<?php include('4footer.php'); ?>
 
 <!-- Modal Filter -->
 <div class="modal fade" id="modalFilter" tabindex="-1" aria-labelledby="modalFilterLabel" aria-hidden="true">
@@ -297,111 +354,188 @@
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <form action="" method="GET">
-        <div class="modal-body">
 
+        <div class="modal-body">
           <!-- Catatan penting -->
           <div class="alert alert-warning mb-3" role="alert" style="font-size: 0.9rem;">
-          <b>Informasi:</b> Halaman ini otomatis menampilkan data angkatan terbaru saat pertama dibuka. Data awal yang tampil adalah angkatan [2025].
+            <b>Informasi:</b> Halaman ini otomatis menampilkan data angkatan terbaru saat pertama dibuka. Data awal yang tampil adalah angkatan [2025].
           </div>
-       
-          <!-- Pilihan -->
           <div class="mb-3">
-            <label for="lembaga" class="form-label">Status</label>
-            <select name="lembaga" id="lembaga" class="form-select">
-              <option value="">-- Pilih --</option>
-              <option value="IABEE" >pilihan 1</option>
-              <option value="LAM TEKNIK" >pilihan 2</option>
-              <option value="BATAP" >pilihan 3</option>
-              <option value="EDUSQUAD">pilihan 4</option>
+            <label for="angkatan" class="form-label">Angkatan</label>
+            <select name="angkatan" id="angkatan" class="form-select">
+              <option value="">-- Pilih Angkatan --</option>
+              <option value="2025">2025</option>
+              <option value="2024">2024</option>
+              <option value="2023">2023</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="status" class="form-label">Status</label>
+            <select name="status" id="status" class="form-select">
+              <option value="">-- Pilih Status --</option>
+              <option value="Aktif">Aktif</option>
+              <option value="NonAktif">NonAktif</option>
             </select>
           </div>
        
+       </div>
+
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
           <button type="submit" class="btn btn-info">Terapkan Filter</button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Modal Tambah Data -->
+<div class="modal fade" id="modalTambahData" tabindex="-1" aria-labelledby="modalTambahDataLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content rounded-3 shadow">
+      <div class="modal-header bg-primary text-white">
+        <h5 class="modal-title" id="modalTambahDataLabel">Tambah Data</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form action="" method="POST" enctype="multipart/form-data">
+        <div class="modal-body">
+
+          <!-- Informasi -->
+          <div class="alert alert-warning mb-3 py-2" role="alert" style="font-size: 0.9rem;">
+            <i class="fas fa-info-circle me-1"></i>
+            <strong>Catatan:</strong> Semua field yang diberi tanda <span class="text-danger">*</span> wajib diisi.
+          </div>
+
+          <!-- Form Inputs -->
+          <div class="mb-3">
+            <label for="username" class="form-label">NIM <span class="text-danger">*</span></label>
+            <input type="text" class="form-control" id="username" name="username" placeholder="Masukkan Username" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="displayname" class="form-label">Nama Lengkap <span class="text-danger">*</span></label>
+            <input type="text" class="form-control" id="displayname" name="displayname" placeholder="Masukkan Nama Lengkap" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="email" class="form-label">Email <span class="text-danger">*</span></label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="Masukkan Email" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="hp" class="form-label">Nomor HP <span class="text-danger">*</span></label>
+            <input type="text" class="form-control" id="hp" name="hp" placeholder="Masukkan Nomor HP" required>
+          </div>
+          <div class="mb-3">
+            <label for="angkatan" class="form-label">Angkatan</label>
+            <select name="angkatan" id="angkatan" class="form-select">
+              <option value="">-- Pilih Angkatan --</option>
+              <option value="2025">2025</option>
+              <option value="2024">2024</option>
+              <option value="2023">2023</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="angkatan" class="form-label">Peminatan</label>
+            <select name="angkatan" id="angkatan" class="form-select">
+              <option value="">-- Pilih Peminatan --</option>
+              <option value="2025">A</option>
+              <option value="2024">B</option>
+              <option value="2023">C</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="status" class="form-label">Status <span class="text-danger">*</span></label>
+            <select class="form-select" id="status" name="status" required>
+              <option value="">-- Pilih Status --</option>
+              <option value="Aktif">Aktif</option>
+              <option value="NonAktif">NonAktif</option>
+              <option value="Cuti">Cuti</option>
+              <option value="Skors">Skors</option>
+              <option value="PassedOut">Passed Out</option>
+              <option value="DropOut">Drop Out</option>
+              <option value="Lulus">Lulus</option>
+            </select>
+          </div>
+
+          <div class="mb-3">
+            <label for="foto" class="form-label">Foto <span class="text-danger">*</span></label>
+            <input type="file" class="form-control" id="foto" name="foto" required>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+          <button type="submit" class="btn btn-primary">Simpan Data</button>
         </div>
       </form>
     </div>
   </div>
 </div>
 
-<!-- Modal TambahData -->
-<div class="modal fade" id="modalTambahData" tabindex="-1" aria-labelledby="modalTambahDataLabel" aria-hidden="true">
+
+<!-- Modal Impor -->
+<div class="modal fade" id="modalImpor" tabindex="-1">
   <div class="modal-dialog">
     <div class="modal-content">
 
-      <!-- Header -->
       <div class="modal-header bg-primary text-white">
-        <h5 class="modal-title" id="modalTambahDataLabel">Tambah Data Mahasiswa</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        <h5 class="modal-title">Impor Data</h5>
+        <button class="btn-close" data-bs-dismiss="modal"></button>
       </div>
 
-      <!-- Body -->
-      <div class="modal-body">
-        <form id="formTambahMahasiswa">
-          <div class="mb-3">
-            <label for="nim" class="form-label">NIM</label>
-            <input type="text" class="form-control" id="nim" name="nim" placeholder="Masukkan NIM">
-          </div>
-          <div class="mb-3">
-            <label for="nama" class="form-label">Nama Mahasiswa</label>
-            <input type="text" class="form-control" id="nama" name="nama" placeholder="Masukkan Nama">
-          </div>
-          <div class="mb-3">
-            <label for="email" class="form-label">Email / HP</label>
-            <input type="email" class="form-control" id="email" name="email" placeholder="Masukkan Email">
-          </div>
-          <div class="mb-3">
-            <label for="status" class="form-label">Status</label>
-            <select id="status" name="status" class="form-select">
-              <option value="">-- Pilih Status --</option>
-              <option value="Aktif">Aktif</option>
-              <option value="NonAktif">NonAktif</option>
-            </select>
-          </div>
-        </form>
+      <div class="modal-body">   
+        <div class="alert alert-warning mb-3 py-2" role="alert" style="font-size: 0.9rem;">
+          <i class="fas fa-exclamation-triangle me-1"></i>
+          <strong>Penting:</strong> Pastikan file yang akan diimpor menggunakan <strong>template resmi</strong> yang sudah disediakan. Menggunakan file lain atau format berbeda dapat menyebabkan <strong>kesalahan impor</strong>.
+        </div>     
+
+        <label class="form-label">Pilih File:</label>
+        <input type="file" class="form-control mb-3" accept=".xlsx,.xls">
+
+        <a href="template-impor-mahasiswa.xls" class="btn btn-sm btn-outline-success w-100">Download Template</a>
       </div>
 
-      <!-- Footer -->
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
-        <button type="submit" form="formTambahMahasiswa" class="btn btn-primary">Simpan</button>
+        <button class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+        <button class="btn btn-primary">Impor</button>
       </div>
 
     </div>
   </div>
 </div>
 
-
-
-  <footer class="main-footer">
-    <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong>
-    All rights reserved.
-    <div class="float-right d-none d-sm-inline-block">
-      <b>Version</b> 3.1.0
+<!-- Modal Bantuan -->
+<div class="modal fade" id="modalBantuan" tabindex="-1" aria-labelledby="modalBantuanLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header bg-primary text-white">
+        <h5 class="modal-title" id="modalBantuanLabel">Bantuan Tabel</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>
+          Ini adalah penjelasan panjang tentang tabel. Anda bisa menuliskan informasi detail,
+          petunjuk penggunaan tombol, cara membaca data, dan tips penting lainnya di sini.
+        </p>
+        <p>
+          Misalnya:  
+          - Tombol Filter digunakan untuk memfilter data berdasarkan kolom.  
+          - Tombol Impor digunakan untuk memasukkan data dari file Excel.  
+          - Tombol Reset akan menghapus semua data di tabel, gunakan dengan hati-hati.  
+        </p>
+        <p>
+          Anda bisa menambahkan banyak paragraf atau daftar sesuai kebutuhan.
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+      </div>
     </div>
-  </footer>
-
-  <!-- Control Sidebar -->
-  <aside class="control-sidebar control-sidebar-dark">
-    <!-- Control sidebar content goes here -->
-  </aside>
-  <!-- /.control-sidebar -->
-
+  </div>
 </div>
-<!-- ./wrapper -->
 
-
-<!-- jQuery dulu (untuk AdminLTE) -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-
-<!-- OverlayScrollbars -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/1.13.3/js/jquery.overlayScrollbars.min.js"></script>
-
-<!-- Bootstrap 5 Bundle (JS + Popper) harus **sebelum** AdminLTE -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
-<!-- AdminLTE v3 -->
-<script src="https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/js/adminlte.min.js"></script>
-</body>
-</html>
+<?php include('5script.php'); ?>
