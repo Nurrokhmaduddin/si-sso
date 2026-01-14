@@ -139,7 +139,7 @@
     </div>
 
     <div class="footer">
-      © <?= date('Y') ?> Sistem Informasi
+      © 2026 Sistem Informasi
     </div>
   </div>
 
