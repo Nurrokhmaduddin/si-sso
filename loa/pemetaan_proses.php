@@ -1,0 +1,1 @@
+petakan, bobotkan, preview

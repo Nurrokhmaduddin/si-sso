@@ -129,6 +129,26 @@
       color: #9ca3af;
     }
   </style>
+  <style type="text/css">
+    .menu-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 24px;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.menu-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.1);
+}
+
+  </style>
 </head>
 <body>
 
@@ -155,10 +175,18 @@
       <div class="menu-card"><h3>Proses B</h3><p>Modul Proses B</p></div>
       <div class="menu-card"><h3>Akad</h3><p>Manajemen Akad</p></div>
 
-      <div class="menu-card"><h3>LOA</h3><p>Learning Outcome Assessment</p></div>
-      <div class="menu-card"><h3>PTA</h3><p>Pengelolaan Tugas Akhir</p></div>
+      <a href="loa/" class="menu-card">
+        <h3>LOA</h3>
+        <p>Learning Outcome Assessment</p>
+      </a>
+
+      <a href="pta/" class="menu-card">
+        <h3>PTA</h3>
+        <p>Pengelolaan Tugas Akhir</p>
+      </a>
+
       <div class="menu-card"><h3>LAB</h3><p>Manajemen Laboratorium</p></div>
-      <div class="menu-card"><h3>SMC</h3><p>System Management Center</p></div>
+      <div class="menu-card"><h3>CME</h3><p>Conference Management Eventr</p></div>
 
       <div class="menu-card"><h3>Marketing</h3><p>Divisi Pemasaran</p></div>
       <div class="menu-card"><h3>Sales</h3><p>Divisi Penjualan</p></div>
