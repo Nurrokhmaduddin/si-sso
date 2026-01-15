@@ -25,5 +25,26 @@ $(document).ready(function() {
     });
 });
 </script>
+
+<script>
+$(document).ready(function() {
+
+  // Event untuk klik peran
+  $(".role-select").on("click", function() {
+      let role = $(this).data("role");
+
+      alert("Anda memilih peran: " + role);
+
+      // menutup modal setelah pilih
+      let modal = bootstrap.Modal.getInstance(document.getElementById('modalPilihPeran'));
+      modal.hide();
+
+      // jika mau redirect
+      // window.location.href = "dashboard-" + role.toLowerCase() + ".php";
+  });
+
+});
+</script>
+
 </body>
 </html>

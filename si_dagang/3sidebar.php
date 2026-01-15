@@ -62,9 +62,9 @@
               </a>
             </li>
             <li class="nav-item">
-              <a href="master-kategori.php" class="nav-link">
+              <a href="master-coa.php" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
-                <p>Data Kategori</p>
+                <p>COA</p>
               </a>
             </li>
           </ul>
@@ -75,7 +75,7 @@
           <a href="#" class="nav-link">
             <i class="nav-icon fas fa-tasks"></i>
             <p>
-              Proses Aktivitas TA
+              Proses SALES
               <i class="right fas fa-angle-left"></i>
             </p>
           </a>
@@ -141,44 +141,147 @@
           </ul>
         </li>
 
-
-        <!-- MANAJ AKTIVITAS -->
+ <!-- PROSES AKTIVITAS -->
         <li class="nav-item">
           <a href="#" class="nav-link">
-            <i class="nav-icon fas fa-folder-open"></i>
+            <i class="nav-icon fas fa-tasks"></i>
             <p>
-              Manajemen Aktivitas
+              Proses OPERATION
               <i class="right fas fa-angle-left"></i>
             </p>
           </a>
+
           <ul class="nav nav-treeview">
+
             <li class="nav-item">
-              <a href="aktivitas-manajemen.php" class="nav-link">
+              <a href="aktivitas1-pendaftaran.php" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
-                <p>User</p>
+                <p>Pendaftaran</p>
               </a>
             </li>
+
             <li class="nav-item">
-              <a href="aktivitas-laporan.php" class="nav-link">
+              <a href="aktivitas2-penentuan-topik.php" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
-                <p>Peran</p>
+                <p>Penentuan Topik</p>
               </a>
             </li>
+
             <li class="nav-item">
-              <a href="aktivitas-laporan.php" class="nav-link">
+              <a href="aktivitas3-penentuan-pembimbing.php" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
-                <p>Pengumuman</p>
+                <p>Penentuan Pembimbing</p>
               </a>
             </li>
+
             <li class="nav-item">
-              <a href="aktivitas-laporan.php" class="nav-link">
+              <a href="aktivitas4-bimbingan-proposal.php" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
-                <p>Notifikasi</p>
+                <p>Bimbingan Proposal</p>
               </a>
             </li>
+
+            <li class="nav-item">
+              <a href="aktivitas5-bimbingan-laporan.php" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Bimbingan Laporan</p>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a href="aktivitas6-pendaftaran-sidang.php" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Pendaftaran Sidang</p>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a href="aktivitas7-sidang-ujian.php" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Sidang Ujian</p>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a href="aktivitas8-bimbingan-pasca-ujian.php" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Bimbingan Pasca Ujian</p>
+              </a>
+            </li>
+
           </ul>
         </li>
 
+ <!-- PROSES AKTIVITAS -->
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <i class="nav-icon fas fa-tasks"></i>
+            <p>
+              Proses FINANCE
+              <i class="right fas fa-angle-left"></i>
+            </p>
+          </a>
+
+          <ul class="nav nav-treeview">
+
+            <li class="nav-item">
+              <a href="tabel_penjualan.php" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Penjualan</p>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a href="aktivitas2-penentuan-topik.php" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Penentuan Topik</p>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a href="aktivitas3-penentuan-pembimbing.php" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Penentuan Pembimbing</p>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a href="aktivitas4-bimbingan-proposal.php" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Bimbingan Proposal</p>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a href="aktivitas5-bimbingan-laporan.php" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Bimbingan Laporan</p>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a href="aktivitas6-pendaftaran-sidang.php" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Pendaftaran Sidang</p>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a href="aktivitas7-sidang-ujian.php" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Sidang Ujian</p>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a href="aktivitas8-bimbingan-pasca-ujian.php" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Bimbingan Pasca Ujian</p>
+              </a>
+            </li>
+
+          </ul>
+        </li>
         <!-- MONITOR AKTIVITAS -->
         <li class="nav-item">
           <a href="#" class="nav-link">

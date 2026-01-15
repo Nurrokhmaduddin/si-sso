@@ -28,3 +28,9 @@
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
+<?php 
+$q = $_SERVER['QUERY_STRING'] ?? '';
+// atau rebuild dari $_GET:
+$q = !empty($_GET) ? '?'.http_build_query($_GET) : '';
+
+?>

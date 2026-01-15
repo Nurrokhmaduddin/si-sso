@@ -10,7 +10,10 @@
 
     <!-- Sidebar User Panel -->
     <div class="user-panel mt-3 pb-3 mb-3 d-flex align-items-center"
-    style="border-bottom: 1px solid rgba(255,255,255,.2);">
+    style="border-bottom: 1px solid rgba(255,255,255,.2);"
+    data-bs-toggle="modal"
+    data-bs-target="#modalPilihPeran"
+>
 
     <!-- User Icon -->
     <div class="image">
@@ -19,7 +22,7 @@
     </div>
 
     <!-- User Info -->
-    <div class="info ml-2">
+    <div class="info ml-2" >
       <span class="d-block text-white">Username</span>
       <small class="text-success">
         <i class="fas fa-circle mr-1"></i> Role
@@ -44,6 +47,37 @@
             <p>Beranda</p>
           </a>
         </li>
+<?php
+$menuItems = [
+    'invoice' => ['label' => 'Invoice', 'icon' => 'fas fa-file-invoice-dollar', 'link' => '../surat_keluar-invoice/'],
+    'kwitansi' => ['label' => 'Kwitansi', 'icon' => 'fas fa-receipt', 'link' => '../kwitansi'],
+    'amplop' => ['label' => 'Amplop', 'icon' => 'fas fa-envelope', 'link' => '../amplop'],
+    'surat_masuk' => ['label' => 'Surat Masuk', 'icon' => 'far fa-circle', 'link' => '../surat_masuk'],
+    'surat_keluar' => ['label' => 'Surat Keluar', 'icon' => 'far fa-circle', 'link' => '../surat_keluar'],
+];
+
+$parentActive = in_array($page, array_keys($menuItems)) ? 'active menu-open' : '';
+?>
+
+<li class="nav-item <?= $parentActive ?>">
+    <a href="#" class="nav-link <?= $parentActive ?>">
+        <i class="nav-icon fas fa-folder-open"></i>
+        <p>
+            Surat-surat
+            <i class="right fas fa-angle-left"></i>
+        </p>
+    </a>
+    <ul class="nav nav-treeview">
+        <?php foreach ($menuItems as $key => $item): ?>
+            <li class="nav-item">
+                <a href="<?= $item['link'] ?>" class="nav-link <?= ($page==$key)?'active':'' ?>">
+                    <i class="<?= $item['icon'] ?> nav-icon"></i>
+                    <p><?= $item['label'] ?></p>
+                </a>
+            </li>
+        <?php endforeach; ?>
+    </ul>
+</li>
 
         <?php 
 // Misal: master-mahasiswa.php sudah punya
@@ -440,3 +474,38 @@
   </div>
   <!-- /.sidebar -->
 </aside>
+
+
+<!-- Modal Pilih Peran -->
+<div class="modal fade" id="modalPilihPeran" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title">Pilih Peran</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body text-center">
+
+        <button class="btn btn-outline-primary w-100 mb-2 role-select" data-role="Admin">
+          Admin
+        </button>
+
+        <button class="btn btn-outline-primary w-100 mb-2 role-select" data-role="Manajer">
+          Manajer
+        </button>
+
+        <button class="btn btn-outline-primary w-100 mb-2 role-select" data-role="Dosen">
+          Dosen
+        </button>
+
+        <button class="btn btn-outline-primary w-100 role-select" data-role="Mahasiswa">
+          Mahasiswa
+        </button>
+
+      </div>
+
+    </div>
+  </div>
+</div>
