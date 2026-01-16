@@ -1,4 +1,4 @@
-<?php $page = 'master_dosen'; ?>
+<?php $page = 'master_mahasiswa'; ?>
 <?php include('1header.php'); ?>
 <?php include('2navbar.php'); ?>
 <?php include('3sidebar.php'); ?>
@@ -8,9 +8,8 @@
 
   <section class="content-header">
     <div class="container-fluid">
-      <!-- <h3 class="mb-0">Data Produk/Barang</h3> -->
-
-        <!-- <p class="text-muted mb-0">Keterangan singkat cara baca informasi halaman ini</p> -->
+      <h3 class="mb-0">Status Pemetaan</h3>
+        <p class="text-muted mb-0">Keterangan singkat cara baca informasi halaman ini</p>
     </div>
   </section>
 
@@ -22,39 +21,12 @@
         <div class="col-md-12">
           <!-- ========== CARD : Filter & Export ========== -->
           <div class="card">
-            <div class="card-header bg-secondary">
-
-              <h5 class="card-title mb-0">
-                   <i class="fas fa-database"></i> Data Produk/Barang        
-              </h5>
-
+            <div class="card-header">
+              <h5 class="card-title mb-0"><i class="fas fa-filter "></i> Judul Tabel yang terdampak tombol aksi ini<button type="button" class="btn btn-tool" data-bs-toggle="modal" data-bs-target="#modalBantuan" title="Bantuan">
+                <i class="fas fa-question-circle"></i>
+              </button> </h5>
               <div class="card-tools ms-auto">
-                <button type="button" class="btn btn-tool" data-bs-toggle="modal" data-bs-target="#modalBantuan" title="Bantuan"><i class="fas fa-question-circle"></i>
-                </button>                
-              </div>
-
-            </div>
-
-            <div class="card-body ">
-              <div class="row">
-                <div class="col-md-6">
-                  <b>Angkatan:</b> 2023 &nbsp;
-                </div>                
-                <div class="col-md-6">
-                  <b>Peminatan:</b> Peminatan B
-                </div>
-                <div class="col-md-6">
-                  <b>Jalur:</b> Reguler
-                </div>
-                <div class="col-md-6">
-                  <b>Status:</b> Aktif
-                </div>
-              </div>
-            </div>
-
-            <div class="card-footer">
-              <div class="card-tools ms-auto">
-              <button class="btn btn-outline-info btn-sm " data-bs-toggle="modal" data-bs-target="#modalFilter">
+                <button class="btn btn-outline-info btn-sm " data-bs-toggle="modal" data-bs-target="#modalFilter">
                   <i class="fas fa-filter me-1"></i> Filter
                 </button>
                 <button type="button" class="btn btn-outline-primary btn-sm " data-bs-toggle="modal" data-bs-target="#modalTambahData">
@@ -66,13 +38,65 @@
                 <button type="button" class="btn btn-outline-success btn-sm">
                   <i class="fas fa-file-download me-1"></i> Export
                 </button>
-                <button type="button" class="btn btn-outline-danger btn-sm">
+                 <button type="button" class="btn btn-outline-danger btn-sm">
                   <i class="fas fa-ban me-1"></i> Reset
-                </button>    
+                </button>
+                <a href="monev_pemetaan1.php" class="btn btn-sm btn-outline-info" role="button">
+                	<i class="fas fa-exchange-alt me-1"></i> Perbandingkan
+                </a>
+
+              </div>
+            </div>
+
+
+            <div class="card-body ">
+              <div class="row">
+
+                <div class="col-md-6">
+                  <b>Kurikulum:</b> 2023 &nbsp;
+                </div>                
+                <div class="col-md-6">
+                  <b>Set Pemetaan A:</b> v1.0
+                </div>
+                <div class="col-md-6">
+                  <b>Set Pemetaan B:</b> v2.0
+                </div>
+                
+              </div>
             </div>
           </div>
 
-          </div>
+ <!-- ========== KPI Row (Ringkasan Jumlah Total) ========== -->
+<div class="row g-3 mb-4">
+  <div class="col-md-3">
+    <div class="kpi bg-primary text-white p-3 rounded">
+      <div class="small">MK</div>
+      <div class="big fs-3 fw-bold">A: 12 | B: 13</div>
+      <div class="small">Jumlah Mata Kuliah di masing-masing set pemetaan</div>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div class="kpi" style="background:#20c997; color:white; padding:1rem; border-radius:0.25rem;">
+      <div class="small">CPMK</div>
+      <div class="big fs-3 fw-bold">A: 45 | B: 47</div>
+      <div class="small">Jumlah CPMK di masing-masing set pemetaan</div>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div class="kpi" style="background:#ff7f0e; color:white; padding:1rem; border-radius:0.25rem;">
+      <div class="small">IK</div>
+      <div class="big fs-3 fw-bold">A: 18 | B: 19</div>
+      <div class="small">Jumlah IK di masing-masing set pemetaan</div>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div class="kpi bg-danger text-white p-3 rounded">
+      <div class="small">CPL</div>
+      <div class="big fs-3 fw-bold">A: 7 | B: 7</div>
+      <div class="small">Jumlah CPL di masing-masing set pemetaan</div>
+    </div>
+  </div>
+</div>
 
 
         <!-- ========== CARD : Tabel  ========== -->
@@ -528,18 +552,8 @@
       </div>
       <div class="modal-body">
         <p>
-          Ini adalah penjelasan panjang tentang tabel. Anda bisa menuliskan informasi detail,
-          petunjuk penggunaan tombol, cara membaca data, dan tips penting lainnya di sini.
-        </p>
-        <p>
-          Misalnya:  
-          - Tombol Filter digunakan untuk memfilter data berdasarkan kolom.  
-          - Tombol Impor digunakan untuk memasukkan data dari file Excel.  
-          - Tombol Reset akan menghapus semua data di tabel, gunakan dengan hati-hati.  
-        </p>
-        <p>
-          Anda bisa menambahkan banyak paragraf atau daftar sesuai kebutuhan.
-        </p>
+          Halaman ini menampilkan rekapitulasi satu set pemetaan OBE yang telah dirancang, menyoroti kelengkapan pemetaan (mapping completeness) untuk memeriksa apakah CPL, IK, CPMK, dan MK telah terhubung secara lengkap, sekaligus keserataan beban pemetaan (mapping balance) untuk menilai distribusi dukungan dan mengidentifikasi gap antara elemen terkuat dan terlemah di tiap level.
+        </p>        
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>

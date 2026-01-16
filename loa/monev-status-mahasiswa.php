@@ -1,4 +1,4 @@
-<?php $page = 'master_dosen'; ?>
+<?php $page = 'master_mahasiswa'; ?>
 <?php include('1header.php'); ?>
 <?php include('2navbar.php'); ?>
 <?php include('3sidebar.php'); ?>
@@ -8,9 +8,8 @@
 
   <section class="content-header">
     <div class="container-fluid">
-      <!-- <h3 class="mb-0">Data Produk/Barang</h3> -->
-
-        <!-- <p class="text-muted mb-0">Keterangan singkat cara baca informasi halaman ini</p> -->
+      <h3 class="mb-0">Status Pemetaan</h3>
+        <p class="text-muted mb-0">Keterangan singkat cara baca informasi halaman ini</p>
     </div>
   </section>
 
@@ -22,39 +21,12 @@
         <div class="col-md-12">
           <!-- ========== CARD : Filter & Export ========== -->
           <div class="card">
-            <div class="card-header bg-secondary">
-
-              <h5 class="card-title mb-0">
-                   <i class="fas fa-database"></i> Data Produk/Barang        
-              </h5>
-
+            <div class="card-header">
+              <h5 class="card-title mb-0"><i class="fas fa-filter "></i> Judul Tabel yang terdampak tombol aksi ini<button type="button" class="btn btn-tool" data-bs-toggle="modal" data-bs-target="#modalBantuan" title="Bantuan">
+                <i class="fas fa-question-circle"></i>
+              </button> </h5>
               <div class="card-tools ms-auto">
-                <button type="button" class="btn btn-tool" data-bs-toggle="modal" data-bs-target="#modalBantuan" title="Bantuan"><i class="fas fa-question-circle"></i>
-                </button>                
-              </div>
-
-            </div>
-
-            <div class="card-body ">
-              <div class="row">
-                <div class="col-md-6">
-                  <b>Angkatan:</b> 2023 &nbsp;
-                </div>                
-                <div class="col-md-6">
-                  <b>Peminatan:</b> Peminatan B
-                </div>
-                <div class="col-md-6">
-                  <b>Jalur:</b> Reguler
-                </div>
-                <div class="col-md-6">
-                  <b>Status:</b> Aktif
-                </div>
-              </div>
-            </div>
-
-            <div class="card-footer">
-              <div class="card-tools ms-auto">
-              <button class="btn btn-outline-info btn-sm " data-bs-toggle="modal" data-bs-target="#modalFilter">
+                <button class="btn btn-outline-info btn-sm " data-bs-toggle="modal" data-bs-target="#modalFilter">
                   <i class="fas fa-filter me-1"></i> Filter
                 </button>
                 <button type="button" class="btn btn-outline-primary btn-sm " data-bs-toggle="modal" data-bs-target="#modalTambahData">
@@ -66,14 +38,254 @@
                 <button type="button" class="btn btn-outline-success btn-sm">
                   <i class="fas fa-file-download me-1"></i> Export
                 </button>
-                <button type="button" class="btn btn-outline-danger btn-sm">
+                 <button type="button" class="btn btn-outline-danger btn-sm">
                   <i class="fas fa-ban me-1"></i> Reset
-                </button>    
+                </button>
+                <a href="monev_pemetaan1.php" class="btn btn-sm btn-outline-info" role="button">
+                	<i class="fas fa-exchange-alt me-1"></i> Perbandingkan
+                </a>
+
+              </div>
+            </div>
+
+
+            <div class="card-body ">
+              <div class="row">
+
+                <div class="col-md-6">
+                  <b>Kurikulum:</b> 2023 &nbsp;
+                </div>                
+                <div class="col-md-6">
+                  <b>Set Pemetaan A:</b> v1.0
+                </div>
+                <div class="col-md-6">
+                  <b>Set Pemetaan B:</b> v2.0
+                </div>
+                
+              </div>
             </div>
           </div>
 
-          </div>
+        
+ <!-- KPI Row -->
+  <div class="row mb-3">
 
+    <!-- Total Mahasiswa -->
+    <div class="col-md-3 col-sm-6">
+      <div class="small-box bg-primary">
+        <div class="inner">
+          <h3>1.200</h3>
+          <p>Total Mahasiswa</p>
+        </div>
+        <div class="icon">
+          <i class="fas fa-users"></i>
+        </div>
+      </div>
+    </div>
+
+    
+
+    <!-- Jumlah Mahasiswa Aktif -->
+    <div class="col-md-3 col-sm-6">
+      <div class="small-box bg-success">
+        <div class="inner">
+          <h3>950</h3>
+          <p>Mahasiswa Aktif saat ini</p>
+        </div>
+        <div class="icon">
+          <i class="fas fa-user-check"></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- Jumlah Mahasiswa Cuti -->
+    <div class="col-md-3 col-sm-6">
+      <div class="small-box bg-warning">
+        <div class="inner">
+          <h3>70</h3>
+          <p>Mahasiswa Cuti saat ini</p>
+        </div>
+        <div class="icon">
+          <i class="fas fa-pause-circle"></i>
+        </div>
+      </div>
+    </div>
+
+<!-- Mahasiswa Aktif Tertua -->
+    <div class="col-md-3 col-sm-6">
+      <div class="small-box bg-danger">
+        <div class="inner">
+          <h3>Angkatan 2017</h3>
+          <p>18 Mahasiswa Aktif Tertua</p>
+        </div>
+        <div class="icon">
+          <i class="fas fa-user-clock"></i>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+<div class="card">
+  <div class="card-header d-flex justify-content-between align-items-center">
+    <h3 class="card-title">Distribusi Status Mahasiswa</h3>
+  </div>
+
+  <div class="card-body">
+    <div class="row">
+
+      <!-- Kolom kiri: PIE CHART -->
+      <div class="col-md-6">
+        <canvas id="chartStatusAngkatan" width="100%" height="180"></canvas>
+      </div>
+
+      <!-- Kolom kanan: TABEL -->
+      <div class="col-md-6">
+        <h5><i class="fas fa-pause-circle text-warning"></i> Daftar Mahasiswa Cuti</h5>
+
+        <div class="table-responsive" style="max-height: 300px; overflow-y: auto;">
+          <table class="table table-bordered table-striped table-sm">
+            <thead class="table-dark">
+              <tr>
+                <th>NIM</th>
+                <th>Nama</th>
+                <th>Angkatan</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Contoh data dummy -->
+              <tr>
+                <td>2019123456</td>
+                <td>Ahmad Fauzan</td>
+                <td>2019</td>
+              </tr>
+              <tr>
+                <td>2020123001</td>
+                <td>Rina Melati</td>
+                <td>2020</td>
+              </tr>
+              <tr>
+                <td>2021123001</td>
+                <td>Budi Saputra</td>
+                <td>2021</td>
+              </tr>
+              <!-- Data asli nanti digenerate dari backend -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+      	<h5><i class="fas fa-pause-circle text-warning"></i> Daftar Mahasiswa Skors</h5>
+
+      	<div class="table-responsive" style="max-height: 300px; overflow-y: auto;">
+      		<table class="table table-bordered table-striped table-sm">
+      			<thead class="table-dark">
+      				<tr>
+      					<th>NIM</th>
+      					<th>Nama</th>
+      					<th>Angkatan</th>
+      				</tr>
+      			</thead>
+      			<tbody>
+      				<tr>
+      					<td colspan="3" class="text-center text-muted">Data Kosong</td>
+      				</tr>
+      			</tbody>
+      		</table>
+      	</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+    <!-- Rekap per Angkatan -->
+    <div class="card mt-3">
+        <div class="card-header">
+            <h3 class="card-title">Rekap Status Mahasiswa per Angkatan</h3>
+        </div>
+        <div class="card-body table-responsive">
+            <table class="table table-bordered table-hover">
+                <thead class="thead-light">
+                    <tr>
+                        <th>Angkatan</th>
+                        <th>Total</th>
+                        <th>Aktif</th>
+                        <th>Cuti</th>
+                        <th>Lulus</th>
+                        <th>Non-Aktif</th>
+                        <th>Skripsi</th>
+                        <th>MBKM</th>
+                        <th>Progres CPL</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2021</td>
+                        <td>300</td>
+                        <td>240</td>
+                        <td>18</td>
+                        <td>20</td>
+                        <td>12</td>
+                        <td>8</td>
+                        <td>5</td>
+                        <td>72%</td>
+                    </tr>
+                    <tr>
+                        <td>2020</td>
+                        <td>280</td>
+                        <td>210</td>
+                        <td>22</td>
+                        <td>30</td>
+                        <td>18</td>
+                        <td>10</td>
+                        <td>7</td>
+                        <td>79%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</section>
+
+<!-- Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+var ctx = document.getElementById('chartStatusAngkatan').getContext('2d');
+new Chart(ctx, {
+    type: 'pie',
+    data: {
+        labels: ['Aktif', 'Cuti', 'Skors', 'Passed Out', 'Drop Out', 'Lulus'],
+        datasets: [{
+            data: [950, 70, 120, 40, 4, 2], // contoh data
+            
+            // Warna custom tiap slice
+            backgroundColor: [
+                '#28a745', // aktif - hijau
+                '#ff9800', // cuti - orange
+                '#dc3545', // skors - merah
+                '#6c757d', // tidak aktif/passed out - abu
+                '#343a40',  // DO - hitam
+                '#007bff' // lulus - biru
+            ],
+
+            borderColor: '#ffffff',
+            borderWidth: 2
+        }]
+    },
+    options: {
+        plugins: {
+            legend: {
+                position: 'bottom'
+            }
+        }
+    }
+});
+</script>
 
         <!-- ========== CARD : Tabel  ========== -->
           <div class="card">
@@ -528,18 +740,8 @@
       </div>
       <div class="modal-body">
         <p>
-          Ini adalah penjelasan panjang tentang tabel. Anda bisa menuliskan informasi detail,
-          petunjuk penggunaan tombol, cara membaca data, dan tips penting lainnya di sini.
-        </p>
-        <p>
-          Misalnya:  
-          - Tombol Filter digunakan untuk memfilter data berdasarkan kolom.  
-          - Tombol Impor digunakan untuk memasukkan data dari file Excel.  
-          - Tombol Reset akan menghapus semua data di tabel, gunakan dengan hati-hati.  
-        </p>
-        <p>
-          Anda bisa menambahkan banyak paragraf atau daftar sesuai kebutuhan.
-        </p>
+          Halaman ini menampilkan rekapitulasi satu set pemetaan OBE yang telah dirancang, menyoroti kelengkapan pemetaan (mapping completeness) untuk memeriksa apakah CPL, IK, CPMK, dan MK telah terhubung secara lengkap, sekaligus keserataan beban pemetaan (mapping balance) untuk menilai distribusi dukungan dan mengidentifikasi gap antara elemen terkuat dan terlemah di tiap level.
+        </p>        
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>

@@ -97,8 +97,10 @@
             </li>
 
             <li class="nav-item">
+              <a href="aktivitas-input.php" class="nav-link">
               <a href="aktivitas3-penentuan-pembimbing.php" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
+                <p>Input Aktivitas</p>
                 <p>Penentuan Pembimbing</p>
               </a>
             </li>
@@ -111,8 +113,10 @@
             </li>
 
             <li class="nav-item">
+              <a href="aktivitas-verifikasi.php" class="nav-link">
               <a href="aktivitas5-bimbingan-laporan.php" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
+                <p>Verifikasi</p>
                 <p>Bimbingan Laporan</p>
               </a>
             </li>
@@ -189,6 +193,12 @@
             </p>
           </a>
           <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <a href="monitor-skripsi.php" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Rekap TA</p>
+              </a>
+            </li>
             <li class="nav-item">
               <a href="monitor-realtime.php" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
