@@ -32,5 +32,12 @@
 $q = $_SERVER['QUERY_STRING'] ?? '';
 // atau rebuild dari $_GET:
 $q = !empty($_GET) ? '?'.http_build_query($_GET) : '';
+?>
 
+<?php 
+// Ambil peran 
+$role = isset($_GET['peran']) && $_GET['peran'] !== '' ? ucfirst($_GET['peran']) : 'SuperAdmin'; 
+// Ambil seluruh query string (peran & data lain) 
+$q = $_SERVER['QUERY_STRING']; 
+$q = $q ? "?$q" : ""; 
 ?>

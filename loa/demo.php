@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Demo</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      min-height: 100vh;
+      display: flex;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 220px;
+      background: #343a40;
+      color: white;
+      padding: 20px;
+    }
+    .sidebar .nav-link {
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 5px;
+    }
+    .sidebar .nav-link:hover {
+      background: #495057;
+      border-radius: 5px;
+    }
+
+    /* Content area */
+    .content {
+      flex: 1;
+      padding: 20px;
+      position: relative;
+    }
+
+    /* Blur ketika fitur dibatasi */
+    .blur {
+      filter: blur(6px);
+      pointer-events: none;
+    }
+
+    /* Overlay modal background */
+    .overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(255,255,255,0.7);
+      z-index: 5;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <div class="sidebar d-flex flex-column">
+    <h4 class="mb-4">Demo Sidebar</h4>
+    <a href="#" class="nav-link" onclick="showDemoCTA()">Dashboard</a>
+    <a href="#" class="nav-link" onclick="showDemoCTA()">Laporan Keuangan 🔒</a>
+    <a href="#" class="nav-link" onclick="showDemoCTA()">Anggaran 🔒</a>
+    <a href="#" class="nav-link" onclick="alert('Menu biasa, akses penuh!')">Profil</a>
+  </div>
+
+  <!-- Content -->
+  <div class="content">
+    <div id="cardsContainer">
+      <div class="row g-3 mb-4">
+        <div class="col-md-4">
+          <div class="card shadow-sm rounded-3 p-3">
+            <h6>Total Aset</h6>
+            <h3>Rp 125.000.000</h3>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card shadow-sm rounded-3 p-3">
+            <h6>Total Liabilitas</h6>
+            <h3>Rp 45.000.000</h3>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card shadow-sm rounded-3 p-3">
+            <h6>Total Equitas</h6>
+            <h3>Rp 80.000.000</h3>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contoh grafik -->
+      <div class="card shadow-sm rounded-3 p-3 mb-4">
+        <h6>📈 Grafik Arus Kas</h6>
+        <canvas id="cashFlowChart" style="height:200px;"></canvas>
+      </div>
+
+      <div class="card shadow-sm rounded-3 p-3 mb-4">
+        <h6>📊 Anggaran vs Realisasi</h6>
+        <canvas id="budgetChart" style="height:200px;"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal CTA -->
+  <button type="button" class="btn btn-primary d-none" id="demoCTAbutton" data-bs-toggle="modal" data-bs-target="#demoModal"></button>
+  <div class="modal fade" id="demoModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">🔒 Fitur Premium</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          Fitur ini hanya tersedia di Paket Pro.<br>
+          Nikmati akses penuh dengan upgrade sekarang.
+        </div>
+        <div class="modal-footer">
+          <a href="#" class="btn btn-success">Upgrade Sekarang</a>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap 5 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <script>
+    // Fungsi menampilkan modal CTA + blur konten
+    function showDemoCTA() {
+      document.getElementById('cardsContainer').classList.add('blur');
+      document.getElementById('demoCTAbutton').click();
+    }
+
+    // Hapus blur ketika modal ditutup
+    const demoModalEl = document.getElementById('demoModal');
+    demoModalEl.addEventListener('hidden.bs.modal', () => {
+      document.getElementById('cardsContainer').classList.remove('blur');
+    });
+
+    // Contoh Chart.js cash flow
+    const ctxCash = document.getElementById('cashFlowChart').getContext('2d');
+    new Chart(ctxCash, {
+      type: 'line',
+      data: {
+        labels: ['Jan','Feb','Mar','Apr'],
+        datasets: [{
+          label: 'Pemasukan',
+          data: [12000000, 15000000, 13000000, 16000000],
+          borderColor: '#1cc88a',
+          backgroundColor: 'rgba(28,200,138,0.2)',
+          fill: true
+        },{
+          label: 'Pengeluaran',
+          data: [8000000, 9000000, 9500000, 8700000],
+          borderColor: '#e74a3b',
+          backgroundColor: 'rgba(231,74,59,0.2)',
+          fill: true
+        }]
+      },
+      options: { responsive:true }
+    });
+
+    // Contoh Chart.js Anggaran vs Realisasi
+    const ctxBudget = document.getElementById('budgetChart').getContext('2d');
+    const lembaga = ['L1','L2','L3','L4'];
+    const anggaranPemasukan = [10000000,12000000,9000000,11000000];
+    const realisasiPemasukan = [8000000,10000000,7000000,9000000];
+    const anggaranPengeluaran = [6000000,7000000,5000000,6500000];
+    const realisasiPengeluaran = [5000000,6500000,4000000,6000000];
+    const sisaPemasukan = anggaranPemasukan.map((a,i)=>a-realisasiPemasukan[i]);
+    const sisaPengeluaran = anggaranPengeluaran.map((a,i)=>a-realisasiPengeluaran[i]);
+
+    new Chart(ctxBudget, {
+      type:'bar',
+      data:{
+        labels: lembaga,
+        datasets:[
+          {label:'Realisasi Pemasukan', data:realisasiPemasukan, backgroundColor:'#1cc88a', stack:'Pemasukan'},
+          {label:'Sisa Pemasukan', data:sisaPemasukan, backgroundColor:'#a8e6cf', stack:'Pemasukan'},
+          {label:'Realisasi Pengeluaran', data:realisasiPengeluaran, backgroundColor:'#e74a3b', stack:'Pengeluaran'},
+          {label:'Sisa Pengeluaran', data:sisaPengeluaran, backgroundColor:'#f5b7b1', stack:'Pengeluaran'}
+        ]
+      },
+      options:{
+        responsive:true,
+        plugins:{
+          title:{ display:true, text:'Realisasi Anggaran 2025 per Lembaga', font:{size:16}},
+          tooltip:{
+            callbacks:{
+              label:function(context){
+                return context.dataset.label + ': Rp ' + context.raw.toLocaleString('id-ID');
+              }
+            }
+          },
+          legend:{ position:'top' }
+        },
+        scales:{
+          x:{ stacked:true, title:{display:true,text:'Lembaga'} },
+          y:{ stacked:true, title:{display:true,text:'Nominal (Rp)'}, ticks:{callback:value=>'Rp '+value.toLocaleString('id-ID')} }
+        }
+      }
+    });
+  </script>
+
+</body>
+</html>

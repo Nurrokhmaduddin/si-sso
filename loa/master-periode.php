@@ -1,7 +1,7 @@
 <?php $page = 'user_mahasiswa'; ?>
 <?php include('1header.php'); ?>
 <?php include('2navbar.php'); ?>
-<?php include('3sidebar.php'); ?>
+<?php include('3sidebar2.php'); ?>
 
   
 <div class="content-wrapper" style="min-height: 626.4px;">    

@@ -23,13 +23,16 @@
 
     <!-- User Info -->
     <div class="info ml-2" >
+      <a href="#" class="d-block" data-toggle="modal" data-target="#modalPilihPeran">
       <span class="d-block text-white">Username</span>
-      <small class="text-success">
+      <small class="text-success ">
         <i class="fas fa-circle mr-1"></i> Role
       </small>
+    </a>
     </div>
 
   </div>
+
 
 
 
@@ -205,9 +208,9 @@ $parentActive = in_array($page, array_keys($menuItems)) ? 'active menu-open' : '
             </li>
 
             <li class="nav-item">
-              <a href="aktivitas-aksi.php" class="nav-link">
+              <a href="pemetaan-zend.php" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
-                <p>Proses Pemetaan</p>
+                <p>Pemetaan CPL-IK-CPMK</p>
               </a>
             </li>
 

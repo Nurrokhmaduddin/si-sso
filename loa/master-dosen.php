@@ -20,19 +20,17 @@
       <!-- Main row -->
       <div class="row">
         <div class="col-md-12">
+          
           <!-- ========== CARD : Filter & Export ========== -->
           <div class="card">
             <div class="card-header bg-secondary">
-
               <h5 class="card-title mb-0">
-                   <i class="fas fa-database"></i> Data Produk/Barang        
+                <i class="fas fa-database"></i> Data Produk/Barang        
               </h5>
-
               <div class="card-tools ms-auto">
                 <button type="button" class="btn btn-tool" data-bs-toggle="modal" data-bs-target="#modalBantuan" title="Bantuan"><i class="fas fa-question-circle"></i>
                 </button>                
               </div>
-
             </div>
 
             <div class="card-body ">
@@ -54,7 +52,7 @@
 
             <div class="card-footer">
               <div class="card-tools ms-auto">
-              <button class="btn btn-outline-info btn-sm " data-bs-toggle="modal" data-bs-target="#modalFilter">
+                <button class="btn btn-outline-info btn-sm " data-bs-toggle="modal" data-bs-target="#modalFilter">
                   <i class="fas fa-filter me-1"></i> Filter
                 </button>
                 <button type="button" class="btn btn-outline-primary btn-sm " data-bs-toggle="modal" data-bs-target="#modalTambahData">
@@ -69,10 +67,10 @@
                 <button type="button" class="btn btn-outline-danger btn-sm">
                   <i class="fas fa-ban me-1"></i> Reset
                 </button>    
+              </div>
             </div>
-          </div>
 
-          </div>
+        </div>
 
 
         <!-- ========== CARD : Tabel  ========== -->

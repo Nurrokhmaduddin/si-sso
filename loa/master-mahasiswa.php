@@ -38,7 +38,7 @@
                 <button type="button" class="btn btn-outline-success btn-sm">
                   <i class="fas fa-file-download me-1"></i> Export
                 </button>
-                 <button type="button" class="btn btn-outline-danger btn-sm">
+                 <button type="button" class="btn btn-outline-danger btn-sm" data-bs-toggle="modal" data-bs-target="#modalResetData">
                   <i class="fas fa-ban me-1"></i> Reset
                 </button>
                 
@@ -537,5 +537,42 @@
     </div>
   </div>
 </div>
+
+<div class="modal fade" id="modalResetData" tabindex="-1" aria-labelledby="modalResetDataLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content rounded-3 shadow">
+
+      <div class="modal-header bg-danger text-white">
+        <h5 class="modal-title">Konfirmasi Reset Data</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+
+      <form action="proses_hapus_akun.php" method="POST">
+        <div class="modal-body text-center">
+
+          <!-- ID disimpan sebagai hidden input -->
+          <input type="hidden" name="id_akun" id="hapus_id_akun">
+
+          <p class="fs-5">Apakah Anda yakin ingin menghapus semua data ini?</p>
+
+          <!-- Tampilkan kode dan nama akun -->
+         <!--  <p class="text-muted mb-0 d-flex justify-content-center gap-2">
+            <span id="hapus_kode_akun"></span>
+            <span>|</span>
+            <strong id="hapus_nama_akun"></strong>
+          </p> -->
+
+        </div>
+
+        <div class="modal-footer justify-content-center">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+          <button type="submit" class="btn btn-danger">Hapus</button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>
+
 
 <?php include('5script.php'); ?>
