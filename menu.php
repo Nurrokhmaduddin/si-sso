@@ -169,8 +169,10 @@
   <!-- CONTENT -->
   <div class="container">
     <div class="menu-grid">
-
-      <div class="menu-card"><h3>SSO</h3><p>Single Sign-On</p></div>
+<a href="sso/" class="menu-card">
+        <h3>SSO</h3>
+        <p>Single Sign-On</p>
+      </a>
       <div class="menu-card"><h3>Proses A</h3><p>Modul Proses A</p></div>
       <div class="menu-card"><h3>Proses B</h3><p>Modul Proses B</p></div>
       <div class="menu-card"><h3>Akad</h3><p>Manajemen Akad</p></div>
@@ -194,7 +196,10 @@
       <div class="menu-card"><h3>Finance</h3><p>Keuangan</p></div>
 
       <div class="menu-card"><h3>Office</h3><p>Administrasi Kantor</p></div>
-
+<a href="sekolah/" class="menu-card">
+        <h3>School</h3>
+        <p>Pengelolaan Sekolah</p>
+      </a>
     </div>
   </div>
 

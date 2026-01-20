@@ -1,4 +1,4 @@
-<?php $page='';?>
+<?php $page= '';?>
 <?php
 include "1header.php"; 
 ?>

@@ -2,7 +2,7 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
   <!-- Brand Logo -->
   <a href="index3.html" class="brand-link text-center">
-    <span class="brand-text font-weight-light">SI-LOA</span>
+    <span class="brand-text font-weight-light">Sekolah</span>
   </a>
 
   <!-- Sidebar -->
@@ -50,37 +50,6 @@
             <p>Beranda</p>
           </a>
         </li>
-<?php
-$menuItems = [
-    'invoice' => ['label' => 'Invoice', 'icon' => 'fas fa-file-invoice-dollar', 'link' => '../surat_keluar-invoice/'],
-    'kwitansi' => ['label' => 'Kwitansi', 'icon' => 'fas fa-receipt', 'link' => '../kwitansi'],
-    'amplop' => ['label' => 'Amplop', 'icon' => 'fas fa-envelope', 'link' => '../amplop'],
-    'surat_masuk' => ['label' => 'Surat Masuk', 'icon' => 'far fa-circle', 'link' => '../surat_masuk'],
-    'surat_keluar' => ['label' => 'Surat Keluar', 'icon' => 'far fa-circle', 'link' => '../surat_keluar'],
-];
-
-$parentActive = in_array($page, array_keys($menuItems)) ? 'active menu-open' : '';
-?>
-
-<li class="nav-item <?= $parentActive ?>">
-    <a href="#" class="nav-link <?= $parentActive ?>">
-        <i class="nav-icon fas fa-folder-open"></i>
-        <p>
-            Surat-surat
-            <i class="right fas fa-angle-left"></i>
-        </p>
-    </a>
-    <ul class="nav nav-treeview">
-        <?php foreach ($menuItems as $key => $item): ?>
-            <li class="nav-item">
-                <a href="<?= $item['link'] ?>" class="nav-link <?= ($page==$key)?'active':'' ?>">
-                    <i class="<?= $item['icon'] ?> nav-icon"></i>
-                    <p><?= $item['label'] ?></p>
-                </a>
-            </li>
-        <?php endforeach; ?>
-    </ul>
-</li>
 
         <?php 
 // Misal: master-mahasiswa.php sudah punya
@@ -98,73 +67,6 @@ $parentActive = in_array($page, array_keys($menuItems)) ? 'active menu-open' : '
           </a>
 
           <ul class="nav nav-treeview">
-
-            <li class="nav-item">
-              <a href="master-periode.php" class="nav-link <?php echo $page == 'master_periode' ? 'active' : ''; ?>">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Periode Akademik</p>
-              </a>
-            </li>
-
-            <li class="nav-item">
-              <a href="master-prodi.php" class="nav-link <?php echo $page == 'master_prodi' ? 'active' : ''; ?>">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Program Studi</p>
-              </a>
-            </li>
-
-            <li class="nav-item">
-              <a href="master-peminatan.php" class="nav-link <?php echo $page == 'master_peminatan' ? 'active' : ''; ?>">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Peminatan</p>
-              </a>
-            </li>
-
-            <li class="nav-item">
-              <a href="master-jurusan.php" class="nav-link <?php echo $page == 'master_jurusan' ? 'active' : ''; ?>">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Jurusan</p>
-              </a>
-            </li>
-
-            <li class="nav-item">
-              <a href="master-jalur.php" class="nav-link <?php echo $page == 'master_jalur' ? 'active' : ''; ?>">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Jalur</p>
-              </a>
-            </li>
-
-            <li class="nav-item">
-              <a href="master-dosen.php" class="nav-link <?php echo $page == 'master_dosen' ? 'active' : ''; ?>">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Dosen</p>
-              </a>
-            </li>
-
-            <li class="nav-item">
-              <a href="master-mahasiswa.php" class="nav-link <?php echo $page == 'master_mahasiswa' ? 'active' : ''; ?>">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Mahasiswa</p>
-              </a>
-            </li>
-
-          </ul>
-        </li>
-
-
-
-        <!-- PEMETAAN OEB -->
-        <li class="nav-item">
-          <a href="#" class="nav-link">
-            <i class="nav-icon fas fa-columns"></i>
-            <p>
-              Pemetaan OBE
-              <i class="right fas fa-angle-left"></i>
-            </p>
-          </a>
-
-          <ul class="nav nav-treeview">
-
             <li class="nav-item">
               <a href="aktivitas-kurikulum.php" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
@@ -175,85 +77,121 @@ $parentActive = in_array($page, array_keys($menuItems)) ? 'active menu-open' : '
             <li class="nav-item">
               <a href="pemetaan-matakuliah.php" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
-                <p>Mata Kuliah</p>
+                <p>Daftar MaPel</p>
               </a>
             </li>
-
             <li class="nav-item">
-              <a href="aktivitas-setpemetaan.php" class="nav-link">
+              <a href="pemetaan-matakuliah.php" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
-                <p>Set Pemetaan</p>
+                <p>Daftar Aktivitas</p>
               </a>
             </li>
-
             <li class="nav-item">
-              <a href="aktivitas-cpl.php" class="nav-link">
+              <a href="master-prodi.php" class="nav-link <?php echo $page == 'master_prodi' ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
-                <p>Daftar CPL</p>
+                <p>Tingkatan Kelas</p>
               </a>
             </li>
-
+             <li class="nav-item">
+              <a href="master-dosen.php" class="nav-link <?php echo $page == 'master_dosen' ? 'active' : ''; ?>">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Wali Kelas</p>
+              </a>
+            </li>
             <li class="nav-item">
-              <a href="aktivitas-ik.php" class="nav-link">
+              <a href="master-dosen.php" class="nav-link <?php echo $page == 'master_dosen' ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
-                <p>Daftar IK</p>
+                <p>Fasilitator Mapel</p>
               </a>
             </li>
-
             <li class="nav-item">
-              <a href="aktivitas-cpmk.php" class="nav-link">
+              <a href="master-jalur.php" class="nav-link <?php echo $page == 'master_jalur' ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
-                <p>Daftar CPMK</p>
+                <p>Orangtua Murid</p>
               </a>
             </li>
-
             <li class="nav-item">
-              <a href="pemetaan-zend.php" class="nav-link">
+              <a href="master-mahasiswa.php" class="nav-link <?php echo $page == 'master_mahasiswa' ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
-                <p>Pemetaan CPL-IK-CPMK</p>
+                <p>Murid</p>
               </a>
             </li>
 
+            
+                        
+
+            
           </ul>
         </li>
 
-        <!-- PERKULIAHAN OEB -->
+
+
+        <!-- PEMETAAN OEB -->
         <li class="nav-item">
           <a href="#" class="nav-link">
-            <i class="nav-icon fas fa-chalkboard-teacher"></i>
+            <i class="nav-icon fas fa-columns"></i>
             <p>
-              Perkuliahan OBE
+              Perencanaan
               <i class="right fas fa-angle-left"></i>
             </p>
           </a>
 
           <ul class="nav nav-treeview">
 
+            
+            <li class="nav-item">
+              <a href="master-periode.php" class="nav-link <?php echo $page == 'master_periode' ? 'active' : ''; ?>">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Periode Akademik</p>
+              </a>
+            </li>
+           
             <li class="nav-item">
               <a href="kelas-perkuliahan.php" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
-                <p>Kelas Perkuliahan</p>
+                <p>Kelas Akademik</p>
               </a>
             </li>
 
             <li class="nav-item">
-              <a href="kelas-remidial.php" class="nav-link">
+              <a href="monev-kbm-harian-plan.php" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
-                <p>Kelas Remidial</p>
+                <p>Daily Plan</p>
               </a>
             </li>
-
             <li class="nav-item">
-              <a href="rps.php" class="nav-link">
+              <a href="#" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
-                <p>RPS Mata Kuliah</p>
+                <p>Weekly Plan</p>
               </a>
             </li>
+          
 
+          </ul>
+        </li>
+
+        <!-- PERKULIAHAN OEB -->
+        <li class="nav-item">
+          <a href="monev-kbm-harian.php" class="nav-link">
+            <i class="nav-icon fas fa-chalkboard-teacher"></i>
+            <p>
+              Manajemen Kelas
+              <i class="right fas fa-angle-left"></i>
+            </p>
+          </a>
+
+          <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <a href="monev-kbm-harian.php" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Pelaksaan Kelas</p>
+              </a>
+            </li>
+            
             <li class="nav-item">
               <a href="soal-ujian.php" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
-                <p>Soal Ujian</p>
+                <p>Worksheet</p>
               </a>
             </li>
 
@@ -261,13 +199,6 @@ $parentActive = in_array($page, array_keys($menuItems)) ? 'active menu-open' : '
               <a href="nilai-cpmk.php" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Nilai CPMK</p>
-              </a>
-            </li>
-
-            <li class="nav-item">
-              <a href="portofolio-kelas.php" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Portofolio Kelas</p>
               </a>
             </li>
 
@@ -280,7 +211,7 @@ $parentActive = in_array($page, array_keys($menuItems)) ? 'active menu-open' : '
           <a href="#" class="nav-link">
             <i class="nav-icon fas fa-chart-pie"></i>
             <p>
-              Monitoring OBE
+              Monitoring
               <i class="right fas fa-angle-left"></i>
             </p>
           </a>
@@ -288,62 +219,43 @@ $parentActive = in_array($page, array_keys($menuItems)) ? 'active menu-open' : '
           <ul class="nav nav-treeview">
 
             <li class="nav-item">
-              <a href="monev-status-mahasiswa.php" class="nav-link">
+              <a href="monev-kbm-harian-report.php" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
-                <p>Status Mahasiswa</p>
+                <p>Learning Report Daily</p>
               </a>
             </li>
 
-            <li class="nav-item">
-              <a href="monev-status-pemetaan.php" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Status Pemetaan</p>
-              </a>
-            </li>
-
+          
             <li class="nav-item">
               <a href="rekap-kelas.php" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
-                <p>Rekapitulasi Kelas</p>
+                <p>Rapot Kelas Akademik</p>
               </a>
             </li>
 
             <li class="nav-item">
               <a href="rekap-mk.php" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
-                <p>Rekapitulasi MK</p>
+                <p>Rapot WaliKelas Akademik</p>
               </a>
             </li>
 
-            <li class="nav-item">
-              <a href="rekap-cpmk.php" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Rekapitulasi CPMK</p>
-              </a>
-            </li>
-
+          
             <li class="nav-item">
               <a href="monev-cpl-individual.php" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
-                <p>Monev CPL Individu</p>
+                <p>Rapot Individu</p>
               </a>
             </li>
-
-            <li class="nav-item">
-              <a href="monev-cpl-individual.php" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Monev CPL Nahasiswa</p>
-              </a>
-            </li>
-
+        
             <li class="nav-item">
               <a href="monev-cpl-angkatan.php" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
-                <p>Monev CPL Angkatan</p>
+                <p>Rapot Angkatan Kelas</p>
               </a>
             </li>
 
-            <li class="nav-item">
+           <!--  <li class="nav-item">
               <a href="monev-cpl-lulusan.php" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Monev CPL Lulusan</p>
@@ -355,7 +267,7 @@ $parentActive = in_array($page, array_keys($menuItems)) ? 'active menu-open' : '
                 <i class="far fa-circle nav-icon"></i>
                 <p>Progres CPL Antar Semester</p>
               </a>
-            </li>
+            </li> -->
 
           </ul>
         </li>
@@ -367,7 +279,7 @@ $parentActive = in_array($page, array_keys($menuItems)) ? 'active menu-open' : '
           <a href="#" class="nav-link">
             <i class="nav-icon fas fa-clipboard-list"></i>
             <p>
-              Pengembangan OBE
+              Evaluasi KBM
               <i class="right fas fa-angle-left"></i>
             </p>
           </a>
