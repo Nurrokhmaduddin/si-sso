@@ -1,4 +1,4 @@
-<?php $page='beranda_pengelola';?>
+<?php $page='beranda_administrator';?>
 <?php
 include "1header.php"; 
 ?>

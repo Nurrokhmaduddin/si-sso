@@ -9,7 +9,7 @@
   <section class="content-header">
     <div class="container-fluid">
       <h3 class="mb-0">Daily Plan</h3>
-        <p class="text-muted mb-0">Keterangan singkat cara baca informasi halaman ini</p>
+        <p class="text-muted mb-0">5 hari-> 16 minggu-> 1 semester</p>
     </div>
   </section>
 

@@ -9,7 +9,7 @@
   <section class="content-header">
     <div class="container-fluid">
       <h3 class="mb-0">Learning Report Daily</h3>
-        <p class="text-muted mb-0">Keterangan singkat cara baca informasi halaman ini</p>
+        <p class="text-muted mb-0">input plan daily->input report daily->report (daily->weekly->semester)</p>
     </div>
   </section>
 

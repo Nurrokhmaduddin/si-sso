@@ -1,0 +1,222 @@
+<?php $page='master_mapel';?>
+<?php include "1header.php"; ?>
+<?php include "2navbar.php"; ?>
+<?php include "3sidebar.php"; ?>
+<div class="content-wrapper" style="min-height: 626.4px;">    
+
+  <section class="content-header">
+    <div class="container-fluid">
+      <h3 class="mb-0">Mapel Sekolah Alam</h3>
+        <p class="text-muted mb-0">Keterangan singkat cara baca informasi halaman ini</p>
+    </div>
+  </section>
+
+  <!-- Main content -->
+  <section class="content">
+    <div class="container-fluid">
+      <!-- Main row -->
+      <div class="row">
+        <div class="col-md-12">
+          <!-- ========== CARD : Filter & Export ========== -->
+          <div class="card">
+            <!-- <div class="card-header">
+              <h5 class="card-title mb-0"><i class="fas fa-filter "></i> Daftar Periode Akademik<button type="button" class="btn btn-tool" data-bs-toggle="modal" data-bs-target="#modalBantuan" title="Bantuan">
+                <i class="fas fa-question-circle"></i>
+              </button> </h5>
+              
+            </div> -->
+            <!-- <div class="card-body ">
+              <div class="row">
+
+                <div class="col-md-6">
+                  <b>Angkatan:</b> 2023 &nbsp;
+                </div>                
+                <div class="col-md-6">
+                  <b>Kelas:</b> Peminatan B
+                </div>
+                <div class="col-md-6">
+                  <b>Jalur:</b> Reguler
+                </div>
+                <div class="col-md-6">
+                  <b>Status:</b> Aktif
+                </div>
+
+              </div>
+            </div> -->
+            <div class="card-footer">
+              <div class="card-tools ms-auto">
+                <button class="btn btn-outline-info btn-sm " data-bs-toggle="modal" data-bs-target="#modalFilter">
+                  <i class="fas fa-filter me-1"></i> Filter
+                </button>
+                <button type="button" class="btn btn-outline-primary btn-sm " data-bs-toggle="modal" data-bs-target="#modalTambahData">
+                  <i class="fas fa-plus me-1"></i> Add
+                </button>
+                <button type="button" class="btn btn-outline-primary btn-sm " data-bs-toggle="modal" data-bs-target="#modalImpor">
+                  <i class="fas fa-file-upload me-1"></i> Import
+                </button>                
+                <button type="button" class="btn btn-outline-success btn-sm">
+                  <i class="fas fa-file-download me-1"></i> Export
+                </button>
+                 <button type="button" class="btn btn-outline-danger btn-sm" data-bs-toggle="modal" data-bs-target="#modalResetData">
+                  <i class="fas fa-ban me-1"></i> Reset
+                </button>
+              </div>
+            </div>
+          </div>
+
+
+<!-- ========== CARD : Tabel  ========== -->
+<div class="card">
+<div class="card-body">
+<div class="table-responsive">
+<table class="table table1 table-bordered table-striped table-sm datatables1">
+<thead>
+<tr class="text-uppercase text-center">
+<th width="5px">No.</th>
+<th>Kode MaPel</th>
+<th>Mapel</th>
+<th>kode Capaian</th>
+<th>Uraian Capaian</th>
+<th width="90px">Aksi</th>
+</tr>
+</thead>
+<tbody>
+	<tr>
+		<td class="text-center">1</td>
+		<td>BI4</td>
+    <td>Bahasa Indonesia</td>
+		<td>BI4.C1</td>
+		<td>Peserta didik mampu memahami ide pokok (gagasan) suatu pesan lisan, informasi dari media audio, teks aural (teks yang dibacakan dan/atau didengar), serta instruksi lisan yang berkaitan dengan tujuan berkomunikasi.      
+		</td>
+		<td class="text-center">
+			<button type="button" class="btn btn-sm btn-outline-info" data-bs-toggle="modal" data-bs-target="#modalInfoData">
+				<i class="fas fa-info-circle"></i>
+			</button>
+			<button type="button" class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalEditData">
+				<i class="fas fa-edit"></i>
+			</button>
+			<button type="button" class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#modalHapusData">
+				<i class="fas fa-trash"></i>
+			</button>
+		</td>
+	</tr>
+  <tr>
+    <td class="text-center">2</td>
+    <td>BI4</td>
+    <td>Bahasa Indonesia</td>
+    <td>BI4.C2</td>
+    <br><br>
+    <td>Peserta didik mampu menyampaikan pendapat dan instruksi secara lisan dengan bahasa yang santun dan jelas.      
+    </td>
+    <td class="text-center">
+      <button type="button" class="btn btn-sm btn-outline-info" data-bs-toggle="modal" data-bs-target="#modalInfoData">
+        <i class="fas fa-info-circle"></i>
+      </button>
+      <button type="button" class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalEditData">
+        <i class="fas fa-edit"></i>
+      </button>
+      <button type="button" class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#modalHapusData">
+        <i class="fas fa-trash"></i>
+      </button>
+    </td>
+  </tr>
+  <tr>
+    <td class="text-center">3</td>
+    <td>MT4</td>
+    <td>Matematika</td>
+    <td>MT4.B2</td>
+    <td>Peserta didik mampu memahami dan menyelesaikan masalah yang berkaitan dengan operasi hitung bilangan bulat dan pecahan dalam konteks kehidupan sehari-hari.      
+    </td>
+    <td class="text-center">
+      <button type="button" class="btn btn-sm btn-outline-info" data-bs-toggle="modal" data-bs-target="#modalInfoData">
+        <i class="fas fa-info-circle"></i>
+      </button>
+      <button type="button" class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalEditData">
+        <i class="fas fa-edit"></i>
+      </button>
+      <button type="button" class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#modalHapusData">
+        <i class="fas fa-trash"></i>
+      </button>
+    </td>
+  </tr>
+<tr>
+    <td class="text-center">4</td>
+    <td>MT4</td>
+    <td>Matematika</td>
+    <td>MT4.B3</td>
+    <td>Peserta didik mampu menggunakan pengukuran (berat, volume, waktu) dalam kegiatan sehari-hari.      
+    </td>
+    <td class="text-center">
+      <button type="button" class="btn btn-sm btn-outline-info" data-bs-toggle="modal" data-bs-target="#modalInfoData">
+        <i class="fas fa-info-circle"></i>
+      </button>
+      <button type="button" class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalEditData">
+        <i class="fas fa-edit"></i>
+      </button>
+      <button type="button" class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#modalHapusData">
+        <i class="fas fa-trash"></i>
+      </button>
+    </td>
+  </tr>
+  <tr>
+    <td class="text-center">5</td>
+    <td>IPA4</td>
+    <td>IPA</td>
+    <td>IPA4.B2</td>
+    <td>Peserta didik mampu mengenali perubahan wujud benda dan konsep makanan sehat.   
+    </td>
+    <td class="text-center">
+      <button type="button" class="btn btn-sm btn-outline-info" data-bs-toggle="modal" data-bs-target="#modalInfoData">
+        <i class="fas fa-info-circle"></i>
+      </button>
+      <button type="button" class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalEditData">
+        <i class="fas fa-edit"></i>
+      </button>
+      <button type="button" class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#modalHapusData">
+        <i class="fas fa-trash"></i>
+      </button>
+    </td>
+  </tr>
+  <tr>
+    <td class="text-center">6</td>
+    <td>SA4</td>
+    <td>Kecakapan Hidup</td>
+    <td>SA4.H1</td>
+    <td>Peserta didik mampu menunjukkan kemandirian dan tanggung jawab dalam aktivitas rumah tangga sederhana.   
+    </td>
+    <td class="text-center">
+      <button type="button" class="btn btn-sm btn-outline-info" data-bs-toggle="modal" data-bs-target="#modalInfoData">
+        <i class="fas fa-info-circle"></i>
+      </button>
+      <button type="button" class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalEditData">
+        <i class="fas fa-edit"></i>
+      </button>
+      <button type="button" class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#modalHapusData">
+        <i class="fas fa-trash"></i>
+      </button>
+    </td>
+  </tr>
+  
+
+</tbody>
+</table>
+
+
+</div>
+</div>            
+</div>
+<!-- /.card -->
+
+
+
+        </div>
+      </div>
+    </div>
+  </section>
+  </div>
+  <!-- /.content-wrapper -->
+
+
+
+<?php include "4footer.php"; ?>
+<?php include "5script.php"; ?>

@@ -50,37 +50,7 @@
             <p>Beranda</p>
           </a>
         </li>
-<?php
-$menuItems = [
-    'invoice' => ['label' => 'Invoice', 'icon' => 'fas fa-file-invoice-dollar', 'link' => '../surat_keluar-invoice/'],
-    'kwitansi' => ['label' => 'Kwitansi', 'icon' => 'fas fa-receipt', 'link' => '../kwitansi'],
-    'amplop' => ['label' => 'Amplop', 'icon' => 'fas fa-envelope', 'link' => '../amplop'],
-    'surat_masuk' => ['label' => 'Surat Masuk', 'icon' => 'far fa-circle', 'link' => '../surat_masuk'],
-    'surat_keluar' => ['label' => 'Surat Keluar', 'icon' => 'far fa-circle', 'link' => '../surat_keluar'],
-];
 
-$parentActive = in_array($page, array_keys($menuItems)) ? 'active menu-open' : '';
-?>
-
-<li class="nav-item <?= $parentActive ?>">
-    <a href="#" class="nav-link <?= $parentActive ?>">
-        <i class="nav-icon fas fa-folder-open"></i>
-        <p>
-            Surat-surat
-            <i class="right fas fa-angle-left"></i>
-        </p>
-    </a>
-    <ul class="nav nav-treeview">
-        <?php foreach ($menuItems as $key => $item): ?>
-            <li class="nav-item">
-                <a href="<?= $item['link'] ?>" class="nav-link <?= ($page==$key)?'active':'' ?>">
-                    <i class="<?= $item['icon'] ?> nav-icon"></i>
-                    <p><?= $item['label'] ?></p>
-                </a>
-            </li>
-        <?php endforeach; ?>
-    </ul>
-</li>
 
         <?php 
 // Misal: master-mahasiswa.php sudah punya

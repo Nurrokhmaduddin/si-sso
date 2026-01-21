@@ -87,3 +87,212 @@ $(document).ready(function() {
   }); 
   }); 
   </script>
+
+  <div class="modal fade" id="modalFilter" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">
+          <i class="fas fa-filter me-2"></i>Filter Data
+        </h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+        <div class="alert alert-info small">
+          ⚠️ <strong>Mock-up:</strong> Form filter ini hanya tampilan UI.
+        </div>
+
+        <div class="row">
+          <div class="col-md-6">
+            <label class="form-label">Kategori</label>
+            <select class="form-select">
+              <option>Semua</option>
+              <option>CPL</option>
+              <option>CPMK</option>
+              <option>IK</option>
+            </select>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Status</label>
+            <select class="form-select">
+              <option>Aktif</option>
+              <option>Nonaktif</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+        <button class="btn btn-info">Terapkan Filter</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modalTambahData" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">
+          <i class="fas fa-plus me-2"></i>Tambah Data
+        </h5>
+        <button class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+        <div class="alert alert-warning small">
+          ⚠️ Ini hanya <strong>mock-up form input</strong>.
+        </div>
+
+        <label class="form-label">Nama Data</label>
+        <input type="text" class="form-control" placeholder="Contoh: CPL 1">
+
+        <label class="form-label mt-2">Deskripsi</label>
+        <textarea class="form-control" rows="3"></textarea>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+        <button class="btn btn-primary">Simpan</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modalImpor" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">
+          <i class="fas fa-file-upload me-2"></i>Import Data
+        </h5>
+        <button class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+        <div class="alert alert-info small">
+          📌 Mock-up upload file (belum memproses file).
+        </div>
+
+        <input type="file" class="form-control">
+        <small class="text-muted">Format yang didukung: .xlsx / .csv</small>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+        <button class="btn btn-primary">Import</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modalResetData" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content border-danger">
+      <div class="modal-header bg-danger text-white">
+        <h5 class="modal-title">
+          <i class="fas fa-ban me-2"></i>Reset Data
+        </h5>
+        <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+        <div class="alert alert-danger">
+          ⚠️ <strong>Mock-up!</strong> Reset belum benar-benar dijalankan.
+        </div>
+        Apakah Anda yakin ingin mereset data?
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+        <button class="btn btn-danger">Ya, Reset</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modalInfoData" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">
+          <i class="fas fa-info-circle me-2"></i>Informasi Data
+        </h5>
+        <button class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+        <div class="alert alert-info small">
+          📘 Informasi ini bersifat <strong>mock-up UI</strong>.
+        </div>
+
+        <ul>
+          <li>Total CPL: 12</li>
+          <li>Total CPMK: 256</li>
+          <li>Total IK: 780</li>
+        </ul>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modalEditData" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">
+          <i class="fas fa-edit me-2"></i>Edit Data
+        </h5>
+        <button class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+        <div class="alert alert-warning small">
+          ✏️ Form edit ini hanya tampilan.
+        </div>
+
+        <label class="form-label">Nama Data</label>
+        <input type="text" class="form-control" value="Contoh Data">
+
+        <label class="form-label mt-2">Deskripsi</label>
+        <textarea class="form-control">Deskripsi lama</textarea>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+        <button class="btn btn-primary">Update</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modalHapusData" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content border-danger">
+      <div class="modal-header bg-danger text-white">
+        <h5 class="modal-title">
+          <i class="fas fa-trash me-2"></i>Hapus Data
+        </h5>
+        <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+        <div class="alert alert-danger small">
+          🗑️ <strong>Mock-up!</strong> Data belum benar-benar dihapus.
+        </div>
+        Apakah Anda yakin ingin menghapus data ini?
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+        <button class="btn btn-danger">Hapus</button>
+      </div>
+    </div>
+  </div>
+</div>
