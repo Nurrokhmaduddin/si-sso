@@ -143,6 +143,72 @@
         <!-- ... sisanya tetap statis ... -->
       </tbody>
     </table>
+    <table class="table table-bordered table-hover table-sm">
+  <thead class="table-dark">
+    <tr>
+      <th style="width:50px;">#</th>
+      <th style="width:50px;">Id</th>
+      <th>Riwayat Pembimbingan</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <!-- RIWAYAT TERBARU -->
+    <tr class="table-info">
+      <td><input type="checkbox" class="chk-new"></td>
+      <td class="text-center">3</td>
+      <td>
+        <span class="badge bg-secondary mb-1">Peran Penulis Pesan</span> | Nama Aktor
+        <br>
+        <span class="badge bg-warning text-dark mb-1">⭐ NEW</span>
+        <span class="badge bg-info mb-1"> Balasan Pesan #2</span>       
+        <strong>Update Progres</strong> <br>
+        Draft Bab II sudah diunggah. Lorem ipsum dolor sit amet, consectetur
+        adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <i class="fas fa-paperclip"></i><br>
+        <i>02-03-2025 10:00</i> <button><i class="fas fa-reply"></i>Balas</button>
+      </td>
+    </tr>
+
+    <!-- RIWAYAT PEMBIMBING -->
+    <tr>
+      <td><input type="checkbox" class="chk-new"></td>
+      <td class="text-center">2</td>
+      <td>
+        <span class="badge bg-secondary mb-1">Pembimbing 1</span>
+        <br>
+        <span class="badge bg-warning text-dark mb-1">⭐ NEW</span>
+<span 
+  class="badge bg-info text-dark cursor-pointer"
+  data-bs-toggle="modal"
+  data-bs-target="#modalPesan1"
+  title="Klik untuk melihat pesan asal">
+  💬 Balasan Pesan #1
+</span>
+ – Arahan<br>
+        Perjelas gap penelitian. Lorem ipsum dolor sit amet, consectetur
+        adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br>
+        <i>01-03-2025 09:10</i>
+      </td>
+    </tr>
+
+    <!-- RIWAYAT AWAL -->
+    <tr>
+      <td><input type="checkbox" class="chk-new"></td>
+      <td class="text-center">1</td>
+      <td>
+         
+        <strong>Update Progres</strong>tombol balas<br>
+        Draft Bab I sudah diunggah. Lorem ipsum dolor sit amet, consectetur
+        adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br>
+        <i>28-02-2025 16:30</i>
+      
+      </td>
+      <td class="text-muted"></td>
+    </tr>
+
+  </tbody>
+</table>
+
   </div>
 
 </div>
@@ -261,6 +327,45 @@
     </div>
   </div>
 </div>
+
+<div class="modal fade" id="modalPesan1" tabindex="-1" aria-labelledby="modalPesan1Label" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+
+      <div class="modal-header bg-secondary text-white">
+        <h5 class="modal-title" id="modalPesan1Label">
+          💬 Detail Pesan #1
+        </h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+        <div class="mb-2">
+          <span class="badge bg-primary">Update Progres</span>
+          <span class="badge bg-light text-dark">Mahasiswa</span>
+        </div>
+
+        <p class="mb-1"><strong>Dikirim oleh:</strong> Ahmad Fauzan</p>
+        <p class="mb-3"><strong>Waktu:</strong> 01-03-2025 09:10</p>
+
+        <hr>
+
+        <p>
+          Draft Bab I sudah diunggah.  
+          Mohon arahan terkait struktur pendahuluan dan perumusan masalah.
+        </p>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-outline-secondary" data-bs-dismiss="modal">
+          Tutup
+        </button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
 
 <script>
   // Fungsi validasi interaktif untuk tiap modal

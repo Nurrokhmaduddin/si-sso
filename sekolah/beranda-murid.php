@@ -97,6 +97,7 @@ include "3sidebar.php";
             <table class="table table-bordered table-striped table-sm mb-0">
               <thead class="table-dark">
                 <tr class="text-uppercase text-center">
+                  <th>No</th>
                   <th style="width:25%;">Business Goal</th>
                   <th style="width:25%;">Metric</th>
                   <th style="width:20%;">Level of Detail</th>
@@ -105,24 +106,61 @@ include "3sidebar.php";
               </thead>
               <tbody>               
                 <tr>
+                  <td></td>
                   <td>Mengetahui rencana pembelajran hari ini</td>
                   <td>Info jadwal dan barang persiapan</td>
                   <td>Harian</td>
                   <td>Badge</td>
                 </tr>                 
                 <tr>
+                  <td></td>
                   <td>Mengetahui riwayat perkembangan pembelajaran diri</td>
                   <td>Akumulasi catatan dari fasilitator</td>
                   <td>Daftar report plan daily/weekly/semester</td>
                   <td>KPI Card / Tabel</td>
                 </tr> 
+                <tr>
+      <td class="text-center">1</td>
+      <td>Memenuhi kehadiran harian</td>
+      <td>Persentase kehadiran sendiri</td>
+      <td>Harian</td>
+      <td>KPI Card / Donut Chart</td>
+    </tr>
+    <tr>
+      <td class="text-center">2</td>
+      <td>Melaksanakan kegiatan harian</td>
+      <td>Jumlah kegiatan yang diikuti hari ini</td>
+      <td>Harian</td>
+      <td>Badge / Table</td>
+    </tr>
+    <tr>
+      <td class="text-center">3</td>
+      <td>Menyelesaikan tugas / evaluasi</td>
+      <td>Status tugas/evaluasi (sudah / menunggu / terlambat)</td>
+      <td>Harian / Mingguan</td>
+      <td>Small Bar Chart / Status Label</td>
+    </tr>
+    <tr>
+      <td class="text-center">4</td>
+      <td>Memantau perkembangan diri</td>
+      <td>Jumlah keterampilan / kompetensi yang telah dipelajari</td>
+      <td>Mingguan</td>
+      <td>Progress Bar / KPI Card</td>
+    </tr>
+    <tr>
+      <td class="text-center">5</td>
+      <td>Melakukan komunikasi dengan walikelas</td>
+      <td>Jumlah pesan / pertanyaan yang terkirim dan dibalas</td>
+      <td>Harian</td>
+      <td>Table / Badge</td>
+    </tr>
               </tbody>
             </table>
           </div>
 
           <div class="card-footer small text-muted">
-            <strong>Lifecycle:</strong>
-            Planning → Requirement → Design → Development → Testing → Deployment / Launching (BAST) → Maintenance / Subscription Service
+            <strong>Notes:</strong>
+            Tabel ini menyajikan gambaran mengenai laporan-laporan yang diperlukan oleh pengelola sekolah dari sistem.
           </div>
         </div>
 

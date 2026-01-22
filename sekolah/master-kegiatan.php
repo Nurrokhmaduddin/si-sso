@@ -77,7 +77,7 @@
 <th>Deskripsi</th>
 <th>Dasar Mapel/Kurikulum</th>
 <th width="90px">Aksi</th>
-</tr>
+</tr> 
 </thead>
 <tbody>
 	<tr>

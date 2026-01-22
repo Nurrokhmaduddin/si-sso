@@ -117,6 +117,7 @@ include "3sidebar.php";
             <table class="table table-bordered table-striped table-sm mb-0">
               <thead class="table-dark">
                 <tr class="text-uppercase text-center">
+                  <th>No</th>
                   <th style="width:25%;">Business Goal</th>
                   <th style="width:25%;">Metric</th>
                   <th style="width:20%;">Level of Detail</th>
@@ -125,37 +126,82 @@ include "3sidebar.php";
               </thead>
               <tbody>
                 <tr>
-                  <td>Upload Plan Daily</td>
                   <td></td>
-                  <td>Ringkasan harian</td>
-                  <td>KPI Card</td>
-                </tr>
-                
-                <tr>
-                  <td>Upload Report Daily</td>
-                  <td></td>
-                  <td>Per shift</td>
-                  <td>Status Label</td>
-                </tr>
-                <tr>
                   <td>Mengetahui Persentasi Plan dalam satu semester</td>
                   <td></td>
                   <td></td>
                   <td>Tabel</td>
                 </tr>
                 <tr>
+                  <td></td>
                   <td>Mengetahui Perkembangan Pembelajaran Murid di kelasnya</td>
                   <td></td>
                   <td></td>
                   <td>KPI Card</td>
                 </tr>
+                <tr>
+                  <td></td>
+                  <td>Upload Plan Daily</td>
+                  <td></td>
+                  <td>Ringkasan harian</td>
+                  <td>KPI Card</td>
+                </tr>                
+                <tr>
+                  <td></td>
+                  <td>Upload Report Daily</td>
+                  <td></td>
+                  <td>Per shift</td>
+                  <td>Status Label</td>
+                </tr>
+                <tr>
+      <td class="text-center">1</td>
+      <td>Memantau kehadiran siswa</td>
+      <td>Persentase kehadiran harian per kelas</td>
+      <td>Harian</td>
+      <td>KPI Card / Donut Chart</td>
+    </tr>
+    <tr>
+      <td class="text-center">2</td>
+      <td>Membuat rencana pembelajaran harian</td>
+      <td>Jumlah rencana pembelajaran yang sudah dibuat</td>
+      <td>Harian</td>
+      <td>KPI Card / Badge</td>
+    </tr>
+    <tr>
+      <td class="text-center">3</td>
+      <td>Memastikan eviden kegiatan lengkap</td>
+      <td>Jumlah kegiatan yang sudah tercatat vs total kegiatan</td>
+      <td>Harian</td>
+      <td>Small Bar Chart / Table</td>
+    </tr>
+    <tr>
+      <td class="text-center">4</td>
+      <td>Memantau perilaku siswa</td>
+      <td>Jumlah catatan disiplin dan prestasi siswa</td>
+      <td>Harian / Mingguan</td>
+      <td>Badge / KPI Card</td>
+    </tr>
+    <tr>
+      <td class="text-center">5</td>
+      <td>Memastikan komunikasi dengan orang tua</td>
+      <td>Persentase pesan / notifikasi yang terkirim dan dibaca orang tua</td>
+      <td>Harian</td>
+      <td>Table / KPI Card</td>
+    </tr>
+    <tr>
+      <td class="text-center">6</td>
+      <td>Memantau partisipasi siswa di kegiatan kelas</td>
+      <td>Jumlah siswa aktif dalam kegiatan</td>
+      <td>Harian</td>
+      <td>Horizontal Bar Chart / Progress Bar</td>
+    </tr>
               </tbody>
             </table>
           </div>
 
           <div class="card-footer small text-muted">
-            <strong>Lifecycle:</strong>
-            Planning → Requirement → Design → Development → Testing → Deployment / Launching (BAST) → Maintenance / Subscription Service
+            <strong>Notes:</strong>
+            Tabel ini menyajikan gambaran mengenai laporan-laporan yang diperlukan oleh pengelola sekolah dari sistem.
           </div>
         </div>
 

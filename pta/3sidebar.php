@@ -38,11 +38,50 @@
         data-accordion="false">
 
         <!-- BERANDA -->
-        <li class="nav-item">
+<!--         <li class="nav-item">
           <a href="beranda.php" class="nav-link active">
             <i class="nav-icon fas fa-home"></i>
             <p>Beranda</p>
           </a>
+        </li> -->
+
+        <!-- BERANDA -->
+        <li class="nav-item <?php echo in_array($page, ['beranda_pengelola','beranda_dosen','beranda_walimurid','beranda_murid','beranda_administrator']) ? 'menu-open' : ''; ?>">
+          <a href="#" class="nav-link <?php echo in_array($page, ['beranda_pengelola','beranda_dosen','beranda_walimurid','beranda_murid','beranda_administrator']) ? 'active' : ''; ?>">
+            <i class="nav-icon fas fa-home"></i>
+            <p>
+              Beranda
+              <i class="right fas fa-angle-left"></i>
+            </p>
+          </a>
+
+          <ul class="nav nav-treeview"> 
+            <li class="nav-item">
+              <a href="index.php" class="nav-link <?php echo $page == 'beranda_administrator' ? 'active' : ''; ?>">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Super Admin</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="beranda-pengelola.php" class="nav-link <?php echo $page == 'beranda_pengelola' ? 'active' : ''; ?>">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Admin</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="beranda-dosen.php" class="nav-link <?php echo $page == 'beranda_dosen' ? 'active' : ''; ?>">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Dosen</p>
+              </a>
+            </li> 
+            <li class="nav-item">
+              <a href="beranda-mahasiswa.php" class="nav-link <?php echo $page == 'beranda_mahasiswa' ? 'active' : ''; ?>">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Mahasiswa</p>
+              </a>
+            </li>
+            
+          </ul>
         </li>
 
         <!-- MASTER DATA -->

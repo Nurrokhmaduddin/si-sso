@@ -70,42 +70,41 @@
 <div class="card-body">
 <div class="table-responsive">
 <table class="table table1 table-bordered table-striped table-sm datatables1">
-<thead>
-<tr class="text-uppercase text-center">
-<th width="5px">No.</th>
-<th>Kode MaPel</th>
-<th>Mapel</th>
-<th>kode Capaian</th>
-<th>Uraian Capaian</th>
-<th width="90px">Aksi</th>
-</tr>
-</thead>
+  <thead>
+    <tr class="text-uppercase text-center">
+      <th width="5px">No.</th>
+      <th>Kode MaPel</th>
+      <th>Mapel</th>
+      <th>kode Capaian</th>
+      <th>Uraian Capaian</th>
+      <th width="90px">Aksi</th>
+    </tr> 
+  </thead>
 <tbody>
 	<tr>
 		<td class="text-center">1</td>
 		<td>BI4</td>
     <td>Bahasa Indonesia</td>
-		<td>BI4.C1</td>
-		<td>Peserta didik mampu memahami ide pokok (gagasan) suatu pesan lisan, informasi dari media audio, teks aural (teks yang dibacakan dan/atau didengar), serta instruksi lisan yang berkaitan dengan tujuan berkomunikasi.      
-		</td>
-		<td class="text-center">
-			<button type="button" class="btn btn-sm btn-outline-info" data-bs-toggle="modal" data-bs-target="#modalInfoData">
-				<i class="fas fa-info-circle"></i>
-			</button>
-			<button type="button" class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalEditData">
-				<i class="fas fa-edit"></i>
-			</button>
-			<button type="button" class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#modalHapusData">
-				<i class="fas fa-trash"></i>
-			</button>
-		</td>
-	</tr>
+    <td>BI4.C1</td>
+    <td>Peserta didik mampu memahami ide pokok (gagasan) suatu pesan lisan, informasi dari media audio, teks aural (teks yang dibacakan dan/atau didengar), serta instruksi lisan yang berkaitan dengan tujuan berkomunikasi.      
+    </td>
+    <td class="text-center">
+      <button type="button" class="btn btn-sm btn-outline-info" data-bs-toggle="modal" data-bs-target="#modalInfoData">
+      <i class="fas fa-info-circle"></i>
+      </button>
+      <button type="button" class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalEditData">
+      <i class="fas fa-edit"></i>
+      </button>
+      <button type="button" class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#modalHapusData">
+      <i class="fas fa-trash"></i>
+      </button>
+    </td>
+  </tr>
   <tr>
     <td class="text-center">2</td>
     <td>BI4</td>
     <td>Bahasa Indonesia</td>
     <td>BI4.C2</td>
-    <br><br>
     <td>Peserta didik mampu menyampaikan pendapat dan instruksi secara lisan dengan bahasa yang santun dan jelas.      
     </td>
     <td class="text-center">
@@ -139,7 +138,7 @@
       </button>
     </td>
   </tr>
-<tr>
+  <tr>
     <td class="text-center">4</td>
     <td>MT4</td>
     <td>Matematika</td>
@@ -196,8 +195,6 @@
       </button>
     </td>
   </tr>
-  
-
 </tbody>
 </table>
 

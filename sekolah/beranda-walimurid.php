@@ -95,6 +95,7 @@ include "3sidebar.php";
             <table class="table table-bordered table-striped table-sm mb-0">
               <thead class="table-dark">
                 <tr class="text-uppercase text-center">
+                  <th>No</th>
                   <th style="width:25%;">Business Goal</th>
                   <th style="width:25%;">Metric</th>
                   <th style="width:20%;">Level of Detail</th>
@@ -103,36 +104,75 @@ include "3sidebar.php";
               </thead>
               <tbody>
                 <tr>
+                  <td></td>
                   <td>Mengetahui Kegiatan Sekolah orangtua</td>
                   <td>Jumlah kegiatan semester ini</td>
                   <td>Jadwal dan Persiapan</td>
                   <td>Tabel</td>
                 </tr>
                 <tr>
+                  <td></td>
                   <td>Mengetahui perkembangan pembelajaran hari ini</td>
                   <td>Catatan atas anaknya</td>
                   <td>Daftar report plan daily</td>
                   <td>KPI Card</td>
                 </tr> 
                 <tr>
+                  <td></td>
                   <td>Mengetahui riwayat perkembangan pembelajaran anaknya</td>
                   <td>Akumulasi catatan atas anaknya</td>
                   <td>Daftar report plan daily/weekly/semester</td>
                   <td>KPI Card / Tabel</td>
                 </tr> 
                 <tr>
+                  <td></td>
                   <td>Memastikan pembayaran tuntas</td>
                   <td>Status pembayaran per transaksi</td>
                   <td>Per transaksi</td>
                   <td>Icon Status</td>
                 </tr>
+                <tr>
+      <td class="text-center">1</td>
+      <td>Memantau kehadiran anak</td>
+      <td>Persentase kehadiran harian anak</td>
+      <td>Harian</td>
+      <td>KPI Card / Donut Chart</td>
+    </tr>
+    <tr>
+      <td class="text-center">2</td>
+      <td>Mengetahui kegiatan harian anak</td>
+      <td>Daftar kegiatan yang dilakukan anak hari ini</td>
+      <td>Harian</td>
+      <td>Table / Badge</td>
+    </tr>
+    <tr>
+      <td class="text-center">3</td>
+      <td>Memantau tugas atau evaluasi anak</td>
+      <td>Status tugas/evaluasi (sudah/menunggu/terlambat)</td>
+      <td>Harian / Mingguan</td>
+      <td>Small Bar Chart / Status Label</td>
+    </tr>
+    <tr>
+      <td class="text-center">4</td>
+      <td>Memantau perilaku anak</td>
+      <td>Catatan disiplin / prestasi anak</td>
+      <td>Harian / Mingguan</td>
+      <td>Badge / KPI Card</td>
+    </tr>
+    <tr>
+      <td class="text-center">5</td>
+      <td>Memeriksa notifikasi dari sekolah</td>
+      <td>Jumlah notifikasi yang diterima dan dibaca</td>
+      <td>Harian</td>
+      <td>KPI Card / Table</td>
+    </tr>
               </tbody>
             </table>
           </div>
 
           <div class="card-footer small text-muted">
-            <strong>Lifecycle:</strong>
-            Planning → Requirement → Design → Development → Testing → Deployment / Launching (BAST) → Maintenance / Subscription Service
+            <strong>Notes:</strong>
+            Tabel ini menyajikan gambaran mengenai laporan-laporan yang diperlukan oleh pengelola sekolah dari sistem.
           </div>
         </div>
 
