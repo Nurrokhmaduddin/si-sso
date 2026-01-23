@@ -46,8 +46,8 @@
         </li> -->
 
         <!-- BERANDA -->
-        <li class="nav-item <?php echo in_array($page, ['beranda_pengelola','beranda_dosen','beranda_walimurid','beranda_murid','beranda_administrator']) ? 'menu-open' : ''; ?>">
-          <a href="#" class="nav-link <?php echo in_array($page, ['beranda_pengelola','beranda_dosen','beranda_walimurid','beranda_murid','beranda_administrator']) ? 'active' : ''; ?>">
+        <li class="nav-item <?php echo in_array($page, ['beranda_admin','beranda_dosen','beranda_walimurid','beranda_murid','beranda_administrator']) ? 'menu-open' : ''; ?>">
+          <a href="#" class="nav-link <?php echo in_array($page, ['beranda_admin','beranda_dosen','beranda_walimurid','beranda_murid','beranda_administrator']) ? 'active' : ''; ?>">
             <i class="nav-icon fas fa-home"></i>
             <p>
               Beranda
@@ -63,7 +63,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a href="beranda-pengelola.php" class="nav-link <?php echo $page == 'beranda_pengelola' ? 'active' : ''; ?>">
+              <a href="beranda-admin.php" class="nav-link <?php echo $page == 'beranda_admin' ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Admin</p>
               </a>

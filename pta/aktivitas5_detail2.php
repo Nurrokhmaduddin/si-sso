@@ -102,7 +102,7 @@
     <h5>Riwayat Bimbingan</h5>
     <div class="mb-2">
       <button id="btnTandaiDibaca" class="btn btn-sm btn-success me-2">Tandai Dibaca</button>
-      <button id="btnTambahPesan" class="btn btn-sm btn-primary">Tambah Pesan</button>
+      <button id="btnTambahPesan" class="btn btn-sm btn-primary">Pesan Bimbingan</button>
     </div>
     <table class="table table-striped table-hover">
       <thead class="table-light">
@@ -154,29 +154,31 @@
   <tbody>
 
     <!-- RIWAYAT TERBARU -->
-    <tr class="table-info">
-      <td><input type="checkbox" class="chk-new"></td>
+    <tr>
+      <td></td>
       <td class="text-center">3</td>
-      <td>
-        <span class="badge bg-secondary mb-1">Peran Penulis Pesan</span> | Nama Aktor
-        <br>
-        <span class="badge bg-warning text-dark mb-1">⭐ NEW</span>
-        <span class="badge bg-info mb-1"> Balasan Pesan #2</span>       
+      <td>                
+        <span class="badge bg-info text-dark cursor-pointer mb-1"
+        data-bs-toggle="modal"
+        data-bs-target="#modalPesan1"
+        title="Klik untuk melihat pesan asal">
+      💬 Balasan Pesan #2</span>           
         <strong>Update Progres</strong> <br>
         Draft Bab II sudah diunggah. Lorem ipsum dolor sit amet, consectetur
         adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <i class="fas fa-paperclip"></i><br>
-        <i>02-03-2025 10:00</i> <button><i class="fas fa-reply"></i>Balas</button>
+        <i>02-03-2025 10:00</i> 
       </td>
     </tr>
 
     <!-- RIWAYAT PEMBIMBING -->
-    <tr>
+    <tr class="table-info">
       <td><input type="checkbox" class="chk-new"></td>
       <td class="text-center">2</td>
       <td>
-        <span class="badge bg-secondary mb-1">Pembimbing 1</span>
+        <span class="badge bg-secondary mb-1">Pembimbing 1</span> | Nama Aktor
+        
         <br>
-        <span class="badge bg-warning text-dark mb-1">⭐ NEW</span>
+        <span class="badge badge-new">⭐ NEW</span>
 <span 
   class="badge bg-info text-dark cursor-pointer"
   data-bs-toggle="modal"
@@ -184,7 +186,7 @@
   title="Klik untuk melihat pesan asal">
   💬 Balasan Pesan #1
 </span>
- – Arahan<br>
+ – Arahan <button class="btn btn-sm btn-outline-primary"><i class="fas fa-reply"></i> Balas</button><br>
         Perjelas gap penelitian. Lorem ipsum dolor sit amet, consectetur
         adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br>
         <i>01-03-2025 09:10</i>
@@ -193,11 +195,11 @@
 
     <!-- RIWAYAT AWAL -->
     <tr>
-      <td><input type="checkbox" class="chk-new"></td>
+      <td></td>
       <td class="text-center">1</td>
       <td>
          
-        <strong>Update Progres</strong>tombol balas<br>
+        <strong>Update Progres</strong><br>
         Draft Bab I sudah diunggah. Lorem ipsum dolor sit amet, consectetur
         adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br>
         <i>28-02-2025 16:30</i>

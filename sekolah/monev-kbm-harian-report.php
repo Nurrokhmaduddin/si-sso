@@ -86,7 +86,13 @@
                     <td>           
                       <button class="btn btn-outline-info btn-sm"
                       onclick="window.location.href='monev-kbm-harian-report-detail.php'"><i class="fas fa-info-circle"></i></button>
-                    </td>
+                      <a href="learning_report_20260123.pdf"
+                      class="btn btn-outline-success btn-sm"
+                      download
+                      title="Download Learning Report">
+                      <i class="fas fa-download"></i>
+                    </a>
+                  </td>
                   </tr>
                   <tr>
                     <td>2</td>

@@ -60,8 +60,8 @@
                  <button type="button" class="btn btn-outline-danger btn-sm" data-bs-toggle="modal" data-bs-target="#modalResetData">
                   <i class="fas fa-ban me-1"></i> Reset
                 </button>
-                <button type="button" class="btn btn-outline-danger btn-sm" data-bs-toggle="modal" data-bs-target="#modalGagalUpload">
-                  <i class="fas fa-broom me-1"></i> ErrorHandler
+                <button type="button" class="btn btn-outline-danger btn-sm" data-bs-toggle="modal" data-bs-target="#modalGagal">
+                  <i class="fas fa-exclamation-triangle me-1"></i> ErrorHandler
                 </button>                
               </div>
             </div>

@@ -76,145 +76,299 @@ include "3sidebar.php";
 
       <!-- Jadwal Harian & Dokumentasi -->
       <div class="row">
-        <section class="col-lg-7 connectedSortable">
+        <section class="col-lg-6 connectedSortable">
           <div class="card">
-            <div class="card-header"><h3 class="card-title"><i class="fas fa-calendar-alt mr-1"></i>Rencana Harian</h3></div>
-            <div class="card-body">
-              <ul class="list-group">
-                <li class="list-group-item">07.30 - Welcoming</li>
-                <li class="list-group-item">08.00 - Eksplorasi Alam</li>
-                <li class="list-group-item">10.00 - Istirahat</li>
-                <li class="list-group-item">10.30 - Tahfidz</li>
-              </ul>
-            </div>
+            <div class="card-header d-flex justify-content-between align-items-center">
+              <h3 class="card-title mb-0">
+                <i class="fas fa-calendar-alt me-1"></i> Rencana Kelas Neptunus Hari ini
+              </h3>
+              <button class="btn btn-outline-primary btn-sm"
+              data-bs-toggle="modal"
+              data-bs-target="#modalEditReport">
+              <i class="fas fa-edit"></i> Report
+            </button>
           </div>
-        </section>
-
-        <section class="col-lg-5 connectedSortable">
-          <div class="card">
-            <div class="card-header"><h3 class="card-title"><i class="fas fa-image mr-1"></i>Dokumentasi Kegiatan</h3></div>
-            <div class="card-body">
-              <div class="row">
-                <div class="col-6"><img src="https://via.placeholder.com/150" class="img-fluid rounded mb-2"></div>
-                <div class="col-6"><img src="https://via.placeholder.com/150" class="img-fluid rounded mb-2"></div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-
-
-      <!-- Card Metric Laporan -->
-        <div class="card">
-          <div class="card-header">
-            <h3 class="card-title">
-              <i class="fas fa-clipboard-list mr-2"></i>
-              Peran – Nama Sistem
-            </h3>
-          </div>
-
-          <div class="card-body p-0">
-            <table class="table table-bordered table-striped table-sm mb-0">
-              <thead class="table-dark">
-                <tr class="text-uppercase text-center">
-                  <th>No</th>
-                  <th style="width:25%;">Business Goal</th>
-                  <th style="width:25%;">Metric</th>
-                  <th style="width:20%;">Level of Detail</th>
-                  <th style="width:30%;">Visual Type</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td></td>
-                  <td>Mengetahui Persentasi Plan dalam satu semester</td>
-                  <td></td>
-                  <td></td>
-                  <td>Tabel</td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td>Mengetahui Perkembangan Pembelajaran Murid di kelasnya</td>
-                  <td></td>
-                  <td></td>
-                  <td>KPI Card</td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td>Upload Plan Daily</td>
-                  <td></td>
-                  <td>Ringkasan harian</td>
-                  <td>KPI Card</td>
-                </tr>                
-                <tr>
-                  <td></td>
-                  <td>Upload Report Daily</td>
-                  <td></td>
-                  <td>Per shift</td>
-                  <td>Status Label</td>
-                </tr>
-                <tr>
-      <td class="text-center">1</td>
-      <td>Memantau kehadiran siswa</td>
-      <td>Persentase kehadiran harian per kelas</td>
-      <td>Harian</td>
-      <td>KPI Card / Donut Chart</td>
-    </tr>
-    <tr>
-      <td class="text-center">2</td>
-      <td>Membuat rencana pembelajaran harian</td>
-      <td>Jumlah rencana pembelajaran yang sudah dibuat</td>
-      <td>Harian</td>
-      <td>KPI Card / Badge</td>
-    </tr>
-    <tr>
-      <td class="text-center">3</td>
-      <td>Memastikan eviden kegiatan lengkap</td>
-      <td>Jumlah kegiatan yang sudah tercatat vs total kegiatan</td>
-      <td>Harian</td>
-      <td>Small Bar Chart / Table</td>
-    </tr>
-    <tr>
-      <td class="text-center">4</td>
-      <td>Memantau perilaku siswa</td>
-      <td>Jumlah catatan disiplin dan prestasi siswa</td>
-      <td>Harian / Mingguan</td>
-      <td>Badge / KPI Card</td>
-    </tr>
-    <tr>
-      <td class="text-center">5</td>
-      <td>Memastikan komunikasi dengan orang tua</td>
-      <td>Persentase pesan / notifikasi yang terkirim dan dibaca orang tua</td>
-      <td>Harian</td>
-      <td>Table / KPI Card</td>
-    </tr>
-    <tr>
-      <td class="text-center">6</td>
-      <td>Memantau partisipasi siswa di kegiatan kelas</td>
-      <td>Jumlah siswa aktif dalam kegiatan</td>
-      <td>Harian</td>
-      <td>Horizontal Bar Chart / Progress Bar</td>
-    </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <div class="card-footer small text-muted">
-            <strong>Notes:</strong>
-            Tabel ini menyajikan gambaran mengenai laporan-laporan yang diperlukan oleh pengelola sekolah dari sistem.
+          <div class="card-body">
+            <ul class="list-group">
+              <li class="list-group-item">07.30 - Welcoming</li>
+              <li class="list-group-item">07.45 - Sholat Dhuha</li>
+              <li class="list-group-item">08.00 - Farming</li>
+              <li class="list-group-item">11.30 - Dhuhur & Lunch</li>
+              <li class="list-group-item">12.30 - Tahfidz</li>
+              <li class="list-group-item">13.00 - Mengaji</li>
+              <li class="list-group-item">14.15 - Closing</li>
+            </ul>
           </div>
         </div>
+      </section>
 
+      <section class="col-lg-6 connectedSortable">
+        <div class="card">
+          <div class="card-header d-flex justify-content-between align-items-center">
+            <h5 class="card-title mb-0"><i class="fas fa-calendar-alt me-1"></i>Rencana Kelas Merkurius Hari inii</h5>
+            <div class="card-tools ms-auto">
+              <button class="btn btn-outline-info btn-sm" 
+              onclick="window.location.href='monev-kbm-harian-do-detail.php'">
+              Report
+            </button>
+          </div>
+        </div>
+        
+        <div class="card-body">
+          <ul class="list-group">
+            <li class="list-group-item">07.30 - Welcoming</li>
+            <li class="list-group-item">07.45 - Sholat Dhuha</li>
+            <li class="list-group-item">08.00 - Eksplorasi Alam</li>
+            <li class="list-group-item">11.30 - Dhuhur & Lunch</li>
+            <li class="list-group-item">12.30 - Tahfidz</li>
+            <li class="list-group-item">13.00 - Mengaji</li>
+            <li class="list-group-item">14.15 - Closing</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
+
+
+  <!-- Card Metric Laporan -->
+  <div class="card">
+    <div class="card-header">
+      <h3 class="card-title">
+        <i class="fas fa-clipboard-list mr-2"></i>
+        Peran – Nama Sistem
+      </h3>
     </div>
-  </section>
+
+    <div class="card-body p-0">
+      <table class="table table-bordered table-striped table-sm mb-0">
+        <thead class="table-dark">
+          <tr class="text-uppercase text-center">
+            <th>No</th>
+            <th style="width:25%;">Business Goal</th>
+            <th style="width:25%;">Metric</th>
+            <th style="width:20%;">Level of Detail</th>
+            <th style="width:30%;">Visual Type</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td></td>
+            <td>Mengetahui Persentasi Plan dalam satu semester</td>
+            <td></td>
+            <td></td>
+            <td>Tabel</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>Mengetahui Perkembangan Pembelajaran Murid di kelasnya</td>
+            <td></td>
+            <td></td>
+            <td>KPI Card</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>Upload Plan Daily</td>
+            <td></td>
+            <td>Ringkasan harian</td>
+            <td>KPI Card</td>
+          </tr>                
+          <tr>
+            <td></td>
+            <td>Upload Report Daily</td>
+            <td></td>
+            <td>Per shift</td>
+            <td>Status Label</td>
+          </tr>
+          <tr>
+            <td class="text-center">1</td>
+            <td>Memantau kehadiran siswa</td>
+            <td>Persentase kehadiran harian per kelas</td>
+            <td>Harian</td>
+            <td>KPI Card / Donut Chart</td>
+          </tr>
+          <tr>
+            <td class="text-center">2</td>
+            <td>Membuat rencana pembelajaran harian</td>
+            <td>Jumlah rencana pembelajaran yang sudah dibuat</td>
+            <td>Harian</td>
+            <td>KPI Card / Badge</td>
+          </tr>
+          <tr>
+            <td class="text-center">3</td>
+            <td>Memastikan eviden kegiatan lengkap</td>
+            <td>Jumlah kegiatan yang sudah tercatat vs total kegiatan</td>
+            <td>Harian</td>
+            <td>Small Bar Chart / Table</td>
+          </tr>
+          <tr>
+            <td class="text-center">4</td>
+            <td>Memantau perilaku siswa</td>
+            <td>Jumlah catatan disiplin dan prestasi siswa</td>
+            <td>Harian / Mingguan</td>
+            <td>Badge / KPI Card</td>
+          </tr>
+          <tr>
+            <td class="text-center">5</td>
+            <td>Memastikan komunikasi dengan orang tua</td>
+            <td>Persentase pesan / notifikasi yang terkirim dan dibaca orang tua</td>
+            <td>Harian</td>
+            <td>Table / KPI Card</td>
+          </tr>
+          <tr>
+            <td class="text-center">6</td>
+            <td>Memantau partisipasi siswa di kegiatan kelas</td>
+            <td>Jumlah siswa aktif dalam kegiatan</td>
+            <td>Harian</td>
+            <td>Horizontal Bar Chart / Progress Bar</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card-footer small text-muted">
+      <strong>Notes:</strong>
+      Tabel ini menyajikan gambaran mengenai laporan-laporan yang diperlukan oleh pengelola sekolah dari sistem.
+    </div>
+  </div>
+
+</div>
+</section>
 
 
   <!-- /.content -->
 </div>
 <!-- /.content-wrapper -->
-<?php
-include "4footer.php"; 
-?>
-<?php
-include "5script.php"; 
-?>
+<?php include "4footer.php"; ?>
+
+<div class="modal fade" id="modalEditReport" tabindex="-1">
+  <div class="modal-dialog modal-xl modal-dialog-scrollable">
+    <div class="modal-content">
+
+      <!-- HEADER -->
+      <div class="modal-header bg-primary text-white d-flex justify-content-between align-items-center">
+        <h5 class="modal-title mb-0">
+          <i class="fas fa-edit me-1"></i> Edit Evaluasi & Laporan Harian
+        </h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+
+      <!-- BODY -->
+      <div class="modal-body">
+
+        <!-- 1. Evaluasi KBM -->
+        <div class="card card-outline card-primary mb-3">
+          <div class="card-header">
+            <h6 class="mb-0">Evaluasi KBM Harian</h6>
+          </div>
+          <div class="card-body">
+            <textarea class="form-control"
+              name="evaluasi_kbm"
+              rows="3"
+              placeholder="Tuliskan evaluasi KBM harian..."></textarea>
+          </div>
+        </div>
+
+        <!-- 2. Kehadiran & Catatan -->
+        <div class="card card-outline card-info mb-3">
+          <div class="card-header">
+            <h6 class="mb-0">Kehadiran & Catatan Per Murid</h6>
+          </div>
+          <div class="card-body table-responsive">
+            <table class="table table-bordered table-sm align-middle">
+              <thead class="table-light text-center">
+                <tr>
+                  <th style="width:5%">No</th>
+                  <th style="width:25%">Nama Murid</th>
+                  <th style="width:15%">Kehadiran</th>
+                  <th>Catatan Fasilitator</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="text-center">1</td>
+                  <td>Ameera Nur Fauziyyah</td>
+                  <td>
+                    <select class="form-select form-select-sm">
+                      <option value="hadir">Present</option>
+                      <option value="alfa">Absent</option>
+                    </select>
+                  </td>
+                  <td>
+                    <input type="text" class="form-control form-control-sm"
+                      placeholder="Catatan murid...">
+                  </td>
+                </tr>
+
+                <tr>
+                  <td class="text-center">2</td>
+                  <td>Ramadatiya Leo Pradana</td>
+                  <td>
+                    <select class="form-select form-select-sm">
+                      <option value="hadir">Present</option>
+                      <option value="alfa">Absent</option>
+                    </select>
+                  </td>
+                  <td>
+                    <input type="text" class="form-control form-control-sm"
+                      placeholder="Catatan murid...">
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- 3. Catatan Harian Kelas -->
+        <div class="card card-outline card-success mb-3">
+          <div class="card-header">
+            <h6 class="mb-0">Catatan Harian Kelas</h6>
+          </div>
+          <div class="card-body">
+            <textarea class="form-control"
+              name="catatan_harian"
+              rows="3"
+              placeholder="Catatan umum perkembangan kelas hari ini..."></textarea>
+          </div>
+        </div>
+
+        <!-- 4. Upload Dokumentasi (MULTIPLE) -->
+        <div class="card card-outline card-warning">
+          <div class="card-header">
+            <h6 class="mb-0">Upload Dokumentasi Kegiatan</h6>
+          </div>
+          <div class="card-body">
+            <label class="form-label">Pilih File Gambar</label>
+            <input type="file"
+              class="form-control"
+              name="uploadFile[]"
+              accept="image/*"
+              multiple>
+
+            <small class="text-muted d-block mt-1">
+              ✔ Bisa upload lebih dari satu gambar  
+              ✔ Format: JPG, PNG, GIF  
+              ✔ Disarankan max 5 file
+            </small>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- FOOTER -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Batal
+        </button>
+        <button type="submit" class="btn btn-primary">
+          <i class="fas fa-save me-1"></i> Simpan
+        </button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+<?php include "5script.php"; ?>

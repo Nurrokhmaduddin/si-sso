@@ -417,12 +417,12 @@ body {
 
         <!-- <hr> -->
 
-        <h6>Achievements & Badges</h6>
+        <h6><i class="fas fa-medal me-1"></i> Challenge</h6>
         <div class="d-flex flex-wrap gap-2">
-          <div class="badge-chip"><i class="fa fa-fire"></i> Konsultasi 5 hari berturut</div>
+          <div class="badge-chip"><i class="fa fa-fire"></i> Streak 5 Hari </div>
           <div class="badge-chip"><i class="fa fa-check-circle"></i> Lulus Tanpa Revisi</div>
-          <div class="badge-chip"><i class="fa fa-stopwatch"></i> selesai bimbingan <180 hari</div>
-          <div class="badge-chip text-danger">Perpanjangan × 1<i class="fa fa-heart"></i></div>
+          <div class="badge-chip"><i class="fa fa-stopwatch"></i> Durasi <180 Hari</div>
+          <div class="badge-chip text-danger">Perpanjangan <i class="fa fa-heart"></i> × 1</div>
         </div> 
         <!-- Health Bar -->
 
@@ -463,7 +463,7 @@ body {
 		<h5 class="mb-0">
 			 nama aktivitas - Periode/Semester
 		</h5>
-		<button class="btn btn-sm btn-danger"><i class="fas fa-heart"></i> Perpanjangan</button>
+		<button class="btn btn-sm btn-danger">Perpanjangan <i class="fas fa-heart"></i></button>
 	</div>
   
   <!-- Milestone Wrapper -->
@@ -532,7 +532,7 @@ body {
       <i class="fa fa-stopwatch"></i> selesai bimbingan <180 hari
     </div>
     <div style="display:inline-flex; align-items:center; gap:6px; padding:6px 10px; border-radius:999px; background:#e9ecef; border:1px solid #dee2e6; font-weight:600; font-size:0.85rem; color:#495057;">
-      <i class="fa fa-heart"></i> Perpanjangan × 1
+       Perpanjangan <i class="fa fa-heart"></i> × 1
     </div>
   </div>
 
