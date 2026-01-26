@@ -1,14 +1,17 @@
-<?php $page = 'user_mahasiswa'; ?>
+<?php $page = 'master_periode'; ?>
 <?php include('1header.php'); ?>
 <?php include('2navbar.php'); ?>
-<?php include('3sidebar2.php'); ?>
+<?php include('3sidebar.php'); ?>
 
   
 <div class="content-wrapper" style="min-height: 626.4px;">    
 
   <section class="content-header">
     <div class="container-fluid">
-      <h3 class="mb-0">Judul halaman ini (Mahasiswa) </h3>
+      <h3 class="mb-0">Periode Akademik 
+        <button type="button" class="btn btn-tool" data-bs-toggle="modal" data-bs-target="#modalBantuan" title="Bantuan"><i class="fas fa-question-circle"></i>
+        </button> 
+      </h3>
         <p class="text-muted mb-0">Keterangan singkat cara baca informasi halaman ini</p>
     </div>
   </section>
@@ -19,28 +22,19 @@
       <!-- Main row -->
       <div class="row">
         <div class="col-md-12">
-          <!-- ========== CARD 2: Filter & Export ========== -->
+          <!-- ========== CARD : Filter & Export ========== -->
           <div class="card">
-            <div class="card-header">
-              <h5 class="card-title mb-0"><i class="fas fa-filter "></i> Judul Tabel yang terdampak tombol aksi ini</h5>
+            <!-- <div class="card-header bg-secondary">
+              <h5 class="card-title mb-0">
+                <i class="fas fa-database"></i> Data Produk/Barang        
+              </h5>
               <div class="card-tools ms-auto">
-                <button class="btn btn-outline-info btn-sm " data-bs-toggle="modal" data-bs-bstarget="#modalFilter">
-                  <i class="fas fa-filter me-1"></i> Filter
-                </button>
-                <button type="button" class="btn btn-outline-primary btn-sm " data-bs-toggle="modal" data-bs-target="#modalTambahData">
-                  <i class="fas fa-plus me-1"></i> Add
-                </button>
-                <button type="button" class="btn btn-outline-primary btn-sm ">
-                  <i class="fas fa-file-upload me-1"></i> Import
-                </button>
-                <button type="button" class="btn btn-outline-success btn-sm">
-                  <i class="fas fa-file-download me-1"></i> Export
-                </button>
+                               
               </div>
-            </div>
-            <div class="card-body">
-              <div class="row">
+            </div> -->
 
+            <!-- <div class="card-body ">
+              <div class="row">
                 <div class="col-md-6">
                   <b>Angkatan:</b> 2023 &nbsp;
                 </div>                
@@ -53,9 +47,29 @@
                 <div class="col-md-6">
                   <b>Status:</b> Aktif
                 </div>
+              </div>
+            </div> -->
 
+            <div class="card-footer">
+              <div class="card-tools ms-auto">
+                <button class="btn btn-outline-info btn-sm " data-bs-toggle="modal" data-bs-target="#modalFilter">
+                  <i class="fas fa-filter me-1"></i> Filter
+                </button>
+                <button type="button" class="btn btn-outline-primary btn-sm " data-bs-toggle="modal" data-bs-target="#modalTambahData">
+                  <i class="fas fa-plus me-1"></i> Add
+                </button>
+                <button type="button" class="btn btn-outline-primary btn-sm " data-bs-toggle="modal" data-bs-target="#modalImpor">
+                  <i class="fas fa-file-upload me-1"></i> Import
+                </button>                
+                <button type="button" class="btn btn-outline-success btn-sm">
+                  <i class="fas fa-file-download me-1"></i> Export
+                </button>
+                <button type="button" class="btn btn-outline-danger btn-sm">
+                  <i class="fas fa-ban me-1"></i> Reset
+                </button>    
               </div>
             </div>
+
           </div>
 
 
@@ -79,202 +93,150 @@
             <div class="card-body">
               <div class="table-responsive">
                <table class="table table1 table-bordered table-striped table-sm datatables1">
-                <thead>
-                  <!-- BARIS FILTER -->
-                  <!-- <tr class="filters">
-                    <th></th>
-                    <th><input type="text" class="form-control form-control-sm" placeholder="Search Username"></th>
-                    <th><input type="text" class="form-control form-control-sm" placeholder="Search Name"></th>
-                    <th><input type="text" class="form-control form-control-sm" placeholder="Search Email/HP"></th>
-                    <th></th>
-                    <th>
-                      <select class="form-control form-control-sm">
-                        <option value="">All</option>
-                        <option value="Aktif">Aktif</option>
-                        <option value="NonAktif">NonAktif</option>
-                      </select>
-                    </th>
-                    <th></th>
-                  </tr> -->
-                  <tr class="text-uppercase text-center">
-                    <th width="5px">No.</th>
-                    <th>Username</th>
-                    <th>DisplayName</th>
-                    <th>Email/Nomor HP</th>
-                    <th>Foto</th>
-                    <th>Status</th>
-                    <th>Aksi</th>
-                  </tr>
-                  
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="text-center">1</td>
-                    <td>19312137</td>
-                    <td>Pramita Widyadari</td>
-                    <td>pramita.widyadari@univ.ac.id</td>
-                    <td class="text-center"><img style="width: 40px;" alt="Foto"></td>
-                    <td class="text-center"><span class="badge badge-info">Aktif</span></td>
-                    <td class="text-center">
-                      <button type="button" class="btn btn-sm btn-outline-warning">
-                        <i class="fas fa-key"></i>
-                      </button>
-                      <button type="button" class="btn btn-sm btn-outline-primary">
-                        <i class="fas fa-edit"></i>
-                      </button>
-                      <button type="button" class="btn btn-sm btn-outline-danger">
-                        <i class="fas fa-trash"></i>
-                      </button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="text-center">2</td>
-                    <td>19312376</td>
-                    <td>Ho Aldika Novaldy Sumampow</td>
-                    <td>aldika.sumampow@univ.ac.id</td>
-                    <td class="text-center"><img style="width: 40px;" alt="Foto"></td>
-                    <td class="text-center"><span class="badge badge-info">Aktif</span></td>
-                    <td class="text-center">
-                      <button type="button" class="btn btn-sm btn-outline-info">
-                        <i class="fas fa-info-circle"></i>
-                      </button>
-                      <button type="button" class="btn btn-sm btn-outline-primary">
-                        <i class="fas fa-upload"></i>
-                      </button>
-                      <button type="button" class="btn btn-sm btn-outline-success">
-                        <i class="fas fa-download"></i>
-                      </button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="text-center">3</td>
-                    <td>19312406</td>
-                    <td>Annisa Regita Sintowati</td>
-                    <td>annisa.sintowati@univ.ac.id</td>
-                    <td class="text-center"><img style="width: 40px;" alt="Foto"></td>
-                    <td class="text-center"><span class="badge badge-info">Aktif</span></td>
-                    <td class="text-center"><button type="button" class="btn btn-sm btn-outline-warning">🔑</button></td>
-                  </tr>
-                  <tr>
-                    <td class="text-center">4</td>
-                    <td>19312418</td>
-                    <td>Claudia Monica Aditama</td>
-                    <td>claudia.aditama@univ.ac.id</td>
-                    <td class="text-center"><img style="width: 40px;" alt="Foto"></td>
-                    <td class="text-center"><span class="badge badge-info">Aktif</span></td>
-                    <td class="text-center"><button type="button" class="btn btn-sm btn-outline-warning">🔑</button></td>
-                  </tr>
-                  <tr>
-                    <td class="text-center">5</td>
-                    <td>19312424</td>
-                    <td>Filza Aliyah Tasya</td>
-                    <td>filza.tasya@univ.ac.id</td>
-                    <td class="text-center"><img style="width: 40px;" alt="Foto"></td>
-                    <td class="text-center"><span class="badge badge-info">Aktif</span></td>
-                    <td class="text-center"><button type="button" class="btn btn-sm btn-outline-warning">🔑</button></td>
-                  </tr>
-                  <tr>
-                    <td class="text-center">6</td>
-                    <td>19312479</td>
-                    <td>Asep Sunandar</td>
-                    <td>asep.sunandar@univ.ac.id</td>
-                    <td class="text-center"><img style="width: 40px;" alt="Foto"></td>
-                    <td class="text-center"><span class="badge badge-info">Aktif</span></td>
-                    <td class="text-center"><button type="button" class="btn btn-sm btn-outline-warning">🔑</button></td>
-                  </tr>
-                  <tr>
-                    <td class="text-center">7</td>
-                    <td>19312484</td>
-                    <td>Fitri Dwi Astuti</td>
-                    <td>fitri.astuti@univ.ac.id</td>
-                    <td class="text-center"><img style="width: 40px;" alt="Foto"></td>
-                    <td class="text-center"><span class="badge badge-info">Aktif</span></td>
-                    <td class="text-center"><button type="button" class="btn btn-sm btn-outline-warning">🔑</button></td>
-                  </tr>
-                  <tr>
-                    <td class="text-center">8</td>
-                    <td>19312486</td>
-                    <td>Dynda Agustina Tiara Putri</td>
-                    <td>dynda.putri@univ.ac.id</td>
-                    <td class="text-center"><img style="width: 40px;" alt="Foto"></td>
-                    <td class="text-center"><span class="badge badge-info">Aktif</span></td>
-                    <td class="text-center">
-                    <div class="btn-group">
-  <button type="button" class="btn btn-sm btn-outline-info dropdown-toggle" 
-          data-bs-toggle="dropdown" aria-expanded="false">
-    <i class="fas fa-ellipsis-h"></i> Action
-  </button>
-  <ul class="dropdown-menu">
-    <li><a class="dropdown-item" href="#"><i class="fas fa-edit text-primary"></i> Edit Link</a></li>
-    <li><a class="dropdown-item" href="#"><i class="fas fa-trash-alt text-danger"></i> Hapus Data</a></li>
-    <li><a class="dropdown-item" href="#"><i class="fas fa-key text-warning"></i> Ubah Password</a></li>
-    <li><a class="dropdown-item" href="#"><i class="fas fa-upload text-success"></i> Upload File</a></li>
-    <li><hr class="dropdown-divider"></li>
-    <li><a class="dropdown-item" href="portfolio_cpmk_detail2.php" target="_blank">
-      <i class="fas fa-external-link-alt text-info"></i> View Link</a></li>
-    <li><a class="dropdown-item" href="#"><i class="fas fa-download text-success"></i> Download File</a></li>
-  </ul>
-</div>
-</td>
-                  </tr>
-                  <tr>
-                    <td class="text-center">9</td>
-                    <td>19320088</td>
-                    <td>Ridho Adi Kurnianto</td>
-                    <td>ridho.kurnianto@univ.ac.id</td>
-                    <td class="text-center"><img style="width: 40px;" alt="Foto"></td>
-                    <td class="text-center"><span class="badge badge-info">Aktif</span></td>
-                    <td class="text-center">
-                      <button type="button" class="btn btn-sm btn-outline-warning">
-                        <i class="fas fa-key"></i>
-                      </button>
-                      <button type="button" class="btn btn-sm btn-outline-primary">
-                        <i class="fas fa-edit"></i>
-                      </button>
-                      <button type="button" class="btn btn-sm btn-outline-danger">
-                        <i class="fas fa-trash"></i>
-                      </button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="text-center">10</td>
-                    <td>19321025</td>
-                    <td>Freyendo Al Farrel Sibarani</td>
-                    <td>freyendo.sibarani@univ.ac.id</td>
-                    <td class="text-center"><img style="width: 40px;" alt="Foto"></td>
-                    <td class="text-center"><span class="badge badge-info">Aktif</span></td>
-                    <td class="text-center">
-                      <button type="button" class="btn btn-sm btn-outline-info">
-                        <i class="fas fa-info-circle"></i>
-                      </button>
-                      <button type="button" class="btn btn-sm btn-outline-primary">
-                        <i class="fas fa-upload"></i>
-                      </button>
-                      <button type="button" class="btn btn-sm btn-outline-success">
-                        <i class="fas fa-download"></i>
-                      </button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="text-center">11</td>
-                    <td>19321026</td>
-                    <td>Al Farrel Sibarani</td>
-                    <td>sibarani@univ.ac.id</td>
-                    <td class="text-center"><img style="width: 40px;" alt="Foto"></td>
-                    <td class="text-center"><span class="badge badge-info">Aktif</span></td>
-                    <td class="text-center">
-                      <button type="button" class="btn btn-sm btn-outline-info">
-                        <i class="fas fa-info-circle"></i>
-                      </button>
-                      <button type="button" class="btn btn-sm btn-outline-primary">
-                        <i class="fas fa-upload"></i>
-                      </button>
-                      <button type="button" class="btn btn-sm btn-outline-success">
-                        <i class="fas fa-download"></i>
-                      </button>
-                    </td>
-                  </tr>
-                </tbody>
+                 <thead class="text-uppercase">
+                <tr>
+                  <th width="20px">No</th>
+                  <th>Kode</th>
+                  <th>Periode Akademik</th>
+                  <th>Semester</th>
+                  <th>Berlaku Hingga</th>
+                  <th>Nilai Minimum CPMK (LOA)</th>
+                  <th>Status</th>
+                  <th>Aksi</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td align="center">1</td>
+                  <td>KR-01</td>
+                  <td>2020/2021</td>
+                  <td>Gasal</td>
+                  <td>28 September 2020</td>
+                  <td>60</td>
+                  <td><span class="badge badge-secondary">Tidak Aktif</span></td>
+                  <td align="center">
+                    <button class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#modalEditAkun">✏️</button>
+                    <button class="btn btn-sm btn-outline-danger" data-toggle="modal" data-target="#modalHapusAkun">🗑️</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center">2</td>
+                  <td>KR-05</td>
+                  <td>2021/2022</td>
+                  <td>Gasal</td>
+                  <td>27 September 2021</td>
+                  <td>60</td>
+                  <td><span class="badge badge-secondary">Tidak Aktif</span></td>
+                  <td align="center">
+                    <button class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#modalEditAkun">✏️</button>
+                    <button class="btn btn-sm btn-outline-danger" data-toggle="modal" data-target="#modalHapusAkun">🗑️</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center">3</td>
+                  <td>KR-07</td>
+                  <td>2022/2023</td>
+                  <td>Gasal</td>
+                  <td>28 Februari 2023</td>
+                  <td>60</td>
+                  <td><span class="badge badge-secondary">Tidak Aktif</span></td>
+                  <td align="center">
+                    <button class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#modalEditAkun">✏️</button>
+                    <button class="btn btn-sm btn-outline-danger" data-toggle="modal" data-target="#modalHapusAkun">🗑️</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center">4</td>
+                  <td>KR-09</td>
+                  <td>2023/2024</td>
+                  <td>Gasal</td>
+                  <td>29 Februari 2024</td>
+                  <td>60</td>
+                 <td><span class="badge badge-secondary">Tidak Aktif</span></td>
+                  <td align="center">
+                    <button class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#modalEditAkun">✏️</button>
+                    <button class="btn btn-sm btn-outline-danger" data-toggle="modal" data-target="#modalHapusAkun">🗑️</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center">5</td>
+                  <td>KR-11</td>
+                  <td>2024/2025</td>
+                  <td>Gasal</td>
+                  <td>28 Februari 2025</td>
+                  <td>60</td>
+                  <td><span class="badge badge-secondary">Tidak Aktif</span></td>
+                  <td align="center">
+                    <button class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#modalEditAkun">✏️</button>
+                    <button class="btn btn-sm btn-outline-danger" data-toggle="modal" data-target="#modalHapusAkun">🗑️</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center">6</td>
+                  <td>KR-13</td>
+                  <td>2025/2026</td>
+                  <td>Gasal</td>
+                  <td>28 Februari 2026</td>
+                  <td>60</td>
+                  <td><span class="badge badge-primary">Aktif</span></td>
+                  <td align="center">
+                    <button class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#modalEditAkun">✏️</button>
+                    <button class="btn btn-sm btn-outline-danger" data-toggle="modal" data-target="#modalHapusAkun">🗑️</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center">7</td>
+                  <td>KR-03</td>
+                  <td>2020/2021</td>
+                  <td>Genap</td>
+                  <td>01 Maret 2021</td>
+                  <td>60</td>
+                  <td><span class="badge badge-secondary">Tidak Aktif</span></td>
+                  <td align="center">
+                    <button class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#modalEditAkun">✏️</button>
+                    <button class="btn btn-sm btn-outline-danger" data-toggle="modal" data-target="#modalHapusAkun">🗑️</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center">8</td>
+                  <td>KR-06</td>
+                  <td>2021/2022</td>
+                  <td>Genap</td>
+                  <td>07 Maret 2022</td>
+                  <td>60</td>
+                  <td><span class="badge badge-secondary">Tidak Aktif</span></td>
+                  <td align="center">
+                    <button class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#modalEditAkun">✏️</button>
+                    <button class="btn btn-sm btn-outline-danger" data-toggle="modal" data-target="#modalHapusAkun">🗑️</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center">9</td>
+                  <td>KR-08</td>
+                  <td>2022/2023</td>
+                  <td>Genap</td>
+                  <td>31 Agustus 2023</td>
+                  <td>60</td>
+                  <td><span class="badge badge-secondary">Tidak Aktif</span></td>
+                  <td align="center">
+                    <button class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#modalEditAkun">✏️</button>
+                    <button class="btn btn-sm btn-outline-danger" data-toggle="modal" data-target="#modalHapusAkun">🗑️</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center">10</td>
+                  <td>KR-10</td>
+                  <td>2023/2024</td>
+                  <td>Genap</td>
+                  <td>31 Agustus 2024</td>
+                  <td>60</td>
+                  <td><span class="badge badge-secondary">Tidak Aktif</span></td>
+                  <td align="center">
+                    <button class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#modalEditAkun">✏️</button>
+                    <button class="btn btn-sm btn-outline-danger" data-toggle="modal" data-target="#modalHapusAkun">🗑️</button>
+                  </td>
+                </tr>
+              </tbody>
               </table>
 
 
@@ -289,6 +251,8 @@
 
 
 
+<?php include('4footer.php'); ?>
+
 <!-- Modal Filter -->
 <div class="modal fade" id="modalFilter" tabindex="-1" aria-labelledby="modalFilterLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -302,9 +266,9 @@
 
           <!-- Catatan penting -->
           <div class="alert alert-warning mb-3" role="alert" style="font-size: 0.9rem;">
-          <b>Informasi:</b> Halaman ini otomatis menampilkan data angkatan terbaru saat pertama dibuka. Data awal yang tampil adalah angkatan [2025].
+            <b>Informasi:</b> Halaman ini otomatis menampilkan data angkatan terbaru saat pertama dibuka. Data awal yang tampil adalah angkatan [2025].
           </div>
-       
+
           <!-- Pilihan -->
           <div class="mb-3">
             <label for="lembaga" class="form-label">Status</label>
@@ -316,18 +280,36 @@
               <option value="EDUSQUAD">pilihan 4</option>
             </select>
           </div>
-       
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
-          <button type="submit" class="btn btn-info">Terapkan Filter</button>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+            <button type="submit" class="btn btn-info">Terapkan Filter</button>
+          </div>
         </div>
       </form>
     </div>
   </div>
 </div>
-<script>
 
 
-</script>
-<?php include('4footer.php'); ?>
+<!-- Modal Bantuan -->
+<div class="modal fade" id="modalBantuan" tabindex="-1" aria-labelledby="modalBantuanLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header bg-primary text-white">
+        <h5 class="modal-title" id="modalBantuanLabel">Bantuan Tabel</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>
+          -idealnya: periode aktif trigger karena ketetapan waktu berlaku hingga, bukan trigger update status
+          -bagaimana kesiapan masterdata periode yg modular, agar bisa konsolidasi data buat sidebar Progress CPL-IK
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+      </div>
+    </div>
+  </div>
+</div>
 <?php include('5script.php'); ?>

@@ -180,8 +180,8 @@
 
 
         <!-- AKTIVITAS -->
-        <li class="nav-item <?php echo in_array($page, ['master_periode','kelas_akademik','plan_daily','master_jurusan','master_jalur','master_dosen','master_mahasiswa']) ? 'menu-open' : ''; ?>">
-          <a href="#" class="nav-link <?php echo in_array($page, ['master_periode','kelas_akademik','plan_daily','master_jurusan','master_jalur','master_dosen','master_mahasiswa']) ? 'active' : ''; ?>">
+        <li class="nav-item <?php echo in_array($page, ['master_periode','kelas_akademik','plan_daily','plan_weekly','master_jalur','master_dosen','master_mahasiswa']) ? 'menu-open' : ''; ?>">
+          <a href="#" class="nav-link <?php echo in_array($page, ['master_periode','kelas_akademik','plan_daily','plan_weekly','master_jalur','master_dosen','master_mahasiswa']) ? 'active' : ''; ?>">
             <i class="nav-icon fas fa-clipboard-list"></i>
             <p>
               Aktivitas
@@ -212,7 +212,12 @@
                 <p>Daily Plan</p>
               </a>
             </li>
-            
+            <li class="nav-item">
+              <a href="aktivitas-weekly-plan.php" class="nav-link <?php echo $page == 'plan_weekly' ? 'active' : ''; ?>">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Weekly Plan</p>
+              </a>
+            </li>
 
           </ul>
         </li>

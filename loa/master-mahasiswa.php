@@ -8,7 +8,10 @@
 
   <section class="content-header">
     <div class="container-fluid">
-      <h3 class="mb-0">Judul halaman ini (Mahasiswa)</h3>
+      <h3 class="mb-0">Judul halaman ini (Mahasiswa)
+        <button type="button" class="btn btn-tool" data-bs-toggle="modal" data-bs-target="#modalBantuan" title="Bantuan"><i class="fas fa-question-circle"></i>
+        </button>
+      </h3>
         <p class="text-muted mb-0">Keterangan singkat cara baca informasi halaman ini</p>
     </div>
   </section>
@@ -21,7 +24,7 @@
         <div class="col-md-12">
           <!-- ========== CARD : Filter & Export ========== -->
           <div class="card">
-            <div class="card-header">
+            <!-- <div class="card-header">
               <h5 class="card-title mb-0"><i class="fas fa-filter "></i> Judul Tabel yang terdampak tombol aksi ini<button type="button" class="btn btn-tool" data-bs-toggle="modal" data-bs-target="#modalBantuan" title="Bantuan">
                 <i class="fas fa-question-circle"></i>
               </button> </h5>
@@ -43,7 +46,7 @@
                 </button>
                 
               </div>
-            </div>
+            </div> -->
             <div class="card-body ">
               <div class="row">
 
@@ -54,14 +57,35 @@
                   <b>Peminatan:</b> Peminatan B
                 </div>
                 <div class="col-md-6">
-                  <b>Jalur:</b> Reguler
+                  <b>Jalur:</b> Semua
                 </div>
                 <div class="col-md-6">
-                  <b>Status:</b> Aktif
+                  <b>Status:</b> Semua
                 </div>
 
               </div>
             </div>
+
+             <div class="card-footer">
+              <div class="card-tools ms-auto">
+                <button class="btn btn-outline-info btn-sm " data-bs-toggle="modal" data-bs-target="#modalFilter">
+                  <i class="fas fa-filter me-1"></i> Filter
+                </button>
+                <button type="button" class="btn btn-outline-primary btn-sm " data-bs-toggle="modal" data-bs-target="#modalTambahData">
+                  <i class="fas fa-plus me-1"></i> Add
+                </button>
+                <button type="button" class="btn btn-outline-primary btn-sm " data-bs-toggle="modal" data-bs-target="#modalImpor">
+                  <i class="fas fa-file-upload me-1"></i> Import
+                </button>                
+                <button type="button" class="btn btn-outline-success btn-sm">
+                  <i class="fas fa-file-download me-1"></i> Export
+                </button>
+                <button type="button" class="btn btn-outline-danger btn-sm">
+                  <i class="fas fa-ban me-1"></i> Reset
+                </button>    
+              </div>
+            </div>
+            
           </div>
 
 

@@ -1,11 +1,14 @@
 <!DOCTYPE html>
-<html lang="id">
+<!--
+This is a starter template page. Use this page to start your new project from
+scratch. This page gets rid of all links and provides the needed markup only.
+-->
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Menu Utama</title>
-
-  <!-- Google Font -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AdminLTE 3 | Top Navigation</title>  
+ <!-- Google Font -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
 
 <!-- Font Awesome -->
@@ -24,90 +27,8 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/1.13.3/css/OverlayScrollbars.min.css">
 
 <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap5.min.css">
-
-
-
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
-
-  <style>
-    * {
-      box-sizing: border-box;
-      font-family: 'Inter', sans-serif;
-    }
-
-    body {
-      margin: 0;
-      background: #f5f7fa;
-      color: #1f2937;
-    }
-
-    /* ===== NAVBAR ===== */
-    .navbar {
-      height: 64px;
-      background: #ffffff;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 24px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-    }
-
-    .navbar-title {
-      font-size: 18px;
-      font-weight: 600;
-    }
-
-    .user-menu {
-      position: relative;
-    }
-
-    .user-name {
-      cursor: pointer;
-      font-size: 14px;
-      font-weight: 500;
-      padding: 8px 12px;
-      border-radius: 6px;
-    }
-
-    .user-name:hover {
-      background: #f3f4f6;
-    }
-
-    .dropdown {
-      display: none;
-      position: absolute;
-      right: 0;
-      top: 44px;
-      background: #ffffff;
-      border-radius: 8px;
-      width: 180px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-      overflow: hidden;
-      z-index: 10;
-    }
-
-    .dropdown a {
-      display: block;
-      padding: 12px 16px;
-      font-size: 14px;
-      color: #374151;
-      text-decoration: none;
-    }
-
-    .dropdown a:hover {
-      background: #f3f4f6;
-    }
-
-    .user-menu:hover .dropdown {
-      display: block;
-    }
-
+<style>
     /* ===== CONTENT ===== */
-    .container {
-      padding: 32px;
-      max-width: 1200px;
-      margin: auto;
-    }
 
     .menu-grid {
       display: grid;
@@ -170,27 +91,88 @@
 }
 
   </style>
+        <style>
+          /* ====== BOTTOM SECTION ====== */
+.bottom-section {
+  min-height: 450px;
+  text-align: center;
+}
+
+.description {
+  font-size: 0.95rem;
+  color: #4a5568;
+}
+
+        </style>
 </head>
-<body>
+<body class="hold-transition layout-top-nav">
+<div class="wrapper">
 
-  <!-- NAVBAR -->
-  <div class="navbar">
-    <div class="navbar-title">Menu Utama</div>
-
-    <div class="user-menu">
-      <div class="user-name">Harun Ruddin ▾</div>
-      <div class="dropdown">
-        <a href="#">Profil</a>
-        <a href="#">Log Aktivitas</a>
-        <a href="#">Logout</a>
+  <!-- Navbar -->
+  <nav class="main-header navbar navbar-expand-md navbar-light navbar-white">
+    <div class="container">
+      <div class="collapse navbar-collapse order-3" id="navbarCollapse">
+        <!-- Left navbar links -->
+        <ul class="navbar-nav">
+                 <h5>MENU UTAMA</h5>
+        </ul>
       </div>
-    </div>
-  </div>
 
-  <!-- CONTENT -->
-  <div class="container">
-    <div class="menu-grid">
-<a href="sso/" class="menu-card">
+      <!-- Right navbar links -->
+      <ul class="order-1 order-md-3 navbar-nav navbar-no-expand ml-auto">
+        <!-- Cahaya / Mode -->
+        <li class="nav-item">
+          <a class="nav-link" href="#" role="button" title="Cahaya / Mode">
+            <i class="fas fa-sun"></i>
+          </a>
+        </li>
+
+        <!-- Bahasa -->
+        <li class="nav-item">
+          <a class="nav-link" href="#" role="button" title="Bahasa">
+            <i class="fas fa-language"></i>
+          </a>
+        </li>
+        <!-- Notifications Dropdown Menu -->
+        <!-- <li class="nav-item dropdown">
+          <a class="nav-link" data-bs-toggle="dropdown" href="#">
+            <i class="far fa-bell"></i>
+            <span class="badge badge-warning navbar-badge">15</span>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a href="#" class="dropdown-item"><i class="fas fa-envelope mr-2"></i> 4 new messages</a></li>
+            <li><a href="#" class="dropdown-item"><i class="fas fa-list mr-2"></i> 8 required action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a href="#" class="dropdown-item dropdown-footer">See All Notifications</a></li>
+          </ul>
+        </li> -->
+        <!-- User Dropdown Menu -->
+        <li class="nav-item dropdown">
+          <a class="nav-link" data-bs-toggle="dropdown" href="#">
+            <i class="fas fa-user"></i> <span class="d-none d-md-inline">DisplayName</span> <i class="fas fa-caret-down"></i>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a href="../Profile.html" class="dropdown-item"><i class="fas fa-user-circle me-2"></i>Profile</a></li>
+            <li><a href="../activity-log.html" class="dropdown-item"><i class="fas fa-cog me-2"></i>Activity Log</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a href="../logout.php" class="dropdown-item text-danger"><i class="fas fa-sign-out-alt me-2"></i>Logout</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- /.navbar -->
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+   
+     <!-- Bottom Section -->
+  <div class="bottom-section container ">
+    <!-- <h1>MENU UTAMA</h1> -->
+    <p class="description">[Pengguna Aktif] Silahkan pilih sistem informasi atau proses bisnis yang ingin diakses</p>
+    <div class="row g-4 justify-content-center menu-grid">
+
+      <a href="sso/" class="menu-card">
         <h3>SSO</h3>
         <p>Single Sign-On</p>
       </a>
@@ -218,16 +200,56 @@
       <div class="menu-card"><h3>Finance</h3><p>Keuangan</p></div>
 
       <div class="menu-card"><h3>Office</h3><p>Administrasi Kantor</p></div>
-<a href="sekolah/" class="menu-card">
+      <a href="sekolah/" class="menu-card">
         <h3>School</h3>
         <p>Pengelolaan Sekolah</p>
       </a>
+
+
+
+      
     </div>
   </div>
-
-  <div class="footer">
-    © 2026 Sistem Informasi Terpadu
+   
   </div>
+  <!-- /.content-wrapper -->
 
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+
+  <!-- Main Footer -->
+  <footer class="main-footer">
+    <!-- To the right -->
+    <div class="float-right d-none d-sm-inline">
+      Anything you want
+    </div>
+    <!-- Default to the left -->
+    <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
+  </footer>
+</div>
+<!-- ./wrapper -->
+
+<!-- REQUIRED SCRIPTS -->
+<!-- jQuery dulu (untuk AdminLTE) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+<!-- OverlayScrollbars -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/1.13.3/js/jquery.overlayScrollbars.min.js"></script>
+
+<!-- Bootstrap 5 Bundle (JS + Popper) harus **sebelum** AdminLTE -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- AdminLTE v3 -->
+<script src="https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/js/adminlte.min.js"></script>
+
+<script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script>
+
+
+<!-- Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 </body>
 </html>

@@ -8,9 +8,11 @@
 
   <section class="content-header">
     <div class="container-fluid">
-      <!-- <h3 class="mb-0">Data Produk/Barang</h3> -->
-
-        <!-- <p class="text-muted mb-0">Keterangan singkat cara baca informasi halaman ini</p> -->
+      <h3 class="mb-0">Daftar Dosen
+        <button type="button" class="btn btn-tool" data-bs-toggle="modal" data-bs-target="#modalBantuan" title="Bantuan"><i class="fas fa-question-circle"></i>
+        </button>
+      </h3>
+        <p class="text-muted mb-0">Keterangan singkat cara baca informasi halaman ini</p>
     </div>
   </section>
 
@@ -23,7 +25,7 @@
           
           <!-- ========== CARD : Filter & Export ========== -->
           <div class="card">
-            <div class="card-header bg-secondary">
+            <!-- <div class="card-header bg-secondary">
               <h5 class="card-title mb-0">
                 <i class="fas fa-database"></i> Data Produk/Barang        
               </h5>
@@ -31,7 +33,7 @@
                 <button type="button" class="btn btn-tool" data-bs-toggle="modal" data-bs-target="#modalBantuan" title="Bantuan"><i class="fas fa-question-circle"></i>
                 </button>                
               </div>
-            </div>
+            </div> -->
 
             <div class="card-body ">
               <div class="row">
@@ -70,7 +72,7 @@
               </div>
             </div>
 
-        </div>
+          </div>
 
 
         <!-- ========== CARD : Tabel  ========== -->
@@ -419,7 +421,7 @@
 
           <!-- Form Inputs -->
           <div class="mb-3">
-            <label for="username" class="form-label">NIM <span class="text-danger">*</span></label>
+            <label for="username" class="form-label">NIDK <span class="text-danger">*</span></label>
             <input type="text" class="form-control" id="username" name="username" placeholder="Masukkan Username" required>
           </div>
 
@@ -436,36 +438,14 @@
           <div class="mb-3">
             <label for="hp" class="form-label">Nomor HP <span class="text-danger">*</span></label>
             <input type="text" class="form-control" id="hp" name="hp" placeholder="Masukkan Nomor HP" required>
-          </div>
-          <div class="mb-3">
-            <label for="angkatan" class="form-label">Angkatan</label>
-            <select name="angkatan" id="angkatan" class="form-select">
-              <option value="">-- Pilih Angkatan --</option>
-              <option value="2025">2025</option>
-              <option value="2024">2024</option>
-              <option value="2023">2023</option>
-            </select>
-          </div>
-          <div class="mb-3">
-            <label for="angkatan" class="form-label">Peminatan</label>
-            <select name="angkatan" id="angkatan" class="form-select">
-              <option value="">-- Pilih Peminatan --</option>
-              <option value="2025">A</option>
-              <option value="2024">B</option>
-              <option value="2023">C</option>
-            </select>
-          </div>
+          </div>         
+         
           <div class="mb-3">
             <label for="status" class="form-label">Status <span class="text-danger">*</span></label>
             <select class="form-select" id="status" name="status" required>
               <option value="">-- Pilih Status --</option>
               <option value="Aktif">Aktif</option>
               <option value="NonAktif">NonAktif</option>
-              <option value="Cuti">Cuti</option>
-              <option value="Skors">Skors</option>
-              <option value="PassedOut">Passed Out</option>
-              <option value="DropOut">Drop Out</option>
-              <option value="Lulus">Lulus</option>
             </select>
           </div>
 

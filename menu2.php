@@ -2,59 +2,176 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <title>Menu Utama - SSO</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu Utama</title>
+
+  <!-- Google Font -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+<!-- Ionicons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+
+<!-- Bootstrap 5 CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- AdminLTE CSS (v3 tetap bisa dipakai, tapi JS harus diubah nanti) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/css/adminlte.min.css">
+
+<!-- overlayScrollbars -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/1.13.3/css/OverlayScrollbars.min.css">
+
+<link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap5.min.css">
+
+
+
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
   <style>
-/* ====== GLOBAL ====== */
-body {
-  background: #f2f6fc;
-  font-family: "Inter", Arial, sans-serif;
-  color: #0a2a4c;
-}
+    * {
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
 
-/* ====== TOP SECTION ====== */
-.top-section {
-  background: linear-gradient(135deg, #003b88, #0066dd);
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 70px;
-  padding: 0 20px;
-  position: relative;
-  border-bottom-left-radius: 18px;
-  border-bottom-right-radius: 18px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-}
+    body {
+      margin: 0;
+      background: #f5f7fa;
+      color: #1f2937;
+    }
 
-.top-section h1 {
-  margin: 0;
-  font-size: 1.6rem;
-  font-weight: 600;
-}
+    /* ===== NAVBAR ===== */
+    .navbar {
+      height: 64px;
+      background: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 24px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
 
-.logout-btn {
-  position: absolute;
-  right: 20px;
-  font-weight: 500;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-}
+    .navbar-title {
+      font-size: 18px;
+      font-weight: 600;
+    }
 
-/* ====== BOTTOM SECTION ====== */
-.bottom-section {
-  padding: 50px 20px;
-  min-height: 450px;
+    .user-menu {
+      position: relative;
+    }
+
+    .user-name {
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 500;
+      padding: 8px 12px;
+      border-radius: 6px;
+    }
+
+    .user-name:hover {
+      background: #f3f4f6;
+    }
+
+    .dropdown {
+      display: none;
+      position: absolute;
+      right: 0;
+      top: 44px;
+      background: #ffffff;
+      border-radius: 8px;
+      width: 180px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      overflow: hidden;
+      z-index: 10;
+    }
+
+    .dropdown a {
+      display: block;
+      padding: 12px 16px;
+      font-size: 14px;
+      color: #374151;
+      text-decoration: none;
+    }
+
+    .dropdown a:hover {
+      background: #f3f4f6;
+    }
+
+    .user-menu:hover .dropdown {
+      display: block;
+    }
+
+    /* ===== CONTENT ===== */
+    .container {
+      padding: 32px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .menu-card {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 24px;
+      text-align: center;
+      cursor: pointer;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .menu-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 28px rgba(0,0,0,0.1);
+    }
+
+    .menu-card h3 {
+      margin: 0;
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .menu-card p {
+      margin-top: 6px;
+      font-size: 13px;
+      color: #6b7280;
+    }
+
+    /* ===== FOOTER ===== */
+    .footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 12px;
+      color: #9ca3af;
+    }
+  </style>
+  <style type="text/css">
+    .menu-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 24px;
   text-align: center;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.description {
-  font-size: 0.95rem;
-  color: #4a5568;
+.menu-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.1);
 }
 
-/* ====== MENU CARD ====== */
+  </style>
+  <style>
+    /* ====== MENU CARD ====== */
 .menu-card {
   background: #f8faff;
   border-radius: 20px;
@@ -113,24 +230,33 @@ body {
     font-size: 0.95rem;
   }
 }
-
-</style>
+  </style>
 </head>
 <body>
 
-  <!-- Top Section -->
-  <div class="top-section">
-    <h1>Menu Utama SSO</h1>
-    <a href="logout.php" class="btn btn-light logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+  <!-- NAVBAR -->
+  <div class="navbar">
+    <div class="navbar-title">Menu Utama</div>
+
+    <div class="user-menu">
+      <div class="user-name">Harun Ruddin ▾</div>
+      <div class="dropdown">
+        <a href="#">Profil</a>
+        <a href="#">Log Aktivitas</a>
+        <a href="#">Logout</a>
+      </div>
+    </div>
   </div>
 
-  <!-- Bottom Section -->
+  <!-- CONTENT -->
+  <div class="container">
+   <!-- Bottom Section -->
   <div class="bottom-section container">
     <p class="description">[Pengguna Aktif] Silahkan pilih sistem informasi atau proses bisnis yang ingin diakses</p>
     <div class="row g-4 justify-content-center">
 
       <!-- Proses Bisnis A -->
-      <div class="col-md-4">
+      <div class="col-md-3">
         <a href="dashboard-a.html" class="card menu-card text-center p-4 text-decoration-none text-dark shadow-sm">
           <div class="card-body">
             <i class="fas fa-cogs fa-2x mb-2"></i>
@@ -139,7 +265,7 @@ body {
         </a>
       </div>
       <!-- Proses Bisnis B -->
-      <div class="col-md-4">
+      <div class="col-md-3">
         <a href="dashboard-b.html" class="card menu-card text-center p-4 text-decoration-none text-dark shadow-sm">
           <div class="card-body">
             <i class="fas fa-project-diagram fa-2x mb-2"></i>
@@ -213,7 +339,11 @@ body {
       
     </div>
   </div>
+  </div>
+
+  <div class="footer">
+    © 2026 Sistem Informasi Terpadu
+  </div>
 
 </body>
 </html>
-
