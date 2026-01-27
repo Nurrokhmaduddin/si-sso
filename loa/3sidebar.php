@@ -13,7 +13,7 @@
     style="border-bottom: 1px solid rgba(255,255,255,.2);"
     data-bs-toggle="modal"
     data-bs-target="#modalPilihPeran"
->
+    >
 
     <!-- User Icon -->
     <div class="image">
@@ -24,11 +24,11 @@
     <!-- User Info -->
     <div class="info ml-2" >
       <a href="#" class="d-block" data-toggle="modal" data-target="#modalPilihPeran">
-      <span class="d-block text-white">Username</span>
-      <small class="text-success ">
-        <i class="fas fa-circle mr-1"></i> Role
-      </small>
-    </a>
+        <span class="d-block text-white">Username</span>
+        <small class="text-success ">
+          <i class="fas fa-circle mr-1"></i> Role
+        </small>
+      </a>
     </div>
 
   </div>
@@ -185,7 +185,7 @@
           </ul>
         </li>
 
-        <!-- PERKULIAHAN OEB -->
+        <!-- PERKULIAHAN OBE -->
         <li class="nav-item <?php echo in_array($page, ['kelas_perkuliahan','kelas_konversi']) ? 'menu-open' : ''; ?>">
           <a href="#" class="nav-link <?php echo in_array($page, ['kelas_perkuliahan','kelas_konversi']) ? 'active' : ''; ?>">
             <i class="nav-icon fas fa-chalkboard-teacher"></i>
@@ -250,8 +250,8 @@
 
 
         <!-- MONITORING OBE -->
-        <li class="nav-item">
-          <a href="#" class="nav-link">
+        <li class="nav-item <?php echo in_array($page, ['status_mahasiswa','monev_individu']) ? 'menu-open' : ''; ?>">
+          <a href="#" class="nav-link <?php echo in_array($page, ['status_mahasiswa','monev_individu']) ? 'active' : ''; ?>">
             <i class="nav-icon fas fa-chart-pie"></i>
             <p>
               Monitoring OBE
@@ -262,7 +262,7 @@
           <ul class="nav nav-treeview">
 
             <li class="nav-item">
-              <a href="monev-status-mahasiswa.php" class="nav-link">
+              <a href="monev-status-mahasiswa.php" class="nav-link <?php echo $page == 'status_mahasiswa' ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Status Mahasiswa</p>
               </a>
@@ -297,7 +297,7 @@
             </li>
 
             <li class="nav-item">
-              <a href="monev-cpl-individual.php" class="nav-link">
+              <a href="monev-cpl-individual.php" class="nav-link <?php echo $page == 'monev_individu' ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Monev CPL Individu</p>
               </a>

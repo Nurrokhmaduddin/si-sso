@@ -1,4 +1,4 @@
-<?php $page = 'master_mahasiswa'; ?>
+<?php $page = 'monev_individu'; ?>
 <?php include('1header.php'); ?>
 <?php include('2navbar.php'); ?>
 <?php include('3sidebar.php'); ?>
@@ -8,7 +8,11 @@
 
   <section class="content-header">
     <div class="container-fluid">
-      <h3 class="mb-0">Monev CPL Individu</h3>
+      <h3 class="mb-0">Monev CPL Individu
+        <button type="button" class="btn btn-tool" data-bs-toggle="modal" data-bs-target="#modalBantuan" title="Bantuan">
+          <i class="fas fa-question-circle"></i>
+        </button>
+      </h3>
         <p class="text-muted mb-0">Keterangan singkat cara baca informasi halaman ini</p>
     </div>
   </section>
@@ -21,127 +25,105 @@
         <div class="col-md-12">
           <!-- ========== CARD : Filter & Export ========== -->
           <div class="card">
-            <div class="card-header">
-              <h5 class="card-title mb-0"><i class="fas fa-filter "></i> Judul Tabel yang terdampak tombol aksi ini<button type="button" class="btn btn-tool" data-bs-toggle="modal" data-bs-target="#modalBantuan" title="Bantuan">
-                <i class="fas fa-question-circle"></i>
-              </button> </h5>
-              <div class="card-tools ms-auto">
-                <button class="btn btn-outline-info btn-sm " data-bs-toggle="modal" data-bs-target="#modalFilter">
-                  <i class="fas fa-filter me-1"></i> Filter
-                </button>
-                <button type="button" class="btn btn-outline-primary btn-sm " data-bs-toggle="modal" data-bs-target="#modalTambahData">
-                  <i class="fas fa-plus me-1"></i> Add
-                </button>
-                <button type="button" class="btn btn-outline-primary btn-sm " data-bs-toggle="modal" data-bs-target="#modalImpor">
-                  <i class="fas fa-file-upload me-1"></i> Import
-                </button>                
-                <button type="button" class="btn btn-outline-success btn-sm">
-                  <i class="fas fa-file-download me-1"></i> Export
-                </button>
-                 <button type="button" class="btn btn-outline-danger btn-sm">
-                  <i class="fas fa-ban me-1"></i> Reset
-                </button>
-                <a href="monev_pemetaan1.php" class="btn btn-sm btn-outline-info" role="button">
-                	<i class="fas fa-exchange-alt me-1"></i> Perbandingkan
-                </a>
-
-              </div>
-            </div>
-
-
+            <!-- <div class="card-header">
+              <h5 class="card-title mb-0"><i class="fas fa-filter "></i> Judul Tabel yang terdampak tombol aksi ini </h5>              
+            </div> -->
             <div class="card-body ">
               <div class="row">
 
-                <div class="col-md-6">
+                <div class="col-md-4">
                   <b>Kurikulum:</b> 2023 &nbsp;
                 </div>                
-                <div class="col-md-6">
+                <div class="col-md-4">
                   <b>Set Pemetaan:</b> v1.0
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-4">
                   <b>Mahasiswa:</b> 20521098 - VEGA AYU CENTYA
                 </div>
                 
               </div>
             </div>
+            <div class="card-footer">
+              <div class="card-tools ms-auto">
+                <button class="btn btn-outline-info btn-sm " data-bs-toggle="modal" data-bs-target="#modalFilter">
+                  <i class="fas fa-filter me-1"></i> Filter
+                </button>                
+                <button type="button" class="btn btn-outline-success btn-sm">
+                  <i class="fas fa-file-download me-1"></i> Export
+                </button>                
+              </div>
+
+            </div>
           </div>
 
         
- <!-- KPI Row -->
-  <div class="row mb-3">
-
-    <!-- Total Mahasiswa -->
-    <div class="col-md-3 col-sm-6">
-      <div class="small-box bg-primary">
-        <div class="inner">
-          <h3>1.200</h3>
-          <p>Total Mahasiswa</p>
-        </div>
-        <div class="icon">
-          <i class="fas fa-users"></i>
-        </div>
+  <!-- ========== CARD 3: KPI row ========== --> 
+  <style>
+    body { background: #f4f6f9; }
+    .kpi { border-radius: 10px; padding: 18px; color: #fff; }
+    .kpi .big { font-size: 1.6rem; font-weight:700; }
+    .kpi .small { font-size: 0.85rem; opacity: .9; }
+    .card { border-radius:10px; }
+    .status-dot { display:inline-block; width:10px; height:10px; border-radius:50%; margin-right:6px; vertical-align:middle; }
+    .status-green { background:#28a745; }
+    .status-yellow { background:#ffc107; }
+    .status-red { background:#dc3545; }
+    .ewstable td, .ewstable th { vertical-align: middle; }
+    .table-fixed-height { max-height: 360px; overflow:auto; }
+  </style>       
+  <div class="row g-3 mb-3">
+    <div class="col-md-3">
+      <div class="kpi bg-primary">
+        <div class="small">Rata-rata CPL</div>
+        <div class="big" id="kpiAvg">75.2</div>
+        <div class="small">dari 12 CPL</div>
       </div>
     </div>
-
-    
-
-    <!-- Jumlah Mahasiswa Aktif -->
-    <div class="col-md-3 col-sm-6">
-      <div class="small-box bg-success">
-        <div class="inner">
-          <h3>950</h3>
-          <p>Mahasiswa Aktif saat ini</p>
-        </div>
-        <div class="icon">
-          <i class="fas fa-user-check"></i>
-        </div>
+    <div class="col-md-3">
+      <div class="kpi " style="background:#20c997;">
+        <div class="small">Rata-rata IK</div>
+        <div class="big" id="kpiGap">85 </div>
+        <div class="small">dari 24 IK</div>
       </div>
     </div>
-
-    <!-- Jumlah Mahasiswa Cuti -->
-    <div class="col-md-3 col-sm-6">
-      <div class="small-box bg-warning">
-        <div class="inner">
-          <h3>70</h3>
-          <p>Mahasiswa Cuti saat ini</p>
-        </div>
-        <div class="icon">
-          <i class="fas fa-pause-circle"></i>
-        </div>
+    <div class="col-md-3">
+      <div class="kpi" style="background:#ff7f0e;">
+        <div class="small">Rata-rata CPMK</div>
+        <div class="big" id="kpiReached">78</div>
+        <div class="small">dari 258</div>
       </div>
     </div>
-
-<!-- Mahasiswa Aktif Tertua -->
-    <div class="col-md-3 col-sm-6">
-      <div class="small-box bg-danger">
-        <div class="inner">
-          <h3>Angkatan 2017</h3>
-          <p>18 Mahasiswa Aktif Tertua</p>
-        </div>
-        <div class="icon">
-          <i class="fas fa-user-clock"></i>
-        </div>
+    <div class="col-md-3">
+      <div class="kpi bg-danger">
+        <div class="small">Rata-rata Nilai Akhir MK</div>
+        <div class="big" id="kpiRisk">78</div>
+        <div class="small">dari 78 MK</div>
       </div>
     </div>
-
   </div>
 
 
-  <div style="text-align: left;" class="mr-2">
+  <!-- TAB NAV  -->
+  <ul class="nav nav-tabs">   
+    <li class="nav-item" onclick="window.location='monev_individu1.php'"><a class="nav-link active">Grafik</a></li>
+    <li class="nav-item" onclick="window.location='monev_individu2.php'"><a class="nav-link ">Tabel</a></li>
+    <li class="nav-item" onclick="window.location='monev_individu3.php'"><a class="nav-link ">Riwayat</a></li>
+  </ul>
+
+<!--   <div style="text-align: left;" class="mr-2">
   	<button type="button"  onclick="window.location=;" class="btn btn-info btn-tab">Grafik</button>
   	<button type="button"  onclick="window.location=;" class="btn btn-default btn-tab">Tabel</button>
   	<button type="button"  onclick="window.location=;" class="btn btn-default btn-tab">Riwayat</button>
-  </div>
+  </div> -->
 
  <!-- Chart Row -->
 <div class="card">
-  <div class="card-header">
+  <!-- <div class="card-header">
     <h3 class="card-title">
       <i class="fas fa-chart-area mr-1"></i>
       Distribusi & Capaian Pembelajaran
     </h3>
-  </div>
-
+  </div> -->
   <div class="card-body">
     <div class="row">
 
@@ -177,285 +159,44 @@
 
 
 
-
-</section>
-
-<!-- Chart.js -->
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-
-
-        <!-- ========== CARD : Tabel  ========== -->
-          <div class="card">
-            <!-- <div class="card-header d-flex align-items-center">
-              <h5 class="card-title mb-0">Judul tabel ini</h5>    
-              <div class="ms-auto">                
-                <button type="button" class="btn btn-outline-primary btn-sm " data-toggle="modal" data-target="#modalTambahData">
-                  <i class="fas fa-plus me-1"></i> Add
-                </button>
-                <button type="button" class="btn btn-outline-primary btn-sm ">
-                  <i class="fas fa-file-upload me-1"></i> Import
-                </button>
-                <button type="button" class="btn btn-outline-success btn-sm">
-                  <i class="fas fa-file-download me-1"></i> Export
-                </button>
-              </div>
-            </div> -->
-
-            <div class="card-body">
-              <div class="table-responsive">
-               <table class="table table1 table-bordered table-striped table-sm datatables1">
-                <thead>
-                  <!-- BARIS FILTER -->
-                  <!-- <tr class="filters">
-                    <th></th>
-                    <th><input type="text" class="form-control form-control-sm" placeholder="Search Username"></th>
-                    <th><input type="text" class="form-control form-control-sm" placeholder="Search Name"></th>
-                    <th><input type="text" class="form-control form-control-sm" placeholder="Search Email/HP"></th>
-                    <th></th>
-                    <th>
-                      <select class="form-control form-control-sm">
-                        <option value="">All</option>
-                        <option value="Aktif">Aktif</option>
-                        <option value="NonAktif">NonAktif</option>
-                      </select>
-                    </th>
-                    <th></th>
-                  </tr> -->
-                  <tr class="text-uppercase text-center">
-                    <th width="5px">No.</th>
-                    <th>Username</th>
-                    <th>DisplayName</th>
-                    <th>Email/Nomor HP</th>
-                    <th>Foto</th>
-                    <th>Status</th>
-                    <th>Aksi</th>
-                  </tr>
-                  
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="text-center">1</td>
-                    <td>19312137</td>
-                    <td>Pramita Widyadari</td>
-                    <td>pramita.widyadari@univ.ac.id</td>
-                    <td class="text-center"><img style="width: 40px;" alt="Foto"></td>
-                    <td class="text-center"><span class="badge bg-info">Aktif</span></td>
-                    <td class="text-center">
-                      <button type="button" class="btn btn-sm btn-outline-warning">
-                        <i class="fas fa-key"></i>
-                      </button>
-                      <button type="button" class="btn btn-sm btn-outline-primary">
-                        <i class="fas fa-edit"></i>
-                      </button>
-                      <button type="button" class="btn btn-sm btn-outline-danger">
-                        <i class="fas fa-trash"></i>
-                      </button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="text-center">2</td>
-                    <td>19312376</td>
-                    <td>Ho Aldika Novaldy Sumampow</td>
-                    <td>aldika.sumampow@univ.ac.id</td>
-                    <td class="text-center"><img style="width: 40px;" alt="Foto"></td>
-                    <td class="text-center"><span class="badge bg-info">Aktif</span></td>
-                    <td class="text-center">
-                      <button type="button" class="btn btn-sm btn-outline-info">
-                        <i class="fas fa-info-circle"></i>
-                      </button>
-                      <button type="button" class="btn btn-sm btn-outline-primary">
-                        <i class="fas fa-upload"></i>
-                      </button>
-                      <button type="button" class="btn btn-sm btn-outline-success">
-                        <i class="fas fa-download"></i>
-                      </button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="text-center">3</td>
-                    <td>19312406</td>
-                    <td>Annisa Regita Sintowati</td>
-                    <td>annisa.sintowati@univ.ac.id</td>
-                    <td class="text-center"><img style="width: 40px;" alt="Foto"></td>
-                    <td class="text-center"><span class="badge bg-info">Aktif</span></td>
-                    <td class="text-center">
-                      <div class="btn-group">
-                        <!-- Tombol utama (View) -->
-                        <a href="portfolio_cpmk_detail2.php" target="_blank" 
-                        class="btn btn-sm btn-outline-info">
-                        <i class="fas fa-external-link-alt"></i> View
-                      </a>
-
-                      <!-- Tombol dropdown -->
-                      <button type="button" 
-                      class="btn btn-sm btn-outline-info dropdown-toggle dropdown-toggle-split"
-                      data-bs-toggle="dropdown" aria-expanded="false">
-                      <span class="visually-hidden">Toggle Dropdown</span>
-                    </button>
-
-                    <!-- Menu dropdown -->
-                    <ul class="dropdown-menu">
-                      <li>
-                        <a class="dropdown-item" href="#">
-                          <i class="fas fa-edit text-primary"></i> Edit Link
-                        </a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="#">
-                          <i class="fas fa-trash-alt text-danger"></i> Hapus Data
-                        </a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="#">
-                          <i class="fas fa-key text-warning"></i> Ubah Password
-                        </a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="#">
-                          <i class="fas fa-upload text-primary"></i> Upload File
-                        </a>
-                      </li>
-
-                      <li><hr class="dropdown-divider"></li>
-
-                      <li>
-                        <a class="dropdown-item" href="#">
-                          <i class="fas fa-download text-success"></i> Download File
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-
-</td>
-                  </tr>
-                  <tr>
-                    <td class="text-center">4</td>
-                    <td>19312418</td>
-                    <td>Claudia Monica Aditama</td>
-                    <td>claudia.aditama@univ.ac.id</td>
-                    <td class="text-center"><img style="width: 40px;" alt="Foto"></td>
-                    <td class="text-center"><span class="badge bg-info">Aktif</span></td>
-                    <td class="text-center"><button type="button" class="btn btn-sm btn-outline-warning">🔑</button></td>
-                  </tr>
-                  <tr>
-                    <td class="text-center">5</td>
-                    <td>19312424</td>
-                    <td>Filza Aliyah Tasya</td>
-                    <td>filza.tasya@univ.ac.id</td>
-                    <td class="text-center"><img style="width: 40px;" alt="Foto"></td>
-                    <td class="text-center"><span class="badge bg-info">Aktif</span></td>
-                    <td class="text-center"><button type="button" class="btn btn-sm btn-outline-warning">🔑</button></td>
-                  </tr>
-                  <tr>
-                    <td class="text-center">6</td>
-                    <td>19312479</td>
-                    <td>Asep Sunandar</td>
-                    <td>asep.sunandar@univ.ac.id</td>
-                    <td class="text-center"><img style="width: 40px;" alt="Foto"></td>
-                    <td class="text-center"><span class="badge bg-info">Aktif</span></td>
-                    <td class="text-center"><button type="button" class="btn btn-sm btn-outline-warning">🔑</button></td>
-                  </tr>
-                  <tr>
-                    <td class="text-center">7</td>
-                    <td>19312484</td>
-                    <td>Fitri Dwi Astuti</td>
-                    <td>fitri.astuti@univ.ac.id</td>
-                    <td class="text-center"><img style="width: 40px;" alt="Foto"></td>
-                    <td class="text-center"><span class="badge bg-info">Aktif</span></td>
-                    <td class="text-center"><button type="button" class="btn btn-sm btn-outline-warning">🔑</button></td>
-                  </tr>
-                  <tr>
-                    <td class="text-center">8</td>
-                    <td>19312486</td>
-                    <td>Dynda Agustina Tiara Putri</td>
-                    <td>dynda.putri@univ.ac.id</td>
-                    <td class="text-center"><img style="width: 40px;" alt="Foto"></td>
-                    <td class="text-center"><span class="badge bg-info">Aktif</span></td>
-                    <td class="text-center">
-                      <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-outline-info dropdown-toggle" 
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="fas fa-ellipsis-h"></i> Action
-                      </button>
-                      <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#"><i class="fas fa-edit text-primary"></i> Edit Link</a></li>
-                        <li><a class="dropdown-item" href="#"><i class="fas fa-trash-alt text-danger"></i> Hapus Data</a></li>
-                        <li><a class="dropdown-item" href="#"><i class="fas fa-key text-warning"></i> Ubah Password</a></li>
-                        <li><a class="dropdown-item" href="#"><i class="fas fa-upload text-success"></i> Upload File</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="portfolio_cpmk_detail2.php" target="_blank">
-                          <i class="fas fa-external-link-alt text-info"></i> View Link</a></li>
-                          <li><a class="dropdown-item" href="#"><i class="fas fa-download text-success"></i> Download File</a></li>
-                        </ul>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="text-center">9</td>
-                    <td>19320088</td>
-                    <td>Ridho Adi Kurnianto</td>
-                    <td>ridho.kurnianto@univ.ac.id</td>
-                    <td class="text-center"><img style="width: 40px;" alt="Foto"></td>
-                    <td class="text-center"><span class="badge bg-info">Aktif</span></td>
-                    <td class="text-center">
-                      <button type="button" class="btn btn-sm btn-outline-warning">
-                        <i class="fas fa-key"></i>
-                      </button>
-                      <button type="button" class="btn btn-sm btn-outline-primary">
-                        <i class="fas fa-edit"></i>
-                      </button>
-                      <button type="button" class="btn btn-sm btn-outline-danger">
-                        <i class="fas fa-trash"></i>
-                      </button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="text-center">10</td>
-                    <td>19321025</td>
-                    <td>Freyendo Al Farrel Sibarani</td>
-                    <td>freyendo.sibarani@univ.ac.id</td>
-                    <td class="text-center"><img style="width: 40px;" alt="Foto"></td>
-                    <td class="text-center"><span class="badge bg-info">Aktif</span></td>
-                    <td class="text-center">
-                      <button type="button" class="btn btn-sm btn-outline-info">
-                        <i class="fas fa-info-circle"></i>
-                      </button>
-                      <button type="button" class="btn btn-sm btn-outline-primary">
-                        <i class="fas fa-upload"></i>
-                      </button>
-                      <button type="button" class="btn btn-sm btn-outline-success">
-                        <i class="fas fa-download"></i>
-                      </button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="text-center">11</td>
-                    <td>19321026</td>
-                    <td>Al Farrel Sibarani</td>
-                    <td>sibarani@univ.ac.id</td>
-                    <td class="text-center"><img style="width: 40px;" alt="Foto"></td>
-                    <td class="text-center"><span class="badge bg-info">Aktif</span></td>
-                    <td class="text-center">
-                      <button type="button" class="btn btn-sm btn-outline-info">
-                        <i class="fas fa-info-circle"></i>
-                      </button>
-                      <button type="button" class="btn btn-sm btn-outline-primary">
-                        <i class="fas fa-upload"></i>
-                      </button>
-                      <button type="button" class="btn btn-sm btn-outline-success">
-                        <i class="fas fa-download"></i>
-                      </button>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+<!-- <div class="col-12 "> -->
+<!--   <div class="card card-primary card-outline card-outline-tabs">
+    <div class="card-header p-0 border-bottom-0">
+      <ul class="nav nav-tabs" id="custom-tabs-four-tab" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" id="custom-tabs-four-home-tab" data-bs-toggle="pill" href="#custom-tabs-four-home" role="tab" aria-controls="custom-tabs-four-home" aria-selected="false">Grafik</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="custom-tabs-four-profile-tab" data-bs-toggle="pill" href="#custom-tabs-four-profile" role="tab" aria-controls="custom-tabs-four-profile" aria-selected="true">Tabel</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="custom-tabs-four-messages-tab" data-bs-toggle="pill" href="#custom-tabs-four-messages" role="tab" aria-controls="custom-tabs-four-messages" aria-selected="false">Riwayat</a>
+        </li>        
+      </ul>
+    </div>
+    <div class="card-body">
+      <div class="tab-content" id="custom-tabs-four-tabContent">
+        <div class="tab-pane fade show active" id="custom-tabs-four-home" role="tabpanel" aria-labelledby="custom-tabs-four-home-tab">
+         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin malesuada lacus ullamcorper dui molestie, sit amet congue quam finibus. Etiam ultricies nunc non magna feugiat commodo. Etiam odio magna, mollis auctor felis vitae, ullamcorper ornare ligula. Proin pellentesque tincidunt nisi, vitae ullamcorper felis aliquam id. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin id orci eu lectus blandit suscipit. Phasellus porta, ante et varius ornare, sem enim sollicitudin eros, at commodo leo est vitae lacus. Etiam ut porta sem. Proin porttitor porta nisl, id tempor risus rhoncus quis. In in quam a nibh cursus pulvinar non consequat neque. Mauris lacus elit, condimentum ac condimentum at, semper vitae lectus. Cras lacinia erat eget sapien porta consectetur.
+       </div>
+       <div class="tab-pane fade" id="custom-tabs-four-profile" role="tabpanel" aria-labelledby="custom-tabs-four-profile-tab">
+         Mauris tincidunt mi at erat gravida, eget tristique urna bibendum. Mauris pharetra purus ut ligula tempor, et vulputate metus facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Maecenas sollicitudin, nisi a luctus interdum, nisl ligula placerat mi, quis posuere purus ligula eu lectus. Donec nunc tellus, elementum sit amet ultricies at, posuere nec nunc. Nunc euismod pellentesque diam.
+       </div>
+       <div class="tab-pane fade" id="custom-tabs-four-messages" role="tabpanel" aria-labelledby="custom-tabs-four-messages-tab">
+         Morbi turpis dolor, vulputate vitae felis non, tincidunt congue mauris. Phasellus volutpat augue id mi placerat mollis. Vivamus faucibus eu massa eget condimentum. Fusce nec hendrerit sem, ac tristique nulla. Integer vestibulum orci odio. Cras nec augue ipsum. Suspendisse ut velit condimentum, mattis urna a, malesuada nunc. Curabitur eleifend facilisis velit finibus tristique. Nam vulputate, eros non luctus efficitur, ipsum odio volutpat massa, sit amet sollicitudin est libero sed ipsum. Nulla lacinia, ex vitae gravida fermentum, lectus ipsum gravida arcu, id fermentum metus arcu vel metus. Curabitur eget sem eu risus tincidunt eleifend ac ornare magna.
+       </div>
+       <div class="tab-pane fade" id="custom-tabs-four-settings" role="tabpanel" aria-labelledby="custom-tabs-four-settings-tab">
+         Pellentesque vestibulum commodo nibh nec blandit. Maecenas neque magna, iaculis tempus turpis ac, ornare sodales tellus. Mauris eget blandit dolor. Quisque tincidunt venenatis vulputate. Morbi euismod molestie tristique. Vestibulum consectetur dolor a vestibulum pharetra. Donec interdum placerat urna nec pharetra. Etiam eget dapibus orci, eget aliquet urna. Nunc at consequat diam. Nunc et felis ut nisl commodo dignissim. In hac habitasse platea dictumst. Praesent imperdiet accumsan ex sit amet facilisis.
+       </div>
+     </div>
+   </div>
+ </div> -->
+<!-- </div> -->
 
 
-              </div>
-            </div>
-            <!-- /.card-body -->
-          </div>
+
+
+
         </div>
       </div>
     </div>
@@ -638,7 +379,7 @@
       </div>
       <div class="modal-body">
         <p>
-          Halaman ini menampilkan rekapitulasi satu set pemetaan OBE yang telah dirancang, menyoroti kelengkapan pemetaan (mapping completeness) untuk memeriksa apakah CPL, IK, CPMK, dan MK telah terhubung secara lengkap, sekaligus keserataan beban pemetaan (mapping balance) untuk menilai distribusi dukungan dan mengidentifikasi gap antara elemen terkuat dan terlemah di tiap level.
+          Ringkasan capaian CPL per Individu Mahasiswa, perkembangan, peringatan dini (EWS), disajikan dalam bentuk grafik dan tabel (Mockup data statis)
         </p>        
       </div>
       <div class="modal-footer">
