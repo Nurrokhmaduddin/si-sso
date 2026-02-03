@@ -122,7 +122,7 @@
     <form onsubmit="return handleLogin()">
       <div class="form-group">
         <label for="username">Username / Email</label>
-        <input type="text" id="username" placeholder="masukkan username" required>
+        <input type="text" id="username" placeholder="masukkan username" required autofocus>
       </div>
 
       <div class="form-group">
