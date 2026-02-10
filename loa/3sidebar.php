@@ -124,7 +124,7 @@
         <!-- PEMETAAN OEB -->
         <li class="nav-item">
           <a href="#" class="nav-link">
-            <i class="nav-icon fas fa-columns"></i>
+            <i class="nav-icon fas fa-project-diagram"></i>
             <p>
               Pemetaan OBE
               <i class="right fas fa-angle-left"></i>
@@ -339,7 +339,7 @@
  <!-- PENGEMBANGAN OBE -->
         <li class="nav-item">
           <a href="#" class="nav-link">
-            <i class="nav-icon fas fa-clipboard-list"></i>
+            <i class="nav-icon fas fa-chart-line"></i>
             <p>
               Pengembangan OBE
               <i class="right fas fa-angle-left"></i>
@@ -394,10 +394,18 @@
           </ul>
         </li>
 
+        <li class="nav-item">
+          <a href="../menu.php" class="nav-link">
+            <i class="nav-icon fas fa-history"></i>
+            <p>Audit Aktivitas</p>
+          </a>
+        </li>
+
+
         <!-- PENGATURAN -->
         <li class="nav-item">
           <a href="#" class="nav-link">
-            <i class="nav-icon fas fa-cogs"></i>
+            <i class="nav-icon fas fa-cog"></i>
             <p>
               Pengaturan
               <i class="right fas fa-angle-left"></i>
@@ -405,7 +413,7 @@
           </a>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="aktivitas-manajemen.php" class="nav-link">
+              <a href="pengaturan-user.php" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>User</p>
               </a>
@@ -413,7 +421,7 @@
             <li class="nav-item">
               <a href="aktivitas-laporan.php" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
-                <p>Peran</p>
+                <p>Peran & Hak Akses</p>
               </a>
             </li>
             <li class="nav-item">
@@ -429,6 +437,12 @@
               </a>
             </li>
             <li class="nav-item">
+              <a href="aktivitas-laporan.php" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Audit Aktivitas</p>
+              </a>
+            </li>
+            <li class="nav-item">
               <a href="pengaturan-aplikasi.php" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Parameter Aktivitas</p>
@@ -438,12 +452,6 @@
               <a href="pengaturan-aplikasi.php" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Aplikasi</p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="pengaturan-user.php" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Hak Akses</p>
               </a>
             </li>
           </ul>

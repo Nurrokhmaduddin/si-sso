@@ -271,7 +271,7 @@ include "3sidebar.php";
         <!-- 2. Kehadiran & Catatan -->
         <div class="card card-outline card-info mb-3">
           <div class="card-header">
-            <h6 class="mb-0">Kehadiran & Catatan Per Murid</h6>
+            <h6 class="mb-0">Kehadiran & Jurnal Per Murid</h6>
           </div>
           <div class="card-body table-responsive">
             <table class="table table-bordered table-sm align-middle">
