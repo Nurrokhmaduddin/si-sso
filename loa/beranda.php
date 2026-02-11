@@ -1,3 +1,4 @@
+<?php $page = 'beranda'; ?>
 <?php include('1header.php'); ?>
 <?php include('2navbar.php'); ?>
 <?php include('3sidebar.php'); ?>

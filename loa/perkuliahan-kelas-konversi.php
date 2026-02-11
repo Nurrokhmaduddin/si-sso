@@ -55,15 +55,15 @@
                 <button class="btn btn-outline-info btn-sm " data-bs-toggle="modal" data-bs-target="#modalFilter">
                   <i class="fas fa-filter me-1"></i> Filter
                 </button>
-                <button type="button" class="btn btn-outline-primary btn-sm " data-bs-toggle="modal" data-bs-target="#modalTambahData">
+                <!-- <button type="button" class="btn btn-outline-primary btn-sm " data-bs-toggle="modal" data-bs-target="#modalTambahData">
                   <i class="fas fa-plus me-1"></i> Add
-                </button>
+                </button> -->
                 <button type="button" class="btn btn-outline-primary btn-sm " data-bs-toggle="modal" data-bs-target="#modalImpor">
                   <i class="fas fa-file-upload me-1"></i> Import
                 </button>  
-                <button type="button" class="btn btn-outline-warning btn-sm " data-bs-toggle="modal" data-bs-target="#modalImpor">
+                <!-- <button type="button" class="btn btn-outline-warning btn-sm " data-bs-toggle="modal" data-bs-target="#modalImpor">
                   <i class="fas fa-file-upload me-1"></i> Import from Gateway UII
-                </button>              
+                </button>  -->             
                 <button type="button" class="btn btn-outline-success btn-sm">
                   <i class="fas fa-file-download me-1"></i> Export
                 </button>
@@ -108,7 +108,7 @@
                       <td align="center">4</td>
                       <td align="center">32</td>
                       <td align="center">
-                        <button type="button" class="btn btn-sm btn-outline-info"><i class="fas fa-users"></i> Mahasiswa</button>
+                        <button type="button" class="btn btn-sm btn-outline-info"><i class="fas fa-users"></i> </button>
                         <button type="button" class="btn btn-outline-danger mrg-btn btn-sm"><i class="fas fa-trash"></i></button>
                       </td>
                     </tr>
@@ -127,7 +127,7 @@
                       <td align="center">6</td>
                       <td align="center">28</td>
                       <td align="center">
-                        <button type="button" class="btn btn-sm btn-outline-info"><i class="fas fa-users"></i> Mahasiswa</button>
+                        <button type="button" class="btn btn-sm btn-outline-info"><i class="fas fa-users"></i> </button>
                         <button type="button" class="btn btn-outline-danger mrg-btn btn-sm"><i class="fas fa-trash"></i></button>
                       </td>
                     </tr>
@@ -146,7 +146,7 @@
                       <td align="center">5</td>
                       <td align="center">30</td>
                       <td align="center">
-                        <button type="button" class="btn btn-sm btn-outline-info"><i class="fas fa-users"></i> Mahasiswa</button>
+                        <button type="button" class="btn btn-sm btn-outline-info"><i class="fas fa-users"></i> </button>
                         <button type="button" class="btn btn-outline-danger mrg-btn btn-sm"><i class="fas fa-trash"></i></button>
                       </td>
                     </tr>
@@ -165,7 +165,7 @@
                       <td align="center">5</td>
                       <td align="center">27</td>
                       <td align="center">
-                        <button type="button" class="btn btn-sm btn-outline-info"><i class="fas fa-users"></i> Mahasiswa</button>
+                        <button type="button" class="btn btn-sm btn-outline-info"><i class="fas fa-users"></i> </button>
                         <button type="button" class="btn btn-outline-danger mrg-btn btn-sm"><i class="fas fa-trash"></i></button>
                       </td>
                     </tr>
@@ -184,7 +184,7 @@
                       <td align="center">4</td>
                       <td align="center">31</td>
                       <td align="center">
-                        <button type="button" class="btn btn-sm btn-outline-info"><i class="fas fa-users"></i> Mahasiswa</button>
+                        <button type="button" class="btn btn-sm btn-outline-info"><i class="fas fa-users"></i> </button>
                         <button type="button" class="btn btn-outline-danger mrg-btn btn-sm"><i class="fas fa-trash"></i></button>
                       </td>
                     </tr>
@@ -203,7 +203,7 @@
                       <td align="center">4</td>
                       <td align="center">29</td>
                       <td align="center">
-                        <button type="button" class="btn btn-sm btn-outline-info"><i class="fas fa-users"></i> Mahasiswa</button>
+                        <button type="button" class="btn btn-sm btn-outline-info"><i class="fas fa-users"></i> </button>
                         <button type="button" class="btn btn-outline-danger mrg-btn btn-sm"><i class="fas fa-trash"></i></button>
                       </td>
                     </tr>
@@ -222,7 +222,7 @@
                       <td align="center">6</td>
                       <td align="center">26</td>
                       <td align="center">
-                        <button type="button" class="btn btn-sm btn-outline-info"><i class="fas fa-users"></i> Mahasiswa</button>
+                        <button type="button" class="btn btn-sm btn-outline-info"><i class="fas fa-users"></i> </button>
                         <button type="button" class="btn btn-outline-danger mrg-btn btn-sm"><i class="fas fa-trash"></i></button>
                       </td>
                     </tr>
@@ -241,7 +241,7 @@
                       <td align="center">3</td>
                       <td align="center">34</td>
                       <td align="center">
-                        <button type="button" class="btn btn-sm btn-outline-info"><i class="fas fa-users"></i> Mahasiswa</button>
+                        <button type="button" class="btn btn-sm btn-outline-info"><i class="fas fa-users"></i> </button>
                         <button type="button" class="btn btn-outline-danger mrg-btn btn-sm"><i class="fas fa-trash"></i></button>
                       </td>
                     </tr>
@@ -260,7 +260,7 @@
                       <td align="center">4</td>
                       <td align="center">33</td>
                       <td align="center">
-                        <button type="button" class="btn btn-sm btn-outline-info"><i class="fas fa-users"></i> Mahasiswa</button>
+                        <button type="button" class="btn btn-sm btn-outline-info"><i class="fas fa-users"></i> </button>
                         <button type="button" class="btn btn-outline-danger mrg-btn btn-sm"><i class="fas fa-trash"></i></button>
                       </td>
                     </tr>
@@ -279,7 +279,7 @@
                       <td align="center">5</td>
                       <td align="center">25</td>
                       <td align="center">
-                        <button type="button" class="btn btn-sm btn-outline-info"><i class="fas fa-users"></i> Mahasiswa</button>
+                        <button type="button" class="btn btn-sm btn-outline-info"><i class="fas fa-users"></i> </button>
                         <button type="button" class="btn btn-outline-danger mrg-btn btn-sm"><i class="fas fa-trash"></i></button>
                       </td>
                     </tr>
@@ -348,8 +348,8 @@
         <p>
           algoritma konversi kurikulum:<br>
 1.unggah file berita acara mapping konversi kurikulum di sistem<br>
-2.ambil nilai CPMK-CPMK dan nilai akhir,(nilai seperti khs) berdasarkan data periode pertama hingga data periode terkini. [data modal] ambil nilai MK(cpmk1,2,3,4,n,akhir angka,huruf) terbaik, berdasarkan mata kuliah di set pemetaan tertentu. kolom [kode pemetaan, kode mk, kode kelas, kode mahasiswa, nilai MK(cpmk1,2,3,4,n,akhir angka,huruf)]<br>
-3.buat data kelas konversi untuk menampung mahasiswa niali2nya. per kelas adalah 1 mata kuliah saja. dengan dosen 'tanda konevrsi', kemudian periode terkini, pilih satu periode.<br>
+2.ambil nilai CPMK-CPMK dan nilai akhir,(nilai seperti khs) berdasarkan data periode pertama hingga data periode terkini. [data modal] ambil nilai MK(cpmk1,2,3,4,n,akhir angka,huruf) terbaik, berdasarkan mata kuliah di set pemetaan tertentu. kolom [kode pemetaan, kode mk, kode kelas, kode , nilai MK(cpmk1,2,3,4,n,akhir angka,huruf)]<br>
+3.buat data kelas konversi untuk menampung  niali2nya. per kelas adalah 1 mata kuliah saja. dengan dosen 'tanda konevrsi', kemudian periode terkini, pilih satu periode.<br>
 4.input.impor nilai CPMK dgn perhitungan mapping dari prodi. proses konversi berdasarkan [data modal]<br>
 5. parameter pencegahan agar semua data yg diperlukan termigrasi/terkonversi dengan efektif?
         </p>

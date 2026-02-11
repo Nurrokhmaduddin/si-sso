@@ -1,4 +1,4 @@
-<?php $page = 'kelas_perkuliahan'; ?>
+<?php $page = 'portofolio_kelas'; ?>
 <?php include('1header.php'); ?>
 <?php include('2navbar.php'); ?>
 <?php include('3sidebar.php'); ?>
@@ -8,7 +8,7 @@
 
   <section class="content-header">
     <div class="container-fluid">
-      <h3 class="mb-0">Kelas Perkuliahan 
+      <h3 class="mb-0">Portofolio Kelas Perkuliahan 
         <button type="button" class="btn btn-tool" data-bs-toggle="modal" data-bs-target="#modalBantuan" title="Bantuan"><i class="fas fa-question-circle"></i>
         </button> 
       </h3>
@@ -49,21 +49,21 @@
                 <button class="btn btn-outline-info btn-sm " data-bs-toggle="modal" data-bs-target="#modalFilter">
                   <i class="fas fa-filter me-1"></i> Filter
                 </button>
-               <!--  <button type="button" class="btn btn-outline-primary btn-sm " data-bs-toggle="modal" data-bs-target="#modalTambahData">
+                <!-- <button type="button" class="btn btn-outline-primary btn-sm " data-bs-toggle="modal" data-bs-target="#modalTambahData">
                   <i class="fas fa-plus me-1"></i> Add
-                </button> -->
+                </button>
                 <button type="button" class="btn btn-outline-primary btn-sm " data-bs-toggle="modal" data-bs-target="#modalImpor">
                   <i class="fas fa-file-upload me-1"></i> Import
                 </button>  
                 <button type="button" class="btn btn-outline-warning btn-sm " data-bs-toggle="modal" data-bs-target="#modalImpor">
                   <i class="fas fa-file-upload me-1"></i> Import from Gateway UII
-                </button>              
+                </button> -->              
                 <button type="button" class="btn btn-outline-success btn-sm">
                   <i class="fas fa-file-download me-1"></i> Export
                 </button>
-                <button type="button" class="btn btn-outline-danger btn-sm">
+               <!--  <button type="button" class="btn btn-outline-danger btn-sm">
                   <i class="fas fa-ban me-1"></i> Reset
-                </button>    
+                </button> -->    
               </div>
             </div>
 
@@ -107,11 +107,10 @@
                			<td align="center">
                			27                            </td>
                			<td align="center">
-               				<a href="perkuliahan-kelas-perkuliahan-detail.php">
-               					<button type="button" class="btn btn-sm btn-outline-info"><i class="fas fa-users"></i></button>
-               				</a>
 
-               				<button type="button" class="btn btn-outline-danger btn-sm" onclick="load_modal('kelas_mata_kuliah/modal_hapus/4402')"><i class="fas fa-trash"></i></button>
+               				<button type="button" onclick="window.location='perkuliahan-portofolio-kelas-detail.php'" class="btn btn-sm btn-outline-info"> <i class='fas fa-info-circle'> </i></button>
+               				
+                          <a href="data-portofolio-cpmk.pdf" download class="btn btn-sm btn-outline-success"> <i class='fas fa-download'> </i></a>
                			</td>
                		</tr>
                		<tr>
