@@ -210,7 +210,7 @@
       </div>
       <div class="modal-body">
         <p>
-          Merupakan daftar pilihan bidang keahlian dalam satu prodi
+          Daftar ini memuat jalur peminatan dalam program studi yang dirancang untuk mengarahkan pengembangan kompetensi mahasiswa pada bidang keahlian tertentu. Pemilihan konsentrasi berdampak pada komposisi mata kuliah, distribusi beban studi, serta variasi pemetaan terhadap Capaian Pembelajaran Lulusan (CPL).
         </p>
       </div>
       <div class="modal-footer">

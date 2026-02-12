@@ -1,4 +1,4 @@
-<?php $page = 'progress_kelas'; ?>
+<?php $page = 'portofolio_kelas'; ?>
 <?php include('1header.php'); ?>
 <?php include('2navbar.php'); ?>
 <?php include('3sidebar.php'); ?>
@@ -8,7 +8,7 @@
 
   <section class="content-header">
     <div class="container-fluid">
-      <h3 class="mb-0">Progress - Kelas Perkuliahan
+      <h3 class="mb-0">Portofolio - Kelas Perkuliahan [lembar kerja dosen]
         <button type="button" class="btn btn-tool" data-bs-toggle="modal" data-bs-target="#modalBantuan" title="Bantuan"><i class="fas fa-question-circle"></i>
         </button> 
       </h3>
@@ -23,9 +23,10 @@
       <div class="row">
         <div class="col-md-12">
 
-      
+    
 
-          <!-- ========== CARD : Filter & Export ========== -->
+
+<!-- ========== CARD : Filter & Export ========== -->
           <div class="card">
             <!-- <div class="card-header bg-secondary">
               <h5 class="card-title mb-0">
@@ -53,6 +54,10 @@
                         <td width="30%"><b> Mata Kuliah</b></td>
                         <td>Metode Pelaksanaan Bangunan - (STS704)</td>
                       </tr>
+                      <tr>
+                        <td width="30%"><b> Tanggal Posting </b></td>
+                        <td>23 Januari 2024</td>
+                      </tr>
                     </tbody>
                   </table>
                 </div>
@@ -64,8 +69,16 @@
                         <td>5</td>
                       </tr>
                       <tr>
+                        <td width="30%"><b> Kelas</b></td>
+                        <td>A</td>
+                      </tr>
+                      <tr>
                         <td width="30%"><b> Peminatan</b></td>
                         <td>Civil Engineering Regular - (511)</td>
+                      </tr>
+                      <tr>
+                        <td width="30%"><b> Mahasiswa</b></td>
+                        <td>40</td>
                       </tr>
                     </tbody>
                   </table>
@@ -76,9 +89,9 @@
 
             <div class="card-footer">
               <div class="card-tools ms-auto">
-                <button type="button" 
+                 <button type="button" 
                 class="btn btn-outline-secondary btn-sm"
-                onclick="window.location.href='monev-rekap-kelas.php'">
+                onclick="window.location.href='perkuliahan-portofolio-kelas.php'">
                 <span class="fas fa-reply me-1"></span> Kembali
               </button>
 
@@ -105,14 +118,13 @@
 
           </div>
 
-          <!-- TAB NAV (Semester) -->
+<!-- TAB NAV (Semester) -->
            <ul class="nav nav-tabs">
-            <li class="nav-item" onclick="window.location='progres-kelas-semester-detail.php'"><a class="nav-link active">Progres(Grafik/Tabel)</a></li>
-            <!-- <li class="nav-item" onclick="window.location='monev_portfolio_cpmk_detail2.php'"><a class="nav-link ">Mahasiswa</a></li>
-            <li class="nav-item" onclick="window.location='monev_portfolio_cpmk_detail3.php'"><a class="nav-link ">Portofolio</a></li> -->
-            <li class="nav-item" onclick="window.location='progres-kelas-semester-detail4.php'"><a class="nav-link ">Pengembangan</a></li>
+            <li class="nav-item" onclick="window.location='perkuliahan-portofolio-kelas-detail.php'"><a class="nav-link ">Portofolio</a></li>
+            <li class="nav-item" onclick="window.location='perkuliahan-portofolio-kelas-detail2.php'"><a class="nav-link ">Penilaian Mahasiswa</a></li>
+            <li class="nav-item" onclick="window.location='perkuliahan-portofolio-kelas-detail3.php'"><a class="nav-link active">Laporan(Grafik/Tabel)</a></li>
           </ul>
-       
+     
 
         <div class="card">
           <div class="card-body">
@@ -202,134 +214,71 @@
                   </tr>
                 </tbody>
               </table>
-
-              <!-- visualisasi grafis capaian CPMK -->
-             <!--  <canvas id="chartCpmk" width="400" height="150"></canvas>
-              <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-              <script>
-                const ctx = document.getElementById('chartCpmk').getContext('2d');
-                const chartCpmk = new Chart(ctx, {
-                  type: 'bar',
-                  data: {
-                    labels: ['CPMK 1','CPMK 2','CPMK 3','CPMK 4'],
-                    datasets: [{
-                      label: 'Rerata Capaian (%)',
-                      data: [72.14, 77.86, 76.14, 76.14], 
-                      backgroundColor: 'rgba(54, 162, 235, 0.6)',
-                      borderColor: 'rgba(54, 162, 235, 1)',
-                      borderWidth: 1
-                    }]
-                  },
-                  options: {
-                    scales: {
-                      y: { beginAtZero: true, max: 100 }
-                    },
-                    plugins: {
-                      legend: { display: false },
-                      title: {
-                        display: true,
-                        text: 'Progres Capaian CPMK Kelas'
-                      }
-                    }
-                  }
-                });
-              </script> -->
-
             </div>
           </div>
         </div>
           
-        <!-- ========== CARD : visualisasi grafis capaian CPMK ========== -->
-       <!--  <div class="card">
-          <div class="card-body">
-              <canvas id="chartCpmk" width="400" height="150"></canvas>
-              <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-              <script>
-                const ctx = document.getElementById('chartCpmk').getContext('2d');
-                const chartCpmk = new Chart(ctx, {
-                  type: 'bar',
-                  data: {
-                    labels: ['CPMK 1','CPMK 2','CPMK 3','CPMK 4'],
-                    datasets: [{
-                      label: 'Rerata Capaian (%)',
-                      data: [72.14, 77.86, 76.14, 76.14], 
-                      backgroundColor: 'rgba(54, 162, 235, 0.6)',
-                      borderColor: 'rgba(54, 162, 235, 1)',
-                      borderWidth: 1
-                    }]
-                  },
-                  options: {
-                    scales: {
-                      y: { beginAtZero: true, max: 100 }
-                    },
-                    plugins: {
-                      legend: { display: false },
-                      title: {
-                        display: true,
-                        text: 'Progres Capaian CPMK Kelas'
-                      }
-                    }
-                  }
-                });
-              </script>
+<!-- ========== CARD : visualisasi grafis capaian CPMK ========== -->
+<div class="card">
+  <div class="card-body">
+    <canvas id="chartCpmk" width="400" height="100"></canvas>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+      const ctx = document.getElementById('chartCpmk').getContext('2d');
+      const chartCpmk = new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: ['CPMK 1','CPMK 2','CPMK 3','CPMK 4'],
+          datasets: [{
+            label: 'Rerata Capaian (%)',
+            data: [72.14, 77.86, 76.14, 76.14], 
+            backgroundColor: 'rgba(54, 162, 235, 0.6)',
+            borderColor: 'rgba(54, 162, 235, 1)',
+            borderWidth: 1
+          }]
+        },
+        options: {
+          scales: {
+            y: { beginAtZero: true, max: 100 }
+          },
+          plugins: {
+            legend: { display: false },
+            title: {
+              display: true,
+              text: 'Rerata Nilai CPMK pada Kelas Perkuliahan'
+            }
+          }
+        }
+      });
+    </script>
 
-          </div>
-        </div> -->
-
-
-<!-- ========== CARD 4: Chart CPL-IK ========== -->     
-        <div class="card">   
-          <!-- CARD HEADER -->  
-          <div class="card-header ">         
-            <h5 class="card-title mb-0">
-              <button class="btn btn-sm btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#chartCPLIK1">
-                <i class="fas fa-expand"></i>
-              </button>
-              Progress Rerata CPMK Kelas Perkuliahan antar Periode
-            </h5>
-          </div>
-          <!-- CARD BODY -->
-          <div class="card-body " id="chartCPLIK1">
-            <!-- Chart Container -->
-            <div class="chart-container">
-              <canvas id="chartCPL2" width="100%" height="30"></canvas>
-            </div>
-            <h6 class="font-weight-bold">Daftar CPMK</h6>
-            <div class="table-responsive">
-              <table class="table table-sm table-bordered">
-                <thead class="thead-dark">
-                  <tr>
-                    <th style="width: 80px;">Kode CPMK</th>
-                    <th>Deskripsi CPMK</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>CPMK 1</td>
-                    <td>Mahasiswa mampu menyampaikan informasi secara lisan secara runtut, jelas, dan mudah dipahami.</td>
-                  </tr>
-                  <tr>
-                    <td>CPMK 2</td>
-                    <td>Mahasiswa mampu menulis laporan/tulisan akademik sesuai kaidah bahasa dan struktur penulisan yang baik.</td>
-                  </tr>
-                  <tr>
-                    <td>CPMK 3</td>
-                    <td>Mahasiswa mampu berkomunikasi secara profesional dalam konteks akademik dan industri, termasuk etika komunikasi digital.</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>          
-        </div>
-
-        
+  </div>
+</div>
 
 
 
 
 
+<!-- ========== CARD : Chart Row CPMK ========== -->
+<div class="card">
+  <div class="card-header">
+    <h3 class="card-title">
+      <i class="fas fa-chart-area mr-1"></i>
+      Distribusi & Capaian Pembelajaran
+    </h3>
+  </div>
+  <div class="card-body">
+    <!-- Bar Chart CPMK -->
+    <div class="chart-container" style="height:220px;">
+      <canvas id="barChartCPMK"></canvas>
+    </div>
 
-
+    <!-- Bar Chart CPMK -->
+    <div class="chart-container" style="height:220px;">
+      <canvas id="barChartCPMK2"></canvas>
+    </div>
+  </div>
+</div>
 
 
 
@@ -399,6 +348,148 @@ jika ada kesamaan NIM di satu mata kuliah(artinya mahasiswa tempuh >1 kali MK ts
     </div>
   </div>
 </div>
+
+
+<script>
+// Generate label CPMK 1 - 256
+const labelsCPMK = Array.from({ length: 40 }, (_, i) => `NIM ${i + 1}`);
+
+// Contoh nilai CPMK (0 - 100)
+const nilaiCPMK = Array.from({ length: 40 }, () =>
+  Math.floor(Math.random() * 101)
+);
+
+const cty = document.getElementById('barChartCPMK').getContext('2d');
+
+new Chart(cty, {
+  type: 'bar',
+  data: {
+    labels: labelsCPMK,
+    datasets: [{
+      label: 'Nilai CPMK 1',
+      data: nilaiCPMK,
+      backgroundColor: 'rgba(220, 53, 69, 0.8)', // merah (Bootstrap danger)
+      borderColor: 'rgba(220, 53, 69, 1)',
+      borderWidth: 1
+    }]
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      // title: {
+      //   display: true,
+      //   text: 'Capaian CPMK',
+      //   font: {
+      //     size: 18
+      //   }
+      // },
+      legend: {
+        position: 'top'
+      },
+      tooltip: {
+        callbacks: {
+          label: function(context) {
+            return `Nilai: ${context.raw}`;
+          }
+        }
+      }
+    },
+    scales: {
+      y: {
+        min: 0,
+        max: 100,
+        // title: {
+        //   display: true,
+        //   text: 'Nilai (0–100)'
+        // }
+      },
+      x: {
+        ticks: {
+          autoSkip: true,
+          maxTicksLimit: 30 // supaya tidak overload
+        },
+        title: {
+          display: true,
+          // text: 'CPMK'
+        }
+      }
+    }
+  }
+});
+</script>
+
+
+
+<script>
+// Generate label CPMK 1 - 256
+const labelsCPMK2 = Array.from({ length: 40 }, (_, i) => `NIM ${i + 1}`);
+
+// Contoh nilai CPMK (0 - 100)
+const nilaiCPMK2 = Array.from({ length: 40 }, () =>
+  Math.floor(Math.random() * 101)
+);
+
+const cty2 = document.getElementById('barChartCPMK2').getContext('2d');
+
+new Chart(cty2, {
+  type: 'bar',
+  data: {
+    labels: labelsCPMK2,
+    datasets: [{
+      label: 'Nilai CPMK 2',
+      data: nilaiCPMK2,
+      backgroundColor: 'rgba(220, 53, 69, 0.8)', // merah (Bootstrap danger)
+      borderColor: 'rgba(220, 53, 69, 1)',
+      borderWidth: 1
+    }]
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      // title: {
+      //   display: true,
+      //   text: 'Capaian CPMK',
+      //   font: {
+      //     size: 18
+      //   }
+      // },
+      legend: {
+        position: 'top'
+      },
+      tooltip: {
+        callbacks: {
+          label: function(context) {
+            return `Nilai: ${context.raw}`;
+          }
+        }
+      }
+    },
+    scales: {
+      y: {
+        min: 0,
+        max: 100,
+        // title: {
+        //   display: true,
+        //   text: 'Nilai (0–100)'
+        // }
+      },
+      x: {
+        ticks: {
+          autoSkip: true,
+          maxTicksLimit: 30 // supaya tidak overload
+        },
+        title: {
+          display: true,
+          // text: 'CPMK'
+        }
+      }
+    }
+  }
+});
+</script>
+
 <?php include('5script.php'); ?>
 
 
@@ -406,80 +497,3 @@ jika ada kesamaan NIM di satu mata kuliah(artinya mahasiswa tempuh >1 kali MK ts
 
 
 
-
-
-
-
-
-
-
-
-
-
-        
-
-        
-     
-
-<!-- <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@1.3.1/dist/chartjs-plugin-annotation.min.js"></script> -->
-
-<!-- Chart Script -->
-<script>
-    const ctx2 = document.getElementById("chartCPL2");
-
-    new Chart(ctx2, {
-        type: 'bar',
-        data: {
-            labels: ['CPMK 1', 'CPMK 2', 'CPMK 3'],
-            datasets: [
-                {
-                    label: 'Periode A',
-                    data: [82, 75,  81.66],
-                    backgroundColor: '#6c757d',
-                    borderColor: '#6c757d',
-                    borderWidth: 1
-                },
-                {
-                    label: 'Periode B',
-                    data: [90, 80, 87.33],
-                    backgroundColor: '#007bff',
-                    borderColor: '#007bff',
-                    borderWidth: 1
-                }
-            ]
-        },
-        options: {
-            responsive: true,
-            plugins: {
-                legend: { position: 'top' },
-                annotation: {
-                    annotations: {
-                        targetLine: {
-                            type: 'line',
-                            yMin: 85,      // <<< TARGET CAPAIAN
-                            yMax: 85,
-                            borderColor: 'red',
-                            borderWidth: 2,
-                            borderDash: [6, 6],
-                            label: {
-                                display: true,
-                                content: 'Target 85',
-                                position: 'start',
-                                color: 'red',
-                                backgroundColor: 'rgba(255,255,255,0.7)',
-                                padding: 4
-                            }
-                        }
-                    }
-                }
-            },
-            scales: {
-                y: {
-                    beginAtZero: true
-                }
-            }
-        }
-    });
-
-
-</script>

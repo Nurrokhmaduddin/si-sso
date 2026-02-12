@@ -79,7 +79,7 @@
               <div class="card-tools ms-auto">
                 <button type="button" 
                 class="btn btn-outline-secondary btn-sm"
-                onclick="window.location.href='perkuliahan-kelas-perkuliahan.php'">
+                onclick="window.location.href='perkuliahan-nilai-cpmk.php'">
                 <span class="fas fa-reply me-1"></span> Kembali
               </button>
 

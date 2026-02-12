@@ -24,122 +24,108 @@
 
     
 
-          <!-- ========== CARD : identitas kelas ========== --> 
+<!-- ========== CARD : Filter & Export ========== -->
           <div class="card">
-            <div class="card-body">
+            <!-- <div class="card-header bg-secondary">
+              <h5 class="card-title mb-0">
+                <i class="fas fa-database"></i> Data Produk/Barang        
+              </h5>
+              <div class="card-tools ms-auto">
+                               
+              </div>
+            </div> -->
+
+            <div class="card-body ">
               <div class="row">   
-                <div class="col-lg-6">
-                  <table id="tbl" name="tbl" class="table table-sm table-hover table-bordered table-striped deta">
+                <div class="col-lg-7">
+                  <table class="table table-sm table-hover table-bordered table-striped deta">
                     <tbody>
                       <tr>
-                        <td width="30%"><b> Periode Akademik</b></td>
-                        <td>2024/2025 - Semester Genap</td>
+                        <td width="30%"><b> Tahun Akademik</b></td>
+                        <td>2024/2025 - Gasal</td>
                       </tr>
                       <tr>
                         <td width="30%"><b> Dosen Pengampu</b></td>
-                        <td>155211304 - Tintin Mutiara, S.T., M.Eng., Dr.</td>
+                        <td>Tri Nugroho Sulistyantoro, S.T., M.T. - (195110502)</td>
                       </tr>
                       <tr>
                         <td width="30%"><b> Mata Kuliah</b></td>
-                        <td>
-                        Teknologi Polimer dan Komposit                         - (MTK907)                      </td>
+                        <td>Metode Pelaksanaan Bangunan - (STS704)</td>
                       </tr>
                       <tr>
-                        <td width="30%"><b> Kelas</b></td>
-                        <td>A - <i>Jadwal (hari, jam, ruang)</i></td>
+                        <td width="30%"><b> Tanggal Posting </b></td>
+                        <td>23 Januari 2024</td>
                       </tr>
-                      <tr>
-                        <td width="30%"><b> Peminatan</b></td>
-                        <td>Teknik Kimia Program Magister</td>
-                      </tr>     
-                      <tr>
-                        <td width="30%"><b>Jumlah Mahasiswa</b></td>
-                        <td>40 </td>
-                      </tr>                      
                     </tbody>
                   </table>
                 </div>
-                <div class="col-lg-6">
-                  <table id="tbl" name="tbl" class="table table-sm table-hover table-bordered table-striped deta">
+                <div class="col-lg-5">
+                  <table class="table table-sm table-hover table-bordered table-striped deta">
                     <tbody>
                       <tr>
-                        <td> 
-                          Dokumen RPS <span class="badge badge-success">Valid</span></td>
-                          <td width="40%">
-                            <a href="#" target="_blank" title="Unduh RPS">
-                              <button type="button" class="btn btn-xs btn-success" ><i class="fas fa-file"></i> Download</button>
-                            </a> <i>update_at</i>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td> 
-                          Materi Pembelajaran (slides, modul, bahan ajar) </td>
-                          <td width="40%">
-                            <a href="#" target="_blank">
-                              <button type="button" class="btn btn-xs btn-info"><i class="fas fa-link"></i> Download</button>
-                            </a> <i>update_at</i>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            Dokumen Penugasan Mahasiswa <span class="badge badge-secondary">Proses</span></td>
-                            <td width="40%">
-                              <a href="https://drive.google.com/drive/folders/1Ba6yZ2KLWZC992tVO7wxpcfxaOYb8Eyi?usp=drive_link" target="_blank">
-                                <button type="button" class="btn btn-xs btn-info"><i class="fas fa-link"></i> Download</button>
-                              </a> <i>updated 19 sep 2025</i>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              Soal Ujian UTS/UAS <span class="badge badge-danger">Rejected</span> (dengan validasi prodi)</td>
-                              <td width="40%">
-                                <a href="https://drive.google.com/drive/folders/1Ba6yZ2KLWZC992tVO7wxpcfxaOYb8Eyi?usp=drive_link" target="_blank">
-                                  <button type="button" class="btn btn-xs btn-info"><i class="fas fa-link"></i> Download</button>
-                                </a> <i>update_at</i>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                              Evaluasi Dosen oleh Mahasiswa</td>
-                              <td width="40%">
-                                <a href="portfolio_cpmk_detail2.php" target="_blank">
-                                  <button type="button" class="btn btn-xs btn-info"><i class="fas fa-link"></i> Download</button>
-                                </a> <i>update_at</i>
-                              </td>
-                            </tr>
-                          </tbody>
-                      </table>
+                        <td width="30%"><b> Jumlah CPMK</b></td>
+                        <td>5</td>
+                      </tr>
+                      <tr>
+                        <td width="30%"><b> Kelas</b></td>
+                        <td>A</td>
+                      </tr>
+                      <tr>
+                        <td width="30%"><b> Peminatan</b></td>
+                        <td>Civil Engineering Regular - (511)</td>
+                      </tr>
+                      <tr>
+                        <td width="30%"><b> Mahasiswa</b></td>
+                        <td>40</td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
               </div>
+
             </div>
-          
+
             <div class="card-footer">
-              <div class="table-responsive">
-                <table>
-                  <tr>
-                    <td style="border: 0px;">
-                      <a href="perkuliahan-portofolio-kelas.php">
-                        <button type="button" class="btn bg-gray" style="background-color: #6c757d;">
-                          <span class="fas fa-reply"></span> 
-                        Kembali                      </button>
-                      </a>
-                    </td>
-                  </tr>
-                </table>
+              <div class="card-tools ms-auto">
+                 <button type="button" 
+                class="btn btn-outline-secondary btn-sm"
+                onclick="window.location.href='monev-rekap-kelas.php'">
+                <span class="fas fa-reply me-1"></span> Kembali
+              </button>
+
+                <!-- <button class="btn btn-outline-info btn-sm " data-bs-toggle="modal" data-bs-target="#modalFilter">
+                  <i class="fas fa-filter me-1"></i> Filter
+                </button> -->
+               <!--  <button type="button" class="btn btn-outline-primary btn-sm " data-bs-toggle="modal" data-bs-target="#modalTambahData">
+                  <i class="fas fa-plus me-1"></i> Add
+                </button> -->
+                <!-- <button type="button" class="btn btn-outline-primary btn-sm " data-bs-toggle="modal" data-bs-target="#modalImpor">
+                  <i class="fas fa-file-upload me-1"></i> Import
+                </button>  
+                <button type="button" class="btn btn-outline-warning btn-sm " data-bs-toggle="modal" data-bs-target="#modalImpor">
+                  <i class="fas fa-file-upload me-1"></i> Import from Gateway UII
+                </button> -->              
+                <button type="button" class="btn btn-outline-success btn-sm">
+                  <i class="fas fa-file-download me-1"></i> Export
+                </button>
+                <!-- <button type="button" class="btn btn-outline-danger btn-sm">
+                  <i class="fas fa-ban me-1"></i> Reset
+                </button> -->    
               </div>
             </div>
+
           </div>
 
-             <!-- TAB NAV (Semester) -->
-        <ul class="nav nav-tabs">
+          <!-- TAB NAV (Semester) -->
            <ul class="nav nav-tabs">
-          <li class="nav-item" onclick="window.location='monev_portfolio_cpmk_detail1.php'"><a class="nav-link active">Laporan(Grafik/Tabel)</a></li>
-           <li class="nav-item" onclick="window.location='monev_portfolio_cpmk_detail2.php'"><a class="nav-link ">Mahasiswa</a></li>
-           <li class="nav-item" onclick="window.location='monev_portfolio_cpmk_detail3.php'"><a class="nav-link ">Portofolio</a></li>
-           <li class="nav-item" onclick="window.location='monev_portfolio_cpmk_detail4.php'"><a class="nav-link ">Pengembangan</a></li>
-        </ul>
-        </ul>
+            <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail.php'"><a class="nav-link active">Rekapitulasi</a></li>
+            <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail2.php'"><a class="nav-link ">Mahasiswa</a></li>
+            <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail3.php'"><a class="nav-link ">Portofolio</a></li>
+          </ul>
+     
 
+
+<!-- ========== CARD : Grafik   CPMK ========== -->
         <div class="card">
           <div class="card-body">
             <div class="table-responsive">
@@ -228,79 +214,73 @@
                   </tr>
                 </tbody>
               </table>
-
-              <!-- visualisasi grafis capaian CPMK -->
-             <!--  <canvas id="chartCpmk" width="400" height="150"></canvas>
-              <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-              <script>
-                const ctx = document.getElementById('chartCpmk').getContext('2d');
-                const chartCpmk = new Chart(ctx, {
-                  type: 'bar',
-                  data: {
-                    labels: ['CPMK 1','CPMK 2','CPMK 3','CPMK 4'],
-                    datasets: [{
-                      label: 'Rerata Capaian (%)',
-                      data: [72.14, 77.86, 76.14, 76.14], 
-                      backgroundColor: 'rgba(54, 162, 235, 0.6)',
-                      borderColor: 'rgba(54, 162, 235, 1)',
-                      borderWidth: 1
-                    }]
-                  },
-                  options: {
-                    scales: {
-                      y: { beginAtZero: true, max: 100 }
-                    },
-                    plugins: {
-                      legend: { display: false },
-                      title: {
-                        display: true,
-                        text: 'Progres Capaian CPMK Kelas'
-                      }
-                    }
-                  }
-                });
-              </script> -->
-
             </div>
           </div>
         </div>
           
 <!-- ========== CARD : visualisasi grafis capaian CPMK ========== -->
 <div class="card">
-          <div class="card-body">
-              <canvas id="chartCpmk" width="400" height="150"></canvas>
-              <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-              <script>
-                const ctx = document.getElementById('chartCpmk').getContext('2d');
-                const chartCpmk = new Chart(ctx, {
-                  type: 'bar',
-                  data: {
-                    labels: ['CPMK 1','CPMK 2','CPMK 3','CPMK 4'],
-                    datasets: [{
-                      label: 'Rerata Capaian (%)',
-                      data: [72.14, 77.86, 76.14, 76.14], 
-                      backgroundColor: 'rgba(54, 162, 235, 0.6)',
-                      borderColor: 'rgba(54, 162, 235, 1)',
-                      borderWidth: 1
-                    }]
-                  },
-                  options: {
-                    scales: {
-                      y: { beginAtZero: true, max: 100 }
-                    },
-                    plugins: {
-                      legend: { display: false },
-                      title: {
-                        display: true,
-                        text: 'Progres Capaian CPMK Kelas'
-                      }
-                    }
-                  }
-                });
-              </script>
+  <div class="card-body">
+    <canvas id="chartCpmk" width="400" height="100"></canvas>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+      const ctx = document.getElementById('chartCpmk').getContext('2d');
+      const chartCpmk = new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: ['CPMK 1','CPMK 2','CPMK 3','CPMK 4'],
+          datasets: [{
+            label: 'Rerata Capaian (%)',
+            data: [72.14, 77.86, 76.14, 76.14], 
+            backgroundColor: 'rgba(54, 162, 235, 0.6)',
+            borderColor: 'rgba(54, 162, 235, 1)',
+            borderWidth: 1
+          }]
+        },
+        options: {
+          scales: {
+            y: { beginAtZero: true, max: 100 }
+          },
+          plugins: {
+            legend: { display: false },
+            title: {
+              display: true,
+              text: 'Rerata Nilai CPMK pada Kelas Perkuliahan'
+            }
+          }
+        }
+      });
+    </script>
 
-          </div>
-        </div>
+  </div>
+</div>
+
+
+
+
+
+<!-- ========== CARD : Chart Row CPMK ========== -->
+<div class="card">
+  <div class="card-header">
+    <h3 class="card-title">
+      <i class="fas fa-chart-area mr-1"></i>
+      Distribusi & Capaian Pembelajaran
+    </h3>
+  </div>
+  <div class="card-body">
+    <!-- Bar Chart CPMK -->
+    <div class="chart-container" style="height:220px;">
+      <canvas id="barChartCPMK"></canvas>
+    </div>
+
+    <!-- Bar Chart CPMK -->
+    <div class="chart-container" style="height:220px;">
+      <canvas id="barChartCPMK2"></canvas>
+    </div>
+  </div>
+</div>
+
+
 
       </div>
     </div>
@@ -368,4 +348,152 @@ jika ada kesamaan NIM di satu mata kuliah(artinya mahasiswa tempuh >1 kali MK ts
     </div>
   </div>
 </div>
+
+
+<script>
+// Generate label CPMK 1 - 256
+const labelsCPMK = Array.from({ length: 40 }, (_, i) => `NIM ${i + 1}`);
+
+// Contoh nilai CPMK (0 - 100)
+const nilaiCPMK = Array.from({ length: 40 }, () =>
+  Math.floor(Math.random() * 101)
+);
+
+const cty = document.getElementById('barChartCPMK').getContext('2d');
+
+new Chart(cty, {
+  type: 'bar',
+  data: {
+    labels: labelsCPMK,
+    datasets: [{
+      label: 'Nilai CPMK 1',
+      data: nilaiCPMK,
+      backgroundColor: 'rgba(220, 53, 69, 0.8)', // merah (Bootstrap danger)
+      borderColor: 'rgba(220, 53, 69, 1)',
+      borderWidth: 1
+    }]
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      // title: {
+      //   display: true,
+      //   text: 'Capaian CPMK',
+      //   font: {
+      //     size: 18
+      //   }
+      // },
+      legend: {
+        position: 'top'
+      },
+      tooltip: {
+        callbacks: {
+          label: function(context) {
+            return `Nilai: ${context.raw}`;
+          }
+        }
+      }
+    },
+    scales: {
+      y: {
+        min: 0,
+        max: 100,
+        // title: {
+        //   display: true,
+        //   text: 'Nilai (0–100)'
+        // }
+      },
+      x: {
+        ticks: {
+          autoSkip: true,
+          maxTicksLimit: 30 // supaya tidak overload
+        },
+        title: {
+          display: true,
+          // text: 'CPMK'
+        }
+      }
+    }
+  }
+});
+</script>
+
+
+
+<script>
+// Generate label CPMK 1 - 256
+const labelsCPMK2 = Array.from({ length: 40 }, (_, i) => `NIM ${i + 1}`);
+
+// Contoh nilai CPMK (0 - 100)
+const nilaiCPMK2 = Array.from({ length: 40 }, () =>
+  Math.floor(Math.random() * 101)
+);
+
+const cty2 = document.getElementById('barChartCPMK2').getContext('2d');
+
+new Chart(cty2, {
+  type: 'bar',
+  data: {
+    labels: labelsCPMK2,
+    datasets: [{
+      label: 'Nilai CPMK 2',
+      data: nilaiCPMK2,
+      backgroundColor: 'rgba(220, 53, 69, 0.8)', // merah (Bootstrap danger)
+      borderColor: 'rgba(220, 53, 69, 1)',
+      borderWidth: 1
+    }]
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      // title: {
+      //   display: true,
+      //   text: 'Capaian CPMK',
+      //   font: {
+      //     size: 18
+      //   }
+      // },
+      legend: {
+        position: 'top'
+      },
+      tooltip: {
+        callbacks: {
+          label: function(context) {
+            return `Nilai: ${context.raw}`;
+          }
+        }
+      }
+    },
+    scales: {
+      y: {
+        min: 0,
+        max: 100,
+        // title: {
+        //   display: true,
+        //   text: 'Nilai (0–100)'
+        // }
+      },
+      x: {
+        ticks: {
+          autoSkip: true,
+          maxTicksLimit: 30 // supaya tidak overload
+        },
+        title: {
+          display: true,
+          // text: 'CPMK'
+        }
+      }
+    }
+  }
+});
+</script>
+
 <?php include('5script.php'); ?>
+
+
+
+
+
+

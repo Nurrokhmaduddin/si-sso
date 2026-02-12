@@ -91,7 +91,7 @@
             					<th>Kurikulum</th>
             					<th>Kode MK</th>
             					<th>Nama MK</th>
-            					<th>Jenis</th>
+            					<th>Sifat Pengambilan</th>
             					<th>Semester Tempuh</th>
             					<th>Jumlah CPMK</th>
             					<th>Jumlah SKS</th>

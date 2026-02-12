@@ -1,14 +1,13 @@
-<?php $page = 'portofolio_kelas'; ?>
+<?php $page = 'monev_kelas'; ?>
 <?php include('1header.php'); ?>
 <?php include('2navbar.php'); ?>
 <?php include('3sidebar.php'); ?>
-
   
 <div class="content-wrapper" style="min-height: 626.4px;">    
 
   <section class="content-header">
     <div class="container-fluid">
-      <h3 class="mb-0">Portofolio - Kelas Perkuliahan [lembar kerja dosen]
+      <h3 class="mb-0">Rekapitulasi - Kelas Perkuliahan 
         <button type="button" class="btn btn-tool" data-bs-toggle="modal" data-bs-target="#modalBantuan" title="Bantuan"><i class="fas fa-question-circle"></i>
         </button> 
       </h3>
@@ -25,8 +24,7 @@
 
     
 
-
-<!-- ========== CARD : Filter & Export ========== -->
+          <!-- ========== CARD : Filter & Export ========== -->
           <div class="card">
             <!-- <div class="card-header bg-secondary">
               <h5 class="card-title mb-0">
@@ -89,9 +87,9 @@
 
             <div class="card-footer">
               <div class="card-tools ms-auto">
-                 <button type="button" 
+                <button type="button" 
                 class="btn btn-outline-secondary btn-sm"
-                onclick="window.location.href='perkuliahan-portofolio-kelas.php'">
+                onclick="window.location.href='monev-rekap-kelas.php'">
                 <span class="fas fa-reply me-1"></span> Kembali
               </button>
 
@@ -119,31 +117,32 @@
           </div>
 
           <!-- TAB NAV (Semester) -->
+         
            <ul class="nav nav-tabs">
-            <li class="nav-item" onclick="window.location='perkuliahan-portofolio-kelas-detail.php'"><a class="nav-link active">Portofolio</a></li>
-            <li class="nav-item" onclick="window.location='perkuliahan-portofolio-kelas-detail2.php'"><a class="nav-link ">Penilaian Mahasiswa</a></li>
-            <li class="nav-item" onclick="window.location='perkuliahan-portofolio-kelas-detail3.php'"><a class="nav-link ">Laporan(Grafik/Tabel)</a></li>
+            <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail.php'"><a class="nav-link ">Rekapitulasi</a></li>
+            <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail2.php'"><a class="nav-link ">Mahasiswa</a></li>
+            <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail3.php'"><a class="nav-link active">Portofolio</a></li>
           </ul>
 
-
-          
-          <!-- ========== CARD : Portfolio========== --> 
-
+        
+      <!-- ========== CARD 3: Tabel saja ========== -->
           <div class="card">
             <div class="card-body">
-              <table id="tbl" name="tbl" class="table table-sm table-hover table-bordered table-striped deta">
+              <div class="table-responsive">
+                <table id="tbl" name="tbl" class="table table-sm table-hover table-bordered table-striped deta">
                   <tbody>
                     <tr>
-                      <td><button type="button" class="btn btn-xs btn-primary" ><i class="fas fa-edit"></i></button> 
+                      <td> 
                         Dokumen RPS <span class="badge badge-success">Valid</span></td>
                         <td width="40%">
                           <a href="#" target="_blank" title="Unduh RPS">
                             <button type="button" class="btn btn-xs btn-success" ><i class="fas fa-file"></i> Download</button>
-                          </a> <i>update_at</i>
+                          </a> 
+                    <small class="text-muted"><i>update_at</i></small>
                         </td>
                       </tr>
                       <tr>
-                        <td><button type="button" class="btn btn-xs btn-primary" ><i class="fas fa-edit"></i></button> 
+                        <td> 
                         Materi Pembelajaran (slides, modul, bahan ajar) </td>
                         <td width="40%">
                           <a href="#" target="_blank">
@@ -152,7 +151,7 @@
                         </td>
                       </tr>
                       <tr>
-                        <td><button type="button" class="btn btn-xs btn-primary" ><i class="fas fa-edit"></i></button>
+                        <td>
                           Dokumen Penugasan Mahasiswa <span class="badge badge-secondary">Proses</span></td>
                           <td width="40%">
                             <a href="https://drive.google.com/drive/folders/1Ba6yZ2KLWZC992tVO7wxpcfxaOYb8Eyi?usp=drive_link" target="_blank">
@@ -161,7 +160,7 @@
                           </td>
                         </tr>
                         <tr>
-                          <td><button type="button" class="btn btn-xs btn-primary" ><i class="fas fa-edit"></i></button>
+                          <td>
                             Soal Ujian UTS/UAS <span class="badge badge-danger">Rejected</span> (dengan validasi prodi)</td>
                             <td width="40%">
                               <a href="https://drive.google.com/drive/folders/1Ba6yZ2KLWZC992tVO7wxpcfxaOYb8Eyi?usp=drive_link" target="_blank">
@@ -170,7 +169,16 @@
                             </td>
                           </tr>
                           <tr>
-                            <td><button type="button" class="btn btn-xs btn-primary" ><i class="fas fa-edit"></i></button>
+                            <td>
+                            Penilaian CPMK oleh Dosen</td>
+                            <td width="40%">
+                              <a href="monev-rekap-kelas-detail2.php">
+                                <button type="button" class="btn btn-xs btn-info"><i class="fas fa-link"></i> Download</button>
+                              </a> <i>update_at 21 Jan 2024</i>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
                             Evaluasi Dosen oleh Mahasiswa</td>
                             <td width="40%">
                               <a href="portfolio_cpmk_detail2.php" target="_blank">
@@ -180,113 +188,56 @@
                           </tr>
                         </tbody>
                       </table>
-                    </div>
-                  </div>
-
-<!-- ========== CARD : Catatan Evaluasi MK-Portfolio========== --> 
-        
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Catatan Evaluasi MK-Portfolio </h5>
-
-            <div class="mb-2">
-              <button class="btn btn-info btn-sm" data-bs-toggle="collapse" data-bs-target="#daftarIKCPL2">Open/Close</button>
+              </div>
             </div>
+            <!-- /.card-body -->
+          </div>
 
-            <div id="daftarIKCPL2" class="collapse show table-responsive">
-             <table class="table table1 table-bordered table-striped table-sm datatables1">
-              <thead>
+<!-- ================= Card  : Catatan evaluasi dan pengembangan ================= -->
+        
+          <div class="row">
 
-                <tr class="text-uppercase text-center">
-                  <th width="5px">No.</th>
-                  <th>Tahun akademik</th>
-                  <th>Kelas</th>
-                  <th>Evaluasi Pembelajaran</th>
-                  <th>Rencana Pengembangan</th>
-                  <th>Aksi</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td class="text-center">1</td>
-                  <td>2025 - Gasal</td>
-                  <td>A</td>                    
-                  <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat. </td>
-                  <td>Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</td>
-                  <td class="text-center">                     
-                   <button class="btn btn-sm btn-outline-info" onclick="window.location.href='.php'">🔍 Grafik/Tabel</button>
-                   <button class="btn btn-sm btn-outline-info" onclick="window.location.href='portfolio_cpmk_detail.php'">🔍 DetailPortfolio</button>
-                 </td>
-               </tr>
-               <tr>
-                <td class="text-center">2</td>
-                <td>2025 - Gasal</td>
-                <td>B</td>
-                <td>
-                  Materi telah tersampaikan sesuai rencana pembelajaran, namun beberapa mahasiswa
-                  membutuhkan penjelasan tambahan pada topik tertentu. Partisipasi kelas cukup baik.
-                </td>
-                <td>
-                  Menambahkan sesi konsultasi mingguan, menyediakan contoh studi kasus tambahan,
-                  serta memperbaiki alur penyampaian pada pertemuan awal.
-                </td>
-                <td class="text-center">
-                  <button class="btn btn-sm btn-outline-info" onclick="window.location.href='.php'">🔍 Grafik/Tabel</button>
-                  <button class="btn btn-sm btn-outline-info" onclick="window.location.href='portfolio_cpmk_detail.php'">🔍 DetailPortfolio</button>
-                </td>
-              </tr>
+            <!-- Evaluasi -->
+            <div class="col-lg-6">
+              <div class="card h-100">
+                <div class="card-header bg-secondary text-white">
+                  <h5 class="card-title mb-0">
+                    <i class="fas fa-clipboard-list me-2"></i>
+                    Evaluasi Hasil Pembelajaran
+                  </h5>
+                </div>
 
-              <tr>
-                <td class="text-center">3</td>
-                <td>2024 - Genap</td>
-                <td>A</td>
-                <td>
-                  Ketercapaian materi berada pada kategori baik. Praktikum berjalan lancar meskipun ada
-                  beberapa kendala kecil terkait perangkat laboratorium.
-                </td>
-                <td>
-                  Melakukan koordinasi dengan laboran, memperbarui panduan praktikum, dan
-                  menambah materi pemantapan untuk pertemuan terakhir.
-                </td>
-                <td class="text-center">
-                  <button class="btn btn-sm btn-outline-info" onclick="window.location.href='.php'">🔍 Grafik/Tabel</button>
-                  <button class="btn btn-sm btn-outline-info" onclick="window.location.href='portfolio_cpmk_detail.php'">🔍 DetailPortfolio</button>
-                </td>
-              </tr>
+                <div class="card-body">
+                  <p class="mb-0">
+                    secara keseluruhan pembelajaran telah berjalan dengan baik
+                  </p>
+                </div>
+            </div>
+          </div>
 
-              <tr>
-                <td class="text-center">4</td>
-                <td>2024 - Gasal</td>
-                <td>C</td>
-                <td>
-                  Interaksi kelas masih perlu ditingkatkan. Sebagian mahasiswa kurang aktif berdiskusi
-                  dan ketepatan waktu pengumpulan tugas masih rendah.
-                </td>
-                <td>
-                  Menerapkan metode pembelajaran berbasis proyek kecil, memberikan reward aktif
-                  partisipasi, dan memperjelas timeline tugas.
-                </td>
-                <td class="text-center">
-                  <button class="btn btn-sm btn-outline-info" onclick="window.location.href='.php'">🔍 Grafik/Tabel</button>
-                  <button class="btn btn-sm btn-outline-info" onclick="window.location.href='portfolio_cpmk_detail.php'">🔍 DetailPortfolio</button>
-                </td>
-              </tr>
+          <!-- Rencana -->
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header bg-secondary text-white">
+                <h5 class="card-title mb-0">
+                  <i class="fas fa-chart-line me-2"></i>
+                  Rencana Pengembangan Perkuliahan
+                </h5>
+              </div>
 
-
-              <!-- Lanjutkan hingga baris ke-20 sesuai data -->
-            </tbody>
-          </table>
+              <div class="card-body">
+                  <p class="mb-0">
+                    perlu meningkatkan interaksi
+                  </p>
+                </div>
+          </div>
         </div>
 
       </div>
-    </div>
 
 
+
+          
       </div>
     </div>
   </div>
@@ -316,7 +267,7 @@
           <div class="mb-3">
             <label for="lembaga" class="form-label">Periode Akademik</label>
             <select name="lembaga" id="lembaga" class="form-select">
-            	<option value="PA019" selected>2024/2025 - Gasal - (Aktif)</option><option value="PA018" >2023/2024 - Genap</option><option value="PA017" >2023/2024 - Gasal</option><option value="PA016" >2022/2023 - Genap</option><option value="PA015" >2022/2023 - Gasal</option><option value="PA014" >2021/2022 - Genap</option><option value="PA013" >2021/2022 - Gasal</option><option value="PA012" >2020/2021 - Genap</option><option value="PA011" >2020/2021 - Gasal</option><option value="PA010" >2019/2020 - Genap</option><option value="PA009" >2019/2020 - Gasal</option><option value="PA008" >2018/2019 - Genap</option><option value="PA007" >2018/2019 - Gasal</option><option value="PA006" >2017/2018 - Genap</option><option value="PA005" >2017/2018 - Gasal</option><option value="PA004" >2016/2017 - Genap</option><option value="PA003" >2016/2017 - Gasal</option><option value="PA002" >2015/2016 - Genap</option><option value="PA001" >2015/2016 - Gasal</option> 
+              <option value="PA019" selected>2024/2025 - Gasal - (Aktif)</option><option value="PA018" >2023/2024 - Genap</option><option value="PA017" >2023/2024 - Gasal</option><option value="PA016" >2022/2023 - Genap</option><option value="PA015" >2022/2023 - Gasal</option><option value="PA014" >2021/2022 - Genap</option><option value="PA013" >2021/2022 - Gasal</option><option value="PA012" >2020/2021 - Genap</option><option value="PA011" >2020/2021 - Gasal</option><option value="PA010" >2019/2020 - Genap</option><option value="PA009" >2019/2020 - Gasal</option><option value="PA008" >2018/2019 - Genap</option><option value="PA007" >2018/2019 - Gasal</option><option value="PA006" >2017/2018 - Genap</option><option value="PA005" >2017/2018 - Gasal</option><option value="PA004" >2016/2017 - Genap</option><option value="PA003" >2016/2017 - Gasal</option><option value="PA002" >2015/2016 - Genap</option><option value="PA001" >2015/2016 - Gasal</option> 
             </select>
           </div>
 
@@ -353,4 +304,152 @@ jika ada kesamaan NIM di satu mata kuliah(artinya mahasiswa tempuh >1 kali MK ts
     </div>
   </div>
 </div>
+
+
+<script>
+// Generate label CPMK 1 - 256
+const labelsCPMK = Array.from({ length: 40 }, (_, i) => `NIM ${i + 1}`);
+
+// Contoh nilai CPMK (0 - 100)
+const nilaiCPMK = Array.from({ length: 40 }, () =>
+  Math.floor(Math.random() * 101)
+);
+
+const cty = document.getElementById('barChartCPMK').getContext('2d');
+
+new Chart(cty, {
+  type: 'bar',
+  data: {
+    labels: labelsCPMK,
+    datasets: [{
+      label: 'Nilai CPMK 1',
+      data: nilaiCPMK,
+      backgroundColor: 'rgba(220, 53, 69, 0.8)', // merah (Bootstrap danger)
+      borderColor: 'rgba(220, 53, 69, 1)',
+      borderWidth: 1
+    }]
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      // title: {
+      //   display: true,
+      //   text: 'Capaian CPMK',
+      //   font: {
+      //     size: 18
+      //   }
+      // },
+      legend: {
+        position: 'top'
+      },
+      tooltip: {
+        callbacks: {
+          label: function(context) {
+            return `Nilai: ${context.raw}`;
+          }
+        }
+      }
+    },
+    scales: {
+      y: {
+        min: 0,
+        max: 100,
+        // title: {
+        //   display: true,
+        //   text: 'Nilai (0–100)'
+        // }
+      },
+      x: {
+        ticks: {
+          autoSkip: true,
+          maxTicksLimit: 30 // supaya tidak overload
+        },
+        title: {
+          display: true,
+          // text: 'CPMK'
+        }
+      }
+    }
+  }
+});
+</script>
+
+
+
+<script>
+// Generate label CPMK 1 - 256
+const labelsCPMK2 = Array.from({ length: 40 }, (_, i) => `NIM ${i + 1}`);
+
+// Contoh nilai CPMK (0 - 100)
+const nilaiCPMK2 = Array.from({ length: 40 }, () =>
+  Math.floor(Math.random() * 101)
+);
+
+const cty2 = document.getElementById('barChartCPMK2').getContext('2d');
+
+new Chart(cty2, {
+  type: 'bar',
+  data: {
+    labels: labelsCPMK2,
+    datasets: [{
+      label: 'Nilai CPMK 2',
+      data: nilaiCPMK2,
+      backgroundColor: 'rgba(220, 53, 69, 0.8)', // merah (Bootstrap danger)
+      borderColor: 'rgba(220, 53, 69, 1)',
+      borderWidth: 1
+    }]
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      // title: {
+      //   display: true,
+      //   text: 'Capaian CPMK',
+      //   font: {
+      //     size: 18
+      //   }
+      // },
+      legend: {
+        position: 'top'
+      },
+      tooltip: {
+        callbacks: {
+          label: function(context) {
+            return `Nilai: ${context.raw}`;
+          }
+        }
+      }
+    },
+    scales: {
+      y: {
+        min: 0,
+        max: 100,
+        // title: {
+        //   display: true,
+        //   text: 'Nilai (0–100)'
+        // }
+      },
+      x: {
+        ticks: {
+          autoSkip: true,
+          maxTicksLimit: 30 // supaya tidak overload
+        },
+        title: {
+          display: true,
+          // text: 'CPMK'
+        }
+      }
+    }
+  }
+});
+</script>
+
 <?php include('5script.php'); ?>
+
+
+
+
+
+
