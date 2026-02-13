@@ -186,13 +186,16 @@
 <!-- ========== CARD : Catatan Evaluasi MK-Portfolio========== --> 
         
         <div class="card">
+          <div class="card-header ">         
+            <h5 class="card-title mb-0">
+              <button class="btn btn-sm btn-outline-info" data-bs-toggle="collapse" data-bs-target="#daftarIKCPL2">
+                <i class="fas fa-expand"></i>
+              </button>
+              Catatan Evaluasi dan Perencanaan 
+            </h5>
+          </div>
+
           <div class="card-body">
-            <h5 class="card-title">Catatan Evaluasi MK-Portfolio </h5>
-
-            <div class="mb-2">
-              <button class="btn btn-info btn-sm" data-bs-toggle="collapse" data-bs-target="#daftarIKCPL2">Open/Close</button>
-            </div>
-
             <div id="daftarIKCPL2" class="collapse show table-responsive">
              <table class="table table1 table-bordered table-striped table-sm datatables1">
               <thead>

@@ -112,8 +112,55 @@
             <li class="nav-item" onclick="window.location='monev_portfolio_cpmk_detail3.php'"><a class="nav-link ">Portofolio</a></li> -->
             <li class="nav-item" onclick="window.location='progres-kelas-semester-detail4.php'"><a class="nav-link ">Pengembangan</a></li>
           </ul>
-       
 
+
+<!-- ========== CARD : Chart CPL-IK ========== -->     
+        <div class="card">   
+          <!-- CARD HEADER -->  
+          <div class="card-header ">         
+            <h5 class="card-title mb-0">
+              <button class="btn btn-sm btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#chartCPLIK1">
+                <i class="fas fa-expand"></i>
+              </button>
+              Progress Rerata CPMK Kelas Perkuliahan antar Periode
+            </h5>
+          </div>
+          <!-- CARD BODY -->
+          <div class="card-body " id="chartCPLIK1">
+            <!-- Chart Container -->
+            <div class="chart-container">
+              <canvas id="chartCPL2" width="100%" height="30"></canvas>
+            </div>
+            <h6 class="font-weight-bold">Daftar CPMK</h6>
+            <div class="table-responsive">
+              <table class="table table-sm table-bordered">
+                <thead class="thead-dark">
+                  <tr>
+                    <th style="width: 80px;">Kode CPMK</th>
+                    <th>Deskripsi CPMK</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>CPMK 1</td>
+                    <td>Mahasiswa mampu menyampaikan informasi secara lisan secara runtut, jelas, dan mudah dipahami.</td>
+                  </tr>
+                  <tr>
+                    <td>CPMK 2</td>
+                    <td>Mahasiswa mampu menulis laporan/tulisan akademik sesuai kaidah bahasa dan struktur penulisan yang baik.</td>
+                  </tr>
+                  <tr>
+                    <td>CPMK 3</td>
+                    <td>Mahasiswa mampu berkomunikasi secara profesional dalam konteks akademik dan industri, termasuk etika komunikasi digital.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>          
+        </div>
+
+              
+<!-- ========== CARD : tabel asesmen========== -->
         <div class="card">
           <div class="card-body">
             <div class="table-responsive">
@@ -275,54 +322,6 @@
 
           </div>
         </div> -->
-
-
-<!-- ========== CARD 4: Chart CPL-IK ========== -->     
-        <div class="card">   
-          <!-- CARD HEADER -->  
-          <div class="card-header ">         
-            <h5 class="card-title mb-0">
-              <button class="btn btn-sm btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#chartCPLIK1">
-                <i class="fas fa-expand"></i>
-              </button>
-              Progress Rerata CPMK Kelas Perkuliahan antar Periode
-            </h5>
-          </div>
-          <!-- CARD BODY -->
-          <div class="card-body " id="chartCPLIK1">
-            <!-- Chart Container -->
-            <div class="chart-container">
-              <canvas id="chartCPL2" width="100%" height="30"></canvas>
-            </div>
-            <h6 class="font-weight-bold">Daftar CPMK</h6>
-            <div class="table-responsive">
-              <table class="table table-sm table-bordered">
-                <thead class="thead-dark">
-                  <tr>
-                    <th style="width: 80px;">Kode CPMK</th>
-                    <th>Deskripsi CPMK</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>CPMK 1</td>
-                    <td>Mahasiswa mampu menyampaikan informasi secara lisan secara runtut, jelas, dan mudah dipahami.</td>
-                  </tr>
-                  <tr>
-                    <td>CPMK 2</td>
-                    <td>Mahasiswa mampu menulis laporan/tulisan akademik sesuai kaidah bahasa dan struktur penulisan yang baik.</td>
-                  </tr>
-                  <tr>
-                    <td>CPMK 3</td>
-                    <td>Mahasiswa mampu berkomunikasi secara profesional dalam konteks akademik dan industri, termasuk etika komunikasi digital.</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>          
-        </div>
-
-        
 
 
 

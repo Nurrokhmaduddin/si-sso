@@ -79,7 +79,7 @@
               <div class="card-header">
                 <h5 class="card-title">
                   <i class="fas fa-chart-pie"></i>
-                  Statistik Capaian LOA Mahasiswa Aktif
+                  Statistik Capaian LOA Periode Akademik Aktif
                 </h5>
               </div>
               <div class="card-body">

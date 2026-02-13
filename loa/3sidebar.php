@@ -105,8 +105,8 @@
         ?>
 
         <!-- MASTER DATA -->
-        <li class="nav-item <?php echo in_array($page, ['master_periode','master_prodi','master_peminatan','master_jenjang','master_jalur','master_dosen','master_mahasiswa']) ? 'menu-open' : ''; ?>">
-          <a href="#" class="nav-link <?php echo in_array($page, ['master_periode','master_prodi','master_peminatan','master_jenjang','master_jalur','master_dosen','master_mahasiswa']) ? 'active' : ''; ?>">
+        <li class="nav-item <?php echo in_array($page, ['master_prodi','master_peminatan','master_jenjang','master_jalur','master_dosen','master_mahasiswa']) ? 'menu-open' : ''; ?>">
+          <a href="#" class="nav-link <?php echo in_array($page, ['master_prodi','master_peminatan','master_jenjang','master_jalur','master_dosen','master_mahasiswa']) ? 'active' : ''; ?>">
             <i class="nav-icon fas fa-database"></i>
             <p>
               Master Data
@@ -116,12 +116,7 @@
 
           <ul class="nav nav-treeview">
 
-            <li class="nav-item">
-              <a href="master-periode.php" class="nav-link <?php echo $page == 'master_periode' ? 'active' : ''; ?>">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Periode Akademik</p>
-              </a>
-            </li>
+            
 
             <li class="nav-item">
               <a href="master-prodi.php" class="nav-link <?php echo $page == 'master_prodi' ? 'active' : ''; ?>">
@@ -130,12 +125,12 @@
               </a>
             </li>
 
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <a href="master-jenjang.php" class="nav-link <?php echo $page == 'master_jenjang' ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Jenjang</p>
               </a>
-            </li>
+            </li> -->
             <li class="nav-item">
               <a href="master-jalur.php" class="nav-link <?php echo $page == 'master_jalur' ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
@@ -233,8 +228,8 @@
         </li>
 
         <!-- PERKULIAHAN OBE -->
-        <li class="nav-item <?php echo in_array($page, ['kelas_perkuliahan','kelas_konversi','portofolio_kelas','nilai_cpmk']) ? 'menu-open' : ''; ?>">
-          <a href="#" class="nav-link <?php echo in_array($page, ['kelas_perkuliahan','kelas_konversi','portofolio_kelas','nilai_cpmk']) ? 'active' : ''; ?>">
+        <li class="nav-item <?php echo in_array($page, ['kelas_perkuliahan','kelas_konversi','portofolio_kelas','nilai_cpmk','master_periode']) ? 'menu-open' : ''; ?>">
+          <a href="#" class="nav-link <?php echo in_array($page, ['kelas_perkuliahan','kelas_konversi','portofolio_kelas','nilai_cpmk','master_periode']) ? 'active' : ''; ?>">
             <i class="nav-icon fas fa-chalkboard-teacher"></i>
             <p>
               Perkuliahan OBE
@@ -243,7 +238,12 @@
           </a>
 
           <ul class="nav nav-treeview">
-
+<li class="nav-item">
+              <a href="master-periode.php" class="nav-link <?php echo $page == 'master_periode' ? 'active' : ''; ?>">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Periode Akademik</p>
+              </a>
+            </li>
             <li class="nav-item">
               <a href="perkuliahan-kelas-perkuliahan.php" class="nav-link <?php echo $page == 'kelas_perkuliahan' ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
@@ -303,8 +303,8 @@
 
 
         <!-- MONITORING OBE -->
-        <li class="nav-item <?php echo in_array($page, ['status_mahasiswa','status_pemetaan','monev_individu','monev_kelas','monev_cpl']) ? 'menu-open' : ''; ?>">
-          <a href="#" class="nav-link <?php echo in_array($page, ['status_mahasiswa','status_pemetaan','monev_individu','monev_kelas','monev_cpl']) ? 'active' : ''; ?>">
+        <li class="nav-item <?php echo in_array($page, ['status_mahasiswa','status_pemetaan','monev_individu','monev_kelas','monev_cpl','monev_angkatan','monev_yudisium']) ? 'menu-open' : ''; ?>">
+          <a href="#" class="nav-link <?php echo in_array($page, ['status_mahasiswa','status_pemetaan','monev_individu','monev_kelas','monev_cpl','monev_angkatan','monev_yudisium']) ? 'active' : ''; ?>">
             <i class="nav-icon fas fa-chart-pie"></i>
             <p>
               Monitoring OBE
@@ -340,6 +340,12 @@
                 <p>Rekapitulasi CPL</p>
               </a>
             </li>
+            <li class="nav-item">
+              <a href="monev-rekap-cpl2.php" class="nav-link <?php echo $page == 'monev_cpl' ? 'active' : ''; ?>">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Rekapitulasi CPL2</p>
+              </a>
+            </li>
             <!-- <li class="nav-item">
               <a href="rekap-mk.php" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
@@ -370,14 +376,14 @@
             </li> -->
 
             <li class="nav-item">
-              <a href="monev-cpl-angkatan.php" class="nav-link">
+              <a href="monev-cpl-angkatan.php" class="nav-link <?php echo $page == 'monev_angkatan' ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Monev CPL Angkatan</p>
               </a>
             </li>
 
             <li class="nav-item">
-              <a href="monev-cpl-lulusan.php" class="nav-link">
+              <a href="monev-cpl-yudisium.php" class="nav-link <?php echo $page == 'monev_yudisium' ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Monev CPL Yudisium</p>
               </a>
@@ -391,8 +397,8 @@
       
 
  <!-- PENGEMBANGAN OBE -->
-        <li class="nav-item <?php echo in_array($page, ['progress_kelas','progress_pemetaan']) ? 'menu-open' : ''; ?>">
-          <a href="#" class="nav-link <?php echo in_array($page, ['progress_kelas','progress_pemetaan']) ? 'active' : ''; ?>">
+        <li class="nav-item <?php echo in_array($page, ['progress_kelas','progress_pemetaan','progress_cpl']) ? 'menu-open' : ''; ?>">
+          <a href="#" class="nav-link <?php echo in_array($page, ['progress_kelas','progress_pemetaan','progress_cpl']) ? 'active' : ''; ?>">
             <i class="nav-icon fas fa-chart-line"></i>
             <p>
               Pengembangan OBE
@@ -414,9 +420,9 @@
               </a>
             </li>
             <li class="nav-item">
-              <a href="progres-cpl-antar-semester.php" class="nav-link">
+              <a href="progres-cpl-semester.php" class="nav-link <?php echo $page == 'progress_cpl' ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
-                <p>Progres CPL Antar Semester</p>
+                <p>Progres CPL Semester</p>
               </a>
             </li>
             <li class="nav-item">
@@ -429,7 +435,7 @@
             <li class="nav-item">
               <a href="rekap-status-mahasiswa.php" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
-                <p>Eval CPL-CPMK oleh Prodi</p>
+                <p>Eval CPL oleh Prodi</p>
               </a>
             </li>
 
@@ -460,12 +466,12 @@
           </ul>
         </li>
 
-        <li class="nav-item">
+       <!--  <li class="nav-item">
           <a href="../menu.php" class="nav-link">
             <i class="nav-icon fas fa-history"></i>
             <p>Audit Aktivitas</p>
           </a>
-        </li>
+        </li> -->
 
 
         <!-- PENGATURAN -->

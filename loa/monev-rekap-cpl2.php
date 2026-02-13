@@ -135,40 +135,20 @@ canvas {
   <div class="row">
 
     <!-- KIRI: Radar Chart -->
-    <div class="col-lg-8">
+    <div class="col-lg-7">
       <div class="chart-box radar-box">
         <canvas id="radarCPL"></canvas>
-      </div>
-
-      <!-- Tombol -->
-      <div class="d-flex gap-2 mt-2">
-        <button class="btn btn-outline-info btn-sm flex-fill" data-bs-toggle="collapse" data-bs-target="#daftarIKCPL11">
-          Rangking Performa
-        </button>
-        <button class="btn btn-outline-info btn-sm flex-fill" data-bs-toggle="collapse" data-bs-target="#daftarIKCPL13">
-          Daftar CPL
-        </button>
-        <button class="btn btn-outline-danger btn-sm flex-fill" onclick="openAllRisikoPreview()">
-          Performa Risiko
-        </button>
       </div>
     </div>
 
 
     <!-- KANAN: Dua Bar Chart -->
-    <div class="col-lg-4 d-flex flex-column">
+    <div class="col-lg-5 d-flex flex-column">
 
       <!-- BAR CHART 1 -->
       <div class="d-flex flex-column flex-grow-1">
         <div class="flex-grow-1 mb-2">
           <canvas id="chartIK"></canvas>
-        </div>
-
-        <!-- Tombol -->
-        <div class="d-flex gap-2 mt-2">
-          <!-- <button class="btn btn-outline-info btn-sm flex-fill" data-bs-toggle="collapse" data-bs-target="#daftarIKCPL21">Rangking</button>
-          <button class="btn btn-outline-info btn-sm flex-fill" data-bs-toggle="collapse" data-bs-target="#daftarIKCPL23">Daftar IK</button> -->
-          <button class="btn btn-outline-danger btn-sm flex-fill" onclick="openAllRisikoPreview()">IK Belum Tuntas</button>
         </div>
       </div>
 
@@ -178,755 +158,104 @@ canvas {
         <div class="flex-grow-1 mb-2">
           <canvas id="chartCPMK"></canvas>
         </div>
-
-        <!-- Tombol -->
-        <div class="d-flex gap-2 mt-2">
-         <!--  <button class="btn btn-outline-info btn-sm flex-fill" data-bs-toggle="collapse" data-bs-target="#daftarIKCPL31">Rangking</button>
-          <button class="btn btn-outline-info btn-sm flex-fill" data-bs-toggle="collapse" data-bs-target="#daftarIKCPL33">Daftar CPMK</button> -->
-          <button class="btn btn-outline-danger btn-sm flex-fill" onclick="openAllRisikoPreview()">CPMK Belum Tuntas</button>
-        </div>
       </div>
 
     </div>
   </div>
 </div>
 
-
-        <!-- ========== CARD 4: Tabel CPL Min/Max/Rerata ========== -->   
-        <!-- Rangking Performa -->
-        <div class="row collapse" id="daftarIKCPL11">
-          <!-- Card Lowest -->
-          <div class="col-12 col-md-6">
-            <div class="card">
-              <div class="card-header">
-                <h5 class="card-title mb-0">🔽 Top 5 CPL Performa Terendah</h5>
-              </div>
-              <div class="card-body">
-                <h3>Lowest 5</h3>
-                <table border="1" cellpadding="8" cellspacing="0" width="100%">
-                  <thead>
-                    <tr>
-                      <th>Ranking</th>
-                      <th class="text-center">Nilai</th>
-                      <th>CPL</th>
-                      <th>Deskripsi</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>
-                        <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                          <div style="background:#f54242; width:10%; height:12px; border-radius:4px;"></div>
-                        </div>
-                      </td>
-                      <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="min" data-value="57">20</span></td>
-                      <td>CPL-01</td>
-                      <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                          <div style="background:#f54242; width:25%; height:12px; border-radius:4px;"></div>
-                        </div>
-                      </td>
-                      <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="min" data-value="57">30</span></td>
-                      <td>CPL-04</td>
-                      <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                          <div style="background:#f54242; width:35%; height:12px; border-radius:4px;"></div>
-                        </div>
-                      </td>
-                      <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="min" data-value="57">50</span></td>
-                      <td>CPL-05</td>
-                      <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                          <div style="background:#f54242; width:50%; height:12px; border-radius:4px;"></div>
-                        </div>
-                      </td>
-                      <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="min" data-value="57">51</span></td>
-                      <td>CPL-09</td>
-                      <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                          <div style="background:#f54242; width:70%; height:12px; border-radius:4px;"></div>
-                        </div>
-                      </td>
-                      <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="min" data-value="57">57</span></td>
-                      <td>CPL-10</td>
-                      <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
+<!-- ========== CARD 4: Chart CPL-IK ========== -->     
+        <div class="card">   
+          <!-- CARD HEADER -->  
+          <div class="card-header ">         
+            <h5 class="card-title mb-0">
+              <button class="btn btn-sm btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#chartCPLIK1">
+                <i class="fas fa-expand"></i>
+              </button>
+              CPL 1 – Kemampuan berkomunikasi secara efektif baik lisan maupun tulisan
+            </h5>
           </div>
-          <!-- Card Highest -->
-          <div class="col-12 col-md-6">
-            <div class="card">
-              <div class="card-header">
-                <h5 class="card-title mb-0">🔼 Top 5 CPL Nilai Tertinggi</h5>
-              </div>
-              <div class="card-body">
-                <h3>Highest 5</h3>
-                <table border="1" cellpadding="8" cellspacing="0" width="100%">
-                  <thead>
-                    <tr>
-                       <th>Ranking</th>
-                      <th class="text-center">Nilai</th>
-                      <th>CPL</th>
-                      <th>Deskripsi</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>                      
-                      <td>
-                        <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                          <div style="background:#4287f5; width:95%; height:12px; border-radius:4px;"></div>
-                        </div>
-                      </td>
-                      <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="max" data-value="95">95</span></td>
-                        <td>CPL-12</td>
-                      <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                          <div style="background:#4287f5; width:85%; height:12px; border-radius:4px;"></div>
-                        </div>
-                      </td>
-                      <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="max" data-value="95">90</span></td>
-                      <td>CPL-06</td>
-                      <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                          <div style="background:#4287f5; width:78%; height:12px; border-radius:4px;"></div>
-                        </div>
-                      </td>
-                     <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="max" data-value="95">85</span></td>
-                      <td>CPL-07</td>
-                     <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                          <div style="background:#4287f5; width:65%; height:12px; border-radius:4px;"></div>
-                        </div>
-                      </td>
-                     <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="max" data-value="95">70</span></td>
-                      <td>CPL-02</td>
-                      <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                          <div style="background:#4287f5; width:50%; height:12px; border-radius:4px;"></div>
-                        </div>
-                      </td>
-                      <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="max" data-value="95">70</span></td>
-                      <td>CPL-11</td>
-                      <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
+          <!-- CARD BODY -->
+          <div class="card-body " id="chartCPLIK1">
+            <!-- Chart Container -->
+            <div class="chart-container">
+              <canvas id="chartCPL1" width="100%" height="30"></canvas>
             </div>
-          </div>
-        </div>
-        <!-- daftar min/max/rerate -->
-        <div class="card collapse" id="daftarIKCPL13" >
-          <div class="card-header d-flex align-items-center">
-            <h5 class="card-title mb-0"><i class="fas fa-table me-2"></i> Tabel Pencapaian</h5>
-            <div class="card-tools ms-auto">
-              <!-- <small class="text-muted">Klik angka Min/Max untuk melihat 1 mahasiswa (NIM / Nama / Nilai)</small> -->
-            </div>
-          </div>
-          <div class="card-body">
+            <h6 class="font-weight-bold">Daftar Indikator Kinerja (IK)</h6>
             <div class="table-responsive">
-              <table id="tblCplStats" class="table table-hover table-bordered table-sm">
-                <thead class="table-light">
+              <table class="table table-sm table-bordered">
+                <thead class="thead-dark">
                   <tr>
-                    <th style="width: 40px">#</th>
-                    <th>CPL Code</th>
-                    <th class="text-center">Capaian</th>
-                    <th class="text-center">Status</th>
+                    <th style="width: 80px;">Kode IK</th>
+                    <th>Deskripsi IK</th>
                   </tr>
                 </thead>
-
                 <tbody>
                   <tr>
-                    <td>1</td>
-                    <td>CPL-01: Pemahaman Dasar Polimer</td>
-                    <td class="text-center">72.14%</td>
-                    <td class="text-center">🟨 Cukup</td>
+                    <td>IK 1</td>
+                    <td>Mahasiswa mampu menyampaikan informasi secara lisan secara runtut, jelas, dan mudah dipahami.</td>
                   </tr>
-
                   <tr>
-                    <td>2</td>
-                    <td>CPL-02: Teori Komposit</td>
-                    <td class="text-center">77.86%</td>
-                    <td class="text-center">🟨 Cukup</td>
+                    <td>IK 2</td>
+                    <td>Mahasiswa mampu menulis laporan/tulisan akademik sesuai kaidah bahasa dan struktur penulisan yang baik.</td>
                   </tr>
-
                   <tr>
-                    <td>3</td>
-                    <td>CPL-03: Aplikasi Polimer</td>
-                    <td class="text-center">76.14%</td>
-                    <td class="text-center">🟨 Cukup</td>
-                  </tr>
-
-                  <tr>
-                    <td>4</td>
-                    <td>CPL-04: Proses Produksi</td>
-                    <td class="text-center">74.00%</td>
-                    <td class="text-center">🟨 Cukup</td>
-                  </tr>
-
-                  <tr>
-                    <td>5</td>
-                    <td>CPL-05: Analisis Material</td>
-                    <td class="text-center">75.30%</td>
-                    <td class="text-center">🟨 Cukup</td>
-                  </tr>
-
-                  <tr>
-                    <td>6</td>
-                    <td>CPL-06: Keselamatan & Etika</td>
-                    <td class="text-center">78.20%</td>
-                    <td class="text-center">🟨 Cukup</td>
-                  </tr>
-
-                  <tr>
-                    <td>7</td>
-                    <td>CPL-07: Desain Proses</td>
-                    <td class="text-center">73.40%</td>
-                    <td class="text-center">🟨 Cukup</td>
-                  </tr>
-
-                  <tr>
-                    <td>8</td>
-                    <td>CPL-08: Metode Eksperimental</td>
-                    <td class="text-center">76.80%</td>
-                    <td class="text-center">🟨 Cukup</td>
-                  </tr>
-
-                  <tr>
-                    <td>9</td>
-                    <td>CPL-09: Statistik & Analisis Data</td>
-                    <td class="text-center">71.50%</td>
-                    <td class="text-center">🟨 Cukup</td>
-                  </tr>
-
-                  <tr>
-                    <td>10</td>
-                    <td>CPL-10: Komunikasi Teknis</td>
-                    <td class="text-center">75.00%</td>
-                    <td class="text-center">🟨 Cukup</td>
+                    <td>IK 3</td>
+                    <td>Mahasiswa mampu berkomunikasi secara profesional dalam konteks akademik dan industri, termasuk etika komunikasi digital.</td>
                   </tr>
                 </tbody>
               </table>
-
             </div>
-          </div>        
-          <div class="card-footer d-flex justify-content-between">            
-          </div>
+          </div>          
         </div>
 
-        <!-- ========== CARD 4: tabel IK Min/Max/Rerata ========== -->        
-        <!-- Rangking Performa -->
-        <div class="row collapse" id="daftarIKCPL21">
-          <!-- Card Lowest -->
-          <div class="col-12 col-md-6">
-            <div class="card">
-              <div class="card-header">
-                <h5 class="card-title mb-0">🔽 Top 5 IK Performa Terendah</h5>
-              </div>
-              <div class="card-body">
-                <h3>Lowest 5</h3>
-                <table border="1" cellpadding="8" cellspacing="0" width="100%">
-                  <thead>
-                    <tr>
-                      <th>Ranking</th>
-                      <th class="text-center">Nilai</th>
-                      <th>IK</th>
-                      <th>Deskripsi</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>
-                        <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                          <div style="background:#f54242; width:10%; height:12px; border-radius:4px;"></div>
-                        </div>
-                      </td>
-                      <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="min" data-value="57">20</span></td>
-                      <td>IK-01</td>
-                      <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                          <div style="background:#f54242; width:25%; height:12px; border-radius:4px;"></div>
-                        </div>
-                      </td>
-                      <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="min" data-value="57">30</span></td>
-                      <td>IK-04</td>
-                      <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                          <div style="background:#f54242; width:35%; height:12px; border-radius:4px;"></div>
-                        </div>
-                      </td>
-                      <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="min" data-value="57">50</span></td>
-                      <td>IK-05</td>
-                      <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                          <div style="background:#f54242; width:50%; height:12px; border-radius:4px;"></div>
-                        </div>
-                      </td>
-                      <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="min" data-value="57">51</span></td>
-                      <td>IK-09</td>
-                      <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                          <div style="background:#f54242; width:70%; height:12px; border-radius:4px;"></div>
-                        </div>
-                      </td>
-                      <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="min" data-value="57">57</span></td>
-                      <td>IK-10</td>
-                      <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
+         <!-- ========== CARD 4: Chart CPL-IK ========== -->     
+        <div class="card">   
+          <!-- CARD HEADER -->  
+          <div class="card-header ">         
+            <h5 class="card-title mb-0">
+              <button class="btn btn-sm btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#chartCPLIK2">
+                <i class="fas fa-expand"></i>
+              </button>
+              CPL 2 – Kemampuan untuk menginternalisasi semangat kemandirian dan Kewirausahaan
+            </h5>
+          </div>
+          <!-- CARD BODY -->
+          <div class="card-body " >
+            <!-- Chart Container -->
+            <div class="chart-container">
+              <canvas id="chartCPL2" width="100%" height="30"></canvas>
             </div>
           </div>
-          <!-- Card Highest -->
-          <div class="col-12 col-md-6">
-            <div class="card">
-              <div class="card-header">
-                <h5 class="card-title mb-0">🔼 Top 5 IK Nilai Tertinggi</h5>
-              </div>
-              <div class="card-body">
-                <h3>Highest 5</h3>
-                <table border="1" cellpadding="8" cellspacing="0" width="100%">
-                  <thead>
-                    <tr>
-                       <th>Ranking</th>
-                      <th class="text-center">Nilai</th>
-                      <th>IK</th>
-                      <th>Deskripsi</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>                      
-                      <td>
-                        <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                          <div style="background:#4287f5; width:95%; height:12px; border-radius:4px;"></div>
-                        </div>
-                      </td>
-                      <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="max" data-value="95">95</span></td>
-                        <td>IK-12</td>
-                      <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                          <div style="background:#4287f5; width:85%; height:12px; border-radius:4px;"></div>
-                        </div>
-                      </td>
-                      <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="max" data-value="95">90</span></td>
-                      <td>IK-06</td>
-                      <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                          <div style="background:#4287f5; width:78%; height:12px; border-radius:4px;"></div>
-                        </div>
-                      </td>
-                     <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="max" data-value="95">85</span></td>
-                      <td>IK-07</td>
-                     <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                          <div style="background:#4287f5; width:65%; height:12px; border-radius:4px;"></div>
-                        </div>
-                      </td>
-                     <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="max" data-value="95">70</span></td>
-                      <td>IK-02</td>
-                      <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                          <div style="background:#4287f5; width:50%; height:12px; border-radius:4px;"></div>
-                        </div>
-                      </td>
-                      <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="max" data-value="95">70</span></td>
-                      <td>IK-11</td>
-                      <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- daftar min/max/rerate -->
-        <div class="card collapse" id="daftarIKCPL23" >
-          <div class="card-header d-flex align-items-center">
-            <h5 class="card-title mb-0"><i class="fas fa-table me-2"></i> Tabel Pencapaian</h5>
-            <div class="card-tools ms-auto">
-              <!-- <small class="text-muted">Klik angka Min/Max untuk melihat 1 mahasiswa (NIM / Nama / Nilai)</small> -->
-            </div>
-          </div>
-          <div class="card-body">
+          <!-- CARD FOOTER -->
+          <div class="card-footer collapse" id="chartCPLIK2">
+            <h6 class="font-weight-bold">Daftar Indikator Kinerja (IK)</h6>
             <div class="table-responsive">
-              <table id="tblCplStats" class="table table-hover table-bordered table-sm">
-                <thead class="table-light">
+              <table class="table table-sm table-bordered">
+                <thead class="thead-dark">
                   <tr>
-                    <th style="width: 40px">#</th>
-                    <th>IK Code</th>
-                    <th class="text-center">Capaian</th>
-                    <th class="text-center">Status</th>
+                    <th style="width: 80px;">Kode IK</th>
+                    <th>Deskripsi IK</th>
                   </tr>
                 </thead>
-
                 <tbody>
                   <tr>
-                    <td>1</td>
-                    <td>IK-01: Pemahaman Dasar Polimer</td>
-                    <td class="text-center">72.14%</td>
-                    <td class="text-center">🟨 Cukup</td>
-                  </tr>
-
-                  <tr>
-                    <td>2</td>
-                    <td>IK-02: Teori Komposit</td>
-                    <td class="text-center">77.86%</td>
-                    <td class="text-center">🟨 Cukup</td>
-                  </tr>
-
-                  <tr>
-                    <td>3</td>
-                    <td>IK-03: Aplikasi Polimer</td>
-                    <td class="text-center">76.14%</td>
-                    <td class="text-center">🟨 Cukup</td>
-                  </tr>
-
-                  <tr>
-                    <td>4</td>
-                    <td>IK-04: Proses Produksi</td>
-                    <td class="text-center">74.00%</td>
-                    <td class="text-center">🟨 Cukup</td>
-                  </tr>
-
-                  <tr>
-                    <td>5</td>
-                    <td>IK-05: Analisis Material</td>
-                    <td class="text-center">75.30%</td>
-                    <td class="text-center">🟨 Cukup</td>
-                  </tr>
-
-                  <tr>
-                    <td>6</td>
-                    <td>IK-06: Keselamatan & Etika</td>
-                    <td class="text-center">78.20%</td>
-                    <td class="text-center">🟨 Cukup</td>
-                  </tr>
-
-                  <tr>
-                    <td>7</td>
-                    <td>IK-07: Desain Proses</td>
-                    <td class="text-center">73.40%</td>
-                    <td class="text-center">🟨 Cukup</td>
-                  </tr>
-
-                  <tr>
-                    <td>8</td>
-                    <td>IK-08: Metode Eksperimental</td>
-                    <td class="text-center">76.80%</td>
-                    <td class="text-center">🟨 Cukup</td>
-                  </tr>
-
-                  <tr>
-                    <td>9</td>
-                    <td>IK-09: Statistik & Analisis Data</td>
-                    <td class="text-center">71.50%</td>
-                    <td class="text-center">🟨 Cukup</td>
-                  </tr>
-
-                  <tr>
-                    <td>10</td>
-                    <td>IK-10: Komunikasi Teknis</td>
-                    <td class="text-center">75.00%</td>
-                    <td class="text-center">🟨 Cukup</td>
-                  </tr>
-                </tbody>
-              </table>
-
-            </div>
-          </div>        
-          <div class="card-footer d-flex justify-content-between">            
-          </div>
-        </div>
-
-        <!-- ========== CARD 4: tabel CPMK Min/Max/Rerata ========== -->       
-        <!-- Rangking Performa -->
-        <div class="row collapse" id="daftarIKCPL31" >
-          <!-- Card Lowest -->
-          <div class="col-12 col-md-6">
-            <div class="card">
-              <div class="card-header">
-                <h5 class="card-title mb-0">🔽 Top 5 CPMK Performa Terendah</h5>
-              </div>
-              <div class="card-body">
-                <h3>Lowest 5</h3>
-                <table border="1" cellpadding="8" cellspacing="0" width="100%">
-                  <thead>
-                    <tr>
-                      <th>Ranking</th>
-                      <th class="text-center">Nilai</th>
-                      <th>CPMK</th>
-                      <th>Deskripsi</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>
-                        <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                          <div style="background:#f54242; width:10%; height:12px; border-radius:4px;"></div>
-                        </div>
-                      </td>
-                      <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="min" data-value="57">20</span></td>
-                      <td>SKS198-1</td>
-                      <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                          <div style="background:#f54242; width:25%; height:12px; border-radius:4px;"></div>
-                        </div>
-                      </td>
-                      <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="min" data-value="57">30</span></td>
-                      <td>SKT911-4</td>
-                      <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                          <div style="background:#f54242; width:35%; height:12px; border-radius:4px;"></div>
-                        </div>
-                      </td>
-                      <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="min" data-value="57">50</span></td>
-                      <td>SKS123-5</td>
-                      <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                          <div style="background:#f54242; width:50%; height:12px; border-radius:4px;"></div>
-                        </div>
-                      </td>
-                      <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="min" data-value="57">51</span></td>
-                      <td>SKS345-9</td>
-                      <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                          <div style="background:#f54242; width:70%; height:12px; border-radius:4px;"></div>
-                        </div>
-                      </td>
-                      <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="min" data-value="57">57</span></td>
-                      <td>UNI901-1</td>
-                      <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-          <!-- Card Highest -->
-          <div class="col-12 col-md-6">
-            <div class="card">
-              <div class="card-header">
-                <h5 class="card-title mb-0">🔼 Top 5 CPMK Nilai Tertinggi</h5>
-              </div>
-              <div class="card-body">
-                <h3>Highest 5</h3>
-                <table border="1" cellpadding="8" cellspacing="0" width="100%">
-                  <thead>
-                    <tr>
-                       <th>Ranking</th>
-                      <th class="text-center">Nilai</th>
-                      <th>CPMK</th>
-                      <th>Deskripsi</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>                      
-                      <td>
-                        <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                          <div style="background:#4287f5; width:95%; height:12px; border-radius:4px;"></div>
-                        </div>
-                      </td>
-                      <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="max" data-value="95">95</span></td>
-                        <td>SKS834-2</td>
-                      <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                          <div style="background:#4287f5; width:85%; height:12px; border-radius:4px;"></div>
-                        </div>
-                      </td>
-                      <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="max" data-value="95">90</span></td>
-                      <td>SKS923-6</td>
-                      <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                          <div style="background:#4287f5; width:78%; height:12px; border-radius:4px;"></div>
-                        </div>
-                      </td>
-                     <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="max" data-value="95">85</span></td>
-                      <td>SKS723-7</td>
-                     <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                          <div style="background:#4287f5; width:65%; height:12px; border-radius:4px;"></div>
-                        </div>
-                      </td>
-                     <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="max" data-value="95">70</span></td>
-                      <td>SKS523-2</td>
-                      <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                          <div style="background:#4287f5; width:50%; height:12px; border-radius:4px;"></div>
-                        </div>
-                      </td>
-                      <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="max" data-value="95">70</span></td>
-                      <td>SKS843-1</td>
-                      <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- daftar min/max/rerate -->
-        <div class="card collapse" id="daftarIKCPL33" >
-          <div class="card-header d-flex align-items-center">
-            <h5 class="card-title mb-0"><i class="fas fa-table me-2"></i> Tabel CPL — Min / Max / Rerata</h5>
-            <div class="card-tools ms-auto">
-              <small class="text-muted">Klik angka Min/Max untuk melihat 1 mahasiswa (NIM / Nama / Nilai)</small>
-            </div>
-          </div>
-          <div class="card-body">
-            <div class="table-responsive">
-              <table id="tblCplStats" class="table table-hover table-bordered table-sm">
-                <thead class="table-light">
-                  <tr>
-                    <th style="width: 40px">#</th>
-                    <th>CPMK Code</th>
-                    <th class="text-center">Nilai</th>
-                    <th class="text-center">Status</th>
-                  </tr>
-                </thead>
-                <tbody>                
-                  <tr>
-                    <td>1</td>
-                    <td>SKS982-1: Pemahaman Dasar Polimer</td>
-                    <td class="text-center">72.14%</td>
-                    <td class="text-center">🟨 Cukup</td>
+                    <td>IK 5</td>
+                    <td>Mahasiswa mampu menyampaikan informasi secara lisan secara runtut, jelas, dan mudah dipahami.</td>
                   </tr>
                   <tr>
-                    <td>2</td>
-                    <td>SKS912-2: Teori Komposit</td>
-                    <td class="text-center">71.50%</td>
-                    <td class="text-center">🟨 Cukup</td>
+                    <td>IK 6</td>
+                    <td>Mahasiswa mampu menulis laporan/tulisan akademik sesuai kaidah bahasa dan struktur penulisan yang baik.</td>
                   </tr>
-                  <tr>
-                    <td>3</td>
-                    <td>UNI902-3: Aplikasi Polimer</td>
-                    <td class="text-center">76.80%</td>
-                    <td class="text-center">🟨 Cukup</td>
-                  </tr>
-                  <tr>
-                    <td>4</td>
-                    <td>UNI912-4: Proses Produksi</td>
-                    <td class="text-center">76.80%</td>
-                    <td class="text-center">🟨 Cukup</td>
-                  </tr>
-                  <tr>
-                    <td>5</td>
-                    <td>SKS234-5: Analisis Material</td>
-                    <td class="text-center">75.30%</td>
-                   <td class="text-center">🟨 Cukup</td>
-                  </tr>
-                  <tr>
-                    <td>6</td>
-                    <td>SKS812-6: Keselamatan & Etika</td>
-                     <td class="text-center">76.80%</td>
-                    <td class="text-center">🟨 Cukup</td>
-                  </tr>
-                  <tr>
-                    <td>7</td>
-                    <td>SKS908-7: Desain Proses</td>                    
-                    <td class="text-center">73.40%</td>
-                    <td class="text-center">🟨 Cukup</td>
-                  </tr>
-                  <tr>
-                    <td>8</td>
-                    <td>SKS111-8: Metode Eksperimental</td>
-                    <td class="text-center">71.50%</td>
-                    <td class="text-center">🟨 Cukup</td>
-                  </tr>
-                  <tr>
-                    <td>9</td>
-                    <td>SKS113-9: Statistik & Analisis Data</td>
-                    <td class="text-center">71.50%</td>
-                    <td class="text-center">🟨 Cukup</td>
-                  </tr>
-                  <tr>
-                    <td>10</td>
-                    <td>SKS932-1: Komunikasi Teknis</td>                    
-                    <td class="text-center">75.00%</td>
-                    <td class="text-center">🟨 Cukup</td>
-                  </tr>
+                  
                 </tbody>
               </table>
             </div>
-          </div>        
-          <div class="card-footer d-flex justify-content-between">            
           </div>
         </div>
+
+
+
 
 
 
@@ -1705,4 +1034,128 @@ generateHorizontalChart(
         }
     });
 </script>
+
+
+
+
+
+
+<!-- Chart Script -->
+<script>
+const ctx = document.getElementById("chartCPL1");
+
+new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ['IK 1', 'IK 2', 'IK 3', 'CPL 1'],
+        datasets: [{
+            label: 'Capaian',
+            data: [90, 80, 92, 87.33], // satu periode saja
+            backgroundColor: [
+                '#6c757d', // IK 1 (abu-abu)
+                '#6c757d', // IK 2
+                '#6c757d', // IK 3
+                '#007bff'  // CPL (biru)
+            ],
+            borderColor: [
+                '#6c757d',
+                '#6c757d',
+                '#6c757d',
+                '#007bff'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        responsive: true,
+        plugins: {
+            legend: { display: false },
+            annotation: {
+                annotations: {
+                    targetLine: {
+                        type: 'line',
+                        yMin: 85,
+                        yMax: 85,
+                        borderColor: 'red',
+                        borderWidth: 2,
+                        borderDash: [6, 6],
+                        label: {
+                            display: true,
+                            content: 'Target 85',
+                            position: 'start',
+                            color: 'red',
+                            backgroundColor: 'rgba(255,255,255,0.7)',
+                            padding: 4
+                        }
+                    }
+                }
+            }
+        },
+        scales: {
+            y: {
+                beginAtZero: true,
+                max: 100
+            }
+        }
+    }
+});
+</script>
+<script>
+const ctx2 = document.getElementById("chartCPL2");
+
+new Chart(ctx2, {
+    type: 'bar',
+    data: {
+        labels: ['IK 4', 'IK 5', 'CPL 2'],
+        datasets: [{
+            label: 'Capaian',
+            data: [90, 80, 87.33],
+            backgroundColor: [
+                '#6c757d', // IK 4
+                '#6c757d', // IK 5
+                '#007bff'  // CPL 2
+            ],
+            borderColor: [
+                '#6c757d',
+                '#6c757d',
+                '#007bff'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        responsive: true,
+        plugins: {
+            legend: { display: false },
+            annotation: {
+                annotations: {
+                    targetLine: {
+                        type: 'line',
+                        yMin: 85,
+                        yMax: 85,
+                        borderColor: 'red',
+                        borderWidth: 2,
+                        borderDash: [6, 6],
+                        label: {
+                            display: true,
+                            content: 'Target 85',
+                            position: 'start',
+                            color: 'red',
+                            backgroundColor: 'rgba(255,255,255,0.7)',
+                            padding: 4
+                        }
+                    }
+                }
+            }
+        },
+        scales: {
+            y: {
+                beginAtZero: true,
+                max: 100
+            }
+        }
+    }
+});
+</script>
+
 <?php include('5script.php'); ?>

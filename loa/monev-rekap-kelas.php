@@ -76,6 +76,12 @@
                 </button>
                 <a href="https://tsipil-loa.tmidev.my.id/loa/portofolio_cpmk/ekspor_hasil_assessmen_data/ZFVwUVMwRnZNd1ZVRUVneFZ6bEZNZ3dGMDAwMDk" type="button" class="btn btn-sm btn-success"><i class="fas fa-file-excel"></i> Ekspor Hasil Assessmen</a>
               <a href="https://tsipil-loa.tmidev.my.id/loa/portofolio_cpmk/ekspor_data_hasil_evaluasi/UWpoalVHVkJSekJWQkNPTGpNVWM1ZWpNZDNjMG1wdzAwMDEy" target="_blank" type="button" class="btn btn-sm btn-success"><i class="fas fa-file-excel"></i> Ekspor Hasil Evaluasi</a>
+              <button type="button" class="btn btn-outline-success btn-sm">
+                  <i class="fas fa-file-download me-1"></i> Export Nilai Akhir
+                </button>
+                <button type="button" class="btn btn-outline-success btn-sm">
+                  <i class="fas fa-file-download me-1"></i> Export Nilai Kosong
+                </button>
                 <!-- <button type="button" class="btn btn-outline-danger btn-sm">
                   <i class="fas fa-ban me-1"></i> Reset
                 </button> -->    
@@ -743,6 +749,13 @@
 
         <!-- ========== CARD : Tabel Granular ========== -->
           <div class="card">
+            <div class="card-header">
+              <h5 class="card-title mb-0"> Daftar Kelas Perkuliahan</h5>
+              <div class="card-tools">
+                <small class="text-muted">Semester Terpilih</small>
+              </div>
+            </div>
+
             <div class="card-body">
               <div class="table-responsive">
                 <table class="table table-bordered table-striped table-sm datatables1">

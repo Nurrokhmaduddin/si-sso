@@ -109,7 +109,7 @@
           <div class="card-header">
             <h5 class="card-title mb-0"><i class="fas fa-chart-bar me-2"></i> Stacked Bar Chart — Proporsi (%)</h5>
             <div class="card-tools">
-              <small class="text-muted">Semester Terpilih</small>
+              <small class="text-muted">Set Pemetaan Terpilih</small>
             </div>
           </div>
 

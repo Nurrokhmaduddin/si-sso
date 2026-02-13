@@ -120,28 +120,7 @@
             </div>
           </div>
 
-          <div class="card">
-            <div class="card-body">
-              <div class="table-responsive">
-                <table class="table table1 table-bordered table-striped table-sm datatables1">
-
-                </div>
-              </div>
-            </div>
-
-            <script>
-              $(document).ready(function(){
-                $('#jml_sudah_dinilai').text('226')
-                $('#jml_belum_lengkap').text('0')
-                $('#jml_belum_dinilai').text('93')
-              });
-
-              function pilih_status(status)
-              {
-                window.location='https://tsipil-loa.tmidev.my.id/loa/nilai_cpmk?k=PA019&s='+status
-              }
-            </script>
-
+         
       <!-- ========== CARD 3: Tabel saja ========== -->
           <div class="card">
             <div class="card-body">
