@@ -51,8 +51,8 @@
           </a>
         </li> -->
 <!-- BERANDA -->
-        <li class="nav-item <?php echo in_array($page, ['beranda','master_dosen','master_mahasiswa']) ? 'menu-open' : ''; ?>">
-          <a href="#" class="nav-link <?php echo in_array($page, ['beranda','master_dosen','master_mahasiswa']) ? 'active' : ''; ?>">
+        <li class="nav-item <?php echo in_array($page, ['beranda']) ? 'menu-open' : ''; ?>">
+          <a href="#" class="nav-link <?php echo in_array($page, ['beranda']) ? 'active' : ''; ?>">
             <i class="nav-icon fas fa-home"></i>
             <p>
               Beranda
@@ -164,8 +164,9 @@
 
 
         <!-- PEMETAAN OEB -->
-        <li class="nav-item">
-          <a href="#" class="nav-link">
+       <li class="nav-item <?php echo in_array($page, ['pemetaan_kurikulum','pemetaan_matakuliah']) ? 'menu-open' : ''; ?>">
+          <a href="#" class="nav-link <?php echo in_array($page, ['pemetaan_kurikulum','pemetaan_matakuliah']) ? 'active' : ''; ?>">
+          
             <i class="nav-icon fas fa-project-diagram"></i>
             <p>
               Pemetaan OBE
@@ -176,14 +177,14 @@
           <ul class="nav nav-treeview">
 
             <li class="nav-item">
-              <a href="aktivitas-kurikulum.php" class="nav-link">
+              <a href="pemetaan-kurikulum.php" class="nav-link <?php echo $page == 'pemetaan_kurikulum' ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Kurikulum</p>
               </a>
             </li>
 
             <li class="nav-item">
-              <a href="pemetaan-matakuliah.php" class="nav-link">
+              <a href="pemetaan-matakuliah.php" class="nav-link <?php echo $page == 'pemetaan_matakuliah' ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Mata Kuliah</p>
               </a>
@@ -238,6 +239,13 @@
           </a>
 
           <ul class="nav nav-treeview">
+
+            <li class="nav-item">
+              <a href="aktivitas-laporan.php" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Pengumuman</p>
+              </a>
+            </li>
 <li class="nav-item">
               <a href="master-periode.php" class="nav-link <?php echo $page == 'master_periode' ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
@@ -397,8 +405,8 @@
       
 
  <!-- PENGEMBANGAN OBE -->
-        <li class="nav-item <?php echo in_array($page, ['progress_kelas','progress_pemetaan','progress_cpl']) ? 'menu-open' : ''; ?>">
-          <a href="#" class="nav-link <?php echo in_array($page, ['progress_kelas','progress_pemetaan','progress_cpl']) ? 'active' : ''; ?>">
+        <li class="nav-item <?php echo in_array($page, ['progress_kelas','progress_pemetaan','progress_cpl','progress_perwalian']) ? 'menu-open' : ''; ?>">
+          <a href="#" class="nav-link <?php echo in_array($page, ['progress_kelas','progress_pemetaan','progress_cpl','progress_perwalian']) ? 'active' : ''; ?>">
             <i class="nav-icon fas fa-chart-line"></i>
             <p>
               Pengembangan OBE
@@ -453,7 +461,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a href="rekap-kelas.php" class="nav-link">
+              <a href="progres-perwalian.php" class="nav-link <?php echo $page == 'progress_perwalian' ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Perwalian</p>
               </a>
@@ -473,10 +481,33 @@
           </a>
         </li> -->
 
-
+<!-- KONFIGURASI -->
+<li class="nav-item <?php echo in_array($page, ['konfigurasi_loa']) ? 'menu-open' : ''; ?>">
+  <a href="#" class="nav-link <?php echo in_array($page, ['konfigurasi_loa']) ? 'active' : ''; ?>">
+    <i class="nav-icon fas fa-sliders-h"></i>
+    <p>
+      Konfigurasi
+      <i class="right fas fa-angle-left"></i>
+    </p>
+  </a>
+  <ul class="nav nav-treeview">
+    <li class="nav-item">
+      <a href="konfigurasi-loa.php" class="nav-link <?php echo $page == 'konfigurasi_loa' ? 'active' : ''; ?>">
+        <i class="far fa-circle nav-icon"></i>
+        <p>Parameter LOA</p>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="aktivitas-laporan.php" class="nav-link">
+        <i class="far fa-circle nav-icon"></i>
+        <p>Template Notifikasi</p>
+      </a>
+    </li>
+  </ul>
+</li>
         <!-- PENGATURAN -->
-        <li class="nav-item">
-          <a href="#" class="nav-link">
+        <li class="nav-item <?php echo in_array($page, ['pengaturan_user']) ? 'menu-open' : ''; ?>">
+          <a href="#" class="nav-link <?php echo in_array($page, ['pengaturan_user']) ? 'active' : ''; ?>">
             <i class="nav-icon fas fa-cog"></i>
             <p>
               Pengaturan
@@ -484,11 +515,40 @@
             </p>
           </a>
           <ul class="nav nav-treeview">
-            <li class="nav-item">
-              <a href="pengaturan-user.php" class="nav-link">
+            <!-- USER (LEVEL 2) -->
+             <li class="nav-item <?php echo in_array($page, ['pengaturan_user']) ? 'menu-open' : ''; ?>">
+              <a href="#" class="nav-link <?php echo in_array($page, ['pengaturan_user']) ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
-                <p>User</p>
+                <p>
+                  User
+                  <i class="right fas fa-angle-left"></i>
+                </p>
               </a>
+
+              <!-- LEVEL 3 -->
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="pengaturan-user.php" class="nav-link <?php echo $page == 'pengaturan_user' ? 'active' : ''; ?>">
+                    <i class="nav-icon"></i>
+                    <p>Data User</p>
+                  </a>
+                </li>
+
+                <li class="nav-item">
+                  <a href="role-user.php" class="nav-link">
+                    <i class="far fa-dot-circle nav-icon"></i>
+                    <p>Role User</p>
+                  </a>
+                </li>
+
+                <li class="nav-item">
+                  <a href="reset-password.php" class="nav-link">
+                    <i class="far fa-dot-circle nav-icon"></i>
+                    <p>Reset Password</p>
+                  </a>
+                </li>
+              </ul>
+
             </li>
             <li class="nav-item">
               <a href="aktivitas-laporan.php" class="nav-link">
@@ -496,30 +556,14 @@
                 <p>Peran & Hak Akses</p>
               </a>
             </li>
+            
             <li class="nav-item">
               <a href="aktivitas-laporan.php" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
-                <p>Pengumuman</p>
+                <p>Audit Log</p>
               </a>
             </li>
-            <li class="nav-item">
-              <a href="aktivitas-laporan.php" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Notifikasi</p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="aktivitas-laporan.php" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Audit Aktivitas</p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="pengaturan-aplikasi.php" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Parameter Aktivitas</p>
-              </a>
-            </li>
+           
             <li class="nav-item">
               <a href="pengaturan-aplikasi.php" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
@@ -533,7 +577,7 @@
         <li class="nav-item mt-3">
           <a href="../menu.php" class="nav-link">
             <i class="nav-icon fas fa-arrow-left"></i>
-            <p>Kembali Menu Utama</p>
+            <p>Menu Utama</p>
           </a>
         </li>
 

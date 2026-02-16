@@ -120,6 +120,14 @@ include "3sidebar.php";
               <tbody>
                 <tr>
                   <td class="text-center">1</td>
+                  <td>Mengetahuisecara kualitatif seberaapa lengkap isian harianlaporannya dari para fasilitator</td>
+                  <td>?????</td>
+                  <td>?????</td>
+                  <td>?????</td>
+                </tr>
+
+                <tr>
+                  <td class="text-center">1</td>
                   <td>Memproses pembayaran SPP & biaya kegiatan</td>
                   <td>Jumlah pembayaran hari ini</td>
                   <td>Ringkasan harian</td>

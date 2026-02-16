@@ -1,4 +1,4 @@
-<?php $page = 'master_mahasiswa'; ?>
+<?php $page = 'pemetaan_matakuliah'; ?>
 <?php include('1header.php'); ?>
 <?php include('2navbar.php'); ?>
 <?php include('3sidebar.php'); ?>

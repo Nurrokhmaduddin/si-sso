@@ -753,6 +753,7 @@ kurikulum, set pemetaan, mata kuliah(satu,beberapa, semua)
 kolom: kode MK, mata kuliah, mahasiswa, nilai akhir(huruf),nilai akhir(angka), cpmk 1,2,3,4,5
 jika ada kesamaan NIM di satu mata kuliah(artinya mahasiswa tempuh >1 kali MK tsb) ambil nilai tertinggi
         </p>
+        <p>buatkan juga desain database, ada kelas yang team teaching (multi dosen pengampu dalam satu kelas)</p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>

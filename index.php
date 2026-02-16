@@ -137,6 +137,10 @@
       <a href="#">Lupa Password</a> |
       <a href="#">Daftar Pengguna</a>
     </div>
+    <div class="extra-links">
+      <a href="form.php">Belum</a> |
+      <a href="form-otp.php">Lengkap</a>
+    </div>
 
     <div class="footer">
       © 2026 Sistem Informasi

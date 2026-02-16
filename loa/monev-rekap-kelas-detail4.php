@@ -24,7 +24,7 @@
 
     
 
-          <!-- ========== CARD : Filter & Export ========== -->
+<!-- ========== CARD : Filter & Export ========== -->
           <div class="card">
             <!-- <div class="card-header bg-secondary">
               <h5 class="card-title mb-0">
@@ -87,7 +87,7 @@
 
             <div class="card-footer">
               <div class="card-tools ms-auto">
-                <button type="button" 
+                 <button type="button" 
                 class="btn btn-outline-secondary btn-sm"
                 onclick="window.location.href='monev-rekap-kelas.php'">
                 <span class="fas fa-reply me-1"></span> Kembali
@@ -117,128 +117,144 @@
           </div>
 
           <!-- TAB NAV (Semester) -->
-         
            <ul class="nav nav-tabs">
             <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail.php'"><a class="nav-link ">Rekapitulasi</a></li>
-            <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail4.php'"><a class="nav-link ">Remidi</a></li>
-            <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail3.php'"><a class="nav-link active">Portofolio</a></li>
+            <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail4.php'"><a class="nav-link active">Remidi</a></li>
+            <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail3.php'"><a class="nav-link ">Portofolio</a></li>
             <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail2.php'"><a class="nav-link ">Mahasiswa</a></li>
           </ul>
+     
 
-        
-      <!-- ========== CARD 3: Tabel saja ========== -->
-          <div class="card">
-            <div class="card-body">
-              <div class="table-responsive">
-                <table id="tbl" name="tbl" class="table table-sm table-hover table-bordered table-striped deta">
-                  <tbody>
-                    <tr>
-                      <td> 
-                        Dokumen RPS <span class="badge badge-success">Valid</span></td>
-                        <td width="40%">
-                          <a href="#" target="_blank" title="Unduh RPS">
-                            <button type="button" class="btn btn-xs btn-success" ><i class="fas fa-file"></i> Download</button>
-                          </a> 
-                    <small class="text-muted"><i>update_at</i></small>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td> 
-                        Materi Pembelajaran (slides, modul, bahan ajar) </td>
-                        <td width="40%">
-                          <a href="#" target="_blank">
-                            <button type="button" class="btn btn-xs btn-info"><i class="fas fa-link"></i> Download</button>
-                          </a> <i>update_at</i>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Dokumen Penugasan Mahasiswa <span class="badge badge-secondary">Proses</span></td>
-                          <td width="40%">
-                            <a href="https://drive.google.com/drive/folders/1Ba6yZ2KLWZC992tVO7wxpcfxaOYb8Eyi?usp=drive_link" target="_blank">
-                              <button type="button" class="btn btn-xs btn-info"><i class="fas fa-link"></i> Download</button>
-                            </a> <i>updated 19 sep 2025</i>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            Soal Ujian UTS/UAS <span class="badge badge-danger">Rejected</span> (dengan validasi prodi)</td>
-                            <td width="40%">
-                              <a href="https://drive.google.com/drive/folders/1Ba6yZ2KLWZC992tVO7wxpcfxaOYb8Eyi?usp=drive_link" target="_blank">
-                                <button type="button" class="btn btn-xs btn-info"><i class="fas fa-link"></i> Download</button>
-                              </a> <i>update_at</i>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                            Penilaian CPMK oleh Dosen</td>
-                            <td width="40%">
-                              <a href="monev-rekap-kelas-detail2.php">
-                                <button type="button" class="btn btn-xs btn-info"><i class="fas fa-link"></i> Download</button>
-                              </a> <i>update_at 21 Jan 2024</i>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                            Evaluasi Dosen oleh Mahasiswa</td>
-                            <td width="40%">
-                              <a href="portfolio_cpmk_detail2.php" target="_blank">
-                                <button type="button" class="btn btn-xs btn-info"><i class="fas fa-link"></i> Download</button>
-                              </a> <i>update_at</i>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-              </div>
-            </div>
-            <!-- /.card-body -->
-          </div>
+<!-- ========== CARD : tabel rekap remidi   CPMK ========== -->
+<div class="card">
+  <div class="card-body">
+    <div class="table-responsive">
+      
+      <table class="table table-bordered table-sm table-hover table-striped example1" border="1">
+        <thead>
+          <tr>
+            <th colspan="2" rowspan="2" style="vertical-align: middle; text-align: center;">Daftar CPMK (Remidi)</th>
+            <th><center>Rerata Awal</center></th>
+            <th><center>Rerata Remidi</center></th>
+            <th><center>Ketuntasan (%)</center></th>
+            <th><center>Jumlah Mahasiswa</center></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="width: 10px;">1</td>
+            <td style="width: 40%;">Mahasiswa mengerti dan memahami dasar-dasar polimer, hubungan antara sifat dengan struktur dan perilaku prosesnya.</td>
+            <td align="center">56,14                      </td>
+            <td align="center">80,25                    </td>
+            <td align="center">100,00                      </td>
+            <td align="center">5
+          <tr>
+            <td style="width: 10px;">2</td>
+            <td style="width: 40%;">Mahasiswa mengerti dan memahami dasar-dasar komposit, hubungan antara sifat dengan struktur dan perilaku prosesnya.</td>
+            <td align="center">56,14                      </td>
+            <td align="center">82,10                       </td>
+            <td align="center">100,00                      </td>
+            <td align="center"> 4                     </td>
+          </tr>
+          <tr>
+            <td style="width: 10px;">3</td>
+            <td style="width: 40%;">Mahasiswa mampu mengembangkan aplikasi polimer</td>
+            <td align="center">56,14                      </td>
+            <td align="center"> 78,50                      </td>
+            <td align="center"> 80,00                      </td>
+            <td align="center">12                      </td>
+          </tr>
+          <tr>
+            <td style="width: 10px;">4</td>
+            <td style="width: 40%;">Mahasiswa mampu mengembangkan aplikasi komposit</td>
+            <td align="center">56,14                      </td>
+            <td align="center">79,30                       </td>
+            <td align="center">80,00                      </td>
+            <td align="center"> 24                      </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<!-- ========== CARD : Perbandingan CPMK Bar A vs Bar B ========== -->
+<div class="card">
+  <div class="card-body">
+    <canvas id="chartCpmkCompare" height="120"></canvas>
+  </div>
+</div>
 
-<!-- ================= Card  : Catatan evaluasi dan pengembangan ================= -->
-        
-          <div class="row">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+  const ctxCompare = document.getElementById('chartCpmkCompare').getContext('2d');
 
-            <!-- Evaluasi -->
-            <div class="col-lg-6">
-              <div class="card h-100">
-                <div class="card-header bg-secondary text-white">
-                  <h5 class="card-title mb-0">
-                    <i class="fas fa-clipboard-list me-2"></i>
-                    Evaluasi Hasil Pembelajaran
-                  </h5>
-                </div>
+  // ===== CUSTOM WARNA =====
+  const colorBarA = 'rgba(108, 117, 125, 0.8)';   // Abu-abu (bisa diganti)
+  const colorBarB = 'rgba(0, 123, 255, 0.8)';     // Biru (bisa diganti)
 
-                <div class="card-body">
-                  <p class="mb-0">
-                    secara keseluruhan pembelajaran telah berjalan dengan baik
-                  </p>
-                </div>
-            </div>
-          </div>
+  const chartCpmkCompare = new Chart(ctxCompare, {
+    type: 'bar',
+    data: {
+      labels: ['CPMK 1', 'CPMK 2', 'CPMK 3', 'CPMK 4'],
+      datasets: [
+        {
+          label: 'Bar A',
+          data: [56.14, 56.14, 56.14, 56.14],
+          backgroundColor: colorBarA,
+          borderColor: colorBarA,
+          borderWidth: 1
+        },
+        {
+          label: 'Bar B',
+          data: [80.25, 82.10, 78.50, 79.30],
+          backgroundColor: colorBarB,
+          borderColor: colorBarB,
+          borderWidth: 1
+        }
+      ]
+    },
+    options: {
+      scales: {
+        y: { beginAtZero: true, max: 100 }
+      },
+      plugins: {
+        legend: { display: false },
+        title: {
+          display: true,
+          text: 'Perbandingan Remidi CPMK (Before vs After)'
+        }
+      }
+    }
+  });
+</script>
+<!-- ========== CARD : Chart Row CPMK remidi ========== -->
+<div class="card">
+  <div class="card-header">
+    <h3 class="card-title">
+      <i class="fas fa-chart-bar mr-1"></i>
+      Distribusi Nilai Awal & Remidi per CPMK
+    </h3>
+  </div>
 
-          <!-- Rencana -->
-          <div class="col-lg-6">
-            <div class="card h-100">
-              <div class="card-header bg-secondary text-white">
-                <h5 class="card-title mb-0">
-                  <i class="fas fa-chart-line me-2"></i>
-                  Rencana Pengembangan Perkuliahan
-                </h5>
-              </div>
+  <div class="card-body">
 
-              <div class="card-body">
-                  <p class="mb-0">
-                    perlu meningkatkan interaksi
-                  </p>
-                </div>
-          </div>
-        </div>
+    <!-- CPMK 1 -->
+    <div class="chart-container mb-4" style="height:250px;">
+      <h6 class="text-muted mb-2">CPMK 1</h6>
+      <canvas id="chartCpmk1Compare"></canvas>
+    </div>
 
-      </div>
+    <!-- CPMK 2 -->
+    <div class="chart-container mb-4" style="height:250px;">
+      <h6 class="text-muted mb-2">CPMK 2</h6>
+      <canvas id="chartCpmk2Compare"></canvas>
+    </div>
+
+  </div>
+</div>
 
 
 
-          
       </div>
     </div>
   </div>
@@ -306,141 +322,106 @@ jika ada kesamaan NIM di satu mata kuliah(artinya mahasiswa tempuh >1 kali MK ts
   </div>
 </div>
 
-
+<!-- ========== CARD : Chart Row CPMK remidi ========== -->
 <script>
-// Generate label CPMK 1 - 256
-const labelsCPMK = Array.from({ length: 40 }, (_, i) => `NIM ${i + 1}`);
 
-// Contoh nilai CPMK (0 - 100)
-const nilaiCPMK = Array.from({ length: 40 }, () =>
-  Math.floor(Math.random() * 101)
-);
+// =====================
+// DATA CPMK 1
+// =====================
+const nimCpmk1 = ['NIM 1','NIM 2','NIM 3','NIM 4','NIM 5'];
 
-const cty = document.getElementById('barChartCPMK').getContext('2d');
+const nilaiAwalCpmk1 = [60, 75, 55, 80, 70];
+const nilaiRemidiCpmk1 = [75, 80, 70, 85, 78];
 
-new Chart(cty, {
+const ctxCpmk1 = document.getElementById('chartCpmk1Compare').getContext('2d');
+
+new Chart(ctxCpmk1, {
   type: 'bar',
   data: {
-    labels: labelsCPMK,
-    datasets: [{
-      label: 'Nilai CPMK 1',
-      data: nilaiCPMK,
-      backgroundColor: 'rgba(220, 53, 69, 0.8)', // merah (Bootstrap danger)
-      borderColor: 'rgba(220, 53, 69, 1)',
-      borderWidth: 1
-    }]
+    labels: nimCpmk1,
+    datasets: [
+      {
+        label: 'Nilai Awal',
+        data: nilaiAwalCpmk1,
+        backgroundColor: 'rgba(108, 117, 125, 0.8)',  // abu
+        borderColor: 'rgba(108, 117, 125, 1)',
+        borderWidth: 1
+      },
+      {
+        label: 'Nilai Remidi',
+        data: nilaiRemidiCpmk1,
+        backgroundColor: 'rgba(0, 123, 255, 0.8)',   // biru
+        borderColor: 'rgba(0, 123, 255, 1)',
+        borderWidth: 1
+      }
+    ]
   },
   options: {
     responsive: true,
     maintainAspectRatio: false,
-    plugins: {
-      // title: {
-      //   display: true,
-      //   text: 'Capaian CPMK',
-      //   font: {
-      //     size: 18
-      //   }
-      // },
-      legend: {
-        position: 'top'
-      },
-      tooltip: {
-        callbacks: {
-          label: function(context) {
-            return `Nilai: ${context.raw}`;
-          }
-        }
-      }
-    },
     scales: {
       y: {
         min: 0,
-        max: 100,
-        // title: {
-        //   display: true,
-        //   text: 'Nilai (0–100)'
-        // }
-      },
-      x: {
-        ticks: {
-          autoSkip: true,
-          maxTicksLimit: 30 // supaya tidak overload
-        },
-        title: {
-          display: true,
-          // text: 'CPMK'
-        }
+        max: 100
+      }
+    },
+    plugins: {
+      legend: { position: 'top' },
+      tooltip: {
+        mode: 'index',
+        intersect: false
       }
     }
   }
 });
 </script>
-
-
-
 <script>
-// Generate label CPMK 1 - 256
-const labelsCPMK2 = Array.from({ length: 40 }, (_, i) => `NIM ${i + 1}`);
 
-// Contoh nilai CPMK (0 - 100)
-const nilaiCPMK2 = Array.from({ length: 40 }, () =>
-  Math.floor(Math.random() * 101)
-);
+// =====================
+// DATA CPMK 2
+// =====================
+const nimCpmk2 = ['NIM 1','NIM 2','NIM 3','NIM 4'];
 
-const cty2 = document.getElementById('barChartCPMK2').getContext('2d');
+const nilaiAwalCpmk2 = [72, 65, 88, 74];
+const nilaiRemidiCpmk2 = [80, 75, 90, 82];
 
-new Chart(cty2, {
+const ctxCpmk2 = document.getElementById('chartCpmk2Compare').getContext('2d');
+
+new Chart(ctxCpmk2, {
   type: 'bar',
   data: {
-    labels: labelsCPMK2,
-    datasets: [{
-      label: 'Nilai CPMK 2',
-      data: nilaiCPMK2,
-      backgroundColor: 'rgba(220, 53, 69, 0.8)', // merah (Bootstrap danger)
-      borderColor: 'rgba(220, 53, 69, 1)',
-      borderWidth: 1
-    }]
+    labels: nimCpmk2,
+    datasets: [
+      {
+        label: 'Nilai Awal',
+        data: nilaiAwalCpmk2,
+        backgroundColor: 'rgba(108, 117, 125, 0.8)',
+        borderColor: 'rgba(108, 117, 125, 1)',
+        borderWidth: 1
+      },
+      {
+        label: 'Nilai Remidi',
+        data: nilaiRemidiCpmk2,
+        backgroundColor: 'rgba(0, 123, 255, 0.8)',
+        borderColor: 'rgba(0, 123, 255, 1)',
+        borderWidth: 1
+      }
+    ]
   },
   options: {
     responsive: true,
     maintainAspectRatio: false,
-    plugins: {
-      // title: {
-      //   display: true,
-      //   text: 'Capaian CPMK',
-      //   font: {
-      //     size: 18
-      //   }
-      // },
-      legend: {
-        position: 'top'
-      },
-      tooltip: {
-        callbacks: {
-          label: function(context) {
-            return `Nilai: ${context.raw}`;
-          }
-        }
-      }
-    },
     scales: {
       y: {
         min: 0,
-        max: 100,
-        // title: {
-        //   display: true,
-        //   text: 'Nilai (0–100)'
-        // }
-      },
-      x: {
-        ticks: {
-          autoSkip: true,
-          maxTicksLimit: 30 // supaya tidak overload
-        },
-        title: {
-          display: true,
-          // text: 'CPMK'
-        }
+        max: 100
+      }
+    },
+    plugins: {
+      legend: { position: 'top' },
+      tooltip: {
+        mode: 'index',
+        intersect: false
       }
     }
   }

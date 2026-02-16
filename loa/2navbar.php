@@ -50,7 +50,7 @@
         <li><a href="../Profile.html" class="dropdown-item"><i class="fas fa-user-circle me-2"></i>Profile</a></li>
         <li><a href="../activity-log.html" class="dropdown-item"><i class="fas fa-cog me-2"></i>Activity Log</a></li>
         <li><hr class="dropdown-divider"></li>
-        <li><a href="../logout.php" class="dropdown-item text-danger"><i class="fas fa-sign-out-alt me-2"></i>Logout</a></li>
+        <li><a href="../" class="dropdown-item text-danger"><i class="fas fa-sign-out-alt me-2"></i>Logout</a></li>
       </ul>
     </li>
   </ul>

@@ -155,7 +155,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <li><a href="../Profile.html" class="dropdown-item"><i class="fas fa-user-circle me-2"></i>Profile</a></li>
             <li><a href="../activity-log.html" class="dropdown-item"><i class="fas fa-cog me-2"></i>Activity Log</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a href="../logout.php" class="dropdown-item text-danger"><i class="fas fa-sign-out-alt me-2"></i>Logout</a></li>
+            <li><a href="index.php" class="dropdown-item text-danger"><i class="fas fa-sign-out-alt me-2"></i>Logout</a></li>
           </ul>
         </li>
       </ul>
@@ -204,7 +204,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <h3>School</h3>
         <p>Pengelolaan Sekolah</p>
       </a>
-
+ <a href="sqa/" class="menu-card">
+        <h3>SQA</h3>
+        <p>Test QA</p>
+      </a>
 
 
       

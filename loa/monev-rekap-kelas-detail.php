@@ -119,105 +119,73 @@
           <!-- TAB NAV (Semester) -->
            <ul class="nav nav-tabs">
             <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail.php'"><a class="nav-link active">Rekapitulasi</a></li>
-            <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail2.php'"><a class="nav-link ">Mahasiswa</a></li>
+            <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail4.php'"><a class="nav-link ">Remidi</a></li>
             <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail3.php'"><a class="nav-link ">Portofolio</a></li>
+            <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail2.php'"><a class="nav-link ">Mahasiswa</a></li>
+            <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail5.php'"><a class="nav-link ">OBE</a></li>
           </ul>
      
 
 
-<!-- ========== CARD : Grafik   CPMK ========== -->
-        <div class="card">
-          <div class="card-body">
-            <div class="table-responsive">
-              
-              <table class="table table-bordered table-sm table-hover table-striped example1" border="1">
-                <thead>
-                  <tr>
-                    <th colspan="2" rowspan="2" style="vertical-align: middle; text-align: center;">Hasil Assessmen CPMK</th>
-                    <th colspan="2"><center>Rerata</center></th>
-                    <th colspan="2"><center>Tertinggi</center></th>
-                    <th colspan="2"><center>Terendah</center></th>
-                  </tr>
-                  <tr>
-                    <th>Capaian</th>
-                    <th>Remidi</th>
-                    <th>Capaian</th>
-                    <th>Remidi</th>
-                    <th>Capaian</th>
-                    <th>Remidi</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td style="width: 10px;">1</td>
-                    <td style="width: 40%;">Mahasiswa mengerti dan memahami dasar-dasar polimer, hubungan antara sifat dengan struktur dan perilaku prosesnya.</td>
-                    <td align="center">
-                    72,14                      </td>
-                    <td align="center">
-                    0,00                      </td>
-                    <td align="center">
-                    80,00                      </td>
-                    <td align="center">
-                    0,00                      </td>
-                    <td align="center">
-                    70,00                      </td>
-                    <td align="center">
-                    0,00                      </td>
-                  </tr>
-                  <tr>
-                    <td style="width: 10px;">2</td>
-                    <td style="width: 40%;">Mahasiswa mengerti dan memahami dasar-dasar komposit, hubungan antara sifat dengan struktur dan perilaku prosesnya.</td>
-                    <td align="center">
-                    77,86                      </td>
-                    <td align="center">
-                    0,00                      </td>
-                    <td align="center">
-                    85,00                      </td>
-                    <td align="center">
-                    0,00                      </td>
-                    <td align="center">
-                    70,00                      </td>
-                    <td align="center">
-                    0,00                      </td>
-                  </tr>
-                  <tr>
-                    <td style="width: 10px;">3</td>
-                    <td style="width: 40%;">Mahasiswa mampu mengembangkan aplikasi polimer</td>
-                    <td align="center">
-                    76,14                      </td>
-                    <td align="center">
-                    0,00                      </td>
-                    <td align="center">
-                    80,00                      </td>
-                    <td align="center">
-                    0,00                      </td>
-                    <td align="center">
-                    75,00                      </td>
-                    <td align="center">
-                    0,00                      </td>
-                  </tr>
-                  <tr>
-                    <td style="width: 10px;">4</td>
-                    <td style="width: 40%;">Mahasiswa mampu mengembangkan aplikasi komposit</td>
-                    <td align="center">
-                    76,14                      </td>
-                    <td align="center">
-                    0,00                      </td>
-                    <td align="center">
-                    80,00                      </td>
-                    <td align="center">
-                    0,00                      </td>
-                    <td align="center">
-                    75,00                      </td>
-                    <td align="center">
-                    0,00                      </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-          
+<!-- ========== CARD : tabel rekap CPMK ========== -->
+<div class="card">
+  <div class="card-body">
+    <div class="table-responsive">
+
+      <table class="table table-bordered table-sm table-hover table-striped example1" border="1">
+        <thead>
+          <tr>
+            <th colspan="2" rowspan="2" style="vertical-align: middle; text-align: center;">Daftar CPMK (Capaian)</th>
+            <th><center>Rerata</center></th>
+            <th><center>Tertinggi</center></th>
+            <th><center>Terendah</center></th>
+            <th><center>Ketuntasan (%)</center></th>
+            <th><center>Jumlah Mahasiswa</center></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="width: 10px;">1</td>
+            <td style="width: 40%;">Mahasiswa mengerti dan memahami dasar-dasar polimer, hubungan antara sifat dengan struktur dan perilaku prosesnya.</td>
+            <td align="center">72,14                      </td>
+            <td align="center">80,00                      </td>
+            <td align="center">0,00                      </td>
+            <td align="center">56,00                      </td>
+            <td align="center">40</td>
+          </tr>
+          <tr>
+            <td style="width: 10px;">2</td>
+            <td style="width: 40%;">Mahasiswa mengerti dan memahami dasar-dasar komposit, hubungan antara sifat dengan struktur dan perilaku prosesnya.</td>
+            <td align="center">77,86                      </td>
+            <td align="center">85,00                      </td>
+            <td align="center">0,00                      </td>
+            <td align="center">67,00                      </td>
+            <td align="center">40</td>
+          </tr>
+          <tr>
+            <td style="width: 10px;">3</td>
+            <td style="width: 40%;">Mahasiswa mampu mengembangkan aplikasi polimer</td>
+            <td align="center">76,14                      </td>
+            <td align="center">80,00                      </td>
+            <td align="center">0,00                      </td>
+            <td align="center">67,00                      </td>
+            <td align="center">40</td>
+          </tr>
+          <tr>
+            <td style="width: 10px;">4</td>
+            <td style="width: 40%;">Mahasiswa mampu mengembangkan aplikasi komposit</td>
+            <td align="center">76,14                      </td>
+            <td align="center">0,00                      </td>
+            <td align="center">80,00                      </td>
+            <td align="center">78,00                      </td>
+            <td align="center">40</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
 <!-- ========== CARD : visualisasi grafis capaian CPMK ========== -->
 <div class="card">
   <div class="card-body">
@@ -255,10 +223,6 @@
   </div>
 </div>
 
-
-
-
-
 <!-- ========== CARD : Chart Row CPMK ========== -->
 <div class="card">
   <div class="card-header">
@@ -279,6 +243,8 @@
     </div>
   </div>
 </div>
+
+
 
 
 
@@ -490,10 +456,6 @@ new Chart(cty2, {
 });
 </script>
 
+
+
 <?php include('5script.php'); ?>
-
-
-
-
-
-

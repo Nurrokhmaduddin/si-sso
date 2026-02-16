@@ -84,6 +84,107 @@
             </div>
           </div>
 
+<!-- ========== CARD : Ringkasan Refleksi Kelas untuk Tim Kurikulum ========== -->
+<div class="card card-outline card-primary">
+
+  <div class="card-header">
+    <h3 class="card-title">
+      <i class="fas fa-chart-line mr-1"></i>
+      Ringkasan Refleksi Kelas – Analisis Kurikulum
+    </h3>
+    <div class="card-tools">
+      <span class="badge badge-info">Semester Ganjil 2024/2025</span>
+    </div>
+  </div>
+
+  <div class="card-body">
+
+    <!-- ================= TAG UTAMA ================= -->
+    <div class="mb-4">
+      <h5 class="text-primary"><strong>TAG Utama Kelas</strong></h5>
+      <div>
+        <span class="badge badge-danger">#CPMK_Tidak_Tercapai</span>
+        <span class="badge badge-warning">#Variansi_Tinggi</span>
+        <span class="badge badge-info">#Prasyarat_Lemah</span>
+        <span class="badge badge-secondary">#Instrumen_Terlalu_Sulit</span>
+        <span class="badge badge-primary">#Butuh_Pemecahan_Materi</span>
+      </div>
+    </div>
+
+    <hr>
+
+    <!-- ================= RINGKASAN OBE ================= -->
+    <div class="mb-4">
+      <h5 class="text-primary"><strong>1. Ringkasan Ketercapaian OBE</strong></h5>
+      <p>
+        CPMK 1 dan 2 relatif tercapai secara konsisten, namun CPMK 3 menunjukkan penurunan signifikan.
+        Mahasiswa mulai tertinggal pada tahap analisis kasus lanjutan.
+        Distribusi nilai menunjukkan variansi tinggi antara mahasiswa kuat dan lemah.
+      </p>
+    </div>
+
+    <!-- ================= METODE ================= -->
+    <div class="mb-4">
+      <h5 class="text-primary"><strong>2. Temuan Metode Pembelajaran</strong></h5>
+      <ul>
+        <li>Studi kasus efektif meningkatkan pemahaman konseptual.</li>
+        <li>Ceramah murni kurang efektif untuk CPMK analitis.</li>
+        <li>Project akhir menjadi bottleneck utama kelas.</li>
+      </ul>
+    </div>
+
+    <!-- ================= PENILAIAN ================= -->
+    <div class="mb-4">
+      <h5 class="text-primary"><strong>3. Evaluasi Instrumen Penilaian</strong></h5>
+      <ul>
+        <li>Rubrik belum dipahami mahasiswa secara merata.</li>
+        <li>Instrumen cenderung mengukur teknis, bukan kedalaman analisis.</li>
+        <li>Bobot tugas akhir terlalu dominan.</li>
+      </ul>
+    </div>
+
+    <!-- ================= POLA MAHASISWA ================= -->
+    <div class="mb-4">
+      <h5 class="text-primary"><strong>4. Pola Mahasiswa</strong></h5>
+      <p>
+        Kelemahan dominan pada prasyarat konseptual.
+        Mahasiswa dengan kemampuan mandiri tinggi berkembang pesat,
+        namun mahasiswa dengan ketergantungan contoh mengalami stagnasi.
+      </p>
+    </div>
+
+    <hr>
+
+    <!-- ================= PRIORITAS TINDAK LANJUT ================= -->
+    <div class="alert alert-warning">
+      <h5><i class="fas fa-exclamation-triangle mr-1"></i> Isu Prioritas</h5>
+      <ul class="mb-0">
+        <li>Lonjakan kesulitan pada CPMK 3</li>
+        <li>Prasyarat mahasiswa belum merata</li>
+        <li>Desain instrumen perlu evaluasi ulang</li>
+      </ul>
+    </div>
+
+    <!-- ================= REKOMENDASI PENGADAAN ================= -->
+    <div class="alert alert-info">
+      <h5><i class="fas fa-lightbulb mr-1"></i> Rekomendasi untuk Prodi</h5>
+      <ul class="mb-0">
+        <li>Pengembangan modul prasyarat sebelum CPMK 3</li>
+        <li>Workshop penyusunan rubrik berbasis OBE</li>
+        <li>Pengadaan software simulasi untuk analisis kasus</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="card-footer text-right">
+    <button class="btn btn-outline-primary btn-sm">
+      <i class="fas fa-file-download mr-1"></i> Unduh Ringkasan
+    </button>
+  </div>
+
+</div>
+
          
         <!-- ========== CARD : Tabel Granular ========== -->
           <div class="card">

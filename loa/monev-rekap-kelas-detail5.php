@@ -24,7 +24,7 @@
 
     
 
-          <!-- ========== CARD : Filter & Export ========== -->
+<!-- ========== CARD : Filter & Export ========== -->
           <div class="card">
             <!-- <div class="card-header bg-secondary">
               <h5 class="card-title mb-0">
@@ -87,7 +87,7 @@
 
             <div class="card-footer">
               <div class="card-tools ms-auto">
-                <button type="button" 
+                 <button type="button" 
                 class="btn btn-outline-secondary btn-sm"
                 onclick="window.location.href='monev-rekap-kelas.php'">
                 <span class="fas fa-reply me-1"></span> Kembali
@@ -117,128 +117,123 @@
           </div>
 
           <!-- TAB NAV (Semester) -->
-         
            <ul class="nav nav-tabs">
             <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail.php'"><a class="nav-link ">Rekapitulasi</a></li>
             <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail4.php'"><a class="nav-link ">Remidi</a></li>
-            <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail3.php'"><a class="nav-link active">Portofolio</a></li>
+            <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail3.php'"><a class="nav-link ">Portofolio</a></li>
             <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail2.php'"><a class="nav-link ">Mahasiswa</a></li>
+            <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail5.php'"><a class="nav-link active">OBE</a></li>
           </ul>
 
-        
-      <!-- ========== CARD 3: Tabel saja ========== -->
-          <div class="card">
-            <div class="card-body">
-              <div class="table-responsive">
-                <table id="tbl" name="tbl" class="table table-sm table-hover table-bordered table-striped deta">
-                  <tbody>
-                    <tr>
-                      <td> 
-                        Dokumen RPS <span class="badge badge-success">Valid</span></td>
-                        <td width="40%">
-                          <a href="#" target="_blank" title="Unduh RPS">
-                            <button type="button" class="btn btn-xs btn-success" ><i class="fas fa-file"></i> Download</button>
-                          </a> 
-                    <small class="text-muted"><i>update_at</i></small>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td> 
-                        Materi Pembelajaran (slides, modul, bahan ajar) </td>
-                        <td width="40%">
-                          <a href="#" target="_blank">
-                            <button type="button" class="btn btn-xs btn-info"><i class="fas fa-link"></i> Download</button>
-                          </a> <i>update_at</i>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Dokumen Penugasan Mahasiswa <span class="badge badge-secondary">Proses</span></td>
-                          <td width="40%">
-                            <a href="https://drive.google.com/drive/folders/1Ba6yZ2KLWZC992tVO7wxpcfxaOYb8Eyi?usp=drive_link" target="_blank">
-                              <button type="button" class="btn btn-xs btn-info"><i class="fas fa-link"></i> Download</button>
-                            </a> <i>updated 19 sep 2025</i>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            Soal Ujian UTS/UAS <span class="badge badge-danger">Rejected</span> (dengan validasi prodi)</td>
-                            <td width="40%">
-                              <a href="https://drive.google.com/drive/folders/1Ba6yZ2KLWZC992tVO7wxpcfxaOYb8Eyi?usp=drive_link" target="_blank">
-                                <button type="button" class="btn btn-xs btn-info"><i class="fas fa-link"></i> Download</button>
-                              </a> <i>update_at</i>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                            Penilaian CPMK oleh Dosen</td>
-                            <td width="40%">
-                              <a href="monev-rekap-kelas-detail2.php">
-                                <button type="button" class="btn btn-xs btn-info"><i class="fas fa-link"></i> Download</button>
-                              </a> <i>update_at 21 Jan 2024</i>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                            Evaluasi Dosen oleh Mahasiswa</td>
-                            <td width="40%">
-                              <a href="portfolio_cpmk_detail2.php" target="_blank">
-                                <button type="button" class="btn btn-xs btn-info"><i class="fas fa-link"></i> Download</button>
-                              </a> <i>update_at</i>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-              </div>
-            </div>
-            <!-- /.card-body -->
-          </div>
 
-<!-- ================= Card  : Catatan evaluasi dan pengembangan ================= -->
-        
-          <div class="row">
+<!-- ========== CARD : tabel visualisasi CPMK ========== -->
+<div class="card">
+  <div class="card-body">
+    <div class="table-responsive">
+      <table class="table table-bordered table-striped table-sm">
+        <thead class="table-dark text-center">
+          <!-- Baris 1: CPL -->
+          <tr>
+            <!-- <th rowspan="2">Kode MK</th> -->
+            <th rowspan="2" colspan="2">CPMK</th>
+            <th colspan="2" data-bs-toggle="tooltip" title="CPL 1: Bertakwa kepada Tuhan Yang Maha Esa dan berperilaku islami">CPL 1</th>
+            <th colspan="2">CPL 2</th>
+            <th colspan="3">CPL 3</th>
+            <th colspan="2">CPL 4</th>
+            <th colspan="2">CPL 5</th>
+            <th colspan="2">CPL 6</th>
+            <th colspan="2">CPL 7</th>
+            <th>CPL 8</th>
+            <th colspan="2">CPL 9</th>
+            <th>CPL 10</th>
+          </tr>
+          <!-- Baris 2: IK -->
+          <tr>
+            <th data-bs-toggle="tooltip" title="IK 1: Menunjukkan perilaku islami pada setiap peran yang dijalani (50%)">IK 1</th>
+            <th>IK 2</th>
+            <th>IK 3</th>
+            <th>IK 4</th>
+            <th>IK 5</th>
+            <th>IK 6</th>
+            <th>IK 7</th>
+            <th>IK 8</th>
+            <th>IK 9</th>
+            <th>IK 10</th>
+            <th>IK 11</th>
+            <th>IK 12</th>
+            <th>IK 13</th>
+            <th>IK 14</th>
+            <th>IK 15</th>
+            <th>IK 16</th>
+            <th>IK 17</th>
+            <th>IK 18</th>
+            <th>IK 19</th>
+          </tr>
+        </thead>
 
-            <!-- Evaluasi -->
-            <div class="col-lg-6">
-              <div class="card h-100">
-                <div class="card-header bg-secondary text-white">
-                  <h5 class="card-title mb-0">
-                    <i class="fas fa-clipboard-list me-2"></i>
-                    Evaluasi Hasil Pembelajaran
-                  </h5>
-                </div>
+        <tbody>
+          <tr>
+            <td>STS704</td>
+            <td data-bs-toggle="tooltip" title="Deskripsi CPMK 1">1</td>
+            <td class="text-center">v</td><td></td>
+            <td></td><td></td>
+            <td></td><td></td><td></td>
+            <td></td><td></td>
+            <td></td><td></td>
+            <td></td><td></td>
+            <td></td><td></td>
+            <td></td>
+            <td></td><td></td><td></td>
+          </tr>
+          <tr>
+            <td>STS704</td>
+            <td>2</td>
+            <td></td><td class="text-center">v</td>
+            <td></td><td></td>
+            <td></td><td></td><td></td>
+            <td></td><td></td>
+            <td></td><td></td>
+            <td></td><td></td>
+            <td></td><td></td>
+            <td></td>
+            <td></td><td></td><td></td>
+          </tr>
+          <tr>
+            <td>STS704</td>
+            <td>3</td>
+            <td></td><td></td>
+            <td class="text-center">v</td><td></td>
+            <td></td><td></td><td></td>
+            <td></td><td></td>
+            <td></td><td></td>
+            <td></td><td></td>
+            <td class="text-center">v</td><td></td>
+            <td></td>
+            <td></td><td></td><td></td>
+          </tr>
+          <tr>
+            <td>STS704</td>
+            <td>4</td>
+            <td></td><td></td>
+            <td></td><td></td><td></td>
+            <td class="text-center">v</td><td></td>
+            <td></td><td></td>
+            <td></td><td></td>
+            <td class="text-center">v</td><td></td>
+            <td></td><td></td>
+            <td></td>
+            <td></td><td></td><td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
-                <div class="card-body">
-                  <p class="mb-0">
-                    secara keseluruhan pembelajaran telah berjalan dengan baik
-                  </p>
-                </div>
-            </div>
-          </div>
 
-          <!-- Rencana -->
-          <div class="col-lg-6">
-            <div class="card h-100">
-              <div class="card-header bg-secondary text-white">
-                <h5 class="card-title mb-0">
-                  <i class="fas fa-chart-line me-2"></i>
-                  Rencana Pengembangan Perkuliahan
-                </h5>
-              </div>
-
-              <div class="card-body">
-                  <p class="mb-0">
-                    perlu meningkatkan interaksi
-                  </p>
-                </div>
-          </div>
-        </div>
-
-      </div>
+  </div>
+</div>
 
 
 
-          
       </div>
     </div>
   </div>
@@ -306,151 +301,4 @@ jika ada kesamaan NIM di satu mata kuliah(artinya mahasiswa tempuh >1 kali MK ts
   </div>
 </div>
 
-
-<script>
-// Generate label CPMK 1 - 256
-const labelsCPMK = Array.from({ length: 40 }, (_, i) => `NIM ${i + 1}`);
-
-// Contoh nilai CPMK (0 - 100)
-const nilaiCPMK = Array.from({ length: 40 }, () =>
-  Math.floor(Math.random() * 101)
-);
-
-const cty = document.getElementById('barChartCPMK').getContext('2d');
-
-new Chart(cty, {
-  type: 'bar',
-  data: {
-    labels: labelsCPMK,
-    datasets: [{
-      label: 'Nilai CPMK 1',
-      data: nilaiCPMK,
-      backgroundColor: 'rgba(220, 53, 69, 0.8)', // merah (Bootstrap danger)
-      borderColor: 'rgba(220, 53, 69, 1)',
-      borderWidth: 1
-    }]
-  },
-  options: {
-    responsive: true,
-    maintainAspectRatio: false,
-    plugins: {
-      // title: {
-      //   display: true,
-      //   text: 'Capaian CPMK',
-      //   font: {
-      //     size: 18
-      //   }
-      // },
-      legend: {
-        position: 'top'
-      },
-      tooltip: {
-        callbacks: {
-          label: function(context) {
-            return `Nilai: ${context.raw}`;
-          }
-        }
-      }
-    },
-    scales: {
-      y: {
-        min: 0,
-        max: 100,
-        // title: {
-        //   display: true,
-        //   text: 'Nilai (0–100)'
-        // }
-      },
-      x: {
-        ticks: {
-          autoSkip: true,
-          maxTicksLimit: 30 // supaya tidak overload
-        },
-        title: {
-          display: true,
-          // text: 'CPMK'
-        }
-      }
-    }
-  }
-});
-</script>
-
-
-
-<script>
-// Generate label CPMK 1 - 256
-const labelsCPMK2 = Array.from({ length: 40 }, (_, i) => `NIM ${i + 1}`);
-
-// Contoh nilai CPMK (0 - 100)
-const nilaiCPMK2 = Array.from({ length: 40 }, () =>
-  Math.floor(Math.random() * 101)
-);
-
-const cty2 = document.getElementById('barChartCPMK2').getContext('2d');
-
-new Chart(cty2, {
-  type: 'bar',
-  data: {
-    labels: labelsCPMK2,
-    datasets: [{
-      label: 'Nilai CPMK 2',
-      data: nilaiCPMK2,
-      backgroundColor: 'rgba(220, 53, 69, 0.8)', // merah (Bootstrap danger)
-      borderColor: 'rgba(220, 53, 69, 1)',
-      borderWidth: 1
-    }]
-  },
-  options: {
-    responsive: true,
-    maintainAspectRatio: false,
-    plugins: {
-      // title: {
-      //   display: true,
-      //   text: 'Capaian CPMK',
-      //   font: {
-      //     size: 18
-      //   }
-      // },
-      legend: {
-        position: 'top'
-      },
-      tooltip: {
-        callbacks: {
-          label: function(context) {
-            return `Nilai: ${context.raw}`;
-          }
-        }
-      }
-    },
-    scales: {
-      y: {
-        min: 0,
-        max: 100,
-        // title: {
-        //   display: true,
-        //   text: 'Nilai (0–100)'
-        // }
-      },
-      x: {
-        ticks: {
-          autoSkip: true,
-          maxTicksLimit: 30 // supaya tidak overload
-        },
-        title: {
-          display: true,
-          // text: 'CPMK'
-        }
-      }
-    }
-  }
-});
-</script>
-
 <?php include('5script.php'); ?>
-
-
-
-
-
-
