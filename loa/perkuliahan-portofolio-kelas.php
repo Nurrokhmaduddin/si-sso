@@ -49,6 +49,26 @@
                 <button class="btn btn-outline-info btn-sm " data-bs-toggle="modal" data-bs-target="#modalFilter">
                   <i class="fas fa-filter me-1"></i> Filter
                 </button>
+                <button type="button"
+                class="btn btn-outline-primary btn-sm"
+                data-bs-toggle="modal"
+                data-bs-target="#modalBlastNotifikasi"
+                data-bs-placement="top"
+                title="Notifikasi"
+                data-bs-custom-class="tooltip-primary">
+                <i class="fas fa-paper-plane me-1"></i> Blast
+              </button>
+              
+              <button type="button"
+              class="btn btn-outline-primary btn-sm"
+              data-bs-toggle="modal"
+              data-bs-target="#modalBlastNotifikasi"
+              data-bs-placement="top"
+              title="Notifikasi"
+              data-bs-custom-class="tooltip-primary">
+              <i class="fas fa-paper-plane me-1"></i> Blast
+            </button>
+
                 <!-- <button type="button" class="btn btn-outline-primary btn-sm " data-bs-toggle="modal" data-bs-target="#modalTambahData">
                   <i class="fas fa-plus me-1"></i> Add
                 </button>
@@ -759,4 +779,51 @@ jika ada kesamaan NIM di satu mata kuliah(artinya mahasiswa tempuh >1 kali MK ts
     </div>
   </div>
 </div>
+
+
+<!-- Modal Blast Notifikasi -->
+<div class="modal fade" id="modalBlastNotifikasi" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content border-0 shadow">
+
+      <!-- Header -->
+      <div class="modal-header bg-light">
+        <h5 class="modal-title fw-semibold">
+          <i class="fas fa-bullhorn text-primary me-2"></i>
+          Konfirmasi Blast Notifikasi
+        </h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <!-- Body -->
+      <div class="modal-body text-center py-4">
+        <div class="mb-3">
+          <i class="fas fa-paper-plane fa-3x text-primary opacity-75"></i>
+        </div>
+        <p class="mb-2 fw-medium">
+          Anda akan mengirimkan notifikasi 
+        </p>
+        <p class="mb-3">
+          <strong>Reminder Penguploadan RPS</strong><br>
+          kepada <strong>seluruh dosen</strong>.
+        </p>
+        <p class="text-muted small mb-0">
+          Pastikan informasi sudah benar sebelum melanjutkan.
+        </p>
+      </div>
+
+      <!-- Footer -->
+      <div class="modal-footer bg-light">
+        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+          Batal
+        </button>
+        <button type="button" class="btn btn-primary">
+          <i class="fas fa-paper-plane me-1"></i> Ya, Kirim Notifikasi
+        </button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
 <?php include('5script.php'); ?>

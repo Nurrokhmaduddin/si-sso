@@ -141,12 +141,12 @@
             <!-- Bagian Tombol -->
             <div class="row text-center mt-3">
               <div class="col">
-                <button class="btn btn-outline-info btn-sm w-100" data-toggle="collapse" data-target="#daftarIKCPL41">
+                <button class="btn btn-outline-info btn-sm w-100" data-bs-toggle="collapse" data-bs-target="#daftarIKCPL41">
                   Rangking Performa
                 </button>
               </div>
               <div class="col">
-                <button class="btn btn-outline-info btn-sm w-100" data-toggle="collapse" data-target="#daftarIKCPL43">
+                <button class="btn btn-outline-info btn-sm w-100" data-bs-toggle="collapse" data-bs-target="#daftarIKCPL43">
                   Overview Kelas
                 </button>
               </div>

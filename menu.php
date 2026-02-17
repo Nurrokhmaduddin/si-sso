@@ -166,8 +166,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
    
-     <!-- Bottom Section -->
-  <div class="bottom-section container ">
+   <!-- Bottom Section -->
+   <div class="bottom-section container ">
     <!-- <h1>MENU UTAMA</h1> -->
     <p class="description">[Pengguna Aktif] Silahkan pilih sistem informasi atau proses bisnis yang ingin diakses</p>
     <div class="row g-4 justify-content-center menu-grid">
@@ -204,7 +204,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <h3>School</h3>
         <p>Pengelolaan Sekolah</p>
       </a>
- <a href="sqa/" class="menu-card">
+      <a href="sqa/" class="menu-card">
         <h3>SQA</h3>
         <p>Test QA</p>
       </a>
@@ -213,8 +213,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
       
     </div>
   </div>
-   
-  </div>
+  
+</div>
   <!-- /.content-wrapper -->
 
   <!-- Control Sidebar -->

@@ -35,63 +35,14 @@
               </div>
             </div> -->
 
-            <div class="card-body ">
-              <div class="row">   
-                <div class="col-lg-7">
-                  <table class="table table-sm table-hover table-bordered table-striped deta">
-                    <tbody>
-                      <tr>
-                        <td width="30%"><b> Tahun Akademik</b></td>
-                        <td>2024/2025 - Gasal</td>
-                      </tr>
-                      <tr>
-                        <td width="30%"><b> Dosen Pengampu</b></td>
-                        <td>Tri Nugroho Sulistyantoro, S.T., M.T. - (195110502)</td>
-                      </tr>
-                      <tr>
-                        <td width="30%"><b> Mata Kuliah</b></td>
-                        <td>Metode Pelaksanaan Bangunan - (STS704)</td>
-                      </tr>
-                      <tr>
-                        <td width="30%"><b> Tanggal Posting </b></td>
-                        <td>23 Januari 2024</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-                <div class="col-lg-5">
-                  <table class="table table-sm table-hover table-bordered table-striped deta">
-                    <tbody>
-                      <tr>
-                        <td width="30%"><b> Jumlah CPMK</b></td>
-                        <td>5</td>
-                      </tr>
-                      <tr>
-                        <td width="30%"><b> Kelas</b></td>
-                        <td>A</td>
-                      </tr>
-                      <tr>
-                        <td width="30%"><b> Peminatan</b></td>
-                        <td>Civil Engineering Regular - (511)</td>
-                      </tr>
-                      <tr>
-                        <td width="30%"><b> Mahasiswa</b></td>
-                        <td>40</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-
-            </div>
-
+            
             <div class="card-footer">
               <div class="card-tools ms-auto">
-                 <button type="button" 
+                 <!-- <button type="button" 
                 class="btn btn-outline-secondary btn-sm"
                 onclick="window.location.href='monev-rekap-kelas.php'">
                 <span class="fas fa-reply me-1"></span> Kembali
-              </button>
+              </button> -->
 
                 <!-- <button class="btn btn-outline-info btn-sm " data-bs-toggle="modal" data-bs-target="#modalFilter">
                   <i class="fas fa-filter me-1"></i> Filter

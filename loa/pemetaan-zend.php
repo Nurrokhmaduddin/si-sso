@@ -1,3 +1,4 @@
+<?php $page = 'pemetaan_zend'; ?>
 <?php include('1header.php'); ?>
 <?php include('2navbar.php'); ?>
 <?php include('3sidebar.php'); ?>
@@ -64,12 +65,13 @@
         </div>
 
 
+  <!-- TAB NAV  -->
+  <ul class="nav nav-tabs">   
+    <li class="nav-item" onclick="window.location='pemetaan-zend.php'"><a class="nav-link active">Pemetaan</a></li>
+    <li class="nav-item" onclick="window.location='pemetaan-zend2.php'"><a class="nav-link ">Pembobotan</a></li>
+    <li class="nav-item" onclick="window.location='pemetaan-zend3.php'"><a class="nav-link ">Preview</a></li>
+  </ul>
 
-        <div style="text-align: left;" class="mr-2">
-          <button type="button"  onclick="window.location=;" class="btn btn-info btn-tab">Pemetaan</button>
-          <button type="button"  onclick="window.location=;" class="btn btn-default btn-tab">Pembobotan</button>
-          <button type="button"  onclick="window.location=;" class="btn btn-default btn-tab">Preview</button>
-        </div>
 
         <div class="card">
           <div class="card-header">
