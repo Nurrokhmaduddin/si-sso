@@ -237,3 +237,100 @@
       </div>
     </div>
   </section>
+</div>
+
+<?php include('4footer.php'); ?>
+
+  <!-- Modal Tambah IK -->
+<div class="modal fade" id="modalTambahIK" tabindex="-1" role="dialog" aria-labelledby="modalTambahIKLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalTambahIKLabel">➕ Tambah IK</h5>
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Tutup">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="formTambahIK">
+          <div class="form-group">
+            <label for="selectIK">Pilih Indikator (IK)</label>
+            <select class="form-control" id="selectIK" required>
+              <option value="">-- Pilih IK --</option>
+              <option value="IK1">11.1. Mampu merumuskan masalah ketekniksipilan</option>
+              <option value="IK2">11.2. Mampu memanfaatkan referensi dan sumber daya</option>
+              <!-- Tambah opsi lain sesuai kebutuhan -->
+            </select>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+        <button type="submit" class="btn btn-primary" form="formTambahIK">Simpan</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Tambah MK-CPMK -->
+<div class="modal fade" id="modalTambahMKCPMK1" tabindex="-1" role="dialog" aria-labelledby="modalTambahMKCPMK1Label" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalTambahMKCPMK1Label">➕ Tambah MK-CPMK</h5>
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Tutup">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="formTambahMKCPMK1">
+          <div class="form-group">
+            <label for="selectMK">Pilih Mata Kuliah</label>
+            <select class="form-control" id="selectMK" required>
+              <option value="">-- Pilih Mata Kuliah --</option>
+              <option value="MK1">MK Struktur Beton</option>
+              <option value="MK2">MK Mekanika Tanah</option>
+              <option value="MK3">MK Geoteknik</option>
+              <!-- Tambah opsi lain sesuai kebutuhan -->
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="selectCPMK">Pilih CPMK</label>
+            <select class="form-control" id="selectCPMK" required>
+              <option value="">-- Pilih CPMK --</option>
+              <option value="CPMK1">CPMK 1</option>
+              <option value="CPMK2">CPMK 2</option>
+              <option value="CPMK3">CPMK 3</option>
+              <!-- Tambah opsi lain sesuai kebutuhan -->
+            </select>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+        <button type="submit" class="btn btn-primary" form="formTambahMKCPMK1">Simpan</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Bantuan -->
+<div class="modal fade" id="modalBantuan" tabindex="-1" aria-labelledby="modalBantuanLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header bg-primary text-white">
+        <h5 class="modal-title" id="modalBantuanLabel">Bantuan Tabel</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>pilihan developmen :
+        -pembobotan dg koefisien, atau persentase
+      -pembobotan hanya IK, atau IK dan CPMK</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+      </div>
+    </div>
+  </div>
+</div>
+<?php include('5script.php'); ?>

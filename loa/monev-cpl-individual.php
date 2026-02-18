@@ -1775,4 +1775,87 @@ generateHorizontalChart(
         }
     });
 </script>
+
+<!-- Modal: Detail MK Student -->
+<div class="modal fade" id="modalStudentMK" tabindex="-1" aria-labelledby="modalStudentMKLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+
+      <!-- HEADER -->
+      <div class="modal-header bg-info text-white py-2">
+        <h6 class="modal-title mb-0" id="modalStudentMKLabel">
+          <i class="fas fa-book-open me-2"></i> Detail MK Student
+        </h6>
+        <button type="button" class="btn-close btn-close-white" data-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <!-- BODY -->
+      <div class="modal-body small pb-1">
+
+        <!-- INFORMASI UMUM -->
+        <div class="mb-3">
+          <dl class="row mb-0">
+            <dt class="col-4">Set Pemetaan</dt>
+            <dd class="col-8" id="mkSetPemetaan">SKO 24</dd>
+
+            <dt class="col-4">NIM</dt>
+            <dd class="col-8" id="mkNim">129873691</dd>
+
+            <dt class="col-4">Mata Kuliah</dt>
+            <dd class="col-8" id="mkNamaMk">SKS119 Pengantar Pancasila</dd>
+          </dl>
+        </div>
+
+        <!-- INFORMASI DETAIL -->
+        <div class="table-responsive">
+          <table class="table table-bordered table-striped table-sm mb-0">
+            <thead class="text-center bg-light">
+              <tr class="text-uppercase small">
+                <th>Periode</th>
+                <th>Angka</th>
+                <th>Huruf</th>
+                <th>CPMK 1</th>
+                <th>Perb. 1</th>
+                <th>CPMK 2</th>
+                <th>Perb. 2</th>
+                <th>CPMK 3</th>
+                <th>Perb. 3</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>2021/2022 Genap</td>
+                <td>71</td>
+                <td>B+</td>
+                <td>76</td>
+                <td></td>
+                <td>78</td>
+                <td></td>
+                <td>67</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>2020/2021 Genap</td>
+                <td>56</td>
+                <td>D+</td>
+                <td>58</td>
+                <td>69</td>
+                <td>59</td>
+                <td>69</td>
+                <td>70</td>
+                <td>70</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- FOOTER -->
+      <div class="modal-footer py-2">
+        <button class="btn btn-secondary btn-sm" data-dismiss="modal">Tutup</button>
+      </div>
+
+    </div>
+  </div>
+</div>
 <?php include('5script.php'); ?>

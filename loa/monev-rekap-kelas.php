@@ -65,9 +65,9 @@
                 <!-- <button type="button" class="btn btn-outline-primary btn-sm " data-bs-toggle="modal" data-bs-target="#modalTambahData">
                   <i class="fas fa-plus me-1"></i> Add
                 </button> -->
-                <button type="button" class="btn btn-outline-primary btn-sm " data-bs-toggle="modal" data-bs-target="#modalImpor">
+                <!-- <button type="button" class="btn btn-outline-primary btn-sm " data-bs-toggle="modal" data-bs-target="#modalImpor">
                   <i class="fas fa-file-upload me-1"></i> Import
-                </button>  
+                </button> -->  
                 <!-- <button type="button" class="btn btn-outline-warning btn-sm " data-bs-toggle="modal" data-bs-target="#modalImpor">
                   <i class="fas fa-file-upload me-1"></i> Import from Gateway UII
                 </button>  -->             
@@ -140,11 +140,11 @@
 
             <!-- Bagian Tombol -->
             <div class="row text-center mt-3">
-              <div class="col">
+              <!-- <div class="col">
                 <button class="btn btn-outline-info btn-sm w-100" data-bs-toggle="collapse" data-bs-target="#daftarIKCPL41">
                   Rangking Performa
                 </button>
-              </div>
+              </div> -->
               <div class="col">
                 <button class="btn btn-outline-info btn-sm w-100" data-bs-toggle="collapse" data-bs-target="#daftarIKCPL43">
                   Overview Kelas
@@ -152,13 +152,13 @@
               </div>
               <div class="col">
                 <button class="btn btn-outline-danger btn-sm w-100" onclick="openAllRisikoPreview()">
-                  Performa Risiko
+                  Kelas Risiko
                 </button>
               </div>
             </div>
 
           </div>
-        </div>
+        
 
         <!-- Rangking Performa -->
         <div class="row collapse" id="daftarIKCPL41" >
@@ -677,7 +677,7 @@
 
         <!-- Table Overview Eviden -->
         <div class="card mb-4 collapse" id="daftarIKCPL43" >
-          <div class="card-header bg-light">
+          <div class="card-header bg-dark">
             <strong>Overview Kelengkapan Eviden</strong>
           </div>
           <div class="card-body p-0">
@@ -698,8 +698,8 @@
                   <td>23</td>
                   <td>46</td>
                   <td><span class="badge badge-success">74%</span></td>
-                  <td><a href="#" class="btn btn-sm btn-info">Lihat Daftar Kosong</a></td>
-                  <td>RPS, Kontrak, Mapping CPL</td>
+                  <td><button class="btn btn-sm btn-outline-danger" onclick="openAllStudentsPreview()">Lihat Daftar Kosong</button></td>
+                  <td>RPS, Kontrak, Mapping CPL</td> 
                 </tr>
                 <tr>
                   <td>Pelaksanaan</td>
@@ -746,7 +746,7 @@
           </div>
         </div>
 
-
+</div><!-- end card grafik -->
         <!-- ========== CARD : Tabel Granular ========== -->
           <div class="card">
             <div class="card-header">
@@ -1237,8 +1237,8 @@
 
 <script>
     // Data
-    const labels = ["Perencanaan", "Pelaksanaan", "Penugasan", "Penilaian", "Capaian", "CQI"];
-
+    // const labels = ["Perencanaan", "Pelaksanaan", "Penugasan", "Penilaian", "Capaian", "CQI"];
+    const labels = ["RPS", "Materi Ajar", "Penugasan", "Soal Ujian", "Nilai CPMK", "EDOM"];
     const kosong = [23, 35, 28, 42, 18, 52];
     const ada = [46, 34, 41, 27, 51, 17];
 
@@ -1313,18 +1313,59 @@
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
         <div class="modal-header bg-secondary text-white">
-          <h6 class="modal-title">Preview Mahasiswa Risiko (sample)</h6>
+          <h6 class="modal-title">Daftar Kelas Kosong Eviden</h6>
           <button type="button" class="btn-close btn-close-white" data-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <table class="table table-sm table-bordered">
-            <thead class="table-light"><tr><th>#</th><th>NIM</th><th>Nama</th><th>CP Lower</th></tr></thead>
+          <table class="table table-sm table-bordered table-striped">
+            <thead class="table-light text-center">
+              <tr>
+                <th width="5%">No</th>
+                <th>Kode Jalur</th>
+                <th>Kode MK</th>
+                <th>Nama MK</th>
+                <th>Kelas</th>
+                <th>Daftar Dosen Pengampu</th>
+              </tr>
+            </thead>
             <tbody>
-              <tr><td>1</td><td>20241099</td><td>Mahasiswa Minimal</td><td>61 (CPL-01)</td></tr>
-              <tr><td>2</td><td>20241077</td><td>Siswa Risiko</td><td>48 (CPL-04)</td></tr>
-              <tr><td>3</td><td>20241055</td><td>Contoh Lain</td><td>45 (CPL-09)</td></tr>
+              <tr>
+                <td class="text-center">1</td>
+                <td class="text-center">REG-A</td>
+                <td class="text-center">STS704</td>
+                <td>Metode Pelaksanaan Bangunan</td>
+                <td class="text-center">A</td>
+                <td>
+                  Dr. Ir. Budi Santoso, M.T.<br>
+                  Ir. Sari Wulandari, M.T.
+                </td>
+              </tr>
+
+              <tr>
+                <td class="text-center">2</td>
+                <td class="text-center">REG-B</td>
+                <td class="text-center">STS913</td>
+                <td>Struktur Komposit</td>
+                <td class="text-center">B</td>
+                <td>
+                  Dr. Ahmad Fauzi, M.Sc.<br>
+                  Ir. Lina Marlina, M.T.
+                </td>
+              </tr>
+
+              <tr>
+                <td class="text-center">3</td>
+                <td class="text-center">INT-A</td>
+                <td class="text-center">STS702</td>
+                <td>Struktur Baja</td>
+                <td class="text-center">A</td>
+                <td>
+                  Prof. Dr. Ir. Hendra Wijaya, M.Eng.
+                </td>
+              </tr>
             </tbody>
           </table>
+
         </div>
         <div class="modal-footer">
           <button class="btn btn-secondary btn-sm" data-dismiss="modal">Tutup</button>
@@ -1338,16 +1379,56 @@
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
         <div class="modal-header bg-secondary text-white">
-          <h6 class="modal-title">Preview Performa Risiko (sample)</h6>
+          <h6 class="modal-title">Daftar Kelas Kosong Kelengkapan</h6>
           <button type="button" class="btn-close btn-close-white" data-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <table class="table table-sm table-bordered">
-            <thead class="table-light"><tr><th>#</th><th>Kode</th><th>Deskripsi</th><th>Nilai Performa</th></tr></thead>
+          <table class="table table-sm table-bordered table-striped">
+            <thead class="table-light text-center">
+              <tr>
+                <th width="5%">No</th>
+                <th>Kode Jalur</th>
+                <th>Kode MK</th>
+                <th>Nama MK</th>
+                <th>Kelas</th>
+                <th>Daftar Dosen Pengampu</th>
+              </tr>
+            </thead>
             <tbody>
-              <tr><td>1</td><td>CPL-01</td><td>lorem ipsum</td><td>61 </td></tr>
-              <tr><td>2</td><td>CPL-04</td><td>lorem ipsum</td><td>48 </td></tr>
-              <tr><td>3</td><td>CPL-06</td><td>Contoh Lain</td><td>45 </td></tr>
+              <tr>
+                <td class="text-center">1</td>
+                <td class="text-center">REG-A</td>
+                <td class="text-center">STS704</td>
+                <td>Metode Pelaksanaan Bangunan</td>
+                <td class="text-center">A</td>
+                <td>
+                  Dr. Ir. Budi Santoso, M.T.<br>
+                  Ir. Sari Wulandari, M.T.
+                </td>
+              </tr>
+
+              <tr>
+                <td class="text-center">2</td>
+                <td class="text-center">REG-B</td>
+                <td class="text-center">STS913</td>
+                <td>Struktur Komposit</td>
+                <td class="text-center">B</td>
+                <td>
+                  Dr. Ahmad Fauzi, M.Sc.<br>
+                  Ir. Lina Marlina, M.T.
+                </td>
+              </tr>
+
+              <tr>
+                <td class="text-center">3</td>
+                <td class="text-center">INT-A</td>
+                <td class="text-center">STS702</td>
+                <td>Struktur Baja</td>
+                <td class="text-center">A</td>
+                <td>
+                  Prof. Dr. Ir. Hendra Wijaya, M.Eng.
+                </td>
+              </tr>
             </tbody>
           </table>
         </div>

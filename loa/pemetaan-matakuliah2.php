@@ -92,7 +92,8 @@
             					<th>Kurikulum</th>
             					<th>Kode MK</th>
             					<th>Nama MK</th>                    
-            					<th>Sifat Pengambilan</th>                
+            					<th>Sifat Pengambilan</th>
+                      <th>Semester Tempuh</th>                
             					<th>Jumlah SKS</th>
             					<th>Aksi</th>
             				</tr>
@@ -104,6 +105,7 @@
             					<td>STS704</td>
             					<td>Metode Pelaksanaan Bangunan</td>
             					<td class="text-center"><span class="badge badge-success">Wajib</span></td>
+                      <td class="text-center">1</td>
             					<td>3</td>
             					<td class="text-center">
             						<button type="button" class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#modalEditAkun">✏️</button>
@@ -116,9 +118,9 @@
             					<td>STS913</td>
             					<td>Struktur Komposit</td>
             					<td class="text-center"><span class="badge badge-info">Pilihan</span></td>
+                      <td class="text-center">1</td>
             					<td>3</td>
             					<td class="text-center">
-
             						<button type="button" class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#modalEditAkun">✏️</button>
             						<button type="button" class="btn btn-sm btn-outline-danger" data-toggle="modal" data-target="#modalHapusAkun">🗑️</button>
             					</td>
@@ -129,6 +131,7 @@
             					<td>51175111</td>
             					<td>Building Structures Design</td>                   
             					<td class="text-center"><span class="badge badge-success">Wajib</span></td>
+                      <td class="text-center">1</td>
             					<td>3</td>
             					<td class="text-center">
 
@@ -142,6 +145,7 @@
             					<td>STS-101</td>
             					<td>Engineering Statistics</td>                    
             					<td class="text-center"><span class="badge badge-success">Wajib</span></td>
+                      <td class="text-center">2</td>
             					<td>3</td>
             					<td class="text-center">
 
@@ -155,7 +159,8 @@
             					<td>STS307</td>
             					<td>Bahan Perkerasan Jalan (+Pr)</td>
             					<td class="text-center"><span class="badge badge-info">Pilihan</span></td>
-            					<td>3</td>
+            					<td class="text-center">2</td>
+                      <td>3</td>
             					<td class="text-center">
 
             						<button type="button" class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#modalEditAkun">✏️</button>
@@ -168,7 +173,8 @@
             					<td>STS702</td>
             					<td>Struktur Baja</td>
             					<td class="text-center"><span class="badge badge-info">Pilihan</span></td>
-            					<td>3</td>
+            					<td class="text-center">2</td>
+                      <td>3</td>
             					<td class="text-center">
 
             						<button type="button" class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#modalEditAkun">✏️</button>
@@ -181,7 +187,8 @@
             					<td>51195142</td>
             					<td>Perancangan Struktur Jembatan</td>
             					<td class="text-center"><span class="badge badge-info">Pilihan</span></td>
-            					<td>2</td>
+            					<td class="text-center">2</td>
+                      <td>2</td>
             					<td class="text-center">
 
             						<button type="button" class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#modalEditAkun">✏️</button>
@@ -194,7 +201,8 @@
             					<td>51155081</td>
             					<td>Introduction to Earthquake Engineering</td>
             					<td class="text-center"><span class="badge badge-info">Pilihan</span></td>
-            					<td>2</td>
+            					<td class="text-center">2</td>
+                      <td>2</td>
             					<td class="text-center">
 
             						<button type="button" class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#modalEditAkun">✏️</button>
@@ -207,7 +215,8 @@
             					<td>STS904</td>
             					<td>BIM untuk Manajemen Konstruksi</td>
             					<td class="text-center"><span class="badge badge-info">Pilihan</span></td>
-            					<td>3</td>
+            					<td class="text-center">2</td>
+                      <td>3</td>
             					<td class="text-center">
 
             						<button type="button" class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#modalEditAkun">✏️</button>
@@ -220,7 +229,8 @@
             					<td>51153061</td>
             					<td>Water Structures Design</td>
             					<td class="text-center"><span class="badge badge-info">Pilihan</span></td>
-            					<td>3</td>
+            					<td class="text-center">3</td>
+                      <td>3</td>
             					<td class="text-center">
 
             						<button type="button" class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#modalEditAkun">✏️</button>
@@ -337,10 +347,19 @@
           <!-- Nama MK -->
           <div class="form-group row mb-2">
             <label for="nama_mk" class="col-sm-3 col-form-label">
-              Nama MK <span class="text-danger">*</span>
+              Nama MK (IDN) <span class="text-danger">*</span>
             </label>
             <div class="col-sm-9">
-              <input type="text" class="form-control" id="nama_mk" name="nama_mk" placeholder="Contoh: Metode Pelaksanaan Bangunan" required>
+              <input type="text" class="form-control" id="nama_mk" name="nama_mk" placeholder="Contoh: Matematika 1" required>
+            </div>
+          </div>
+
+          <div class="form-group row mb-2">
+            <label for="nama_mk" class="col-sm-3 col-form-label">
+              Nama MK (EN)
+            </label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" id="nama_mk" name="nama_mk" placeholder="Contoh: Mathematic 1" required>
             </div>
           </div>
 

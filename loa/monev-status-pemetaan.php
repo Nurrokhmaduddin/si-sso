@@ -100,14 +100,14 @@
 
     <!-- ========== CARD 4: Stacked Bar Chart — Proporsi ========== -->
     <style>
-  .chart-container {
-      position: relative;
-      height: 300px;
-  }
-</style>
-        <div class="card">
-          <div class="card-header">
-            <h5 class="card-title mb-0"><i class="fas fa-chart-bar me-2"></i> Stacked Bar Chart — Proporsi (%)</h5>
+      .chart-container {
+        position: relative;
+        height: 300px;
+      }
+    </style>
+    <div class="card">
+      <div class="card-header">
+        <h5 class="card-title mb-0"><i class="fas fa-chart-bar me-2"></i> Stacked Bar Chart — Proporsi (%)</h5>
             <div class="card-tools">
               <small class="text-muted">Set Pemetaan Terpilih</small>
             </div>
@@ -145,13 +145,46 @@
             </div>
 
           </div>
-        </div>
-
+        
+        <!-- Table CPL–IK Overview -->
+        <div class="card collapse" id="daftarIKCPL42" >          
+          <!-- <div class="card mb-4"> -->
+            <div class="card-header bg-dark">
+              <strong>Overview Pemetaan CPL–IK</strong>
+            </div>
+            <div class="card-body p-0">
+              <table class="table table-bordered table-striped mb-0">
+                <thead class="thead-light text-center">
+                  <tr>
+                    <th>CPL</th>
+                    <th>Jumlah IK Pendukung</th>
+                    <th>Total CPMK Turunan</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody class="text-center">
+                  <tr>
+                    <td>CPL-1</td>
+                    <td>4</td>
+                    <td>12</td>
+                    <td><span class="badge badge-success">Kuat</span></td>
+                  </tr>
+                  <tr>
+                    <td>CPL-3</td>
+                    <td>2</td>
+                    <td>4</td>
+                    <td><span class="badge badge-danger">Lemah</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          <!-- </div> -->
+        </div>     
         <!-- Table IK–CPMK Overview -->
         <div class="card collapse" id="daftarIKCPL41" >
           <!-- Table IK–CPMK Overview -->
-          <div class="card mb-4">
-            <div class="card-header bg-light">
+          <!-- <div class="card mb-4"> -->
+            <div class="card-header bg-dark">
               <strong>Overview Pemetaan IK–CPMK</strong>
             </div>
             <div class="card-body p-0">
@@ -183,135 +216,13 @@
                 </tbody>
               </table>
             </div>
-          </div>
+          <!-- </div> -->
         </div>
-        <!-- Table CPL–IK Overview -->
-        <div class="card collapse" id="daftarIKCPL42" >          
-          <div class="card mb-4">
-            <div class="card-header bg-light">
-              <strong>Overview Pemetaan CPL–IK</strong>
-            </div>
-            <div class="card-body p-0">
-              <table class="table table-bordered table-striped mb-0">
-                <thead class="thead-light text-center">
-                  <tr>
-                    <th>CPL</th>
-                    <th>Jumlah IK Pendukung</th>
-                    <th>Total CPMK Turunan</th>
-                    <th>Status</th>
-                  </tr>
-                </thead>
-                <tbody class="text-center">
-                  <tr>
-                    <td>CPL-1</td>
-                    <td>4</td>
-                    <td>12</td>
-                    <td><span class="badge badge-success">Kuat</span></td>
-                  </tr>
-                  <tr>
-                    <td>CPL-3</td>
-                    <td>2</td>
-                    <td>4</td>
-                    <td><span class="badge badge-danger">Lemah</span></td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-
-        </div>        
-        <!-- daftar min/max/rerate -->
-        <div class="card collapse" >
-          <div class="card-header d-flex align-items-center">
-            <h5 class="card-title mb-0"><i class="fas fa-table me-2"></i> Tabel Pencapaian</h5>
-            <div class="card-tools ms-auto">
-              <!-- <small class="text-muted">Klik angka Min/Max untuk melihat 1 mahasiswa (NIM / Nama / Nilai)</small> -->
-            </div>
-          </div>
-          <div class="card-body">
-            <div class="table-responsive">
-              <table id="tblCplStats" class="table table-hover table-bordered table-sm">
-                <thead class="table-light">
-                  <tr>
-                    <th style="width: 40px">#</th>
-                    <th>CPMK Code</th>
-                    <th class="text-center">Nilai</th>
-                    <th class="text-center">Status</th>
-                  </tr>
-                </thead>
-                <tbody>                
-                  <tr>
-                    <td>1</td>
-                    <td>SKS982: Pemahaman Dasar Polimer</td>
-                    <td class="text-center">72.14%</td>
-                    <td class="text-center">🟨 Cukup</td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>SKS917: Teori Komposit</td>
-                    <td class="text-center">71.50%</td>
-                    <td class="text-center">🟨 Cukup</td>
-                  </tr>
-                  <tr>
-                    <td>3</td>
-                    <td>UNI902: Aplikasi Polimer</td>
-                    <td class="text-center">76.80%</td>
-                    <td class="text-center">🟨 Cukup</td>
-                  </tr>
-                  <tr>
-                    <td>4</td>
-                    <td>UNI912: Proses Produksi</td>
-                    <td class="text-center">76.80%</td>
-                    <td class="text-center">🟨 Cukup</td>
-                  </tr>
-                  <tr>
-                    <td>5</td>
-                    <td>SKS234: Analisis Material</td>
-                    <td class="text-center">75.30%</td>
-                   <td class="text-center">🟨 Cukup</td>
-                  </tr>
-                  <tr>
-                    <td>6</td>
-                    <td>SKS812: Keselamatan & Etika</td>
-                     <td class="text-center">76.80%</td>
-                    <td class="text-center">🟨 Cukup</td>
-                  </tr>
-                  <tr>
-                    <td>7</td>
-                    <td>SKS908: Desain Proses</td>                    
-                    <td class="text-center">73.40%</td>
-                    <td class="text-center">🟨 Cukup</td>
-                  </tr>
-                  <tr>
-                    <td>8</td>
-                    <td>SKS111: Metode Eksperimental</td>
-                    <td class="text-center">71.50%</td>
-                    <td class="text-center">🟨 Cukup</td>
-                  </tr>
-                  <tr>
-                    <td>9</td>
-                    <td>SKS113: Statistik & Analisis Data</td>
-                    <td class="text-center">71.50%</td>
-                    <td class="text-center">🟨 Cukup</td>
-                  </tr>
-                  <tr>
-                    <td>10</td>
-                    <td>SKS932: Komunikasi Teknis</td>                    
-                    <td class="text-center">75.00%</td>
-                    <td class="text-center">🟨 Cukup</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>                 
-        </div>
-       
 
         <!-- Table MK–CPMK Overview -->
         <div class="card mb-4 collapse" id="daftarIKCPL43" >
-
-          <div class="card mb-4">
-            <div class="card-header bg-light">
+          <!-- <div class="card mb-4"> -->
+            <div class="card-header bg-dark">
               <strong>Overview Pemetaan MK–CPMK</strong>
             </div>
             <div class="card-body p-0">
@@ -346,11 +257,11 @@
                 </tbody>
               </table>
             </div>
-          </div>
+          <!-- </div> -->
         </div>
 
 
-
+</div>
 
 
  <!-- ========== CARD 4: Overview Pemetaan ========== -->

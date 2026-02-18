@@ -84,16 +84,16 @@
                 <div class="card-header">
                   <h5 class="card-title">
                     <i class="fas fa-cogs"></i> 
-                    &nbsp;Periode Akademi Aktif
+                    &nbsp;Periode Akademik Aktif
                   </h5>
                 </div>
                 <div class="card-body">
                   <form action="https://loa.simtekim-uii.id/loa/konfigurasi/edit_konfigurasi_periode_akademik_aktif" method="POST">
                     <input type="hidden" name="kode_periode_akademik" value="KR13">
                     <div class="form-group">
-                      <label>Nilai Minimul CPMK</label>
+                      <label>Pilih</label>
                       <div class="input-group">
-                        <input type="number" max="100" min="0" maxlength="2" name="nilai_min_cpmk" placeholder="..." class="form-control" value="60">
+                        <input type="number" max="100" min="0" maxlength="2" name="nilai_min_cpmk" placeholder="2025/2026 - Gasal" class="form-control" >
                         <div class="input-group-append">
                           <button type="submit" class="btn btn-success"><i class="fas fa-save"></i> Simpan</button>
                         </div>
@@ -133,7 +133,7 @@
                 <div class="card-header">
                   <h5 class="card-title">
                     <i class="fas fa-cogs"></i> 
-                  &nbsp;Bobot Indikator terhadap CPL / Student Outcome            </h5>
+                  &nbsp;Batas Minimum Ketuntasan</h5>
                 </div>
                 <div class="card-body">
                   <div class="table-responsive">
@@ -142,43 +142,41 @@
                         <tr>
                           <th width="5%">No.</th>
                           <th>Keterangan</th>
-                          <th width="15%">Alias</th>
-                          <th width="35%">Bobot</th>
+                          <th width="35%">Batas Minimal Tuntas</th>
                           <th width="15%"><center>Aksi</center></th>
                         </tr>
                       </thead>
                       <tbody>
                         <tr>
                           <td>1</td>
-                          <td>High</td>
-                          <td>H</td>
-                          <td>1.00</td>
+                          <td>CPL</td>
+                          <td>60.00</td>
                           <td align="center">                      
                             <button type="button" class="btn btn-success mrg-btn btn-sm btn-aksi-so-level1 btn-disabled" onclick="edit_bobot('1')"><i class="fas fa-edit"></i></button>
-
-                            <b style="color: gray;" class="hidden loading-aksi-so-level1"><i class="fas fa-spinner fa-pulse"></i> Loading</b>
                           </td>
                         </tr>
                         <tr>
                           <td>2</td>
-                          <td>Medium</td>
-                          <td>M</td>
-                          <td>0.50</td>
+                          <td>IK</td>
+                          <td>60.00</td>
                           <td align="center">                      
                             <button type="button" class="btn btn-success mrg-btn btn-sm btn-aksi-so-level2 btn-disabled" onclick="edit_bobot('2')"><i class="fas fa-edit"></i></button>
-
-                            <b style="color: gray;" class="hidden loading-aksi-so-level2"><i class="fas fa-spinner fa-pulse"></i> Loading</b>
                           </td>
                         </tr>
                         <tr>
                           <td>3</td>
-                          <td>Low</td>
-                          <td>L</td>
-                          <td>0.20</td>
+                          <td>CPMK</td>
+                          <td>60.00</td>
                           <td align="center">                      
                             <button type="button" class="btn btn-success mrg-btn btn-sm btn-aksi-so-level3 btn-disabled" onclick="edit_bobot('3')"><i class="fas fa-edit"></i></button>
-
-                            <b style="color: gray;" class="hidden loading-aksi-so-level3"><i class="fas fa-spinner fa-pulse"></i> Loading</b>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>4</td>
+                          <td>Nilai Akhir Mata Kuliah (Angka)</td>
+                          <td>60.00</td>
+                          <td align="center">                      
+                            <button type="button" class="btn btn-success mrg-btn btn-sm btn-aksi-so-level3 btn-disabled" onclick="edit_bobot('3')"><i class="fas fa-edit"></i></button>
                           </td>
                         </tr>
                       </tbody>
@@ -541,10 +539,9 @@
       </div>
       <div class="modal-body">
         <p>
-          Ideal hasil ekspor kelas berdasarkan:
-kurikulum, set pemetaan, mata kuliah(satu,beberapa, semua)
-kolom: kode MK, mata kuliah, mahasiswa, nilai akhir(huruf),nilai akhir(angka), cpmk 1,2,3,4,5
-jika ada kesamaan NIM di satu mata kuliah(artinya mahasiswa tempuh >1 kali MK tsb) ambil nilai tertinggi
+          Modul Konfigurasi digunakan untuk pengaturan sistem yang bersifat administratif, seperti pengaturan (set), pengeditan template, serta pengaktifan atau penonaktifan fitur tertentu. Perubahan yang dilakukan pada modul ini akan memengaruhi perilaku dan mekanisme kerja sistem ke depannya.
+
+Perlu dipahami bahwa perubahan konfigurasi tidak mengubah atau menghapus data historis yang telah tersimpan sebelumnya. Penyesuaian hanya berlaku pada aturan, tampilan, atau proses sistem setelah konfigurasi diterapkan.
         </p>
       </div>
       <div class="modal-footer">

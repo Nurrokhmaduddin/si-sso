@@ -139,6 +139,8 @@ canvas {
       <div class="chart-box radar-box">
         <canvas id="radarCPL"></canvas>
       </div>
+
+     
     </div>
 
 
@@ -159,9 +161,16 @@ canvas {
           <canvas id="chartCPMK"></canvas>
         </div>
       </div>
-
+      
     </div>
   </div>
+  <!-- Tombol -->
+      <div class="d-flex gap-2 mt-2">
+        <button class="btn btn-outline-danger btn-sm flex-fill col-7" onclick="openAllRisikoPreview()">
+          CPL Belum Tuntas
+        </button>
+        <button class="btn btn-outline-danger btn-sm flex-fill col-5" onclick="openAllRisikoPreview()">CPMK Belum Tuntas</button>
+      </div>
 </div>
 
 <!-- ========== CARD 4: Chart CPL-IK ========== -->     
@@ -260,187 +269,6 @@ canvas {
 
 
 
-<!-- ========== CARD : Table Daftar Mata Kuliah ========== -->
-        <div class="card">
-          <div class="card-header">
-              <h5 class="card-title mb-0"> Daftar Mata Kuliah</h5>
-              <div class="card-tools">
-                <small class="text-muted">Semester Terpilih</small>
-              </div>
-            </div>
-        
-          <div class="card-body">
-            <div class="table-responsive">
-              <table class="table table1 table-bordered table-striped table-sm datatables1">
-                <thead>
-                  <tr class="text-uppercase text-center">
-                    <th width="5px">No.</th>
-                    <th>Kode Set Pemetaan</th>
-                    <th>Kode MK</th>
-                    <th>Nama MK</th>                    
-                    <th>Jenis</th>
-                    <th>Semester Tempuh</th>
-                    <th>Jumlah CPMK</th>
-                    <th>Jumlah SKS</th>
-                    <th>Aksi</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="text-center">1</td>
-                    <td class="text-center">ST-24</td>
-                    <td>STS704</td>
-                    <td>Metode Pelaksanaan Bangunan</td>
-                    <td class="text-center"><span class="badge badge-success">Wajib</span></td>
-                    <td class="text-center">1</td>
-                    <td>3</td>
-                    <td>3</td>
-                    <td class="text-center">
-                      <button type="button" class="btn btn-sm btn-outline-info" data-bs-toggle="modal" data-bs-target="#modalDetailMK">
-                        📄 Detail
-                      </button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="text-center">2</td>
-                    <td class="text-center">ST-24</td>
-                    <td>STS913</td>
-                    <td>Struktur Komposit</td>
-                    <td class="text-center"><span class="badge badge-info">Pilihan</span></td>
-                    <td class="text-center">1</td>
-                    <td>3</td>
-                    <td>3</td>
-                    <td class="text-center">
-                      <button type="button" class="btn btn-sm btn-outline-info" data-bs-toggle="modal" data-bs-target="#modalDetailMK">
-                        📄 Detail
-                      </button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="text-center">3</td>
-                    <td class="text-center">ST-24</td>
-                    <td>51175111</td>
-                    <td>Building Structures Design</td>                   
-                    <td class="text-center"><span class="badge badge-success">Wajib</span></td>
-                    <td class="text-center">2</td>
-                    <td>3</td>
-                    <td>3</td>
-                    <td class="text-center">
-                      <button type="button" class="btn btn-sm btn-outline-info" data-bs-toggle="modal" data-bs-target="#modalDetailMK">
-                        📄 Detail
-                      </button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="text-center">4</td>
-                    <td class="text-center">ST-24</td>
-                    <td>STS-101</td>
-                    <td>Engineering Statistics</td>                    
-                    <td class="text-center"><span class="badge badge-success">Wajib</span></td>
-                    <td class="text-center">2</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td class="text-center">
-                      <button type="button" class="btn btn-sm btn-outline-info" data-bs-toggle="modal" data-bs-target="#modalDetailMK">
-                        📄 Detail
-                      </button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="text-center">5</td>
-                    <td class="text-center">ST-24</td>
-                    <td>STS307</td>
-                    <td>Bahan Perkerasan Jalan (+Pr)</td>
-                    <td class="text-center"><span class="badge badge-info">Pilihan</span></td>
-                    <td class="text-center">3</td>
-                    <td>4</td>
-                    <td>3</td>
-                    <td class="text-center">
-                      <button type="button" class="btn btn-sm btn-outline-info" data-bs-toggle="modal" data-bs-target="#modalDetailMK">
-                        📄 Detail
-                      </button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="text-center">6</td>
-                    <td class="text-center">ST-24</td>
-                    <td>STS702</td>
-                    <td>Struktur Baja</td>
-                    <td class="text-center"><span class="badge badge-info">Pilihan</span></td>
-                    <td class="text-center">4</td>
-                    <td>3</td>
-                    <td>3</td>
-                    <td class="text-center">
-                      <button type="button" class="btn btn-sm btn-outline-info" data-bs-toggle="modal" data-bs-target="#modalDetailMK">
-                        📄 Detail
-                      </button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="text-center">7</td>
-                    <td class="text-center">ST-24</td>
-                    <td>51195142</td>
-                    <td>Perancangan Struktur Jembatan</td>
-                    <td class="text-center"><span class="badge badge-info">Pilihan</span></td>
-                    <td class="text-center">5</td>
-                    <td>2</td>
-                    <td>2</td>
-                    <td class="text-center">
-                      <button type="button" class="btn btn-sm btn-outline-info" data-bs-toggle="modal" data-bs-target="#modalDetailMK">
-                        📄 Detail
-                      </button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="text-center">8</td>
-                    <td class="text-center">ST-24</td>
-                    <td>51155081</td>
-                    <td>Introduction to Earthquake Engineering</td>
-                    <td class="text-center"><span class="badge badge-info">Pilihan</span></td>
-                    <td class="text-center">6</td>
-                    <td>3</td>
-                    <td>2</td>
-                    <td class="text-center">
-                      <button type="button" class="btn btn-sm btn-outline-info" data-bs-toggle="modal" data-bs-target="#modalDetailMK">
-                        📄 Detail
-                      </button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="text-center">9</td>
-                    <td class="text-center">ST-24</td>
-                    <td>STS904</td>
-                    <td>BIM untuk Manajemen Konstruksi</td>
-                    <td class="text-center"><span class="badge badge-info">Pilihan</span></td>
-                    <td class="text-center">7</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td class="text-center">
-                      <button type="button" class="btn btn-sm btn-outline-info" data-bs-toggle="modal" data-bs-target="#modalDetailMK">
-                        📄 Detail
-                      </button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="text-center">10</td>
-                    <td class="text-center">ST-24</td>
-                    <td>51153061</td>
-                    <td>Water Structures Design</td>
-                    <td class="text-center"><span class="badge badge-info">Pilihan</span></td>
-                    <td class="text-center">8</td>
-                    <td>3</td>
-                    <td>3</td>
-                    <td class="text-center">
-                      <button type="button" class="btn btn-sm btn-outline-info" data-bs-toggle="modal" data-bs-target="#modalDetailMK">
-                        📄 Detail
-                      </button>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
 
 
 

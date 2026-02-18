@@ -275,7 +275,28 @@
 
 	  </div>
 
+<!-- Modal Bantuan -->
+<div class="modal fade" id="modalBantuan" tabindex="-1" aria-labelledby="modalBantuanLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header bg-primary text-white">
+        <h5 class="modal-title" id="modalBantuanLabel">Bantuan Tabel</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>
+          Modul Pengaturan digunakan untuk mengelola preferensi dan konfigurasi umum sistem yang bersifat teknis maupun administratif. Pengaturan pada modul ini tidak secara langsung memengaruhi proses bisnis inti dari sistem informasi, melainkan mendukung aspek operasional dan tata kelola aplikasi secara keseluruhan.
 
+Perubahan pada modul ini umumnya berkaitan dengan pengaturan lingkungan aplikasi, preferensi penggunaan, atau parameter sistem yang menunjang jalannya aplikasi. Penyesuaian tersebut bertujuan untuk memastikan aplikasi berjalan sesuai kebutuhan organisasi tanpa mengubah alur utama proses bisnis yang telah ditetapkan.
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+      </div>
+    </div>
+  </div>
+</div>
+<?php include('4footer.php'); ?>
   <!-- modal -->
   <div id="konten_modal"></div>
   <div id="modalShow" class="modal fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">

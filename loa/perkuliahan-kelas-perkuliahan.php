@@ -80,7 +80,7 @@
                			<th width="5px">No.</th>
                			<th>Dosen Pengampu</th>
                			<th>Mata Kuliah</th>
-               			<th>Peminatan</th>
+               			<th>Jalur Kelas</th>
                			<th style="text-align: center;">Kelas</th>
                			<th style="text-align: center;">CPMK</th>
                			<th style="text-align: center;">Mahasiswa</th>

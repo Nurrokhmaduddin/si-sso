@@ -193,8 +193,10 @@
       </div>
       <div class="modal-body">
         <p>
-          -idealnya: periode aktif trigger karena ketetapan waktu berlaku hingga, bukan trigger update status
-          -bagaimana kesiapan masterdata periode yg modular, agar bisa konsolidasi data buat sidebar Progress CPL-IK
+          
+          Modul Konfigurasi digunakan untuk pengaturan sistem yang bersifat administratif, seperti pengaturan (set), pengeditan template, serta pengaktifan atau penonaktifan fitur tertentu. Perubahan yang dilakukan pada modul ini akan memengaruhi perilaku dan mekanisme kerja sistem ke depannya.
+
+Perlu dipahami bahwa perubahan konfigurasi tidak mengubah atau menghapus data historis yang telah tersimpan sebelumnya. Penyesuaian hanya berlaku pada aturan, tampilan, atau proses sistem setelah konfigurasi diterapkan.
         </p>
       </div>
       <div class="modal-footer">

@@ -8,7 +8,7 @@
 
   <section class="content-header">
     <div class="container-fluid">
-      <h3 class="mb-0">Daftar Mata Kuliah  per Set Pemetaan
+      <h3 class="mb-0">Daftar Capaian Mata Kuliah  per Set Pemetaan
       <button type="button" class="btn btn-tool" data-bs-toggle="modal" data-bs-target="#modalBantuan" title="Bantuan">
                 <i class="fas fa-question-circle"></i>
               </button>
@@ -100,10 +100,10 @@
                       <td>3</td>
                       <!-- <td>3</td> -->
                       <td class="text-center">
-                        <button type="button" class="btn btn-sm btn-outline-warning" data-toggle="modal" data-target="#modalDeskripsiCPMK">🔑 Deskripsi CPMK</button>
+                        <button type="button" class="btn btn-sm btn-outline-warning" data-bs-toggle="modal" data-bs-target="#modalDeskripsiCPMK">🔑 Deskripsi CPMK</button>
 
-                        <button type="button" class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#modalEditAkun">✏️</button>
-                        <button type="button" class="btn btn-sm btn-outline-danger" data-toggle="modal" data-target="#modalHapusAkun">🗑️</button>
+                        <button type="button" class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalEditAkun">✏️</button>
+                        <button type="button" class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#modalHapusAkun">🗑️</button>
                       </td>
                     </tr>
                     <tr>
@@ -118,8 +118,8 @@
                       <!-- <td>3</td> -->
                       <td class="text-center">
                         <button type="button" class="btn btn-sm btn-outline-warning">🔑 Deskripsi CPMK</button>
-                        <button type="button" class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#modalEditAkun">✏️</button>
-                        <button type="button" class="btn btn-sm btn-outline-danger" data-toggle="modal" data-target="#modalHapusAkun">🗑️</button>
+                        <button type="button" class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalEditAkun">✏️</button>
+                        <button type="button" class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#modalHapusAkun">🗑️</button>
                       </td>
                     </tr>
                     <tr>
@@ -134,8 +134,8 @@
                       <!-- <td>3</td> -->
                       <td class="text-center">
                         <button type="button" class="btn btn-sm btn-outline-warning">🔑 Deskripsi CPMK</button>
-                        <button type="button" class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#modalEditAkun">✏️</button>
-                        <button type="button" class="btn btn-sm btn-outline-danger" data-toggle="modal" data-target="#modalHapusAkun">🗑️</button>
+                        <button type="button" class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalEditAkun">✏️</button>
+                        <button type="button" class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#modalHapusAkun">🗑️</button>
                       </td>
                     </tr>
                     <tr>
@@ -150,8 +150,8 @@
                       <!-- <td>3</td> -->
                       <td class="text-center">
                         <button type="button" class="btn btn-sm btn-outline-warning">🔑 Deskripsi CPMK</button>
-                        <button type="button" class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#modalEditAkun">✏️</button>
-                        <button type="button" class="btn btn-sm btn-outline-danger" data-toggle="modal" data-target="#modalHapusAkun">🗑️</button>
+                        <button type="button" class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalEditAkun">✏️</button>
+                        <button type="button" class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#modalHapusAkun">🗑️</button>
                       </td>
                     </tr>
                     <tr>
@@ -166,8 +166,8 @@
                       <!-- <td>3</td> -->
                       <td class="text-center">
                         <button type="button" class="btn btn-sm btn-outline-warning">🔑 Deskripsi CPMK</button>
-                        <button type="button" class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#modalEditAkun">✏️</button>
-                        <button type="button" class="btn btn-sm btn-outline-danger" data-toggle="modal" data-target="#modalHapusAkun">🗑️</button>
+                        <button type="button" class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalEditAkun">✏️</button>
+                        <button type="button" class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#modalHapusAkun">🗑️</button>
                       </td>
                     </tr>
                     <tr>
@@ -182,8 +182,8 @@
                       <!-- <td>3</td> -->
                       <td class="text-center">
                         <button type="button" class="btn btn-sm btn-outline-warning">🔑 Deskripsi CPMK</button>
-                        <button type="button" class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#modalEditAkun">✏️</button>
-                        <button type="button" class="btn btn-sm btn-outline-danger" data-toggle="modal" data-target="#modalHapusAkun">🗑️</button>
+                        <button type="button" class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalEditAkun">✏️</button>
+                        <button type="button" class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#modalHapusAkun">🗑️</button>
                       </td>
                     </tr>
                     <tr>
@@ -198,8 +198,8 @@
                       <!-- <td>2</td> -->
                       <td class="text-center">
                         <button type="button" class="btn btn-sm btn-outline-warning">🔑 Deskripsi CPMK</button>
-                        <button type="button" class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#modalEditAkun">✏️</button>
-                        <button type="button" class="btn btn-sm btn-outline-danger" data-toggle="modal" data-target="#modalHapusAkun">🗑️</button>
+                        <button type="button" class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalEditAkun">✏️</button>
+                        <button type="button" class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#modalHapusAkun">🗑️</button>
                       </td>
                     </tr>
                     <tr>
@@ -214,8 +214,8 @@
                       <!-- <td>2</td> -->
                       <td class="text-center">
                         <button type="button" class="btn btn-sm btn-outline-warning">🔑 Deskripsi CPMK</button>
-                        <button type="button" class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#modalEditAkun">✏️</button>
-                        <button type="button" class="btn btn-sm btn-outline-danger" data-toggle="modal" data-target="#modalHapusAkun">🗑️</button>
+                        <button type="button" class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalEditAkun">✏️</button>
+                        <button type="button" class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#modalHapusAkun">🗑️</button>
                       </td>
                     </tr>
                     <tr>
@@ -230,8 +230,8 @@
                       <!-- <td>3</td> -->
                       <td class="text-center">
                         <button type="button" class="btn btn-sm btn-outline-warning">🔑 Deskripsi CPMK</button>
-                        <button type="button" class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#modalEditAkun">✏️</button>
-                        <button type="button" class="btn btn-sm btn-outline-danger" data-toggle="modal" data-target="#modalHapusAkun">🗑️</button>
+                        <button type="button" class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalEditAkun">✏️</button>
+                        <button type="button" class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#modalHapusAkun">🗑️</button>
                       </td>
                     </tr>
                     <tr>
@@ -246,8 +246,8 @@
                       <!-- <td>3</td> -->
                       <td class="text-center">
                         <button type="button" class="btn btn-sm btn-outline-warning">🔑 Deskripsi CPMK</button>
-                        <button type="button" class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#modalEditAkun">✏️</button>
-                        <button type="button" class="btn btn-sm btn-outline-danger" data-toggle="modal" data-target="#modalHapusAkun">🗑️</button>
+                        <button type="button" class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalEditAkun">✏️</button>
+                        <button type="button" class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#modalHapusAkun">🗑️</button>
                       </td>
                     </tr>
                   </tbody>
@@ -316,103 +316,106 @@
 
 
 
-<!-- Modal Tambah Data -->
+<!-- ================= MODAL TAMBAH DESKRIPSI CPMK ================= -->
 <div class="modal fade" id="modalTambahData" tabindex="-1" aria-labelledby="modalTambahDataLabel" aria-hidden="true">
-  <div class="modal-dialog modal-md">
+  <div class="modal-dialog modal-lg">
     <div class="modal-content">
+
+      <!-- Header -->
       <div class="modal-header bg-primary text-white">
-        <h5 class="modal-title" id="modalTambahDataLabel">➕ Tambah Data</h5>
-        <button type="button" class="btn-close btn-close-white" data-dismiss="modal" aria-label="Close"></button>
+        <h5 class="modal-title" id="modalTambahDataLabel">
+          ➕ Tambah Deskripsi CPMK
+        </h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <form id="formTambahData" enctype="multipart/form-data">
+
+      <!-- Form -->
+      <form id="formTambahCPMK">
         <div class="modal-body">
 
-          <!-- Catatan wajib isi -->
-          <div class="alert alert-warning mb-3" role="alert" style="font-size: 0.9rem;">
-            <b>Penting:</b> Kolom dengan bintang merah (<span class="text-danger">*</span>) wajib diisi!
-          </div>
-          
-          <div class="row mb-3">
-            <label for="username" class="col-sm-3 col-form-label">Username <span class="text-danger">*</span></label>
-            <div class="col-sm-9">
-              <input type="text" class="form-control" id="username" name="username" placeholder="Masukkan username" required>
-            </div>
+          <!-- Informasi -->
+          <div class="alert alert-warning mb-4" style="font-size: 0.9rem;">
+            <b>Perhatian:</b> Pastikan kurikulum, set pemetaan, dan mata kuliah sudah sesuai sebelum menambahkan deskripsi CPMK.
+            Kolom bertanda <span class="text-danger">*</span> wajib diisi.
           </div>
 
-          <!-- Profile Name -->
+          <!-- Pilih Kurikulum -->
           <div class="row mb-3">
-            <label for="displayName" class="col-sm-3 col-form-label">Fullname <span class="text-danger">*</span></label>
+            <label class="col-sm-3 col-form-label">
+              Kurikulum <span class="text-danger">*</span>
+            </label>
             <div class="col-sm-9">
-              <input type="text" class="form-control" id="displayName" name="displayName" placeholder="Masukkan nama pengguna" required>
-            </div>
-          </div>
-
-          <!-- Email -->
-          <div class="row mb-3">
-            <label for="email" class="col-sm-3 col-form-label">Email <span class="text-danger">*</span></label>
-            <div class="col-sm-9">
-              <input type="email" class="form-control" id="email" name="email" placeholder="Masukkan email" required>
-            </div>
-          </div>
-
-          <!-- Nomor HP -->
-          <div class="row mb-3">
-            <label for="nomorHP" class="col-sm-3 col-form-label">Nomor HP <span class="text-danger">*</span></label>
-            <div class="col-sm-9">
-              <input type="text" class="form-control" id="nomorHP" name="nomorHP" placeholder="Masukkan nomor HP/WA" required>
-            </div>
-          </div>
-
-          <!-- Username -->
-
-          <!-- Status -->
-          <div class="row mb-3">
-            <label for="status" class="col-sm-3 col-form-label">Status <span class="text-danger">*</span></label>
-            <div class="col-sm-9">
-              <select class="form-select" id="status" name="status" required>
-                <option value="Aktif" selected>Aktif</option>
-                <option value="Nonaktif">Nonaktif</option>
+              <select class="form-select" name="kurikulum" required>
+                <option value="" selected disabled>-- Pilih Kurikulum --</option>
+                <option value="2020">Kurikulum 2020</option>
+                <option value="2022">Kurikulum 2022</option>
+                <option value="2024">Kurikulum 2024</option>
               </select>
             </div>
           </div>
 
-          <!-- Password -->
+          <!-- Pilih Set Pemetaan -->
           <div class="row mb-3">
-            <label for="password" class="col-sm-3 col-form-label">Password <span class="text-danger">*</span></label>
+            <label class="col-sm-3 col-form-label">
+              Set Pemetaan <span class="text-danger">*</span>
+            </label>
             <div class="col-sm-9">
-              <input type="password" class="form-control" id="password" name="password" placeholder="Masukkan password" required>
-              <small class="text-muted">
-                Ketentuan Pembuatan Password:<br>
-                1. Minimal 8 karakter.<br>
-                2. Mengandung huruf besar, huruf kecil, angka, dan simbol.<br>
-                3. Hindari nama pribadi, tanggal lahir, atau pola mudah ditebak.<br>
-                <strong>#Ubah password secara berkala (disarankan tiap 6 bulan).</strong>
-              </small>
+              <select class="form-select" name="set_pemetaan" required>
+                <option value="" selected disabled>-- Pilih Set Pemetaan --</option>
+                <option value="SET-SP01-01">SET-SP01-01</option>
+                <option value="SET-SP01-02">SET-SP01-02</option>
+                <option value="SET-SP01-03">SET-SP01-03</option>
+              </select>
             </div>
           </div>
 
-          <!-- Konfirmasi Password -->
+          <!-- Pilih Mata Kuliah -->
           <div class="row mb-3">
-            <label for="confirmPassword" class="col-sm-3 col-form-label">Konfirmasi Password <span class="text-danger">*</span></label>
+            <label class="col-sm-3 col-form-label">
+              Mata Kuliah <span class="text-danger">*</span>
+            </label>
             <div class="col-sm-9">
-              <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="Ulangi password" required>
+              <select class="form-select" name="mata_kuliah" required>
+                <option value="" selected disabled>-- Pilih Mata Kuliah --</option>
+                <option value="STS704">STS704 - Metode Pelaksanaan Bangunan</option>
+                <option value="STS913">STS913 - Struktur Komposit</option>
+                <option value="STS702">STS702 - Struktur Baja</option>
+              </select>
             </div>
           </div>
 
-          <!-- Foto -->
+          <!-- Pilih CPMK ke- -->
           <div class="row mb-3">
-            <label for="foto" class="col-sm-3 col-form-label">Foto</label>
+            <label for="jumlah_cpmk" class="col-sm-3 col-form-label">
+              Jumlah CPMK <span class="text-danger">*</span>
+            </label>
             <div class="col-sm-9">
-              <input class="form-control" type="file" id="foto" name="foto" accept="image/*">
-              <small class="text-muted">Opsional. Maks 2MB</small>
+              <input 
+              type="number" 
+              class="form-control" 
+              id="jumlah_cpmk" 
+              name="jumlah_cpmk" 
+              min="1" 
+              placeholder="Masukkan jumlah CPMK" 
+              required>
             </div>
           </div>
+
+
+         
 
         </div>
+
+        <!-- Footer -->
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
-          <button type="submit" class="btn btn-primary">Simpan Data</button>
+          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+            Batal
+          </button>
+          <button type="submit" class="btn btn-primary">
+            💾 Simpan Deskripsi
+          </button>
         </div>
+
       </form>
     </div>
   </div>
@@ -471,4 +474,114 @@
   </div>
 </div>
 
+
+<!-- Modal modalDeskripsiCPMK -->
+<div class="modal fade" id="modalDeskripsiCPMK" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+
+            <!-- HEADER -->
+            <div class="modal-header bg-warning">
+                <h5 class="modal-title">Deskripsi CPMK |  Metode Pelaksanaan Bangunan - STS704 (3 CPMK)</h5>
+                <button type="button" class="close" data-bs-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- FORM START -->
+            <form action="simpan_deskripsi_cpmk.php" method="POST">
+
+                <div class="modal-body">
+
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-striped">
+                            <thead class="bg-light">
+                                <tr>
+                                    <th style="width: 60px;">CPMK</th>
+                                    <th>Deskripsi (IDN)</th>
+                                    <th>Deskripsi (EN)</th>
+                                    <!-- <th style="width: 120px;">Status</th> -->
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <!-- CPMK 1 -->
+                                <tr>
+                                    <td>
+                                        1
+                                        <input type="hidden" name="cpmk_id[]" value="1">
+                                    </td>
+                                    <td>
+                                        <input type="text" name="deskripsi_idn[]" class="form-control" 
+                                               value="Mahasiswa mampu menjelaskan tentang proses adsorpsi dan karakteristik material adsorben">
+                                    </td>
+                                    <td>
+                                        <input type="text" name="deskripsi_en[]" class="form-control" placeholder="Description in English">
+                                    </td>
+                                   <!--  <td>
+                                        <select name="status[]" class="form-control">
+                                            <option value="Aktif" selected>Aktif</option>
+                                            <option value="Nonaktif">Nonaktif</option>
+                                        </select>
+                                    </td> -->
+                                </tr>
+
+                                <!-- CPMK 2 -->
+                                <tr>
+                                    <td>
+                                        2
+                                        <input type="hidden" name="cpmk_id[]" value="2">
+                                    </td>
+                                    <td>
+                                        <input type="text" name="deskripsi_idn[]" class="form-control" 
+                                               value="Mahasiswa mampu menyelesaikan persamaan isotherm adsorpsi berdasarkan data yang tersedia">
+                                    </td>
+                                    <td>
+                                        <input type="text" name="deskripsi_en[]" class="form-control" placeholder="Description in English">
+                                    </td>
+                                   <!--  <td>
+                                        <select name="status[]" class="form-control">
+                                            <option value="Aktif" selected>Aktif</option>
+                                            <option value="Nonaktif">Nonaktif</option>
+                                        </select>
+                                    </td> -->
+                                </tr>
+
+                                <!-- CPMK 3 -->
+                                <tr>
+                                    <td>
+                                        3
+                                        <input type="hidden" name="cpmk_id[]" value="3">
+                                    </td>
+                                    <td>
+                                        <input type="text" name="deskripsi_idn[]" class="form-control" 
+                                               value="Mahasiswa mampu menjelaskan tentang aplikasi adsorpsi dalam industri kimia">
+                                    </td>
+                                    <td>
+                                        <input type="text" name="deskripsi_en[]" class="form-control" placeholder="Description in English">
+                                    </td>
+                                    <!-- <td>
+                                        <select name="status[]" class="form-control">
+                                            <option value="Aktif" selected>Aktif</option>
+                                            <option value="Nonaktif">Nonaktif</option>
+                                        </select>
+                                    </td> -->
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+
+                <!-- FOOTER -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                    <button type="submit" class="btn btn-warning">Simpan Perubahan</button>
+                </div>
+
+            </form>
+            <!-- FORM END -->
+
+        </div>
+    </div>
+</div>
 <?php include('5script.php'); ?>

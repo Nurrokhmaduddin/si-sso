@@ -69,6 +69,34 @@
     <!-- <li class="nav-item" onclick="window.location='progres-cpl-semester3.php'"><a class="nav-link ">Detail</a></li> -->
   </ul>
 
+<!-- ================= CARD: Perbandingan Periode ================= -->
+<div class="card p-3">
+  <div class="row">
+
+    <!-- ===== LEFT: RADAR CHART ===== -->
+    <div class="col-lg-7">
+      <div style="height:420px;">
+        <canvas id="radarPeriode"></canvas>
+      </div>
+    </div>
+
+    <!-- ===== RIGHT: 2 BAR CHART ===== -->
+    <div class="col-lg-5 d-flex flex-column">
+
+      <!-- Bar Periode A -->
+      <div class="flex-fill mb-3" style="height:200px;">
+        <canvas id="barPeriodeA"></canvas>
+      </div>
+
+      <!-- Bar Periode B -->
+      <div class="flex-fill" style="height:200px;">
+        <canvas id="barPeriodeB"></canvas>
+      </div>
+
+    </div>
+
+  </div>
+</div>
 
 <!-- ========== CARD 4: Chart CPL-IK ========== -->     
         <div class="card">   
@@ -360,4 +388,144 @@
 
 
 </script>
+
+
+<script>
+
+// ===============================
+// DATA DUMMY (Ganti sesuai kebutuhan)
+// ===============================
+
+const labelsCPL = [
+  'CPL 1','CPL 2','CPL 3','CPL 4','CPL 5',
+  'CPL 6','CPL 7','CPL 8','CPL 9','CPL 10','CPL 11'
+];
+
+const periodeA = [75, 82, 70, 88, 90, 65, 72, 60, 55, 45, 50];
+const periodeB = [80, 85, 78, 90, 92, 70, 76, 68, 60, 55, 58];
+
+
+// ===============================
+// 1️⃣ RADAR CHART (2 Periode)
+// ===============================
+
+const radarCtx = document.getElementById('radarPeriode').getContext('2d');
+
+new Chart(radarCtx, {
+  type: 'radar',
+  data: {
+    labels: labelsCPL,
+    datasets: [
+      {
+        label: 'Periode A',
+        data: periodeA,
+        backgroundColor: 'rgba(108,117,125,0.25)',
+        borderColor: 'rgba(108,117,125,0.9)',
+        borderWidth: 2,
+        pointBackgroundColor: 'rgba(108,117,125,1)'
+      },
+      {
+        label: 'Periode B',
+        data: periodeB,
+        backgroundColor: 'rgba(13,110,253,0.25)',
+        borderColor: 'rgba(13,110,253,0.9)',
+        borderWidth: 2,
+        pointBackgroundColor: 'rgba(13,110,253,1)'
+      }
+    ]
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    scales: {
+      r: {
+        min: 0,
+        max: 100,
+        ticks: { stepSize: 20 }
+      }
+    },
+    plugins: {
+      legend: {
+        position: 'top'
+      }
+    }
+  }
+});
+
+
+// ===============================
+// 2️⃣ BAR CHART PERIODE A (Abu)
+// ===============================
+
+const barACtx = document.getElementById('barPeriodeA').getContext('2d');
+
+new Chart(barACtx, {
+  type: 'bar',
+  data: {
+    labels: labelsCPL,
+    datasets: [{
+      label: 'Periode A',
+      data: periodeA,
+      backgroundColor: 'rgba(108,117,125,0.8)',
+      borderColor: 'rgba(108,117,125,1)',
+      borderWidth: 1
+    }]
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    scales: {
+      x: {
+        ticks: { display: false }   // sembunyikan label bawah
+      },
+      y: {
+        beginAtZero: true,
+        max: 100
+      }
+    },
+    plugins: {
+      legend: { display: false }
+    }
+  }
+});
+
+
+// ===============================
+// 3️⃣ BAR CHART PERIODE B (Biru)
+// ===============================
+
+const barBCtx = document.getElementById('barPeriodeB').getContext('2d');
+
+new Chart(barBCtx, {
+  type: 'bar',
+  data: {
+    labels: labelsCPL,
+    datasets: [{
+      label: 'Periode B',
+      data: periodeB,
+      backgroundColor: 'rgba(13,110,253,0.8)',
+      borderColor: 'rgba(13,110,253,1)',
+      borderWidth: 1
+    }]
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    scales: {
+      x: {
+        ticks: { display: false }
+      },
+      y: {
+        beginAtZero: true,
+        max: 100
+      }
+    },
+    plugins: {
+      legend: { display: false }
+    }
+  }
+});
+
+</script>
+
 <?php include('5script.php'); ?>

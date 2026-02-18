@@ -98,9 +98,9 @@
                 <!-- <button class="btn btn-outline-info btn-sm " data-bs-toggle="modal" data-bs-target="#modalFilter">
                   <i class="fas fa-filter me-1"></i> Filter
                 </button> -->
-               <!--  <button type="button" class="btn btn-outline-primary btn-sm " data-bs-toggle="modal" data-bs-target="#modalTambahData">
+                <button type="button" class="btn btn-outline-primary btn-sm " data-bs-toggle="modal" data-bs-target="#modalTambahData">
                   <i class="fas fa-plus me-1"></i> Add
-                </button> -->
+                </button>
                 <!-- <button type="button" class="btn btn-outline-primary btn-sm " data-bs-toggle="modal" data-bs-target="#modalImpor">
                   <i class="fas fa-file-upload me-1"></i> Import
                 </button>  
@@ -120,175 +120,113 @@
 
           <!-- TAB NAV (Semester) -->
            <ul class="nav nav-tabs">
-            <li class="nav-item" onclick="window.location='perkuliahan-portofolio-kelas-detail.php'"><a class="nav-link active">Portofolio</a></li>
-            <li class="nav-item" onclick="window.location='perkuliahan-portofolio-kelas-detail4.php'"><a class="nav-link ">Soal Ujian</a></li>
+            <li class="nav-item" onclick="window.location='perkuliahan-portofolio-kelas-detail.php'"><a class="nav-link ">Portofolio</a></li>
+            <li class="nav-item" onclick="window.location='perkuliahan-portofolio-kelas-detail4.php'"><a class="nav-link active">Soal Ujian</a></li>
             <li class="nav-item" onclick="window.location='perkuliahan-portofolio-kelas-detail2.php'"><a class="nav-link ">Penilaian Mahasiswa</a></li>
             <!-- <li class="nav-item" onclick="window.location='perkuliahan-portofolio-kelas-detail3.php'"><a class="nav-link ">Laporan(Grafik/Tabel)</a></li> -->
           </ul>
 
 
-          
-          <!-- ========== CARD : Portfolio========== --> 
-
-          <div class="card">
-            <div class="card-body">
-              <table id="tbl" name="tbl" class="table table-sm table-hover table-bordered table-striped deta">
-                  <tbody>
-                    <tr>
-                      <td><button type="button" class="btn btn-xs btn-primary" ><i class="fas fa-edit"></i></button> 
-                        Dokumen RPS <span class="badge badge-success">Valid</span></td>
-                        <td width="40%">
-                          <a href="#" target="_blank" title="Unduh RPS">
-                            <button type="button" class="btn btn-xs btn-success" ><i class="fas fa-file"></i> Download</button>
-                          </a> <i>update_at</i>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td><button type="button" class="btn btn-xs btn-primary" ><i class="fas fa-edit"></i></button> 
-                        Materi Pembelajaran (slides, modul, bahan ajar) </td>
-                        <td width="40%">
-                          <a href="#" target="_blank">
-                            <button type="button" class="btn btn-xs btn-info"><i class="fas fa-link"></i> Download</button>
-                          </a> <i>update_at</i>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td><button type="button" class="btn btn-xs btn-primary" ><i class="fas fa-edit"></i></button>
-                          Dokumen Penugasan Mahasiswa <span class="badge badge-secondary">Proses</span></td>
-                          <td width="40%">
-                            <a href="https://drive.google.com/drive/folders/1Ba6yZ2KLWZC992tVO7wxpcfxaOYb8Eyi?usp=drive_link" target="_blank">
-                              <button type="button" class="btn btn-xs btn-info"><i class="fas fa-link"></i> Download</button>
-                            </a> <i>updated 19 sep 2025</i>
-                          </td>
-                        </tr>
-                        <!-- <tr>
-                          <td><button type="button" class="btn btn-xs btn-primary" ><i class="fas fa-edit"></i></button>
+      <!--     <td><button type="button" class="btn btn-xs btn-primary" ><i class="fas fa-edit"></i></button>
                             Soal Ujian UTS/UAS <span class="badge badge-danger">Rejected</span> (dengan validasi prodi)</td>
                             <td width="40%">
                               <a href="https://drive.google.com/drive/folders/1Ba6yZ2KLWZC992tVO7wxpcfxaOYb8Eyi?usp=drive_link" target="_blank">
                                 <button type="button" class="btn btn-xs btn-info"><i class="fas fa-link"></i> Download</button>
                               </a> <i>update_at</i>
-                            </td>
-                          </tr> -->
-                          <tr>
-                            <td><button type="button" class="btn btn-xs btn-primary" ><i class="fas fa-edit"></i></button>
-                            Evaluasi Dosen oleh Mahasiswa</td>
-                            <td width="40%">
-                              <a href="portfolio_cpmk_detail2.php" target="_blank">
-                                <button type="button" class="btn btn-xs btn-info"><i class="fas fa-link"></i> Download</button>
-                              </a> <i>update_at</i>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
+                            </td> -->
+          <!-- ========== CARD : soal ujian========== --> 
+<div class="card">
+  <!-- <div class="card-header">
+    <h5 class="mb-0">Daftar Soal Ujian</h5>
+  </div> -->
+  <div class="card-body">
 
-<!-- ========== CARD : Catatan Evaluasi MK-Portfolio========== --> 
-        
-        <div class="card">
-          <div class="card-header ">         
-            <h5 class="card-title mb-0">
-              <button class="btn btn-sm btn-outline-info" data-bs-toggle="collapse" data-bs-target="#daftarIKCPL2">
-                <i class="fas fa-expand"></i>
+    <div class="table-responsive">
+      <table class="table table-sm table-hover table-bordered table-striped deta">
+        <thead>
+          <tr class="text-uppercase">
+            <th width="50">No</th>
+            <th width="150">Tanggal Ujian</th>
+            <th>Keterangan</th>
+            <th width="100" class="text-center">Aksi</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr>
+            <td>1</td>
+            <td>10 Maret 2025</td>
+            <td>Ujian Tengah Semester - Mekanika Tanah. UTS Semester Genap 2024/2025</td>
+            <td class="text-center"><button class="btn btn-sm btn-outline-success">
+                <i class="fas fa-download"></i>
               </button>
-              Catatan Evaluasi dan Perencanaan 
-            </h5>
-          </div>
+              <button class="btn btn-sm btn-outline-danger">
+                <i class="fas fa-trash"></i>
+              </button>
+            </td>
+          </tr>
 
-          <div class="card-body">
-            <div id="daftarIKCPL2" class="collapse show table-responsive">
-             <table class="table table1 table-bordered table-striped table-sm datatables1">
-              <thead>
+          <tr>
+            <td>2</td>
+            <td>25 Juni 2025</td>
+            <td>Ujian Akhir Semester - Struktur Beton. UAS Semester Genap 2024/2025</td>
+            <td class="text-center"><button class="btn btn-sm btn-outline-info">
+                <i class="fas fa-paperclip"></i>
+              </button>
+              <button class="btn btn-sm btn-outline-danger">
+                <i class="fas fa-trash"></i>
+              </button>
+            </td>
+          </tr>
 
-                <tr class="text-uppercase text-center">
-                  <th width="5px">No.</th>
-                  <th>Tahun akademik</th>
-                  <th>Kelas</th>
-                  <th>Evaluasi Pembelajaran</th>
-                  <th>Rencana Pengembangan</th>
-                  <th>Aksi</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td class="text-center">1</td>
-                  <td>2025 - Gasal</td>
-                  <td>A</td>                    
-                  <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat. </td>
-                  <td>Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</td>
-                  <td class="text-center">                     
-                   <button class="btn btn-sm btn-outline-info" onclick="window.location.href='.php'">🔍 Grafik/Tabel</button>
-                   <button class="btn btn-sm btn-outline-info" onclick="window.location.href='portfolio_cpmk_detail.php'">🔍 DetailPortfolio</button>
-                 </td>
-               </tr>
-               <tr>
-                <td class="text-center">2</td>
-                <td>2025 - Gasal</td>
-                <td>B</td>
-                <td>
-                  Materi telah tersampaikan sesuai rencana pembelajaran, namun beberapa mahasiswa
-                  membutuhkan penjelasan tambahan pada topik tertentu. Partisipasi kelas cukup baik.
-                </td>
-                <td>
-                  Menambahkan sesi konsultasi mingguan, menyediakan contoh studi kasus tambahan,
-                  serta memperbaiki alur penyampaian pada pertemuan awal.
-                </td>
-                <td class="text-center">
-                  <button class="btn btn-sm btn-outline-info" onclick="window.location.href='.php'">🔍 Grafik/Tabel</button>
-                  <button class="btn btn-sm btn-outline-info" onclick="window.location.href='portfolio_cpmk_detail.php'">🔍 DetailPortfolio</button>
-                </td>
-              </tr>
+          <tr>
+            <td>3</td>
+            <td>5 April 2025</td>
+            <td>Kuis 1 - Geoteknik. Evaluasi Bab 1 dan 2</td>
+            <td class="text-center"><button class="btn btn-sm btn-outline-success">
+                <i class="fas fa-download"></i>
+              </button>
+              <button class="btn btn-sm btn-outline-danger">
+                <i class="fas fa-trash"></i>
+              </button>
+            </td>
+          </tr>
 
-              <tr>
-                <td class="text-center">3</td>
-                <td>2024 - Genap</td>
-                <td>A</td>
-                <td>
-                  Ketercapaian materi berada pada kategori baik. Praktikum berjalan lancar meskipun ada
-                  beberapa kendala kecil terkait perangkat laboratorium.
-                </td>
-                <td>
-                  Melakukan koordinasi dengan laboran, memperbarui panduan praktikum, dan
-                  menambah materi pemantapan untuk pertemuan terakhir.
-                </td>
-                <td class="text-center">
-                  <button class="btn btn-sm btn-outline-info" onclick="window.location.href='.php'">🔍 Grafik/Tabel</button>
-                  <button class="btn btn-sm btn-outline-info" onclick="window.location.href='portfolio_cpmk_detail.php'">🔍 DetailPortfolio</button>
-                </td>
-              </tr>
+          <tr>
+            <td>4</td>
+            <td>20 April 2025</td>
+            <td>Kuis 2 - Analisis Struktur. Evaluasi Bab 3 dan 4</td>
+            <td class="text-center"><button class="btn btn-sm btn-outline-success">
+                <i class="fas fa-download"></i>
+              </button>
+              <button class="btn btn-sm btn-outline-danger">
+                <i class="fas fa-trash"></i>
+              </button>
+            </td>
+          </tr>
 
-              <tr>
-                <td class="text-center">4</td>
-                <td>2024 - Gasal</td>
-                <td>C</td>
-                <td>
-                  Interaksi kelas masih perlu ditingkatkan. Sebagian mahasiswa kurang aktif berdiskusi
-                  dan ketepatan waktu pengumpulan tugas masih rendah.
-                </td>
-                <td>
-                  Menerapkan metode pembelajaran berbasis proyek kecil, memberikan reward aktif
-                  partisipasi, dan memperjelas timeline tugas.
-                </td>
-                <td class="text-center">
-                  <button class="btn btn-sm btn-outline-info" onclick="window.location.href='.php'">🔍 Grafik/Tabel</button>
-                  <button class="btn btn-sm btn-outline-info" onclick="window.location.href='portfolio_cpmk_detail.php'">🔍 DetailPortfolio</button>
-                </td>
-              </tr>
+          <tr>
+            <td>5</td>
+            <td>30 Maret 2025</td>
+            <td>Remedial UTS - Mekanika Tanah. Khusus mahasiswa yang belum tuntas</td>
+            <td class="text-center"><button class="btn btn-sm btn-outline-success">
+                <i class="fas fa-download"></i>
+              </button>
+              <button class="btn btn-sm btn-outline-danger">
+                <i class="fas fa-trash"></i>
+              </button>
+            </td>
+          </tr>
 
-
-              <!-- Lanjutkan hingga baris ke-20 sesuai data -->
-            </tbody>
-          </table>
-        </div>
-
-      </div>
+        </tbody>
+      </table>
     </div>
+
+  </div>
+</div>
+
+
+
 
 
       </div>
@@ -357,4 +295,81 @@ jika ada kesamaan NIM di satu mata kuliah(artinya mahasiswa tempuh >1 kali MK ts
     </div>
   </div>
 </div>
+
+
+<!-- Modal Tambah Data -->
+<div class="modal fade" id="modalTambahData" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-md modal-dialog-centered">
+    <div class="modal-content border-0 shadow">
+
+      <!-- Header -->
+      <div class="modal-header bg-light">
+        <h5 class="modal-title fw-semibold">
+          <i class="fas fa-plus-circle text-primary me-2"></i>
+          Tambah Soal Ujian
+        </h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <!-- Body -->
+      <div class="modal-body">
+        <form id="formTambahSoal">
+
+          <!-- Tanggal Ujian -->
+          <div class="mb-3">
+            <label class="form-label">Tanggal Ujian</label>
+            <input type="date" class="form-control" required>
+          </div>
+
+          <!-- Keterangan -->
+          <div class="mb-3">
+            <label class="form-label">Keterangan</label>
+            <textarea class="form-control" rows="3" placeholder="Masukkan keterangan ujian..." required></textarea>
+          </div>
+
+          <!-- Pilih Tipe -->
+          <div class="mb-3">
+            <label class="form-label d-block">Tipe Lampiran</label>
+            
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="tipeSoal" id="pilihFile" value="file" checked>
+              <label class="form-check-label" for="pilihFile">Upload File</label>
+            </div>
+
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="tipeSoal" id="pilihLink" value="link">
+              <label class="form-check-label" for="pilihLink">Input Link</label>
+            </div>
+          </div>
+
+          <!-- Input File -->
+          <div class="mb-3" id="inputFileWrapper">
+            <label class="form-label">Upload File Soal</label>
+            <input type="file" class="form-control">
+            <small class="text-muted">Format: PDF / DOC / DOCX</small>
+          </div>
+
+          <!-- Input Link -->
+          <div class="mb-3 d-none" id="inputLinkWrapper">
+            <label class="form-label">Link Soal</label>
+            <input type="url" class="form-control" placeholder="https://...">
+          </div>
+
+        </form>
+      </div>
+
+      <!-- Footer -->
+      <div class="modal-footer bg-light">
+        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+          Batal
+        </button>
+        <button type="submit" class="btn btn-primary" form="formTambahSoal">
+          <i class="fas fa-save me-1"></i> Simpan
+        </button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
 <?php include('5script.php'); ?>

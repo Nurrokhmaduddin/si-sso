@@ -216,7 +216,7 @@
                     <td align="center">5</td>
                     <td align="center"><b>27</b></td>                                         
                     <td class="text-center">
-                      <button type="button" class="btn btn-sm btn-outline-info" onclick="window.location='progres-kelas-semester-detail.php'"><i class="fas fa-info-circle"></i></button>
+                      <a href="progres-kelas-semester-detail.php" class="btn btn-sm btn-outline-info"><i class="fas fa-info-circle"></i></a>
                       <a href="data-portofolio-cpmk.pdf" download class="btn btn-sm btn-outline-success"><i class="fas fa-download"></i></a>
                     </td>
                   </td>
