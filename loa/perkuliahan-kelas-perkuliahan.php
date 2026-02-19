@@ -36,8 +36,11 @@
             <div class="card-body ">
               <div class="row">
                 <div class="col-md-6">
-                  <b>Periode Akademik:</b> 2024/2025 - Gasal  &nbsp;
+                  <b>Kurikulum:</b> 2023  &nbsp;
                 </div>                
+                <div class="col-md-6">
+                  <b>Periode Akademik:</b> 2024/2025 - Gasal  &nbsp;
+                </div> 
                 <div class="col-md-6">
                   <b>Mata Kuliah:</b> Semua
                 </div>               

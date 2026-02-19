@@ -8,7 +8,7 @@
 
   <section class="content-header">
     <div class="container-fluid">
-      <h3 class="mb-0">Progres CPL Semester
+      <h3 class="mb-0">Progres CPL Periode
         <button type="button" class="btn btn-tool" data-bs-toggle="modal" data-bs-target="#modalBantuan" title="Bantuan">
           <i class="fas fa-question-circle"></i>
         </button>
@@ -31,11 +31,11 @@
             <div class="card-body ">
               <div class="row">
 
+              <div class="col-md-6">
+                <b>Kurikulum:</b> Merdeka Belajar
+              </div>
                 <div class="col-md-6">
                 <b>Set Pemetaan:</b> KT-6 (K20) Kurikulum 2025 full stage &nbsp;
-              </div>
-              <div class="col-md-6">
-                <b>Periode Akademik:</b> 2025/2026 Ganjil- Semua
               </div>
               <div class="col-md-6">
                 <b>Periode A:</b> 2024-Genap
@@ -67,6 +67,7 @@
     <li class="nav-item" onclick="window.location='progres-cpl-semester.php'"><a class="nav-link active">CPL</a></li>
     <li class="nav-item" onclick="window.location='progres-cpl-semester2.php'"><a class="nav-link ">IK</a></li>
     <!-- <li class="nav-item" onclick="window.location='progres-cpl-semester3.php'"><a class="nav-link ">Detail</a></li> -->
+    <li class="nav-item" onclick="window.location='progres-cpl-semester4.php'"><a class="nav-link ">Pengembangan</a></li>
   </ul>
 
 <!-- ================= CARD: Perbandingan Periode ================= -->

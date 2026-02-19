@@ -38,9 +38,9 @@
                 <div class="col-md-6">
                   <b>Kurikulum:</b> KT-6 (K20) Kurikulum 2025 &nbsp;
                 </div>                
-                <div class="col-md-6">
+                <!-- <div class="col-md-6">
                   <b>Set Pemetaan:</b> full stage
-                </div> 
+                </div>  -->
                 <div class="col-md-6">
                   <b>Periode Akademik:</b> 2024/2025 - Gasal  &nbsp;
                 </div>                

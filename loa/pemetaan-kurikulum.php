@@ -25,11 +25,8 @@
         <div class="col-md-12">
           <!-- ========== CARD : Filter & Export ========== -->
           <div class="card">
-            <div class="card-header">
-              <h5 class="card-title mb-0"><i class="fas fa-filter "></i> Judul Tabel yang terdampak tombol aksi ini </h5>
-              
-            </div>
-            <div class="card-body ">
+            
+            <!-- <div class="card-body ">
               <div class="row">
 
                 <div class="col-md-6">
@@ -46,7 +43,7 @@
                 </div>
 
               </div>
-            </div>
+            </div> -->
             <div class="card-footer">
               <div class="card-tools ms-auto">
                 <button class="btn btn-outline-info btn-sm " data-bs-toggle="modal" data-bs-target="#modalFilter">

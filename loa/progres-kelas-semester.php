@@ -45,15 +45,18 @@
           <div class="card">
             <div class="card-body ">
               <div class="row">
-
+<div class="col-md-6">
+                <b>Kurikulum:</b> Merdeka Belajar
+              </div>
+                              
                 <div class="col-md-6">
-                  <b>Kurikulum:</b> 2023 &nbsp;
-                </div>                
-                <div class="col-md-6">
-                <b>Set Pemetaan:</b> KT-6 (K20) Kurikulum 2025 full stage &nbsp;
+                  <b>Mata Kuliah:</b> Semua
+                </div>
+              <div class="col-md-6">
+                <b>Periode A:</b> 2024-Genap
               </div>
               <div class="col-md-6">
-                <b>Semester :</b> 2024/2025 - Gasal
+                <b>Periode B:</b> 2025-Genap
               </div>
                 
               </div>

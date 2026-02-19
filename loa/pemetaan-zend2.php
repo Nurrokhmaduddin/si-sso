@@ -27,17 +27,11 @@
   <div class="card-body ">
     <div class="row">
       <div class="col-md-6">
-        <b>Angkatan:</b> 2023 &nbsp;
-      </div>                
-      <div class="col-md-6">
-        <b>Peminatan:</b> Peminatan B
-      </div>
-      <div class="col-md-6">
-        <b>Jalur:</b> Reguler
-      </div>
-      <div class="col-md-6">
-        <b>Status:</b> Aktif
-      </div>
+                  <b>Kurikulum:</b> Merdeka Belajar &nbsp;
+                </div>                
+                <div class="col-md-6">
+                  <b>Set Pemetaan:</b> Peta B
+                </div>
     </div>
   </div>
 

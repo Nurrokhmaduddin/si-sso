@@ -39,17 +39,22 @@
                   <table class="table table-sm table-hover table-bordered table-striped deta">
                     <tbody>
                       <tr>
-                        <td width="30%"><b> Tahun Akademik</b></td>
+                        <td width="30%"><b> Kurikulum</b></td>
+                        <td>2023</td>
+                      </tr>
+                      <tr>
+                        <td width="30%"><b> Periode Akademik</b></td>
                         <td>2024/2025 - Gasal</td>
                       </tr>
                       <tr>
                         <td width="30%"><b> Dosen Pengampu</b></td>
                         <td>Tri Nugroho Sulistyantoro, S.T., M.T. - (195110502)</td>
                       </tr>
-                      <tr>
-                        <td width="30%"><b> Mata Kuliah</b></td>
-                        <td>Metode Pelaksanaan Bangunan - (STS704)</td>
-                      </tr>
+                     
+                      <!-- <tr>
+                        <td width="30%"><b> Tanggal Posting </b></td>
+                        <td>23 Januari 2024</td>
+                      </tr> -->
                     </tbody>
                   </table>
                 </div>
@@ -57,16 +62,16 @@
                   <table class="table table-sm table-hover table-bordered table-striped deta">
                     <tbody>
                       <tr>
-                        <td width="30%"><b> Jumlah CPMK</b></td>
-                        <td>5</td>
+                        <td width="30%"><b> Jalur Kelas</b></td>
+                        <td>Civil Engineering Regular - (511)</td>
+                      </tr>
+                       <tr>
+                        <td width="30%"><b> Mata Kuliah</b></td>
+                        <td>Metode Pelaksanaan Bangunan - (STS704)</td>
                       </tr>
                       <tr>
                         <td width="30%"><b> Kelas</b></td>
                         <td>A</td>
-                      </tr>
-                      <tr>
-                        <td width="30%"><b> Peminatan</b></td>
-                        <td>Civil Engineering Regular - (511)</td>
                       </tr>
                     </tbody>
                   </table>

@@ -107,7 +107,7 @@
               <tr>
                 <td>2</td>
                 <td>01-10-2025</td>
-                <td>Rapat Evaluasi Februari 2025</td>
+                <td>Penetapan putusan / rencana perbaikan </td>
                 <td class="text-center">
                   <a href="uploads/rek_feb2025.pdf" class="btn btn-sm btn-success" target="_blank">Download</a>
                 </td>

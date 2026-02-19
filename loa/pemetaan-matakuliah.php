@@ -21,10 +21,21 @@
         <div class="col-md-12">
           <!-- ========== CARD : Filter & Export ========== -->
           <div class="card">
-            <div class="card-header">
-              <h5 class="card-title mb-0"><i class="fas fa-filter "></i> Judul Tabel yang terdampak tombol aksi ini<button type="button" class="btn btn-tool" data-bs-toggle="modal" data-bs-target="#modalBantuan" title="Bantuan">
-                <i class="fas fa-question-circle"></i>
-              </button> </h5>
+            <div class="card-body ">
+              <div class="row">
+
+                <div class="col-md-6">
+                  <b>Kurikulum:</b> Merdeka Belajar &nbsp;
+                </div>                
+
+                <div class="col-md-6">
+                  <b>Jalur Kelas:</b> Reguler
+                </div>
+                
+
+              </div>
+            </div>
+            <div class="card-footer">
               <div class="card-tools ms-auto">
                 <button class="btn btn-outline-info btn-sm " data-bs-toggle="modal" data-bs-target="#modalFilter">
                   <i class="fas fa-filter me-1"></i> Filter
@@ -42,24 +53,6 @@
                   <i class="fas fa-ban me-1"></i> Reset
                 </button>
                 
-              </div>
-            </div>
-            <div class="card-body ">
-              <div class="row">
-
-                <div class="col-md-6">
-                  <b>Angkatan:</b> 2023 &nbsp;
-                </div>                
-                <div class="col-md-6">
-                  <b>Peminatan:</b> Peminatan B
-                </div>
-                <div class="col-md-6">
-                  <b>Jalur:</b> Reguler
-                </div>
-                <div class="col-md-6">
-                  <b>Status:</b> Aktif
-                </div>
-
               </div>
             </div>
           </div>

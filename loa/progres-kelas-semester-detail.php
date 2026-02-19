@@ -159,172 +159,55 @@
           </div>          
         </div>
 
-              
+
+
 <!-- ========== CARD : tabel asesmen========== -->
         <div class="card">
+          <div class="card-header">
+            Distribusi Capaian CPMK 1 - Perbandingan Periode
+          </div>
           <div class="card-body">
             <div class="table-responsive">
               
               <table class="table table-bordered table-sm table-hover table-striped example1" border="1">
-                <thead>
-                  <tr>
-                    <th colspan="2" rowspan="2" style="vertical-align: middle; text-align: center;">Hasil Assessmen CPMK</th>
-                    <th colspan="2"><center>Rerata</center></th>
-                    <th colspan="2"><center>Tertinggi</center></th>
-                    <th colspan="2"><center>Terendah</center></th>
-                  </tr>
-                  <tr>
-                    <th>Capaian</th>
-                    <th>Remidi</th>
-                    <th>Capaian</th>
-                    <th>Remidi</th>
-                    <th>Capaian</th>
-                    <th>Remidi</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td style="width: 10px;">1</td>
-                    <td style="width: 40%;">Mahasiswa mengerti dan memahami dasar-dasar polimer, hubungan antara sifat dengan struktur dan perilaku prosesnya.</td>
-                    <td align="center">
-                    72,14                      </td>
-                    <td align="center">
-                    0,00                      </td>
-                    <td align="center">
-                    80,00                      </td>
-                    <td align="center">
-                    0,00                      </td>
-                    <td align="center">
-                    70,00                      </td>
-                    <td align="center">
-                    0,00                      </td>
-                  </tr>
-                  <tr>
-                    <td style="width: 10px;">2</td>
-                    <td style="width: 40%;">Mahasiswa mengerti dan memahami dasar-dasar komposit, hubungan antara sifat dengan struktur dan perilaku prosesnya.</td>
-                    <td align="center">
-                    77,86                      </td>
-                    <td align="center">
-                    0,00                      </td>
-                    <td align="center">
-                    85,00                      </td>
-                    <td align="center">
-                    0,00                      </td>
-                    <td align="center">
-                    70,00                      </td>
-                    <td align="center">
-                    0,00                      </td>
-                  </tr>
-                  <tr>
-                    <td style="width: 10px;">3</td>
-                    <td style="width: 40%;">Mahasiswa mampu mengembangkan aplikasi polimer</td>
-                    <td align="center">
-                    76,14                      </td>
-                    <td align="center">
-                    0,00                      </td>
-                    <td align="center">
-                    80,00                      </td>
-                    <td align="center">
-                    0,00                      </td>
-                    <td align="center">
-                    75,00                      </td>
-                    <td align="center">
-                    0,00                      </td>
-                  </tr>
-                  <tr>
-                    <td style="width: 10px;">4</td>
-                    <td style="width: 40%;">Mahasiswa mampu mengembangkan aplikasi komposit</td>
-                    <td align="center">
-                    76,14                      </td>
-                    <td align="center">
-                    0,00                      </td>
-                    <td align="center">
-                    80,00                      </td>
-                    <td align="center">
-                    0,00                      </td>
-                    <td align="center">
-                    75,00                      </td>
-                    <td align="center">
-                    0,00                      </td>
-                  </tr>
-                </tbody>
-              </table>
-
-              <!-- visualisasi grafis capaian CPMK -->
-             <!--  <canvas id="chartCpmk" width="400" height="150"></canvas>
-              <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-              <script>
-                const ctx = document.getElementById('chartCpmk').getContext('2d');
-                const chartCpmk = new Chart(ctx, {
-                  type: 'bar',
-                  data: {
-                    labels: ['CPMK 1','CPMK 2','CPMK 3','CPMK 4'],
-                    datasets: [{
-                      label: 'Rerata Capaian (%)',
-                      data: [72.14, 77.86, 76.14, 76.14], 
-                      backgroundColor: 'rgba(54, 162, 235, 0.6)',
-                      borderColor: 'rgba(54, 162, 235, 1)',
-                      borderWidth: 1
-                    }]
-                  },
-                  options: {
-                    scales: {
-                      y: { beginAtZero: true, max: 100 }
-                    },
-                    plugins: {
-                      legend: { display: false },
-                      title: {
-                        display: true,
-                        text: 'Progres Capaian CPMK Kelas'
-                      }
-                    }
-                  }
-                });
-              </script> -->
+                
+  <thead>
+    <tr>
+      <th>Level Capaian</th>
+      <th>Periode A (%)</th>
+      <th>Periode B (%)</th>
+      <th>Δ (%) </th>
+      <th>Status </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>&ge; 85</td>
+      <td>15%</td>
+      <td>26%</td>
+      <td class="naik">Naik (+11%)</td>
+      <td class="naik">Positif</td>
+    </tr>
+    <tr>
+      <td>60–84</td>
+      <td>50%</td>
+      <td>50%</td>
+      <td class="sama">Sama (0%)</td>
+      <td class="sama">Stabil</td>
+    </tr>
+    <tr>
+      <td>&lt; 60</td>
+      <td>18%</td>
+      <td>10%</td>
+      <td class="naik">Naik (-8% Tidak Tercapai)</td>
+      <td class="naik">Perbaikan</td>
+    </tr>
+  </tbody>
+</table>
 
             </div>
           </div>
         </div>
-          
-        <!-- ========== CARD : visualisasi grafis capaian CPMK ========== -->
-       <!--  <div class="card">
-          <div class="card-body">
-              <canvas id="chartCpmk" width="400" height="150"></canvas>
-              <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-              <script>
-                const ctx = document.getElementById('chartCpmk').getContext('2d');
-                const chartCpmk = new Chart(ctx, {
-                  type: 'bar',
-                  data: {
-                    labels: ['CPMK 1','CPMK 2','CPMK 3','CPMK 4'],
-                    datasets: [{
-                      label: 'Rerata Capaian (%)',
-                      data: [72.14, 77.86, 76.14, 76.14], 
-                      backgroundColor: 'rgba(54, 162, 235, 0.6)',
-                      borderColor: 'rgba(54, 162, 235, 1)',
-                      borderWidth: 1
-                    }]
-                  },
-                  options: {
-                    scales: {
-                      y: { beginAtZero: true, max: 100 }
-                    },
-                    plugins: {
-                      legend: { display: false },
-                      title: {
-                        display: true,
-                        text: 'Progres Capaian CPMK Kelas'
-                      }
-                    }
-                  }
-                });
-              </script>
-
-          </div>
-        </div> -->
-
-
-
 
 
 

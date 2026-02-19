@@ -8,7 +8,7 @@
 
   <section class="content-header">
     <div class="container-fluid">
-      <h3 class="mb-0">Set Pemetaan
+      <h3 class="mb-0">Daftar Set Pemetaan
       <button type="button" class="btn btn-tool" data-bs-toggle="modal" data-bs-target="#modalBantuan" title="Bantuan">
                 <i class="fas fa-question-circle"></i>
               </button>
@@ -25,25 +25,13 @@
         <div class="col-md-12">
           <!-- ========== CARD : Filter & Export ========== -->
           <div class="card">
-            <div class="card-header">
-              <h5 class="card-title mb-0"><i class="fas fa-filter "></i> Judul Tabel yang terdampak tombol aksi ini </h5>
-              
-            </div>
+            
             <div class="card-body ">
               <div class="row">
 
                 <div class="col-md-6">
-                  <b>Angkatan:</b> 2023 &nbsp;
-                </div>                
-                <div class="col-md-6">
-                  <b>Peminatan:</b> Peminatan B
-                </div>
-                <div class="col-md-6">
-                  <b>Jalur:</b> Reguler
-                </div>
-                <div class="col-md-6">
-                  <b>Status:</b> Aktif
-                </div>
+                  <b>Kurikulum:</b> Merdeka Belajar &nbsp;
+                </div>    
 
               </div>
             </div>

@@ -25,15 +25,16 @@
         <div class="col-md-12">
           <!-- ========== CARD : Filter & Export ========== -->
           <div class="card">
-            <!-- <div class="card-header">
-              <h5 class="card-title mb-0"><i class="fas fa-filter "></i> Judul Tabel yang terdampak tombol aksi ini </h5>              
-            </div> -->
+           
             <div class="card-body ">
               <div class="row">
-
-                <div class="col-md-5">
+<div class="col-md-6">
+                  <b>Kurikulum:</b> 2023 &nbsp;
+                </div>                
+                <div class="col-md-6">
                 <b>Set Pemetaan:</b> KT-6 (K20) Kurikulum 2025 full stage &nbsp;
               </div>
+              
               <div class="col-md-5">
                 <b>Periode Yudisium :</b> 2021/2023 - 4 
               </div>

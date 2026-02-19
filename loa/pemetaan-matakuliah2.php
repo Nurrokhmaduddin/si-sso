@@ -8,7 +8,7 @@
 
   <section class="content-header">
     <div class="container-fluid">
-      <h3 class="mb-0">Daftar Mata Kuliah per kurikulum
+      <h3 class="mb-0">Daftar Mata Kuliah 
       	<button type="button" class="btn btn-tool" data-bs-toggle="modal" data-bs-target="#modalBantuan" title="Bantuan">
       		<i class="fas fa-question-circle"></i>
       	</button>
@@ -29,17 +29,14 @@
               <div class="row">
 
                 <div class="col-md-6">
-                  <b>Angkatan:</b> 2023 &nbsp;
+                  <b>Kurikulum:</b> Merdeka Belajar &nbsp;
                 </div>                
+               
                 <div class="col-md-6">
-                  <b>Peminatan:</b> Peminatan B
+                                    <b>Jalur Kelas:</b> Reguler
+
                 </div>
-                <div class="col-md-6">
-                  <b>Jalur:</b> Reguler
-                </div>
-                <div class="col-md-6">
-                  <b>Status:</b> Aktif
-                </div>
+               
 
               </div>
             </div>

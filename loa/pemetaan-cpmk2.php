@@ -8,7 +8,7 @@
 
   <section class="content-header">
     <div class="container-fluid">
-      <h3 class="mb-0">Daftar Capaian Mata Kuliah  per Set Pemetaan
+      <h3 class="mb-0">Daftar Capaian Mata Kuliah
       <button type="button" class="btn btn-tool" data-bs-toggle="modal" data-bs-target="#modalBantuan" title="Bantuan">
                 <i class="fas fa-question-circle"></i>
               </button>
@@ -25,26 +25,19 @@
         <div class="col-md-12">
           <!-- ========== CARD : Filter & Export ========== -->
           <div class="card">
-            <div class="card-header">
-              <h5 class="card-title mb-0"><i class="fas fa-filter "></i> Judul Tabel yang terdampak tombol aksi ini </h5>
-              
-            </div>
+            
             <div class="card-body ">
               <div class="row">
 
                 <div class="col-md-6">
-                  <b>Angkatan:</b> 2023 &nbsp;
+                  <b>Kurikulum:</b> Merdeka Belajar &nbsp;
                 </div>                
-                <div class="col-md-6">
-                  <b>Peminatan:</b> Peminatan B
+                <!-- <div class="col-md-6">
+                  <b>Set Pemetaan:</b> Peta B
+                </div> -->
+<div class="col-md-6">
+                  <b>Mata Kuliah:</b> Semua &nbsp;
                 </div>
-                <div class="col-md-6">
-                  <b>Jalur:</b> Reguler
-                </div>
-                <div class="col-md-6">
-                  <b>Status:</b> Aktif
-                </div>
-
               </div>
             </div>
             <div class="card-footer">
@@ -77,7 +70,7 @@
   <thead>
     <tr class="text-uppercase text-center">
       <th width="5%">No</th>
-      <th>Set Pemetaan</th>
+                      <th>kurikulum </th>
       <th>Kode CPMK</th>
       <th>Deskripsi CPMK</th>
       <th width="12%">Aksi</th>
