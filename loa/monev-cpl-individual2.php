@@ -155,7 +155,7 @@
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td align="center"><b>0</b></td>
+                        <td align="center"><b>61,26</b></td>
                       </tr>
                       <!-- BARIS 2 -->
                       <tr>
@@ -165,9 +165,9 @@
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td align="center"><b>-</b></td>
+                        <td align="center"><b>86,89</b></td>
                         <td align="center"><b>H</b></td>
-                        <td align="center"><b>-</b></td>
+                        <td align="center"><b>86,89</b></td>
                         <td></td>
                       </tr>
                       <!-- BARIS 3 -->
@@ -191,9 +191,9 @@
                         <td>UNI600 - <b>2</b></td>
                         <td style="border-left: 3px solid #2d5f8b;">Pendidikan Agama Islam</td>
                         <td style="max-width: 300px;">Menunjukkan sikap ketakwaan dengan menjalankan syariat-Nya dalam kehidupan sehari-hari </td>
-                        <td align="center">-</td>
+                        <td align="center">90</td>
                         <td align="center"><b>H</b></td>
-                        <td align="center">-</td>
+                        <td align="center">90</td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -205,9 +205,9 @@
                         <td>UNI600 - <b>3</b></td>
                         <td style="border-left: 3px solid #2d5f8b;">Pendidikan Agama Islam</td>
                         <td style="max-width: 300px;">Merefleksikan kesadaran personal sebagai Mukmin, Muslim, dan Muhsin</td>
-                        <td align="center">-</td>
-                        <td align="center"><b>H</b></td>
-                        <td align="center">-</td>
+                        <td align="center">86</td>
+                        <td align="center"><b>L</b></td>
+                        <td align="center">21,5</td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -219,9 +219,9 @@
                         <td>UNI600 - <b>4</b></td>
                         <td style="border-left: 3px solid #2d5f8b;">Pendidikan Agama Islam</td>
                         <td style="max-width: 300px;">Mengidentifikasi nilai-nilai kebaikan dan etika universal yang terkandung dalam ajaran Islam serta menelaah secara kritis implementasinya dalam kehidupan umat muslim</td>
-                        <td align="center">-</td>
+                        <td align="center">84</td>
                         <td align="center"><b>H</b></td>
-                        <td align="center">-</td>
+                        <td align="center">84</td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -243,308 +243,14 @@
                       </tr>
                       <tr>
                         <td></td>
-                        <td></td>
-                        <td>UNI601 - <b>1</b></td>
-                        <td style="border-left: 3px solid #2d5f8b;">Islam Ulil Albab</td>
-                        <td style="max-width: 300px;">Menjelaskan konsep insan ulil albab berdasarkan Al-Quran dan hadits serta merefleksikannya sebagai individu dalam kehidupan sehari-hari</td>
-                        <td align="center">-</td>
-                        <td align="center"><b>H</b></td>
-                        <td align="center">-</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <td></td>
-                        <td></td>
-                        <td>UNI601 - <b>2</b></td>
-                        <td style="border-left: 3px solid #2d5f8b;">Islam Ulil Albab</td>
-                        <td style="max-width: 300px;">Membandingkan berbagai macam pemikiran dalam Islam</td>
-                        <td align="center">                                -                                              </td>
-                        <td align="center"><b>H</b></td>
-                        <td align="center">-</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <td></td>
-                        <td></td>
-                        <td>UNI601 - <b>3</b></td>
-                        <td style="border-left: 3px solid #2d5f8b;">Islam Ulil Albab</td>
-                        <td style="max-width: 300px;">Mengidentifikasi faktor-faktor pendukung kejayaan, keruntuhan, dan kebangkitan kembali peradaban Islam</td>
-                        <td align="center">                                -                                              </td>
-                        <td align="center"><b>H</b></td>
-                        <td align="center">-</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <td></td>
-                        <td></td>
-                        <td>UNI601 - <b>4</b></td>
-                        <td style="border-left: 3px solid #2d5f8b;">Islam Ulil Albab</td>
-                        <td style="max-width: 300px;">Merefleksikan peran dan keteladanan pendiri dan tokoh UII utamanya kepemimpinan dan etika kerja dalam rangka mengembangkan individu yang berilmu amaliah dan beramal ilmiah</td>
-                        <td align="center">                                -                                              </td>
-                        <td align="center"><b>H</b></td>
-                        <td align="center">-</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <td></td>
-                        <td></td>
-                        <td>UNI602 - <b>1</b></td>
-                        <td style="border-left: 3px solid #2d5f8b;">Islam Rahmatan Lil Alamin</td>
-                        <td style="max-width: 300px;">Mahasiswa mampu menjelaskan konsep Islam Rahmatan Lil Alamin berdasarkan Al-Quran dan Hadis</td>
-                        <td align="center">-                                              </td>
-                        <td align="center"><b>H</b></td>
-                        <td align="center">-</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <td></td>
-                        <td></td>
-                        <td>UNI602 - <b>2</b></td>
-                        <td style="border-left: 3px solid #2d5f8b;">Islam Rahmatan Lil Alamin</td>
-                        <td style="max-width: 300px;">Mahasiswa mampu menjelaskan interaksi nilai keislaman dengan bidang ilmu yang ditekuni</td>
-                        <td align="center">-                                              </td>
-                        <td align="center"><b>H</b></td>
-                        <td align="center">-</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <td></td>
-                        <td></td>
-                        <td>UNI602 - <b>3</b></td>
-                        <td style="border-left: 3px solid #2d5f8b;">Islam Rahmatan Lil Alamin</td>
-                        <td style="max-width: 300px;">Mahasiswa mampu menunjukkan pemikiran, produk dan/atau unjuk kerja yang merupakan perwujudan hasil integrasi nilai keislaman pada bidang ilmu yang ditekuni</td>
-                        <td align="center">-                                              </td>
-                        <td align="center"><b>H</b></td>
-                        <td align="center">-</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <td></td>
-                        <td></td>
-                        <td>UNI602 - <b>4</b></td>
-                        <td style="border-left: 3px solid #2d5f8b;">Islam Rahmatan Lil Alamin</td>
-                        <td style="max-width: 300px;">Mahasiswa mampu menumbuhkan sikap proaktif serta kebanggaan sebagai muslim/muslimah</td>
-                        <td align="center">-                                              </td>
-                        <td align="center"><b>H</b></td>
-                        <td align="center">-</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <td></td>
-                        <td></td>
-                        <td>UNI602 - <b>5</b></td>
-                        <td style="border-left: 3px solid #2d5f8b;">Islam Rahmatan Lil Alamin</td>
-                        <td style="max-width: 300px;">Mahasiswa mampu merumuskan kontribusi personal dalam bidang ilmu yang ditekuninya dalam lingkup lingkungan sekitar bagi kemajuan peradaban Islam </td>
-                        <td align="center">-                                              </td>
-                        <td align="center"><b>H</b></td>
-                        <td align="center">-</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <td></td>
-                        <td></td>
-                        <td>UNI603 - <b>1</b></td>
-                        <td style="border-left: 3px solid #2d5f8b;">Pendidikan Pancasila</td>
-                        <td style="max-width: 300px;">Mengekspresikan sikap pemahaman terhadap ideologi Pancasila dan konsep kebangsaan Indonesia dalam kehidupan bermasyarakat, berbangsa, dan bernegara</td>
-                        <td align="center">-                                              </td>
-                        <td align="center"><b>H</b></td>
-                        <td align="center">-</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <td></td>
-                        <td></td>
-                        <td>UNI603 - <b>2</b></td>
-                        <td style="border-left: 3px solid #2d5f8b;">Pendidikan Pancasila</td>
-                        <td style="max-width: 300px;">Mengidentifikasi dan menganalisis kaitan antara ideologi dan perspektif Pancasila dengan perspektif keislaman</td>
-                        <td align="center">-                                              </td>
-                        <td align="center"><b>H</b></td>
-                        <td align="center">-</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <td></td>
-                        <td></td>
-                        <td>UNI603 - <b>3</b></td>
-                        <td style="border-left: 3px solid #2d5f8b;">Pendidikan Pancasila</td>
-                        <td style="max-width: 300px;">Menganalisis perbandingan antara ideologi Pancasila dengan ideologi lain</td>
-                        <td align="center">-                                              </td>
-                        <td align="center"><b>H</b></td>
-                        <td align="center">-</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <td></td>
-                        <td></td>
-                        <td>UNI603 - <b>4</b></td>
-                        <td style="border-left: 3px solid #2d5f8b;">Pendidikan Pancasila</td>
-                        <td style="max-width: 300px;">Merefleksikan Pancasila sebagai nilai dan norma personal dalam konteks kehidupan bermasyarakat, berbangsa, dan bernegara</td>
-                        <td align="center">-                                              </td>
-                        <td align="center"><b>H</b></td>
-                        <td align="center">-</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <td></td>
-                        <td></td>
-                        <td>UNI603 - <b>5</b></td>
-                        <td style="border-left: 3px solid #2d5f8b;">Pendidikan Pancasila</td>
-                        <td style="max-width: 300px;">Merefleksikan Pancasila sebagai sistem etika dalam konteks pengembangan dan penerapan ilmu dan teknologi pada bidang studi yang dipelajari</td>
-                        <td align="center">-                                              </td>
-                        <td align="center"><b>H</b></td>
-                        <td align="center">-</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <td></td>
-                        <td></td>
-                        <td>UNI604 - <b>1</b></td>
-                        <td style="border-left: 3px solid #2d5f8b;">Pendidikan Kewarganegaraan</td>
-                        <td style="max-width: 300px;">Mampu menunjukkan sikap sebagai warga negara yang cerdas dan bertanggung jawab berlandaskan nilai keIslaman dan  keIndonesiaan</td>
-                        <td align="center">-                                              </td>
-                        <td align="center"><b>H</b></td>
-                        <td align="center">-</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <td></td>
-                        <td></td>
-                        <td>UNI604 - <b>2</b></td>
-                        <td style="border-left: 3px solid #2d5f8b;">Pendidikan Kewarganegaraan</td>
-                        <td style="max-width: 300px;">Memiliki pandangan yang moderat (umatan wasathan) sebagai warga negara dalam mengimplementasikan wawasan kebangsaan</td>
-                        <td align="center">-                                              </td>
-                        <td align="center"><b>H</b></td>
-                        <td align="center">-</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <td></td>
-                        <td></td>
-                        <td>UNI604 - <b>3</b></td>
-                        <td style="border-left: 3px solid #2d5f8b;">Pendidikan Kewarganegaraan</td>
-                        <td style="max-width: 300px;">Mampu mengidentifikasikan dan merefleksikan peranan pribadi, serta mengembangkan alternatif solusi untuk problem kebangsaan kekinian</td>
-                        <td align="center">-                                              </td>
-                        <td align="center"><b>H</b></td>
-                        <td align="center">-</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <td></td>
-                        <td></td>
-                        <td>UNI608 - <b>1</b></td>
-                        <td style="border-left: 3px solid #2d5f8b;">Kuliah Kerja Nyata</td>
-                        <td style="max-width: 300px;">Mahasiswa mampu melakukan dakwah Islamiyah bil hal atau bil khitabah atau bil kitabah</td>
-                        <td align="center">-                                              </td>
-                        <td align="center"><b>H</b></td>
-                        <td align="center">-</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <td></td>
-                        <td></td>
-                        <td>UNI608 - <b>2</b></td>
-                        <td style="border-left: 3px solid #2d5f8b;">Kuliah Kerja Nyata</td>
-                        <td style="max-width: 300px;">Mahasiswa mampu bekerjasama dengan disiplin ilmu yang lain untuk merencanakan dan melaksanakan program solutif bagi persoalan masyarakat secara nyata</td>
-                        <td align="center">-                                              </td>
-                        <td align="center"><b>H</b></td>
-                        <td align="center">-</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <td></td>
-                        <td></td>
-                        <td>UNI608 - <b>3</b></td>
-                        <td style="border-left: 3px solid #2d5f8b;">Kuliah Kerja Nyata</td>
-                        <td style="max-width: 300px;">Mahasiswa mampu menyusun analisis potensi dan masalah yang dihadapi masyarakat secara nyata</td>
-                        <td align="center">-                                              </td>
-                        <td align="center"><b>H</b></td>
-                        <td align="center">-</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <td></td>
-                        <td></td>
-                        <td>UNI608 - <b>4</b></td>
-                        <td style="border-left: 3px solid #2d5f8b;">Kuliah Kerja Nyata</td>
-                        <td style="max-width: 300px;">Mahasiswa mampu merencanakan, mengkoordinasi, melaksanakan, dan mengevaluasi program sesuai bidang ilmu yang melibatkan masyarakat secara langsung</td>
-                        <td align="center">-                                              </td>
-                        <td align="center"><b>H</b></td>
-                        <td align="center">-</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <td></td>
                         <td align="center">IK 1.2</td>
                         <td colspan="3">Menunjukkan perilaku Islami pada setiap peran yang dijalani</td>
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td align="center"><b>-</b></td>
+                        <td align="center"><b>10</b></td>
                         <td align="center"><b>M</b></td>
-                        <td align="center"><b>-</b></td>
+                        <td align="center"><b>5</b></td>
                         <td></td>
                       </tr>
                       <!-- BARIS 3 -->
@@ -554,9 +260,9 @@
                         <td>UNI600 - <b>1</b></td>
                         <td style="border-left: 3px solid #2d5f8b;">Pendidikan Agama Islam</td>
                         <td style="max-width: 300px;">Menjelaskan konsep fitrah manusia dan hidayah sesuai Al-Qur’an dan Hadis</td>
-                        <td align="center">-                                              </td>
+                        <td align="center">10                                             </td>
                         <td align="center"><b>H</b></td>
-                        <td align="center">-</td>
+                        <td align="center">10</td>
                         <td></td>
                         <td></td>
                         <td></td>

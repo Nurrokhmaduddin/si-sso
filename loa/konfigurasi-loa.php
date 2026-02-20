@@ -266,6 +266,60 @@
         </div>
       </div>
     </div>
+<!-- ========== CARD : rubrik Kategori Indeks Pemerataan CPL ========== -->
+
+  <div class="card shadow-sm">
+    
+    <!-- Card Header -->
+    <div class="card-header bg-dark text-white">
+      Kategori Indeks Pemerataan CPL
+    </div>
+
+    <!-- Card Body -->
+    <div class="card-body">
+      <table class="table table-bordered table-sm text-center">
+        <thead style="background-color: #f2f2f2;">
+          <tr>
+            <th>Rentang Indeks</th>
+            <th>Kategori</th>
+            <th>Interpretasi</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>≥ 0.80</strong></td>
+            <td style="color: green; font-weight: bold;">Sangat Stabil</td>
+            <td>Pemerataan kompetensi sangat baik dan seimbang antar CPL</td>
+          </tr>
+          <tr>
+            <td><strong>0.65 – 0.79</strong></td>
+            <td style="color: #2e8b57; font-weight: bold;">Stabil</td>
+            <td>Kompetensi relatif merata dengan ketimpangan kecil</td>
+          </tr>
+          <tr>
+            <td><strong>0.50 – 0.64</strong></td>
+            <td style="color: orange; font-weight: bold;">Cukup Stabil</td>
+            <td>Masih terdapat ketimpangan moderat antar CPL</td>
+          </tr>
+          <tr>
+            <td><strong>&lt; 0.50</strong></td>
+            <td style="color: red; font-weight: bold;">Tidak Stabil</td>
+            <td>Ketimpangan kompetensi tinggi dan perlu perhatian serius</td>
+          </tr>
+        </tbody>
+        <tfoot style="background-color: #f9f9f9; font-weight: bold;">
+          <tr>
+            <td colspan="3">
+              Indeks Pemerataan dihitung berdasarkan selisih capaian CPL tertinggi dan terendah 
+              relatif terhadap standar yang ditetapkan. Semakin mendekati 1, semakin merata kualitas kompetensi angkatan.
+            </td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+
+  </div>
+
 
 <!-- ========== CARD : Abstraksi Tag Pengembangan ========== -->
 <div class="card">

@@ -271,7 +271,7 @@
     new Chart(ctx, {
         type: 'bar',
         data: {
-            labels: ['IK 1', 'IK 2', 'IK 3', 'CPL1'],
+            labels: ['CPMK 1', 'CPMK 2', 'CPMK 3', 'IK 1'],
             datasets: [
                 {
                     label: 'Periode A',
@@ -328,7 +328,7 @@
     new Chart(ctx2, {
         type: 'bar',
         data: {
-            labels: ['IK 4', 'IK 5',  'CPL2'],
+            labels: ['CPMK 4', 'CPMK 5',  'IK 2'],
             datasets: [
                 {
                     label: 'Periode A',

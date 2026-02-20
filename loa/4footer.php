@@ -38,6 +38,8 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <!-- Chart.js -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+ <!-- Plugin Annotation -->
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@1.4.0"></script>
 
 <script>
 $(document).ready(function() {

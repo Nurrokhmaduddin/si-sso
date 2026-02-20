@@ -48,13 +48,15 @@
                 <div class="col-md-6">
                   <b>Kurikulum:</b> 2023 &nbsp;
                 </div>                
-                <!-- <div class="col-md-6">
+                <div class="col-md-6">
                 <b>Set Pemetaan:</b> KT-6 (K20) Kurikulum 2025 full stage &nbsp;
-              </div> -->
+              </div>
               <div class="col-md-6">
                   <b>Periode Akademik:</b> 2024/2025 - Gasal  &nbsp;
                 </div> 
-                
+                <div class="col-md-6">
+                  <b>Mata Kuliah:</b> Semua  &nbsp;
+                </div>
               </div>
             </div>
             <div class="card-footer">
@@ -747,6 +749,8 @@
         </div>
 
 </div><!-- end card grafik -->
+
+
         <!-- ========== CARD : Tabel Granular ========== -->
           <div class="card">
             <div class="card-header">

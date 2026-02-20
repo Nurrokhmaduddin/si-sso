@@ -335,8 +335,8 @@
 
 
         <!-- MONITORING OBE -->
-        <li class="nav-item <?php echo in_array($page, ['status_mahasiswa','status_pemetaan','monev_individu','monev_kelas','monev_cpl','monev_angkatan','monev_yudisium']) ? 'menu-open' : ''; ?>">
-          <a href="#" class="nav-link <?php echo in_array($page, ['status_mahasiswa','status_pemetaan','monev_individu','monev_kelas','monev_cpl','monev_angkatan','monev_yudisium']) ? 'active' : ''; ?>">
+        <li class="nav-item <?php echo in_array($page, ['status_mahasiswa','status_pemetaan','monev_individu','monev_kelas','monev_cpl','monev_angkatan','monev_yudisium','monev_cpmk']) ? 'menu-open' : ''; ?>">
+          <a href="#" class="nav-link <?php echo in_array($page, ['status_mahasiswa','status_pemetaan','monev_individu','monev_kelas','monev_cpl','monev_angkatan','monev_yudisium','monev_cpmk']) ? 'active' : ''; ?>">
             <i class="nav-icon fas fa-chart-pie"></i>
             <p>
               Monitoring OBE
@@ -373,6 +373,13 @@
               </a>
             </li> -->
             <li class="nav-item">
+              <a href="monev-rekap-cpmk.php" class="nav-link <?php echo $page == 'monev_cpmk' ? 'active' : ''; ?>">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Monev CPMK Semester</p>
+              </a>
+            </li>
+
+            <li class="nav-item">
               <a href="monev-rekap-cpl2.php" class="nav-link <?php echo $page == 'monev_cpl' ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Monev CPL Semester</p>
@@ -402,10 +409,17 @@
               </a>
             </li> -->
 
+
             <li class="nav-item">
               <a href="monev-cpl-angkatan.php" class="nav-link <?php echo $page == 'monev_angkatan' ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Monev CPL Angkatan</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="monev-cpl-angkatan2.php" class="nav-link <?php echo $page == 'monev_angkatan' ? 'active' : ''; ?>">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Monev CPL Angkatan 2</p>
               </a>
             </li>
 
@@ -448,7 +462,13 @@
             <li class="nav-item">
               <a href="progres-kelas-semester.php" class="nav-link <?php echo $page == 'progress_kelas' ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
-                <p>Progres Kelas</p>
+                <p>Progres MK</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="progres-cpmk-semester.php" class="nav-link <?php echo $page == 'progress_cpmk' ? 'active' : ''; ?>">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Progres CPMK</p>
               </a>
             </li>
             <li class="nav-item">

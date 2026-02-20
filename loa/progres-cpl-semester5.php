@@ -64,8 +64,8 @@
 
   <!-- TAB NAV  -->
   <ul class="nav nav-tabs">   
-    <li class="nav-item" onclick="window.location='progres-cpl-semester.php'"><a class="nav-link active">CPL (avg)</a></li>
-    <li class="nav-item" onclick="window.location='progres-cpl-semester5.php'"><a class="nav-link ">CPL (%)</a></li>
+    <li class="nav-item" onclick="window.location='progres-cpl-semester.php'"><a class="nav-link ">CPL (avg)</a></li>
+    <li class="nav-item" onclick="window.location='progres-cpl-semester5.php'"><a class="nav-link active">CPL (%)</a></li>
     <li class="nav-item" onclick="window.location='progres-cpl-semester2.php'"><a class="nav-link ">IK</a></li>
     <!-- <li class="nav-item" onclick="window.location='progres-cpl-semester3.php'"><a class="nav-link ">Detail</a></li> -->
     <li class="nav-item" onclick="window.location='progres-cpl-semester4.php'"><a class="nav-link ">Pengembangan</a></li>
@@ -274,6 +274,7 @@
 
 
 <!-- Chart Script -->
+
 <script>
     const ctx = document.getElementById("chartCPL1");
 
@@ -299,36 +300,45 @@
             ]
         },
         options: {
-            responsive: true,
-            plugins: {
-                legend: { position: 'top' },
-                annotation: {
-                    annotations: {
-                        targetLine: {
-                            type: 'line',
-                            yMin: 85,      // <<< TARGET CAPAIAN
-                            yMax: 85,
-                            borderColor: 'red',
-                            borderWidth: 2,
-                            borderDash: [6, 6],
-                            label: {
-                                display: true,
-                                content: 'Target 85',
-                                position: 'start',
-                                color: 'red',
-                                backgroundColor: 'rgba(255,255,255,0.7)',
-                                padding: 4
-                            }
-                        }
-                    }
+          responsive: true,
+          plugins: {
+            legend: { position: 'top' },
+            tooltip: {
+              callbacks: {
+                label: function(context) {
+                  return context.dataset.label + ': ' + context.raw + '%';
                 }
+              }
             },
-            scales: {
-                y: {
-                    beginAtZero: true
+            annotation: {
+              annotations: {
+                batas60: {
+                  type: 'line',
+                  yMin: 60,
+                  yMax: 60,
+                  borderColor: 'red',
+                  borderWidth: 2,
+                  borderDash: [6,6],
+                  label: {
+                    display: true,
+                    content: 'Batas Minimum 60%',
+                    position: 'start'
+                  }
                 }
+              }
             }
+          },
+          scales: {
+            y: {
+              beginAtZero: true,
+              max: 100,
+              ticks: {
+                callback: value => value + '%'
+              }
+            }
+          }
         }
+
     });
 </script>
 <script>
@@ -356,36 +366,47 @@
             ]
         },
         options: {
-            responsive: true,
-            plugins: {
-                legend: { position: 'top' },
-                annotation: {
-                    annotations: {
-                        targetLine: {
-                            type: 'line',
-                            yMin: 85,      // <<< TARGET CAPAIAN
-                            yMax: 85,
-                            borderColor: 'red',
-                            borderWidth: 2,
-                            borderDash: [6, 6],
-                            label: {
-                                display: true,
-                                content: 'Target 85',
-                                position: 'start',
-                                color: 'red',
-                                backgroundColor: 'rgba(255,255,255,0.7)',
-                                padding: 4
-                            }
-                        }
-                    }
+    responsive: true,
+    plugins: {
+        legend: { position: 'top' },
+        tooltip: {
+            callbacks: {
+                label: function(context) {
+                    return context.dataset.label + ': ' + context.raw + '%';
                 }
-            },
-            scales: {
-                y: {
-                    beginAtZero: true
+            }
+        },
+        annotation: {
+            annotations: {
+                batas60: {
+                    type: 'line',
+                    yMin: 60,
+                    yMax: 60,
+                    borderColor: 'red',
+                    borderWidth: 2,
+                    borderDash: [6,6],
+                    label: {
+                      display: true,
+                      content: 'Batas Minimum 60%',
+                      backgroundColor: 'red',
+                      color: '#fff',
+                      position: 'start'
+                    }
                 }
             }
         }
+    },
+    scales: {
+        y: {
+            beginAtZero: true,
+            max: 100,
+            ticks: {
+                callback: value => value + '%'
+            }
+        }
+    }
+}
+
     });
 
 
@@ -477,18 +498,44 @@ new Chart(barACtx, {
     responsive: true,
     maintainAspectRatio: false,
     scales: {
-      x: {
-        ticks: { display: false }   // sembunyikan label bawah
-      },
+      x: { ticks: { display: false } },
       y: {
         beginAtZero: true,
-        max: 100
+        max: 100,
+        ticks: {
+          callback: value => value + '%'
+        }
       }
     },
     plugins: {
-      legend: { display: false }
+      legend: { display: false },
+      tooltip: {
+        callbacks: {
+          label: function(context) {
+            return context.raw + '%';
+          }
+        }
+      },
+      annotation: {
+        annotations: {
+          batas60: {
+            type: 'line',
+            yMin: 60,
+            yMax: 60,
+            borderColor: 'red',
+            borderWidth: 2,
+            borderDash: [6,6],
+            label: {
+              display: true,
+              content: '60%',
+              position: 'start'
+            }
+          }
+        }
+      }
     }
   }
+
 });
 
 
@@ -514,18 +561,44 @@ new Chart(barBCtx, {
     responsive: true,
     maintainAspectRatio: false,
     scales: {
-      x: {
-        ticks: { display: false }
-      },
+      x: { ticks: { display: false } },
       y: {
         beginAtZero: true,
-        max: 100
+        max: 100,
+        ticks: {
+          callback: value => value + '%'
+        }
       }
     },
     plugins: {
-      legend: { display: false }
+      legend: { display: false },
+      tooltip: {
+        callbacks: {
+          label: function(context) {
+            return context.raw + '%';
+          }
+        }
+      },
+      annotation: {
+        annotations: {
+          batas60: {
+            type: 'line',
+            yMin: 60,
+            yMax: 60,
+            borderColor: 'red',
+            borderWidth: 2,
+            borderDash: [6,6],
+            label: {
+              display: true,
+              content: '60%',
+              position: 'start'
+            }
+          }
+        }
+      }
     }
   }
+
 });
 
 </script>
