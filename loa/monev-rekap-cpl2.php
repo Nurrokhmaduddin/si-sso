@@ -8,7 +8,7 @@
 
   <section class="content-header">
     <div class="container-fluid">
-      <h3 class="mb-0">Rekapitulasi CPL Semester
+      <h3 class="mb-0">Rekapitulasi CPL Setahun
         <button type="button" class="btn btn-tool" data-bs-toggle="modal" data-bs-target="#modalBantuan" title="Bantuan">
           <i class="fas fa-question-circle"></i>
         </button>
@@ -24,7 +24,7 @@
       <div class="row">
         <div class="col-md-12">
           <!-- ========== CARD : Filter & Export ========== -->
-          <div class="card">
+          <div class="card card-outline card-info">
             <!-- <div class="card-header">
               <h5 class="card-title mb-0"><i class="fas fa-filter "></i> Judul Tabel yang terdampak tombol aksi ini </h5>              
             </div> -->
@@ -38,7 +38,10 @@
                 <b>Set Pemetaan:</b> KT-6 (K20) Kurikulum 2025 full stage &nbsp;
               </div>
               <div class="col-md-6">
-                  <b>Periode Akademik:</b> 2024/2025 - Gasal  &nbsp;
+                  <b>Tahun Akademik:</b> 2024/2025  &nbsp;
+                </div>
+                <div class="col-md-6">
+                  <b>MK Tempuh saat(selektif):</b> Semester 1 saja atau semua  &nbsp;
                 </div> 
                 
               </div>
@@ -56,7 +59,35 @@
             </div>
           </div>
 
-        
+        <div class="card card-outline card-primary">
+  <div class="card-body">
+    <div class="row">
+      <div class="col-md-3">Tahun Akademik</div>
+      <div class="col-md-3">Semester</div>
+      <div class="col-md-3">Angkatan</div>
+      <div class="col-md-3">CPL</div>
+    </div>
+  </div>
+</div>
+<button type="button" class="btn btn-sm btn-outline-info" onclick="window.location='detail-cpl.html'"><i class="fas fa-info-circle"></i></button>
+<div class="col-lg-3 col-6">
+  <div class="small-box bg-info">
+    <div class="inner">
+      <h3>78%</h3>
+      <p>Rerata CPL</p>
+    </div>
+  </div>
+</div>
+
+Jenis chart:
+
+Line Chart → Tren Semester
+
+Bar Chart → Perbandingan Kelas
+
+Radar Chart → Profil Lulusan
+
+Heatmap → CPL vs Semester
       
   <!-- ========== CARD 3: KPI row ========== --> 
   <style>
@@ -106,7 +137,81 @@
 
 
 
+Metrik yang Perlu Dievaluasi
+1. Ketercapaian CPL per Tahun
 
+Rata-rata kontribusi dari semua MK
+
+Contoh:
+
+CPL 1 = 82%
+CPL 2 = 74%
+2. Tren 3 Tahun
+
+Naik, turun, stagnan?
+
+Minimal 3 tahun untuk baca pola.
+
+3. Distribusi Kontributor
+
+Mata kuliah mana paling kuat kontribusinya?
+
+Mana yang lemah?
+
+Kalau satu CPL hanya kuat di 1 MK → itu riskan.
+
+4. Konsistensi Antar Dosen
+
+Apakah ada gap besar antar kelas?
+
+Misal:
+
+Kelas A → 85%
+
+Kelas B → 68%
+
+Ini bisa berarti:
+
+Perbedaan metode
+
+Perbedaan instrumen
+
+5. Gap Target vs Realisasi
+
+Jika target CPL = 80%
+Realisasi = 74%
+
+Gap ini harus dianalisis:
+
+Kurikulum?
+
+Beban SKS?
+
+Metode?
+
+Assessment?
+
+6. Analisis Mapping
+
+Evaluasi:
+
+Apakah distribusi RPS terlalu berat di satu CPL?
+
+Apakah ada CPL kurang disentuh?
+
+Ini evaluasi kurikulum, bukan dosen.
+---------
+Level Prodi
+
+Rata-rata CPL
+
+Tren 3 Tahun
+
+Gap Target
+
+Konsistensi Antar MK
+
+Keseimbangan Mapping
 
 
 
@@ -340,6 +445,15 @@ canvas {
         <p>
           Ringkasan capaian CPL per Individu Mahasiswa, perkembangan, peringatan dini (EWS), disajikan dalam bentuk grafik dan tabel (Mockup data statis)
         </p>        
+        <p>
+          untuk audit implementasi dan atau audit kurikulum
+        </p>
+        <p>
+          apakah CPL di 2025-ganjil turun dibanding 2024-ganjil? apakah ada masalah implementasi di semester terpilih? apakah dosen konsisten dalam menilai CPMK?
+        </p>
+        <p>
+          bahan evaluasi kurikulum satu tahun, dg parameter CPL-IK, dengan detail di MK-kelas perkuliahan(cpmk).
+        </p> 
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>

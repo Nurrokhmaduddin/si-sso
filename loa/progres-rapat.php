@@ -66,7 +66,54 @@
 
           </div>
 
+Level Longitudinal – “Peningkatan Berkelanjutan” Itu Maksudnya Apa?
 
+Jawabannya: bisa dua-duanya, dan memang seharusnya mencakup keduanya.
+
+🔹 A. Peningkatan pada Level Pelaksanaan (Teaching Improvement)
+
+Contoh:
+
+Semester 1: CPMK 2 = 64%
+
+Dosen ubah metode → tambah studi kasus
+
+Semester 2: CPMK 2 = 78%
+
+Ini peningkatan berkelanjutan di:
+
+Level proses pembelajaran
+
+Unitnya bisa:
+
+Antar semester
+
+Antar tahun akademik
+
+Antar kelas
+
+🔹 B. Peningkatan pada Level Struktur (Curriculum Improvement)
+
+Contoh:
+
+CPL 3 rendah selama 2 tahun
+
+Prodi revisi mapping bobot
+
+Tambah MK pendukung
+
+2 tahun berikutnya CPL 3 naik
+
+Ini peningkatan berkelanjutan di:
+
+Level desain kurikulum
+
+Jadi longitudinal itu bukan cuma angka naik,
+tapi bukti bahwa:
+
+Ada tindakan → ada dampak → terukur → berulang
+
+Itulah makna continuous improvement.
 <!-- ========== CARD 3: Tabel saja ========== -->
           <div class="card">
             <!-- <div class="card-header d-flex align-items-center">
@@ -115,7 +162,51 @@
             </tbody>
           </table>
 
+🔹 A. Evaluasi Hasil (Refleksi)
 
+Input oleh dosen/prodi:
+
+Contoh field:
+
+Analisis capaian (kenapa rendah/tinggi)
+
+Faktor penyebab
+
+Kendala
+
+Temuan kelas
+
+🔹 B. Rencana Perbaikan
+
+Field:
+
+Tindakan perbaikan
+
+Level tindakan (kelas/MK/kurikulum)
+
+Target perbaikan
+
+Periode implementasi
+
+🔹 C. Monitoring Dampak
+
+Semester berikutnya:
+
+Apakah target tercapai?
+
+Ada peningkatan?
+
+Ini membentuk siklus:
+
+Plan → Do → Check → Act
+
+Tanpa modul ini, sistem hanya:
+
+Monitoring statistik
+
+Dengan modul ini, sistem menjadi:
+
+Sistem kendali mutu berbasis PDCA
               </div>
             </div>
             <!-- /.card-body -->
@@ -123,6 +214,107 @@
         </div>
       </div>
     </div>
+    Apakah Evaluasi & Rencana Perbaikan Harus di Semua Level?
+
+Secara ideal OBE: ya, tapi proporsional.
+Tidak semua level perlu detail yang sama.
+
+Mari kita bagi secara logis.
+
+🔹 Level Kelas (Operasional – Dosen)
+
+Perlu input:
+
+Evaluasi hasil kelas (kenapa CPMK rendah/tinggi)
+
+Kendala implementasi
+
+Rencana perbaikan semester berikutnya
+
+Ini mikro-level improvement.
+
+Contoh:
+
+Diskusi kurang efektif → tambah studi kasus.
+
+Ini penting karena perbaikan sering terjadi di sini.
+
+🔹 Level Mata Kuliah (Koordinator MK / Prodi)
+
+Perlu evaluasi agregat semua kelas:
+
+Ada gap antar kelas?
+
+CPMK mana lemah secara konsisten?
+
+Rubrik perlu diseragamkan?
+
+Rencana perbaikan bisa berupa:
+
+Revisi RPS
+
+Standarisasi rubrik
+
+Workshop dosen
+
+Ini meso-level improvement.
+
+🔹 Level Kurikulum (Prodi)
+
+Tidak cukup hanya peta CPMK–CPL.
+
+Di level ini evaluasinya mencakup:
+
+Apakah ada CPL terlalu berat di 1–2 MK?
+
+Apakah ada CPL jarang disentuh?
+
+Apakah progression level Bloom logis?
+
+Apakah beban SKS selaras dengan kontribusi CPL?
+
+Rencana perbaikan bisa berupa:
+
+Revisi mapping
+
+Tambah/hapus MK
+
+Ubah bobot kontribusi
+
+Re-design kurikulum
+
+Ini makro-level improvement.
+
+2️⃣ Apakah Struktur & Keseimbangan Cukup Dilihat dari Mapping?
+
+Jawabannya: tidak cukup hanya mapping ada atau tidak.
+
+Yang perlu dilihat:
+
+🟢 Parameter Struktur
+
+Distribusi kontribusi CPL antar MK
+(jangan 70% ditanggung satu MK)
+
+Jumlah MK pendukung tiap CPL
+(idealnya tidak hanya 1 MK)
+
+Level kognitif (Bloom progression)
+
+Semester awal → C1–C3
+
+Semester akhir → C4–C6
+
+🟢 Parameter Keseimbangan
+
+Apakah semua CPL mendapat bobot proporsional?
+
+Apakah tidak ada MK yang “overloaded” ke banyak CPL?
+
+Apakah ada CPL dengan capaian rendah terus-menerus?
+
+Jadi mapping itu dasar,
+tapi analisis distribusi & bobot yang membuatnya bermakna.
   </section>
 
 
@@ -179,6 +371,28 @@
       <div class="modal-body">
         <p>
           Menu untuk <strong>upload file PDF Rapat Evaluasi</strong> dan menampilkan daftar file yang telah diunggah. 
+        </p>
+        <p>
+          Saya sarankan struktur seperti ini:
+
+Dosen (Per Kelas)
+
+✔ Evaluasi hasil
+✔ Rencana perbaikan kelas
+
+Koordinator MK
+
+✔ Evaluasi agregat semua kelas
+✔ Rencana perbaikan MK
+
+Prodi
+
+✔ Evaluasi CPL
+✔ Evaluasi mapping
+✔ Rencana perbaikan kurikulum
+
+Tidak perlu semua level mengisi semua hal.
+Cukup sesuai perannya.
         </p>
       </div>
       <div class="modal-footer">
@@ -253,3 +467,59 @@
 </div>
 
 <?php include('5script.php'); ?>
+
+1. Cohort View
+
+Gunakan ketika ingin menjawab:
+
+Apakah mutu lulusan stabil antar angkatan?
+
+Apakah CPL angkatan 2020 lebih baik dari 2021?
+
+Apakah perubahan kurikulum 2022 berdampak?
+
+Dipakai untuk:
+✔ Pilar 1 – Outcome jangka panjang
+✔ Pilar 2 – Stabilitas antar angkatan
+
+Tidak cocok untuk analisis operasional harian.
+
+🟢 2. Semester View
+
+Gunakan ketika ingin menjawab:
+
+Bagaimana performa kelas semester ini?
+
+Apakah CPMK semester ini rendah?
+
+Apakah metode baru efektif?
+
+Dipakai untuk:
+✔ Evaluasi dosen
+✔ Monitoring proses
+✔ Tindakan cepat
+
+Ini analisis mikro-operasional.
+
+🟠 3. Academic Year View
+
+Gunakan ketika ingin menjawab:
+
+Bagaimana performa sistem dalam 1 tahun akademik?
+
+Apakah terjadi anomali tahun ini?
+
+Bagaimana rata-rata CPL seluruh mahasiswa tahun ini?
+
+Ini analisis sistem tahunan.
+
+Dipakai untuk:
+✔ Laporan tahunan
+✔ Audit internal
+✔ Akreditasi
+
+6️⃣ Perbandingan Ringkas
+View  Unit Analisis Tujuan  Level
+Cohort  Angkatan mahasiswa  Stabilitas & mutu lulusan Strategis
+Semester  Kelas/MK periode tertentu Evaluasi proses Operasional
+Academic Year Seluruh sistem 1 tahun  Monitoring sistem Manajerial

@@ -142,7 +142,8 @@
                         <tr>
                           <th width="5%">No.</th>
                           <th>Keterangan</th>
-                          <th width="35%">Batas Minimal Tuntas</th>
+                          <th width="35%">Batas Ketuntasan (Accomplished)</th>
+                          <th width="35%">Batas Standar (Threshold)</th>
                           <th width="15%"><center>Aksi</center></th>
                         </tr>
                       </thead>
@@ -150,7 +151,8 @@
                         <tr>
                           <td>1</td>
                           <td>CPL</td>
-                          <td>60.00</td>
+                          <td>>70.00</td>
+                          <td>>=65%</td>
                           <td align="center">                      
                             <button type="button" class="btn btn-success mrg-btn btn-sm btn-aksi-so-level1 btn-disabled" onclick="edit_bobot('1')"><i class="fas fa-edit"></i></button>
                           </td>
@@ -158,7 +160,8 @@
                         <tr>
                           <td>2</td>
                           <td>IK</td>
-                          <td>60.00</td>
+                          <td>>70.00</td>
+                          <td>>=65%</td>             
                           <td align="center">                      
                             <button type="button" class="btn btn-success mrg-btn btn-sm btn-aksi-so-level2 btn-disabled" onclick="edit_bobot('2')"><i class="fas fa-edit"></i></button>
                           </td>
@@ -166,15 +169,17 @@
                         <tr>
                           <td>3</td>
                           <td>CPMK</td>
-                          <td>60.00</td>
+                          <td>>70.00</td>
+                          <td>>=65%</td>          
                           <td align="center">                      
                             <button type="button" class="btn btn-success mrg-btn btn-sm btn-aksi-so-level3 btn-disabled" onclick="edit_bobot('3')"><i class="fas fa-edit"></i></button>
                           </td>
                         </tr>
                         <tr>
                           <td>4</td>
-                          <td>Nilai Akhir Mata Kuliah (Angka)</td>
-                          <td>60.00</td>
+                          <td>Mata Kuliah (Angka)</td>
+                          <td>>70.00</td>
+                          <td>>=65%</td>        
                           <td align="center">                      
                             <button type="button" class="btn btn-success mrg-btn btn-sm btn-aksi-so-level3 btn-disabled" onclick="edit_bobot('3')"><i class="fas fa-edit"></i></button>
                           </td>
@@ -191,7 +196,7 @@
                 <div class="card-header">
                   <h5 class="card-title">
                     <i class="fas fa-cogs"></i> 
-                    &nbsp;CPL / Student Outcome Level
+                    &nbsp;Rentang Nilai Distribusi
                   </h5>
                 </div>
                 <div class="card-body">
@@ -211,7 +216,7 @@
                   <tr>
                     <td>1</td>
                     <td>Unsatisfactory</td>
-                    <td>30.00</td>
+                    <td>00.00 - 30.00</td>
                     <td style="background-color: #F59999"><i>code : #F59999</i> </td>
                     <td align="center">                      
                       <button type="button" class="btn btn-success mrg-btn btn-sm btn-aksi1 btn-disabled" onclick="edit('1')"><i class="fas fa-edit"></i></button>
@@ -221,7 +226,7 @@
                   <tr>
                     <td>2</td>
                     <td>Developing</td>
-                    <td>54.99</td>
+                    <td>30.01 - 55.00</td>
                     <td style="background-color: #B7C9FC"><i>code : #B7C9FC</i> </td>
                     <td align="center">                      
                       <button type="button" class="btn btn-success mrg-btn btn-sm btn-aksi2 btn-disabled" onclick="edit('2')"><i class="fas fa-edit"></i></button>
@@ -231,7 +236,7 @@
                   <tr>
                     <td>3</td>
                     <td>Competent</td>
-                    <td>70.00</td>
+                    <td>55.01 - 70.00</td>
                     <td style="background-color: #9AE5CA"><i>code : #9AE5CA</i> </td>
                     <td align="center">                      
                       <button type="button" class="btn btn-success mrg-btn btn-sm btn-aksi3 btn-disabled" onclick="edit('3')"><i class="fas fa-edit"></i></button>
@@ -241,7 +246,7 @@
                   <tr>
                     <td>4</td>
                     <td>Accomplished</td>
-                    <td>84.99</td>
+                    <td>70.01 - 85.00</td>
                     <td style="background-color: #A2EDD2"><i>code : #A2EDD2</i> </td>
                     <td align="center">                      
                       <button type="button" class="btn btn-success mrg-btn btn-sm btn-aksi4 btn-disabled" onclick="edit('4')"><i class="fas fa-edit"></i></button>
@@ -251,7 +256,7 @@
                   <tr>
                     <td>5</td>
                     <td>Exemplary</td>
-                    <td>100.00</td>
+                    <td>85.01 - 100.00</td>
                     <td style="background-color: #B58DA0"><i>code : #B58DA0</i> </td>
                     <td align="center">                      
                       <button type="button" class="btn btn-success mrg-btn btn-sm btn-aksi6 btn-disabled" onclick="edit('6')"><i class="fas fa-edit"></i></button>

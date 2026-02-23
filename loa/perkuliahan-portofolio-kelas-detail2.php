@@ -197,22 +197,40 @@ if ($persen == 100) {
     <table id="data_nilai_cpmk" class="table table-bordered table-striped table-sm datatables1">
                   <thead>
                     <tr align="center" class="text-uppercase">
-                      <th width="5px">No.</th>
-                      <th>Mahasiswa</th>
-                      <th>Nilai Akhir (Angka)</th>
-                      <th>Nilai Akhir (Huruf)</th>
-                      <th>CPMK 1</th><th>Remidi CPMK 1</th><th>CPMK 2</th><th>Remidi CPMK 2</th><th>CPMK 3</th><th>Remidi CPMK 3</th><th>CPMK 4</th><th>Remidi CPMK 4</th><th>CPMK 5</th><th>Remidi CPMK 5</th>                      <th>Aksi</th>
+                      <th rowspan="2" width="5px">No.</th>
+                      <th rowspan="2">NIM</th>
+                      <th rowspan="2">Mahasiswa</th>
+                      <th rowspan="2">Angka</th>
+                      <th rowspan="2">Huruf</th>
+                      <th colspan="3">CPMK 1</th>
+                      <th colspan="2">CPMK 2</th>
+                      <th colspan="2">CPMK 3</th>
+                      <th colspan="2">CPMK 4</th>
+                      <th colspan="2">CPMK 5</th>                      
+                      <th rowspan="2">Aksi</th>
+                    </tr>
+                    <tr>
+                      <th title="Nilai Awal CPMK">A</th>
+                      <th title="Nilai Perbaikan CPMK">P</th>
+                      <th title="Nilai Final CPMK">F</th>
+                      <th>A</th>
+                      <th>P</th>
+                      <th>A</th>
+                      <th>P</th>
+                      <th>A</th>
+                      <th>P</th>
+                      <th>A</th>
+                      <th>P</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr >
                       <td align="center">1</td>
-                      <td>
-                        ILHAM KURNIAWAN                              <br>
-                        <small><b>(19511100)</b></small>
-                      </td>
+                      <td>19511100</td>
+                      <td>ILHAM KURNIAWAN</td>
                       <td align="center" class="bg-danger">3.57</td>
                       <td align="center">F</td>
+                      <td align="center" class="bg-secondary"></td>
                       <td align="center" class="bg-secondary"></td>
                       <td align="center" class="bg-secondary"></td>
                       <td align="center" class="bg-secondary"></td>
@@ -230,14 +248,13 @@ if ($persen == 100) {
                     </tr>
                     <tr >
                       <td align="center">2</td>
-                      <td>
-                        NABILLAH PUTRI NUR RAHMAH                              <br>
-                        <small><b>(20511106)</b></small>
-                      </td>
+                      <td>20511106</td>
+                      <td>NABILLAH PUTRI NUR RAHMAH</td>
                       <td align="center" class="">76.70</td>
                       <td align="center">B+</td>
                       <td align="center" >75.00</td>
                       <td align="center" class="bg-secondary"></td>
+                      <td align="center" >75.00</td>
                       <td align="center" >78.00</td>
                       <td align="center" class="bg-secondary"></td>
                       <td align="center" >71.00</td>
@@ -253,14 +270,13 @@ if ($persen == 100) {
                     </tr>
                     <tr >
                       <td align="center">3</td>
-                      <td>
-                        MUHAMMAD FIRDAUS SANI WIJAYA KUSUMA                              <br>
-                        <small><b>(20511402)</b></small>
-                      </td>
+                      <td>20511402</td>
+                      <td>MUHAMMAD FIRDAUS SANI WIJAYA KUSUMA</td>
                       <td align="center" class="">86.77</td>
                       <td align="center">A</td>
+                      <td align="center" >66.00</td>
                       <td align="center" >81.00</td>
-                      <td align="center" class="bg-secondary"></td>
+                      <td align="center" >81.00</td>
                       <td align="center" >88.00</td>
                       <td align="center" class="bg-secondary"></td>
                       <td align="center" >82.00</td>
@@ -276,14 +292,13 @@ if ($persen == 100) {
                     </tr>
                     <tr >
                       <td align="center">4</td>
-                      <td>
-                        SAHLA SALSABILA                              <br>
-                        <small><b>(21511014)</b></small>
-                      </td>
+                      <td>21511014</td>
+                      <td>SAHLA SALSABILA </td>
                       <td align="center" class="">76.43</td>
                       <td align="center">B+</td>
                       <td align="center" >81.00</td>
                       <td align="center" class="bg-secondary"></td>
+                      <td align="center" >81.00</td>
                       <td align="center" >83.00</td>
                       <td align="center" class="bg-secondary"></td>
                       <td align="center" >69.00</td>
@@ -299,14 +314,13 @@ if ($persen == 100) {
                     </tr>
                     <tr >
                       <td align="center">5</td>
-                      <td>
-                        SALWA BAGHEA MULIARAHMA                              <br>
-                        <small><b>(21511043)</b></small>
-                      </td>
+                      <td>21511043</td>
+                      <td>SALWA BAGHEA MULIARAHMA</td>
                       <td align="center" class="">63.47</td>
                       <td align="center">B/C</td>
                       <td align="center" >80.00</td>
-                      <td align="center" class="bg-secondary"></td>
+                      <td align="center" >60.00</td>
+                      <td align="center" >80.00</td>
                       <td align="center" >63.00</td>
                       <td align="center" class="bg-secondary"></td>
                       <td align="center" >70.00</td>
@@ -322,14 +336,13 @@ if ($persen == 100) {
                     </tr>
                     <tr >
                       <td align="center">6</td>
-                      <td>
-                        KAHFI NATAKUSUMA                              <br>
-                        <small><b>(21511066)</b></small>
-                      </td>
+                      <td>21511066</td>
+                      <td>KAHFI NATAKUSUMA</td>
                       <td align="center" class="">88.57</td>
                       <td align="center">A</td>
                       <td align="center" >94.00</td>
                       <td align="center" class="bg-secondary"></td>
+                      <td align="center" >94.00</td>
                       <td align="center" >91.00</td>
                       <td align="center" class="bg-secondary"></td>
                       <td align="center" >95.00</td>
@@ -345,14 +358,13 @@ if ($persen == 100) {
                     </tr>
                     <tr >
                       <td align="center">7</td>
-                      <td>
-                        RAHESA ARIANO PUTRA                              <br>
-                        <small><b>(21511073)</b></small>
-                      </td>
+                      <td>21511073</td>
+                      <td>RAHESA ARIANO PUTRA </td>
                       <td align="center" class="">77.78</td>
                       <td align="center">A/B</td>
                       <td align="center" >77.00</td>
                       <td align="center" class="bg-secondary"></td>
+                      <td align="center" >77.00</td>
                       <td align="center" >70.00</td>
                       <td align="center" class="bg-secondary"></td>
                       <td align="center" >68.00</td>
@@ -368,14 +380,13 @@ if ($persen == 100) {
                     </tr>
                     <tr >
                       <td align="center">8</td>
-                      <td>
-                        MUHAMMAD SURFUN BATTAN QOTO'A                              <br>
-                        <small><b>(21511082)</b></small>
-                      </td>
+                      <td>21511082</td>
+                      <td>MUHAMMAD SURFUN BATTAN</td>
                       <td align="center" class="">73.01</td>
                       <td align="center">B</td>
                       <td align="center" >79.00</td>
                       <td align="center" class="bg-secondary"></td>
+                      <td align="center" >79.00</td>
                       <td align="center" >68.00</td>
                       <td align="center" class="bg-secondary"></td>
                       <td align="center" >75.00</td>
@@ -391,14 +402,13 @@ if ($persen == 100) {
                     </tr>
                     <tr >
                       <td align="center">9</td>
-                      <td>
-                        RIDHO AHMAT FAUZI                              <br>
-                        <small><b>(21511085)</b></small>
-                      </td>
+                      <td>21511085</td>
+                      <td>RIDHO AHMAT FAUZI</td>
                       <td align="center" class="">84.43</td>
                       <td align="center">A-</td>
                       <td align="center" >73.00</td>
                       <td align="center" class="bg-secondary"></td>
+                      <td align="center" >73.00</td>
                       <td align="center" >81.00</td>
                       <td align="center" class="bg-secondary"></td>
                       <td align="center" >79.00</td>
@@ -414,14 +424,13 @@ if ($persen == 100) {
                     </tr>
                     <tr >
                       <td align="center">10</td>
-                      <td>
-                        BAYU MUHAMMAD IQBAL                              <br>
-                        <small><b>(21511091)</b></small>
-                      </td>
+                      <td>21511091</td>
+                      <td>BAYU MUHAMMAD IQBAL</td>
                       <td align="center" class="">85.87</td>
                       <td align="center">A</td>
                       <td align="center" >79.00</td>
                       <td align="center" class="bg-secondary"></td>
+                      <td align="center" >79.00</td>
                       <td align="center" >88.00</td>
                       <td align="center" class="bg-secondary"></td>
                       <td align="center" >88.00</td>
@@ -437,14 +446,13 @@ if ($persen == 100) {
                     </tr>                   
                     <tr >
                       <td align="center">27</td>
-                      <td>
-                        MUHAMMAD ZAIDAN SALIM                              <br>
-                        <small><b>(22511243)</b></small>
-                      </td>
+                      <td>22511243</td>
+                      <td>MUHAMMAD ZAIDAN SALIM </td>
                       <td align="center" class="">83.09</td>
                       <td align="center">A-</td>
                       <td align="center" >84.00</td>
                       <td align="center" class="bg-secondary"></td>
+                      <td align="center" >84.00</td>
                       <td align="center" >79.00</td>
                       <td align="center" class="bg-secondary"></td>
                       <td align="center" >81.00</td>

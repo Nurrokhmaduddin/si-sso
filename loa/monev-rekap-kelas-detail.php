@@ -115,8 +115,8 @@
 
           <!-- TAB NAV (Semester) -->
            <ul class="nav nav-tabs">
-            <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail.php'"><a class="nav-link active">Rekapitulasi</a></li>
-            <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail4.php'"><a class="nav-link ">Remidi</a></li>
+            <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail.php'"><a class="nav-link active">Final</a></li>
+            <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail4.php'"><a class="nav-link ">Remedial</a></li>
             <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail3.php'"><a class="nav-link ">Portofolio</a></li>
             <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail2.php'"><a class="nav-link ">Mahasiswa</a></li>
             <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail5.php'"><a class="nav-link ">OBE</a></li>
@@ -240,8 +240,16 @@
     </div>
   </div>
 </div>
+<!-- ========== CARD : tabel distribusi rentang ========== -->
+<div class="card shadow">
+  <div class="card-header bg-info text-white">
+    <h5 class="mb-0">Distribusi Rentang Nilai CPMK (Total 40 Mahasiswa)</h5>
+  </div>
 
-
+  <div class="card-body">
+    <canvas id="stackedCPMKChart" height="120"></canvas>
+  </div>
+</div>
 
 
 
@@ -453,6 +461,72 @@ new Chart(cty2, {
 });
 </script>
 
+<script>
+  const ctx3 = document.getElementById('stackedCPMKChart').getContext('2d');
 
+  const data = {
+    labels: ['CPMK 1', 'CPMK 2', 'CPMK 3', 'CPMK 4'],
+    datasets: [
+      {
+        label: 'Unsatisfactory (0-30)',
+        data: [3, 2, 1, 2],
+        backgroundColor: '#F59999'
+      },
+      {
+        label: 'Developing (30.01-55)',
+        data: [5, 6, 4, 5],
+        backgroundColor: '#B7C9FC'
+      },
+      {
+        label: 'Competent (55.01-70)',
+        data: [10, 8, 9, 7],
+        backgroundColor: '#9AE5CA'
+      },
+      {
+        label: 'Accomplished (70.01-85)',
+        data: [12, 14, 13, 15],
+        backgroundColor: '#A2EDD2'
+      },
+      {
+        label: 'Exemplary (85.01-100)',
+        data: [10, 10, 13, 11],
+        backgroundColor: '#6FD3C3'
+      }
+    ]
+  };
+
+  const config = {
+    type: 'bar',
+    data: data,
+    options: {
+      responsive: true,
+      plugins: {
+        legend: {
+          position: 'bottom'
+        },
+        tooltip: {
+          mode: 'index',
+          intersect: false
+        }
+      },
+      scales: {
+        x: {
+          stacked: true
+        },
+        y: {
+          stacked: true,
+          beginAtZero: true,
+          max: 40,
+          title: {
+            display: true,
+            text: 'Jumlah Mahasiswa'
+          }
+        }
+      }
+    }
+  };
+
+  new Chart(ctx3, config);
+</script>
 
 <?php include('5script.php'); ?>

@@ -1,0 +1,391 @@
+<tr>
+  <td>IK.1.1</td>
+  <td>Memahami dinul Islam serta pemikiran dan peradaban umat Islam</td>
+  <td class="text-center">
+    <button class="btn btn-xs btn-info btn-open">Open</button>
+    <button class="btn btn-xs btn-danger">Hapus</button>
+    <button class="btn btn-xs btn-secondary">Reset</button>
+  </td>
+</tr>
+
+<!-- ROW DETAIL (AWALNYA DISSEMBUNYIKAN) -->
+<tr class="ik-detail d-none">
+  <td colspan="3">
+    <table class="table table-bordered table-sm mb-0">
+      <thead class="table-light">
+        <tr>
+          <th>Kode CPMK</th>
+          <th>Deskripsi CPMK</th>
+          <th>Bobot</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>CPMK-1</td>
+          <td>Mampu menjelaskan konsep dasar</td>
+          <td>30%</td>
+        </tr>
+        <tr>
+          <td>CPMK-2</td>
+          <td>Mampu menerapkan konsep</td>
+          <td>70%</td>
+        </tr>
+      </tbody>
+    </table>
+  </td>
+</tr>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  document.querySelectorAll(".btn-open").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+
+      // ambil TR saat ini
+      let currentRow = this.closest("tr");
+
+      // ambil TR berikutnya (detail)
+      let detailRow = currentRow.nextElementSibling;
+
+      // toggle tampil / sembunyi
+      detailRow.classList.toggle("d-none");
+
+      // ubah teks tombol
+      this.textContent = detailRow.classList.contains("d-none")
+        ? "Open"
+        : "Close";
+    });
+  });
+
+});
+</script>
+STRUKTUR MENU DASHBOARD MONITORING
+🧭 A. Level Navigasi Utama (Domain-Based)
+1. Dashboard Utama
+
+Ringkasan Ketercapaian CPL (Rerata Institusi)
+
+Grafik Tren per Semester
+
+% Ketuntasan Global
+
+Top 5 CPL tertinggi
+
+5 CPL terendah
+
+2. Struktur Akademik
+
+Tahun Akademik
+
+Semester Akademik
+
+Mata Kuliah
+
+Kelas Perkuliahan
+
+Mapping CPMK → CPL
+
+3. Monitoring CPL
+
+Snapshot Semester
+
+Snapshot Pra-Yudisium
+
+Analisis Per Angkatan
+
+Analisis Per Batch Yudisium
+
+Perbandingan Antar Semester
+
+Tren 3–5 Tahun
+
+Filter Global:
+
+Tahun Akademik
+
+Semester
+
+Angkatan
+
+Batch Yudisium
+
+Mata Kuliah
+
+CPL
+
+4. Monitoring CPMK
+
+Ketercapaian Per Mata Kuliah
+
+Perbandingan Antar Kelas
+
+Distribusi Nilai
+
+Ketuntasan Per Kelas
+
+5. Analitik Lanjutan
+
+Perbandingan Antar Angkatan
+
+Perbandingan Antar Dosen
+
+CPL Top
+
+CPL Low
+
+Heatmap Ketercapaian
+
+Early Warning Indicator
+
+Baik Pak Harun, saya buatkan rancangan **UI/UX Future Proof** yang terstruktur berdasarkan **dimensi waktu, struktur akademik, dan mahasiswa**, lengkap dengan **user journey** dan **desain komponen UI/UX**.
+Tujuannya agar sistem monitoring CPL/CPMK **dinamis, modular, dan scalable** untuk analisis snapshot, perbandingan, dan tren.
+
+---
+
+# 🧭 1️⃣ USER JOURNEY — FUTURE PROOF
+
+## 🔹 ROLE UTAMA
+
+1. Kaprodi / Koordinator Program Studi
+2. Dosen Pengampu
+3. Admin / Staff Akademik
+
+---
+
+## 🔹 ALUR PENGGUNAAN (High Level)
+
+```
+Login
+ ↓
+Dashboard Utama (Ringkasan CPL)
+ ↓
+Filter Dimensi:
+   - Waktu (Tahun/Semester/Batch)
+   - Struktur Akademik (Mata Kuliah/CPL/CPMK/Kelas)
+   - Mahasiswa (Angkatan/Individu)
+ ↓
+Pilih Mode Analisis:
+   • Snapshot → kondisi 1 titik waktu
+   • Perbandingan → antar kelas/angkatan/semester
+   • Tren → perubahan CPL antar semester
+ ↓
+Drilldown:
+   - CPL → CPMK → Kelas → Mahasiswa
+ ↓
+Insight Otomatis (Early Warning)
+ ↓
+Rekomendasi Tindakan
+ ↓
+Export / Generate Laporan
+```
+
+---
+
+## 🔹 USER FLOW DETAIL
+
+### STEP 1 — Login
+
+* Autentikasi role-based (Kaprodi / Dosen / Admin)
+
+### STEP 2 — Dashboard Ringkasan
+
+* KPI Cards:
+
+  * Rerata CPL Global
+  * % Ketuntasan
+  * CPL Top / Low
+  * Jumlah Mahasiswa Aktif
+* Heatmap CPL per semester / batch
+
+### STEP 3 — Global Filter
+
+* **Dimensi Waktu:** Tahun Akademik, Semester, Batch Yudisium, Gelombang Yudisium
+* **Dimensi Struktur Akademik:** Kurikulum → Set Pemetaan OBE → CPL → CPMK → Mata Kuliah → Kelas → Dosen
+* **Dimensi Mahasiswa:** Angkatan, Mahasiswa Individual
+
+### STEP 4 — Pilih Mode Analisis
+
+1. Snapshot → satu titik waktu
+2. Perbandingan → antar kelas/semester/angkatan
+3. Tren → longitudinal
+
+### STEP 5 — Drill Down
+
+* CPL → lihat distribusi nilai, kelas penyumbang, CPMK terkait
+* CPMK → lihat per kelas, per mahasiswa
+* Mahasiswa → daftar mahasiswa risiko
+
+### STEP 6 — Insight dan Tindakan
+
+* Panel Insight Otomatis (Early Warning System)
+* Rekomendasi Tindakan (Evaluasi RPS, Remedial, Diskusi Dosen)
+
+### STEP 7 — Laporan / Export
+
+* PDF snapshot semester
+* Laporan akreditasi
+* Rekap batch yudisium
+
+---
+
+# 🎨 2️⃣ DESAIN UI/UX — KOMPONEN & LAYOUT
+
+## 🔹 Layout Global
+
+```
+---------------------------------------------------------
+| Navbar: Logo | Judul Dashboard | User Profile        |
+---------------------------------------------------------
+| Sidebar (Domain Navigation)                             |
+|  - Dashboard                                           |
+|  - Monitoring CPL                                      |
+|  - Monitoring CPMK                                     |
+|  - Analitik Lanjutan                                   |
+|  - Laporan & Export                                    |
+|  - Pengaturan                                         |
+---------------------------------------------------------
+| Content Header (Breadcrumb: Domain > Context > Flow)   |
+| Global Filter Bar (Sticky di atas main content)        |
+---------------------------------------------------------
+| Main Content Area                                      |
+|  -> KPI Cards (Rerata CPL, % Ketuntasan, Top/Low)     |
+|  -> Grafik Tren / Line Chart                           |
+|  -> Heatmap CPL vs Semester                            |
+|  -> Tabel Detail Kelas / CPMK                          |
+|  -> Insight Panel (Early Warning + Rekomendasi)       |
+---------------------------------------------------------
+| Footer                                                |
+---------------------------------------------------------
+```
+
+---
+
+## 🔹 Komponen Modular
+
+1. **Global Filter Bar**
+
+```text
+- Tahun Akademik (Dropdown)
+- Semester (Dropdown)
+- Batch Yudisium / Gelombang (Dropdown)
+- Kurikulum (Dropdown)
+- Set Pemetaan OBE (Dropdown)
+- CPL (Multi Select)
+- CPMK (Optional)
+- Mata Kuliah (Optional)
+- Angkatan / Mahasiswa
+- Button Apply Filter
+```
+
+2. **KPI Cards (Small Boxes)**
+
+* Rerata CPL Global
+* % Ketuntasan
+* CPL Top
+* CPL Low
+* Total Mahasiswa
+
+3. **Charts / Graphs**
+
+* Line Chart → Tren CPL
+* Bar Chart → Perbandingan Kelas / Angkatan
+* Radar Chart → Profil CPL lulusan
+* Heatmap → CPL vs Semester
+
+4. **Tables**
+
+* Conditional formatting (Hijau/Kuning/Merah)
+* Drilldown clickable → CPL → CPMK → Kelas → Mahasiswa
+
+5. **Insight Panel**
+
+* Early Warning Alerts
+* Auto-generated summary
+* Rekomendasi tindakan
+
+6. **Export / Report Buttons**
+
+* PDF snapshot
+* Excel download
+
+---
+
+## 🔹 Heatmap / Table Color Logic
+
+| Nilai / % Ketuntasan | Warna  |
+| -------------------- | ------ |
+| ≥ 75                 | Hijau  |
+| 60–74                | Kuning |
+| < 60                 | Merah  |
+
+---
+
+## 🔹 Drill Down Panel Layout (8:4)
+
+```
+|-------------------------------|
+| Left (8 col)                  |
+| - Grafik Distribusi Nilai     |
+| - Tabel Statistik CPL         |
+|-------------------------------|
+| Right (4 col)                 |
+| - Status Early Warning        |
+| - Insight Otomatis            |
+| - Rekomendasi Tindakan        |
+|-------------------------------|
+```
+
+---
+
+## 🔹 Responsif & Scalable
+
+* Semua komponen **reusable**
+* Grafik & tabel otomatis resize sesuai screen
+* Filter global “sticky” untuk akses cepat
+* Drilldown progressive disclosure → ringkas → klik → detail → klik → mikro detail
+
+---
+
+# 🧠 3️⃣ FUTURE PROOF PRINCIPLES
+
+1. **Filter berbasis konteks OBE**
+
+   * Kurikulum + Set Pemetaan OBE → CPL → CPMK
+
+2. **Data tidak hardcoded**
+
+   * Bisa tambah CPL, CPMK, atau kurikulum baru
+
+3. **Modular Card & Chart System**
+
+   * Reusable, mudah ditambah atau diganti
+
+4. **Drilldown progressive disclosure**
+
+   * Ringkas di level dashboard → detail per CPL → detail per CPMK → mahasiswa
+
+5. **Role-based view**
+
+   * Kaprodi → global / insight strategis
+   * Dosen → kelas sendiri / CPMK
+   * Admin → semua data
+
+6. **Insight otomatis + early warning**
+
+   * CPL < threshold → badge / warning alert
+   * Rekomendasi tindakan → otomatis
+
+---
+
+Jika Bapak mau, saya bisa lanjutkan dengan **contoh kode HTML + preview interaktif** versi **full dashboard**:
+
+* Sidebar + Navbar
+* Filter bar multi-dimensi (waktu, kurikulum, set pemetaan, mahasiswa)
+* KPI cards
+* Heatmap CPL
+* Drilldown panel (CPL → CPMK → Kelas → Mahasiswa)
+* Insight panel + alert
+
+Sehingga Bapak bisa langsung **visualisasi dan klik klik drilldown**.
+
+Apakah mau saya buatkan versi itu sekarang?

@@ -28,12 +28,12 @@
            
             <div class="card-body ">
               <div class="row">
-<div class="col-md-6">
+                <div class="col-md-6">
                   <b>Kurikulum:</b> 2023 &nbsp;
                 </div>                
                 <div class="col-md-6">
-                <b>Set Pemetaan:</b> KT-6 (K20) Kurikulum 2025 full stage &nbsp;
-              </div>
+                  <b>Set Pemetaan:</b> KT-6 (K20) Kurikulum 2025 full stage &nbsp;
+                </div>
               
               <div class="col-md-5">
                 <b>Periode Yudisium :</b> 2021/2023 - 4 
@@ -104,7 +104,117 @@
           </div>
         </div>
              
+jumlah mahasiswa, distribusi angkatan,<hr>
+1️⃣ CPL by Batch Yudisium
+Bagaimana Menyajikan Distribusi Per Angkatan Masuk?
 
+Karena batch yudisium campuran angkatan, maka komposisinya harus transparan.
+
+Misalnya:
+
+Batch Yudisium Juli 2026
+Total Lulusan: 80 mahasiswa
+
+Distribusi angkatan masuk:
+
+2020 → 50 mahasiswa (62%)
+
+2021 → 20 mahasiswa (25%)
+
+2019 → 10 mahasiswa (13%)
+
+Itu bisa disajikan dalam:
+
+Tabel proporsi
+
+Pie chart
+
+Bar chart
+
+Tujuannya:
+Agar pembaca tahu apakah ini mayoritas lulusan tepat waktu (2020) atau banyak yang terlambat (2019).
+
+2️⃣ Bagaimana Menyajikan Proporsi Mahasiswa dengan Remedial Tinggi?
+
+Pertama harus definisikan dulu “remedial tinggi”.
+
+Contoh definisi operasional:
+
+≥ 3 MK pernah remedial
+
+atau >20% MK ditempuh dengan remedial
+
+atau > X kali remedial CPMK
+
+Contoh penyajian:
+
+Batch Juli 2026 (80 lulusan)
+
+Tidak pernah remedial → 40 mahasiswa (50%)
+
+Remedial ringan (1–2 MK) → 25 mahasiswa (31%)
+
+Remedial tinggi (≥3 MK) → 15 mahasiswa (19%)
+
+Bisa juga ditampilkan rata-rata jumlah remedial per mahasiswa:
+
+Rata-rata remedial: 1.8 MK per lulusan
+
+Ini membantu menjawab:
+
+Apakah lulusan kita kuat sejak awal, atau banyak yang tertolong remedial?
+
+3️⃣ Apa Maksud Perbandingan Batch Yudisium?
+
+Ini bukan cohort analysis.
+
+Ini membandingkan output lulusan antar periode yudisium.
+
+Contoh:
+
+Indikator Jan 2026  Jul 2026
+Jumlah lulusan  65  80
+IPK rata-rata 3.42  3.38
+CPL rata-rata 83% 81%
+% tepat waktu 72% 68%
+Remedial tinggi 14% 19%
+
+Ini membantu menjawab:
+
+Apakah mutu lulusan periode ini stabil?
+
+Apakah ada penurunan kualitas?
+
+Apakah beban akademik makin berat?
+
+Ini bersifat monitoring periodik.
+
+4️⃣ Apa Maksud Tren CPL Agregat Per Periode?
+
+Ini melihat perkembangan CPL rata-rata dari waktu ke waktu berdasarkan periode kelulusan.
+
+Contoh:
+
+CPL rata-rata agregat per batch:
+
+Jan 2025 → 79%
+
+Jul 2025 → 81%
+
+Jan 2026 → 82%
+
+Jul 2026 → 81%
+
+Jika divisualisasikan, terlihat:
+
+Ada peningkatan bertahap
+
+Atau stagnasi
+
+Atau fluktuasi
+
+Ini bukan tren per angkatan,
+tapi tren mutu output sistem dari waktu ke waktu.
 <!-- ========== CARD 4: Chart CPL/IK/CPMK/MK Min/Max/Rerata ========== -->
         <div class="card">
           <div class="card-header">
@@ -1630,122 +1740,6 @@
 
 
 
-<!-- Modal Tambah Data -->
-<div class="modal fade" id="modalTambahData" tabindex="-1" aria-labelledby="modalTambahDataLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content rounded-3 shadow">
-      <div class="modal-header bg-primary text-white">
-        <h5 class="modal-title" id="modalTambahDataLabel">Tambah Data</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <form action="" method="POST" enctype="multipart/form-data">
-        <div class="modal-body">
-
-          <!-- Informasi -->
-          <div class="alert alert-warning mb-3 py-2" role="alert" style="font-size: 0.9rem;">
-            <i class="fas fa-info-circle me-1"></i>
-            <strong>Catatan:</strong> Semua field yang diberi tanda <span class="text-danger">*</span> wajib diisi.
-          </div>
-
-          <!-- Form Inputs -->
-          <div class="mb-3">
-            <label for="username" class="form-label">NIM <span class="text-danger">*</span></label>
-            <input type="text" class="form-control" id="username" name="username" placeholder="Masukkan Username" required>
-          </div>
-
-          <div class="mb-3">
-            <label for="displayname" class="form-label">Nama Lengkap <span class="text-danger">*</span></label>
-            <input type="text" class="form-control" id="displayname" name="displayname" placeholder="Masukkan Nama Lengkap" required>
-          </div>
-
-          <div class="mb-3">
-            <label for="email" class="form-label">Email <span class="text-danger">*</span></label>
-            <input type="email" class="form-control" id="email" name="email" placeholder="Masukkan Email" required>
-          </div>
-
-          <div class="mb-3">
-            <label for="hp" class="form-label">Nomor HP <span class="text-danger">*</span></label>
-            <input type="text" class="form-control" id="hp" name="hp" placeholder="Masukkan Nomor HP" required>
-          </div>
-          <div class="mb-3">
-            <label for="angkatan" class="form-label">Angkatan</label>
-            <select name="angkatan" id="angkatan" class="form-select">
-              <option value="">-- Pilih Angkatan --</option>
-              <option value="2025">2025</option>
-              <option value="2024">2024</option>
-              <option value="2023">2023</option>
-            </select>
-          </div>
-          <div class="mb-3">
-            <label for="angkatan" class="form-label">Peminatan</label>
-            <select name="angkatan" id="angkatan" class="form-select">
-              <option value="">-- Pilih Peminatan --</option>
-              <option value="2025">A</option>
-              <option value="2024">B</option>
-              <option value="2023">C</option>
-            </select>
-          </div>
-          <div class="mb-3">
-            <label for="status" class="form-label">Status <span class="text-danger">*</span></label>
-            <select class="form-select" id="status" name="status" required>
-              <option value="">-- Pilih Status --</option>
-              <option value="Aktif">Aktif</option>
-              <option value="NonAktif">NonAktif</option>
-              <option value="Cuti">Cuti</option>
-              <option value="Skors">Skors</option>
-              <option value="PassedOut">Passed Out</option>
-              <option value="DropOut">Drop Out</option>
-              <option value="Lulus">Lulus</option>
-            </select>
-          </div>
-
-          <div class="mb-3">
-            <label for="foto" class="form-label">Foto <span class="text-danger">*</span></label>
-            <input type="file" class="form-control" id="foto" name="foto" required>
-          </div>
-        </div>
-
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
-          <button type="submit" class="btn btn-primary">Simpan Data</button>
-        </div>
-      </form>
-    </div>
-  </div>
-</div>
-
-
-<!-- Modal Impor -->
-<div class="modal fade" id="modalImpor" tabindex="-1">
-  <div class="modal-dialog">
-    <div class="modal-content">
-
-      <div class="modal-header bg-primary text-white">
-        <h5 class="modal-title">Impor Data</h5>
-        <button class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
-
-      <div class="modal-body">   
-        <div class="alert alert-warning mb-3 py-2" role="alert" style="font-size: 0.9rem;">
-          <i class="fas fa-exclamation-triangle me-1"></i>
-          <strong>Penting:</strong> Pastikan file yang akan diimpor menggunakan <strong>template resmi</strong> yang sudah disediakan. Menggunakan file lain atau format berbeda dapat menyebabkan <strong>kesalahan impor</strong>.
-        </div>     
-
-        <label class="form-label">Pilih File:</label>
-        <input type="file" class="form-control mb-3" accept=".xlsx,.xls">
-
-        <a href="template-impor-mahasiswa.xls" class="btn btn-sm btn-outline-success w-100">Download Template</a>
-      </div>
-
-      <div class="modal-footer">
-        <button class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
-        <button class="btn btn-primary">Impor</button>
-      </div>
-
-    </div>
-  </div>
-</div>
-
 <!-- Modal Bantuan -->
 <div class="modal fade" id="modalBantuan" tabindex="-1" aria-labelledby="modalBantuanLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
@@ -1757,6 +1751,10 @@
       <div class="modal-body">
         <p>
           Ringkasan capaian CPL per Kelompok Mahasiswa, perkembangan, peringatan dini (EWS), disajikan dalam bentuk grafik dan tabel (Mockup data statis)
+        </p>
+        <p>
+          snapshot CPL by batch yudisium adalah gambaran CPL Mahasiswa yang lulus pada satu periode  yudisium tertentu tanpa memandang tahun masuknya(bisa campuran angkatan dan bahkan kurikulum), sehingga tujuannya adalah memonitor mutu output lulusan terkini; informmasi yag perlu disajikan meliputi jumlah lulusan periode tersebut, distribusi angkatan masuk, IPK rerata dan distribusinya, lama studi rerata rerata CPL dan distribusinya, persentasi remedial tinggi (misal >3 MK) remidial. dan perbandingan denan batch yudisium sebelumnya untuk melihat stabilitas output periodik. singkkatnya  snapsho batch yudisium menjawab " bagaimana mutu lulusan yang keluar pada periode ini?"
+          untuk mutu lulusan.
         </p>        
       </div>
       <div class="modal-footer">

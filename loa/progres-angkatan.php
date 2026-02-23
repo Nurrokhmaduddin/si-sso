@@ -41,7 +41,85 @@
         <canvas id="lineChart"></canvas>
     </div>
 </div>
+Fungsi Analisis Antar Angkatan
+✅ 1. Mengukur Dampak Kurikulum Baru
 
+Misal:
+
+Kurikulum baru mulai 2021
+
+Angkatan 2021 pertama pakai kurikulum baru
+
+Kalau CPL mereka turun:
+→ berarti ada yang perlu diperbaiki
+
+Tanpa analisis cohort, ini tidak terlihat.
+
+✅ 2. Mengukur Konsistensi Mutu Lulusan
+
+Tujuan prodi adalah:
+
+Mutu lulusan stabil dan meningkat
+
+Kalau fluktuatif antar angkatan:
+
+Bisa karena metode
+
+Bisa karena input mahasiswa
+
+Bisa karena assessment tidak konsisten
+
+✅ 3. Bahan Akreditasi & Audit
+
+Asesor biasanya akan bertanya:
+
+Apakah ada bukti peningkatan berkelanjutan?
+
+Kalau Bapak bisa tunjukkan:
+
+Tren 3 angkatan meningkat
+
+Setelah revisi RPS terjadi kenaikan 6%
+
+Itu sangat kuat secara narasi mutu.
+
+1. Melihat Konsistensi Mutu
+
+Apakah setiap angkatan stabil?
+
+✅ 2. Mengukur Dampak Perubahan Kurikulum
+
+Misal kurikulum baru mulai 2021,
+lihat apakah cohort setelah itu naik atau turun.
+
+✅ 3. Mendeteksi Fluktuasi Input Mahasiswa
+
+Kalau satu cohort sangat rendah,
+mungkin karena:
+
+Input mahasiswa berbeda
+
+Pandemi
+
+Perubahan metode
+
+4️⃣ Ilustrasi Sederhana
+
+Misal CPL 1:
+
+Cohort  CPL 1
+2019    78%
+2020    80%
+2021    74%
+2022    82%
+
+Ini bukan snapshot lagi.
+
+Ini adalah:
+
+Analisis tren antar cohort
+
+Dari sini bisa muncul diskusi mutu.
 <script>
 // ===== DATA =====
 const labelsCPL = [

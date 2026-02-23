@@ -97,7 +97,17 @@
         </div>
         
 
-
+<!-- TAB NAV (Semester) -->
+        <ul class="nav nav-tabs">
+          <li class="nav-item"><a class="nav-link">Sem 1</a></li>
+          <li class="nav-item"><a class="nav-link">Sem 2</a></li>
+          <li class="nav-item"><a class="nav-link">Sem 3</a></li>
+          <li class="nav-item"><a class="nav-link">Sem 4</a></li>
+          <li class="nav-item"><a class="nav-link">Sem 5</a></li>
+          <li class="nav-item"><a class="nav-link">Sem 6</a></li>
+          <li class="nav-item"><a class="nav-link">Sem 7</a></li>
+          <li class="nav-item"><a class="nav-link active">Sem 8</a></li>
+        </ul>
     <!-- ========== CARD 4: Stacked Bar Chart — Proporsi ========== -->
     <style>
       .chart-container {
@@ -709,6 +719,28 @@
           Halaman ini menampilkan rekap satu set pemetaan OBE, menilai kelengkapan hubungan CPL–IK–CPMK–MK dan keserataan beban pemetaan. (Mockup data statis)<br>
           Halaman ini menampilkan rekapitulasi satu set pemetaan OBE yang telah dirancang, dengan fokus pada dua aspek utama: <b>pertama,</b> kelengkapan pemetaan (mapping completeness), untuk memeriksa apakah CPL, IK, CPMK, dan MK telah terhubung secara lengkap; <b>kedua,</b> keserataan beban pemetaan (mapping balance), untuk melihat distribusi dukungan dan identifikasi gap antara elemen yang paling kuat dan paling lemah di tiap level
         </p>        
+        <p>
+          untuk audit kurikulum: apakah CPL 3  baru disentuh di semester tempuh 6? apakah semester tempuh 4 terlalu padat kontribusi CPL?
+          apakah CPL 1 hanya muncul di semester tempuh 1? Jumlah MK yang memetakan ke CPL-X.
+
+Total bobot kontribusi ke CPL-X.
+
+Sebaran CPL antar semester.
+        </p>
+        <p>
+          analisis keseimbangan pemetaan kurikulum. monitoring coverage CPL. evaluasi desain kurikulum. identifikasi atau underexposure CPL.
+          CPL semester bisa menjawab:
+
+Apakah CPL tertentu hanya disentuh di semester tertentu?
+
+Apakah ada CPL yang terlalu berat di satu semester?
+
+Apakah ada CPL yang “hilang” di semester genap?
+
+Apakah distribusi beban CPL seimbang sepanjang 8 semester?
+
+Apakah ada semester yang terlalu dominan di CPL kognitif saja?
+        </p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
@@ -794,3 +826,238 @@
     });
 </script>
 <?php include('5script.php'); ?>
+
+Pertanyaan ini sangat fundamental, Pak Harun.
+Karena sebelum sistem monitoring berjalan, **kesehatan pemetaan kurikulum** harus dipastikan dulu.
+
+Kalau pemetaan CPL–IK–CPMK sejak awal sudah tidak sehat, maka semua dashboard setelah implementasi hanya akan memvisualisasikan kesalahan desain.
+
+Kita akan susun ini sebagai **Framework Review Draft Pemetaan Kurikulum**.
+
+---
+
+# 🎯 Tujuan Review Draft Mapping
+
+Sebagai Tim Kurikulum, Anda ingin menjawab:
+
+* Apakah struktur CPL–IK–CPMK logis?
+* Apakah distribusinya seimbang?
+* Apakah dapat diukur?
+* Apakah realistis diimplementasikan?
+* Apakah efisien secara beban?
+* Apakah mendukung monitoring & OBE?
+
+---
+
+# 🧱 Framework Evaluasi Draft Mapping
+
+Saya bagi menjadi 7 parameter utama.
+
+---
+
+# 1️⃣ Validitas Konseptual (Conceptual Integrity)
+
+### Pertanyaan Kunci:
+
+* Apakah setiap CPL punya IK yang jelas dan terukur?
+* Apakah setiap IK benar-benar turunan dari CPL?
+* Apakah setiap CPMK benar-benar mengukur IK tertentu?
+
+### Red Flag:
+
+* IK terlalu umum dan tidak terukur.
+* CPMK tidak jelas mengarah ke IK tertentu.
+* CPL tidak punya IK yang memadai.
+
+### Indikator Sehat:
+
+* Setiap CPL → minimal 2–4 IK.
+* Setiap IK → diukur oleh ≥ 1 CPMK.
+* Tidak ada CPMK “tanpa tujuan”.
+
+---
+
+# 2️⃣ Keseimbangan Distribusi (Balance)
+
+### Pertanyaan:
+
+* Apakah semua CPL mendapat dukungan CPMK yang proporsional?
+* Apakah ada CPL yang terlalu dominan?
+* Apakah ada CPL yang hampir tidak didukung?
+
+### Red Flag:
+
+* CPL A dipetakan oleh 20 CPMK, CPL B hanya 2.
+* IK tertentu terlalu padat.
+
+### Indikator Sehat:
+
+* Distribusi relatif merata.
+* Tidak ada CPL/IK orphan (tanpa CPMK).
+* Tidak ada overload ekstrim.
+
+---
+
+# 3️⃣ Beban Implementasi (Feasibility)
+
+### Pertanyaan:
+
+* Apakah jumlah CPMK per MK realistis?
+* Apakah dosen mampu mengukur semuanya?
+* Apakah rubrik asesmen realistis dibuat?
+
+### Red Flag:
+
+* 1 MK punya 10+ CPMK.
+* 1 IK diukur oleh terlalu banyak MK (inefisien).
+* Beban asesmen terlalu tinggi.
+
+### Indikator Sehat:
+
+* 3–6 CPMK per MK.
+* IK diukur oleh beberapa MK secara bertahap, bukan serentak.
+
+---
+
+# 4️⃣ Coverage Vertikal (Scaffolding)
+
+### Pertanyaan:
+
+* Apakah IK berkembang secara bertahap antar semester?
+* Apakah ada urutan logis (basic → intermediate → advanced)?
+
+### Red Flag:
+
+* IK level tinggi muncul di semester awal.
+* Tidak ada progresi kompetensi.
+
+### Indikator Sehat:
+
+* Pemetaan menunjukkan kurva perkembangan.
+* MK awal → fondasi.
+* MK akhir → integrasi & sintesis.
+
+---
+
+# 5️⃣ Redundansi & Efisiensi
+
+### Pertanyaan:
+
+* Apakah ada CPMK yang duplikatif?
+* Apakah terlalu banyak MK mengukur IK yang sama tanpa alasan?
+
+### Red Flag:
+
+* IK diukur berulang tanpa peningkatan level.
+* CPMK deskripsinya mirip antar MK.
+
+### Indikator Sehat:
+
+* Penguatan terjadi dengan level berbeda, bukan duplikasi.
+
+---
+
+# 6️⃣ Traceability & Auditability
+
+### Pertanyaan:
+
+* Apakah setiap CPL bisa ditelusuri sampai CPMK spesifik?
+* Apakah sistem monitoring bisa menghitungnya?
+
+### Red Flag:
+
+* CPL tidak bisa dilacak sumber nilainya.
+* IK ambigu.
+
+### Indikator Sehat:
+
+* Relasi CPL → IK → CPMK jelas.
+* Bisa dihitung secara kuantitatif.
+
+---
+
+# 7️⃣ Kesiapan Monitoring (Monitorability)
+
+Karena Anda ingin sistem monitoring kuat.
+
+### Pertanyaan:
+
+* Apakah mapping ini memungkinkan agregasi logis?
+* Apakah setiap IK punya cukup data?
+* Apakah distribusi CPMK memungkinkan analisis cohort & yudisium?
+
+### Red Flag:
+
+* IK hanya diukur 1 kali sepanjang kurikulum.
+* IK tidak muncul di semester akhir.
+
+### Indikator Sehat:
+
+* IK diukur minimal 2–3 kali sepanjang kurikulum.
+* Ada kontribusi signifikan di semester akhir.
+
+---
+
+# 📊 Matriks Penilaian Draft Mapping
+
+Anda bisa buat checklist seperti ini:
+
+| Parameter            | Skor 1–5 | Catatan |
+| -------------------- | -------- | ------- |
+| Validitas Konseptual |          |         |
+| Keseimbangan         |          |         |
+| Feasibility          |          |         |
+| Scaffolding          |          |         |
+| Efisiensi            |          |         |
+| Traceability         |          |         |
+| Monitorability       |          |         |
+
+Total skor bisa jadi indikator:
+
+* > 85% = Sehat
+* 70–85% = Perlu revisi minor
+* <70% = Perlu revisi struktural
+
+---
+
+# 🧠 Tanda Kurikulum “Sakit”
+
+* Ada CPL tanpa dukungan CPMK.
+* IK terlalu umum.
+* CPMK terlalu banyak per MK.
+* Tidak ada progresi level kompetensi.
+* Monitoring nanti akan bias.
+
+---
+
+# 🌿 Tanda Kurikulum “Sehat”
+
+* Distribusi merata.
+* Ada progression antar semester.
+* CPMK realistis.
+* IK tidak orphan.
+* Bisa diukur kuantitatif.
+* Mendukung analisis semester, cohort, dan yudisium.
+
+---
+
+# 🎯 Pertanyaan Final Sebelum Publish Draft
+
+Sebagai Tim Kurikulum, tanyakan:
+
+1. Apakah lulusan bisa mencapai CPL secara bertahap?
+2. Apakah beban dosen realistis?
+3. Apakah sistem monitoring bisa menghitungnya?
+4. Apakah tidak ada CPL yang “hanya formalitas”?
+
+Jika semua jawabannya kuat → draft bisa diaktifkan.
+
+---
+
+Kalau Bapak mau, saya bisa bantu lanjutkan:
+
+* Template UI “Review Draft Mapping” sebelum publish
+* Model scoring otomatis untuk menilai kesehatan mapping
+* Atau contoh analisis simulasi sebelum implementasi
+
+Ini akan sangat membantu sebelum set pemetaan masuk status “Aktif”.

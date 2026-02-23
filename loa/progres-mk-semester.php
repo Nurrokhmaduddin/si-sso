@@ -1,4 +1,4 @@
-<?php $page = 'progress_kelas'; ?>
+<?php $page = 'progress_mk'; ?>
 <?php include('1header.php'); ?>
 <?php include('2navbar.php'); ?>
 <?php include('3sidebar.php'); ?>
@@ -197,11 +197,8 @@
                   <thead>
                     <tr class="text-uppercase">
                       <th width="5px">No.</th>
-                      <th>Dosen Pengampu</th>
                       <th>Mata Kuliah</th>
-                      <th style="text-align: center;">Kelas</th>
-                      <th style="text-align: center;">CPMK</th>
-                      <th style="text-align: center;">Mahasiswa</th>
+                      <th style="text-align: center;">Jumlah Kelas</th>
                       <th style="text-align: center;">Aksi</th>
                     </tr>
                   </thead>
@@ -209,17 +206,12 @@
 
                     <tr>
                       <td align="center">1</td>
-                      <td>Tri Nugroho Sulistyantoro, S.T., M.T.<br>
-                      <small><b>(195110502)</b></small>
-                    </td>
                     <td>Metode Pelaksanaan Bangunan<br>
                       <small><b>(STS704)</b></small>
                     </td>
-                    <td align="center">A</td>
                     <td align="center">5</td>
-                    <td align="center"><b>27</b></td>                                         
                     <td class="text-center">
-                      <a href="progres-kelas-semester-detail.php" class="btn btn-sm btn-outline-info"><i class="fas fa-info-circle"></i></a>
+                      <a href="progres-mk-semester-detail.php" class="btn btn-sm btn-outline-info"><i class="fas fa-info-circle"></i></a>
                       <a href="data-portofolio-cpmk.pdf" download class="btn btn-sm btn-outline-success"><i class="fas fa-download"></i></a>
                     </td>
                   </td>
@@ -228,18 +220,12 @@
                   <tr>
                     <td align="center">2</td>
                     <td>
-                      Tri Nugroho Sulistyantoro, S.T., M.T.<br>
-                      <small><b>(195110502)</b></small>
+                      Basis Data<br>
+                      <small><b>(IF202)</b></small>
                     </td>
-                    <td>
-                      Metode Pelaksanaan Bangunan<br>
-                      <small><b>(STS704)</b></small>
-                    </td>
-                    <td align="center">C</td>
-                    <td align="center">5</td>
-                    <td align="center"><b>33</b></td>
+                    <td align="center">2</td>
                     <td class="text-center">
-                      <button type="button" class="btn btn-sm btn-outline-info" onclick="window.location='progres-kelas-semester-detail.php'"><i class="fas fa-info-circle"></i></button>
+                      <button type="button" class="btn btn-sm btn-outline-info" onclick="window.location='progres-mk-semester-detail.php'"><i class="fas fa-info-circle"></i></button>
                       <a href="data-portofolio-cpmk.pdf" download class="btn btn-sm btn-outline-success"><i class="fas fa-download"></i></a>
                     </td>
                   </tr>
@@ -247,198 +233,132 @@
                   <tr>
                     <td align="center">3</td>
                     <td>
-                      Andi Purnomo, S.T., M.T.<br>
-                      <small><b>(065110501)</b></small>
+                      Statistik Penelitian<br>
+                      <small><b>(STS999)</b></small>
                     </td>
-                    <td>
-                      Metode Pelaksanaan Bangunan<br>
-                      <small><b>(STS704)</b></small>
-                    </td>
-                    <td align="center">B</td>
                     <td align="center">5</td>
-                    <td align="center"><b>26</b></td>
                     <td class="text-center">
-                      <button type="button" class="btn btn-sm btn-outline-info" onclick="window.location='progres-kelas-semester-detail.php'"><i class="fas fa-info-circle"></i></button>
+                      <button type="button" class="btn btn-sm btn-outline-info" onclick="window.location='progres-mk-semester-detail.php'"><i class="fas fa-info-circle"></i></button>
                       <a href="data-portofolio-cpmk.pdf" download class="btn btn-sm btn-outline-success"><i class="fas fa-download"></i></a>
                     </td>
                   </tr>
                   <tr>
                     <td align="center">4</td>
                     <td>
-                      Vendie Abma, S.T., M.T.<br>
-                      <small><b>(155111310)</b></small>
+                      Data Mining<br>
+                      <small><b>(IF402)</b></small>
                     </td>
-                    <td>
-                      Metode Pelaksanaan Bangunan<br>
-                      <small><b>(STS704)</b></small>
-                    </td>
-                    <td align="center">D</td>
                     <td align="center">5</td>
-                    <td align="center"><b>23</b></td>
                     <td class="text-center">
-                      <button type="button" class="btn btn-sm btn-outline-info" onclick="window.location='progres-kelas-semester-detail.php'"><i class="fas fa-info-circle"></i></button>
+                      <button type="button" class="btn btn-sm btn-outline-info" onclick="window.location='progres-mk-semester-detail.php'"><i class="fas fa-info-circle"></i></button>
                       <a href="data-portofolio-cpmk.pdf" download class="btn btn-sm btn-outline-success"><i class="fas fa-download"></i></a>
                     </td>
                   </tr>
                   <tr>
                     <td align="center">5</td>
                     <td>
-                      Rizki Budiman, S.T., M.T.<br>
-                      <small><b>(245111203)</b></small>
+                        Algoritma dan Pemrograman<br>
+                      <small><b>(IF102)</b></small>
                     </td>
-                    <td>
-                      Metode Pelaksanaan Bangunan<br>
-                      <small><b>(STS704)</b></small>
-                    </td>
-                    <td align="center">F</td>
                     <td align="center">5</td>
-                    <td align="center"><b>25</b></td>
                     <td class="text-center">
-                      <button type="button" class="btn btn-sm btn-outline-info" onclick="window.location='progres-kelas-semester-detail.php'"><i class="fas fa-info-circle"></i></button>
+                      <button type="button" class="btn btn-sm btn-outline-info" onclick="window.location='progres-mk-semester-detail.php'"><i class="fas fa-info-circle"></i></button>
                       <a href="data-portofolio-cpmk.pdf" download class="btn btn-sm btn-outline-success"><i class="fas fa-download"></i></a>
                     </td>
                   </tr>
                   <tr>
                     <td align="center">6</td>
                     <td>
-                      Vendie Abma, S.T., M.T.<br>
-                      <small><b>(155111310)</b></small>
-                    </td>
-                    <td>
                       Metode Pelaksanaan Bangunan<br>
                       <small><b>(STS704)</b></small>
                     </td>
-                    <td align="center">E</td>
                     <td align="center">5</td>
-                    <td align="center"><b>22</b></td>
                     <td class="text-center">
-                      <button type="button" class="btn btn-sm btn-outline-info" onclick="window.location='progres-kelas-semester-detail.php'"><i class="fas fa-info-circle"></i></button>
+                      <button type="button" class="btn btn-sm btn-outline-info" onclick="window.location='progres-mk-semester-detail.php'"><i class="fas fa-info-circle"></i></button>
                       <a href="data-portofolio-cpmk.pdf" download class="btn btn-sm btn-outline-success"><i class="fas fa-download"></i></a>
                     </td>
                   </tr>
                   <tr>
                     <td align="center">7</td>
                     <td>
-                      Miftahul Fauziah, S.T., M.T., Ph.D.<br>
-                      <small><b>(955110103)</b></small>
+                        Keamanan Informasi<br>
+                      <small><b>(IF401)</b></small>
                     </td>
-                    <td>
-                      Bahan Perkerasan Jalan (+Pr)<br>
-                      <small><b>(STS307)</b></small>
-                    </td>
-                    <td align="center">F</td>
-                    <td align="center">9</td>
-                    <td align="center"><b>24</b></td>
+                    <td align="center">1</td>
                     <td class="text-center">
-                      <button type="button" class="btn btn-sm btn-outline-info" onclick="window.location='progres-kelas-semester-detail.php'"><i class="fas fa-info-circle"></i></button>
+                      <button type="button" class="btn btn-sm btn-outline-info" onclick="window.location='progres-mk-semester-detail.php'"><i class="fas fa-info-circle"></i></button>
                       <a href="data-portofolio-cpmk.pdf" download class="btn btn-sm btn-outline-success"><i class="fas fa-download"></i></a>
                     </td>
                   </tr>
                   <tr>
                     <td align="center">8</td>
                     <td>
-                      Prayogo Afang Prayitno, S.T., M.Sc.<br>
-                      <small><b>(205111303)</b></small>
+                      Rekayasa Perangkat Lunak<br>
+                      <small><b>(IF302)</b></small>
                     </td>
-                    <td>
-                      Bahan Perkerasan Jalan (+Pr)<br>
-                      <small><b>(STS307)</b></small>
-                    </td>
-                    <td align="center">C</td>
-                    <td align="center">9</td>
-                    <td align="center"><b>20</b></td>
+                    <td align="center">2</td>
                     <td class="text-center">
-                      <button type="button" class="btn btn-sm btn-outline-info" onclick="window.location='progres-kelas-semester-detail.php'"><i class="fas fa-info-circle"></i></button>
+                      <button type="button" class="btn btn-sm btn-outline-info" onclick="window.location='progres-mk-semester-detail.php'"><i class="fas fa-info-circle"></i></button>
                       <a href="data-portofolio-cpmk.pdf" download class="btn btn-sm btn-outline-success"><i class="fas fa-download"></i></a>
                     </td>
                   </tr>
                   <tr>
                     <td align="center">9</td>
                     <td>
-                      Ir. Berlian Kushari, S.T., M.Eng., IPM, ASEAN Eng.<br>
-                      <small><b>(015110101)</b></small>
+                      Pemrograman Web<br>
+                      <small><b>(IF301)</b></small>
                     </td>
-                    <td>
-                      Bahan Perkerasan Jalan (+Pr)<br>
-                      <small><b>(STS307)</b></small>
-                    </td>
-                    <td align="center">G</td>
-                    <td align="center">9</td>
-                    <td align="center"><b>24</b></td>
+                    <td align="center">3</td>
                     <td class="text-center">
-                      <button type="button" class="btn btn-sm btn-outline-info" onclick="window.location='progres-kelas-semester-detail.php'"><i class="fas fa-info-circle"></i></button>
+                      <button type="button" class="btn btn-sm btn-outline-info" onclick="window.location='progres-mk-semester-detail.php'"><i class="fas fa-info-circle"></i></button>
                       <a href="data-portofolio-cpmk.pdf" download class="btn btn-sm btn-outline-success"><i class="fas fa-download"></i></a>
                     </td>
                   </tr>
                   <tr>
                     <td align="center">10</td>
                     <td>
-                      Ir. Mochammad Sigit Darmosudiharjo, M.T.<br>
-                      <small><b>(885110103)</b></small>
+                      Pengantar Teknologi Informasi<br>
+                      <small><b>(IF101)</b></small>
                     </td>
-                    <td>
-                      Bahan Perkerasan Jalan (+Pr)<br>
-                      <small><b>(STS307)</b></small>
-                    </td>
-                    <td align="center">E</td>
-                    <td align="center">9</td>
-                    <td align="center"><b>22</b></td>
+                    <td align="center">4</td>
                    <td class="text-center">
-                      <button type="button" class="btn btn-sm btn-outline-info" onclick="window.location='progres-kelas-semester-detail.php'"><i class="fas fa-info-circle"></i></button>
+                      <button type="button" class="btn btn-sm btn-outline-info" onclick="window.location='progres-mk-semester-detail.php'"><i class="fas fa-info-circle"></i></button>
                       <a href="data-portofolio-cpmk.pdf" download class="btn btn-sm btn-outline-success"><i class="fas fa-download"></i></a>
                     </td>
                   </tr>
                   <tr>
                     <td align="center">11</td>
                     <td>
-                      Muhamad Abdul Hadi, S.T., M.T.<br>
-                      <small><b>(215111307)</b></small>
-                    </td>
-                    <td>
                       Bahan Perkerasan Jalan (+Pr)<br>
                       <small><b>(STS307)</b></small>
                     </td>
-                    <td align="center">D</td>
                     <td align="center">9</td>
-                    <td align="center"><b>24</b></td>
                    <td class="text-center">
-                      <button type="button" class="btn btn-sm btn-outline-info" onclick="window.location='progres-kelas-semester-detail.php'"><i class="fas fa-info-circle"></i></button>
+                      <button type="button" class="btn btn-sm btn-outline-info" onclick="window.location='progres-mk-semester-detail.php'"><i class="fas fa-info-circle"></i></button>
                       <a href="data-portofolio-cpmk.pdf" download class="btn btn-sm btn-outline-success"><i class="fas fa-download"></i></a>
                     </td>
                   </tr>
                   <tr>
                     <td align="center">12</td>
                     <td>
-                      Muhamad Abdul Hadi, S.T., M.T.<br>
-                      <small><b>(215111307)</b></small>
+                      Kerja Praktik<br>
+                      <small><b>(IF502)</b></small>
                     </td>
-                    <td>
-                      Bahan Perkerasan Jalan (+Pr)<br>
-                      <small><b>(STS307)</b></small>
-                    </td>
-                    <td align="center">B</td>
                     <td align="center">9</td>
-                    <td align="center"><b>24</b></td>
                     <td class="text-center">
-                      <button type="button" class="btn btn-sm btn-outline-info" onclick="window.location='progres-kelas-semester-detail.php'"><i class="fas fa-info-circle"></i></button>
+                      <button type="button" class="btn btn-sm btn-outline-info" onclick="window.location='progres-mk-semester-detail.php'"><i class="fas fa-info-circle"></i></button>
                       <a href="data-portofolio-cpmk.pdf" download class="btn btn-sm btn-outline-success"><i class="fas fa-download"></i></a>
                     </td>
                   </tr>
                   <tr>
                     <td align="center">13</td>
                     <td>
-                      Miftahul Fauziah, S.T., M.T., Ph.D.<br>
-                      <small><b>(955110103)</b></small>
+                      Skripsi<br>
+                      <small><b>(IF601)</b></small>
                     </td>
-                    <td>
-                      Bahan Perkerasan Jalan (+Pr)<br>
-                      <small><b>(STS307)</b></small>
-                    </td>
-                    <td align="center">A</td>
                     <td align="center">9</td>
-                    <td align="center"><b>21</b></td>
                     <td class="text-center">
-                      <button type="button" class="btn btn-sm btn-outline-info" onclick="window.location='progres-kelas-semester-detail.php'"><i class="fas fa-info-circle"></i></button>
+                      <button type="button" class="btn btn-sm btn-outline-info" onclick="window.location='progres-mk-semester-detail.php'"><i class="fas fa-info-circle"></i></button>
                       <a href="data-portofolio-cpmk.pdf" download class="btn btn-sm btn-outline-success"><i class="fas fa-download"></i></a>
                     </td>
                   </tr>
@@ -446,18 +366,12 @@
                   <tr>
                     <td align="center">14</td>
                     <td>
-                      Ir. Subarkah, M.T.<br>
-                      <small><b>(865110101)</b></small>
+                      Metodologi Penelitian<br>
+                      <small><b>(IF501)</b></small>
                     </td>
-                    <td>
-                      Bahan Perkerasan Jalan (+Pr)<br>
-                      <small><b>(STS307)</b></small>
-                    </td>
-                    <td align="center">H</td>
                     <td align="center">9</td>
-                    <td align="center"><b>24</b></td>
                     <td class="text-center">
-                      <button type="button" class="btn btn-sm btn-outline-info" onclick="window.location='progres-kelas-semester-detail.php'"><i class="fas fa-info-circle"></i></button>
+                      <button type="button" class="btn btn-sm btn-outline-info" onclick="window.location='progres-mk-semester-detail.php'"><i class="fas fa-info-circle"></i></button>
                       <a href="data-portofolio-cpmk.pdf" download class="btn btn-sm btn-outline-success"><i class="fas fa-download"></i></a>
                     </td>
                   </tr>

@@ -23,7 +23,7 @@
       <!-- Main row -->
       <div class="row">
         <div class="col-md-12">
-          <!-- ========== CARD : Filter & Export ========== -->
+          <!-- ========== CARD : Filter & Identitas ========== -->
           <div class="card">
             <!-- <div class="card-header">
               <h5 class="card-title mb-0"><i class="fas fa-filter "></i> Judul Tabel yang terdampak tombol aksi ini </h5>              
@@ -37,13 +37,16 @@
                 <b>Set Pemetaan:</b> KT-6 (K20) Kurikulum 2025 full stage &nbsp;
               </div>
               
-              <div class="col-md-5">
+              <div class="col-md-6">
                 <b>Angkatan :</b> 2024 
               </div>
-             <!--  <div class="col-md-5">
-                <b>Status Mahasiswa:</b> Aktif - Semua
+              <!-- <div class="col-md-6">
+                <b>Status Mahasiswa:</b> Semua
               </div> -->
-                
+                <div class="col-md-6">
+                  <b>MK Tempuh hingga(kumulatif):</b> Semester 1 saja atau semua  &nbsp;
+                </div> 
+
               </div>
             </div>
             <div class="card-footer">
@@ -94,11 +97,18 @@
           </div>
           <div class="col-md-3">
             <div class="kpi " style="background:#ff7f0e;">
+              <div class="small">Mahasiswa Lulus</div>
+              <div class="big" id="kpiGap">60%</div>
+              <div class="small">60 dari 100 Mahasiswa</div>
+            </div>
+          </div><!-- 
+          <div class="col-md-3">
+            <div class="kpi " style="background:#ff7f0e;">
               <div class="small">Pemerataan Ketercapaian CPL</div>
               <div class="big" id="kpiGap">Gap 30% | 0.56</div>
               <div class="small">Kategori: Cukup Stabil</div>
             </div>
-          </div>
+          </div> -->
           <div class="col-md-3">
             <div class="kpi bg-danger">
               <div class="small">CPL Terlemah</div>
@@ -387,7 +397,11 @@
       <div class="modal-body">
         <p>
           Ringkasan capaian CPL per Kelompok Mahasiswa, perkembangan, peringatan dini (EWS), disajikan dalam bentuk grafik dan tabel (Mockup data statis)
-        </p>        
+        </p> 
+        <p>
+           snapshot CPL by angkatan masuk(cohort) adalah gambaran capaian CPL suatu angkatan mahasiswa yang masuk pada tahun yang sama dan dianalisis sebagi suatu kelompok homogen yang mengalami kurikulum serta konteks sistem yang relati  sama; tujuannya adalah mengevaluasi efektivitas kurikulum dan stbilitas mutu antar angkatan, sehingga informasi yang perlu disajikan meliputi jumlah mahasiswa dalam cohort total dan yan g sudah lulus), rerata dan distribusi tiap CPL,persentasi ketuntasan CPL, progres studi (misalnya % tepat waktu), serta jika perlu perbandingan dengan cohort sebelumnya dalam kurikulum yang sama.singkatnya, snapshop cohort menjaawab "apakah kurikulum efektif bagi satu angkatan?"
+           untuk evaluasi perkembangan mahasiswa
+        </p>       
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>

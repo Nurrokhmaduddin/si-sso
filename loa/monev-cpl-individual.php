@@ -107,6 +107,8 @@
   <ul class="nav nav-tabs">   
     <li class="nav-item" onclick="window.location='monev-cpl-individual.php'"><a class="nav-link active">Grafik</a></li>
     <li class="nav-item" onclick="window.location='monev-cpl-individual2.php'"><a class="nav-link ">Tabel</a></li>
+    <li class="nav-item" onclick="window.location='monev-cpl-individual3.php'"><a class="nav-link ">KHS</a></li>
+    <li class="nav-item" onclick="window.location='monev-cpl-individual3.php'"><a class="nav-link ">IPK</a></li>
     <li class="nav-item" onclick="window.location='monev-cpl-individual3.php'"><a class="nav-link ">Riwayat</a></li>
   </ul>
 

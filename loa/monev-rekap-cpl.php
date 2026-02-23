@@ -8,7 +8,7 @@
 
   <section class="content-header">
     <div class="container-fluid">
-      <h3 class="mb-0">Rekapitulasi CPMK Semester
+      <h3 class="mb-0">Rekapitulasi CPL Semester
         <button type="button" class="btn btn-tool" data-bs-toggle="modal" data-bs-target="#modalBantuan" title="Bantuan">
           <i class="fas fa-question-circle"></i>
         </button>
@@ -31,16 +31,21 @@
             <div class="card-body ">
               <div class="row">
 
-                 <div class="col-md-6">
-                  <b>Kurikulum:</b> 2023 &nbsp;
+                <div class="col-md-6">
+                <b>Kurikulum:</b> 2023 &nbsp;
                 </div>                
                 <div class="col-md-6">
                 <b>Set Pemetaan:</b> KT-6 (K20) Kurikulum 2025 full stage &nbsp;
-              </div>
-              <div class="col-md-6">
-                  <b>Periode Akademik:</b> 2024/2025 - Gasal  &nbsp;
+                </div>
+                <div class="col-md-6">
+                <b>Tahun Akademik:</b> 2024/2025 &nbsp;
                 </div> 
-                
+                <div class="col-md-6">
+                <b>Semester Akademik:</b> Gasal  &nbsp;
+                </div>
+                <!-- <div class="col-md-6">
+                <b>Angkatan Mahasiswa:</b> Semua  &nbsp;
+                </div>  -->
               </div>
             </div>
             <div class="card-footer">
@@ -107,7 +112,11 @@
 
 
 
-
+sebaran angkatan yang menambil MK di semester ini. sebarang mahasiswa angkata yang menempuh semester nii dengan mengambil mata kuliah atau ada di kelas perkuliahan semester ini.
+angkatan | jml mahasiswa |
+2020  | 30
+2021  | 59
+2022  | 120
 
 
 <!-- ========== CARD 4:  Grafik Radar CPL & Progress ========== --> 
@@ -1182,7 +1191,10 @@ canvas {
       <div class="modal-body">
         <p>
           Ringkasan capaian CPL per Individu Mahasiswa, perkembangan, peringatan dini (EWS), disajikan dalam bentuk grafik dan tabel (Mockup data statis)
-        </p>        
+        </p>     
+        <p>
+          untuk audit implementasi dan atau audit kurikulum
+        </p>   
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>

@@ -52,7 +52,11 @@
                       </tr>
                       <tr>
                         <td width="30%"><b> Dosen Pengampu</b></td>
-                        <td>Tri Nugroho Sulistyantoro, S.T., M.T. - (195110502)</td>
+                        <td>Tri Nugroho Sulistyantoro, S.T., M.T. - (195110502) <i class="fas fa-star"></i></td> 
+                      </tr>
+                      <tr>
+                        <td width="30%"><b></b></td>
+                        <td>Hasan, ST, MT. - (198888502)</td>
                       </tr>
                      
                       <!-- <tr>
@@ -343,10 +347,7 @@
       </div>
       <div class="modal-body">
         <p>
-          Ideal hasil ekspor kelas berdasarkan:
-kurikulum, set pemetaan, mata kuliah(satu,beberapa, semua)
-kolom: kode MK, mata kuliah, mahasiswa, nilai akhir(huruf),nilai akhir(angka), cpmk 1,2,3,4,5
-jika ada kesamaan NIM di satu mata kuliah(artinya mahasiswa tempuh >1 kali MK tsb) ambil nilai tertinggi
+          yang input hanya koordinaor dosen pengampu, selain itu hanya view.
         </p>
       </div>
       <div class="modal-footer">

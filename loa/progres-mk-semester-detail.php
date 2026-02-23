@@ -1,13 +1,14 @@
-<?php $page = 'monev_kelas'; ?>
+<?php $page = 'progress_mk'; ?>
 <?php include('1header.php'); ?>
 <?php include('2navbar.php'); ?>
 <?php include('3sidebar.php'); ?>
+
   
 <div class="content-wrapper" style="min-height: 626.4px;">    
 
   <section class="content-header">
     <div class="container-fluid">
-      <h3 class="mb-0">Rekapitulasi - Kelas Perkuliahan 
+      <h3 class="mb-0">Progress - Mata Kuliah
         <button type="button" class="btn btn-tool" data-bs-toggle="modal" data-bs-target="#modalBantuan" title="Bantuan"><i class="fas fa-question-circle"></i>
         </button> 
       </h3>
@@ -22,9 +23,9 @@
       <div class="row">
         <div class="col-md-12">
 
-    
+      
 
-<!-- ========== CARD : Filter & Export ========== -->
+          <!-- ========== CARD : Filter & Export ========== -->
           <div class="card">
             <!-- <div class="card-header bg-secondary">
               <h5 class="card-title mb-0">
@@ -42,21 +43,16 @@
                     <tbody>
                       <tr>
                         <td width="30%"><b> Kurikulum</b></td>
-                        <td>2023</td>
+                        <td>Merdeka Belajar</td>
                       </tr>
                       <tr>
-                        <td width="30%"><b> Periode Akademik</b></td>
-                        <td>2024/2025 - Gasal</td>
+                        <td width="30%"><b> Periode A</b></td>
+                        <td>Tahun Akademik 2023/2024</td>
                       </tr>
                       <tr>
-                        <td width="30%"><b> Dosen Pengampu</b></td>
-                        <td>Tri Nugroho Sulistyantoro, S.T., M.T. - (195110502)</td>
+                        <td width="30%"><b> Periode B</b></td>
+                        <td>Tahun Akademik 2024/2025</td>
                       </tr>
-                     
-                      <!-- <tr>
-                        <td width="30%"><b> Tanggal Posting </b></td>
-                        <td>23 Januari 2024</td>
-                      </tr> -->
                     </tbody>
                   </table>
                 </div>
@@ -64,16 +60,12 @@
                   <table class="table table-sm table-hover table-bordered table-striped deta">
                     <tbody>
                       <tr>
-                        <td width="30%"><b> Jalur Kelas</b></td>
-                        <td>Civil Engineering Regular - (511)</td>
-                      </tr>
-                       <tr>
                         <td width="30%"><b> Mata Kuliah</b></td>
                         <td>Metode Pelaksanaan Bangunan - (STS704)</td>
                       </tr>
                       <tr>
-                        <td width="30%"><b> Kelas</b></td>
-                        <td>A</td>
+                        <td width="30%"><b> Jumlah CPMK</b></td>
+                        <td>5</td>
                       </tr>
                     </tbody>
                   </table>
@@ -84,7 +76,7 @@
 
             <div class="card-footer">
               <div class="card-tools ms-auto">
-                 <button type="button" 
+                <button type="button" 
                 class="btn btn-outline-secondary btn-sm"
                 onclick="window.location.href='monev-rekap-kelas.php'">
                 <span class="fas fa-reply me-1"></span> Kembali
@@ -115,119 +107,113 @@
 
           <!-- TAB NAV (Semester) -->
            <ul class="nav nav-tabs">
-            <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail.php'"><a class="nav-link ">Final</a></li>
-            <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail4.php'"><a class="nav-link ">Remedial</a></li>
-            <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail3.php'"><a class="nav-link ">Portofolio</a></li>
-            <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail2.php'"><a class="nav-link ">Mahasiswa</a></li>
-            <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail5.php'"><a class="nav-link active">OBE</a></li>
+            <li class="nav-item" onclick="window.location='progres-mk-semester-detail.php'"><a class="nav-link active">Progres(Grafik/Tabel)</a></li>
+            <!-- <li class="nav-item" onclick="window.location='monev_portfolio_cpmk_detail2.php'"><a class="nav-link ">Mahasiswa</a></li>
+            <li class="nav-item" onclick="window.location='monev_portfolio_cpmk_detail3.php'"><a class="nav-link ">Portofolio</a></li> -->
+            <li class="nav-item" onclick="window.location='progres-mk-semester-detail3.php'"><a class="nav-link ">Daftar Kelas</a></li>
+            <li class="nav-item" onclick="window.location='progres-mk-semester-detail4.php'"><a class="nav-link ">Pengembangan</a></li>
+
           </ul>
 
 
-<!-- ========== CARD : tabel visualisasi CPMK ========== -->
-<div class="card">
-  <div class="card-body">
-    <div class="table-responsive">
-      <table class="table table-bordered table-striped table-sm">
-        <thead class="table-dark text-center">
-          <!-- Baris 1: CPL -->
-          <tr>
-            <!-- <th rowspan="2">Kode MK</th> -->
-            <th rowspan="2" colspan="2">CPMK</th>
-            <th colspan="2" data-bs-toggle="tooltip" title="CPL 1: Bertakwa kepada Tuhan Yang Maha Esa dan berperilaku islami">CPL 1</th>
-            <th colspan="2">CPL 2</th>
-            <th colspan="3">CPL 3</th>
-            <th colspan="2">CPL 4</th>
-            <th colspan="2">CPL 5</th>
-            <th colspan="2">CPL 6</th>
-            <th colspan="2">CPL 7</th>
-            <th>CPL 8</th>
-            <th colspan="2">CPL 9</th>
-            <th>CPL 10</th>
-          </tr>
-          <!-- Baris 2: IK -->
-          <tr>
-            <th data-bs-toggle="tooltip" title="IK 1: Menunjukkan perilaku islami pada setiap peran yang dijalani (50%)">IK 1</th>
-            <th>IK 2</th>
-            <th>IK 3</th>
-            <th>IK 4</th>
-            <th>IK 5</th>
-            <th>IK 6</th>
-            <th>IK 7</th>
-            <th>IK 8</th>
-            <th>IK 9</th>
-            <th>IK 10</th>
-            <th>IK 11</th>
-            <th>IK 12</th>
-            <th>IK 13</th>
-            <th>IK 14</th>
-            <th>IK 15</th>
-            <th>IK 16</th>
-            <th>IK 17</th>
-            <th>IK 18</th>
-            <th>IK 19</th>
-          </tr>
-        </thead>
-
-        <tbody>
-          <tr>
-            <td>STS704</td>
-            <td data-bs-toggle="tooltip" title="Deskripsi CPMK 1">1</td>
-            <td class="text-center">v</td><td></td>
-            <td></td><td></td>
-            <td></td><td></td><td></td>
-            <td></td><td></td>
-            <td></td><td></td>
-            <td></td><td></td>
-            <td></td><td></td>
-            <td></td>
-            <td></td><td></td><td></td>
-          </tr>
-          <tr>
-            <td>STS704</td>
-            <td>2</td>
-            <td></td><td class="text-center">v</td>
-            <td></td><td></td>
-            <td></td><td></td><td></td>
-            <td></td><td></td>
-            <td></td><td></td>
-            <td></td><td></td>
-            <td></td><td></td>
-            <td></td>
-            <td></td><td></td><td></td>
-          </tr>
-          <tr>
-            <td>STS704</td>
-            <td>3</td>
-            <td></td><td></td>
-            <td class="text-center">v</td><td></td>
-            <td></td><td></td><td></td>
-            <td></td><td></td>
-            <td></td><td></td>
-            <td></td><td></td>
-            <td class="text-center">v</td><td></td>
-            <td></td>
-            <td></td><td></td><td></td>
-          </tr>
-          <tr>
-            <td>STS704</td>
-            <td>4</td>
-            <td></td><td></td>
-            <td></td><td></td><td></td>
-            <td class="text-center">v</td><td></td>
-            <td></td><td></td>
-            <td></td><td></td>
-            <td class="text-center">v</td><td></td>
-            <td></td><td></td>
-            <td></td>
-            <td></td><td></td><td></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+<!-- ========== CARD : Chart CPL-IK ========== -->     
+        <div class="card">   
+          <!-- CARD HEADER -->  
+          <div class="card-header ">         
+            <h5 class="card-title mb-0">
+              <button class="btn btn-sm btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#chartCPLIK1">
+                <i class="fas fa-expand"></i>
+              </button>
+              Progress Rerata CPMK Kelas Perkuliahan antar Periode
+            </h5>
+          </div>
+          <!-- CARD BODY -->
+          <div class="card-body " id="chartCPLIK1">
+            <!-- Chart Container -->
+            <div class="chart-container">
+              <canvas id="chartCPL2" width="100%" height="30"></canvas>
+            </div>
+            <h6 class="font-weight-bold">Daftar CPMK</h6>
+            <div class="table-responsive">
+              <table class="table table-sm table-bordered">
+                <thead class="thead-dark">
+                  <tr>
+                    <th style="width: 80px;">Kode CPMK</th>
+                    <th>Deskripsi CPMK</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>CPMK 1</td>
+                    <td>Mahasiswa mampu menyampaikan informasi secara lisan secara runtut, jelas, dan mudah dipahami.</td>
+                  </tr>
+                  <tr>
+                    <td>CPMK 2</td>
+                    <td>Mahasiswa mampu menulis laporan/tulisan akademik sesuai kaidah bahasa dan struktur penulisan yang baik.</td>
+                  </tr>
+                  <tr>
+                    <td>CPMK 3</td>
+                    <td>Mahasiswa mampu berkomunikasi secara profesional dalam konteks akademik dan industri, termasuk etika komunikasi digital.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>          
+        </div>
 
 
-  </div>
-</div>
+
+<!-- ========== CARD : tabel asesmen========== -->
+        <div class="card">
+          <div class="card-header">
+            Distribusi Capaian CPMK 1 - Perbandingan Periode
+          </div>
+          <div class="card-body">
+            <div class="table-responsive">
+              
+              <table class="table table-bordered table-sm table-hover table-striped example1" border="1">
+                
+  <thead>
+    <tr>
+      <th>Level Capaian</th>
+      <th>Periode A (%)</th>
+      <th>Periode B (%)</th>
+      <th>Δ (%) </th>
+      <th>Status </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>&ge; 85</td>
+      <td>15%</td>
+      <td>26%</td>
+      <td class="naik">Naik (+11%)</td>
+      <td class="naik">Positif</td>
+    </tr>
+    <tr>
+      <td>60–84</td>
+      <td>50%</td>
+      <td>50%</td>
+      <td class="sama">Sama (0%)</td>
+      <td class="sama">Stabil</td>
+    </tr>
+    <tr>
+      <td>&lt; 60</td>
+      <td>18%</td>
+      <td>10%</td>
+      <td class="naik">Naik (-8% Tidak Tercapai)</td>
+      <td class="naik">Perbaikan</td>
+    </tr>
+  </tbody>
+</table>
+
+            </div>
+          </div>
+        </div>
+
+
+
+
 
 
 
@@ -297,5 +283,87 @@ jika ada kesamaan NIM di satu mata kuliah(artinya mahasiswa tempuh >1 kali MK ts
     </div>
   </div>
 </div>
-
 <?php include('5script.php'); ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+        
+     
+
+<!-- <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@1.3.1/dist/chartjs-plugin-annotation.min.js"></script> -->
+
+<!-- Chart Script -->
+<script>
+    const ctx2 = document.getElementById("chartCPL2");
+
+    new Chart(ctx2, {
+        type: 'bar',
+        data: {
+            labels: ['CPMK 1', 'CPMK 2', 'CPMK 3'],
+            datasets: [
+                {
+                    label: 'Periode A',
+                    data: [82, 75,  81.66],
+                    backgroundColor: '#6c757d',
+                    borderColor: '#6c757d',
+                    borderWidth: 1
+                },
+                {
+                    label: 'Periode B',
+                    data: [90, 80, 87.33],
+                    backgroundColor: '#007bff',
+                    borderColor: '#007bff',
+                    borderWidth: 1
+                }
+            ]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: { position: 'top' },
+                annotation: {
+                    annotations: {
+                        targetLine: {
+                            type: 'line',
+                            yMin: 85,      // <<< TARGET CAPAIAN
+                            yMax: 85,
+                            borderColor: 'red',
+                            borderWidth: 2,
+                            borderDash: [6, 6],
+                            label: {
+                                display: true,
+                                content: 'Target 85',
+                                position: 'start',
+                                color: 'red',
+                                backgroundColor: 'rgba(255,255,255,0.7)',
+                                padding: 4
+                            }
+                        }
+                    }
+                }
+            },
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+
+
+</script>

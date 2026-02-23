@@ -114,6 +114,229 @@
 
         </div>
 
+
+👤 ROLE 1: KAPRODI
+🎯 Goal:
+
+Mengetahui kesehatan CPL secara global.
+
+STEP 1 — Login
+
+Masuk Dashboard
+
+Lihat:
+
+KPI ringkasan
+
+Heatmap
+
+Tren
+
+STEP 2 — Deteksi Masalah
+
+Melihat:
+
+CPL 4 → warna merah
+
+Klik CPL 4.
+
+STEP 3 — Investigasi
+
+Masuk Detail:
+
+Distribusi nilai
+
+Kelas penyumbang
+
+CPMK terkait
+
+STEP 4 — Identifikasi Penyebab
+
+Klik Kelas B
+
+Lihat:
+
+Distribusi mahasiswa
+
+% ketuntasan rendah
+
+STEP 5 — Action
+
+Masuk menu:
+Monitoring CPMK
+
+Lihat CPMK mana yang rendah.
+
+STEP 6 — Tindak Lanjut
+
+Evaluasi RPS
+
+Diskusi dosen
+
+Revisi metode pembelajaran
+
+👨‍🏫 ROLE 2: DOSEN
+🎯 Goal:
+
+Mengetahui performa kelasnya.
+
+STEP 1
+
+Masuk Monitoring CPMK.
+
+STEP 2
+
+Filter Mata Kuliah → Kelas A.
+
+STEP 3
+
+Lihat:
+
+Distribusi nilai
+
+% ketuntasan
+
+Mahasiswa yang belum tuntas
+
+STEP 4
+
+Download daftar mahasiswa risiko.
+
+👩‍💼 ROLE 3: ADMIN
+🎯 Goal:
+
+Menyiapkan laporan akreditasi.
+
+STEP 1
+
+Masuk menu Laporan.
+
+STEP 2
+
+Pilih:
+
+Tahun Akademik
+
+Snapshot Semester
+
+STEP 3
+
+Generate PDF.
+
+<hr>
+🟢 PILAR 1 – Ketercapaian Outcome (CPL & CPMK)
+
+Pertanyaan utama:
+
+Apakah outcome tercapai?
+
+Di level dosen (CPMK)
+
+Rata-rata Final CPMK
+
+% mahasiswa mencapai threshold
+
+Gap Awal vs Final
+
+Distribusi nilai
+
+Di level prodi (CPL)
+
+Rata-rata CPL
+
+% CPL mencapai target
+
+CPL yang lemah
+
+Ini output quality.
+
+🟢 PILAR 2 – Konsistensi & Stabilitas
+
+Pertanyaan utama:
+
+Apakah mutu stabil dan adil?
+
+Meliputi:
+
+a) Antar kelas (dosen berbeda)
+
+Rerata CPMK antar kelas
+
+% tuntas antar kelas
+
+Deviasi antar kelas
+
+b) Antar cohort
+
+CPL antar angkatan
+
+Fluktuasi 3 cohort
+
+Kalau terlalu fluktuatif → sistem tidak stabil.
+
+🟢 PILAR 3 – Struktur & Keseimbangan Kurikulum
+
+Pertanyaan utama:
+
+Apakah kurikulum dirancang dengan proporsional?
+
+Metrik:
+
+Mapping CPL → CPMK → MK
+
+Apakah ada CPL terlalu berat di 1 MK?
+
+Apakah ada CPL jarang disentuh?
+
+Distribusi bobot seimbang?
+
+Ini design quality.
+
+🟢 PILAR 4 – Validitas Assessment & Continuous Improvement
+
+Pertanyaan utama:
+
+Apakah pengukuran valid dan ada siklus perbaikan?
+
+Metrik:
+
+Alignment RPS dengan CPMK
+
+Rubrik jelas?
+
+Instrumen mengukur sesuai level Bloom?
+
+Ada bukti tindakan perbaikan?
+
+Di sinilah masuk:
+
+👉 Catatan evaluasi hasil
+👉 Catatan rencana perbaikan
+
+Itu bagian dari Continuous Quality Improvement (CQI).
+
+3️⃣ Catatan Evaluasi & Rencana Perbaikan Masuk ke Mana?
+
+Masuk ke:
+
+🟢 Pilar 4 – Continuous Improvement
+
+Strukturnya bisa seperti ini:
+
+Hasil Evaluasi:
+- CPMK 2 hanya 62%
+- Banyak mahasiswa lemah di analisis kasus
+
+Rencana Perbaikan:
+- Tambah studi kasus
+- Rubrik diperjelas
+- Perbaikan metode diskusi
+
+Ini membuktikan siklus:
+
+Plan → Do → Check → Act (PDCA)
+
+Tanpa ini, OBE hanya angka.
       </div>
     </div>
   </section>

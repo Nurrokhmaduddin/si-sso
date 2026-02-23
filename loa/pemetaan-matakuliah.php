@@ -79,18 +79,30 @@
             	<div class="table-responsive">
             		<table class="table table1 table-bordered table-striped table-sm datatables1">
             			<thead>                  
-            				<tr class="text-uppercase text-center">
+            				<!-- <tr class="text-uppercase text-center">
             					<th width="5px">No.</th>
             					<th>Kurikulum</th>
             					<th>Kode MK</th>
             					<th>Nama MK</th>
+                      <th>Tipe</th>
             					<th>Sifat Pengambilan</th>
             					<th>Semester Tempuh</th>
             					<th>Jumlah CPMK</th>
             					<th>Jumlah SKS</th>
             					<th width="100px">Aksi</th>
-            				</tr>
-
+            				</tr> -->
+<tr class="text-uppercase text-center">
+                      <th width="5px">No.</th>
+                      <th>Kurikulum</th>
+                      <th>Kode </th>
+                      <th>Nama </th>
+                      <th>Tipe</th>
+                      <th>Pengambilan</th>
+                      <th>Semester </th>
+                      <th> CPMK</th>
+                      <th> SKS</th>
+                      <th width="100px">Aksi</th>
+                    </tr>
             			</thead>
             			<tbody>
             				<tr>
@@ -98,6 +110,7 @@
             					<td>OBE 2024</td>
             					<td>IF101</td>
             					<td>Pengantar Teknologi Informasi</td>
+                      <td>Teori</td>
             					<td>Wajib</td>
             					<td class="text-center">1</td>
             					<td class="text-center">5</td>
@@ -120,6 +133,7 @@
             					<td>OBE 2024</td>
             					<td>IF102</td>
             					<td>Algoritma dan Pemrograman</td>
+                      <td>Teori</td>
             					<td>Wajib</td>
             					<td class="text-center">1</td>
             					<td class="text-center">7</td>
@@ -142,6 +156,7 @@
             					<td>OBE 2024</td>
             					<td>IF201</td>
             					<td>Struktur Data</td>
+                      <td>Teori</td>
             					<td>Wajib</td>
             					<td class="text-center">2</td>
             					<td class="text-center">6</td>
@@ -164,6 +179,7 @@
             					<td>OBE 2024</td>
             					<td>IF202</td>
             					<td>Basis Data</td>
+                      <td>Teori</td>
             					<td>Wajib</td>
             					<td class="text-center">2</td>
             					<td class="text-center">6</td>
@@ -186,6 +202,7 @@
             					<td>OBE 2024</td>
             					<td>IF301</td>
             					<td>Pemrograman Web</td>
+                      <td>Teori</td>
             					<td>Wajib</td>
             					<td class="text-center">3</td>
             					<td class="text-center">8</td>
@@ -208,6 +225,7 @@
             					<td>OBE 2024</td>
             					<td>IF302</td>
             					<td>Rekayasa Perangkat Lunak</td>
+                      <td>Teori</td>
             					<td>Wajib</td>
             					<td class="text-center">3</td>
             					<td class="text-center">7</td>
@@ -230,6 +248,7 @@
             					<td>OBE 2024</td>
             					<td>IF401</td>
             					<td>Keamanan Informasi</td>
+                      <td>Teori</td>
             					<td>Pilihan</td>
             					<td class="text-center">4</td>
             					<td class="text-center">5</td>
@@ -252,6 +271,7 @@
             					<td>OBE 2024</td>
             					<td>IF402</td>
             					<td>Data Mining</td>
+                      <td>Teori</td>
             					<td>Pilihan</td>
             					<td class="text-center">4</td>
             					<td class="text-center">6</td>
@@ -274,6 +294,7 @@
             					<td>OBE 2024</td>
             					<td>IF501</td>
             					<td>Metodologi Penelitian</td>
+                      <td>Teori</td>
             					<td>Wajib</td>
             					<td class="text-center">5</td>
             					<td class="text-center">4</td>
@@ -296,6 +317,7 @@
             					<td>OBE 2024</td>
             					<td>IF502</td>
             					<td>Kerja Praktik</td>
+                      <td>Non-Teori</td>
             					<td>Wajib</td>
             					<td class="text-center">6</td>
             					<td class="text-center">3</td>
@@ -318,6 +340,7 @@
             					<td>OBE 2024</td>
             					<td>IF601</td>
             					<td>Skripsi</td>
+                      <td>Non-Teori</td>
             					<td>Wajib</td>
             					<td class="text-center">8</td>
             					<td class="text-center">6</td>
@@ -461,7 +484,7 @@
               <select class="form-control select2" id="jenis" name="jenis" required>
                 <option value="">-- Pilih Jenis --</option>
                 <option value="Teori">Wajib</option>
-                <option value="Praktikum">Pilihan</option>
+                <option value="Teori">Pilihan</option>
               </select>
             </div>
           </div>
