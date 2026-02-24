@@ -27,7 +27,7 @@
 
 
           <!-- ========== CARD : Filter & Export ========== -->
-          <div class="card">
+          <div class="card card-outline card-info">
             <div class="card-body ">
               <div class="row">
                 <div class="col-md-6">
@@ -117,7 +117,7 @@
               </div>
             </div>
             <div class="card-body chart-container">
-              <canvas id="chartCPMK" height="90"></canvas>
+              <canvas id="chartCPMK" height="70"></canvas>
               <div class="row text-center mt-3">
                 <div class="col">
                   <button class="btn btn-outline-info btn-sm w-100" data-bs-toggle="collapse" data-bs-target="#daftarIKCPL31">
@@ -386,7 +386,7 @@
               </div>
             </div>
             <div class="card-body">
-              <canvas id="chartKetuntasanCPMK" height="90"></canvas>
+              <canvas id="chartKetuntasanCPMK" height="70"></canvas>
               <div class="row text-center mt-3">
                 <div class="col">
                   <button class="btn btn-outline-info btn-sm w-100" data-bs-toggle="collapse" data-bs-target="#daftarIKCPL31">
@@ -429,55 +429,58 @@
           <th>No</th>
           <th>Kode MK</th>
           <th>Kode CPMK</th>
-          <th>Rerata Skor CPMK</th>
-          <th>% Mahasiswa Tuntas (>60)</th>
-          <th>Jumlah Mahasiswa</th>
-          <th>Status Standar (>80%)</th>
+          <th>Min</th>
+          <th>Max</th>
+          <th>Rerata</th>
+          <th>Ketuntasan</th>
+          <th>Mahasiswa</th>
+          <th>Status Standar </th>
         </tr>
       </thead>
       <tbody>
-        <tr><td>1</td><td>STS009</td><td>STS009-1</td><td>78</td><td>85%</td><td>40</td><td class="memenuhi">Memenuhi</td></tr>
-        <tr><td>2</td><td>STS009</td><td>STS009-2</td><td>72</td><td>75%</td><td>40</td><td class="tidak">Tidak Memenuhi</td></tr>
-        <tr><td>3</td><td>STS009</td><td>STS009-3</td><td>81</td><td>88%</td><td>40</td><td class="memenuhi">Memenuhi</td></tr>
-        <tr><td>4</td><td>STS101</td><td>STS101-1</td><td>69</td><td>70%</td><td>120</td><td class="tidak">Tidak Memenuhi</td></tr>
-        <tr><td>5</td><td>STS101</td><td>STS101-2</td><td>84</td><td>90%</td><td>120</td><td class="memenuhi">Memenuhi</td></tr>
-        <tr><td>6</td><td>STS101</td><td>STS101-3</td><td>76</td><td>82%</td><td>120</td><td class="memenuhi">Memenuhi</td></tr>
-        <tr><td>7</td><td>STS101</td><td>STS101-4</td><td>74</td><td>78%</td><td>120</td><td class="tidak">Tidak Memenuhi</td></tr>
+        <tr><td>1</td><td>STS009</td><td>STS009-1</td><td>60</td><td>95</td><td>78</td><td>85%</td><td>40</td><td class="memenuhi">Memenuhi</td></tr>
+        <tr><td>2</td><td>STS009</td><td>STS009-2</td><td>50</td><td>88</td><td>72</td><td>75%</td><td>40</td><td class="tidak">Tidak Memenuhi</td></tr>
+        <tr><td>3</td><td>STS009</td><td>STS009-3</td><td>65</td><td>98</td><td>81</td><td>88%</td><td>40</td><td class="memenuhi">Memenuhi</td></tr>
 
-        <tr><td>8</td><td>STS102</td><td>STS102-1</td><td>88</td><td>92%</td><td>38</td><td class="memenuhi">Memenuhi</td></tr>
-        <tr><td>9</td><td>STS102</td><td>STS102-2</td><td>67</td><td>65%</td><td>38</td><td class="tidak">Tidak Memenuhi</td></tr>
-        <tr><td>10</td><td>STS102</td><td>STS102-3</td><td>79</td><td>84%</td><td>38</td><td class="memenuhi">Memenuhi</td></tr>
-        <tr><td>11</td><td>STS102</td><td>STS102-4</td><td>82</td><td>87%</td><td>38</td><td class="memenuhi">Memenuhi</td></tr>
+        <tr><td>4</td><td>STS101</td><td>STS101-1</td><td>45</td><td>90</td><td>69</td><td>70%</td><td>120</td><td class="tidak">Tidak Memenuhi</td></tr>
+        <tr><td>5</td><td>STS101</td><td>STS101-2</td><td>62</td><td>99</td><td>84</td><td>90%</td><td>120</td><td class="memenuhi">Memenuhi</td></tr>
+        <tr><td>6</td><td>STS101</td><td>STS101-3</td><td>55</td><td>97</td><td>76</td><td>82%</td><td>120</td><td class="memenuhi">Memenuhi</td></tr>
+        <tr><td>7</td><td>STS101</td><td>STS101-4</td><td>52</td><td>92</td><td>74</td><td>78%</td><td>120</td><td class="tidak">Tidak Memenuhi</td></tr>
 
-        <tr><td>12</td><td>STS201</td><td>STS201-1</td><td>73</td><td>76%</td><td>42</td><td class="tidak">Tidak Memenuhi</td></tr>
-        <tr><td>13</td><td>STS201</td><td>STS201-2</td><td>85</td><td>91%</td><td>42</td><td class="memenuhi">Memenuhi</td></tr>
-        <tr><td>14</td><td>STS201</td><td>STS201-3</td><td>68</td><td>72%</td><td>42</td><td class="tidak">Tidak Memenuhi</td></tr>
-        <tr><td>15</td><td>STS201</td><td>STS201-4</td><td>80</td><td>83%</td><td>42</td><td class="memenuhi">Memenuhi</td></tr>
+        <tr><td>8</td><td>STS102</td><td>STS102-1</td><td>70</td><td>100</td><td>88</td><td>92%</td><td>38</td><td class="memenuhi">Memenuhi</td></tr>
+        <tr><td>9</td><td>STS102</td><td>STS102-2</td><td>48</td><td>85</td><td>67</td><td>65%</td><td>38</td><td class="tidak">Tidak Memenuhi</td></tr>
+        <tr><td>10</td><td>STS102</td><td>STS102-3</td><td>60</td><td>94</td><td>79</td><td>84%</td><td>38</td><td class="memenuhi">Memenuhi</td></tr>
+        <tr><td>11</td><td>STS102</td><td>STS102-4</td><td>63</td><td>96</td><td>82</td><td>87%</td><td>38</td><td class="memenuhi">Memenuhi</td></tr>
 
-        <tr><td>16</td><td>STS202</td><td>STS202-1</td><td>77</td><td>81%</td><td>39</td><td class="memenuhi">Memenuhi</td></tr>
-        <tr><td>17</td><td>STS202</td><td>STS202-2</td><td>70</td><td>74%</td><td>39</td><td class="tidak">Tidak Memenuhi</td></tr>
-        <tr><td>18</td><td>STS202</td><td>STS202-3</td><td>86</td><td>93%</td><td>39</td><td class="memenuhi">Memenuhi</td></tr>
-        <tr><td>19</td><td>STS202</td><td>STS202-4</td><td>75</td><td>79%</td><td>39</td><td class="tidak">Tidak Memenuhi</td></tr>
+        <tr><td>12</td><td>STS201</td><td>STS201-1</td><td>50</td><td>89</td><td>73</td><td>76%</td><td>42</td><td class="tidak">Tidak Memenuhi</td></tr>
+        <tr><td>13</td><td>STS201</td><td>STS201-2</td><td>68</td><td>100</td><td>85</td><td>91%</td><td>42</td><td class="memenuhi">Memenuhi</td></tr>
+        <tr><td>14</td><td>STS201</td><td>STS201-3</td><td>55</td><td>86</td><td>68</td><td>72%</td><td>42</td><td class="tidak">Tidak Memenuhi</td></tr>
+        <tr><td>15</td><td>STS201</td><td>STS201-4</td><td>60</td><td>95</td><td>80</td><td>83%</td><td>42</td><td class="memenuhi">Memenuhi</td></tr>
 
-        <tr><td>20</td><td>STS301</td><td>STS301-1</td><td>83</td><td>89%</td><td>41</td><td class="memenuhi">Memenuhi</td></tr>
-        <tr><td>21</td><td>STS301</td><td>STS301-2</td><td>71</td><td>73%</td><td>41</td><td class="tidak">Tidak Memenuhi</td></tr>
-        <tr><td>22</td><td>STS301</td><td>STS301-3</td><td>87</td><td>94%</td><td>41</td><td class="memenuhi">Memenuhi</td></tr>
-        <tr><td>23</td><td>STS301</td><td>STS301-4</td><td>76</td><td>80%</td><td>41</td><td class="tidak">Tidak Memenuhi</td></tr>
+        <tr><td>16</td><td>STS202</td><td>STS202-1</td><td>58</td><td>93</td><td>77</td><td>81%</td><td>39</td><td class="memenuhi">Memenuhi</td></tr>
+        <tr><td>17</td><td>STS202</td><td>STS202-2</td><td>52</td><td>88</td><td>70</td><td>74%</td><td>39</td><td class="tidak">Tidak Memenuhi</td></tr>
+        <tr><td>18</td><td>STS202</td><td>STS202-3</td><td>67</td><td>100</td><td>86</td><td>93%</td><td>39</td><td class="memenuhi">Memenuhi</td></tr>
+        <tr><td>19</td><td>STS202</td><td>STS202-4</td><td>55</td><td>90</td><td>75</td><td>79%</td><td>39</td><td class="tidak">Tidak Memenuhi</td></tr>
 
-        <tr><td>24</td><td>STS302</td><td>STS302-1</td><td>89</td><td>95%</td><td>37</td><td class="memenuhi">Memenuhi</td></tr>
-        <tr><td>25</td><td>STS302</td><td>STS302-2</td><td>78</td><td>85%</td><td>37</td><td class="memenuhi">Memenuhi</td></tr>
-        <tr><td>26</td><td>STS302</td><td>STS302-3</td><td>66</td><td>68%</td><td>37</td><td class="tidak">Tidak Memenuhi</td></tr>
-        <tr><td>27</td><td>STS302</td><td>STS302-4</td><td>84</td><td>90%</td><td>37</td><td class="memenuhi">Memenuhi</td></tr>
+        <tr><td>20</td><td>STS301</td><td>STS301-1</td><td>65</td><td>97</td><td>83</td><td>89%</td><td>41</td><td class="memenuhi">Memenuhi</td></tr>
+        <tr><td>21</td><td>STS301</td><td>STS301-2</td><td>50</td><td>85</td><td>71</td><td>73%</td><td>41</td><td class="tidak">Tidak Memenuhi</td></tr>
+        <tr><td>22</td><td>STS301</td><td>STS301-3</td><td>70</td><td>100</td><td>87</td><td>94%</td><td>41</td><td class="memenuhi">Memenuhi</td></tr>
+        <tr><td>23</td><td>STS301</td><td>STS301-4</td><td>55</td><td>92</td><td>76</td><td>80%</td><td>41</td><td class="tidak">Tidak Memenuhi</td></tr>
 
-        <tr><td>28</td><td>STS401</td><td>STS401-1</td><td>73</td><td>77%</td><td>36</td><td class="tidak">Tidak Memenuhi</td></tr>
-        <tr><td>29</td><td>STS401</td><td>STS401-2</td><td>82</td><td>88%</td><td>36</td><td class="memenuhi">Memenuhi</td></tr>
-        <tr><td>30</td><td>STS401</td><td>STS401-3</td><td>69</td><td>71%</td><td>36</td><td class="tidak">Tidak Memenuhi</td></tr>
-        <tr><td>31</td><td>STS401</td><td>STS401-4</td><td>85</td><td>92%</td><td>36</td><td class="memenuhi">Memenuhi</td></tr>
+        <tr><td>24</td><td>STS302</td><td>STS302-1</td><td>72</td><td>100</td><td>89</td><td>95%</td><td>37</td><td class="memenuhi">Memenuhi</td></tr>
+        <tr><td>25</td><td>STS302</td><td>STS302-2</td><td>60</td><td>96</td><td>78</td><td>85%</td><td>37</td><td class="memenuhi">Memenuhi</td></tr>
+        <tr><td>26</td><td>STS302</td><td>STS302-3</td><td>45</td><td>82</td><td>66</td><td>68%</td><td>37</td><td class="tidak">Tidak Memenuhi</td></tr>
+        <tr><td>27</td><td>STS302</td><td>STS302-4</td><td>68</td><td>98</td><td>84</td><td>90%</td><td>37</td><td class="memenuhi">Memenuhi</td></tr>
 
-        <tr><td>32</td><td>STS402</td><td>STS402-1</td><td>74</td><td>78%</td><td>35</td><td class="tidak">Tidak Memenuhi</td></tr>
-        <tr><td>33</td><td>STS402</td><td>STS402-2</td><td>88</td><td>93%</td><td>35</td><td class="memenuhi">Memenuhi</td></tr>
-        <tr><td>34</td><td>STS402</td><td>STS402-3</td><td>72</td><td>75%</td><td>35</td><td class="tidak">Tidak Memenuhi</td></tr>
-        <tr><td>35</td><td>STS402</td><td>STS402-4</td><td>90</td><td>96%</td><td>35</td><td class="memenuhi">Memenuhi</td></tr>
+        <tr><td>28</td><td>STS401</td><td>STS401-1</td><td>52</td><td>88</td><td>73</td><td>77%</td><td>36</td><td class="tidak">Tidak Memenuhi</td></tr>
+        <tr><td>29</td><td>STS401</td><td>STS401-2</td><td>65</td><td>97</td><td>82</td><td>88%</td><td>36</td><td class="memenuhi">Memenuhi</td></tr>
+        <tr><td>30</td><td>STS401</td><td>STS401-3</td><td>48</td><td>85</td><td>69</td><td>71%</td><td>36</td><td class="tidak">Tidak Memenuhi</td></tr>
+        <tr><td>31</td><td>STS401</td><td>STS401-4</td><td>70</td><td>100</td><td>85</td><td>92%</td><td>36</td><td class="memenuhi">Memenuhi</td></tr>
+
+        <tr><td>32</td><td>STS402</td><td>STS402-1</td><td>55</td><td>89</td><td>74</td><td>78%</td><td>35</td><td class="tidak">Tidak Memenuhi</td></tr>
+        <tr><td>33</td><td>STS402</td><td>STS402-2</td><td>72</td><td>100</td><td>88</td><td>93%</td><td>35</td><td class="memenuhi">Memenuhi</td></tr>
+        <tr><td>34</td><td>STS402</td><td>STS402-3</td><td>50</td><td>87</td><td>72</td><td>75%</td><td>35</td><td class="tidak">Tidak Memenuhi</td></tr>
+        <tr><td>35</td><td>STS402</td><td>STS402-4</td><td>75</td><td>100</td><td>90</td><td>96%</td><td>35</td><td class="memenuhi">Memenuhi</td></tr>
       </tbody>
     </table>
   </div>
@@ -501,7 +504,7 @@
             <th>Kode</th>
             <th>Nama MK</th>
             <th>Jumlah CPMK</th>
-            <th>Detail</th>
+            <th>Aksi</th>
           </tr>
         </thead>
         <tbody>
@@ -654,16 +657,64 @@
       </tr>
     </table>
 
+    <!-- tabel tren 3 periode -->  
+    <h6><b>Tren Capaian Pembelajaran Mata Kuliah <i>3 Tahun Terakhir</i></b></h6>
+    <div class="table-responsive mb-4">
+      <table class="table table1 table-bordered table-striped table-sm">
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>Indicator</th>
+            <th>2 Year Prior</th>
+            <th>1 Year Prior</th>
+            <th>Selected Year</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>% Mahasiswa Tuntas CPMK 1</td>
+            <td>85%</td>
+            <td>80%</td>
+            <td>92%</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>% Mahasiswa Tuntas CPMK 2</td>
+            <td>78%</td>
+            <td>75%</td>
+            <td>88%</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>% Mahasiswa Tuntas CPMK 3</td>
+            <td>90%</td>
+            <td>82%</td>
+            <td>85%</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>% Mahasiswa Tuntas CPMK 4</td>
+            <td>88%</td>
+            <td>86%</td>
+            <td>90%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+
     <!-- Grafik Rentang Nilai -->
-    <h6><b>Distribusi Nilai <i> by Range</i> </b></h6>
-    <canvas id="stackedCPMKChart" height="100" class="mb-4"></canvas>
+    <h6><b>Distribusi Nilai Mahasiswa <i>Berdasarkan Rentang Nilai</i> </b></h6>
+    <canvas id="stackedCPMKChart" height="70" class="mb-4"></canvas>
 
     <!-- Tabel Perbandingan kelas-->
-    <h6><b>Perbandingan Capaian Antar Kelas</b></h6>
+    <h6><b>Perbandingan Capaian Pembelajaran <i>Antar Kelas</i></b> </h6>
     <div class="table-responsive">
       <table class="table table-bordered table-sm table-striped">
         <thead class="thead-light">
           <tr class="text-center">
+            <th rowspan="2">Aksi</th>
             <th rowspan="2">No</th>
             <th rowspan="2">Kelas</th>
             <th colspan="2">CPMK 1</th>
@@ -686,6 +737,9 @@
 
         <tbody class="text-center">
           <tr>
+            <td>
+              <a href="detail.php" class="btn btn-sm btn-outline-info">📄</a>
+            </td>
             <td>1</td>
             <td>A</td>
             <td>78</td>
@@ -700,6 +754,9 @@
           </tr>
 
           <tr>
+            <td>
+              <a href="detail.php" class="btn btn-sm btn-outline-info">📄</a>
+            </td>
             <td>2</td>
             <td>B</td>
             <td>74</td>
@@ -711,9 +768,13 @@
             <td>76</td>
             <td>79%</td>
             <td>38</td>
+            
           </tr>
 
           <tr>
+            <td>
+              <a href="detail.php" class="btn btn-sm btn-outline-info">📄</a>
+            </td>
             <td>3</td>
             <td>C</td>
             <td>81</td>
@@ -730,7 +791,7 @@
           <!-- Baris Kesimpulan Final -->
           <!-- <tr class="table-info font-weight-bold"> -->
             <tr class="table-info ">
-              <td colspan="2">Agregasi Semua Kelas</td>
+              <td colspan="3">Agregasi Semua Kelas</td>
               <td>78</td>
               <td>84%</td>
               <td>77</td>
@@ -790,58 +851,7 @@
 
 
 
-<!-- ========== CARD 4: histogram tren 3 eriode ========== -->  
-<div class="card">
-  <div class="card-header">
-    <h5 class="card-title mb-0"> Tren capaian  MK 3 Periode</h5>
-    <div class="card-tools">
-      <small class="text-muted"></small>
-    </div>
-  </div>
-  <div class="card-body">
-    <table class="table table1 table-bordered table-striped table-sm datatables1">
-      <thead>
-        <tr>
-          <th>No</th>
-          <th>Indikator</th>
-          <th>2 Tahun lalu</th>
-          <th>Tahun lalu</th>
-          <th>Tahun ini</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>1</td>
-          <td>% Tuntas CPMK 1</td>
-          <td>85%</td>
-          <td>80%</td>
-          <td>92%</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>% Tuntas CPMK 2</td>
-          <td>78%</td>
-          <td>75%</td>
-          <td>88%</td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>% Tuntas CPMK 3</td>
-          <td>90%</td>
-          <td>82%</td>
-          <td>85%</td>
-        </tr>
-        <tr>
-          <td>4</td>
-          <td>% Tuntas CPMK 4</td>
-          <td>88%</td>
-          <td>86%</td>
-          <td>90%</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</div>
+
 
 <!-- ========== CARD : Table Daftar Mata Kuliah ========== -->
         <!-- <div class="card">
@@ -1025,14 +1035,68 @@
           </div>
         </div> -->
 
+        <!-- ========== CARD :  Grafik Radar CPL-IK-CPMK ========== --> 
+<style>
+  .chart-box {
+  position: relative;
+  width: 100%;
+}
+
+.radar-box {
+  height: 400px;   /* Radar lebih besar */
+}
+
+
+/*canvas {
+  width: 100% !important;
+  height: 100% !important;
+}*/
+
+</style>
+<!-- <div class="card">
+  <div class="card-header">
+    <h5 class="card-title mb-0">Mapping Semester Terpilih</h5>
+  </div>
+  <div class="row p-3">
+
+    <div class="col-lg-7 ">
+      <div class="chart-box radar-box">
+        <canvas id="radarCPL"></canvas>
+      </div>
+    </div>
+
+
+    <div class="col-lg-5 d-flex flex-column ">
+
+      <div class="d-flex flex-column flex-grow-1">
+        <div class="flex-grow-1 mb-2">
+          <canvas id="chartIK" style="height: 190px;" height="70"></canvas>
+        </div>
+      </div>
+
+
+
+      <div class="d-flex flex-column flex-grow-1">
+        <div class="flex-grow-1 mb-2 ">
+          <canvas id="chartCPMKRight" style="height: 190px;" height="70"></canvas>
+        </div>
+      </div>
+
+
+
+    </div>
+  </div>
+</div> -->
+
+
 <!-- ========== CARD 4: Chart CPL-IK ========== -->     
-        <!-- <div class="card">   
+ <!--        <div class="card">   
           <div class="card-header ">         
             <h5 class="card-title mb-0">
               <button class="btn btn-sm btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#chartCPLIK1">
                 <i class="fas fa-expand"></i>
               </button>
-              IK 1 - deskripsi IK nya <small><i>Interpretasi:</i> garis merah adalah batas standar CPMK</small>
+              CPL 1 - deskripsi CPL nya 
             </h5>
           </div>
           <div class="card-body " id="chartCPLIK1">
@@ -1043,7 +1107,7 @@
           </div> 
           <div class="card-footer collapse" id="chartCPLIK1">
             
-            <h6 class="font-weight-bold">Daftar CPMK</h6>
+            <h6 class="font-weight-bold">Daftar IK</h6>
             <div class="table-responsive">
               <table class="table table-sm table-bordered">
                 <thead class="thead-dark">
@@ -1057,19 +1121,19 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td>UKU100-1</td>
+                    <td>IK-1</td>
                     <td>Mahasiswa mampu menyampaikan informasi secara lisan secara runtut, jelas, dan mudah dipahami.</td>
                     <td>82</td>
                     <td>90%</td>
                   </tr>
                   <tr>
-                    <td>UKU900-5</td>
+                    <td>IK-5</td>
                     <td>Mahasiswa mampu menulis laporan/tulisan akademik sesuai kaidah bahasa dan struktur penulisan yang baik.</td>
                      <td>75</td>
                     <td>80%</td>
                   </tr>
                   <tr>
-                    <td>IK 2</td>
+                    <td>CPL 1</td>
                     <td>
                       <a href="monev-cpl-individual2.php" target="_blank" class="btn btn-outline-info">
                         Lihat Monev CPL Individual
@@ -1227,6 +1291,14 @@
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
+        <p>
+          sebaran angkatan yang menambil MK di semester ini. sebarang mahasiswa angkata yang menempuh semester nii dengan mengambil mata kuliah atau ada di kelas perkuliahan semester ini.
+angkatan | jml mahasiswa |
+2020  | 30
+2021  | 59
+2022  | 120
+
+        </p>
         <p>
           Menampilkan untuk monitoring CPMK pada tiap mata kuliah, dalam satu semester. membandingkan antar tahun akademik. Sehingga mencirikan CQI pembelajaran mata kuliah
         </p>     
@@ -1607,7 +1679,7 @@ new Chart(ctxKetuntasan, {
         labels: ketuntasanLabels,
         datasets: [
             {
-                label: "% Mahasiswa Tuntas",
+                label: "Mahasiswa Tuntas (%)",
                 data: ketuntasanValues,
                 backgroundColor: "rgba(255, 99, 132, 0.7)",
                 borderColor: "rgb(255, 99, 132)",
@@ -1643,7 +1715,7 @@ new Chart(ctxKetuntasan, {
                 beginAtZero: true,
                 max: 100,
                 title: {
-                    display: true,
+                    display: false,
                     text: "Persentase (%)"
                 }
             }
@@ -1840,6 +1912,175 @@ new Chart(ctx2, {
   new Chart(ctx3, config);
 </script>
 
+<script>
+// ----- Radar CPL -----
+  const radarCtx = document.getElementById('radarCPL').getContext('2d');
+  const radarCPL = new Chart(radarCtx, {
+    type: 'radar',
+    data: {
+      labels: ['CPL 1', 'CPL 2', 'CPL 3', 'CPL 4', 'CPL 5', 'CPL 6', 'CPL 7', 'CPL 8', 'CPL 9', 'CPL 10', 'CPL 11'],
+      datasets: [{
+        label: 'Capaian CPL',
+        data: [80, 90, 75, 85, 88,65, 67, 70, 55, 30, 23],
+            // Warna hijau lembut (lebih nyaman di mata)
+        backgroundColor: 'rgba(80, 200, 120, 0.35)',
+        borderColor: 'rgba(60, 160, 95, 0.9)',
+        borderWidth: 2,
+        pointBackgroundColor: 'rgba(60, 160, 95, 1)'
+      }]
+    },
+    options: {
+      responsive: true,
+    maintainAspectRatio: false,
+      scales: {
+        r: {
+          min: 0,
+          max: 100,
+          ticks: { stepSize: 10 }
+        }
+      }
+    }
+  });
+
+    // ----- Progress CPL Keseluruhan -----
+    const progressCtx = document.getElementById('progressCPL').getContext('2d');
+    const progressCPL = new Chart(progressCtx, {
+        type: 'bar',
+        data: {
+            labels: ['CPL A', 'CPL B', 'CPL C'],
+            datasets: [{
+                label: 'Progress %',
+                data: [74, 78, 82],
+                backgroundColor: ['#007bff','#28a745','#ffc107']
+            }]
+        },
+        options: {
+            indexAxis: 'y',
+            responsive: true,
+    maintainAspectRatio: false,
+            scales: {
+                x: { max: 100, ticks: { callback: function(val){ return val + '%'; } } }
+            },
+            plugins: {
+                legend: { display: false }
+            }
+        }
+    });
+
+    // ----- Grafik Batang CPMK Top 10 -----
+    const barCtx = document.getElementById('barCPMK').getContext('2d');
+    const barCPMK = new Chart(barCtx, {
+        type: 'bar',
+        data: {
+            labels: ['CPMK1','CPMK2','CPMK3','CPMK4','CPMK5','CPMK6','CPMK7','CPMK8','CPMK9','CPMK10'],
+            datasets: [{
+                label: 'Capaian %',
+                data: [62, 65, 67, 68, 70, 72, 74, 75, 77, 78],
+                backgroundColor: 'rgba(255, 99, 132, 0.7)'
+            }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          scales: {
+            y: { beginAtZero: true, max: 100, ticks: { callback: function(val){ return val + '%'; } } }
+          }
+        }
+    });
+</script>
+<script>
+// -------------------------------------------------
+// 1) GENERATOR DATA DUMMY SECARA OTOMATIS
+// -------------------------------------------------
+
+// 11 CPL
+const cplLabels = Array.from({length: 11}, (_, i) => `CPL-${String(i+1).padStart(2,'0')}`);
+const cplAverages = cplLabels.map(() => randomScore());
+
+// 24 IK
+const ikLabels = Array.from({length: 24}, (_, i) => `IK-${String(i+1).padStart(2,'0')}`);
+const ikAverages = ikLabels.map(() => randomScore());
+
+// 258 CPMK  (format: STKxxx-n)
+const cpmkLabels2 = Array.from({length: 258}, (_, i) => {
+    const mkCode = `STK${String(500 + Math.floor(i/5)).padStart(3,'0')}`;
+    const num = (i % 5) + 1;
+    return `${mkCode}-${num}`;
+});
+const cpmkAverages2 = cpmkLabels2.map(() => randomScore());
+
+// 78 MK
+const mkLabels2 = Array.from({length: 78}, (_, i) => `STK${String(600 + i).padStart(3,'0')}`);
+const mkAverages2 = mkLabels2.map(() => randomScore());
+
+// -------------------------------------------------
+// 2) FUNCTION RANDOM SCORE
+// -------------------------------------------------
+function randomScore() {
+    return Number((0 + Math.random()*100).toFixed(2)); // rentang 0–100
+}
+
+// -------------------------------------------------
+// 3) FUNGSI GENERATOR BARCHART UMUM
+// -------------------------------------------------
+
+function generateBarChart(canvasId, labels, data, labelName, color) {
+    const ctz = document.getElementById(canvasId).getContext("2d");
+    new Chart(ctz, {
+        type: "bar",
+        data: {
+            labels: labels,
+            datasets: [{
+                label: labelName,
+                data: data,
+                backgroundColor: color.bg,
+                borderColor: color.border,
+                borderWidth: 2
+            }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          scales: {
+            x: {
+              ticks: {
+                display: false   // ⬅️ MATIKAN LABEL BAWAH
+              },
+              grid: {
+                display: false   // (opsional) hilangkan garis grid vertikal
+              }
+            },
+            y: {
+              beginAtZero: true,
+              max: 100
+            }
+          }
+        }
+
+    });
+}
+
+// -------------------------------------------------
+// 4) GENERATE 4 BARCHART
+// -------------------------------------------------
+
+
+
+generateBarChart("chartIK", ikLabels, ikAverages, "Capaian IK", {
+    bg: "rgba(255, 159, 64, 0.7)",
+    border: "rgb(255, 159, 64)"
+});
+
+generateBarChart("chartCPMKRight", cpmkLabels2, cpmkAverages2, "Capaian CPMK", {
+    bg: "rgba(255, 99, 132, 0.7)",
+    border: "rgb(255, 99, 132)"
+});
+
+generateBarChart("chartMK", mkLabels, mkAverages, "Capaian MK", {
+    bg: "rgba(54, 162, 235, 0.7)", border: "rgb(54, 162, 235)"     // biru
+});
+
+</script>
 <?php include('5script.php'); ?>
 
 

@@ -105,7 +105,7 @@
 
   <!-- TAB NAV  -->
   <ul class="nav nav-tabs">   
-    <li class="nav-item" onclick="window.location='monev-cpl-individual.php'"><a class="nav-link ">Grafik</a></li>
+    <li class="nav-item" onclick="window.location='monev-cpl-individual1.php'"><a class="nav-link ">Grafik</a></li>
     <li class="nav-item" onclick="window.location='monev-cpl-individual2.php'"><a class="nav-link ">Tabel</a></li>
     <li class="nav-item" onclick="window.location='monev-cpl-individual3.php'"><a class="nav-link active">Riwayat</a></li>
   </ul>

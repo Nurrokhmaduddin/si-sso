@@ -41,107 +41,27 @@
       <div class="row">
         <div class="col-md-12">
           <!-- ========== CARD : Filter & Export ========== -->
-          <div class="card">
+          <div class="card card-outline card-info">
             <div class="card-body ">
               <div class="row">
-navigasi monev semester, turun ke CPMK atau MK, baru turun detail ke per kelas
+
                 <div class="col-md-6">
-                <b>Kurikulum:</b> 2023 &nbsp;
-              </div>                
-              <div class="col-md-6">
-                <b>Set Pemetaan:</b> KT-6 (K20) Kurikulum 2025 full stage &nbsp;
-              </div>
-              <div class="col-md-6">
-                <b>Tahun Akademik:</b> 2024/2025 &nbsp;
-              </div> 
-              <div class="col-md-6">
-                <b>Semester Akademik:</b> Gasal  &nbsp;
-              </div> 
+                  <b>Kurikulum:</b> 2023 &nbsp;
+                </div>    
                 <div class="col-md-6">
                   <b>Mata Kuliah:</b> Semua  &nbsp;
-                </div>
-                1️⃣ Monitoring Operasional Semester
-
-Perlu sampai CPL atau cukup CPMK?
-
-Untuk monitoring operasional semester:
-
-✔ Fokus utama cukup sampai CPMK.
-
-Kenapa?
-
-Karena semester itu level implementasi:
-
-Dosen mengajar
-
-Kelas berjalan
-
-Instrumen dipakai
-
-Penilaian dilakukan
-
-Unit kendali dosen adalah:
-
-Aktivitas pembelajaran
-
-Penilaian CPMK
-
-Hasil kelas
-
-CPL adalah agregasi lintas MK dan lintas semester.
-Jika dipaksakan tampil penuh di semester view, akan muncul:
-
-CPL terlihat “kosong”
-
-CPL tampak rendah
-
-Interpretasi keliru karena belum semua MK kontribusi
-
-Rekomendasi Desain
-📘 Semester View (Operasional)
-
-Tampilkan:
-
-Capaian CPMK per kelas
-
-Distribusi nilai per kelas
-
-Evaluasi kelas
-
-Konsistensi antar kelas
-
-Evaluasi MK (agregasi semua kelas dalam semester itu)
-
-CPL boleh ditampilkan, tetapi:
-
-Sebagai indikasi parsial
-
-Diberi label “kontribusi sementara”
-
-2️⃣ Evaluasi MK Cocok di Semester atau Tahun Akademik?
-
-Jawabannya:
-
-✔ Evaluasi MK operasional → Semester view
-✔ Evaluasi MK struktural → Tahun akademik view
-
-Bedanya:
-
-Semester:
-
-Apakah kelas berjalan baik?
-
-Apakah ada perbedaan antar dosen?
-
-Tahun akademik:
-
-Apakah MK konsisten sepanjang tahun?
-
-Apakah CPMK stabil antar semester?
-
-Apakah ada masalah sistemik?
-
-Jadi evaluasi MK bisa muncul di dua view, tapi konteksnya berbeda.
+                </div>            
+                <!-- <div class="col-md-6">
+                  <b>Set Pemetaan:</b> KT-6 (K20) Kurikulum 2025 full stage &nbsp;
+                </div> -->
+                <div class="col-md-6">
+                  <b>Tahun Akademik:</b> 2024/2025 &nbsp;
+                </div> 
+                <div class="col-md-6">
+                  <b>Semester Akademik:</b> Gasal  &nbsp;
+                </div> 
+                
+                
               </div>
             </div>
             <div class="card-footer">
@@ -208,39 +128,7 @@ Jadi evaluasi MK bisa muncul di dua view, tapi konteksnya berbeda.
             </div>
           </div>
         </div>
-Buat Apa Membaca Konsistensi Antar Dosen (Antar Kelas)?
 
-Ini bukan untuk “mengadili dosen”.
-Ini untuk menjaga keadilan dan validitas sistem.
-
-Bayangkan:
-
-MK Algoritma – CPMK 1
-
-Kelas A → 88% tercapai
-
-Kelas B → 64% tercapai
-
-Pertanyaannya:
-
-Apakah kualitas pengajaran beda jauh?
-
-Apakah instrumen berbeda?
-
-Apakah standar koreksi tidak sama?
-
-Kalau gap terlalu besar, berarti:
-
-👉 Sistem belum terkendali
-👉 Assessment belum terkalibrasi
-
-Dalam OBE, outcome harus konsisten terlepas dari siapa dosennya.
-
-Kalau tidak, maka:
-
-CPL tidak mencerminkan sistem, tapi mencerminkan individu.
-
-Itu bahaya untuk mutu jangka panjang.
 <!-- ========== CARD 4: Stacked Bar Chart — Proporsi ========== -->
         <div class="card">
           <div class="card-header">
@@ -1339,7 +1227,126 @@ Itu bahaya untuk mutu jangka panjang.
       <div class="modal-body">
         <p>
           Halaman ini menampilkan rekapitulasi satu set pemetaan OBE yang telah dirancang, menyoroti kelengkapan pemetaan (mapping completeness) untuk memeriksa apakah CPL, IK, CPMK, dan MK telah terhubung secara lengkap, sekaligus keserataan beban pemetaan (mapping balance) untuk menilai distribusi dukungan dan mengidentifikasi gap antara elemen terkuat dan terlemah di tiap level.
-        </p>        
+        </p>      
+        <p>
+          1️⃣ Monitoring Operasional Semester
+
+Perlu sampai CPL atau cukup CPMK?
+
+Untuk monitoring operasional semester:
+
+✔ Fokus utama cukup sampai CPMK.
+
+Kenapa?
+
+Karena semester itu level implementasi:
+
+Dosen mengajar
+
+Kelas berjalan
+
+Instrumen dipakai
+
+Penilaian dilakukan
+
+Unit kendali dosen adalah:
+
+Aktivitas pembelajaran
+
+Penilaian CPMK
+
+Hasil kelas
+
+CPL adalah agregasi lintas MK dan lintas semester.
+Jika dipaksakan tampil penuh di semester view, akan muncul:
+
+CPL terlihat “kosong”
+
+CPL tampak rendah
+
+Interpretasi keliru karena belum semua MK kontribusi
+
+Rekomendasi Desain
+📘 Semester View (Operasional)
+
+Tampilkan:
+
+Capaian CPMK per kelas
+
+Distribusi nilai per kelas
+
+Evaluasi kelas
+
+Konsistensi antar kelas
+
+Evaluasi MK (agregasi semua kelas dalam semester itu)
+
+CPL boleh ditampilkan, tetapi:
+
+Sebagai indikasi parsial
+
+Diberi label “kontribusi sementara”
+
+2️⃣ Evaluasi MK Cocok di Semester atau Tahun Akademik?
+
+Jawabannya:
+
+✔ Evaluasi MK operasional → Semester view
+✔ Evaluasi MK struktural → Tahun akademik view
+
+Bedanya:
+
+Semester:
+
+Apakah kelas berjalan baik?
+
+Apakah ada perbedaan antar dosen?
+
+Tahun akademik:
+
+Apakah MK konsisten sepanjang tahun?
+
+Apakah CPMK stabil antar semester?
+
+Apakah ada masalah sistemik?
+
+Jadi evaluasi MK bisa muncul di dua view, tapi konteksnya berbeda.
+        </p>  
+        <p>
+          Buat Apa Membaca Konsistensi Antar Dosen (Antar Kelas)?
+
+Ini bukan untuk “mengadili dosen”.
+Ini untuk menjaga keadilan dan validitas sistem.
+
+Bayangkan:
+
+MK Algoritma – CPMK 1
+
+Kelas A → 88% tercapai
+
+Kelas B → 64% tercapai
+
+Pertanyaannya:
+
+Apakah kualitas pengajaran beda jauh?
+
+Apakah instrumen berbeda?
+
+Apakah standar koreksi tidak sama?
+
+Kalau gap terlalu besar, berarti:
+
+👉 Sistem belum terkendali
+👉 Assessment belum terkalibrasi
+
+Dalam OBE, outcome harus konsisten terlepas dari siapa dosennya.
+
+Kalau tidak, maka:
+
+CPL tidak mencerminkan sistem, tapi mencerminkan individu.
+
+Itu bahaya untuk mutu jangka panjang.
+        </p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>

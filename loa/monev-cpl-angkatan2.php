@@ -24,22 +24,22 @@
       <div class="row">
         <div class="col-md-12">
           <!-- ========== CARD : Filter & Identitas ========== -->
-          <div class="card">
+          <div class="card card-outline card-info">
             <!-- <div class="card-header">
               <h5 class="card-title mb-0"><i class="fas fa-filter "></i> Judul Tabel yang terdampak tombol aksi ini </h5>              
             </div> -->
             <div class="card-body ">
               <div class="row">
-<div class="col-md-6">
+                <div class="col-md-6">
                   <b>Kurikulum:</b> 2023 &nbsp;
                 </div>                
                 <div class="col-md-6">
-                <b>Set Pemetaan:</b> KT-6 (K20) Kurikulum 2025 full stage &nbsp;
-              </div>
-              
-              <div class="col-md-6">
-                <b>Angkatan :</b> 2024 
-              </div>
+                  <b>Set Pemetaan:</b> KT-6 (K20) Kurikulum 2025 full stage &nbsp;
+                </div>
+
+                <div class="col-md-6">
+                  <b>Angkatan :</b> 2024 
+                </div>
               <!-- <div class="col-md-6">
                 <b>Status Mahasiswa:</b> Semua
               </div> -->
@@ -63,7 +63,18 @@
           </div>
 
         
-      
+     <button type="button" class="btn btn-sm btn-outline-info" onclick="window.location='detail-cpl.html'"><i class="fas fa-info-circle"></i></button>
+
+
+Jenis chart:
+
+Line Chart → Tren Semester
+
+Bar Chart → Perbandingan Kelas
+
+Radar Chart → Profil Lulusan
+
+Heatmap → CPL vs Semester 
   <!-- ========== CARD 3: KPI row ========== --> 
   <style>
     body { background: #f4f6f9; }
@@ -118,6 +129,54 @@
           </div>
         </div>
 
+        <!-- ========== CARD : Rekap per Angkatan ========== -->
+          <div class="card mt-3">
+            <div class="card-header">
+              <h3 class="card-title">Rekap Status Mahasiswa per Angkatan</h3>
+            </div>
+            <div class="card-body table-responsive">
+              <table class="table table-bordered table-hover">
+                <thead class="thead-light">
+                  <tr>
+                    <th>Angkatan</th>
+                    <th>Total</th>
+                    <th>Aktif</th>
+                    <th>Cuti</th>
+                    <th>Lulus</th>
+                    <th>Non-Aktif</th>
+                    <th>Skripsi</th>
+                    <th>MBKM</th>
+                    <th>Progres CPL</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>2021</td>
+                    <td>300</td>
+                    <td>240</td>
+                    <td>18</td>
+                    <td>20</td>
+                    <td>12</td>
+                    <td>8</td>
+                    <td>5</td>
+                    <td>72%</td>
+                  </tr>
+                  <tr>
+                    <td>2020</td>
+                    <td>280</td>
+                    <td>210</td>
+                    <td>22</td>
+                    <td>30</td>
+                    <td>18</td>
+                    <td>10</td>
+                    <td>7</td>
+                    <td>79%</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          
         <!-- ========== CARD : Tabel pemerataan target CPL ========== -->
         <div class="card">
   <div class="card-body">
@@ -256,7 +315,128 @@
             </table>
           </div>
         </div>
+<!-- ========== CARD : tabel tren antar angkatan ========== -->  
+<div class="card">
+  <div class="card-header">
+    <h5 class="card-title mb-0">Histogram Perbandingan CPL 3 Angkatan (2021–2023)</h5>
+  </div>
+  <div class="card-body">
+    <div class="table-responsive">
+      <table class="table table-bordered table-striped table-sm text-center">
+        <thead class="table-light">
+          <tr>
+            <th>No</th>
+            <th>Semester Tempuh</th>
+            <th>% CPL Angkatan 2021</th>
+            <th>% CPL Angkatan 2022</th>
+            <th>% CPL Angkatan 2023</th>
+            <th>Perkembangan Tren</th>
+            <th>Aksi</th>
+          </tr>
+        </thead>
+        <tbody>
 
+          <tr>
+            <td>1</td>
+            <td>Semester 1</td>
+            <td>68</td>
+            <td>72</td>
+            <td>75</td>
+            <td><span class="badge bg-success">Menaik</span></td>
+            <td>
+              <a href="detail.php" class="btn btn-sm btn-outline-info">Detail</a>
+            </td>
+          </tr>
+
+          <tr>
+            <td>2</td>
+            <td>Semester 2</td>
+            <td>70</td>
+            <td>69</td>
+            <td>71</td>
+            <td><span class="badge bg-warning text-dark">Fluktuatif</span></td>
+            <td>
+              <a href="detail.php" class="btn btn-sm btn-outline-info">Detail</a>
+            </td>
+          </tr>
+
+          <tr>
+            <td>3</td>
+            <td>Semester 3</td>
+            <td>74</td>
+            <td>76</td>
+            <td>80</td>
+            <td><span class="badge bg-success">Menaik</span></td>
+            <td>
+              <a href="detail.php" class="btn btn-sm btn-outline-info">Detail</a>
+            </td>
+          </tr>
+
+          <tr>
+            <td>4</td>
+            <td>Semester 4</td>
+            <td>78</td>
+            <td>75</td>
+            <td>75</td>
+            <td><span class="badge bg-secondary">Stagnan</span></td>
+            <td>
+              <a href="detail.php" class="btn btn-sm btn-outline-info">Detail</a>
+            </td>
+          </tr>
+
+          <tr>
+            <td>5</td>
+            <td>Semester 5</td>
+            <td>80</td>
+            <td>82</td>
+            <td>79</td>
+            <td><span class="badge bg-warning text-dark">Fluktuatif</span></td>
+            <td>
+              <a href="detail.php" class="btn btn-sm btn-outline-info">Detail</a>
+            </td>
+          </tr>
+
+          <tr>
+            <td>6</td>
+            <td>Semester 6</td>
+            <td>83</td>
+            <td>85</td>
+            <td>88</td>
+            <td><span class="badge bg-success">Menaik</span></td>
+            <td>
+              <a href="detail.php" class="btn btn-sm btn-outline-info">Detail</a>
+            </td>
+          </tr>
+
+          <tr>
+            <td>7</td>
+            <td>Semester 7</td>
+            <td>85</td>
+            <td>82</td>
+            <td>78</td>
+            <td><span class="badge bg-danger">Menurun</span></td>
+            <td>
+              <a href="detail.php" class="btn btn-sm btn-outline-info">Detail</a>
+            </td>
+          </tr>
+
+          <tr>
+            <td>8</td>
+            <td>Semester 8</td>
+            <td>87</td>
+            <td>89</td>
+            <td>90</td>
+            <td><span class="badge bg-success">Menaik</span></td>
+            <td>
+              <a href="detail.php" class="btn btn-sm btn-outline-info">Detail</a>
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
 
 <!-- ========== CARD 4: Chart CPL-IK ========== -->     
         <div class="card">   
@@ -398,6 +578,9 @@
         <p>
           Ringkasan capaian CPL per Kelompok Mahasiswa, perkembangan, peringatan dini (EWS), disajikan dalam bentuk grafik dan tabel (Mockup data statis)
         </p> 
+        <p>
+          halama inin untuk menjaslakn/memberikan informasi ringkasan, deteksi, dan investigasi atas proses kurikulum berlangsung, pada suatu angkatan mahasiswa. unit ukur analisis adalah para mahasiswa dalam satu angkatan masuk yang sama.
+        </p>
         <p>
            snapshot CPL by angkatan masuk(cohort) adalah gambaran capaian CPL suatu angkatan mahasiswa yang masuk pada tahun yang sama dan dianalisis sebagi suatu kelompok homogen yang mengalami kurikulum serta konteks sistem yang relati  sama; tujuannya adalah mengevaluasi efektivitas kurikulum dan stbilitas mutu antar angkatan, sehingga informasi yang perlu disajikan meliputi jumlah mahasiswa dalam cohort total dan yan g sudah lulus), rerata dan distribusi tiap CPL,persentasi ketuntasan CPL, progres studi (misalnya % tepat waktu), serta jika perlu perbandingan dengan cohort sebelumnya dalam kurikulum yang sama.singkatnya, snapshop cohort menjaawab "apakah kurikulum efektif bagi satu angkatan?"
            untuk evaluasi perkembangan mahasiswa

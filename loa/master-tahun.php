@@ -96,16 +96,16 @@
                 <thead class="text-uppercase text-center">
                   <tr>
                     <th width="5%">No</th>
-                    <th>Kode</th>
                     <th>Tahun Akademik</th>
+                    <th>Tahun Masuk Mahasiswa (Angkatan)</th>
                     <th width="15%">Aksi</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <td class="text-center">1</td>
-                    <td class="text-center">2020</td>
                     <td class="text-center">2020/2021</td>
+                    <td class="text-center">2020</td>
                     <td class="text-center">
                       <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalEditTahun">
                         <i class="fas fa-edit"></i>
@@ -118,8 +118,8 @@
 
                   <tr>
                     <td class="text-center">2</td>
-                    <td class="text-center">2021</td>
                     <td class="text-center">2021/2022</td>
+                    <td class="text-center">2021</td>
                     <td class="text-center">
                       <button class="btn btn-sm btn-outline-primary">
                         <i class="fas fa-edit"></i>
@@ -132,8 +132,8 @@
 
                   <tr>
                     <td class="text-center">3</td>
-                    <td class="text-center">2022</td>
                     <td class="text-center">2022/2023</td>
+                    <td class="text-center">2022</td>
                     <td class="text-center">
                       <button class="btn btn-sm btn-outline-primary">
                         <i class="fas fa-edit"></i>
@@ -146,8 +146,8 @@
 
                   <tr>
                     <td class="text-center">4</td>
-                    <td class="text-center">2023</td>
                     <td class="text-center">2023/2024</td>
+                    <td class="text-center">2023</td>
                     <td class="text-center">
                       <button class="btn btn-sm btn-outline-primary">
                         <i class="fas fa-edit"></i>
@@ -160,8 +160,8 @@
 
                   <tr>
                     <td class="text-center">5</td>
-                    <td class="text-center">2024</td>
                     <td class="text-center">2024/2025</td>
+                    <td class="text-center">2024</td>
                     <td class="text-center">
                       <button class="btn btn-sm btn-outline-primary">
                         <i class="fas fa-edit"></i>
@@ -174,8 +174,8 @@
 
                   <tr>
                     <td class="text-center">6</td>
-                    <td class="text-center">2025</td>
                     <td class="text-center">2025/2026</td>
+                    <td class="text-center">2025</td>
                     <td class="text-center">
                       <button class="btn btn-sm btn-outline-primary">
                         <i class="fas fa-edit"></i>

@@ -24,7 +24,7 @@
       <div class="row">
         <div class="col-md-12">
           <!-- ========== CARD : Filter & Export ========== -->
-          <div class="card">
+          <div class="card card-outline card-info">
            
             <div class="card-body ">
               <div class="row">
@@ -103,118 +103,227 @@
             </div>
           </div>
         </div>
-             
-jumlah mahasiswa, distribusi angkatan,<hr>
-1️⃣ CPL by Batch Yudisium
-Bagaimana Menyajikan Distribusi Per Angkatan Masuk?
 
-Karena batch yudisium campuran angkatan, maka komposisinya harus transparan.
+             <!-- ========== CARD : Distribusi Angkatan ========== -->
+ <div class="card">
+  <div class="card-header">
+            <h5 class="card-title mb-0"><i class="fas fa-chart-bar me-2"></i>Distribusi Angkatan Mahasiswa</h5>
+            <div class="card-tools">
+              <small class="text-muted">Batch Yudisium Terpilih</small>
+            </div>
+          </div>
+          <div class="card-body">
 
-Misalnya:
+<table class="table table-bordered table-striped table-sm">
+  <thead class="text-center">
+    <tr>
+      <th>No</th>
+      <th>Angkatan Masuk</th>
+      <th>Jumlah Lulusan</th>
+      <th>Persentase (%)</th>
+      <th>Kategori Ketepatan Studi</th>
+    </tr>
+  </thead>
+  <tbody class="text-center">
+    <tr>
+      <td>1</td>
+      <td>2020</td>
+      <td>50</td>
+      <td>62%</td>
+      <td><span class="badge bg-success">Tepat Waktu</span></td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>2021</td>
+      <td>20</td>
+      <td>25%</td>
+      <td><span class="badge bg-info text-dark">Lebih Cepat</span></td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>2019</td>
+      <td>10</td>
+      <td>13%</td>
+      <td><span class="badge bg-warning text-dark">Terlambat</span></td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td colspan="5">
+        <strong>Total Lulusan: 80 Mahasiswa.</strong><br>
+        Cara membaca tabel: Kolom "Angkatan Masuk" menunjukkan tahun awal studi mahasiswa.
+        Kolom "Persentase" menunjukkan proporsi dari total 80 lulusan pada Batch Yudisium Juli 2026.
+        Angkatan 2020 (62%) mendominasi, yang mengindikasikan mayoritas lulusan menyelesaikan studi tepat waktu.
+        Persentase dari angkatan 2019 (13%) menunjukkan terdapat sebagian lulusan yang menyelesaikan studi lebih dari waktu normal.
+      </td>
+    </tr>
+  </tfoot>
+</table>
+</div>
+</div>
+<!-- ========== CARD : Proporsi Mahasiswa ========== -->
+ <div class="card">
+          <div class="card-body">
+    <h6><b>Proporsi Mahasiswa dengan Remedial Tinggi</b></h6>
+<table class="table table-bordered table-striped table-sm">
+  <thead class=" text-center">
+    <tr>
+      <th>No</th>
+      <th>Kategori Remedial</th>
+      <th>Jumlah Mahasiswa</th>
+      <th>Persentase (%)</th>
+      <th>Keterangan Akademik</th>
+    </tr>
+  </thead>
+  <tbody class="text-center">
+    <tr>
+      <td>1</td>
+      <td>Tidak Pernah Remedial</td>
+      <td>40</td>
+      <td>50%</td>
+      <td><span class="badge bg-success">Stabil / Kuat Akademik</span></td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Remedial Ringan (1–2 MK)</td>
+      <td>25</td>
+      <td>31%</td>
+      <td><span class="badge bg-info text-dark">Perlu Penyesuaian</span></td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Remedial Tinggi (≥ 3 MK)</td>
+      <td>15</td>
+      <td>19%</td>
+      <td><span class="badge bg-warning text-dark">Perlu Perhatian</span></td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td colspan="5">
+        <strong>Total Lulusan: 80 Mahasiswa.</strong><br>
+        Definisi operasional: Remedial tinggi didefinisikan sebagai mahasiswa yang pernah mengulang ≥ 3 Mata Kuliah 
+        atau lebih dari 20% MK selama masa studi.<br>
+        Cara membaca tabel: Kolom "Persentase" menunjukkan proporsi dari total 80 lulusan pada Batch Juli 2026.
+        Sebanyak 50% lulusan tidak pernah remedial (menunjukkan performa akademik stabil),
+        sementara 19% termasuk kategori remedial tinggi, yang dapat menjadi bahan evaluasi mutu pembelajaran.
+        Rata-rata jumlah remedial per lulusan: <strong>1.8 MK</strong>.
+      </td>
+    </tr>
+  </tfoot>
+</table>
+</div>
+</div>
 
-Batch Yudisium Juli 2026
-Total Lulusan: 80 mahasiswa
+<!-- ========== CARD : tren antar batch ========== -->
+ <div class="card">
+          <div class="card-body">
+    <h6><b>Tabel Perbandingan Batch Yudisium (Monitoring Periodik)</b></h6>
+<table class="table table-bordered table-striped table-sm">
+  <thead class=" text-center">
+    <tr>
+      <th>Indikator</th>
+      <th>Batch Jan 2026</th>
+      <th>Batch Jul 2026</th>
+      <th>Perubahan</th>
+    </tr>
+  </thead>
+  <tbody class="text-center">
+    <tr>
+      <td class="text-start">Jumlah Lulusan</td>
+      <td>65</td>
+      <td>80</td>
+      <td><span class="badge bg-success">Naik</span></td>
+    </tr>
+    <tr>
+      <td class="text-start">IPK Rata-rata</td>
+      <td>3.42</td>
+      <td>3.38</td>
+      <td><span class="badge bg-warning text-dark">Turun Tipis</span></td>
+    </tr>
+    <tr>
+      <td class="text-start">CPL Rata-rata</td>
+      <td>83%</td>
+      <td>81%</td>
+      <td><span class="badge bg-warning text-dark">Turun</span></td>
+    </tr>
+    <tr>
+      <td class="text-start">% Tepat Waktu</td>
+      <td>72%</td>
+      <td>68%</td>
+      <td><span class="badge bg-danger">Menurun</span></td>
+    </tr>
+    <tr>
+      <td class="text-start">Remedial Tinggi</td>
+      <td>14%</td>
+      <td>19%</td>
+      <td><span class="badge bg-danger">Meningkat</span></td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td colspan="4">
+        <strong>Cara membaca tabel:</strong><br>
+        Tabel ini membandingkan mutu lulusan antar periode yudisium (bukan per angkatan).
+        Kolom "Perubahan" menunjukkan arah perbedaan dari Jan 2026 ke Jul 2026.
+        Jika IPK dan CPL menurun serta persentase remedial tinggi meningkat,
+        maka perlu evaluasi terhadap proses pembelajaran pada periode tersebut.
+        Tabel ini bersifat monitoring mutu output secara periodik.
+      </td>
+    </tr>
+  </tfoot>
+</table>
 
-Distribusi angkatan masuk:
-
-2020 → 50 mahasiswa (62%)
-
-2021 → 20 mahasiswa (25%)
-
-2019 → 10 mahasiswa (13%)
-
-Itu bisa disajikan dalam:
-
-Tabel proporsi
-
-Pie chart
-
-Bar chart
-
-Tujuannya:
-Agar pembaca tahu apakah ini mayoritas lulusan tepat waktu (2020) atau banyak yang terlambat (2019).
-
-2️⃣ Bagaimana Menyajikan Proporsi Mahasiswa dengan Remedial Tinggi?
-
-Pertama harus definisikan dulu “remedial tinggi”.
-
-Contoh definisi operasional:
-
-≥ 3 MK pernah remedial
-
-atau >20% MK ditempuh dengan remedial
-
-atau > X kali remedial CPMK
-
-Contoh penyajian:
-
-Batch Juli 2026 (80 lulusan)
-
-Tidak pernah remedial → 40 mahasiswa (50%)
-
-Remedial ringan (1–2 MK) → 25 mahasiswa (31%)
-
-Remedial tinggi (≥3 MK) → 15 mahasiswa (19%)
-
-Bisa juga ditampilkan rata-rata jumlah remedial per mahasiswa:
-
-Rata-rata remedial: 1.8 MK per lulusan
-
-Ini membantu menjawab:
-
-Apakah lulusan kita kuat sejak awal, atau banyak yang tertolong remedial?
-
-3️⃣ Apa Maksud Perbandingan Batch Yudisium?
-
-Ini bukan cohort analysis.
-
-Ini membandingkan output lulusan antar periode yudisium.
-
-Contoh:
-
-Indikator Jan 2026  Jul 2026
-Jumlah lulusan  65  80
-IPK rata-rata 3.42  3.38
-CPL rata-rata 83% 81%
-% tepat waktu 72% 68%
-Remedial tinggi 14% 19%
-
-Ini membantu menjawab:
-
-Apakah mutu lulusan periode ini stabil?
-
-Apakah ada penurunan kualitas?
-
-Apakah beban akademik makin berat?
-
-Ini bersifat monitoring periodik.
-
-4️⃣ Apa Maksud Tren CPL Agregat Per Periode?
-
-Ini melihat perkembangan CPL rata-rata dari waktu ke waktu berdasarkan periode kelulusan.
-
-Contoh:
-
-CPL rata-rata agregat per batch:
-
-Jan 2025 → 79%
-
-Jul 2025 → 81%
-
-Jan 2026 → 82%
-
-Jul 2026 → 81%
-
-Jika divisualisasikan, terlihat:
-
-Ada peningkatan bertahap
-
-Atau stagnasi
-
-Atau fluktuasi
-
-Ini bukan tren per angkatan,
-tapi tren mutu output sistem dari waktu ke waktu.
+    <h6><b>Tabel Perbandingan Batch Yudisium (Monitoring Periodik)</b></h6>
+    <table class="table table-bordered table-striped table-sm">
+  <thead class=" text-center">
+    <tr>
+      <th>No</th>
+      <th>Periode Yudisium</th>
+      <th>CPL Rata-rata (%)</th>
+      <th>Tren</th>
+    </tr>
+  </thead>
+  <tbody class="text-center">
+    <tr>
+      <td>1</td>
+      <td>Jan 2025</td>
+      <td>79%</td>
+      <td><span class="badge bg-secondary">Baseline</span></td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Jul 2025</td>
+      <td>81%</td>
+      <td><span class="badge bg-success">Meningkat</span></td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Jan 2026</td>
+      <td>82%</td>
+      <td><span class="badge bg-success">Meningkat</span></td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Jul 2026</td>
+      <td>81%</td>
+      <td><span class="badge bg-warning text-dark">Fluktuatif</span></td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td colspan="4">
+        <strong>Cara membaca tabel:</strong><br>
+        Tabel ini menunjukkan tren mutu CPL rata-rata berdasarkan periode kelulusan.
+        Ini bukan tren per angkatan masuk, melainkan evaluasi mutu output sistem dari waktu ke waktu.
+        Jika nilai meningkat secara bertahap berarti ada perbaikan mutu pembelajaran,
+        sedangkan stagnasi atau penurunan menunjukkan perlunya evaluasi kebijakan akademik.
+      </td>
+    </tr>
+  </tfoot>
+</table>
+</div>
+</div>
 <!-- ========== CARD 4: Chart CPL/IK/CPMK/MK Min/Max/Rerata ========== -->
         <div class="card">
           <div class="card-header">
@@ -1755,6 +1864,15 @@ tapi tren mutu output sistem dari waktu ke waktu.
         <p>
           snapshot CPL by batch yudisium adalah gambaran CPL Mahasiswa yang lulus pada satu periode  yudisium tertentu tanpa memandang tahun masuknya(bisa campuran angkatan dan bahkan kurikulum), sehingga tujuannya adalah memonitor mutu output lulusan terkini; informmasi yag perlu disajikan meliputi jumlah lulusan periode tersebut, distribusi angkatan masuk, IPK rerata dan distribusinya, lama studi rerata rerata CPL dan distribusinya, persentasi remedial tinggi (misal >3 MK) remidial. dan perbandingan denan batch yudisium sebelumnya untuk melihat stabilitas output periodik. singkkatnya  snapsho batch yudisium menjawab " bagaimana mutu lulusan yang keluar pada periode ini?"
           untuk mutu lulusan.
+        </p>
+        <p>
+          Halaman ringkasan ini disusun sebagai instrumen monitoring dan evaluasi mutu lulusan secara periodik. Melalui tampilan ini, pengguna dapat melihat apakah mayoritas mahasiswa lulus tepat waktu atau terdapat kecenderungan keterlambatan pada periode tertentu.
+
+Selain itu, laporan ini membantu mengidentifikasi apakah capaian lulusan sudah kuat sejak awal proses pembelajaran atau terdapat indikasi perbaikan nilai (misalnya melalui remedial) yang signifikan.
+
+Dari sisi mutu akademik, ringkasan ini juga berfungsi untuk menilai stabilitas kualitas lulusan antar periode, mendeteksi potensi penurunan capaian, serta mengamati kemungkinan perubahan beban akademik yang berdampak pada hasil pembelajaran.
+
+Secara khusus, halaman ini menampilkan perkembangan rata-rata Capaian Pembelajaran Lulusan (CPL) dari waktu ke waktu berdasarkan periode kelulusan, sehingga dapat menjadi dasar analisis tren dan pengambilan keputusan akademik yang berbasis data.
         </p>        
       </div>
       <div class="modal-footer">

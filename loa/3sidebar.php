@@ -127,13 +127,13 @@
  <li class="nav-item">
               <a href="master-tahun.php" class="nav-link <?php echo $page == 'master_tahun' ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
-                <p>Tahun Akademik</p>
+                <p>Tahun</p>
               </a>
             </li>
              <li class="nav-item">
               <a href="master-semester.php" class="nav-link <?php echo $page == 'master_semester' ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
-                <p>Semester Akademik</p>
+                <p>Semester</p>
               </a>
             </li>
             <!-- <li class="nav-item">
@@ -148,19 +148,24 @@
                 <p>Jalur Kelas</p>
               </a>
             </li>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <a href="master-model.php" class="nav-link <?php echo $page == 'master_model' ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Tipe Kelas</p>
               </a>
-            </li>
+            </li> -->
             <!-- <li class="nav-item">
               <a href="master-peminatan.php" class="nav-link <?php echo $page == 'master_peminatan' ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Konsentrasi Peminatan</p>
               </a>
             </li> -->
-
+            <li class="nav-item">
+              <a href="master-mahasiswa.php" class="nav-link <?php echo $page == 'master_mahasiswa' ? 'active' : ''; ?>">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Mahasiswa</p>
+              </a>
+            </li>
             <li class="nav-item">
               <a href="master-dosen.php" class="nav-link <?php echo $page == 'master_dosen' ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
@@ -168,12 +173,7 @@
               </a>
             </li>
 
-            <li class="nav-item">
-              <a href="master-mahasiswa.php" class="nav-link <?php echo $page == 'master_mahasiswa' ? 'active' : ''; ?>">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Mahasiswa</p>
-              </a>
-            </li>
+            
 
           </ul>
         </li>
@@ -352,12 +352,12 @@
 
           <ul class="nav nav-treeview">
 
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <a href="monev-status-mahasiswa.php" class="nav-link <?php echo $page == 'status_mahasiswa' ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Status Mahasiswa</p>
               </a>
-            </li>
+            </li> -->
 
             <li class="nav-item">
               <a href="monev-status-pemetaan.php" class="nav-link <?php echo $page == 'status_pemetaan' ? 'active' : ''; ?>">
@@ -369,7 +369,7 @@
             <li class="nav-item">
               <a href="monev-rekap-kelas.php" class="nav-link <?php echo $page == 'monev_kelas' ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
-                <p>Rekapitulasi Kelas</p>
+                <p>Monev Kelas</p>
               </a>
             </li>
             <!-- <li class="nav-item">
@@ -396,12 +396,12 @@
                 <p>Rekapitulasi CPL</p>
               </a>
             </li> -->
-            <li class="nav-item">
-              <a href="monev-rekap-cpl.php" class="nav-link <?php echo $page == 'monev_cpl' ? 'active' : ''; ?>">
+            <!-- <li class="nav-item">
+              <a href="monev-rekap-cpl.php" class="nav-link <?php echo $page == 'monev_cpmk' ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Monev Semester</p>
               </a>
-            </li>
+            </li> -->
             <li class="nav-item">
               <a href="monev-rekap-cpl2.php" class="nav-link <?php echo $page == 'monev_cpl' ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
@@ -429,27 +429,27 @@
             <li class="nav-item">
               <a href="monev-cpl-individual.php" class="nav-link <?php echo $page == 'monev_individu' ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
-                <p>Monev CPL Individu</p>
+                <p>Monev Individu</p>
               </a>
             </li>
 
-            <li class="nav-item">
+           <!--  <li class="nav-item">
               <a href="monev-cpl-angkatan.php" class="nav-link <?php echo $page == 'monev_angkatan' ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Monev CPL Angkatan</p>
               </a>
-            </li>
+            </li> -->
             <li class="nav-item">
               <a href="monev-cpl-angkatan2.php" class="nav-link <?php echo $page == 'monev_angkatan' ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
-                <p>Monev CPL Angkatan 2</p>
+                <p>Monev Angkatan</p>
               </a>
             </li>
 
             <li class="nav-item">
               <a href="monev-cpl-yudisium.php" class="nav-link <?php echo $page == 'monev_yudisium' ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
-                <p>Monev CPL Yudisium</p>
+                <p>Monev Yudisium</p>
               </a>
             </li>
 

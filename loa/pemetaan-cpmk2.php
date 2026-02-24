@@ -35,7 +35,7 @@
                 <!-- <div class="col-md-6">
                   <b>Set Pemetaan:</b> Peta B
                 </div> -->
-<div class="col-md-6">
+                <div class="col-md-6">
                   <b>Mata Kuliah:</b> Semua &nbsp;
                 </div>
               </div>
@@ -62,21 +62,27 @@
             </div>
           </div>
 
+<!-- TAB NAV  -->
+  <ul class="nav nav-tabs">   
+    <li class="nav-item" onclick="window.location='pemetaan-matakuliah2.php'"><a class="nav-link ">Mata Kuliah</a></li>
+    <li class="nav-item" onclick="window.location='pemetaan-cpmk2.php'"><a class="nav-link active">CPMK</a></li>
+  </ul>
+
           <!-- ========== CARD : Tabel granular ========== -->
-<div class="card">
-             <div class="card-body">
-              <div class="table-responsive">
+          <div class="card">
+           <div class="card-body">
+            <div class="table-responsive">
               <table class="table table-bordered table-striped table-sm datatables1">
-  <thead>
-    <tr class="text-uppercase text-center">
-      <th width="5%">No</th>
-                      <th>kurikulum </th>
-      <th>Kode CPMK</th>
-      <th>Deskripsi CPMK</th>
-      <th width="12%">Aksi</th>
-    </tr>
-  </thead>
-  <tbody>
+                <thead>
+                  <tr class="text-uppercase text-center">
+                    <th width="5%">No</th>
+                    <th>kurikulum </th>
+                    <th>Kode CPMK</th>
+                    <th>Deskripsi CPMK</th>
+                    <th width="12%">Aksi</th>
+                  </tr>
+                </thead>
+                <tbody>
 
     <tr>
       <td class="text-center">1</td>

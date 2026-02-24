@@ -8,7 +8,7 @@
 
   <section class="content-header">
     <div class="container-fluid">
-      <h3 class="mb-0">Rekapitulasi CPL Setahun
+      <h3 class="mb-0">Monev Setahun
         <button type="button" class="btn btn-tool" data-bs-toggle="modal" data-bs-target="#modalBantuan" title="Bantuan">
           <i class="fas fa-question-circle"></i>
         </button>
@@ -30,14 +30,13 @@
             </div> -->
             <div class="card-body ">
               <div class="row">
-
-                 <div class="col-md-6">
+                <div class="col-md-6">
                   <b>Kurikulum:</b> 2023 &nbsp;
                 </div>                
                 <div class="col-md-6">
-                <b>Set Pemetaan:</b> KT-6 (K20) Kurikulum 2025 full stage &nbsp;
-              </div>
-              <div class="col-md-6">
+                  <b>Set Pemetaan:</b> KT-6 (K20) Kurikulum 2025 full stage &nbsp;
+                </div>
+                <div class="col-md-6">
                   <b>Tahun Akademik:</b> 2024/2025  &nbsp;
                 </div>
                 <div class="col-md-6">
@@ -59,160 +58,51 @@
             </div>
           </div>
 
-        <div class="card card-outline card-primary">
-  <div class="card-body">
-    <div class="row">
-      <div class="col-md-3">Tahun Akademik</div>
-      <div class="col-md-3">Semester</div>
-      <div class="col-md-3">Angkatan</div>
-      <div class="col-md-3">CPL</div>
-    </div>
-  </div>
-</div>
-<button type="button" class="btn btn-sm btn-outline-info" onclick="window.location='detail-cpl.html'"><i class="fas fa-info-circle"></i></button>
-<div class="col-lg-3 col-6">
-  <div class="small-box bg-info">
-    <div class="inner">
-      <h3>78%</h3>
-      <p>Rerata CPL</p>
-    </div>
-  </div>
-</div>
-
-Jenis chart:
-
-Line Chart → Tren Semester
-
-Bar Chart → Perbandingan Kelas
-
-Radar Chart → Profil Lulusan
-
-Heatmap → CPL vs Semester
-      
-  <!-- ========== CARD 3: KPI row ========== --> 
-  <style>
-    body { background: #f4f6f9; }
-    .kpi { border-radius: 10px; padding: 18px; color: #fff; }
-    .kpi .big { font-size: 1.6rem; font-weight:700; }
-    .kpi .small { font-size: 0.85rem; opacity: .9; }
-    .card { border-radius:10px; }
-    .status-dot { display:inline-block; width:10px; height:10px; border-radius:50%; margin-right:6px; vertical-align:middle; }
-    .status-green { background:#28a745; }
-    .status-yellow { background:#ffc107; }
-    .status-red { background:#dc3545; }
-    .ewstable td, .ewstable th { vertical-align: middle; }
-    .table-fixed-height { max-height: 360px; overflow:auto; }
-  </style>       
-  <div class="row g-3 mb-3">
-          <div class="col-md-3">
-            <div class="kpi bg-primary">
-              <div class="small">Rata-rata CPL</div>
-              <div class="big" id="kpiAvg">75.2</div>
-              <div class="small">dari 12 CPL</div>
+    
+          <!-- ========== CARD 3: KPI row ========== --> 
+          <style>
+            body { background: #f4f6f9; }
+            .kpi { border-radius: 10px; padding: 18px; color: #fff; }
+            .kpi .big { font-size: 1.6rem; font-weight:700; }
+            .kpi .small { font-size: 0.85rem; opacity: .9; }
+            .card { border-radius:10px; }
+            .status-dot { display:inline-block; width:10px; height:10px; border-radius:50%; margin-right:6px; vertical-align:middle; }
+            .status-green { background:#28a745; }
+            .status-yellow { background:#ffc107; }
+            .status-red { background:#dc3545; }
+            .ewstable td, .ewstable th { vertical-align: middle; }
+            .table-fixed-height { max-height: 360px; overflow:auto; }
+          </style>       
+          <div class="row g-3 mb-3">
+            <div class="col-md-3">
+              <div class="kpi bg-primary">
+                <div class="small">Rata-rata CPL</div>
+                <div class="big" id="kpiAvg">75.2</div>
+                <div class="small">dari 12 CPL</div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="kpi " style="background:#20c997;">
+                <div class="small">Rerata CPL Terkuat</div>
+                <div class="big" id="kpiGap">CPL 1 </div>
+                <div class="small">87.2</div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="kpi" style="background:#ff7f0e;">
+                <div class="small">Pemerataan Rerata CPL</div>
+                <div class="big" id="kpiReached">31 | 0.61</div>
+                <div class="small">Kategori: Cukup Stabil</div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="kpi bg-danger">
+                <div class="small">Rerata CPL Terendah</div>
+                <div class="big" id="kpiRisk">CPL 6</div>
+                <div class="small">56.2</div>
+              </div>
             </div>
           </div>
-          <div class="col-md-3">
-            <div class="kpi " style="background:#20c997;">
-              <div class="small">% CPMK Tercapai</div>
-              <div class="big" id="kpiGap">85% </div>
-              <div class="small">dari 258 CPMK (nilai rerata ≥ 65)</div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="kpi" style="background:#ff7f0e;">
-              <div class="small"> MK Mencapai Target</div>
-              <div class="big" id="kpiReached">54 / 78</div>
-              <div class="small">nilai rerata ≥ 65</div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="kpi bg-danger">
-              <div class="small">Rerata CPMK Terendah</div>
-              <div class="big" id="kpiRisk">STS190-6</div>
-              <div class="small">nama mata kuliah</div>
-            </div>
-          </div>
-        </div>
-             
-
-
-
-Metrik yang Perlu Dievaluasi
-1. Ketercapaian CPL per Tahun
-
-Rata-rata kontribusi dari semua MK
-
-Contoh:
-
-CPL 1 = 82%
-CPL 2 = 74%
-2. Tren 3 Tahun
-
-Naik, turun, stagnan?
-
-Minimal 3 tahun untuk baca pola.
-
-3. Distribusi Kontributor
-
-Mata kuliah mana paling kuat kontribusinya?
-
-Mana yang lemah?
-
-Kalau satu CPL hanya kuat di 1 MK → itu riskan.
-
-4. Konsistensi Antar Dosen
-
-Apakah ada gap besar antar kelas?
-
-Misal:
-
-Kelas A → 85%
-
-Kelas B → 68%
-
-Ini bisa berarti:
-
-Perbedaan metode
-
-Perbedaan instrumen
-
-5. Gap Target vs Realisasi
-
-Jika target CPL = 80%
-Realisasi = 74%
-
-Gap ini harus dianalisis:
-
-Kurikulum?
-
-Beban SKS?
-
-Metode?
-
-Assessment?
-
-6. Analisis Mapping
-
-Evaluasi:
-
-Apakah distribusi RPS terlalu berat di satu CPL?
-
-Apakah ada CPL kurang disentuh?
-
-Ini evaluasi kurikulum, bukan dosen.
----------
-Level Prodi
-
-Rata-rata CPL
-
-Tren 3 Tahun
-
-Gap Target
-
-Konsistensi Antar MK
-
-Keseimbangan Mapping
-
 
 
 <!-- ========== CARD 4:  Grafik Radar CPL & Progress ========== --> 
@@ -270,17 +160,319 @@ canvas {
     </div>
   </div>
   <!-- Tombol -->
-      <div class="d-flex gap-2 mt-2">
+<!--       <div class="d-flex gap-2 mt-2">
         <button class="btn btn-outline-danger btn-sm flex-fill col-7" onclick="openAllRisikoPreview()">
           CPL Belum Tuntas
         </button>
         <button class="btn btn-outline-danger btn-sm flex-fill col-5" onclick="openAllRisikoPreview()">CPMK Belum Tuntas</button>
-      </div>
+      </div> -->
+</div>
+<!-- ========== CARD 4: tabel tren 3 periode ========== -->  
+<div class="card">
+  <div class="card-header">
+    <h5 class="card-title mb-0">Tren Capaian 10 CPL (3 Periode)</h5>
+    <div class="card-tools">
+      <small class="text-muted">Data rerata capaian per tahun</small>
+    </div>
+  </div>
+  <div class="card-body">
+    <table class="table table-bordered table-striped table-sm datatables1">
+      <thead class="table-light">
+        <tr>
+          <th>Aksi</th>
+          <th>No</th>
+          <th>Kode CPL</th>
+          <th>2 Year Prior</th>
+          <th>1 Year Prior</th>
+          <th>Selected Year</th>
+          <th>Status Tren</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a href="detail.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td>
+          <td>1</td>
+          <td>CPL-01</td>
+          <td>72</td>
+          <td>75</td>
+          <td>80</td>
+          <td><span class="badge bg-secondary">Menaik</span></td>
+        </tr>
+        <tr>
+          <td><a href="detail.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td>
+          <td>2</td>
+          <td>CPL-02</td>
+          <td>85</td>
+          <td>82</td>
+          <td>78</td>
+          <td><span class="badge bg-danger">Menurun</span></td>
+        </tr>
+        <tr>
+          <td><a href="detail.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td>
+          <td>3</td>
+          <td>CPL-03</td>
+          <td>90</td>
+          <td>88</td>
+          <td>91</td>
+          <td><span class="badge bg-warning text-dark">Fluktuatif</span></td>
+        </tr>
+        <tr>
+          <td><a href="detail.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td>
+          <td>4</td>
+          <td>CPL-04</td>
+          <td>78</td>
+          <td>78</td>
+          <td>79</td>
+          <td><span class="badge bg-secondary">Stabil</span></td>
+        </tr>
+        <tr>
+          <td><a href="detail.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td>
+          <td>5</td>
+          <td>CPL-05</td>
+          <td>65</td>
+          <td>70</td>
+          <td>74</td>
+          <td><span class="badge bg-secondary">Menaik</span></td>
+        </tr>
+        <tr>
+          <td><a href="detail.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td>
+          <td>6</td>
+          <td>CPL-06</td>
+          <td>88</td>
+          <td>85</td>
+          <td>83</td>
+          <td><span class="badge bg-danger">Menurun</span></td>
+        </tr>
+        <tr>
+          <td><a href="detail.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td>
+          <td>7</td>
+          <td>CPL-07</td>
+          <td>70</td>
+          <td>74</td>
+          <td>73</td>
+          <td><span class="badge bg-warning text-dark">Fluktuatif</span></td>
+        </tr>
+        <tr>
+          <td><a href="detail.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td>
+          <td>8</td>
+          <td>CPL-08</td>
+          <td>92</td>
+          <td>92</td>
+          <td>93</td>
+          <td><span class="badge bg-secondary">Stabil</span></td>
+        </tr>
+        <tr>
+          <td><a href="detail.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td>
+          <td>9</td>
+          <td>CPL-09</td>
+          <td>76</td>
+          <td>81</td>
+          <td>84</td>
+          <td><span class="badge bg-secondary">Menaik</span></td>
+        </tr>
+        <tr>
+          <td><a href="detail.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td>
+          <td>10</td>
+          <td>CPL-10</td>
+          <td>83</td>
+          <td>79</td>
+          <td>80</td>
+          <td><span class="badge bg-warning text-dark">Fluktuatif</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<!-- ========== CARD: Tabel Tren 30 IK (3 Periode) ========== -->  
+<div class="card">
+  <div class="card-header">
+    <h5 class="card-title mb-0">Tren Capaian 30 IK (3 Periode)</h5>
+    <div class="card-tools">
+      <small class="text-muted">Data rerata capaian indikator kinerja per tahun</small>
+    </div>
+  </div>
+  <div class="card-body">
+    <table class="table table-bordered table-striped table-sm datatables1">
+      <thead class="table-light">
+        <tr>
+          <th>Aksi</th>
+          <th>No</th>
+          <th>Kode IK</th>
+          <th>2 Years Prior</th>
+          <th>1 Year Prior</th>
+          <th>Selected Year</th>
+          <th>Status Tren</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <!-- IK 01 - 05 -->
+        <tr>
+          <td><a href="detail-ik.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td>
+          <td>1</td><td>IK-01</td>
+          <td>70</td><td>74</td><td>79</td>
+          <td><span class="badge bg-secondary">Menaik</span></td>
+        </tr>
+        <tr>
+          <td><a href="#" class="btn btn-sm btn-outline-info">📄 Detail</a></td>
+          <td>2</td><td>IK-02</td>
+          <td>82</td><td>80</td><td>76</td>
+          <td><span class="badge bg-danger">Menurun</span></td>
+        </tr>
+        <tr>
+          <td><a href="#" class="btn btn-sm btn-outline-info">📄 Detail</a></td>
+          <td>3</td><td>IK-03</td>
+          <td>88</td><td>90</td><td>89</td>
+          <td><span class="badge bg-warning text-dark">Fluktuatif</span></td>
+        </tr>
+        <tr>
+          <td><a href="#" class="btn btn-sm btn-outline-info">📄 Detail</a></td>
+          <td>4</td><td>IK-04</td>
+          <td>78</td><td>78</td><td>79</td>
+          <td><span class="badge bg-secondary">Stabil</span></td>
+        </tr>
+        <tr>
+          <td><a href="#" class="btn btn-sm btn-outline-info">📄 Detail</a></td>
+          <td>5</td><td>IK-05</td>
+          <td>65</td><td>69</td><td>73</td>
+          <td><span class="badge bg-secondary">Menaik</span></td>
+        </tr>
+
+        <!-- IK 06 - 10 -->
+        <tr>
+          <td><a href="#" class="btn btn-sm btn-outline-info">📄 Detail</a></td>
+          <td>6</td><td>IK-06</td>
+          <td>90</td><td>87</td><td>84</td>
+          <td><span class="badge bg-danger">Menurun</span></td>
+        </tr>
+        <tr>
+          <td><a href="#" class="btn btn-sm btn-outline-info">📄 Detail</a></td>
+          <td>7</td><td>IK-07</td>
+          <td>72</td><td>75</td><td>74</td>
+          <td><span class="badge bg-warning text-dark">Fluktuatif</span></td>
+        </tr>
+        <tr>
+          <td><a href="#" class="btn btn-sm btn-outline-info">📄 Detail</a></td>
+          <td>8</td><td>IK-08</td>
+          <td>91</td><td>92</td><td>93</td>
+          <td><span class="badge bg-secondary">Stabil</span></td>
+        </tr>
+        <tr>
+          <td><a href="#" class="btn btn-sm btn-outline-info">📄 Detail</a></td>
+          <td>9</td><td>IK-09</td>
+          <td>75</td><td>80</td><td>83</td>
+          <td><span class="badge bg-secondary">Menaik</span></td>
+        </tr>
+        <tr>
+          <td><a href="#" class="btn btn-sm btn-outline-info">📄 Detail</a></td>
+          <td>10</td><td>IK-10</td>
+          <td>84</td><td>81</td><td>79</td>
+          <td><span class="badge bg-danger">Menurun</span></td>
+        </tr>
+
+        <!-- IK 11 - 20 -->
+        <!-- Pola dibuat variasi agar realistis -->
+
+        <tr><td><a href="#" class="btn btn-sm btn-outline-info">📄 Detail</a></td><td>11</td><td>IK-11</td><td>77</td><td>79</td><td>82</td><td><span class="badge bg-secondary">Menaik</span></td></tr>
+        <tr><td><a href="#" class="btn btn-sm btn-outline-info">📄 Detail</a></td><td>12</td><td>IK-12</td><td>86</td><td>84</td><td>83</td><td><span class="badge bg-danger">Menurun</span></td></tr>
+        <tr><td><a href="#" class="btn btn-sm btn-outline-info">📄 Detail</a></td><td>13</td><td>IK-13</td><td>73</td><td>73</td><td>74</td><td><span class="badge bg-secondary">Stabil</span></td></tr>
+        <tr><td><a href="#" class="btn btn-sm btn-outline-info">📄 Detail</a></td><td>14</td><td>IK-14</td><td>68</td><td>72</td><td>76</td><td><span class="badge bg-secondary">Menaik</span></td></tr>
+        <tr><td><a href="#" class="btn btn-sm btn-outline-info">📄 Detail</a></td><td>15</td><td>IK-15</td><td>92</td><td>90</td><td>88</td><td><span class="badge bg-danger">Menurun</span></td></tr>
+        <tr><td><a href="#" class="btn btn-sm btn-outline-info">📄 Detail</a></td><td>16</td><td>IK-16</td><td>80</td><td>82</td><td>81</td><td><span class="badge bg-warning text-dark">Fluktuatif</span></td></tr>
+        <tr><td><a href="#" class="btn btn-sm btn-outline-info">📄 Detail</a></td><td>17</td><td>IK-17</td><td>71</td><td>75</td><td>78</td><td><span class="badge bg-secondary">Menaik</span></td></tr>
+        <tr><td><a href="#" class="btn btn-sm btn-outline-info">📄 Detail</a></td><td>18</td><td>IK-18</td><td>89</td><td>88</td><td>90</td><td><span class="badge bg-warning text-dark">Fluktuatif</span></td></tr>
+        <tr><td><a href="#" class="btn btn-sm btn-outline-info">📄 Detail</a></td><td>19</td><td>IK-19</td><td>76</td><td>78</td><td>78</td><td><span class="badge bg-secondary">Stabil</span></td></tr>
+        <tr><td><a href="#" class="btn btn-sm btn-outline-info">📄 Detail</a></td><td>20</td><td>IK-20</td><td>69</td><td>72</td><td>75</td><td><span class="badge bg-secondary">Menaik</span></td></tr>
+
+        <!-- IK 21 - 30 -->
+
+        <tr><td><a href="#" class="btn btn-sm btn-outline-info">📄 Detail</a></td><td>21</td><td>IK-21</td><td>83</td><td>80</td><td>77</td><td><span class="badge bg-danger">Menurun</span></td></tr>
+        <tr><td><a href="#" class="btn btn-sm btn-outline-info">📄 Detail</a></td><td>22</td><td>IK-22</td><td>74</td><td>77</td><td>80</td><td><span class="badge bg-secondary">Menaik</span></td></tr>
+        <tr><td><a href="#" class="btn btn-sm btn-outline-info">📄 Detail</a></td><td>23</td><td>IK-23</td><td>90</td><td>91</td><td>92</td><td><span class="badge bg-secondary">Stabil</span></td></tr>
+        <tr><td><a href="#" class="btn btn-sm btn-outline-info">📄 Detail</a></td><td>24</td><td>IK-24</td><td>67</td><td>70</td><td>73</td><td><span class="badge bg-secondary">Menaik</span></td></tr>
+        <tr><td><a href="#" class="btn btn-sm btn-outline-info">📄 Detail</a></td><td>25</td><td>IK-25</td><td>85</td><td>83</td><td>82</td><td><span class="badge bg-danger">Menurun</span></td></tr>
+        <tr><td><a href="#" class="btn btn-sm btn-outline-info">📄 Detail</a></td><td>26</td><td>IK-26</td><td>79</td><td>79</td><td>80</td><td><span class="badge bg-secondary">Stabil</span></td></tr>
+        <tr><td><a href="#" class="btn btn-sm btn-outline-info">📄 Detail</a></td><td>27</td><td>IK-27</td><td>72</td><td>76</td><td>75</td><td><span class="badge bg-warning text-dark">Fluktuatif</span></td></tr>
+        <tr><td><a href="#" class="btn btn-sm btn-outline-info">📄 Detail</a></td><td>28</td><td>IK-28</td><td>88</td><td>86</td><td>85</td><td><span class="badge bg-danger">Menurun</span></td></tr>
+        <tr><td><a href="#" class="btn btn-sm btn-outline-info">📄 Detail</a></td><td>29</td><td>IK-29</td><td>75</td><td>78</td><td>82</td><td><span class="badge bg-secondary">Menaik</span></td></tr>
+        <tr><td><a href="#" class="btn btn-sm btn-outline-info">📄 Detail</a></td><td>30</td><td>IK-30</td><td>91</td><td>90</td><td>89</td><td><span class="badge bg-warning text-dark">Fluktuatif</span></td></tr>
+
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ========== CARD : Detail info per Mata Kuliah ========== -->
+<div class="card shadow-sm">
+  <div class="card-header bg-info text-white">
+    <h5 class="mb-0">Detail info per CPL</h5>
+  </div>
+
+  <div class="card-body">
+
+    <!-- Identitas Mata Kuliah -->
+    <h6><b>Identitas CPL</b></h6>
+    <table class="table table-sm table-bordered mb-4">
+      <tr>
+        <th>Kurikulum</th>
+        <td>Merdeka Belajar</td>
+      </tr>
+      <tr>
+        <th>Tahun Akademik</th>
+        <td>2024/2025</td>
+      </tr>
+      <tr>
+        <th style="width:200px;">Kode CPL</th>
+        <td>CPL 1</td>
+      </tr>
+      <tr>
+        <th>Deskripsi</th>
+        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat.</td>
+      </tr>
+      <tr>
+        <th>Jumlah IK</th>
+        <td>3</td>
+      </tr>
+      <tr>
+        <th>Jumlah CPMK</th>
+        <td>12</td>
+      </tr>
+    </table>
+
+    <canvas id="chartCPL1" width="100%" height="30"></canvas>
+   <!--  <h6 class="font-weight-bold">Daftar Indikator Kinerja (IK)</h6>
+    <div class="table-responsive">
+      <table class="table table-sm table-bordered">
+        <thead class="thead-dark">
+          <tr>
+            <th style="width: 80px;">Kode IK</th>
+            <th>Deskripsi IK</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>IK 1</td>
+            <td>Mahasiswa mampu menyampaikan informasi secara lisan secara runtut, jelas, dan mudah dipahami.</td>
+          </tr>
+          <tr>
+            <td>IK 2</td>
+            <td>Mahasiswa mampu menulis laporan/tulisan akademik sesuai kaidah bahasa dan struktur penulisan yang baik.</td>
+          </tr>
+          <tr>
+            <td>IK 3</td>
+            <td>Mahasiswa mampu berkomunikasi secara profesional dalam konteks akademik dan industri, termasuk etika komunikasi digital.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div> -->
+  </div>
 </div>
 
 <!-- ========== CARD 4: Chart CPL-IK ========== -->     
-        <div class="card">   
-          <!-- CARD HEADER -->  
+<!--         <div class="card">   
           <div class="card-header ">         
             <h5 class="card-title mb-0">
               <button class="btn btn-sm btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#chartCPLIK1">
@@ -289,9 +481,7 @@ canvas {
               CPL 1 – Kemampuan berkomunikasi secara efektif baik lisan maupun tulisan
             </h5>
           </div>
-          <!-- CARD BODY -->
           <div class="card-body " id="chartCPLIK1">
-            <!-- Chart Container -->
             <div class="chart-container">
               <canvas id="chartCPL1" width="100%" height="30"></canvas>
             </div>
@@ -321,9 +511,9 @@ canvas {
               </table>
             </div>
           </div>          
-        </div>
+        </div> -->
 
-         <!-- ========== CARD 4: Chart CPL-IK ========== -->     
+         <!-- ========== CARD 4: Chart IK ========== -->     
         <div class="card">   
           <!-- CARD HEADER -->  
           <div class="card-header ">         
@@ -331,34 +521,34 @@ canvas {
               <button class="btn btn-sm btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#chartCPLIK2">
                 <i class="fas fa-expand"></i>
               </button>
-              CPL 2 – Kemampuan untuk menginternalisasi semangat kemandirian dan Kewirausahaan
+              IK 1 – Kemampuan untuk menginternalisasi semangat kemandirian dan Kewirausahaan
             </h5>
           </div>
           <!-- CARD BODY -->
-          <div class="card-body " >
+          <div class="card-body collapse" id="chartCPLIK2" >
             <!-- Chart Container -->
             <div class="chart-container">
               <canvas id="chartCPL2" width="100%" height="30"></canvas>
             </div>
           </div>
           <!-- CARD FOOTER -->
-          <div class="card-footer collapse" id="chartCPLIK2">
-            <h6 class="font-weight-bold">Daftar Indikator Kinerja (IK)</h6>
+          <div class="card-footer collapse" id="chartCPLIK2"  >
+            <h6 class="font-weight-bold">Daftar CPMK</h6>
             <div class="table-responsive">
               <table class="table table-sm table-bordered">
                 <thead class="thead-dark">
                   <tr>
-                    <th style="width: 80px;">Kode IK</th>
-                    <th>Deskripsi IK</th>
+                    <th style="width: 80px;">Kode CPMK</th>
+                    <th>Deskripsi CPMK</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td>IK 5</td>
+                    <td> STS900-2</td>
                     <td>Mahasiswa mampu menyampaikan informasi secara lisan secara runtut, jelas, dan mudah dipahami.</td>
                   </tr>
                   <tr>
-                    <td>IK 6</td>
+                    <td> STS544-2</td>
                     <td>Mahasiswa mampu menulis laporan/tulisan akademik sesuai kaidah bahasa dan struktur penulisan yang baik.</td>
                   </tr>
                   
@@ -368,9 +558,95 @@ canvas {
           </div>
         </div>
 
+ <!-- ========== CARD 4: Chart IK ========== -->     
+        <div class="card">   
+          <!-- CARD HEADER -->  
+          <div class="card-header ">         
+            <h5 class="card-title mb-0">
+              <button class="btn btn-sm btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#chartCPLIK3">
+                <i class="fas fa-expand"></i>
+              </button>
+              IK 2 – Kemampuan untuk menginternalisasi semangat kemandirian dan Kewirausahaan
+            </h5>
+          </div>
+          <!-- CARD BODY -->
+          <div class="card-body collapse" id="chartCPLIK3">
+            <!-- Chart Container -->
+            <div class="chart-container">
+              <canvas id="chartCPL3" width="100%" height="30"></canvas>
+            </div>
+          </div>
+          <!-- CARD FOOTER -->
+          <div class="card-footer collapse" id="chartCPLIK3">
+            <h6 class="font-weight-bold">Daftar CPMK</h6>
+            <div class="table-responsive">
+              <table class="table table-sm table-bordered">
+                <thead class="thead-dark">
+                  <tr>
+                    <th style="width: 80px;">Kode CPMK</th>
+                    <th>Deskripsi CPMK</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td> STS901-3</td>
+                    <td>Mahasiswa mampu menyampaikan informasi secara lisan secara runtut, jelas, dan mudah dipahami.</td>
+                  </tr>
+                  <tr>
+                    <td> STS521-2</td>
+                    <td>Mahasiswa mampu menulis laporan/tulisan akademik sesuai kaidah bahasa dan struktur penulisan yang baik.</td>
+                  </tr>
+                  
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
 
-
-
+ <!-- ========== CARD 4: Chart IK ========== -->     
+        <div class="card">   
+          <!-- CARD HEADER -->  
+          <div class="card-header ">         
+            <h5 class="card-title mb-0">
+              <button class="btn btn-sm btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#chartCPLIK4">
+                <i class="fas fa-expand"></i>
+              </button>
+              IK 3 – Kemampuan untuk menginternalisasi semangat kemandirian dan Kewirausahaan
+            </h5>
+          </div>
+          <!-- CARD BODY -->
+          <div class="card-body collapse" id="chartCPLIK4">
+            <!-- Chart Container -->
+            <div class="chart-container">
+              <canvas id="chartCPL4" width="100%" height="30"></canvas>
+            </div>
+          </div>
+          <!-- CARD FOOTER -->
+          <div class="card-footer collapse" id="chartCPLIK4">
+            <h6 class="font-weight-bold">Daftar CPMK</h6>
+            <div class="table-responsive">
+              <table class="table table-sm table-bordered">
+                <thead class="thead-dark">
+                  <tr>
+                    <th style="width: 80px;">Kode CPMK</th>
+                    <th>Deskripsi CPMK</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td> UKU444-2</td>
+                    <td>Mahasiswa mampu menyampaikan informasi secara lisan secara runtut, jelas, dan mudah dipahami.</td>
+                  </tr>
+                  <tr>
+                    <td> UKU922-2</td>
+                    <td>Mahasiswa mampu menulis laporan/tulisan akademik sesuai kaidah bahasa dan struktur penulisan yang baik.</td>
+                  </tr>
+                  
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
 
 
 
@@ -454,6 +730,83 @@ canvas {
         <p>
           bahan evaluasi kurikulum satu tahun, dg parameter CPL-IK, dengan detail di MK-kelas perkuliahan(cpmk).
         </p> 
+        <p>
+          Metrik yang Perlu Dievaluasi
+1. Ketercapaian CPL per Tahun
+
+Rata-rata kontribusi dari semua MK
+
+Contoh:
+
+CPL 1 = 82%
+CPL 2 = 74%
+2. Tren 3 Tahun
+
+Naik, turun, stagnan?
+
+Minimal 3 tahun untuk baca pola.
+
+3. Distribusi Kontributor
+
+Mata kuliah mana paling kuat kontribusinya?
+
+Mana yang lemah?
+
+Kalau satu CPL hanya kuat di 1 MK → itu riskan.
+
+4. Konsistensi Antar Dosen
+
+Apakah ada gap besar antar kelas?
+
+Misal:
+
+Kelas A → 85%
+
+Kelas B → 68%
+
+Ini bisa berarti:
+
+Perbedaan metode
+
+Perbedaan instrumen
+
+5. Gap Target vs Realisasi
+
+Jika target CPL = 80%
+Realisasi = 74%
+
+Gap ini harus dianalisis:
+
+Kurikulum?
+
+Beban SKS?
+
+Metode?
+
+Assessment?
+
+6. Analisis Mapping
+
+Evaluasi:
+
+Apakah distribusi RPS terlalu berat di satu CPL?
+
+Apakah ada CPL kurang disentuh?
+
+Ini evaluasi kurikulum, bukan dosen.
+---------
+Level Prodi
+
+Rata-rata CPL
+
+Tren 3 Tahun
+
+Gap Target
+
+Konsistensi Antar MK
+
+Keseimbangan Mapping
+        </p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
@@ -810,15 +1163,15 @@ function generateBarChart(canvasId, labels, data, labelName, color) {
 
 
 
-generateBarChart("chartIK", ikLabels, ikAverages, "Capaian IK", {
+generateBarChart("chartIK", ikLabels, ikAverages, "Rerata Nilai IK", {
     bg: "rgba(255, 159, 64, 0.7)", border: "rgb(255, 159, 64)"     // oranye
 });
 
-generateBarChart("chartCPMK", cpmkLabels, cpmkAverages, "Capaian CPMK", {
+generateBarChart("chartCPMK", cpmkLabels, cpmkAverages, "Rerata Nilai CPMK", {
     bg: "rgba(255, 99, 132, 0.7)", border: "rgb(255, 99, 132)"     // merah
 });
 
-generateBarChart("chartMK", mkLabels, mkAverages, "Capaian MK", {
+generateBarChart("chartMK", mkLabels, mkAverages, "Rerata Nilai MK", {
     bg: "rgba(54, 162, 235, 0.7)", border: "rgb(54, 162, 235)"     // biru
 });
 
@@ -908,7 +1261,7 @@ generateHorizontalChart(
     data: {
       labels: ['CPL 1', 'CPL 2', 'CPL 3', 'CPL 4', 'CPL 5', 'CPL 6', 'CPL 7', 'CPL 8', 'CPL 9', 'CPL 10', 'CPL 11'],
       datasets: [{
-        label: 'Capaian CPL',
+        label: 'Rerata Nilai CPL',
         data: [80, 90, 75, 85, 88,65, 67, 70, 55, 30, 23],
             // Warna hijau lembut (lebih nyaman di mata)
         backgroundColor: 'rgba(80, 200, 120, 0.35)',
@@ -1012,26 +1365,26 @@ new Chart(ctx, {
         responsive: true,
         plugins: {
             legend: { display: false },
-            annotation: {
-                annotations: {
-                    targetLine: {
-                        type: 'line',
-                        yMin: 85,
-                        yMax: 85,
-                        borderColor: 'red',
-                        borderWidth: 2,
-                        borderDash: [6, 6],
-                        label: {
-                            display: true,
-                            content: 'Target 85',
-                            position: 'start',
-                            color: 'red',
-                            backgroundColor: 'rgba(255,255,255,0.7)',
-                            padding: 4
-                        }
-                    }
-                }
-            }
+            // annotation: {
+            //     annotations: {
+            //         targetLine: {
+            //             type: 'line',
+            //             yMin: 85,
+            //             yMax: 85,
+            //             borderColor: 'red',
+            //             borderWidth: 2,
+            //             borderDash: [6, 6],
+            //             label: {
+            //                 display: true,
+            //                 content: 'Target 85',
+            //                 position: 'start',
+            //                 color: 'red',
+            //                 backgroundColor: 'rgba(255,255,255,0.7)',
+            //                 padding: 4
+            //             }
+            //         }
+            //     }
+            // }
         },
         scales: {
             y: {
@@ -1048,19 +1401,21 @@ const ctx2 = document.getElementById("chartCPL2");
 new Chart(ctx2, {
     type: 'bar',
     data: {
-        labels: ['IK 4', 'IK 5', 'CPL 2'],
+        labels: ['STS900-2','STS900-4', 'STS544-2', 'IK 1'],
         datasets: [{
             label: 'Capaian',
-            data: [90, 80, 87.33],
+            data: [90, 80,81, 87.33],
             backgroundColor: [
                 '#6c757d', // IK 4
+                '#6c757d', // IK 5
                 '#6c757d', // IK 5
                 '#007bff'  // CPL 2
             ],
             borderColor: [
-                '#6c757d',
-                '#6c757d',
-                '#007bff'
+              '#6c757d',
+              '#6c757d',
+              '#6c757d',
+              '#007bff'
             ],
             borderWidth: 1
         }]
@@ -1069,26 +1424,26 @@ new Chart(ctx2, {
         responsive: true,
         plugins: {
             legend: { display: false },
-            annotation: {
-                annotations: {
-                    targetLine: {
-                        type: 'line',
-                        yMin: 85,
-                        yMax: 85,
-                        borderColor: 'red',
-                        borderWidth: 2,
-                        borderDash: [6, 6],
-                        label: {
-                            display: true,
-                            content: 'Target 85',
-                            position: 'start',
-                            color: 'red',
-                            backgroundColor: 'rgba(255,255,255,0.7)',
-                            padding: 4
-                        }
-                    }
-                }
-            }
+            // annotation: {
+            //     annotations: {
+            //         targetLine: {
+            //             type: 'line',
+            //             yMin: 85,
+            //             yMax: 85,
+            //             borderColor: 'red',
+            //             borderWidth: 2,
+            //             borderDash: [6, 6],
+            //             label: {
+            //                 display: true,
+            //                 content: 'Target 85',
+            //                 position: 'start',
+            //                 color: 'red',
+            //                 backgroundColor: 'rgba(255,255,255,0.7)',
+            //                 padding: 4
+            //             }
+            //         }
+            //     }
+            // }
         },
         scales: {
             y: {
@@ -1099,5 +1454,122 @@ new Chart(ctx2, {
     }
 });
 </script>
+<script>
+const ctx3 = document.getElementById("chartCPL3");
 
+new Chart(ctx3, {
+    type: 'bar',
+    data: {
+        labels: ['STS901-3', 'STS521-1','STS521-2', 'IK 2'],
+        datasets: [{
+            label: 'Capaian',
+            data: [90, 80,70, 87.33],
+            backgroundColor: [
+                '#6c757d', // IK 4
+                '#6c757d', // IK 5
+                '#6c757d', // IK 5
+                '#007bff'  // CPL 2
+            ],
+            borderColor: [
+              '#6c757d',
+              '#6c757d',
+              '#6c757d',
+              '#007bff'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        responsive: true,
+        plugins: {
+            legend: { display: false },
+            // annotation: {
+            //     annotations: {
+            //         targetLine: {
+            //             type: 'line',
+            //             yMin: 85,
+            //             yMax: 85,
+            //             borderColor: 'red',
+            //             borderWidth: 2,
+            //             borderDash: [6, 6],
+            //             label: {
+            //                 display: true,
+            //                 content: 'Target 85',
+            //                 position: 'start',
+            //                 color: 'red',
+            //                 backgroundColor: 'rgba(255,255,255,0.7)',
+            //                 padding: 4
+            //             }
+            //         }
+            //     }
+            // }
+        },
+        scales: {
+            y: {
+                beginAtZero: true,
+                max: 100
+            }
+        }
+    }
+});
+</script>
+<script>
+const ctx4 = document.getElementById("chartCPL4");
+
+new Chart(ctx4, {
+    type: 'bar',
+    data: {
+        labels: ['STS900-2', 'STS544-2','UKU111-2', 'IK 1'],
+        datasets: [{
+            label: 'Capaian',
+            data: [90, 80,88, 87.33],
+            backgroundColor: [
+                '#6c757d', // IK 4
+                '#6c757d', // IK 5
+                '#6c757d', // IK 5
+                '#007bff'  // CPL 2
+            ],
+            borderColor: [
+              '#6c757d',
+              '#6c757d',
+              '#6c757d',
+              '#007bff'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        responsive: true,
+        plugins: {
+            legend: { display: false },
+            // annotation: {
+            //     annotations: {
+            //         targetLine: {
+            //             type: 'line',
+            //             yMin: 85,
+            //             yMax: 85,
+            //             borderColor: 'red',
+            //             borderWidth: 2,
+            //             borderDash: [6, 6],
+            //             label: {
+            //                 display: true,
+            //                 content: 'Target 85',
+            //                 position: 'start',
+            //                 color: 'red',
+            //                 backgroundColor: 'rgba(255,255,255,0.7)',
+            //                 padding: 4
+            //             }
+            //         }
+            //     }
+            // }
+        },
+        scales: {
+            y: {
+                beginAtZero: true,
+                max: 100
+            }
+        }
+    }
+});
+</script>
 <?php include('5script.php'); ?>

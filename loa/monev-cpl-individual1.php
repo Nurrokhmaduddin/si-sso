@@ -1,4 +1,4 @@
-<?php $page = 'monev_cpl'; ?>
+<?php $page = 'monev_individu'; ?>
 <?php include('1header.php'); ?>
 <?php include('2navbar.php'); ?>
 <?php include('3sidebar.php'); ?>
@@ -8,7 +8,7 @@
 
   <section class="content-header">
     <div class="container-fluid">
-      <h3 class="mb-0">Rekapitulasi CPL Semester
+      <h3 class="mb-0">Monev CPL Individu
         <button type="button" class="btn btn-tool" data-bs-toggle="modal" data-bs-target="#modalBantuan" title="Bantuan">
           <i class="fas fa-question-circle"></i>
         </button>
@@ -32,20 +32,15 @@
               <div class="row">
 
                 <div class="col-md-6">
-                <b>Kurikulum:</b> 2023 &nbsp;
+                  <b>Kurikulum:</b> 2023 &nbsp;
                 </div>                
                 <div class="col-md-6">
-                <b>Set Pemetaan:</b> KT-6 (K20) Kurikulum 2025 full stage &nbsp;
+                  <b>Set Pemetaan:</b> v1.0
                 </div>
                 <div class="col-md-6">
-                <b>Tahun Akademik:</b> 2024/2025 &nbsp;
-                </div> 
-                <div class="col-md-6">
-                <b>Semester Akademik:</b> Gasal  &nbsp;
+                  <b>Mahasiswa:</b> 20521098 - VEGA AYU CENTYA
                 </div>
-                <!-- <div class="col-md-6">
-                <b>Angkatan Mahasiswa:</b> Semua  &nbsp;
-                </div>  -->
+                
               </div>
             </div>
             <div class="card-footer">
@@ -62,7 +57,6 @@
           </div>
 
         
-      
   <!-- ========== CARD 3: KPI row ========== --> 
   <style>
     body { background: #f4f6f9; }
@@ -78,37 +72,45 @@
     .table-fixed-height { max-height: 360px; overflow:auto; }
   </style>       
   <div class="row g-3 mb-3">
-          <div class="col-md-3">
-            <div class="kpi bg-primary">
-              <div class="small">Rata-rata CPL</div>
-              <div class="big" id="kpiAvg">75.2</div>
-              <div class="small">dari 12 CPL</div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="kpi " style="background:#20c997;">
-              <div class="small">% CPMK Tercapai</div>
-              <div class="big" id="kpiGap">85% </div>
-              <div class="small">dari 258 CPMK (nilai rerata ≥ 65)</div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="kpi" style="background:#ff7f0e;">
-              <div class="small"> MK Mencapai Target</div>
-              <div class="big" id="kpiReached">54 / 78</div>
-              <div class="small">nilai rerata ≥ 65</div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="kpi bg-danger">
-              <div class="small">Rerata CPMK Terendah</div>
-              <div class="big" id="kpiRisk">STS190-6</div>
-              <div class="small">nama mata kuliah</div>
-            </div>
-          </div>
-        </div>
-             
+    <div class="col-md-3">
+      <div class="kpi bg-primary">
+        <div class="small">Rata-rata CPL</div>
+        <div class="big" id="kpiAvg">75.2</div>
+        <div class="small">dari 12 CPL</div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="kpi " style="background:#20c997;">
+        <div class="small">Rata-rata IK</div>
+        <div class="big" id="kpiGap">85 </div>
+        <div class="small">dari 24 IK</div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="kpi" style="background:#ff7f0e;">
+        <div class="small">Rata-rata CPMK</div>
+        <div class="big" id="kpiReached">78</div>
+        <div class="small">dari 258</div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="kpi bg-danger">
+        <div class="small">Rata-rata Nilai Akhir MK</div>
+        <div class="big" id="kpiRisk">78</div>
+        <div class="small">dari 78 MK</div>
+      </div>
+    </div>
+  </div>
 
+
+  <!-- TAB NAV  -->
+  <ul class="nav nav-tabs">   
+    <li class="nav-item" onclick="window.location='monev-cpl-individual1.php'"><a class="nav-link active">Grafik</a></li>
+    <li class="nav-item" onclick="window.location='monev-cpl-individual2.php'"><a class="nav-link ">Tabel</a></li>
+    <li class="nav-item" onclick="window.location='monev-cpl-individual3.php'"><a class="nav-link ">KHS</a></li>
+    <li class="nav-item" onclick="window.location='monev-cpl-individual3.php'"><a class="nav-link ">IPK</a></li>
+    <li class="nav-item" onclick="window.location='monev-cpl-individual3.php'"><a class="nav-link ">Riwayat</a></li>
+  </ul>
 
 
 
@@ -170,9 +172,9 @@ canvas {
 
         <!-- Tombol -->
         <div class="d-flex gap-2 mt-2">
-          <!-- <button class="btn btn-outline-info btn-sm flex-fill" data-bs-toggle="collapse" data-bs-target="#daftarIKCPL21">Rangking</button>
-          <button class="btn btn-outline-info btn-sm flex-fill" data-bs-toggle="collapse" data-bs-target="#daftarIKCPL23">Daftar IK</button> -->
-          <button class="btn btn-outline-danger btn-sm flex-fill" onclick="openAllRisikoPreview()">IK Belum Tuntas</button>
+          <button class="btn btn-outline-info btn-sm flex-fill" data-bs-toggle="collapse" data-bs-target="#daftarIKCPL21">Rangking</button>
+          <button class="btn btn-outline-info btn-sm flex-fill" data-bs-toggle="collapse" data-bs-target="#daftarIKCPL23">Daftar IK</button>
+          <button class="btn btn-outline-danger btn-sm flex-fill" onclick="openAllRisikoPreview()">Risiko</button>
         </div>
       </div>
 
@@ -185,9 +187,9 @@ canvas {
 
         <!-- Tombol -->
         <div class="d-flex gap-2 mt-2">
-         <!--  <button class="btn btn-outline-info btn-sm flex-fill" data-bs-toggle="collapse" data-bs-target="#daftarIKCPL31">Rangking</button>
-          <button class="btn btn-outline-info btn-sm flex-fill" data-bs-toggle="collapse" data-bs-target="#daftarIKCPL33">Daftar CPMK</button> -->
-          <button class="btn btn-outline-danger btn-sm flex-fill" onclick="openAllRisikoPreview()">CPMK Belum Tuntas</button>
+          <button class="btn btn-outline-info btn-sm flex-fill" data-bs-toggle="collapse" data-bs-target="#daftarIKCPL31">Rangking</button>
+          <button class="btn btn-outline-info btn-sm flex-fill" data-bs-toggle="collapse" data-bs-target="#daftarIKCPL33">Daftar CPMK</button>
+          <button class="btn btn-outline-danger btn-sm flex-fill" onclick="openAllRisikoPreview()">Risiko</button>
         </div>
       </div>
 
@@ -934,188 +936,333 @@ canvas {
 
 
 
-
-<!-- ========== CARD : Table Daftar Mata Kuliah ========== -->
+        <!-- ========== CARD : Chart MK ========== -->
         <div class="card">
           <div class="card-header">
-              <h5 class="card-title mb-0"> Daftar Mata Kuliah</h5>
-              <div class="card-tools">
-                <small class="text-muted">Semester Terpilih</small>
+            <h5 class="card-title mb-0"><i class="fas fa-chart-bar me-2"></i> MK - Rata-rata Capaian (Biru)</h5>
+            <div class="card-tools">
+              <small class="text-muted">Angkatan Terpilih</small>
+            </div>
+          </div>
+          <div class="card-body chart-container">
+            <canvas id="chartMK" width="100%" height="22"></canvas>
+            <div class="row text-center mt-3">
+              <div class="col">
+                <button class="btn btn-outline-info btn-sm w-100" data-bs-toggle="collapse" data-bs-target="#daftarIKCPL41">
+                  Rangking Performa
+                </button>
+              </div>
+             
+              <div class="col">
+                <button class="btn btn-outline-info btn-sm w-100" data-bs-toggle="collapse" data-bs-target="#daftarIKCPL43">
+                  Daftar MK
+                </button>
+              </div>
+              <div class="col">
+                <button class="btn btn-outline-danger btn-sm w-100" data-bs-toggle="collapse" onclick="openAllRisikoPreview()">
+                  Performa Risiko
+                </button>
+              </div>
+              
+            </div>
+          </div>      
+        </div>
+        <!-- Rangking Performa -->
+        <div class="row collapse" id="daftarIKCPL41" >
+          <!-- Card Lowest -->
+          <div class="col-12 col-md-6">
+            <div class="card">
+              <div class="card-header">
+                <h5 class="card-title mb-0">🔽 Top 5 MK Performa Terendah</h5>
+              </div>
+              <div class="card-body">
+                <div class="table-responsive">
+                  <table id="tblCplStats" class="table table-hover table-bordered table-sm">
+                    <thead class="table-light">
+                      <tr>
+                        <th>Ranking</th>
+                        <th class="text-center" style="width: 140px">Rerata Nilai Akhir</th>
+                        <th>MK</th>
+                        <th>Deskripsi</th>
+                      </tr>
+                    </thead>
+                    <tbody>                
+                      <tr>
+                        <td>
+                          <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
+                            <div style="background:#f54242; width:10%; height:12px; border-radius:4px;"></div>
+                          </div>
+                        </td>
+                        <td class="text-center"><span class="clickable" data-MK="MK-01" data-type="min" data-value="57">20</span></td>
+                        <td>STK314</td>
+                        <td>Fisika Dasar 2</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
+                            <div style="background:#f54242; width:25%; height:12px; border-radius:4px;"></div>
+                          </div>
+                        </td>
+                        <td class="text-center"><span class="clickable" data-MK="MK-01" data-type="min" data-value="57">30</span></td>
+                        <td>STK114</td>
+                        <td>Azas Teknik Kimia 1</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
+                            <div style="background:#f54242; width:35%; height:12px; border-radius:4px;"></div>
+                          </div>
+                        </td>
+                        <td class="text-center"><span class="clickable" data-MK="MK-01" data-type="min" data-value="57">50</span></td>
+                        <td>STK115</td>
+                        <td>Aljabar Linear</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
+                            <div style="background:#f54242; width:50%; height:12px; border-radius:4px;"></div>
+                          </div>
+                        </td>
+                        <td class="text-center"><span class="clickable" data-MK="MK-01" data-type="min" data-value="57">51</span></td>
+                        <td>STK116</td>
+                        <td>Bahasa Inggris</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
+                            <div style="background:#f54242; width:70%; height:12px; border-radius:4px;"></div>
+                          </div>
+                        </td>
+                        <td class="text-center"><span class="clickable" data-MK="MK-01" data-type="min" data-value="57">57</span></td>
+                        <td>STK144</td>
+                        <td>Perancangan Alat Proses</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>               
               </div>
             </div>
-        
-          <div class="card-body">
-            <div class="table-responsive">
-              <table class="table table1 table-bordered table-striped table-sm datatables1">
-                <thead>
-                  <tr class="text-uppercase text-center">
-                    <th width="5px">No.</th>
-                    <th>Kode Set Pemetaan</th>
-                    <th>Kode MK</th>
-                    <th>Nama MK</th>                    
-                    <th>Jenis</th>
-                    <th>Semester Tempuh</th>
-                    <th>Jumlah CPMK</th>
-                    <th>Jumlah SKS</th>
-                    <th>Aksi</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="text-center">1</td>
-                    <td class="text-center">ST-24</td>
-                    <td>STS704</td>
-                    <td>Metode Pelaksanaan Bangunan</td>
-                    <td class="text-center"><span class="badge badge-success">Wajib</span></td>
-                    <td class="text-center">1</td>
-                    <td>3</td>
-                    <td>3</td>
-                    <td class="text-center">
-                      <button type="button" class="btn btn-sm btn-outline-info" data-bs-toggle="modal" data-bs-target="#modalDetailMK">
-                        📄 Detail
-                      </button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="text-center">2</td>
-                    <td class="text-center">ST-24</td>
-                    <td>STS913</td>
-                    <td>Struktur Komposit</td>
-                    <td class="text-center"><span class="badge badge-info">Pilihan</span></td>
-                    <td class="text-center">1</td>
-                    <td>3</td>
-                    <td>3</td>
-                    <td class="text-center">
-                      <button type="button" class="btn btn-sm btn-outline-info" data-bs-toggle="modal" data-bs-target="#modalDetailMK">
-                        📄 Detail
-                      </button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="text-center">3</td>
-                    <td class="text-center">ST-24</td>
-                    <td>51175111</td>
-                    <td>Building Structures Design</td>                   
-                    <td class="text-center"><span class="badge badge-success">Wajib</span></td>
-                    <td class="text-center">2</td>
-                    <td>3</td>
-                    <td>3</td>
-                    <td class="text-center">
-                      <button type="button" class="btn btn-sm btn-outline-info" data-bs-toggle="modal" data-bs-target="#modalDetailMK">
-                        📄 Detail
-                      </button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="text-center">4</td>
-                    <td class="text-center">ST-24</td>
-                    <td>STS-101</td>
-                    <td>Engineering Statistics</td>                    
-                    <td class="text-center"><span class="badge badge-success">Wajib</span></td>
-                    <td class="text-center">2</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td class="text-center">
-                      <button type="button" class="btn btn-sm btn-outline-info" data-bs-toggle="modal" data-bs-target="#modalDetailMK">
-                        📄 Detail
-                      </button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="text-center">5</td>
-                    <td class="text-center">ST-24</td>
-                    <td>STS307</td>
-                    <td>Bahan Perkerasan Jalan (+Pr)</td>
-                    <td class="text-center"><span class="badge badge-info">Pilihan</span></td>
-                    <td class="text-center">3</td>
-                    <td>4</td>
-                    <td>3</td>
-                    <td class="text-center">
-                      <button type="button" class="btn btn-sm btn-outline-info" data-bs-toggle="modal" data-bs-target="#modalDetailMK">
-                        📄 Detail
-                      </button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="text-center">6</td>
-                    <td class="text-center">ST-24</td>
-                    <td>STS702</td>
-                    <td>Struktur Baja</td>
-                    <td class="text-center"><span class="badge badge-info">Pilihan</span></td>
-                    <td class="text-center">4</td>
-                    <td>3</td>
-                    <td>3</td>
-                    <td class="text-center">
-                      <button type="button" class="btn btn-sm btn-outline-info" data-bs-toggle="modal" data-bs-target="#modalDetailMK">
-                        📄 Detail
-                      </button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="text-center">7</td>
-                    <td class="text-center">ST-24</td>
-                    <td>51195142</td>
-                    <td>Perancangan Struktur Jembatan</td>
-                    <td class="text-center"><span class="badge badge-info">Pilihan</span></td>
-                    <td class="text-center">5</td>
-                    <td>2</td>
-                    <td>2</td>
-                    <td class="text-center">
-                      <button type="button" class="btn btn-sm btn-outline-info" data-bs-toggle="modal" data-bs-target="#modalDetailMK">
-                        📄 Detail
-                      </button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="text-center">8</td>
-                    <td class="text-center">ST-24</td>
-                    <td>51155081</td>
-                    <td>Introduction to Earthquake Engineering</td>
-                    <td class="text-center"><span class="badge badge-info">Pilihan</span></td>
-                    <td class="text-center">6</td>
-                    <td>3</td>
-                    <td>2</td>
-                    <td class="text-center">
-                      <button type="button" class="btn btn-sm btn-outline-info" data-bs-toggle="modal" data-bs-target="#modalDetailMK">
-                        📄 Detail
-                      </button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="text-center">9</td>
-                    <td class="text-center">ST-24</td>
-                    <td>STS904</td>
-                    <td>BIM untuk Manajemen Konstruksi</td>
-                    <td class="text-center"><span class="badge badge-info">Pilihan</span></td>
-                    <td class="text-center">7</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td class="text-center">
-                      <button type="button" class="btn btn-sm btn-outline-info" data-bs-toggle="modal" data-bs-target="#modalDetailMK">
-                        📄 Detail
-                      </button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="text-center">10</td>
-                    <td class="text-center">ST-24</td>
-                    <td>51153061</td>
-                    <td>Water Structures Design</td>
-                    <td class="text-center"><span class="badge badge-info">Pilihan</span></td>
-                    <td class="text-center">8</td>
-                    <td>3</td>
-                    <td>3</td>
-                    <td class="text-center">
-                      <button type="button" class="btn btn-sm btn-outline-info" data-bs-toggle="modal" data-bs-target="#modalDetailMK">
-                        📄 Detail
-                      </button>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+          </div>
+          <!-- Card Highest -->
+          <div class="col-12 col-md-6">
+            <div class="card">
+              <div class="card-header">
+                <h5 class="card-title mb-0">🔼 Top 5 MK Performa Tertinggi</h5>
+              </div>
+              <div class="card-body">
+                <div class="table-responsive">
+                  <table id="tblCplStats" class="table table-hover table-bordered table-sm">
+                    <thead class="table-light">
+                      <tr>
+                        <th>Ranking</th>
+                        <th class="text-center" style="width: 140px">Rerata Nilai Akhir</th>
+                        <th>MK</th>
+                        <th>Deskripsi</th>
+                      </tr>
+                    </thead>
+                    <tbody>                
+                      <tr>                      
+                        <td>
+                          <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
+                            <div style="background:#4287f5; width:95%; height:12px; border-radius:4px;"></div>
+                          </div>
+                        </td>
+                        <td class="text-center"><span class="clickable" data-MK="MK-01" data-type="max" data-value="95">95</span></td>
+                        <td>STS911</td>
+                        <td>Bahasa Inggris</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
+                            <div style="background:#4287f5; width:85%; height:12px; border-radius:4px;"></div>
+                          </div>
+                        </td>
+                        <td class="text-center"><span class="clickable" data-MK="MK-01" data-type="max" data-value="95">90</span></td>
+                        <td>STS916</td>
+                        <td>Ekonomi Teknik</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
+                            <div style="background:#4287f5; width:78%; height:12px; border-radius:4px;"></div>
+                          </div>
+                        </td>
+                        <td class="text-center"><span class="clickable" data-MK="MK-01" data-type="max" data-value="95">85</span></td>
+                        <td>UNI913</td>
+                        <td>Kuliah Kerja Nyata</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
+                            <div style="background:#4287f5; width:65%; height:12px; border-radius:4px;"></div>
+                          </div>
+                        </td>
+                        <td class="text-center"><span class="clickable" data-MK="MK-01" data-type="max" data-value="95">70</span></td>
+                        <td>STS991</td>
+                        <td>Fisika Dasar</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
+                            <div style="background:#4287f5; width:50%; height:12px; border-radius:4px;"></div>
+                          </div>
+                        </td>
+                        <td class="text-center"><span class="clickable" data-MK="MK-01" data-type="max" data-value="95">70</span></td>
+                        <td>STS914</td>
+                        <td>Islam Ulil Albab</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                
+              </div>
             </div>
           </div>
         </div>
+        <!-- daftar MK -->
+        <div class="card collapse" id="daftarIKCPL43" >
+          <div class="card-header d-flex align-items-center">
+            <h5 class="card-title mb-0"><i class="fas fa-table me-2"></i> Tabel Pencapaian</h5>
+            <div class="card-tools ms-auto">
+              <!-- <small class="text-muted">Klik angka Min/Max untuk melihat 1 mahasiswa (NIM / Nama / Nilai)</small> -->
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table id="tblCplStats" class="table table-hover table-bordered table-sm">
+                <thead class="table-light">
+                  <tr>
+                    <th style="width: 40px">#</th>
+                    <th>Mata Kuliah</th>
+                    <th class="text-center">Nilai (Angka)</th>
+                    <th class="text-center">Nilai (Huruf)</th>
+                    <th class="text-center">Status</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+
+                  <!-- Tahap Formatif -->
+                  <tr><td colspan="5" class="text-center fw-bold table-secondary">Tahap Formatif / Semester 1</td></tr>
+
+                  <tr>
+                    <td>1</td>
+                    <td>SKS982: Pemahaman Dasar Polimer</td>
+                    <td class="text-center">
+                      <button class="btn btn-sm btn-outline-info" data-bs-toggle="modal" data-bs-target="#modalStudentMK">72.14</button>
+                    </td>
+                    <td class="text-center">B</td>
+                    <td class="text-center">🟨 Cukup</td>
+                  </tr>
+
+                  <tr>
+                    <td>2</td>
+                    <td>SKS917: Teori Komposit</td>
+                    <td class="text-center">
+                      <button class="btn btn-sm btn-outline-info" data-bs-toggle="modal" data-bs-target="#modalStudentMK">71</button>
+                    </td>
+                    <td class="text-center">B+</td>
+                    <td class="text-center">🟨 Cukup</td>
+                  </tr>
+
+                  <tr>
+                    <td>3</td>
+                    <td>UNI902: Aplikasi Polimer</td>
+                    <td class="text-center">
+                      <button class="btn btn-sm btn-outline-info" data-bs-toggle="modal" data-bs-target="#modalStudentMK">76.80</button>
+                    </td>
+                    <td class="text-center">B+</td>
+                    <td class="text-center">🟨 Cukup</td>
+                  </tr>
+
+                  <tr>
+                    <td>4</td>
+                    <td>UNI912: Proses Produksi</td>
+                    <td class="text-center">
+                      <button class="btn btn-sm btn-outline-info" data-bs-toggle="modal" data-bs-target="#modalStudentMK">76.80</button>
+                    </td>
+                    <td class="text-center">B+</td>
+                    <td class="text-center">🟨 Cukup</td>
+                  </tr>
+
+
+                  <!-- Tahap Intermediate -->
+                  <tr><td colspan="5" class="text-center fw-bold table-secondary">Tahap Intermediate / Semester 5</td></tr>
+
+                  <tr>
+                    <td>5</td>
+                    <td>SKS234: Analisis Material</td>
+                    <td class="text-center">
+                      <button class="btn btn-sm btn-outline-info" data-bs-toggle="modal" data-bs-target="#modalStudentMK">75.30</button>
+                    </td>
+                    <td class="text-center">B+</td>
+                    <td class="text-center">🟨 Cukup</td>
+                  </tr>
+
+                  <tr>
+                    <td>6</td>
+                    <td>SKS812: Keselamatan & Etika</td>
+                    <td class="text-center">
+                      <button class="btn btn-sm btn-outline-info" data-bs-toggle="modal" data-bs-target="#modalStudentMK">76.80</button>
+                    </td>
+                    <td class="text-center">B+</td>
+                    <td class="text-center">🟨 Cukup</td>
+                  </tr>
+
+                  <tr>
+                    <td>7</td>
+                    <td>SKS908: Desain Proses</td>
+                    <td class="text-center">
+                      <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#modalStudentMK">-</button>
+                    </td>
+                    <td class="text-center"></td>
+                    <td class="text-center"><i>Menunggu Penilaian</i></td>
+                  </tr>
+
+
+                  <!-- Tahap Profesional -->
+                  <tr><td colspan="5" class="text-center fw-bold table-secondary">Tahap Profesional / Semester 7</td></tr>
+
+                  <tr>
+                    <td>8</td>
+                    <td>SKS111: Metode Eksperimental</td>
+                    <td class="text-center">
+                    </td>
+                    <td class="text-center"></td>
+                    <td class="text-center"><i>Belum Diambil</i></td>
+                  </tr>
+
+                  <tr>
+                    <td>9</td>
+                    <td>SKS113: Statistik & Analisis Data</td>
+                    <td class="text-center">
+                      <button class="btn btn-sm btn-outline-info" data-bs-toggle="modal" data-bs-target="#modalStudentMK">71.50</button>
+                    </td>
+                    <td class="text-center">B</td>
+                    <td class="text-center">🟨 Cukup</td>
+                  </tr>
+
+                  <tr>
+                    <td>10</td>
+                    <td>SKS932: Komunikasi Teknis</td>
+                    <td class="text-center">
+                      <button class="btn btn-sm btn-outline-info" data-bs-toggle="modal" data-bs-target="#modalStudentMK">59.00</button>
+                    </td>
+                    <td class="text-center">C</td>
+                    <td class="text-center">🟥 Kurang</td>
+                  </tr>
+
+                </tbody>
+              </table>
+
+            </div>
+          </div>                 
+        </div>
+       
+
+
+
 
 
 
@@ -1186,10 +1333,7 @@ canvas {
       <div class="modal-body">
         <p>
           Ringkasan capaian CPL per Individu Mahasiswa, perkembangan, peringatan dini (EWS), disajikan dalam bentuk grafik dan tabel (Mockup data statis)
-        </p>     
-        <p>
-          untuk audit implementasi dan atau audit kurikulum
-        </p>   
+        </p>        
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
@@ -1249,84 +1393,7 @@ canvas {
 
 
 
-<!-- Modal Detail MK -->
-  <div class="modal fade" id="modalDetailMK" tabindex="-1" role="dialog" aria-labelledby="detailMKTitle" aria-hidden="true">
-    <div class="modal-dialog modal-lg" role="document">
-      <div class="modal-content">
 
-        <!-- Header -->
-        <div class="modal-header bg-info text-white">
-          <h5 class="modal-title" id="detailMKTitle">Detail Kelas Mata Kuliah</h5>
-          <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-
-        <!-- Body -->
-        <div class="modal-body">
-
-          <!-- Informasi Umum -->
-          <h6 class="mb-2"><b>Informasi Umum</b></h6>
-          <table class="table table-sm table-bordered mb-4">
-            <tr>
-              <th style="width: 180px;">Mata Kuliah</th>
-              <td>SKT1239 — Dasar Matematika</td>
-            </tr>
-            <tr>
-              <th style="width: 180px;">Periode Akademik</th>
-              <td>2024/2025 Gasal</td>
-            </tr>
-          </table>
-
-          <!-- Tabel Detail Kelas -->
-          <h6 class="mb-2"><b>Informasi Kelas</b></h6>
-
-          <div class="table-responsive">
-            <table class="table table-bordered table-sm">
-              <thead class="thead-light">
-                <tr class="text-center">
-                  <th>Kelas</th>
-                  <th>Dosen Pengampu</th>
-                  <th>Rerata Nilai MK</th>
-                  <th>Rerata CPMK 1</th>
-                  <th>Rerata Remidi CPMK 1</th>
-                  <th>Rerata CPMK 2</th>
-                  <th>Rerata Remidi CPMK 2</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr class="text-center">
-                  <td>A</td>
-                  <td>Hasan, ST, MT.</td>
-                  <td>78</td>
-                  <td>78</td>
-                  <td>0</td>
-                  <td>78</td>
-                  <td>0</td>
-                </tr>
-                <tr class="text-center">
-                 <td>C</td>
-                  <td>Rendi, ST, MT.</td>
-                  <td>78</td>
-                  <td>78</td>
-                  <td>0</td>
-                  <td>78</td>
-                  <td>0</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-        </div>
-
-        <!-- Footer -->
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-        </div>
-
-      </div>
-    </div>
-  </div>
   <script>     
     // -------------------------
     // Populate tables & KPI
@@ -1519,24 +1586,22 @@ function generateBarChart(canvasId, labels, data, labelName, color) {
             }]
         },
         options: {
-          responsive: true,
-          maintainAspectRatio: false,
-          scales: {
-            x: {
-              ticks: {
-                display: false   // ⬅️ MATIKAN LABEL BAWAH
-              },
-              grid: {
-                display: false   // (opsional) hilangkan garis grid vertikal
-              }
-            },
-            y: {
-              beginAtZero: true,
-              max: 100
+            responsive: true,
+            scales: {
+                 x: {
+                  ticks: {
+                    display: false   // ⬅️ MATIKAN LABEL BAWAH
+                  },
+                  grid: {
+                    display: false   // (opsional) hilangkan garis grid vertikal
+                  }
+                },
+                y: {
+                    beginAtZero: true,
+                    max: 100
+                }
             }
-          }
         }
-
     });
 }
 
@@ -1712,4 +1777,87 @@ generateHorizontalChart(
         }
     });
 </script>
+
+<!-- Modal: Detail MK Student -->
+<div class="modal fade" id="modalStudentMK" tabindex="-1" aria-labelledby="modalStudentMKLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+
+      <!-- HEADER -->
+      <div class="modal-header bg-info text-white py-2">
+        <h6 class="modal-title mb-0" id="modalStudentMKLabel">
+          <i class="fas fa-book-open me-2"></i> Detail MK Student
+        </h6>
+        <button type="button" class="btn-close btn-close-white" data-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <!-- BODY -->
+      <div class="modal-body small pb-1">
+
+        <!-- INFORMASI UMUM -->
+        <div class="mb-3">
+          <dl class="row mb-0">
+            <dt class="col-4">Set Pemetaan</dt>
+            <dd class="col-8" id="mkSetPemetaan">SKO 24</dd>
+
+            <dt class="col-4">NIM</dt>
+            <dd class="col-8" id="mkNim">129873691</dd>
+
+            <dt class="col-4">Mata Kuliah</dt>
+            <dd class="col-8" id="mkNamaMk">SKS119 Pengantar Pancasila</dd>
+          </dl>
+        </div>
+
+        <!-- INFORMASI DETAIL -->
+        <div class="table-responsive">
+          <table class="table table-bordered table-striped table-sm mb-0">
+            <thead class="text-center bg-light">
+              <tr class="text-uppercase small">
+                <th>Periode</th>
+                <th>Angka</th>
+                <th>Huruf</th>
+                <th>CPMK 1</th>
+                <th>Perb. 1</th>
+                <th>CPMK 2</th>
+                <th>Perb. 2</th>
+                <th>CPMK 3</th>
+                <th>Perb. 3</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>2021/2022 Genap</td>
+                <td>71</td>
+                <td>B+</td>
+                <td>76</td>
+                <td></td>
+                <td>78</td>
+                <td></td>
+                <td>67</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>2020/2021 Genap</td>
+                <td>56</td>
+                <td>D+</td>
+                <td>58</td>
+                <td>69</td>
+                <td>59</td>
+                <td>69</td>
+                <td>70</td>
+                <td>70</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- FOOTER -->
+      <div class="modal-footer py-2">
+        <button class="btn btn-secondary btn-sm" data-dismiss="modal">Tutup</button>
+      </div>
+
+    </div>
+  </div>
+</div>
 <?php include('5script.php'); ?>

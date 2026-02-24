@@ -244,7 +244,7 @@
           </div>
 
           <!-- Rekap per Angkatan -->
-          <div class="card mt-3">
+          <!-- <div class="card mt-3">
             <div class="card-header">
               <h3 class="card-title">Rekap Status Mahasiswa per Angkatan</h3>
             </div>
@@ -289,7 +289,7 @@
                 </tbody>
               </table>
             </div>
-          </div>
+          </div> -->
 
 
 
