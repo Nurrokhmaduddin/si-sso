@@ -8,7 +8,7 @@
 
   <section class="content-header">
     <div class="container-fluid">
-      <h3 class="mb-0">Monev Setahun
+      <h3 class="mb-0">Monev Setahun Prodi
         <button type="button" class="btn btn-tool" data-bs-toggle="modal" data-bs-target="#modalBantuan" title="Bantuan">
           <i class="fas fa-question-circle"></i>
         </button>
@@ -83,23 +83,23 @@
             </div>
             <div class="col-md-3">
               <div class="kpi " style="background:#20c997;">
-                <div class="small">Rerata CPL Terkuat</div>
-                <div class="big" id="kpiGap">CPL 1 </div>
-                <div class="small">87.2</div>
+                <div class="small">Rerata CPL Tertinggi</div>
+                <div class="big" id="kpiGap">CPL 1 (87.2)</div>
+                <div class="small">dari 254 kelas</div>
               </div>
             </div>
             <div class="col-md-3">
               <div class="kpi" style="background:#ff7f0e;">
-                <div class="small">Pemerataan Rerata CPL</div>
-                <div class="big" id="kpiReached">31 | 0.61</div>
-                <div class="small">Kategori: Cukup Stabil</div>
+                <div class="small">Jumlah IK Risiko</div>
+                <div class="big" id="kpiReached">5 IK</div>
+                <div class="small">konsisten rerata < 65</div>
               </div>
             </div>
             <div class="col-md-3">
               <div class="kpi bg-danger">
                 <div class="small">Rerata CPL Terendah</div>
-                <div class="big" id="kpiRisk">CPL 6</div>
-                <div class="small">56.2</div>
+                <div class="big" id="kpiRisk">CPL 6 (56.2)</div>
+                <div class="small">dari 254 kelas</div>
               </div>
             </div>
           </div>
@@ -719,7 +719,7 @@ canvas {
       </div>
       <div class="modal-body">
         <p>
-          Ringkasan capaian CPL per Individu Mahasiswa, perkembangan, peringatan dini (EWS), disajikan dalam bentuk grafik dan tabel (Mockup data statis)
+          Ambil dari nilai CPMK pada kelas yang diselenggarakan di tahun akademik tersebut saja.. Fokus untuk menganalisis selueuh CPL dan IK sebagai pelaksanaan sistemmik. mengukur stabilitas capaian CPL sistemik dan IK sistemik, dari tahun ke tahun. Ringkasan capaian CPL per Individu Mahasiswa, perkembangan, peringatan dini (EWS), disajikan dalam bentuk grafik dan tabel (Mockup data statis)
         </p>        
         <p>
           untuk audit implementasi dan atau audit kurikulum
@@ -1261,7 +1261,7 @@ generateHorizontalChart(
     data: {
       labels: ['CPL 1', 'CPL 2', 'CPL 3', 'CPL 4', 'CPL 5', 'CPL 6', 'CPL 7', 'CPL 8', 'CPL 9', 'CPL 10', 'CPL 11'],
       datasets: [{
-        label: 'Rerata Nilai CPL',
+        label: 'Rerata Nilai CPL gg',
         data: [80, 90, 75, 85, 88,65, 67, 70, 55, 30, 23],
             // Warna hijau lembut (lebih nyaman di mata)
         backgroundColor: 'rgba(80, 200, 120, 0.35)',

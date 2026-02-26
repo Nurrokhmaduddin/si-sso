@@ -751,6 +751,9 @@
       </div>
       <div class="modal-body">
         <p>
+          hanya menampung semua mata kuliah yg status (aktif) ketika create. untuk memisahkan mana perkuliahan fakta, dan perkuliahan konversi.
+        </p>
+        <p>
           Ideal hasil ekspor kelas berdasarkan:
 kurikulum, set pemetaan, mata kuliah(satu,beberapa, semua)
 kolom: kode MK, mata kuliah, mahasiswa, nilai akhir(huruf),nilai akhir(angka), cpmk 1,2,3,4,5

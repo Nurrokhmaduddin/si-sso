@@ -38,7 +38,17 @@
                   <b>Set Pemetaan:</b> v1.0
                 </div>
                 <div class="col-md-6">
-                  <b>Mahasiswa:</b> 20521098 - VEGA AYU CENTYA
+                  <b>NIM:</b> 20521098
+                </div>
+                <div class="col-md-6">
+                  <b>Angkatan:</b> 2020
+                </div>
+                <div class="col-md-6">
+                  <b>Nama :</b> VEGA AYU CENTYA
+                </div>
+                
+                <div class="col-md-6">
+                  <b>Status :</b> Aktif
                 </div>
                 
               </div>
@@ -74,11 +84,18 @@
   <div class="row g-3 mb-3">
     <div class="col-md-3">
       <div class="kpi bg-primary">
-        <div class="small">Rata-rata CPL</div>
-        <div class="big" id="kpiAvg">75.2</div>
-        <div class="small">dari 12 CPL</div>
+        <div class="small">Jumlah CPL</div>
+        <div class="big" id="kpiAvg">5 dari 10</div>
+        <div class="small">capai ketuntasan</div>
       </div>
     </div>
+    <!-- <div class="col-md-3">
+      <div class="kpi bg-primary">
+        <div class="small">Rata-rata CPL</div>
+        <div class="big" id="kpiAvg">75.65</div>
+        <div class="small">dari 10 CPL</div>
+      </div>
+    </div> -->
     <div class="col-md-3">
       <div class="kpi " style="background:#20c997;">
         <div class="small">Rata-rata IK</div>
@@ -107,9 +124,11 @@
   <ul class="nav nav-tabs">   
     <li class="nav-item" onclick="window.location='monev-cpl-individual1.php'"><a class="nav-link active">Grafik</a></li>
     <li class="nav-item" onclick="window.location='monev-cpl-individual2.php'"><a class="nav-link ">Tabel</a></li>
-    <li class="nav-item" onclick="window.location='monev-cpl-individual3.php'"><a class="nav-link ">KHS</a></li>
-    <li class="nav-item" onclick="window.location='monev-cpl-individual3.php'"><a class="nav-link ">IPK</a></li>
-    <li class="nav-item" onclick="window.location='monev-cpl-individual3.php'"><a class="nav-link ">Riwayat</a></li>
+    <li class="nav-item" onclick="window.location='monev-cpl-individual4.php'"><a class="nav-link ">Riwayat CPL</a></li>
+    <li class="nav-item" onclick="window.location='monev-cpl-individual5.php'"><a class="nav-link ">Riwayat IK</a></li>
+    <li class="nav-item" onclick="window.location='monev-cpl-individual3.php'"><a class="nav-link ">Riwayat MK</a></li>
+    <li class="nav-item" onclick="window.location='monev-cpl-individual6.php'"><a class="nav-link ">Riwayat KHS</a></li>
+    <li class="nav-item" onclick="window.location='monev-cpl-individual7.php'"><a class="nav-link ">IPK</a></li>
   </ul>
 
 

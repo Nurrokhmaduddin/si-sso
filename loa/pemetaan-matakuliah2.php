@@ -1,4 +1,4 @@
-<?php $page = 'pemetaan_kurikulum_mk'; ?>
+<?php $page = 'pemetaan_cpmk'; ?>
 <?php include('1header.php'); ?>
 <?php include('2navbar.php'); ?>
 <?php include('3sidebar.php'); ?>

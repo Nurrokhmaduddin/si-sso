@@ -89,277 +89,155 @@
           </div>
 
 
-        <!-- ========== CARD : Tabel  ========== -->
-          <div class="card">
-            <!-- <div class="card-header d-flex align-items-center">
-              <h5 class="card-title mb-0">Judul tabel ini</h5>    
-              <div class="ms-auto">                
-                <button type="button" class="btn btn-outline-primary btn-sm " data-toggle="modal" data-target="#modalTambahData">
-                  <i class="fas fa-plus me-1"></i> Add
-                </button>
-                <button type="button" class="btn btn-outline-primary btn-sm ">
-                  <i class="fas fa-file-upload me-1"></i> Import
-                </button>
-                <button type="button" class="btn btn-outline-success btn-sm">
-                  <i class="fas fa-file-download me-1"></i> Export
-                </button>
+         <!-- ========== CARD : Tabel  Granular ========== -->
+<div class="card">
+  <div class="card-header d-flex align-items-center">
+    <h5 class="card-title mb-0">Daftar Mahasiswa</h5>    
+    
+  </div>
+
+  <div class="card-body">
+    <div class="table-responsive">
+      <table class="table table-bordered table-striped table-sm datatables1">
+        <thead>
+          <tr class="text-uppercase text-center">
+            <th width="5px">No.</th>
+            <th>Username</th>
+            <th>DisplayName</th>
+            <th>Email/Nomor HP</th>
+            <th>Angkatan</th>
+            <th>Jalur/Jurusan</th>
+            <th>Foto</th>
+            <th>Status</th>
+            <th>Aksi</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr>
+            <td class="text-center">1</td>
+            <td>19312137</td>
+            <td>Pramita Widyadari</td>
+            <td>pramita.widyadari@univ.ac.id</td>
+            <td class="text-center">2019</td>
+            <td>Civil Engineering Regular</td>
+            <td class="text-center"><img style="width:40px;" alt="Foto"></td>
+            <td class="text-center"><span class="badge badge-info">Aktif</span></td>
+            <td class="text-center">
+              <button type="button" class="btn btn-sm btn-outline-warning"><i class="fas fa-key"></i></button>
+              <button type="button" class="btn btn-sm btn-outline-primary"><i class="fas fa-edit"></i></button>
+              <button type="button" class="btn btn-sm btn-outline-danger"><i class="fas fa-trash"></i></button>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="text-center">2</td>
+            <td>19312376</td>
+            <td>Ho Aldika Novaldy Sumampow</td>
+            <td>aldika.sumampow@univ.ac.id</td>
+            <td class="text-center">2019</td>
+            <td>Civil Engineering Regular</td>
+            <td class="text-center"><img style="width:40px;" alt="Foto"></td>
+            <td class="text-center"><span class="badge badge-warning">Cuti</span></td>
+            <td class="text-center">
+              <button class="btn btn-sm btn-outline-info" onclick="window.location.href='monev-cpl-individual1.php' " ><i class="fas fa-info-circle"></i></button>
+              <button class="btn btn-sm btn-outline-primary"><i class="fas fa-upload"></i></button>
+              <button class="btn btn-sm btn-outline-success"><i class="fas fa-download"></i></button>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="text-center">3</td>
+            <td>19312406</td>
+            <td>Annisa Regita Sintowati</td>
+            <td>annisa.sintowati@univ.ac.id</td>
+            <td class="text-center">2019</td>
+            <td>Civil Engineering Regular</td>
+            <td class="text-center"><img style="width:40px;" alt="Foto"></td>
+            <td class="text-center"><span class="badge badge-danger">Skors</span></td>
+            <td class="text-center">
+              <div class="btn-group">
+                <a href="portfolio_cpmk_detail2.php" target="_blank" class="btn btn-sm btn-outline-info">
+                  <i class="fas fa-external-link-alt"></i> View
+                </a>
+                <button type="button" class="btn btn-sm btn-outline-info dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown"></button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#"><i class="fas fa-edit text-primary"></i> Edit</a></li>
+                  <li><a class="dropdown-item" href="#"><i class="fas fa-trash text-danger"></i> Hapus</a></li>
+                  <li><a class="dropdown-item" href="#"><i class="fas fa-key text-warning"></i> Ubah Password</a></li>
+                </ul>
               </div>
-            </div> -->
+            </td>
+          </tr>
 
-            <div class="card-body">
-              <div class="table-responsive">
-               <table class="table table1 table-bordered table-striped table-sm datatables1">
-                <thead>
-                  <!-- BARIS FILTER -->
-                  <!-- <tr class="filters">
-                    <th></th>
-                    <th><input type="text" class="form-control form-control-sm" placeholder="Search Username"></th>
-                    <th><input type="text" class="form-control form-control-sm" placeholder="Search Name"></th>
-                    <th><input type="text" class="form-control form-control-sm" placeholder="Search Email/HP"></th>
-                    <th></th>
-                    <th>
-                      <select class="form-control form-control-sm">
-                        <option value="">All</option>
-                        <option value="Aktif">Aktif</option>
-                        <option value="NonAktif">NonAktif</option>
-                      </select>
-                    </th>
-                    <th></th>
-                  </tr> -->
-                  <tr class="text-uppercase text-center">
-                    <th width="5px">No.</th>
-                    <th>Username</th>
-                    <th>DisplayName</th>
-                    <th>Email/Nomor HP</th>
-                    <th>Foto</th>
-                    <th>Status</th>
-                    <th>Aksi</th>
-                  </tr>
-                  
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="text-center">1</td>
-                    <td>19312137</td>
-                    <td>Pramita Widyadari</td>
-                    <td>pramita.widyadari@univ.ac.id</td>
-                    <td class="text-center"><img style="width: 40px;" alt="Foto"></td>
-                    <td class="text-center"><span class="badge bg-info">Aktif</span></td>
-                    <td class="text-center">
-                      <button type="button" class="btn btn-sm btn-outline-warning">
-                        <i class="fas fa-key"></i>
-                      </button>
-                      <button type="button" class="btn btn-sm btn-outline-primary">
-                        <i class="fas fa-edit"></i>
-                      </button>
-                      <button type="button" class="btn btn-sm btn-outline-danger">
-                        <i class="fas fa-trash"></i>
-                      </button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="text-center">2</td>
-                    <td>19312376</td>
-                    <td>Ho Aldika Novaldy Sumampow</td>
-                    <td>aldika.sumampow@univ.ac.id</td>
-                    <td class="text-center"><img style="width: 40px;" alt="Foto"></td>
-                    <td class="text-center"><span class="badge bg-info">Aktif</span></td>
-                    <td class="text-center">
-                      <button type="button" class="btn btn-sm btn-outline-info">
-                        <i class="fas fa-info-circle"></i>
-                      </button>
-                      <button type="button" class="btn btn-sm btn-outline-primary">
-                        <i class="fas fa-upload"></i>
-                      </button>
-                      <button type="button" class="btn btn-sm btn-outline-success">
-                        <i class="fas fa-download"></i>
-                      </button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="text-center">3</td>
-                    <td>19312406</td>
-                    <td>Annisa Regita Sintowati</td>
-                    <td>annisa.sintowati@univ.ac.id</td>
-                    <td class="text-center"><img style="width: 40px;" alt="Foto"></td>
-                    <td class="text-center"><span class="badge bg-info">Aktif</span></td>
-                    <td class="text-center">
-                      <div class="btn-group">
-                        <!-- Tombol utama (View) -->
-                        <a href="portfolio_cpmk_detail2.php" target="_blank" 
-                        class="btn btn-sm btn-outline-info">
-                        <i class="fas fa-external-link-alt"></i> View
-                      </a>
+          <tr>
+            <td class="text-center">4</td>
+            <td>19312418</td>
+            <td>Claudia Monica Aditama</td>
+            <td>claudia.aditama@univ.ac.id</td>
+            <td class="text-center">2019</td>
+            <td>Civil Engineering Regular</td>
+            <td class="text-center"><img style="width:40px;" alt="Foto"></td>
+            <td class="text-center"><span class="badge badge-danger">Drop Out</span></td>
+            <td class="text-center">
+              <button class="btn btn-sm btn-outline-warning">🔑</button>
+            </td>
+          </tr>
+          <tr>
 
-                      <!-- Tombol dropdown -->
-                      <button type="button" 
-                      class="btn btn-sm btn-outline-info dropdown-toggle dropdown-toggle-split"
-                      data-bs-toggle="dropdown" aria-expanded="false">
-                      <span class="visually-hidden">Toggle Dropdown</span>
-                    </button>
+            <td class="text-center">5</td>
+            <td>19312424</td>
+            <td>Filza Aliyah Tasya</td>
+            <td>filza.tasya@univ.ac.id</td>
+            <td class="text-center">2019</td>
+            <td>Civil Engineering IP</td>
+            <td class="text-center"><img style="width:40px;" alt="Foto"></td>
+            <td class="text-center"><span class="badge badge-danger">Passed Out</span></td>
+            <td class="text-center">
+              <button class="btn btn-sm btn-outline-warning">🔑</button>
+            </td>
+          </tr>
 
-                    <!-- Menu dropdown -->
-                    <ul class="dropdown-menu">
-                      <li>
-                        <a class="dropdown-item" href="#">
-                          <i class="fas fa-edit text-primary"></i> Edit Link
-                        </a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="#">
-                          <i class="fas fa-trash-alt text-danger"></i> Hapus Data
-                        </a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="#">
-                          <i class="fas fa-key text-warning"></i> Ubah Password
-                        </a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="#">
-                          <i class="fas fa-upload text-primary"></i> Upload File
-                        </a>
-                      </li>
-
-                      <li><hr class="dropdown-divider"></li>
-
-                      <li>
-                        <a class="dropdown-item" href="#">
-                          <i class="fas fa-download text-success"></i> Download File
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-
-</td>
-                  </tr>
-                  <tr>
-                    <td class="text-center">4</td>
-                    <td>19312418</td>
-                    <td>Claudia Monica Aditama</td>
-                    <td>claudia.aditama@univ.ac.id</td>
-                    <td class="text-center"><img style="width: 40px;" alt="Foto"></td>
-                    <td class="text-center"><span class="badge bg-info">Aktif</span></td>
-                    <td class="text-center"><button type="button" class="btn btn-sm btn-outline-warning">🔑</button></td>
-                  </tr>
-                  <tr>
-                    <td class="text-center">5</td>
-                    <td>19312424</td>
-                    <td>Filza Aliyah Tasya</td>
-                    <td>filza.tasya@univ.ac.id</td>
-                    <td class="text-center"><img style="width: 40px;" alt="Foto"></td>
-                    <td class="text-center"><span class="badge bg-info">Aktif</span></td>
-                    <td class="text-center"><button type="button" class="btn btn-sm btn-outline-warning">🔑</button></td>
-                  </tr>
-                  <tr>
-                    <td class="text-center">6</td>
-                    <td>19312479</td>
-                    <td>Asep Sunandar</td>
-                    <td>asep.sunandar@univ.ac.id</td>
-                    <td class="text-center"><img style="width: 40px;" alt="Foto"></td>
-                    <td class="text-center"><span class="badge bg-info">Aktif</span></td>
-                    <td class="text-center"><button type="button" class="btn btn-sm btn-outline-warning">🔑</button></td>
-                  </tr>
-                  <tr>
-                    <td class="text-center">7</td>
-                    <td>19312484</td>
-                    <td>Fitri Dwi Astuti</td>
-                    <td>fitri.astuti@univ.ac.id</td>
-                    <td class="text-center"><img style="width: 40px;" alt="Foto"></td>
-                    <td class="text-center"><span class="badge bg-info">Aktif</span></td>
-                    <td class="text-center"><button type="button" class="btn btn-sm btn-outline-warning">🔑</button></td>
-                  </tr>
-                  <tr>
-                    <td class="text-center">8</td>
-                    <td>19312486</td>
-                    <td>Dynda Agustina Tiara Putri</td>
-                    <td>dynda.putri@univ.ac.id</td>
-                    <td class="text-center"><img style="width: 40px;" alt="Foto"></td>
-                    <td class="text-center"><span class="badge bg-info">Aktif</span></td>
-                    <td class="text-center">
-                      <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-outline-info dropdown-toggle" 
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="fas fa-ellipsis-h"></i> Action
-                      </button>
-                      <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#"><i class="fas fa-edit text-primary"></i> Edit Link</a></li>
-                        <li><a class="dropdown-item" href="#"><i class="fas fa-trash-alt text-danger"></i> Hapus Data</a></li>
-                        <li><a class="dropdown-item" href="#"><i class="fas fa-key text-warning"></i> Ubah Password</a></li>
-                        <li><a class="dropdown-item" href="#"><i class="fas fa-upload text-success"></i> Upload File</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="portfolio_cpmk_detail2.php" target="_blank">
-                          <i class="fas fa-external-link-alt text-info"></i> View Link</a></li>
-                          <li><a class="dropdown-item" href="#"><i class="fas fa-download text-success"></i> Download File</a></li>
-                        </ul>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="text-center">9</td>
-                    <td>19320088</td>
-                    <td>Ridho Adi Kurnianto</td>
-                    <td>ridho.kurnianto@univ.ac.id</td>
-                    <td class="text-center"><img style="width: 40px;" alt="Foto"></td>
-                    <td class="text-center"><span class="badge bg-info">Aktif</span></td>
-                    <td class="text-center">
-                      <button type="button" class="btn btn-sm btn-outline-warning">
-                        <i class="fas fa-key"></i>
-                      </button>
-                      <button type="button" class="btn btn-sm btn-outline-primary">
-                        <i class="fas fa-edit"></i>
-                      </button>
-                      <button type="button" class="btn btn-sm btn-outline-danger">
-                        <i class="fas fa-trash"></i>
-                      </button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="text-center">10</td>
-                    <td>19321025</td>
-                    <td>Freyendo Al Farrel Sibarani</td>
-                    <td>freyendo.sibarani@univ.ac.id</td>
-                    <td class="text-center"><img style="width: 40px;" alt="Foto"></td>
-                    <td class="text-center"><span class="badge bg-info">Aktif</span></td>
-                    <td class="text-center">
-                      <button type="button" class="btn btn-sm btn-outline-info">
-                        <i class="fas fa-info-circle"></i>
-                      </button>
-                      <button type="button" class="btn btn-sm btn-outline-primary">
-                        <i class="fas fa-upload"></i>
-                      </button>
-                      <button type="button" class="btn btn-sm btn-outline-success">
-                        <i class="fas fa-download"></i>
-                      </button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="text-center">11</td>
-                    <td>19321026</td>
-                    <td>Al Farrel Sibarani</td>
-                    <td>sibarani@univ.ac.id</td>
-                    <td class="text-center"><img style="width: 40px;" alt="Foto"></td>
-                    <td class="text-center"><span class="badge bg-info">Aktif</span></td>
-                    <td class="text-center">
-                      <button type="button" class="btn btn-sm btn-outline-info">
-                        <i class="fas fa-info-circle"></i>
-                      </button>
-                      <button type="button" class="btn btn-sm btn-outline-primary">
-                        <i class="fas fa-upload"></i>
-                      </button>
-                      <button type="button" class="btn btn-sm btn-outline-success">
-                        <i class="fas fa-download"></i>
-                      </button>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-
-
+          <tr>
+            <td class="text-center">6</td>
+            <td>19312424</td>
+            <td>Filza Aliyah Tasya</td>
+            <td>filza.tasya@univ.ac.id</td>
+            <td class="text-center">2019</td>
+            <td>Civil Engineering Regular</td>
+            <td class="text-center"><img style="width:40px;" alt="Foto"></td>
+            <td class="text-center"><span class="badge badge-success">Lulus</span></td>
+            <td class="text-center">
+              <div class="btn-group">
+                <button type="button" class="btn btn-sm btn-outline-info dropdown-toggle" 
+                data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fas fa-ellipsis-h"></i> Action
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#"><i class="fas fa-edit text-primary"></i> Edit Link</a></li>
+                <li><a class="dropdown-item" href="#"><i class="fas fa-trash-alt text-danger"></i> Hapus Data</a></li>
+                <li><a class="dropdown-item" href="#"><i class="fas fa-key text-warning"></i> Ubah Password</a></li>
+                <li><a class="dropdown-item" href="#"><i class="fas fa-upload text-success"></i> Upload File</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="portfolio_cpmk_detail2.php" target="_blank">
+                  <i class="fas fa-external-link-alt text-info"></i> View Link</a></li>
+                  <li><a class="dropdown-item" href="#"><i class="fas fa-download text-success"></i> Download File</a></li>
+                </ul>
               </div>
-            </div>
-            <!-- /.card-body -->
-          </div>
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+          
+
+
+
+
         </div>
       </div>
     </div>

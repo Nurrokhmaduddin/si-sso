@@ -87,6 +87,80 @@
             </div>
           </div>
 
+          <!-- ========== CARD : pola pikir ========== -->
+<div class="card shadow-sm">
+    <div class="card-header bg-primary text-white">
+      <h5 class="mb-0">Matriks Unit vs Periode Evaluasi</h5>
+    </div>
+
+    <div class="card-body">
+
+      <div class="table-responsive">
+        <table class="table table-bordered table-hover text-center align-middle">
+          <thead class="table-light">
+            <tr>
+              <th>Unit</th>
+              <th>Semester</th>
+              <th>Tahunan</th>
+              <th>Longitudinal</th>
+              <th>Periodik</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td class="text-start">Kelas</td>
+              <td>✔</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+
+            <tr>
+              <td class="text-start">Mata Kuliah</td>
+              <td>✔</td>
+              <td>✔</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+
+            <tr>
+              <td class="text-start">Angkatan</td>
+              <td>-</td>
+              <td>✔</td>
+              <td>✔</td>
+              <td>-</td>
+            </tr>
+
+            <tr>
+              <td class="text-start">Yudisium</td>
+              <td>-</td>
+              <td>✔</td>
+              <td>✔</td>
+              <td>-</td>
+            </tr>
+
+            <tr>
+              <td class="text-start">Prodi</td>
+              <td>-</td>
+              <td>✔</td>
+              <td>✔</td>
+              <td>-</td>
+            </tr>
+
+            <tr>
+              <td class="text-start">Kurikulum</td>
+              <td>-</td>
+              <td>-</td>
+              <td>✔</td>
+              <td>✔</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </div>
 <!-- ========== CARD : Ringkasan Refleksi Kelas untuk Tim Kurikulum ========== -->
 <div class="card card-outline card-primary">
 

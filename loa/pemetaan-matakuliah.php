@@ -101,6 +101,7 @@
                       <th>Semester </th>
                       <th> CPMK</th>
                       <th> SKS</th>
+                      <th title="(aktif,arsip)"> Status</th>
                       <th width="100px">Aksi</th>
                     </tr>
             			</thead>
@@ -115,6 +116,7 @@
             					<td class="text-center">1</td>
             					<td class="text-center">5</td>
             					<td class="text-center">2</td>
+                      <td>Aktif</td>
             					<td class="text-center">
             						<button type="button" class="btn btn-sm btn-outline-info">
             							<i class="fas fa-info-circle"></i>
@@ -127,7 +129,29 @@
             						</button>
             					</td>
             				</tr>
-
+<tr>
+                      <td class="text-center">1</td>
+                      <td>OBE 2024</td>
+                      <td>IF101</td>
+                      <td>Pengantar Teknologi Informasi</td>
+                      <td>Teori</td>
+                      <td>Wajib</td>
+                      <td class="text-center">1</td>
+                      <td class="text-center">9</td>
+                      <td class="text-center">2</td>
+                      <td>Arsip</td>
+                      <td class="text-center">
+                        <button type="button" class="btn btn-sm btn-outline-info">
+                          <i class="fas fa-info-circle"></i>
+                        </button>
+                        <button type="button" class="btn btn-sm btn-outline-primary">
+                          <i class="fas fa-edit"></i>
+                        </button>
+                        <button type="button" class="btn btn-sm btn-outline-danger">
+                          <i class="fas fa-trash"></i>
+                        </button>
+                      </td>
+                    </tr>
             				<tr>
             					<td class="text-center">2</td>
             					<td>OBE 2024</td>
@@ -138,6 +162,7 @@
             					<td class="text-center">1</td>
             					<td class="text-center">7</td>
             					<td class="text-center">3</td>
+                       <td>Aktif</td>
             					<td class="text-center">
             						<button type="button" class="btn btn-sm btn-outline-info">
             							<i class="fas fa-info-circle"></i>
@@ -161,6 +186,7 @@
             					<td class="text-center">2</td>
             					<td class="text-center">6</td>
             					<td class="text-center">3</td>
+                       <td>Aktif</td>
             					<td class="text-center">
             						<button type="button" class="btn btn-sm btn-outline-info">
             							<i class="fas fa-info-circle"></i>
@@ -184,6 +210,7 @@
             					<td class="text-center">2</td>
             					<td class="text-center">6</td>
             					<td class="text-center">3</td>
+                       <td>Aktif</td>
             					<td class="text-center">
             						<button type="button" class="btn btn-sm btn-outline-info">
             							<i class="fas fa-info-circle"></i>
@@ -207,6 +234,7 @@
             					<td class="text-center">3</td>
             					<td class="text-center">8</td>
             					<td class="text-center">3</td>
+                       <td>Aktif</td>
             					<td class="text-center">
             						<button type="button" class="btn btn-sm btn-outline-info">
             							<i class="fas fa-info-circle"></i>
@@ -230,6 +258,7 @@
             					<td class="text-center">3</td>
             					<td class="text-center">7</td>
             					<td class="text-center">3</td>
+                       <td>Aktif</td>
             					<td class="text-center">
             						<button type="button" class="btn btn-sm btn-outline-info">
             							<i class="fas fa-info-circle"></i>
@@ -253,6 +282,7 @@
             					<td class="text-center">4</td>
             					<td class="text-center">5</td>
             					<td class="text-center">2</td>
+                       <td>Aktif</td>
             					<td class="text-center">
             						<button type="button" class="btn btn-sm btn-outline-info">
             							<i class="fas fa-info-circle"></i>
@@ -276,6 +306,7 @@
             					<td class="text-center">4</td>
             					<td class="text-center">6</td>
             					<td class="text-center">3</td>
+                       <td>Aktif</td>
             					<td class="text-center">
             						<button type="button" class="btn btn-sm btn-outline-info">
             							<i class="fas fa-info-circle"></i>
@@ -299,6 +330,7 @@
             					<td class="text-center">5</td>
             					<td class="text-center">4</td>
             					<td class="text-center">2</td>
+                       <td>Aktif</td>
             					<td class="text-center">
             						<button type="button" class="btn btn-sm btn-outline-info">
             							<i class="fas fa-info-circle"></i>
@@ -322,6 +354,7 @@
             					<td class="text-center">6</td>
             					<td class="text-center">3</td>
             					<td class="text-center">2</td>
+                       <td>Aktif</td>
             					<td class="text-center">
             						<button type="button" class="btn btn-sm btn-outline-info">
             							<i class="fas fa-info-circle"></i>
@@ -345,6 +378,7 @@
             					<td class="text-center">8</td>
             					<td class="text-center">6</td>
             					<td class="text-center">6</td>
+                       <td>Aktif</td>
             					<td class="text-center">
             						<button type="button" class="btn btn-sm btn-outline-info">
             							<i class="fas fa-info-circle"></i>

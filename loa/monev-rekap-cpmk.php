@@ -8,7 +8,7 @@
 
   <section class="content-header">
     <div class="container-fluid">
-      <h3 class="mb-0">Monev Semester
+      <h3 class="mb-0">Monev Semester MK dan CPMK
         <button type="button" class="btn btn-tool" data-bs-toggle="modal" data-bs-target="#modalBantuan" title="Bantuan">
           <i class="fas fa-question-circle"></i>
         </button>
@@ -503,7 +503,8 @@
             <th width="5px">No.</th>
             <th>Kode</th>
             <th>Nama MK</th>
-            <th>Jumlah CPMK</th>
+            <th> CPMK</th>
+            <th> Semester Tempuh</th>
             <th>Aksi</th>
           </tr>
         </thead>
@@ -513,6 +514,7 @@
             <td class="text-center">STS704</td>
             <td>Metode Pelaksanaan Bangunan</td>
             <td class="text-center">3</td>
+            <td class="text-center">1</td>
             <td class="text-center">
               <a href="detail.php?kode=STS704" class="btn btn-sm btn-outline-info">
                 📄 Detail
@@ -524,6 +526,7 @@
             <td class="text-center">STS913</td>
             <td>Struktur Komposit</td>
             <td class="text-center">3</td>
+            <td class="text-center">1</td>
             <td class="text-center">
               <a href="detail.php?kode=STS913" class="btn btn-sm btn-outline-info">
                 📄 Detail
@@ -535,6 +538,7 @@
             <td class="text-center">51175111</td>
             <td>Building Structures Design</td>
             <td class="text-center">3</td>
+            <td class="text-center">1</td>
             <td class="text-center">
               <a href="detail.php?kode=51175111" class="btn btn-sm btn-outline-info">
                 📄 Detail
@@ -546,6 +550,7 @@
             <td class="text-center">STS-101</td>
             <td>Engineering Statistics</td>
             <td class="text-center">2</td>
+            <td class="text-center">3</td>
             <td class="text-center">
               <a href="detail.php?kode=STS-101" class="btn btn-sm btn-outline-info">
                 📄 Detail
@@ -557,6 +562,7 @@
             <td class="text-center">STS307</td>
             <td>Bahan Perkerasan Jalan (+Pr)</td>
             <td class="text-center">4</td>
+            <td class="text-center">3</td>
             <td class="text-center">
               <a href="detail.php?kode=STS307" class="btn btn-sm btn-outline-info">
                 📄 Detail
@@ -567,6 +573,7 @@
             <td class="text-center">6</td>
             <td class="text-center">STS702</td>
             <td>Struktur Baja</td>
+            <td class="text-center">3</td>
             <td class="text-center">3</td>
             <td class="text-center">
               <a href="detail.php?kode=STS702" class="btn btn-sm btn-outline-info">
@@ -579,6 +586,7 @@
             <td class="text-center">51195142</td>
             <td>Perancangan Struktur Jembatan</td>
             <td class="text-center">2</td>
+            <td class="text-center">3</td>
             <td class="text-center">
               <a href="detail.php?kode=51195142" class="btn btn-sm btn-outline-info">
                 📄 Detail
@@ -589,6 +597,7 @@
             <td class="text-center">8</td>
             <td class="text-center">51155081</td>
             <td>Introduction to Earthquake Engineering</td>
+            <td class="text-center">3</td>
             <td class="text-center">3</td>
             <td class="text-center">
               <a href="detail.php?kode=51155081" class="btn btn-sm btn-outline-info">
@@ -601,6 +610,7 @@
             <td class="text-center">STS904</td>
             <td>BIM untuk Manajemen Konstruksi</td>
             <td class="text-center">2</td>
+            <td class="text-center">5</td>
             <td class="text-center">
               <a href="detail.php?kode=STS904" class="btn btn-sm btn-outline-info">
                 📄 Detail
@@ -612,6 +622,7 @@
             <td class="text-center">51153061</td>
             <td>Water Structures Design</td>
             <td class="text-center">3</td>
+            <td class="text-center">5</td>
             <td class="text-center">
               <a href="detail.php?kode=51153061" class="btn btn-sm btn-outline-info">
                 📄 Detail

@@ -346,6 +346,9 @@
       </div>
       <div class="modal-body">
         <p>
+          dapat menampung semua mata kuliah yg status (aktif,arsip)
+        </p>
+        <p>
           algoritma konversi kurikulum:<br>
 1.unggah file berita acara mapping konversi kurikulum di sistem<br>
 2.ambil nilai CPMK-CPMK dan nilai akhir,(nilai seperti khs) berdasarkan data periode pertama hingga data periode terkini. [data modal] ambil nilai MK(cpmk1,2,3,4,n,akhir angka,huruf) terbaik, berdasarkan mata kuliah di set pemetaan tertentu. kolom [kode pemetaan, kode mk, kode kelas, kode , nilai MK(cpmk1,2,3,4,n,akhir angka,huruf)]<br>

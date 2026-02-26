@@ -62,19 +62,7 @@
             </div>
           </div>
 
-        
-     <button type="button" class="btn btn-sm btn-outline-info" onclick="window.location='detail-cpl.html'"><i class="fas fa-info-circle"></i></button>
-
-
-Jenis chart:
-
-Line Chart → Tren Semester
-
-Bar Chart → Perbandingan Kelas
-
-Radar Chart → Profil Lulusan
-
-Heatmap → CPL vs Semester 
+    
   <!-- ========== CARD 3: KPI row ========== --> 
   <style>
     body { background: #f4f6f9; }
@@ -92,45 +80,137 @@ Heatmap → CPL vs Semester
   <div class="row g-3 mb-3">
           <div class="col-md-3">
             <div class="kpi bg-primary">
+              <div class="small">Rata-rata CPL</div>
+              <div class="big" id="kpiAvg">33.15</div>
+              <div class="small">dari 10 CPL</div>
+            </div>
+          </div>
+          <!-- <div class="col-md-3">
+            <div class="kpi bg-primary">
               <div class="small">CPL yang Memenuhi Standar</div>
               <div class="big" id="kpiAvg">7 dari 10 CPL</div>
               <div class="small">70% mencapai standar</div>
             </div>
-          </div>
-          
+          </div> -->
 
           <div class="col-md-3">
             <div class="kpi" style="background:#20c997;">
-              <div class="small"> CPL Terkuat</div>
-              <div class="big" id="kpiReached">CPL 1</div>
-              <div class="small">85% mencapai tuntas</div>
+              <div class="small">Rerata CPL Tertinggi</div>
+              <div class="big" id="kpiReached">CPL 1 (57.2)</div>
+              <div class="small">dari 120 mahasiswa</div>
             </div>
           </div>
-          <div class="col-md-3">
+          <!--<div class="col-md-3">
             <div class="kpi " style="background:#ff7f0e;">
               <div class="small">Mahasiswa Lulus</div>
               <div class="big" id="kpiGap">60%</div>
               <div class="small">60 dari 100 Mahasiswa</div>
             </div>
-          </div><!-- 
+          </div> 
           <div class="col-md-3">
             <div class="kpi " style="background:#ff7f0e;">
               <div class="small">Pemerataan Ketercapaian CPL</div>
               <div class="big" id="kpiGap">Gap 30% | 0.56</div>
               <div class="small">Kategori: Cukup Stabil</div>
             </div>
-          </div> -->
+          </div> 
           <div class="col-md-3">
             <div class="kpi bg-danger">
               <div class="small">CPL Terlemah</div>
               <div class="big" id="kpiRisk">CPL 4</div>
               <div class="small">50% mencapai tuntas</div>
             </div>
+          </div>-->
+        <!-- </div>
+
+        <div class="row g-3 mb-3"> -->
+          <!-- <div class="col-md-3">
+            <div class="kpi bg-primary">
+              <div class="small">Rata-rata CPL keseluruhan</div>
+              <div class="big" id="kpiAvg">78</div>
+              <div class="small">dari 10 CPL</div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="kpi" style="background:#20c997;">
+              <div class="small"> Masa Studi Angkatan</div>
+              <div class="big" id="kpiReached">7 Semester</div>
+              <div class="small">saat 2025/2026 - Gasal</div>
+            </div>
+          </div> -->
+          <div class="col-md-3">
+            <div class="kpi " style="background:#ff7f0e;">
+              <div class="small">Jumlah CPL Risiko</div>
+              <div class="big" id="kpiGap">3 CPL</div>
+              <div class="small">perlu di intervensi</div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="kpi bg-danger">
+              <div class="small">Jumlah IK Risiko</div>
+              <div class="big" id="kpiRisk">5 IK</div>
+              <div class="small">< 65 selama 4 semester</div>
+            </div>
           </div>
         </div>
+<!-- ========== CARD :  Grafik Radar CPL & Progress ========== --> 
+<!-- <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 
+<div class="card p-3">
+  <div class="row">
+
+    <div class="col-lg-6">
+      <div id="radarCPL" class="chart-box "></div>
+    </div>
+
+
+    <div class="col-lg-6 d-flex flex-column">
+      <div class="flex-grow-1">
+        <div id="chartIK" class="chart-box"></div>
+      </div>
+      <div class="flex-grow-1">
+        <div id="chartCPMK" class="chart-box"></div>
+      </div>
+
+
+    </div>
+  </div>
+</div> -->
+
+
+<!-- ========== CARD :  Grafik Radar CPL & Progress ========== --> 
+<div class="card p-3">
+  <div class="row">
+
+    <!-- KIRI: Radar Chart -->
+    <div class="col-lg-6">
+      <canvas id="chartStatusAngkatan2" width="100%" height="180"></canvas>
+    </div>
+
+    <!-- KANAN -->
+    <div class="col-lg-6 d-flex flex-column">
+
+      <!-- BAR CHART 1 -->
+      <div class="d-flex flex-column flex-grow-1">
+        <div class="flex-grow-1 mb-2">
+          <canvas id="chartCPL"></canvas>
+        </div>
+      </div>
+
+
+      <!-- BAR CHART 2 -->
+      <div class="d-flex flex-column flex-grow-1">
+        <div class="flex-grow-1 mb-2">
+          <canvas id="chartIK2"></canvas>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</div>
         <!-- ========== CARD : Rekap per Angkatan ========== -->
-          <div class="card mt-3">
+          <!-- <div class="card mt-3">
             <div class="card-header">
               <h3 class="card-title">Rekap Status Mahasiswa per Angkatan</h3>
             </div>
@@ -142,97 +222,387 @@ Heatmap → CPL vs Semester
                     <th>Total</th>
                     <th>Aktif</th>
                     <th>Cuti</th>
+                    <th>Drop Out</th>
+                    <th>Passed Out</th>
                     <th>Lulus</th>
-                    <th>Non-Aktif</th>
-                    <th>Skripsi</th>
-                    <th>MBKM</th>
-                    <th>Progres CPL</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td>2021</td>
+                    <td>2024</td>
                     <td>300</td>
                     <td>240</td>
                     <td>18</td>
                     <td>20</td>
                     <td>12</td>
                     <td>8</td>
-                    <td>5</td>
-                    <td>72%</td>
-                  </tr>
-                  <tr>
-                    <td>2020</td>
-                    <td>280</td>
-                    <td>210</td>
-                    <td>22</td>
-                    <td>30</td>
-                    <td>18</td>
-                    <td>10</td>
-                    <td>7</td>
-                    <td>79%</td>
                   </tr>
                 </tbody>
               </table>
             </div>
-          </div>
+          </div> -->
           
         <!-- ========== CARD : Tabel pemerataan target CPL ========== -->
-        <div class="card">
+        <!-- <div class="card">
+          <div class="card-body">
+            <table class="table table-hover table-bordered table-sm">
+              <thead style="background-color: #f2f2f2;">
+                <tr>
+                  <th>Indikator</th>
+                  <th>Nilai</th>
+                  <th>Keterangan</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>CPL Tertinggi</td>
+                  <td>85%</td>
+                  <td>Persentase mahasiswa mencapai tuntas pada CPL 1</td>
+                </tr>
+                <tr>
+                  <td>CPL Terendah</td>
+                  <td>50%</td>
+                  <td>Persentase mahasiswa mencapai tuntas pada CPL 8</td>
+                </tr>
+                <tr>
+                  <td>Gap (Selisih)</td>
+                  <td>30%</td>
+                  <td>Selisih antara CPL tertinggi dan terendah</td>
+                </tr>
+                <tr>
+                  <td>CPL Batas Standar</td>
+                  <td>80%</td>
+                  <td>Persentase mahasiswa mencapai tuntas pada CPL tersebut</td>
+                </tr>
+                <tr>
+                  <td>Indeks Pemerataan</td>
+                  <td>0.56</td>
+                  <td>Dihitung sebagai 1 - (Gap / Batas Standar)</td>
+                </tr>
+                <tr>
+                  <td>Kategori Stabilitas</td>
+                  <td style="color: orange; font-weight: bold;">Cukup Stabil</td>
+                  <td>Indeks 0.50 – 0.64</td>
+                </tr>
+              </tbody>
+              <tfoot style="background-color: #f9f9f9; font-weight: bold;">
+                <tr>
+                  <td colspan="3">
+                    <i>Interpretasi:</i> Kesenjangan ketercapaian antar CPL sebesar 30% menunjukkan adanya ketimpangan kompetensi pada angkatan ini. 
+                    Dengan Indeks Pemerataan sebesar 0.56, profil kompetensi mahasiswa tergolong cukup stabil namun masih memerlukan upaya perbaikan untuk meningkatkan pemerataan antar CPL.
+                  </td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </div> -->
+
+        
+        
+        <!-- ========== CARD : Tabel detail 10 CPL ========== -->
+<div class="card">
+  <div class="card-header">
+    <h3 class="card-title">Detail rerata 10 CPL sepanjang max.9 semester</h3>
+    <div class="card-tools">
+      <small class="text-muted">Angkatan Terpilih</small>
+    </div>
+  </div>
   <div class="card-body">
     <table class="table table-hover table-bordered table-sm">
       <thead style="background-color: #f2f2f2;">
         <tr>
-          <th>Indikator</th>
-          <th>Nilai</th>
-          <th>Keterangan</th>
+          <th width="190px">Periode Semester</th>
+          <th>CPL 1</th>
+          <th>CPL 2</th>
+          <th>CPL 3</th>
+          <th>CPL 4</th>
+          <th>CPL 5</th>
+          <th>CPL 6</th>
+          <th>CPL 7</th>
+          <th>CPL 8</th>
+          <th>CPL 9</th>
+          <th>CPL 10</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>CPL Tertinggi</td>
-          <td>85%</td>
-          <td>Persentase mahasiswa mencapai tuntas pada CPL 1</td>
+          <td><button  class="btn btn-sm btn-outline-info"onclick="window.location.href='detail.php'">sem1 [2024/2025 - Ganjil]</button></td>
+          <td>24</td><td>12</td><td>09</td><td>06</td><td>02</td><td>12</td><td>23</td><td>13</td><td>24</td><td>5</td>
         </tr>
         <tr>
-          <td>CPL Terendah</td>
-          <td>50%</td>
-          <td>Persentase mahasiswa mencapai tuntas pada CPL 8</td>
+          <td><button  class="btn btn-sm btn-outline-info"onclick="window.location.href='detail.php'">sem2 [2024/2025 - Genap]</button></td>
+          <td>70</td><td>75</td><td>72</td><td>78</td><td>80</td><td>82</td><td>85</td><td>84</td><td>83</td><td>5</td>
         </tr>
         <tr>
-          <td>Gap (Selisih)</td>
-          <td>30%</td>
-          <td>Selisih antara CPL tertinggi dan terendah</td>
+          <td><a href="#detailallCPL" class="btn btn-sm btn-outline-info">sem3 [2025/2026 - Ganjil]</a></td>
+          <td><a href="#detailCPL1" class="btn btn-sm btn-outline-info">65</a></td><td>68</td><td>70</td><td>74</td><td>76</td><td>78</td><td>80</td><td>82</td><td>81</td><td>5</td>
         </tr>
         <tr>
-          <td>CPL Batas Standar</td>
-          <td>80%</td>
-          <td>Persentase mahasiswa mencapai tuntas pada CPL tersebut</td>
+          <td><button  class="btn btn-sm btn-outline-info"onclick="window.location.href='detail.php'">sem4 [2025/2026 - Genap]</button></td>
+          <td>85</td><td>87</td><td>86</td><td>88</td><td>90</td><td>92</td><td>91</td><td>93</td><td>94</td><td>5</td>
         </tr>
         <tr>
-          <td>Indeks Pemerataan</td>
-          <td>0.56</td>
-          <td>Dihitung sebagai 1 - (Gap / Batas Standar)</td>
+          <td><button  class="btn btn-sm btn-outline-info"onclick="window.location.href='detail.php'">sem5 [2026/2027 - Ganjil]</button></td>
+          <td>72</td><td>74</td><td>76</td><td>78</td><td>79</td><td>81</td><td>83</td><td>84</td><td>86</td><td>9</td>
         </tr>
         <tr>
-          <td>Kategori Stabilitas</td>
-          <td style="color: orange; font-weight: bold;">Cukup Stabil</td>
-          <td>Indeks 0.50 – 0.64</td>
+          <td><button  class="btn btn-sm btn-outline-info"onclick="window.location.href='detail.php'">sem6 [2026/2027 - Genap]</button></td>
+          <td>60</td><td>65</td><td>68</td><td>70</td><td>72</td><td>75</td><td>77</td><td>79</td><td>80</td><td>9</td>
+        </tr>
+        <tr>
+          <td><button  class="btn btn-sm btn-outline-info"onclick="window.location.href='detail.php'">sem7 [2027/2028 - Ganjil]</button></td>
+          <td>88</td><td>85</td><td>87</td><td>89</td><td>90</td><td>91</td><td>92</td><td>93</td><td>94</td><td>9</td>
+        </tr>
+        <tr>
+          <td><button  class="btn btn-sm btn-outline-info"onclick="window.location.href='detail.php'">sem8 [2027/2028 - Genap]</button></td>
+          <td>75</td><td>78</td><td>80</td><td>82</td><td>83</td><td>85</td><td>87</td><td>88</td><td>90</td><td>9</td>
+        </tr>
+        <tr>
+          <td><button  class="btn btn-sm btn-outline-info"onclick="window.location.href='detail.php'">sem9 [2028/2029 - Ganjil]</button></td>
+          <td>68</td><td>70</td><td>73</td><td>75</td><td>77</td><td>79</td><td>81</td><td>82</td><td>84</td><td>9</td>
+        </tr>
+        <tr>
+          <td>Perkembangan Tren </td>
+          <td>fluktuatif</td><td>stagnan</td><td>menaik</td><td>menurun</td><td>menaik</td><td>fluktiatif</td><td>menaik</td><td>menurun</td><td>menurun</td><td>stagnan</td>
         </tr>
       </tbody>
       <tfoot style="background-color: #f9f9f9; font-weight: bold;">
         <tr>
-          <td colspan="3">
-            <i>Interpretasi:</i> Kesenjangan ketercapaian antar CPL sebesar 30% menunjukkan adanya ketimpangan kompetensi pada angkatan ini. 
-            Dengan Indeks Pemerataan sebesar 0.56, profil kompetensi mahasiswa tergolong cukup stabil namun masih memerlukan upaya perbaikan untuk meningkatkan pemerataan antar CPL.
+          <td colspan="11">
+            <i>Sebanyak</i> 8 dari 10 CPL (80%) <i>menunjukkan tren peningkatan capaian dari semester awal hingga semester akhir.
+            Evaluasi dilakukan dengan melihat rerata capaian tiap semester serta konsistensi nilai ≥75 sebagai batas standar ketuntasan CPL.</i>baris status, dapat di 'klik', untuk melihat lebih detail.atau kolom semester,dapat di 'klik', untuk melihat lebih detail.
           </td>
         </tr>
       </tfoot>
     </table>
   </div>
 </div>
-        <!-- ========== CARD : Tabel ketuntasan tiap CPL ========== -->
+                <!-- ========== CARD : Tabel detail 30 IK ========== -->
         <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">Detail rerata semua IK sepanjang max.9 semester</h3>
+            <div class="card-tools">
+              <small class="text-muted">Angkatan Terpilih</small>
+            </div>
+          </div>
+          <div class="card-body">
+            <table class="table table-hover table-bordered table-sm">
+              <thead style="background-color: #f2f2f2;">
+                <tr>
+                  <th width="190px">Periode Semester</th>
+                  <th>IK 1</th>
+                  <th>IK 2</th>
+                  <th>IK 3</th>
+                  <th>IK 4</th>
+                  <th>IK 5</th>
+                  <th>IK 6</th>
+                  <th>IK 7</th>
+                  <th>IK 8</th>
+                  <th>IK 9</th>
+                  <th>IK 10</th>
+                  <th>IK(n)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><button  class="btn btn-sm btn-outline-info"onclick="window.location.href='detail.php'">sem1 [2024/2025 - Ganjil]</button></td>
+                  <td>24</td><td>12</td><td>09</td><td>06</td><td>02</td><td>12</td><td>23</td><td>13</td><td>24</td><td>5</td><td>...</td>
+                </tr>
+                <tr>
+                  <td><button  class="btn btn-sm btn-outline-info"onclick="window.location.href='detail.php'">sem2 [2024/2025 - Genap]</button></td>
+                  <td>70</td><td>75</td><td>72</td><td>78</td><td>80</td><td>82</td><td>85</td><td>84</td><td>83</td><td>5</td><td>...</td>
+                </tr>
+                <tr>
+                  <td><button  class="btn btn-sm btn-outline-info"onclick="window.location.href='detail.php'">sem3 [2025/2026 - Ganjil]</button></td>
+                  <td>65</td><td>68</td><td>70</td><td><a href="#detailIK1" class="btn btn-sm btn-outline-info">74</a></td><td>76</td><td>78</td><td>80</td><td>82</td><td>81</td><td>5</td><td>...</td>
+                </tr>
+                <tr>
+                  <td><button  class="btn btn-sm btn-outline-info"onclick="window.location.href='detail.php'">sem4 [2025/2026 - Genap]</button></td>
+                  <td>85</td><td>87</td><td>86</td><td>88</td><td>90</td><td>92</td><td>91</td><td>93</td><td>94</td><td>5</td><td>...</td>
+                </tr>
+                <tr>
+                  <td><button  class="btn btn-sm btn-outline-info"onclick="window.location.href='detail.php'">sem5 [2026/2027 - Ganjil]</button></td>
+                  <td>72</td><td>74</td><td>76</td><td>78</td><td>79</td><td>81</td><td>83</td><td>84</td><td>86</td><td>9</td><td>...</td>
+                </tr>
+                <tr>
+                  <td><button  class="btn btn-sm btn-outline-info"onclick="window.location.href='detail.php'">sem6 [2026/2027 - Genap]</button></td>
+                  <td>60</td><td>65</td><td>68</td><td>70</td><td>72</td><td>75</td><td>77</td><td>79</td><td>80</td><td>9</td><td>...</td>
+                </tr>
+                <tr>
+                  <td><button  class="btn btn-sm btn-outline-info"onclick="window.location.href='detail.php'">sem7 [2027/2028 - Ganjil]</button></td>
+                  <td>88</td><td>85</td><td>87</td><td>89</td><td>90</td><td>91</td><td>92</td><td>93</td><td>94</td><td>9</td><td>...</td>
+                </tr>
+                <tr>
+                  <td><button  class="btn btn-sm btn-outline-info"onclick="window.location.href='detail.php'">sem8 [2027/2028 - Genap]</button></td>
+                  <td>75</td><td>78</td><td>80</td><td>82</td><td>83</td><td>85</td><td>87</td><td>88</td><td>90</td><td>9</td><td>...</td>
+                </tr>
+                <tr>
+                  <td><button class="btn btn-sm btn-outline-info" onclick="window.location.href='detail.php'">
+                    sem9 [2028/2029 - Ganjil]
+                  </button></td>
+                  <td>68</td><td>70</td><td>73</td><td>75</td><td>77</td><td>79</td><td>81</td><td>82</td><td>84</td><td>9</td><td>...</td>
+                </tr>
+                <tr>
+                  <td>Perkembangan Tren </td>
+                  <td>fluktuatif</td><td>stagnan</td><td>menaik</td><td>menurun</td><td>menaik</td><td>fluktiatif</td><td>menaik</td><td>menurun</td><td>menurun</td><td>stagnan</td><td>...</td>
+                </tr>
+              </tbody>
+              <tfoot style="background-color: #f9f9f9; font-weight: bold;">
+                <tr>
+                  <td colspan="12">
+                    <i>Sebanyak</i> 7 dari 10 IK (70%) <i>memenuhi standar, dengan kriteria bahwa minimal 80% mahasiswa pada angkatan mencapai skor ≥75 pada masing-masing IK tersebut.</i> baris status, dapat di 'klik', untuk melihat lebih detail. atau kolom semester,dapat di 'klik', untuk melihat lebih detail.
+                  </td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+<!-- ========== CARD : tabel istribusi mahasiswa ========== -->  
+<!-- <table class="table table-hover table-bordered table-sm">
+  <thead>
+    <tr>
+    <th>%sangat baik (>80)</th>
+    <th>%cukup (65-79)</th>
+    <th>%belum tuntas (<65)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>65</td><td>45</td><td>75</td>
+    </tr>
+  </tbody>
+</table>
+ -->
+
+<!-- ========== CARD : Detail info per Mata Kuliah ========== -->
+<div class="card shadow-sm" id="detailallCPL">
+  <div class="card-header bg-info text-white">
+    <h5 class="mb-0">Detail info per Periode Semester (all CPL)</h5>
+  </div>
+
+  <div class="card-body">
+
+    <!-- Identitas Mata Kuliah -->
+    <h6><b>Identitas Periode Semester - Angkatan</b></h6>
+    <table class="table table-sm table-bordered mb-4">
+      <tr>
+        <th>Kurikulum</th>
+        <td>Merdeka Belajar</td>
+      </tr>
+      <tr>
+        <th>Angkatan</th>
+        <td>2024</td>
+      </tr>
+      <tr>
+        <th>Periode Semester</th>
+        <td>sem3 [2025/2026 - Ganjil]</td>
+      </tr>
+    </table>
+
+    <canvas id="chartCPL1" width="100%" height="30" class="mb-4"></canvas>
+   <!-- Tabel Perbandingan kelas-->
+    <h6><b>Perbandingan %CPL <i>Antar Angkatan</i></b> </h6>
+    <div class="table-responsive">
+      <table class="table table-bordered table-striped table-sm text-center">
+        <thead class="table-dark">
+          <tr>
+            <th>Angkatan</th>
+            <th>CPL 1</th>
+            <th>CPL 2</th>
+            <th>CPL 3</th>
+            <th>CPL 4</th>
+            <th>CPL 5</th>
+            <th>CPL 6</th>
+            <th>CPL 7</th>
+            <th>CPL 8</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr>
+            <td>% CPL Angkatan 2022</td>
+            <td>68</td>
+            <td>70</td>
+            <td>74</td>
+            <td>78</td>
+            <td>80</td>
+            <td>83</td>
+            <td>85</td>
+            <td>87</td>
+          </tr>
+
+          <tr>
+            <td>% CPL Angkatan 2023</td>
+            <td>72</td>
+            <td>69</td>
+            <td>76</td>
+            <td>75</td>
+            <td>82</td>
+            <td>85</td>
+            <td>82</td>
+            <td>89</td>
+          </tr>
+
+          <tr>
+            <td>% CPL Angkatan 2024</td>
+            <td>75</td>
+            <td>71</td>
+            <td>80</td>
+            <td>75</td>
+            <td>79</td>
+            <td>88</td>
+            <td>78</td>
+            <td>90</td>
+          </tr>
+
+          <tr>
+            <td>Perkembangan Tren</td>
+            <td><span class="badge bg-success">Menaik</span></td>
+            <td><span class="badge bg-warning text-dark">Fluktuatif</span></td>
+            <td><span class="badge bg-success">Menaik</span></td>
+            <td><span class="badge bg-secondary">Stagnan</span></td>
+            <td><span class="badge bg-warning text-dark">Fluktuatif</span></td>
+            <td><span class="badge bg-success">Menaik</span></td>
+            <td><span class="badge bg-danger">Menurun</span></td>
+            <td><span class="badge bg-success">Menaik</span></td>
+          </tr>
+
+          
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<!-- ========== CARD 4: Chart CPL-IK ========== -->     
+        <!-- <div class="card">   
+
+          <div class="card-header ">         
+            <h5 class="card-title mb-0">
+              <button class="btn btn-sm btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#chartCPLIK1">
+                <i class="fas fa-expand"></i>
+              </button>
+              <i class="fas fa-chart-bar me-2"></i>
+              CPL angkatan terpilih
+            </h5>
+          </div>
+
+          <div class="card-body " id="chartCPLIK1">
+
+            <div class="chart-container">
+              <canvas id="chartCPL1" width="100%" height="30"></canvas>
+            </div>
+            
+          </div> 
+          <div class="card-footer">
+            <i>Interpretasi:</i> garis merah adalah batas target CPL
+          </div>         
+        </div> -->
+<!-- ========== CARD : Tabel ketuntasan tiap CPL ========== -->
+       <!--  <div class="card">
+          <div class="card-header">
+              <h3 class="card-title">Capaian 10 CPL</h3>
+            </div>
           <div class="card-body">
             <table class="table table-hover table-bordered table-sm">
               <thead style="background-color: #f2f2f2;">
@@ -314,158 +684,216 @@ Heatmap → CPL vs Semester
               </tfoot>
             </table>
           </div>
-        </div>
-<!-- ========== CARD : tabel tren antar angkatan ========== -->  
-<div class="card">
+        </div> -->
+        <!-- ========== CARD : tabel tren antar angkatan ========== -->  
+<!-- <div class="card">
   <div class="card-header">
-    <h5 class="card-title mb-0">Histogram Perbandingan CPL 3 Angkatan (2021–2023)</h5>
+    <h5 class="card-title mb-0">Histogram Perbandingan %CPL (3 Angkatan Terakhir) pada semester tersebut</h5>
   </div>
   <div class="card-body">
     <div class="table-responsive">
       <table class="table table-bordered table-striped table-sm text-center">
         <thead class="table-light">
           <tr>
-            <th>No</th>
-            <th>Semester Tempuh</th>
-            <th>% CPL Angkatan 2021</th>
-            <th>% CPL Angkatan 2022</th>
-            <th>% CPL Angkatan 2023</th>
-            <th>Perkembangan Tren</th>
-            <th>Aksi</th>
+            <th>Angkatan</th>
+            <th>CPL 1</th>
+            <th>CPL 2</th>
+            <th>CPL 3</th>
+            <th>CPL 4</th>
+            <th>CPL 5</th>
+            <th>CPL 6</th>
+            <th>CPL 7</th>
+            <th>CPL 8</th>
           </tr>
         </thead>
         <tbody>
 
           <tr>
-            <td>1</td>
-            <td>Semester 1</td>
+            <td>% CPL Angkatan 2022</td>
             <td>68</td>
-            <td>72</td>
-            <td>75</td>
-            <td><span class="badge bg-success">Menaik</span></td>
-            <td>
-              <a href="detail.php" class="btn btn-sm btn-outline-info">Detail</a>
-            </td>
-          </tr>
-
-          <tr>
-            <td>2</td>
-            <td>Semester 2</td>
             <td>70</td>
-            <td>69</td>
-            <td>71</td>
-            <td><span class="badge bg-warning text-dark">Fluktuatif</span></td>
-            <td>
-              <a href="detail.php" class="btn btn-sm btn-outline-info">Detail</a>
-            </td>
-          </tr>
-
-          <tr>
-            <td>3</td>
-            <td>Semester 3</td>
             <td>74</td>
-            <td>76</td>
-            <td>80</td>
-            <td><span class="badge bg-success">Menaik</span></td>
-            <td>
-              <a href="detail.php" class="btn btn-sm btn-outline-info">Detail</a>
-            </td>
-          </tr>
-
-          <tr>
-            <td>4</td>
-            <td>Semester 4</td>
             <td>78</td>
-            <td>75</td>
-            <td>75</td>
-            <td><span class="badge bg-secondary">Stagnan</span></td>
-            <td>
-              <a href="detail.php" class="btn btn-sm btn-outline-info">Detail</a>
-            </td>
-          </tr>
-
-          <tr>
-            <td>5</td>
-            <td>Semester 5</td>
             <td>80</td>
-            <td>82</td>
-            <td>79</td>
-            <td><span class="badge bg-warning text-dark">Fluktuatif</span></td>
-            <td>
-              <a href="detail.php" class="btn btn-sm btn-outline-info">Detail</a>
-            </td>
-          </tr>
-
-          <tr>
-            <td>6</td>
-            <td>Semester 6</td>
             <td>83</td>
             <td>85</td>
-            <td>88</td>
-            <td><span class="badge bg-success">Menaik</span></td>
-            <td>
-              <a href="detail.php" class="btn btn-sm btn-outline-info">Detail</a>
-            </td>
+            <td>87</td>
           </tr>
 
           <tr>
-            <td>7</td>
-            <td>Semester 7</td>
+            <td>% CPL Angkatan 2023</td>
+            <td>72</td>
+            <td>69</td>
+            <td>76</td>
+            <td>75</td>
+            <td>82</td>
             <td>85</td>
             <td>82</td>
-            <td>78</td>
-            <td><span class="badge bg-danger">Menurun</span></td>
-            <td>
-              <a href="detail.php" class="btn btn-sm btn-outline-info">Detail</a>
-            </td>
+            <td>89</td>
           </tr>
 
           <tr>
-            <td>8</td>
-            <td>Semester 8</td>
-            <td>87</td>
-            <td>89</td>
+            <td>% CPL Angkatan 2024</td>
+            <td>75</td>
+            <td>71</td>
+            <td>80</td>
+            <td>75</td>
+            <td>79</td>
+            <td>88</td>
+            <td>78</td>
             <td>90</td>
+          </tr>
+
+          <tr>
+            <td>Perkembangan Tren</td>
             <td><span class="badge bg-success">Menaik</span></td>
-            <td>
-              <a href="detail.php" class="btn btn-sm btn-outline-info">Detail</a>
-            </td>
+            <td><span class="badge bg-warning text-dark">Fluktuatif</span></td>
+            <td><span class="badge bg-success">Menaik</span></td>
+            <td><span class="badge bg-secondary">Stagnan</span></td>
+            <td><span class="badge bg-warning text-dark">Fluktuatif</span></td>
+            <td><span class="badge bg-success">Menaik</span></td>
+            <td><span class="badge bg-danger">Menurun</span></td>
+            <td><span class="badge bg-success">Menaik</span></td>
+          </tr>
+
+          <tr>
+            <td>Aksi</td>
+            <td><a href="detail.php" class="btn btn-sm btn-outline-info">Detail</a></td>
+            <td><a href="detail.php" class="btn btn-sm btn-outline-info">Detail</a></td>
+            <td><a href="detail.php" class="btn btn-sm btn-outline-info">Detail</a></td>
+            <td><a href="detail.php" class="btn btn-sm btn-outline-info">Detail</a></td>
+            <td><a href="detail.php" class="btn btn-sm btn-outline-info">Detail</a></td>
+            <td><a href="detail.php" class="btn btn-sm btn-outline-info">Detail</a></td>
+            <td><a href="detail.php" class="btn btn-sm btn-outline-info">Detail</a></td>
+            <td><a href="detail.php" class="btn btn-sm btn-outline-info">Detail</a></td>
           </tr>
 
         </tbody>
       </table>
     </div>
   </div>
+</div> -->
+
+<!-- ========== CARD : Detail info per Mata Kuliah ========== -->
+<div class="card shadow-sm" id="detailCPL1">
+  <div class="card-header bg-info text-white">
+    <h5 class="mb-0">Detail info per Periode Semester (each CPL)</h5>
+  </div>
+
+  <div class="card-body">
+
+    <!-- Identitas Mata Kuliah -->
+    <h6><b>Identitas CPL </b></h6>
+    <table class="table table-sm table-bordered mb-4">
+      <tr>
+        <th>Kurikulum</th>
+        <td>Merdeka Belajar</td>
+      </tr>
+      <tr>
+        <th>Angkatan</th>
+        <td>2024</td>
+      </tr>
+      <tr>
+        <th>Periode Semester</th>
+        <td>sem3 [2025/2026 - Ganjil]</td>
+      </tr>
+      <tr>
+        <th style="width:200px;">Kode CPL</th>
+        <td>CPL 1</td>
+      </tr>
+      <tr>
+        <th>Deskripsi</th>
+        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat.</td>
+      </tr>
+      <tr>
+        <th>Jumlah IK</th>
+        <td>3</td>
+      </tr>
+      <tr>
+        <th>Jumlah CPMK</th>
+        <td>12</td>
+      </tr>
+    </table>
+
+    <canvas id="chartCPL2" width="100%" height="30"></canvas>
+    <h6 class="font-weight-bold">Daftar Indikator Kinerja (IK)</h6>
+    <div class="table-responsive">
+      <table class="table table-sm table-bordered">
+        <thead class="thead-dark">
+          <tr>
+            <th style="width: 80px;">Kode IK</th>
+            <th>Deskripsi IK</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>IK 1</td>
+            <td>Mahasiswa mampu menyampaikan informasi secara lisan secara runtut, jelas, dan mudah dipahami.</td>
+          </tr>
+          <tr>
+            <td>IK 2</td>
+            <td>Mahasiswa mampu menulis laporan/tulisan akademik sesuai kaidah bahasa dan struktur penulisan yang baik.</td>
+          </tr>
+          <tr>
+            <td>IK 3</td>
+            <td>Mahasiswa mampu berkomunikasi secara profesional dalam konteks akademik dan industri, termasuk etika komunikasi digital.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+<!-- Tabel Perbandingan kelas-->
+    <h6><b>Perbandingan Capaian <i>Antar Angkatan</i></b> </h6>
+    <div class="table-responsive">
+      <table class="table table-bordered table-striped table-sm text-center">
+        <thead class="table-dark">
+          <tr>
+            <th>Angkatan</th>
+            <th>IK 4</th>
+            <th>IK 5</th>
+            <th>CPL 2</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr>
+            <td>% CPL Angkatan 2022</td>
+            <td>68</td>
+            <td>70</td>
+            <td>74</td>
+          </tr>
+
+          <tr>
+            <td>% CPL Angkatan 2023</td>
+            <td>72</td>
+            <td>69</td>
+            <td>76</td>
+          </tr>
+
+          <tr>
+            <td>% CPL Angkatan 2024</td>
+            <td>75</td>
+            <td>71</td>
+            <td>80</td>
+          </tr>
+
+          <tr>
+            <td>Perkembangan Tren</td>
+            <td><span class="badge bg-success">Menaik</span></td>
+            <td><span class="badge bg-warning text-dark">Fluktuatif</span></td>
+            <td><span class="badge bg-secondary">Stagnan</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+
+  </div>
 </div>
-
-<!-- ========== CARD 4: Chart CPL-IK ========== -->     
-        <div class="card">   
-          <!-- CARD HEADER -->  
-          <div class="card-header ">         
-            <h5 class="card-title mb-0">
-              <!-- <button class="btn btn-sm btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#chartCPLIK1">
-                <i class="fas fa-expand"></i>
-              </button> -->
-              <i class="fas fa-chart-bar me-2"></i>
-              CPL angkatan terpilih
-            </h5>
-          </div>
-          <!-- CARD BODY -->
-          <div class="card-body " id="chartCPLIK1">
-            <!-- Chart Container -->
-            <div class="chart-container">
-              <canvas id="chartCPL1" width="100%" height="30"></canvas>
-            </div>
-            
-          </div> 
-          <div class="card-footer">
-            <i>Interpretasi:</i> garis merah adalah batas target CPL
-          </div>         
-        </div>
-
          <!-- ========== CARD 4: Chart CPL-IK ========== -->     
-        <div class="card">   
-          <!-- CARD HEADER -->  
+        <!-- <div class="card">  
           <div class="card-header ">         
             <h5 class="card-title mb-0">
               <button class="btn btn-sm btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#chartCPLIK2">
@@ -474,14 +902,11 @@ Heatmap → CPL vs Semester
               CPL 1 – Kemampuan untuk menginternalisasi semangat kemandirian dan Kewirausahaan
             </h5>
           </div>
-          <!-- CARD BODY -->
           <div class="card-body " >
-            <!-- Chart Container -->
             <div class="chart-container">
               <canvas id="chartCPL2" width="100%" height="30"></canvas>
             </div>
           </div>
-          <!-- CARD FOOTER -->
           <div class="card-footer collapse" id="chartCPLIK2">
             <h6 class="font-weight-bold">Daftar Indikator Kinerja (IK)</h6>
             <div class="table-responsive">
@@ -506,8 +931,128 @@ Heatmap → CPL vs Semester
               </table>
             </div>
           </div>
-        </div>
+        </div> -->
+<!-- ========== CARD : Detail info per Mata Kuliah ========== -->
+<div class="card shadow-sm" id="detailIK1">
+  <div class="card-header bg-info text-white">
+    <h5 class="mb-0">Detail info per Periode Semester (each IK)</h5>
+  </div>
 
+  <div class="card-body">
+
+    <!-- Identitas Mata Kuliah -->
+    <h6><b>Identitas IK </b></h6>
+    <table class="table table-sm table-bordered mb-4">
+      <tr>
+        <th>Kurikulum</th>
+        <td>Merdeka Belajar</td>
+      </tr>
+      <tr>
+        <th>Angkatan</th>
+        <td>2024</td>
+      </tr>
+      <tr>
+        <th>Periode Semester</th>
+        <td>sem3 [2025/2026 - Ganjil]</td>
+      </tr>
+      <tr>
+        <th style="width:200px;">Kode CPL</th>
+        <td>IK 4</td>
+      </tr>
+      <tr>
+        <th>Deskripsi</th>
+        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat.</td>
+      </tr>
+      <tr>
+        <th>Jumlah CPMK</th>
+        <td>4</td>
+      </tr>
+    </table>
+
+    <canvas id="chartCPL4" width="100%" height="30"></canvas>
+
+    <h6 class="font-weight-bold">Daftar Capaian Pembelajaran Mata Kuliah (CPMK)</h6>
+    <div class="table-responsive">
+      <table class="table table-sm table-bordered">
+        <thead class="thead-dark">
+          <tr>
+            <th style="width: 80px;">Kode </th>
+            <th>Deskripsi </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td> STS900-2</td>
+            <td>Mahasiswa mampu menyampaikan informasi secara lisan secara runtut, jelas, dan mudah dipahami.</td>
+          </tr>
+          <tr>
+            <td> STS544-2</td>
+            <td>Mahasiswa mampu menulis laporan/tulisan akademik sesuai kaidah bahasa dan struktur penulisan yang baik.</td>
+          </tr>
+          <tr>
+            <td> UKU111-2</td>
+            <td>Mahasiswa mampu menulis laporan/tulisan akademik sesuai kaidah bahasa dan struktur penulisan yang baik.</td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+<!-- Tabel Perbandingan kelas-->
+    <h6><b>Perbandingan Capaian <i>Antar Angkatan</i></b> </h6>
+    <div class="table-responsive">
+      <table class="table table-bordered table-striped table-sm text-center">
+        <thead class="table-dark">
+          <tr>
+            <th>Angkatan</th>
+            <th>STS900-2</th>
+            <th>STS544-2</th>
+            <th>UKU111-2</th>
+            <th>IK 4</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr>
+            <td>% CPL Angkatan 2022</td>
+            <td>68</td>
+            <td>70</td>
+            <td>40</td>
+            <td>74</td>
+          </tr>
+
+          <tr>
+            <td>% CPL Angkatan 2023</td>
+            <td>72</td>
+            <td>69</td>
+            <td>40</td>
+            <td>76</td>
+          </tr>
+
+          <tr>
+            <td>% CPL Angkatan 2024</td>
+            <td>75</td>
+            <td>71</td>
+            <td>40</td>
+            <td>80</td>
+          </tr>
+
+          <tr>
+            <td>Perkembangan Tren</td>
+            <td><span class="badge bg-success">Menaik</span></td>
+            <td><span class="badge bg-warning text-dark">Fluktuatif</span></td>
+            <td><span class="badge bg-secondary">Stagnan</span></td>
+            <td><span class="badge bg-success">Menaik</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+
+  </div>
+</div>
 
 
         </div>
@@ -576,15 +1121,40 @@ Heatmap → CPL vs Semester
       </div>
       <div class="modal-body">
         <p>
+          
+          rangkumasn berfungsi untuk fokus pada evaluasi kurikulum, untuk bisa membuat benchmark proses penempuhan kurikulum
+        </p>
+        <p>
           Ringkasan capaian CPL per Kelompok Mahasiswa, perkembangan, peringatan dini (EWS), disajikan dalam bentuk grafik dan tabel (Mockup data statis)
         </p> 
+        <p>
+          laporan halaman ini untuk menjawab 'apakah kurikulum bekerja untuk angkatan ini'
+        </p>
         <p>
           halama inin untuk menjaslakn/memberikan informasi ringkasan, deteksi, dan investigasi atas proses kurikulum berlangsung, pada suatu angkatan mahasiswa. unit ukur analisis adalah para mahasiswa dalam satu angkatan masuk yang sama.
         </p>
         <p>
            snapshot CPL by angkatan masuk(cohort) adalah gambaran capaian CPL suatu angkatan mahasiswa yang masuk pada tahun yang sama dan dianalisis sebagi suatu kelompok homogen yang mengalami kurikulum serta konteks sistem yang relati  sama; tujuannya adalah mengevaluasi efektivitas kurikulum dan stbilitas mutu antar angkatan, sehingga informasi yang perlu disajikan meliputi jumlah mahasiswa dalam cohort total dan yan g sudah lulus), rerata dan distribusi tiap CPL,persentasi ketuntasan CPL, progres studi (misalnya % tepat waktu), serta jika perlu perbandingan dengan cohort sebelumnya dalam kurikulum yang sama.singkatnya, snapshop cohort menjaawab "apakah kurikulum efektif bagi satu angkatan?"
            untuk evaluasi perkembangan mahasiswa
-        </p>       
+        </p>      
+        <p>
+          jumlah semester yang ditempuh angkatan ini:
+semester akademik a, semester akademik b, c, dst....
+        apakah angkatan X berkembang menuju CPL secara progresif?
+        IK mana yang konsisten lemah pada angkatan ini?
+        apakah ada pola masalah sistemik?
+        apakah distribusi capaian antar semester stabil?
+        apakah ada gap signifikan dibanding angkatan lain?
+        rata-rata capaian CPL angkatan,
+        IK terlemah,
+        IK terkuat,
+        distribusi capaian,
+        tren semester ke semester,
+        Fokus ukur CPL angkatan dari semester 1 hingga akhir.
+        </p> 
+        <p>snapshot dulu, ceritakan mengenai angkatan ini. dari semester ke semester.
+
+        tren antar angkatan, akan melihat dengan cara pandang sama dengan snapshot, hanya tidak terlalu detail datanya.</p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
@@ -783,7 +1353,7 @@ new Chart(ctx, {
     ],
     datasets: [
       {
-        label: 'Batas Standar (> 80%)',
+        label: 'Batas Standar',
         type: 'line',
         yMin: 80, 
         yMax: 80,
@@ -800,7 +1370,7 @@ new Chart(ctx, {
         borderWidth: 1
       },
       {
-        label: '% Mahasiswa Tuntas (≥ 60)',
+        label: '% Mahasiswa Tuntas',
         data: [85, 81, 82, 84, 80, 81, 80, 61, 50, 67],
         backgroundColor: '#007bff',
         borderColor: '#007bff',
@@ -852,14 +1422,14 @@ new Chart(ctx, {
                     labels: ['IK 4', 'IK 5',  'CPL2'],
                     datasets: [
                       {
-                        label: 'Rerata CPL',
+                        label: 'Rerata Skor',
                         data: [82, 75,  81.66],
                         backgroundColor: '#6c757d',
                         borderColor: '#6c757d',
                         borderWidth: 1
                       },
                       {
-                        label: '% Mahasiswa Tuntas (≥ 60)',
+                        label: '% Mahasiswa Tuntas',
                         data: [90, 80, 87.33],
                         backgroundColor: '#007bff',
                         borderColor: '#007bff',
@@ -902,4 +1472,375 @@ new Chart(ctx, {
 
 
               </script>
+
+
+             
+
+<script>
+
+// ================================
+// DATA DUMMY
+// ================================
+
+// 11 CPL
+const cplLabels = Array.from({length: 10}, (_, i) => `CPL-${i+1}`);
+const cplAverages = cplLabels.map(() => randomScore());
+
+const ikLabels = Array.from({length: 24}, (_, i) => `IK-${i+1}`);
+const ikAverages = ikLabels.map(() => randomScore());
+
+const cpmkLabels = Array.from({length: 72}, (_, i) => `CPMK-${i+1}`);
+const cpmkAverages = cpmkLabels.map(() => randomScore());
+
+function randomScore() {
+  return Number((Math.random() * 100).toFixed(0));
+}
+
+// ================================
+// 2️⃣ RADAR CPL
+// ================================
+
+var radarOptions = {
+  series: [{
+    name: 'Rerata Nilai CPL',
+    data: cplAverages
+  }],
+  chart: {
+    type: 'radar',
+    height: 400
+  },
+  colors: ['#4CAF50'],
+  xaxis: {
+    categories: cplLabels,
+    labels: { show: true },   // ❌ sembunyikan label
+  },
+  yaxis: {
+    min: 0,
+    max: 100
+  },
+  fill: {
+    opacity: 0.4
+  },
+  stroke: {
+    width: 2
+  },
+  // title: {
+  //   text: 'Radar CPL'
+  // }
+};
+
+new ApexCharts(document.querySelector("#radarCPL"), radarOptions).render();
+
+
+// ================================
+// BAR IK (Horizontal)
+// ================================
+
+var ikOptions = {
+  series: [{
+    name: 'Rerata Nilai IK',
+    data: ikAverages ,
+  }],
+  chart: {
+    type: 'bar',
+    height: 210,
+    toolbar: { show: true }
+  },
+  legend: {
+  show: true,
+  position: 'top',
+  horizontalAlign: 'left',
+  fontSize: '13px',
+  markers: {
+    width: 12,
+    height: 12,
+    radius: 2
+  }
+},
+  plotOptions: {
+    bar: {
+      horizontal: false
+    }
+  },
+  colors: ['#FF9F40'],
+  xaxis: {
+    categories: ikLabels,
+    min: 0,
+    max: 100,
+    labels: { show: false },   // ❌ sembunyikan angka X
+    axisBorder: { show: true },
+    axisTicks: { show: false }
+  },
+  yaxis: {
+    labels: { show: true }    // ❌ sembunyikan label IK
+  },
+  grid: {
+    show: true
+  },
+  tooltip: {
+    enabled: true   // ✅ tetap aktif saat hover
+  },
+  dataLabels: {
+    enabled: false
+  },
+  // title: {
+  //   text: 'Barchart IK'
+  // },
+  fill: {
+    opacity: 0.4
+  },
+  stroke: {
+    width: 2
+  }
+};
+
+new ApexCharts(document.querySelector("#chartIK"), ikOptions).render();
+
+
+// ================================
+// BAR CPMK (Axis Hidden)
+// ================================
+
+var cpmkOptions = {
+  series: [{
+    name: 'Rerata Nilai CPMK',
+    data: cpmkAverages
+  }],
+  chart: {
+    type: 'bar',
+    height: 190,
+    toolbar: { show: true }
+  },
+  legend: {
+    show: false
+  },
+  plotOptions: {
+    bar: {
+      horizontal: false
+    }
+  },
+  colors: ['#FF6384'],
+  xaxis: {
+    categories: cpmkLabels,
+    min: 0,
+    max: 100,
+    labels: { show: false },   // ❌ sembunyikan label CPMK
+    axisBorder: { show: true },
+    axisTicks: { show: false }
+  },
+  yaxis: {
+    labels: { show: false } ,   // ❌ sembunyikan angka X
+    axisBorder: { show: false },
+    axisTicks: { show: false }
+  },
+  grid: {
+    show: true
+  },
+  tooltip: {
+    enabled: true   // ✅ tetap muncul saat hover
+  },
+  dataLabels: {
+    enabled: false
+  },
+  // title: {
+  //   text: 'Barchart CPMK'
+  // }
+};
+
+new ApexCharts(document.querySelector("#chartCPMK"), cpmkOptions).render();
+
+</script>
+
+
+
+
+
+<script>
+  var ctx11 = document.getElementById('chartStatusAngkatan2').getContext('2d');
+  new Chart(ctx11, {
+    type: 'pie',
+    data: {
+      labels: ['Aktif', 'Cuti', 'Skors', 'Passed Out', 'Drop Out', 'Lulus'],
+      datasets: [{
+            data: [950, 70, 120, 40, 4, 2300], // contoh data
+            
+            // Warna custom tiap slice
+            backgroundColor: [
+                '#28a745', // aktif - biru
+                '#ff9800', // cuti - orange
+                '#dc3545', // skors - merah
+                '#6c757d', // tidak aktif/passed out - abu
+                '#343a40',  // DO - hitam
+                '#007bff' // lulus - hijau
+                ],
+
+            borderColor: '#ffffff',
+            borderWidth: 2
+          }]
+    },
+    options: {
+      plugins: {
+        legend: {
+          position: 'top'
+        }
+      }
+    }
+  });
+</script>
+<script>
+// -------------------------------------------------
+// 1) GENERATOR DATA DUMMY SECARA OTOMATIS
+// -------------------------------------------------
+
+// 11 CPL
+const cplLabels2 = Array.from({length: 11}, (_, i) => `CPL-${String(i+1).padStart(2,'0')}`);
+const cplAverages2 = cplLabels2.map(() => randomScore());
+
+// 24 IK
+const ikLabels2 = Array.from({length: 24}, (_, i) => `IK-${String(i+1).padStart(2,'0')}`);
+const ikAverages2 = ikLabels2.map(() => randomScore());
+
+// 258 CPMK  (format: STKxxx-n)
+const cpmkLabels2 = Array.from({length: 258}, (_, i) => {
+    const mkCode = `STK${String(500 + Math.floor(i/5)).padStart(3,'0')}`;
+    const num = (i % 5) + 1;
+    return `${mkCode}-${num}`;
+});
+const cpmkAverages2 = cpmkLabels2.map(() => randomScore());
+
+// 78 MK
+const mkLabels = Array.from({length: 78}, (_, i) => `STK${String(600 + i).padStart(3,'0')}`);
+const mkAverages = mkLabels.map(() => randomScore());
+
+// -------------------------------------------------
+// 2) FUNCTION RANDOM SCORE
+// -------------------------------------------------
+function randomScore() {
+    return Number((0 + Math.random()*100).toFixed(2)); // rentang 0–100
+}
+
+// -------------------------------------------------
+// 3) FUNGSI GENERATOR BARCHART UMUM
+// -------------------------------------------------
+
+function generateBarChart(canvasId, labels, data, labelName, color) {
+    const ctx = document.getElementById(canvasId).getContext("2d");
+    new Chart(ctx, {
+        type: "bar",
+        data: {
+            labels: labels,
+            datasets: [{
+                label: labelName,
+                data: data,
+                backgroundColor: color.bg,
+                borderColor: color.border,
+                borderWidth: 2
+            }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          scales: {
+            x: {
+              ticks: {
+                display: false   // ⬅️ MATIKAN LABEL BAWAH
+              },
+              grid: {
+                display: false   // (opsional) hilangkan garis grid vertikal
+              }
+            },
+            y: {
+              beginAtZero: true,
+              max: 100
+            }
+          }
+        }
+
+    });
+}
+
+// -------------------------------------------------
+// 4) GENERATE 4 BARCHART
+// -------------------------------------------------
+
+generateBarChart("chartCPL", cplLabels, cplAverages, "Rerata Skor CPL", {
+    bg: "rgba(75, 192, 75, 0.7)", border: "rgb(75, 192, 75)"       // hijau
+});
+
+generateBarChart("chartIK2", ikLabels, ikAverages, "Rerata Skor IK", {
+    bg: "rgba(255, 159, 64, 0.7)", border: "rgb(255, 159, 64)"     // oranye
+});
+
+generateBarChart("chartCPMK", cpmkLabels, cpmkAverages, "Rerata Nilai CPMK", {
+    bg: "rgba(255, 99, 132, 0.7)", border: "rgb(255, 99, 132)"     // merah
+});
+
+generateBarChart("chartMK", mkLabels, mkAverages, "Rerata Nilai MK", {
+    bg: "rgba(54, 162, 235, 0.7)", border: "rgb(54, 162, 235)"     // biru
+});
+
+</script>
+
+
+
+<script>
+const ctx4 = document.getElementById("chartCPL4");
+
+new Chart(ctx4, {
+    type: 'bar',
+    data: {
+      labels: ['STS900-2', 'STS544-2','UKU111-2', 'IK 1'],
+
+      datasets: [{
+        label: '% Mahasiswa Tuntas',
+        data: [90, 80, 88, 87.33],
+        backgroundColor: [
+                '#6c757d', // IK 4
+                '#6c757d', // IK 5
+                '#6c757d', // IK 5
+                '#007bff'  // CPL 2
+              ],
+              borderColor: [
+                '#6c757d',
+                '#6c757d',
+                '#6c757d',
+                '#007bff'
+              ],
+              borderWidth: 1
+            }]
+    },
+    options: {
+        responsive: true,
+        plugins: {
+            legend: { display: false },
+            annotation: {
+                annotations: {
+                    targetLine: {
+                        type: 'line',
+                        yMin: 85,
+                        yMax: 85,
+                        borderColor: 'red',
+                        borderWidth: 2,
+                        borderDash: [6, 6],
+                        label: {
+                            display: true,
+                            content: 'Target 85',
+                            position: 'start',
+                            color: 'red',
+                            backgroundColor: 'rgba(255,255,255,0.7)',
+                            padding: 4
+                        }
+                    }
+                }
+            }
+        },
+        scales: {
+            y: {
+                beginAtZero: true,
+                max: 100
+            }
+        }
+    }
+});
+</script>
 <?php include('5script.php'); ?>

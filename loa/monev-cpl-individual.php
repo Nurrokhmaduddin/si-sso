@@ -77,181 +77,200 @@
 
   <div class="col-md-3">
     <div class="kpi bg-primary text-white">
-      <div class="small">Mahasiswa Tahun 1</div>
-      <div class="big" id="mhsTahun1">120</div>
-      <div class="small">Tahun Studi Pertama</div>
+      <div class="small">Total Mahasiswa</div>
+      <div class="big" id="mhsTahun1">1.240</div>
+      <div class="small">Mahasiswa Lulus</div>
     </div>
   </div>
-
   <div class="col-md-3">
     <div class="kpi text-white" style="background:#20c997;">
-      <div class="small">Mahasiswa Tahun 2</div>
-      <div class="big" id="mhsTahun2">115</div>
-      <div class="small">Tahun Studi Kedua</div>
+      <div class="small">Total Mahasiswa</div>
+      <div class="big" id="mhsTahun2">145</div>
+      <div class="small">Mahasiswa Aktif</div>
     </div>
   </div>
 
   <div class="col-md-3">
     <div class="kpi text-white" style="background:#ff7f0e;">
-      <div class="small">Mahasiswa Tahun 3</div>
+      <div class="small">Mahasiswa Aktif</div>
       <div class="big" id="mhsTahun3">98</div>
-      <div class="small">Tahun Studi Ketiga</div>
+      <div class="small">Masa Studi 4+ Tahun</div>
     </div>
   </div>
 
   <div class="col-md-3">
     <div class="kpi bg-danger text-white">
-      <div class="small">Mahasiswa Tahun 4+</div>
-      <div class="big" id="mhsTahun4">76</div>
-      <div class="small">Tahun Studi Keempat dan lebih</div>
+      <div class="small">Angkatan Tertua Aktif</div>
+      <div class="big" id="mhsTahun4">2017</div>
+      <div class="small">18 Mahasiswa Aktif </div>
     </div>
   </div>
 
+
 </div>
+  <!-- ========== CARD : Chart ========== --> 
+  <div class="card">
+    <div class="card-header">
+      <h5 class="card-title mb-0"><i class="fas fa-chart-bar me-2"></i> Sebaran Jumlah Mahasiswa Berdasarkan Masa Studi</h5>
+      <div class="card-tools">
+        <!-- <small class="text-muted"> Terpilih</small> -->
+      </div>
+    </div>
+
+    <div class="card-body chart-container d-flex flex-column">
+
+      <div class="flex-grow-1">
+        <canvas id="chartMasaStudi" height="70"></canvas>
+      </div>            
+
+    </div>
+  </div>
+
+
 
 <!-- ========== CARD : Tabel  Granular ========== -->
-          <div class="card">
-            <div class="card-header d-flex align-items-center">
-              <h5 class="card-title mb-0">Daftar Mahasiswa</h5>    
-              
-            </div>
+<div class="card">
+  <div class="card-header d-flex align-items-center">
+    <h5 class="card-title mb-0">Daftar Mahasiswa</h5>    
+    
+  </div>
 
-            <div class="card-body">
-  <div class="table-responsive">
-    <table class="table table-bordered table-striped table-sm datatables1">
-      <thead>
-        <tr class="text-uppercase text-center">
-          <th width="5px">No.</th>
-          <th>Username</th>
-          <th>DisplayName</th>
-          <th>Email/Nomor HP</th>
-          <th>Angkatan</th>
-          <th>Jalur/Jurusan</th>
-          <th>Foto</th>
-          <th>Status</th>
-          <th>Aksi</th>
-        </tr>
-      </thead>
-      <tbody>
+  <div class="card-body">
+    <div class="table-responsive">
+      <table class="table table-bordered table-striped table-sm datatables1">
+        <thead>
+          <tr class="text-uppercase text-center">
+            <th width="5px">No.</th>
+            <th>Username</th>
+            <th>DisplayName</th>
+            <th>Email/Nomor HP</th>
+            <th>Angkatan</th>
+            <th>Jalur/Jurusan</th>
+            <th>Foto</th>
+            <th>Status</th>
+            <th>Aksi</th>
+          </tr>
+        </thead>
+        <tbody>
 
-        <tr>
-          <td class="text-center">1</td>
-          <td>19312137</td>
-          <td>Pramita Widyadari</td>
-          <td>pramita.widyadari@univ.ac.id</td>
-          <td class="text-center">2019</td>
-          <td>Civil Engineering Regular</td>
-          <td class="text-center"><img style="width:40px;" alt="Foto"></td>
-          <td class="text-center"><span class="badge badge-info">Aktif</span></td>
-          <td class="text-center">
-            <button type="button" class="btn btn-sm btn-outline-warning"><i class="fas fa-key"></i></button>
-            <button type="button" class="btn btn-sm btn-outline-primary"><i class="fas fa-edit"></i></button>
-            <button type="button" class="btn btn-sm btn-outline-danger"><i class="fas fa-trash"></i></button>
-          </td>
-        </tr>
+          <tr>
+            <td class="text-center">1</td>
+            <td>19312137</td>
+            <td>Pramita Widyadari</td>
+            <td>pramita.widyadari@univ.ac.id</td>
+            <td class="text-center">2019</td>
+            <td>Civil Engineering Regular</td>
+            <td class="text-center"><img style="width:40px;" alt="Foto"></td>
+            <td class="text-center"><span class="badge badge-info">Aktif</span></td>
+            <td class="text-center">
+              <button type="button" class="btn btn-sm btn-outline-warning"><i class="fas fa-key"></i></button>
+              <button type="button" class="btn btn-sm btn-outline-primary"><i class="fas fa-edit"></i></button>
+              <button type="button" class="btn btn-sm btn-outline-danger"><i class="fas fa-trash"></i></button>
+            </td>
+          </tr>
 
-        <tr>
-          <td class="text-center">2</td>
-          <td>19312376</td>
-          <td>Ho Aldika Novaldy Sumampow</td>
-          <td>aldika.sumampow@univ.ac.id</td>
-          <td class="text-center">2019</td>
-          <td>Civil Engineering Regular</td>
-          <td class="text-center"><img style="width:40px;" alt="Foto"></td>
-          <td class="text-center"><span class="badge badge-warning">Cuti</span></td>
-          <td class="text-center">
-            <button class="btn btn-sm btn-outline-info" onclick="window.location.href='monev-cpl-individual1.php' " ><i class="fas fa-info-circle"></i></button>
-            <button class="btn btn-sm btn-outline-primary"><i class="fas fa-upload"></i></button>
-            <button class="btn btn-sm btn-outline-success"><i class="fas fa-download"></i></button>
-          </td>
-        </tr>
+          <tr>
+            <td class="text-center">2</td>
+            <td>19312376</td>
+            <td>Ho Aldika Novaldy Sumampow</td>
+            <td>aldika.sumampow@univ.ac.id</td>
+            <td class="text-center">2019</td>
+            <td>Civil Engineering Regular</td>
+            <td class="text-center"><img style="width:40px;" alt="Foto"></td>
+            <td class="text-center"><span class="badge badge-warning">Cuti</span></td>
+            <td class="text-center">
+              <button class="btn btn-sm btn-outline-info" onclick="window.location.href='monev-cpl-individual1.php' " ><i class="fas fa-info-circle"></i></button>
+              <button class="btn btn-sm btn-outline-primary"><i class="fas fa-upload"></i></button>
+              <button class="btn btn-sm btn-outline-success"><i class="fas fa-download"></i></button>
+            </td>
+          </tr>
 
-        <tr>
-          <td class="text-center">3</td>
-          <td>19312406</td>
-          <td>Annisa Regita Sintowati</td>
-          <td>annisa.sintowati@univ.ac.id</td>
-          <td class="text-center">2019</td>
-          <td>Civil Engineering Regular</td>
-          <td class="text-center"><img style="width:40px;" alt="Foto"></td>
-          <td class="text-center"><span class="badge badge-danger">Skors</span></td>
-          <td class="text-center">
-            <div class="btn-group">
-              <a href="portfolio_cpmk_detail2.php" target="_blank" class="btn btn-sm btn-outline-info">
-                <i class="fas fa-external-link-alt"></i> View
-              </a>
-              <button type="button" class="btn btn-sm btn-outline-info dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown"></button>
+          <tr>
+            <td class="text-center">3</td>
+            <td>19312406</td>
+            <td>Annisa Regita Sintowati</td>
+            <td>annisa.sintowati@univ.ac.id</td>
+            <td class="text-center">2019</td>
+            <td>Civil Engineering Regular</td>
+            <td class="text-center"><img style="width:40px;" alt="Foto"></td>
+            <td class="text-center"><span class="badge badge-danger">Skors</span></td>
+            <td class="text-center">
+              <div class="btn-group">
+                <a href="portfolio_cpmk_detail2.php" target="_blank" class="btn btn-sm btn-outline-info">
+                  <i class="fas fa-external-link-alt"></i> View
+                </a>
+                <button type="button" class="btn btn-sm btn-outline-info dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown"></button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#"><i class="fas fa-edit text-primary"></i> Edit</a></li>
+                  <li><a class="dropdown-item" href="#"><i class="fas fa-trash text-danger"></i> Hapus</a></li>
+                  <li><a class="dropdown-item" href="#"><i class="fas fa-key text-warning"></i> Ubah Password</a></li>
+                </ul>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="text-center">4</td>
+            <td>19312418</td>
+            <td>Claudia Monica Aditama</td>
+            <td>claudia.aditama@univ.ac.id</td>
+            <td class="text-center">2019</td>
+            <td>Civil Engineering Regular</td>
+            <td class="text-center"><img style="width:40px;" alt="Foto"></td>
+            <td class="text-center"><span class="badge badge-danger">Drop Out</span></td>
+            <td class="text-center">
+              <button class="btn btn-sm btn-outline-warning">🔑</button>
+            </td>
+          </tr>
+          <tr>
+
+            <td class="text-center">5</td>
+            <td>19312424</td>
+            <td>Filza Aliyah Tasya</td>
+            <td>filza.tasya@univ.ac.id</td>
+            <td class="text-center">2019</td>
+            <td>Civil Engineering IP</td>
+            <td class="text-center"><img style="width:40px;" alt="Foto"></td>
+            <td class="text-center"><span class="badge badge-danger">Passed Out</span></td>
+            <td class="text-center">
+              <button class="btn btn-sm btn-outline-warning">🔑</button>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="text-center">6</td>
+            <td>19312424</td>
+            <td>Filza Aliyah Tasya</td>
+            <td>filza.tasya@univ.ac.id</td>
+            <td class="text-center">2019</td>
+            <td>Civil Engineering Regular</td>
+            <td class="text-center"><img style="width:40px;" alt="Foto"></td>
+            <td class="text-center"><span class="badge badge-success">Lulus</span></td>
+            <td class="text-center">
+              <div class="btn-group">
+                <button type="button" class="btn btn-sm btn-outline-info dropdown-toggle" 
+                data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fas fa-ellipsis-h"></i> Action
+              </button>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#"><i class="fas fa-edit text-primary"></i> Edit</a></li>
-                <li><a class="dropdown-item" href="#"><i class="fas fa-trash text-danger"></i> Hapus</a></li>
+                <li><a class="dropdown-item" href="#"><i class="fas fa-edit text-primary"></i> Edit Link</a></li>
+                <li><a class="dropdown-item" href="#"><i class="fas fa-trash-alt text-danger"></i> Hapus Data</a></li>
                 <li><a class="dropdown-item" href="#"><i class="fas fa-key text-warning"></i> Ubah Password</a></li>
-              </ul>
-            </div>
-          </td>
-        </tr>
+                <li><a class="dropdown-item" href="#"><i class="fas fa-upload text-success"></i> Upload File</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="portfolio_cpmk_detail2.php" target="_blank">
+                  <i class="fas fa-external-link-alt text-info"></i> View Link</a></li>
+                  <li><a class="dropdown-item" href="#"><i class="fas fa-download text-success"></i> Download File</a></li>
+                </ul>
+              </div>
+            </td>
+          </tr>
 
-        <tr>
-          <td class="text-center">4</td>
-          <td>19312418</td>
-          <td>Claudia Monica Aditama</td>
-          <td>claudia.aditama@univ.ac.id</td>
-          <td class="text-center">2019</td>
-          <td>Civil Engineering Regular</td>
-          <td class="text-center"><img style="width:40px;" alt="Foto"></td>
-          <td class="text-center"><span class="badge badge-danger">Drop Out</span></td>
-          <td class="text-center">
-            <button class="btn btn-sm btn-outline-warning">🔑</button>
-          </td>
-        </tr>
-<tr>
-
-          <td class="text-center">5</td>
-          <td>19312424</td>
-          <td>Filza Aliyah Tasya</td>
-          <td>filza.tasya@univ.ac.id</td>
-          <td class="text-center">2019</td>
-          <td>Civil Engineering IP</td>
-          <td class="text-center"><img style="width:40px;" alt="Foto"></td>
-          <td class="text-center"><span class="badge badge-danger">Passed Out</span></td>
-          <td class="text-center">
-            <button class="btn btn-sm btn-outline-warning">🔑</button>
-          </td>
-        </tr>
-
-        <tr>
-          <td class="text-center">6</td>
-          <td>19312424</td>
-          <td>Filza Aliyah Tasya</td>
-          <td>filza.tasya@univ.ac.id</td>
-          <td class="text-center">2019</td>
-          <td>Civil Engineering Regular</td>
-          <td class="text-center"><img style="width:40px;" alt="Foto"></td>
-          <td class="text-center"><span class="badge badge-success">Lulus</span></td>
-          <td class="text-center">
-                      <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-outline-info dropdown-toggle" 
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="fas fa-ellipsis-h"></i> Action
-                      </button>
-                      <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#"><i class="fas fa-edit text-primary"></i> Edit Link</a></li>
-                        <li><a class="dropdown-item" href="#"><i class="fas fa-trash-alt text-danger"></i> Hapus Data</a></li>
-                        <li><a class="dropdown-item" href="#"><i class="fas fa-key text-warning"></i> Ubah Password</a></li>
-                        <li><a class="dropdown-item" href="#"><i class="fas fa-upload text-success"></i> Upload File</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="portfolio_cpmk_detail2.php" target="_blank">
-                          <i class="fas fa-external-link-alt text-info"></i> View Link</a></li>
-                          <li><a class="dropdown-item" href="#"><i class="fas fa-download text-success"></i> Download File</a></li>
-                        </ul>
-                      </div>
-                    </td>
-        </tr>
-
-      </tbody>
-    </table>
+        </tbody>
+      </table>
+    </div>
   </div>
 </div>
-          </div>
 
 
 
@@ -341,4 +360,59 @@
 </div>
 
 
+<script>
+const ctx = document.getElementById('chartMasaStudi').getContext('2d');
+
+new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: [
+            '6+ Tahun',
+            '5 Tahun',
+            '4 Tahun',
+            '3 Tahun',
+            '2 Tahun',
+            '1 Tahun'
+        ],
+        datasets: [{
+            label: 'Jumlah Mahasiswa',
+            data: [20, 45, 80, 60, 25, 10], // data contoh statis
+            backgroundColor: "rgba(255, 99, 132, 0.7)",
+            borderColor: "rgb(255, 99, 132)",
+            borderWidth: 1
+        }]
+    },
+    options: {
+        indexAxis: 'y', // Membuat bar horizontal
+        responsive: true,
+        plugins: {
+            legend: {
+                display: true
+            },
+            // title: {
+            //     display: true,
+            //     text: 'Sebaran Jumlah Mahasiswa Berdasarkan Masa Studi'
+            // },
+            tooltip: {
+                enabled: true
+            }
+        },
+        scales: {
+            x: {
+                beginAtZero: true,
+                title: {
+                    display: false,
+                    text: 'Jumlah Mahasiswa'
+                }
+            },
+            y: {
+                title: {
+                    display: true,
+                    text: 'Masa Studi'
+                }
+            }
+        }
+    }
+});
+</script>
 <?php include('5script.php'); ?>

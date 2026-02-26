@@ -1,4 +1,4 @@
-<?php $page = 'status_pemetaan'; ?>
+<?php $page = 'pemetaan_zend'; ?>
 <?php include('1header.php'); ?>
 <?php include('2navbar.php'); ?>
 <?php include('3sidebar.php'); ?>
@@ -50,7 +50,13 @@
             </div>
           </div>
 
-
+<!-- TAB NAV  -->
+  <ul class="nav nav-tabs">   
+    <li class="nav-item" onclick="window.location='pemetaan-zend.php'"><a class="nav-link ">Pemetaan</a></li>
+    <li class="nav-item" onclick="window.location='pemetaan-zend2.php'"><a class="nav-link ">Pembobotan</a></li>
+    <li class="nav-item" onclick="window.location='pemetaan-zend3.php'"><a class="nav-link ">Preview</a></li>
+    <li class="nav-item" onclick="window.location='monev-status-pemetaan.php'"><a class="nav-link active">Checking</a></li>
+  </ul>
 <!-- ========== CARD 3: KPI row ========== -->    
  <style>
     body { background: #f4f6f9; }

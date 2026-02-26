@@ -62,6 +62,7 @@
     <li class="nav-item" onclick="window.location='pemetaan-zend.php'"><a class="nav-link active">Pemetaan</a></li>
     <li class="nav-item" onclick="window.location='pemetaan-zend2.php'"><a class="nav-link ">Pembobotan</a></li>
     <li class="nav-item" onclick="window.location='pemetaan-zend3.php'"><a class="nav-link ">Preview</a></li>
+    <li class="nav-item" onclick="window.location='monev-status-pemetaan.php'"><a class="nav-link ">Checking</a></li>
   </ul>
 
 <!-- ========== CARD : pemetaan ========== -->
@@ -425,9 +426,10 @@ document.querySelectorAll('.ik-row').forEach(function(row) {
             <label for="selectMK">Pilih Mata Kuliah</label>
             <select class="form-control" id="selectMK" required>
               <option value="">-- Pilih Mata Kuliah --</option>
-              <option value="MK1">MK Struktur Beton</option>
-              <option value="MK2">MK Mekanika Tanah</option>
-              <option value="MK3">MK Geoteknik</option>
+              <option value="MK1">MK Struktur Beton (5 CPMK)</option>
+              <option value="MK1">MK Struktur Beton (9 CPMK)</option>
+              <option value="MK2">MK Mekanika Tanah (3 CPMK)</option>
+              <option value="MK3">MK Geoteknik (3 CPMK)</option>
               <!-- Tambah opsi lain sesuai kebutuhan -->
             </select>
           </div>

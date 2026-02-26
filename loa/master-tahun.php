@@ -96,6 +96,7 @@
                 <thead class="text-uppercase text-center">
                   <tr>
                     <th width="5%">No</th>
+                    <th width="5%">Kode</th>
                     <th>Tahun Akademik</th>
                     <th>Tahun Masuk Mahasiswa (Angkatan)</th>
                     <th width="15%">Aksi</th>
@@ -104,6 +105,7 @@
                 <tbody>
                   <tr>
                     <td class="text-center">1</td>
+                    <td class="text-center">TA2020</td>
                     <td class="text-center">2020/2021</td>
                     <td class="text-center">2020</td>
                     <td class="text-center">
@@ -118,6 +120,7 @@
 
                   <tr>
                     <td class="text-center">2</td>
+                    <td class="text-center">TA2021</td>
                     <td class="text-center">2021/2022</td>
                     <td class="text-center">2021</td>
                     <td class="text-center">
@@ -132,6 +135,7 @@
 
                   <tr>
                     <td class="text-center">3</td>
+                    <td class="text-center">TA2022</td>
                     <td class="text-center">2022/2023</td>
                     <td class="text-center">2022</td>
                     <td class="text-center">
@@ -146,6 +150,7 @@
 
                   <tr>
                     <td class="text-center">4</td>
+                    <td class="text-center">TA2023</td>
                     <td class="text-center">2023/2024</td>
                     <td class="text-center">2023</td>
                     <td class="text-center">
@@ -160,6 +165,7 @@
 
                   <tr>
                     <td class="text-center">5</td>
+                    <td class="text-center">TA2024</td>
                     <td class="text-center">2024/2025</td>
                     <td class="text-center">2024</td>
                     <td class="text-center">
@@ -174,6 +180,7 @@
 
                   <tr>
                     <td class="text-center">6</td>
+                    <td class="text-center">TA2025</td>
                     <td class="text-center">2025/2026</td>
                     <td class="text-center">2025</td>
                     <td class="text-center">
