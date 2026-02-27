@@ -66,7 +66,7 @@
                   <tr class="text-uppercase">
                     <th width="5px">No.</th>
                     <th>Kurikulum</th>
-                    <!-- <th>Kode</th> -->
+                    <th>Kode Pemetaan</th>
                     <th>Set Pemetaan</th>
                     <th>Deskripsi Profile Lulusan</th>
                     <th>Status</th>
@@ -76,8 +76,8 @@
                 <tbody>
                   <tr>
                     <td align="center">1</td>
+                    <td>KT-2</td>                    
                     <td>SP01</td>
-                    <!-- <td>KT-2</td>                     -->
                     <td>Kurikulum 2025 Profesional stage</td>
                     <td>
                       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -96,8 +96,8 @@
                   </tr>
                   <tr>
                     <td align="center">2</td>
-                    <td>SP01</td>
-                    <!-- <td>ST-24</td> -->
+                    <td>KT-2</td>
+                    <td>SP02</td>
                     <td>K25 full stage</td>
                     <td>
                       Kurikulum 2025 full stage (formatif,reinforcement dan profesional stage)
@@ -113,8 +113,8 @@
                   </tr>
                   <tr>
                     <td align="center">3</td>
-                    <td>SP01</td>
-                    <!-- <td>SL01</td> -->
+                    <td>KT-2</td>
+                    <td>SP03</td>
                     <td>Kurikulum 2025 stage formatif</td>
                     <td>
                       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -133,8 +133,8 @@
                   </tr>
                   <tr>
                     <td align="center">4</td>
+                    <td>KT-2</td>                    
                     <td>ST24</td>
-                    <!-- <td>KT-2</td>                     -->
                     <td>Kurikulum 2018 Imtermediate stage</td>
                     <td>
                       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod

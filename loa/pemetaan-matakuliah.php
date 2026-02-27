@@ -8,7 +8,11 @@
 
   <section class="content-header">
     <div class="container-fluid">
-      <h3 class="mb-0">Daftar Mata Kuliah</h3>
+      <h3 class="mb-0">Daftar Mata Kuliah
+      <button type="button" class="btn btn-tool" data-bs-toggle="modal" data-bs-target="#modalBantuan" title="Bantuan">
+          <i class="fas fa-question-circle"></i>
+        </button>
+      </h3>
         <p class="text-muted mb-0">Keterangan singkat cara baca informasi halaman ini</p>
     </div>
   </section>
@@ -91,11 +95,13 @@
             					<th>Jumlah SKS</th>
             					<th width="100px">Aksi</th>
             				</tr> -->
+
 <tr class="text-uppercase text-center">
                       <th width="5px">No.</th>
                       <th>Kurikulum</th>
                       <th>Kode </th>
-                      <th>Nama </th>
+                      <th>Nama (ID)</th>
+                      <th>Nama (EN)</th>
                       <th>Tipe</th>
                       <th>Pengambilan</th>
                       <th>Semester </th>
@@ -107,10 +113,11 @@
             			</thead>
             			<tbody>
             				<tr>
-            					<td class="text-center">1</td>
+            					<td class="text-center">11</td>
             					<td>OBE 2024</td>
             					<td>IF101</td>
-            					<td>Pengantar Teknologi Informasi</td>
+            					<td>Pendidikan Agama Islam</td>
+                      <td>Islamic Education</td>
                       <td>Teori</td>
             					<td>Wajib</td>
             					<td class="text-center">1</td>
@@ -130,15 +137,16 @@
             					</td>
             				</tr>
 <tr>
-                      <td class="text-center">1</td>
+                      <td class="text-center">12</td>
                       <td>OBE 2024</td>
-                      <td>IF101</td>
-                      <td>Pengantar Teknologi Informasi</td>
+                      <td>IF301</td>
+                      <td>Pemrograman Web</td>
+                      <td>Pemrograman Web</td>
                       <td>Teori</td>
                       <td>Wajib</td>
-                      <td class="text-center">1</td>
-                      <td class="text-center">9</td>
-                      <td class="text-center">2</td>
+                      <td class="text-center">3</td>
+                      <td class="text-center">8</td>
+                      <td class="text-center">3</td>
                       <td>Arsip</td>
                       <td class="text-center">
                         <button type="button" class="btn btn-sm btn-outline-info">
@@ -157,6 +165,7 @@
             					<td>OBE 2024</td>
             					<td>IF102</td>
             					<td>Algoritma dan Pemrograman</td>
+                      <td>Algoritma dan Pemrograman</td>
                       <td>Teori</td>
             					<td>Wajib</td>
             					<td class="text-center">1</td>
@@ -181,6 +190,7 @@
             					<td>OBE 2024</td>
             					<td>IF201</td>
             					<td>Struktur Data</td>
+                      <td>Structure Data</td>
                       <td>Teori</td>
             					<td>Wajib</td>
             					<td class="text-center">2</td>
@@ -205,10 +215,11 @@
             					<td>OBE 2024</td>
             					<td>IF202</td>
             					<td>Basis Data</td>
+                      <td>Basis Data</td>
                       <td>Teori</td>
             					<td>Wajib</td>
             					<td class="text-center">2</td>
-            					<td class="text-center">6</td>
+            					<td class="text-center">5</td>
             					<td class="text-center">3</td>
                        <td>Aktif</td>
             					<td class="text-center">
@@ -227,13 +238,14 @@
             				<tr>
             					<td class="text-center">5</td>
             					<td>OBE 2024</td>
-            					<td>IF301</td>
-            					<td>Pemrograman Web</td>
+                      <td>IF202</td>
+                      <td>Basis Data</td>
+                      <td>Basis Data</td>
                       <td>Teori</td>
-            					<td>Wajib</td>
-            					<td class="text-center">3</td>
-            					<td class="text-center">8</td>
-            					<td class="text-center">3</td>
+                      <td>Wajib</td>
+                      <td class="text-center">2</td>
+                      <td class="text-center">9</td>
+                      <td class="text-center">3</td>
                        <td>Aktif</td>
             					<td class="text-center">
             						<button type="button" class="btn btn-sm btn-outline-info">
@@ -252,7 +264,8 @@
             					<td class="text-center">6</td>
             					<td>OBE 2024</td>
             					<td>IF302</td>
-            					<td>Rekayasa Perangkat Lunak</td>
+            					<td>Komunikasi Pemasaran</td>
+                      <td>Marketing Communication</td>
                       <td>Teori</td>
             					<td>Wajib</td>
             					<td class="text-center">3</td>
@@ -276,7 +289,8 @@
             					<td class="text-center">7</td>
             					<td>OBE 2024</td>
             					<td>IF401</td>
-            					<td>Keamanan Informasi</td>
+            					<td>Akuntansi Bisnis</td>
+                      <td>Business Accounting</td>
                       <td>Teori</td>
             					<td>Pilihan</td>
             					<td class="text-center">4</td>
@@ -300,7 +314,8 @@
             					<td class="text-center">8</td>
             					<td>OBE 2024</td>
             					<td>IF402</td>
-            					<td>Data Mining</td>
+            					<td>Manajemen Keuangan</td>
+                      <td>Financial Management</td>
                       <td>Teori</td>
             					<td>Pilihan</td>
             					<td class="text-center">4</td>
@@ -325,6 +340,7 @@
             					<td>OBE 2024</td>
             					<td>IF501</td>
             					<td>Metodologi Penelitian</td>
+                      <td>Metodologi Penelitian</td>
                       <td>Teori</td>
             					<td>Wajib</td>
             					<td class="text-center">5</td>
@@ -348,7 +364,8 @@
             					<td class="text-center">10</td>
             					<td>OBE 2024</td>
             					<td>IF502</td>
-            					<td>Kerja Praktik</td>
+            					<td>Tugas Akhir</td>
+                      <td>Final Project</td>
                       <td>Non-Teori</td>
             					<td>Wajib</td>
             					<td class="text-center">6</td>
@@ -369,10 +386,11 @@
             				</tr>
 
             				<tr>
-            					<td class="text-center">11</td>
+            					<td class="text-center">1</td>
             					<td>OBE 2024</td>
             					<td>IF601</td>
             					<td>Skripsi</td>
+                      <td>Skripsi</td>
                       <td>Non-Teori</td>
             					<td>Wajib</td>
             					<td class="text-center">8</td>

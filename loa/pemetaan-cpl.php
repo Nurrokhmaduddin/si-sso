@@ -8,7 +8,7 @@
 
   <section class="content-header">
     <div class="container-fluid">
-      <h3 class="mb-0">Daftar Capaian Lulusan 
+      <h3 class="mb-0">Daftar Capaian Pembelajaran Lulusan 
       <button type="button" class="btn btn-tool" data-bs-toggle="modal" data-bs-target="#modalBantuan" title="Bantuan">
                 <i class="fas fa-question-circle"></i>
               </button>

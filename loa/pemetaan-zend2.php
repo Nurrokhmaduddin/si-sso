@@ -40,12 +40,12 @@
       <button class="btn btn-outline-info btn-sm " data-bs-toggle="modal" data-bs-target="#modalFilter">
         <i class="fas fa-filter me-1"></i> Filter
       </button>
-      <button type="button" class="btn btn-outline-primary btn-sm " data-bs-toggle="modal" data-bs-target="#modalTambahData">
+      <!-- <button type="button" class="btn btn-outline-primary btn-sm " data-bs-toggle="modal" data-bs-target="#modalTambahData">
         <i class="fas fa-plus me-1"></i> Add
       </button>
       <button type="button" class="btn btn-outline-primary btn-sm " data-bs-toggle="modal" data-bs-target="#modalImpor">
         <i class="fas fa-file-upload me-1"></i> Import
-      </button>                
+      </button>  -->               
       <button type="button" class="btn btn-outline-success btn-sm">
         <i class="fas fa-file-download me-1"></i> Export
       </button>
@@ -68,14 +68,14 @@
 
 <!-- CPL Card Template -->
 <form method="post" action="simpan_bobot.php">
-  <div class="card mb-3">
+  <div class="card mb-3 ">
     <div class="card-header">
       <h5 class="card-title">
        <button class="btn btn-outline-info btn-sm" data-bs-toggle="collapse" data-bs-target="#daftarIKCPL1"><i class="fas fa-expand"></i></button>
        CPL 1: Bertakwa kepada Tuhan Yang Maha Esa dan berperilaku islami (jujur, disiplin, tanggung jawab, dan kerja cerdas)
      </h5>
    </div>
-   <div class="card-body">
+   <div class="card-body p-0">
     <div class="table-responsive">
       <table class="table table-bordered table-hover">
         <thead class="thead-light">
@@ -83,8 +83,8 @@
             <th>IK</th>
             <th>Mata Kuliah</th>
             <th>CPMK</th>
-            <th>Bobot CPMK </th>
-            <th>Bobot IK </th>
+            <th width="120px">Bobot CPMK </th>
+            <th width="100px">Bobot IK </th>
           </tr>
         </thead>
         <tbody>
@@ -97,7 +97,7 @@
           </tr>
           <tr>
             <td></td>
-            <td style="white-space: nowrap;">UNI600-1 <br><small>Pendidikan Agama Islam</small></td>
+            <td>UNI600-1 <br><small>Pendidikan Agama Islam</small></td>
             <td>Menjelaskan konsep fitrah manusia dan hidayah sesuai Al-Qur’an dan Hadis</td>
             <td><input type="number" name="bobot_cpmk[UNI600-1]" value="25" class="form-control form-control-sm"></td>
           </tr>

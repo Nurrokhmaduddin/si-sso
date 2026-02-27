@@ -1,4 +1,4 @@
-<?php $page = 'evaluasi_pembelajaran'; ?>
+<?php $page = 'evaluasi_kurikulum'; ?>
 <?php include('1header.php'); ?>
 <?php include('2navbar.php'); ?>
 <?php include('3sidebar.php'); ?>
@@ -26,7 +26,7 @@
 
   <section class="content-header">
     <div class="container-fluid">
-      <h3 class="mb-0">Evaluasi Pembelajaran
+      <h3 class="mb-0">Evaluasi Kurikulum
       <button type="button" class="btn btn-tool" data-bs-toggle="modal" data-bs-target="#modalBantuan" title="Bantuan"><i class="fas fa-info-circle"></i>
         </button>
       </h3>
@@ -46,11 +46,11 @@
             <div class="card-body ">
               <div class="row">
                 <div class="col-md-6">
-                  <b>Jenis[mandatory]:</b> Proses/Pembelajaranan
+                  <b>Jenis[mandatory]:</b> Kemajuan/Perkembangan
                 </div>
                               
                 <div class="col-md-6">
-                  <b>Modul ref[Pilih]:</b> Monev Kelas
+                  <b>Modul ref[Pilih]:</b> Monev Angkatan
                 </div>
               <div class="col-md-6">
                 <b>Status Eval[pilih]:</b> Approved
@@ -66,9 +66,12 @@
                 <button class="btn btn-outline-info btn-sm " data-bs-toggle="modal" data-bs-target="#modalFilter">
                   <i class="fas fa-filter me-1"></i> Filter
                 </button>
-                <button type="button" class="btn btn-outline-primary btn-sm " data-bs-toggle="modal" data-bs-target="#modalTambahData">
-                  <i class="fas fa-plus me-1"></i> Tambah Temuan
-                </button>  
+                <button type="button" class="btn btn-outline-primary btn-sm " data-bs-toggle="modal" data-bs-target="#modalTambahTemuan">
+                  <i class="fas fa-plus me-1"></i> Temuan Evaluasi
+                </button>    
+                <button type="button" class="btn btn-outline-primary btn-sm " data-bs-toggle="modal" data-bs-target="#modalTambahAksi">
+                  <i class="fas fa-plus me-1"></i> Aksi Evaluasi
+                </button> 
                 <button type="button" class="btn btn-outline-primary btn-sm " data-bs-toggle="modal" data-bs-target="#modalImpor">
                   <i class="fas fa-file-upload me-1"></i> Import
                 </button>  
@@ -88,8 +91,8 @@
 
          <!-- TAB NAV  -->
            <ul class="nav nav-tabs">
-            <li class="nav-item" onclick="window.location='evaluasi-pembelajaran.php'"><a class="nav-link active">Temuan Evaluasi</a></li>
-            <li class="nav-item" onclick="window.location='evaluasi-pembelajaran2.php'"><a class="nav-link ">Aksi Evaluasi</a></li>
+            <li class="nav-item" onclick="window.location='evaluasi-kurikulum.php'"><a class="nav-link active">Temuan Evaluasi</a></li>
+            <li class="nav-item" onclick="window.location='evaluasi-kurikulum2.php'"><a class="nav-link ">Aksi Evaluasi</a></li>
           </ul>
 
         <!-- ========== CARD : Tabel Granular ========== -->
@@ -101,179 +104,66 @@
               <div class="table-responsive">
                 <table class="table table-bordered table-striped table-sm datatables1">
                  
-    <thead>
-      <tr>
-        <th>Ref Module</th>
-        <th>Jenis</th>
-        <th>Objek</th>
-        <th>Periode</th>
-        <th>Temuan</th>
-        <th>Prioritas</th>
-        <th>Aksi</th>
-        <th>PJ</th>
-        <th>Status Aksi</th>
-        <th>Dampak</th>
-        <th>Status Eval</th>
-      </tr>
-    </thead>
-    <tbody>
+ 
+                
 
-      <tr>
-        <td>Monev Angkatan</td>
-        <td>Perkembangan</td>
-        <td>CPL 4 - Angk 2021</td>
-        <td>2024</td>
-        <td>Stagnasi 2 semester</td>
-        <td>High</td>
-        <td>Revisi metode praktikum</td>
-        <td>Koord MK</td>
-        <td>Ongoing</td>
-        <td>Belum direview</td>
-        <td>Approved</td>
-      </tr>
+  <thead>
+    <tr>
+      <th>id_temuan (PK)</th>
+      <th>reference_module</th>
+      <th>reference_id</th>
+      <th>jenis_evaluasi</th>
+      <th>objek</th>
+      <th>periode</th>
+      <th>deskripsi_temuan</th>
+      <th>tingkat_prioritas</th>
+      <th>dibuat_oleh</th>
+      <th>tanggal_temuan</th>
 
-      <tr>
-        <td>Monev MK</td>
-        <td>Proses</td>
-        <td>MK Algoritma</td>
-        <td>2024-1</td>
-        <td>Distribusi nilai tidak normal</td>
-        <td>Medium</td>
-        <td>Review instrumen ujian</td>
-        <td>Dosen MK</td>
-        <td>Completed</td>
-        <td>Nilai lebih merata</td>
-        <td>Closed</td>
-      </tr>
+      <!-- Impact (Kuning) -->
+      <th style="background-color:#fff3cd;">indikator_sebelum</th>
+      <th style="background-color:#fff3cd;">indikator_sesudah</th>
+      <th style="background-color:#fff3cd;">analisis_dampak</th>
+      <th style="background-color:#fff3cd;">kesimpulan_dampak</th>
+      <th style="background-color:#fff3cd;">tanggal_review</th>
 
-      <tr>
-        <td>Monev Yudisium</td>
-        <td>Outcome</td>
-        <td>Batch 2023</td>
-        <td>2023</td>
-        <td>CPL 2 di bawah target</td>
-        <td>High</td>
-        <td>Workshop softskill</td>
-        <td>Kaprodi</td>
-        <td>Ongoing</td>
-        <td>Belum direview</td>
-        <td>Approved</td>
-      </tr>
+      <!-- Governance (Merah) -->
+      <th style="background-color:#f8d7da;">status_temuan</th>
+      <th style="background-color:#f8d7da;">disetujui_oleh</th>
+      <th style="background-color:#f8d7da;">tanggal_persetujuan</th>
+      <th style="background-color:#f8d7da;">tanggal_penutupan</th>
+      <th style="background-color:#f8d7da;">arsip</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>TM-2025-001</td>
+      <td>Kurikulum</td>
+      <td>KRK-OBE-03</td>
+      <td>Evaluasi Kurikulum</td>
+      <td>RPS Semester 3</td>
+      <td>Ganjil 2024/2025</td>
+      <td>40% RPS belum mengacu pada standar OBE terutama pada CPMK dan asesmen.</td>
+      <td>Tinggi</td>
+      <td>Ketua GKM</td>
+      <td>10-01-2025</td>
 
-      <tr>
-        <td>Monev Tahunan</td>
-        <td>Sistem</td>
-        <td>CPL 7</td>
-        <td>2024</td>
-        <td>Kontribusi MK tidak merata</td>
-        <td>Medium</td>
-        <td>Audit mapping IK</td>
-        <td>Tim Kurikulum</td>
-        <td>Planned</td>
-        <td>-</td>
-        <td>Draft</td>
-      </tr>
+      <!-- Impact (Kuning) -->
+      <td style="background-color:#fff3cd;">60% RPS sesuai OBE</td>
+      <td style="background-color:#fff3cd;">95% RPS sesuai OBE</td>
+      <td style="background-color:#fff3cd;">Peningkatan signifikan setelah workshop dan revisi template.</td>
+      <td style="background-color:#fff3cd;">Target tercapai dan efektif.</td>
+      <td style="background-color:#fff3cd;">15-03-2025</td>
 
-      <tr>
-        <td>Monev Individu</td>
-        <td>Perkembangan</td>
-        <td>Mhs A</td>
-        <td>2024</td>
-        <td>CPL 5 rendah konsisten</td>
-        <td>Low</td>
-        <td>Pembimbingan akademik</td>
-        <td>Dosen Wali</td>
-        <td>Completed</td>
-        <td>Ada peningkatan 5%</td>
-        <td>Closed</td>
-      </tr>
-
-      <tr>
-        <td>Monev Kelas</td>
-        <td>Proses</td>
-        <td>Kelas IF-A</td>
-        <td>2024-1</td>
-        <td>Metode kurang variatif</td>
-        <td>Low</td>
-        <td>Pelatihan PBL</td>
-        <td>UPM</td>
-        <td>Ongoing</td>
-        <td>-</td>
-        <td>Approved</td>
-      </tr>
-
-      <tr>
-        <td>Monev Angkatan</td>
-        <td>Perkembangan</td>
-        <td>Angk 2020</td>
-        <td>2023</td>
-        <td>Penurunan CPL 1</td>
-        <td>High</td>
-        <td>Integrasi project lintas MK</td>
-        <td>Kaprodi</td>
-        <td>Completed</td>
-        <td>Meningkat 8%</td>
-        <td>Closed</td>
-      </tr>
-
-      <tr>
-        <td>Monev MK</td>
-        <td>Proses</td>
-        <td>Basis Data</td>
-        <td>2024-1</td>
-        <td>CPMK 3 tidak tercapai</td>
-        <td>Medium</td>
-        <td>Revisi RPS</td>
-        <td>Dosen MK</td>
-        <td>Planned</td>
-        <td>-</td>
-        <td>Draft</td>
-      </tr>
-
-      <tr>
-        <td>Monev Yudisium</td>
-        <td>Outcome</td>
-        <td>Batch 2022</td>
-        <td>2022</td>
-        <td>Masa studi panjang</td>
-        <td>Medium</td>
-        <td>Perbaikan alur skripsi</td>
-        <td>Kaprodi</td>
-        <td>Completed</td>
-        <td>Turun 0.5 semester</td>
-        <td>Closed</td>
-      </tr>
-
-      <tr>
-        <td>Monev Tahunan</td>
-        <td>Sistem</td>
-        <td>IK 3</td>
-        <td>2024</td>
-        <td>Redundansi antar MK</td>
-        <td>Low</td>
-        <td>Penataan distribusi materi</td>
-        <td>Tim Kurikulum</td>
-        <td>Ongoing</td>
-        <td>-</td>
-        <td>Approved</td>
-      </tr>
-
-      <tr>
-        <td>Monev Angkatan</td>
-        <td>Perkembangan</td>
-        <td>Angk 2022</td>
-        <td>2024</td>
-        <td>CPL 9 meningkat signifikan</td>
-        <td>Low</td>
-        <td>Dipertahankan strategi saat ini</td>
-        <td>Kaprodi</td>
-        <td>Completed</td>
-        <td>Naik 12%</td>
-        <td>Closed</td>
-      </tr>
-
-    </tbody>
-  </table>
+      <!-- Governance (Merah) -->
+      <td style="background-color:#f8d7da;">Ditutup</td>
+      <td style="background-color:#f8d7da;">Ketua Prodi</td>
+      <td style="background-color:#f8d7da;">12-01-2025</td>
+      <td style="background-color:#f8d7da;">20-03-2025</td>
+      <td style="background-color:#f8d7da;">Tidak</td>
+    </tr>
+  </tbody>
+</table>
 
 
               </div>
@@ -733,6 +623,251 @@
   </div>
 </div>
 
+<!-- Modal Tambah Temuan Evaluasi -->
+<div class="modal fade" id="modalTambahTemuan" tabindex="-1">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content rounded-3 shadow">
+      
+      <div class="modal-header bg-primary text-white">
+        <h5 class="modal-title">Tambah Temuan Evaluasi</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+
+      <form method="POST">
+        <div class="modal-body">
+
+          <div class="alert alert-warning py-2">
+            Semua field bertanda <span class="text-danger">*</span> wajib diisi.
+          </div>
+
+          <!-- ID Sistem -->
+          <div class="mb-3">
+            <label class="form-label">ID Temuan</label>
+            <input type="text" class="form-control" name="id_temuan" value="Auto Generate" disabled>
+          </div>
+
+          <!-- CORE FIELD -->
+          <h6 class="mt-3 text-primary">Core Information</h6>
+
+          <div class="mb-3">
+            <label class="form-label">Reference Module <span class="text-danger">*</span></label>
+            <input type="text" class="form-control" name="reference_module" required placeholder="monev setahun">
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Reference ID</label>
+            <input type="text" class="form-control" name="reference_id" placeholder="http://localhost/si-sso/loa/monev-rekap-tahunan.php">
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Jenis Evaluasi <span class="text-danger">*</span></label>
+            <input type="text" class="form-control" name="jenis_evaluasi" required placeholder="evaluasi kurikulum">
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Objek <span class="text-danger">*</span></label>
+            <input type="text" class="form-control" name="objek" required placeholder="CPL-06">
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Periode <span class="text-danger">*</span></label>
+            <input type="text" class="form-control" name="periode" required placeholder="2024/2025">
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Deskripsi Temuan <span class="text-danger">*</span></label>
+            <textarea class="form-control" name="deskripsi_temuan" rows="3" required></textarea>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Tingkat Prioritas <span class="text-danger">*</span></label>
+            <select class="form-select" name="tingkat_prioritas" required>
+              <option value="">-- Pilih --</option>
+              <option value="Rendah">Rendah</option>
+              <option value="Sedang">Sedang</option>
+              <option value="Tinggi">Tinggi</option>
+            </select>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Dibuat Oleh</label>
+            <input type="text" class="form-control" value="Login User" disabled>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Tanggal Temuan</label>
+            <input type="date" class="form-control" value="<?php echo date('Y-m-d'); ?>" disabled>
+          </div>
+
+          <!-- IMPACT FIELD -->
+          <h6 class="mt-4 text-warning">Impact Review (Diisi Saat Review)</h6>
+
+          <div class="mb-3">
+            <label class="form-label">Indikator Sebelum</label>
+            <textarea class="form-control" disabled></textarea>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Indikator Sesudah</label>
+            <textarea class="form-control" disabled></textarea>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Analisis Dampak</label>
+            <textarea class="form-control" disabled></textarea>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Kesimpulan Dampak</label>
+            <textarea class="form-control" disabled></textarea>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Tanggal Review</label>
+            <input type="date" class="form-control" disabled>
+          </div>
+
+          <!-- GOVERNANCE -->
+          <h6 class="mt-4 text-danger">Governance</h6>
+
+          <div class="mb-3">
+            <label class="form-label">Status Temuan</label>
+            <input type="text" class="form-control" value="Terbuka" disabled>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Disetujui Oleh</label>
+            <input type="text" class="form-control" disabled>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Tanggal Persetujuan</label>
+            <input type="date" class="form-control" disabled>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Tanggal Penutupan</label>
+            <input type="date" class="form-control" disabled>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Arsip</label>
+            <input type="text" class="form-control" value="Tidak" disabled>
+          </div>
+
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+          <button type="submit" class="btn btn-primary">Simpan Temuan</button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+</div>
+<!-- Modal Tambah Aksi Evaluasi -->
+<div class="modal fade" id="modalTambahAksi" tabindex="-1">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content rounded-3 shadow">
+
+      <div class="modal-header bg-success text-white">
+        <h5 class="modal-title">Tambah Aksi Evaluasi</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+
+      <form method="POST">
+        <div class="modal-body">
+
+          <div class="alert alert-warning py-2">
+            Field bertanda <span class="text-danger">*</span> wajib diisi.
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">ID Aksi</label>
+            <input type="text" class="form-control" value="Auto Generate" disabled>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">ID Temuan</label>
+            <input type="text" class="form-control" value="TM-XXXX" disabled>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Deskripsi Aksi <span class="text-danger">*</span></label>
+            <textarea class="form-control" name="deskripsi_aksi" required></textarea>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Penanggung Jawab <span class="text-danger">*</span></label>
+            <input type="text" class="form-control" name="penanggung_jawab" required>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Target Waktu <span class="text-danger">*</span></label>
+            <input type="date" class="form-control" name="target_waktu" required>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Target Indikator <span class="text-danger">*</span></label>
+            <textarea class="form-control" name="target_indikator" required></textarea>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Status Aksi</label>
+            <input type="text" class="form-control" value="Draft" disabled>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Tanggal Mulai</label>
+            <input type="date" class="form-control" disabled>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Tanggal Selesai</label>
+            <input type="date" class="form-control" disabled>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Catatan Progres</label>
+            <textarea class="form-control"></textarea>
+          </div>
+
+          <hr>
+
+          <h6 class="text-danger">Governance Aksi</h6>
+
+          <div class="mb-3">
+            <label class="form-label">Disetujui Oleh</label>
+            <input type="text" class="form-control" disabled>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Tanggal Persetujuan</label>
+            <input type="date" class="form-control" disabled>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Tanggal Verifikasi</label>
+            <input type="date" class="form-control" disabled>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Status Validasi</label>
+            <input type="text" class="form-control" value="Menunggu" disabled>
+          </div>
+
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+          <button type="submit" class="btn btn-success">Simpan Aksi</button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+</div>
 <?php include('5script.php'); ?>
 
 

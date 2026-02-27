@@ -8,7 +8,7 @@
 
   <section class="content-header">
     <div class="container-fluid">
-      <h3 class="mb-0">Daftar Capaian Mata Kuliah
+      <h3 class="mb-0">Daftar Capaian Pembelajaran Mata Kuliah
       <button type="button" class="btn btn-tool" data-bs-toggle="modal" data-bs-target="#modalBantuan" title="Bantuan">
                 <i class="fas fa-question-circle"></i>
               </button>
@@ -35,9 +35,9 @@
                 <!-- <div class="col-md-6">
                   <b>Set Pemetaan:</b> Peta B
                 </div> -->
-                <div class="col-md-6">
+                <!-- <div class="col-md-6">
                   <b>Mata Kuliah:</b> Semua &nbsp;
-                </div>
+                </div> -->
               </div>
             </div>
             <div class="card-footer">

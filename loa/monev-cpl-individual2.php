@@ -38,9 +38,18 @@
                   <b>Set Pemetaan:</b> v1.0
                 </div>
                 <div class="col-md-6">
-                  <b>Mahasiswa:</b> 20521098 - VEGA AYU CENTYA
+                  <b>NIM:</b> 20521098
+                </div>
+                <div class="col-md-6">
+                  <b>Angkatan:</b> 2020
+                </div>
+                <div class="col-md-6">
+                  <b>Nama :</b> VEGA AYU CENTYA
                 </div>
                 
+                <div class="col-md-6">
+                  <b>Status :</b> Aktif
+                </div>
               </div>
             </div>
             <div class="card-footer">

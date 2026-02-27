@@ -74,7 +74,7 @@
     </button> -->
     CPL 1 | deskripsi CPLnya 
   </div>
-  <div class="card-body d-none" id="detailIK1" >
+  <div class="card-body p-0 d-none" id="detailIK1" >
     <table class="table table1 table-bordered table-striped table-sm ">
       <thead >
         <tr class="text-uppercase">
@@ -94,8 +94,6 @@
           <td>IK.1.1</td>
           <td>Memahami dinul Islam serta pemikiran dan peradaban umat Islam M </td>
         </tr>
-
-
 
         <!-- ROW TURUNAN (EXPANDABLE) -->
         <tr id="detailCPMK1" class="d-none bg-light">
@@ -147,7 +145,7 @@
 
         <tr>
           <td>
-            <button class="btn btn-sm btn-outline-info" onclick="toggleById('detailCPMK1')"><i class="fas fa-expand"></i></button>
+            <button class="btn btn-sm btn-outline-info" onclick="toggleById('detailCPMK2')"><i class="fas fa-expand"></i></button>
             <button type="button" class="btn btn-sm btn-outline-danger">
               <i class="fas fa-trash"></i>
             </button>
@@ -156,6 +154,52 @@
           <td>IK.1.2</td>
           <td>Menunjukkan perilaku Islami pada setiap peran yang dijalani</td>
         </tr>
+           <!-- ROW TURUNAN (EXPANDABLE) -->
+        <tr id="detailCPMK2" class="d-none bg-light">
+          <td colspan="4">
+            <table class="table table-bordered table-sm mb-0">
+              <thead class="table-dark">
+                <tr class="text-uppercase">
+                  <th class="text-center">Aksi</th>
+                  <th>Nama MK</th>
+                  <th>Kode CPMK</th>
+                  <th>Deskripsi CPMK</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="text-center">
+                    <button type="button" class="btn btn-sm btn-outline-danger">
+                      <i class="fas fa-trash"></i>
+                    </button>
+                  </td>
+                  <td>MK Pengantar</td>
+                  <td>SKS230-1</td>
+                  <td>Memahami dinul Islam</td>
+                </tr>
+
+                <tr>
+                  <td class="text-center">
+                    <button type="button" class="btn btn-sm btn-outline-danger">
+                      <i class="fas fa-trash"></i>
+                    </button>
+                  </td>
+                  <td>MK Pengantar</td>
+                  <td>SKS230-2</td>
+                  <td>Menunjukkan perilaku Islami</td>
+                </tr>
+
+                <tr>
+                  <td colspan="4">
+                    <button class="btn btn-outline-primary btn-xs w-100" data-bs-toggle="modal" data-bs-target="#modalTambahMKCPMK1">
+                      Tambah CPMK
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>     
         <tr>
           <td colspan="3"><button class="btn btn-outline-primary btn-sm w-100" data-bs-toggle="modal" data-bs-target="#modalTambahIK"> Tambah IK</button></td>
         </tr>
@@ -452,7 +496,36 @@ document.querySelectorAll('.ik-row').forEach(function(row) {
     </div>
   </div>
 </div>
+<!-- Modal Impor -->
+<div class="modal fade" id="modalImpor" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
 
+      <div class="modal-header bg-primary text-white">
+        <h5 class="modal-title">Impor Data</h5>
+        <button class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">   
+        <div class="alert alert-warning mb-3 py-2" role="alert" style="font-size: 0.9rem;">
+          <i class="fas fa-exclamation-triangle me-1"></i>
+          <strong>Penting:</strong> Pastikan file yang akan diimpor menggunakan <strong>template resmi</strong> yang sudah disediakan. Menggunakan file lain atau format berbeda dapat menyebabkan <strong>kesalahan impor</strong>.
+        </div>     
+
+        <label class="form-label">Pilih File:</label>
+        <input type="file" class="form-control mb-3" accept=".xlsx,.xls">
+
+        <a href="template-impor-struktur-pemetaan.xls" class="btn btn-sm btn-outline-success w-100">Download Template</a>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+        <button class="btn btn-primary">Impor</button>
+      </div>
+
+    </div>
+  </div>
+</div>
 <!-- Modal Bantuan -->
 <div class="modal fade" id="modalBantuan" tabindex="-1" aria-labelledby="modalBantuanLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">

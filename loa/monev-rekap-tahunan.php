@@ -52,7 +52,10 @@
                 </button>                
                 <button type="button" class="btn btn-outline-success btn-sm">
                   <i class="fas fa-file-download me-1"></i> Export
-                </button>                
+                </button>    
+                <button type="button" class="btn btn-outline-primary btn-sm " data-bs-toggle="modal" data-bs-target="#modalTambahTemuan">
+                  <i class="fas fa-clipboard-list me-1"></i> Catat Temuan
+                </button>              
               </div>
 
             </div>
@@ -944,6 +947,93 @@ Keseimbangan Mapping
       </div>
     </div>
   </div>
+
+
+  <!-- Modal Tambah Temuan Evaluasi -->
+<div class="modal fade" id="modalTambahTemuan" tabindex="-1">
+  <div class="modal-dialog modal-md">
+    <div class="modal-content rounded-3 shadow">
+      
+      <div class="modal-header bg-primary text-white">
+        <h5 class="modal-title">Tambah Temuan Evaluasi</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+
+      <form method="POST">
+        <div class="modal-body">
+
+          <div class="alert alert-warning py-2">
+            Semua field bertanda <span class="text-danger">*</span> wajib diisi.
+          </div>
+
+          <!-- ID Sistem -->
+          <div class="mb-3">
+            <label class="form-label">ID Temuan</label>
+            <input type="text" class="form-control" name="id_temuan" value="Auto Generate" disabled>
+          </div>
+
+          <!-- CORE FIELD -->
+          <h6 class="mt-3 text-primary">Core Information</h6>
+
+          <div class="mb-3">
+            <label class="form-label">Reference Module <span class="text-danger">*</span></label>
+            <input type="text" class="form-control" name="reference_module" required value="monev setahun" disabled>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Reference ID</label>
+            <input type="text" class="form-control" name="reference_id" value="http://localhost/si-sso/loa/monev-rekap-tahunan.php" disabled>
+          </div>
+
+
+            <div class="mb-3">
+              <label class="form-label">Jenis Evaluasi <span class="text-danger">*</span></label>
+              <select name="jenis_evaluasi" class="form-select" required>
+                <option value="">-- Pilih Jenis --</option>
+                <option>Pembelajaran(Proses)</option>
+                <option>Kemajuan(Perkembangan)</option>
+                <option>Lulusan(Outcome)</option>
+                <option>Kurikulum(Sistem)</option>
+              </select>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Objek Evaluasi <span class="text-danger">*</span></label>
+              <input type="text" name="objek" class="form-control" placeholder="Contoh: CPL 4 - Angk 2021" required>
+            </div>
+
+          <div class="mb-3">
+            <label class="form-label">Periode <span class="text-danger">*</span></label>
+            <input type="text" class="form-control" name="periode" required placeholder="Contoh: 2024/2025">
+          </div>
+
+
+          <div class="mb-3">
+            <label class="form-label">Deskripsi Temuan <span class="text-danger">*</span></label>
+            <textarea class="form-control" name="deskripsi_temuan" rows="3" required></textarea>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Tingkat Prioritas <span class="text-danger">*</span></label>
+            <select class="form-select" name="tingkat_prioritas" required>
+              <option value="">-- Pilih --</option>
+              <option value="Rendah">Rendah</option>
+              <option value="Sedang">Sedang</option>
+              <option value="Tinggi">Tinggi</option>
+            </select>
+          </div>
+
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+          <button type="submit" class="btn btn-primary">Simpan Temuan</button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+</div>
   <script>     
     // -------------------------
     // Populate tables & KPI
@@ -1572,4 +1662,6 @@ new Chart(ctx4, {
     }
 });
 </script>
+
+
 <?php include('5script.php'); ?>

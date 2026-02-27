@@ -1,4 +1,4 @@
-<?php $page = 'evaluasi_pembelajaran'; ?>
+<?php $page = 'evaluasi_lulusan'; ?>
 <?php include('1header.php'); ?>
 <?php include('2navbar.php'); ?>
 <?php include('3sidebar.php'); ?>
@@ -26,7 +26,7 @@
 
   <section class="content-header">
     <div class="container-fluid">
-      <h3 class="mb-0">Evaluasi Pembelajaran
+      <h3 class="mb-0">Evaluasi Lulusan
       <button type="button" class="btn btn-tool" data-bs-toggle="modal" data-bs-target="#modalBantuan" title="Bantuan"><i class="fas fa-info-circle"></i>
         </button>
       </h3>
@@ -46,14 +46,14 @@
             <div class="card-body ">
               <div class="row">
                 <div class="col-md-6">
-                  <b>Jenis[mandatory]:</b> Proses/Pembelajaranan
+                  <b>Jenis[mandatory]:</b> Lulusan/Outcome
                 </div>
                               
                 <div class="col-md-6">
-                  <b>Modul ref[Pilih]:</b> Monev Kelas
+                  <b>Modul ref[Pilih]:</b> Monev Angkatan
                 </div>
               <div class="col-md-6">
-                <b>Status Eval[pilih]:</b> Approved
+                <b>Status Temuan[pilih]:</b> Approved
               </div>
               <div class="col-md-6">
                 <b>Status Aksi[pilih]:</b> Ongoing
@@ -66,12 +66,7 @@
                 <button class="btn btn-outline-info btn-sm " data-bs-toggle="modal" data-bs-target="#modalFilter">
                   <i class="fas fa-filter me-1"></i> Filter
                 </button>
-                <button type="button" class="btn btn-outline-primary btn-sm " data-bs-toggle="modal" data-bs-target="#modalTambahData">
-                  <i class="fas fa-plus me-1"></i> Tambah Temuan
-                </button>  
-                <button type="button" class="btn btn-outline-primary btn-sm " data-bs-toggle="modal" data-bs-target="#modalImpor">
-                  <i class="fas fa-file-upload me-1"></i> Import
-                </button>  
+
                 <button type="button" class="btn btn-outline-success btn-sm">
                   <i class="fas fa-file-download me-1"></i> Export
                 </button>
@@ -88,8 +83,8 @@
 
          <!-- TAB NAV  -->
            <ul class="nav nav-tabs">
-            <li class="nav-item" onclick="window.location='evaluasi-pembelajaran.php'"><a class="nav-link active">Temuan Evaluasi</a></li>
-            <li class="nav-item" onclick="window.location='evaluasi-pembelajaran2.php'"><a class="nav-link ">Aksi Evaluasi</a></li>
+            <li class="nav-item" onclick="window.location='evaluasi-lulusan.php'"><a class="nav-link active">Temuan Evaluasi</a></li>
+            <li class="nav-item" onclick="window.location='evaluasi-lulusan2.php'"><a class="nav-link ">Aksi Evaluasi</a></li>
           </ul>
 
         <!-- ========== CARD : Tabel Granular ========== -->
@@ -101,179 +96,107 @@
               <div class="table-responsive">
                 <table class="table table-bordered table-striped table-sm datatables1">
                  
-    <thead>
-      <tr>
-        <th>Ref Module</th>
-        <th>Jenis</th>
-        <th>Objek</th>
-        <th>Periode</th>
-        <th>Temuan</th>
-        <th>Prioritas</th>
-        <th>Aksi</th>
-        <th>PJ</th>
-        <th>Status Aksi</th>
-        <th>Dampak</th>
-        <th>Status Eval</th>
-      </tr>
-    </thead>
-    <tbody>
 
-      <tr>
-        <td>Monev Angkatan</td>
-        <td>Perkembangan</td>
-        <td>CPL 4 - Angk 2021</td>
-        <td>2024</td>
-        <td>Stagnasi 2 semester</td>
-        <td>High</td>
-        <td>Revisi metode praktikum</td>
-        <td>Koord MK</td>
-        <td>Ongoing</td>
-        <td>Belum direview</td>
-        <td>Approved</td>
-      </tr>
+  <thead style="background-color:#f2f2f2;">
+    <tr>
+      <th>ID Temuan</th>
+      <th>Jenis Evaluasi</th>
+      <th>Objek</th>
+      <th>Periode</th>
+      <th>Deskripsi Temuan</th>
+      <th>Tingkat Prioritas</th>
+      <th>Pencatat Temuan</th>
+      <th>Tanggal Temuan</th>
+      <th>Status Temuan</th>
+      <th>Aksi / Button</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>TM-OUT-2025-001</td>
+      <td>Outcome</td>
+      <td>Monev Angkatan 2021</td>
+      <td>Tahun Akademik 2024/2025</td>
+      <td>
+        Persentase mahasiswa angkatan 2021 yang mencapai CPL pada indikator 
+        kemampuan analisis sistem masih di bawah target (65% dari target 80%).
+      </td>
+      <td>Tinggi</td>
+      <td>Tim GKM Prodi</td>
+      <td>20-01-2025</td>
+      <td>Dalam Perbaikan</td>
+      <td class="text-center">
+        <button 
+        type="button" 
+        class="btn btn-sm btn-primary me-1"
+        data-bs-toggle="modal" 
+        data-bs-target="#modalActionPlan"
+        data-id-temuan="TM-2025-001">
+        <i class="fas fa-tasks"></i> Action Plan
+        </button>
+        <button 
+        type="button" 
+        class="btn btn-sm btn-warning"
+        data-bs-toggle="modal" 
+        data-bs-target="#modalImpactReview"
+        data-id-temuan="TM-2025-001">
+        <i class="fas fa-chart-line"></i> Impact Review
+        </button>
+        <button 
+        type="button" 
+        class="btn btn-sm btn-danger"
+        data-bs-toggle="modal" 
+        data-bs-target="#modalGovernanceUpdate"
+        data-id-temuan="TM-2025-001">
+        <i class="fas fa-check-circle"></i>  Governance
+        </button>
+      </td>
+    </tr>
 
-      <tr>
-        <td>Monev MK</td>
-        <td>Proses</td>
-        <td>MK Algoritma</td>
-        <td>2024-1</td>
-        <td>Distribusi nilai tidak normal</td>
-        <td>Medium</td>
-        <td>Review instrumen ujian</td>
-        <td>Dosen MK</td>
-        <td>Completed</td>
-        <td>Nilai lebih merata</td>
-        <td>Closed</td>
-      </tr>
+    <tr>
+      <td>TM-OUT-2025-002</td>
+      <td>Outcome</td>
+      <td>Monev Yudisium Periode I</td>
+      <td>Februari 2025</td>
+      <td>
+        Rata-rata IPK lulusan pada yudisium periode I menunjukkan tren penurunan 
+        dibandingkan dua periode sebelumnya.
+      </td>
+      <td>Sedang</td>
+      <td>Tim Penjaminan Mutu Fakultas</td>
+      <td>25-02-2025</td>
+      <td>Dalam Monitoring</td>
+      <td class="text-center">
+        <button 
+        type="button" 
+        class="btn btn-sm btn-primary me-1"
+        data-bs-toggle="modal" 
+        data-bs-target="#modalActionPlan"
+        data-id-temuan="TM-2025-001">
+        <i class="fas fa-tasks"></i> Action Plan
+        </button>
+        <button 
+        type="button" 
+        class="btn btn-sm btn-warning"
+        data-bs-toggle="modal" 
+        data-bs-target="#modalImpactReview"
+        data-id-temuan="TM-2025-001">
+        <i class="fas fa-chart-line"></i> Impact Review
+        </button>
+        <button 
+        type="button" 
+        class="btn btn-sm btn-danger"
+        data-bs-toggle="modal" 
+        data-bs-target="#modalGovernanceUpdate"
+        data-id-temuan="TM-2025-001">
+        <i class="fas fa-check-circle"></i>  Governance
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-      <tr>
-        <td>Monev Yudisium</td>
-        <td>Outcome</td>
-        <td>Batch 2023</td>
-        <td>2023</td>
-        <td>CPL 2 di bawah target</td>
-        <td>High</td>
-        <td>Workshop softskill</td>
-        <td>Kaprodi</td>
-        <td>Ongoing</td>
-        <td>Belum direview</td>
-        <td>Approved</td>
-      </tr>
 
-      <tr>
-        <td>Monev Tahunan</td>
-        <td>Sistem</td>
-        <td>CPL 7</td>
-        <td>2024</td>
-        <td>Kontribusi MK tidak merata</td>
-        <td>Medium</td>
-        <td>Audit mapping IK</td>
-        <td>Tim Kurikulum</td>
-        <td>Planned</td>
-        <td>-</td>
-        <td>Draft</td>
-      </tr>
-
-      <tr>
-        <td>Monev Individu</td>
-        <td>Perkembangan</td>
-        <td>Mhs A</td>
-        <td>2024</td>
-        <td>CPL 5 rendah konsisten</td>
-        <td>Low</td>
-        <td>Pembimbingan akademik</td>
-        <td>Dosen Wali</td>
-        <td>Completed</td>
-        <td>Ada peningkatan 5%</td>
-        <td>Closed</td>
-      </tr>
-
-      <tr>
-        <td>Monev Kelas</td>
-        <td>Proses</td>
-        <td>Kelas IF-A</td>
-        <td>2024-1</td>
-        <td>Metode kurang variatif</td>
-        <td>Low</td>
-        <td>Pelatihan PBL</td>
-        <td>UPM</td>
-        <td>Ongoing</td>
-        <td>-</td>
-        <td>Approved</td>
-      </tr>
-
-      <tr>
-        <td>Monev Angkatan</td>
-        <td>Perkembangan</td>
-        <td>Angk 2020</td>
-        <td>2023</td>
-        <td>Penurunan CPL 1</td>
-        <td>High</td>
-        <td>Integrasi project lintas MK</td>
-        <td>Kaprodi</td>
-        <td>Completed</td>
-        <td>Meningkat 8%</td>
-        <td>Closed</td>
-      </tr>
-
-      <tr>
-        <td>Monev MK</td>
-        <td>Proses</td>
-        <td>Basis Data</td>
-        <td>2024-1</td>
-        <td>CPMK 3 tidak tercapai</td>
-        <td>Medium</td>
-        <td>Revisi RPS</td>
-        <td>Dosen MK</td>
-        <td>Planned</td>
-        <td>-</td>
-        <td>Draft</td>
-      </tr>
-
-      <tr>
-        <td>Monev Yudisium</td>
-        <td>Outcome</td>
-        <td>Batch 2022</td>
-        <td>2022</td>
-        <td>Masa studi panjang</td>
-        <td>Medium</td>
-        <td>Perbaikan alur skripsi</td>
-        <td>Kaprodi</td>
-        <td>Completed</td>
-        <td>Turun 0.5 semester</td>
-        <td>Closed</td>
-      </tr>
-
-      <tr>
-        <td>Monev Tahunan</td>
-        <td>Sistem</td>
-        <td>IK 3</td>
-        <td>2024</td>
-        <td>Redundansi antar MK</td>
-        <td>Low</td>
-        <td>Penataan distribusi materi</td>
-        <td>Tim Kurikulum</td>
-        <td>Ongoing</td>
-        <td>-</td>
-        <td>Approved</td>
-      </tr>
-
-      <tr>
-        <td>Monev Angkatan</td>
-        <td>Perkembangan</td>
-        <td>Angk 2022</td>
-        <td>2024</td>
-        <td>CPL 9 meningkat signifikan</td>
-        <td>Low</td>
-        <td>Dipertahankan strategi saat ini</td>
-        <td>Kaprodi</td>
-        <td>Completed</td>
-        <td>Naik 12%</td>
-        <td>Closed</td>
-      </tr>
-
-    </tbody>
-  </table>
 
 
               </div>
@@ -733,6 +656,230 @@
   </div>
 </div>
 
+<!-- Modal Action Plan -->
+<div class="modal fade" id="modalActionPlan" tabindex="-1">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content shadow rounded-3">
+
+      <div class="modal-header bg-primary text-white">
+        <h5 class="modal-title">Tambah Action Plan</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+
+      <form method="POST">
+        <div class="modal-body">
+
+          <div class="alert alert-warning py-2">
+            Field bertanda <span class="text-danger">*</span> wajib diisi.
+          </div>
+
+          <!-- ID TEMUAN (Hidden dari tombol) -->
+          <input type="hidden" name="id_temuan" id="id_temuan_action">
+
+          <div class="mb-3">
+            <label class="form-label">ID Aksi</label>
+            <input type="text" class="form-control" value="Auto Generate" disabled>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Deskripsi Aksi <span class="text-danger">*</span></label>
+            <textarea class="form-control" name="deskripsi_aksi" required></textarea>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Penanggung Jawab <span class="text-danger">*</span></label>
+            <input type="text" class="form-control" name="penanggung_jawab" required>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Target Waktu <span class="text-danger">*</span></label>
+            <input type="date" class="form-control" name="target_waktu" required>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Target Indikator <span class="text-danger">*</span></label>
+            <textarea class="form-control" name="target_indikator" required></textarea>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Status Aksi</label>
+            <input type="text" class="form-control" value="Draft" disabled>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Catatan Progres</label>
+            <textarea class="form-control" name="catatan_progres"></textarea>
+          </div>
+
+          <hr>
+
+          <h6 class="text-danger">Governance (Otomatis Sistem)</h6>
+
+          <div class="mb-3">
+            <label class="form-label">Disetujui Oleh</label>
+            <input type="text" class="form-control" disabled>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Tanggal Persetujuan</label>
+            <input type="date" class="form-control" disabled>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Status Validasi</label>
+            <input type="text" class="form-control" value="Menunggu" disabled>
+          </div>
+
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+          <button type="submit" class="btn btn-success">Simpan Action Plan</button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+</div>
+
+<!-- Modal Impact Review -->
+<div class="modal fade" id="modalImpactReview" tabindex="-1">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content shadow rounded-3">
+
+      <div class="modal-header bg-warning">
+        <h5 class="modal-title">Impact Review Temuan</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <form method="POST">
+        <div class="modal-body">
+
+          <div class="alert alert-info py-2">
+            Diisi setelah seluruh aksi selesai dilaksanakan.
+          </div>
+
+          <!-- ID TEMUAN (Hidden dari tombol) -->
+          <input type="hidden" name="id_temuan" id="id_temuan_impact">
+
+          <div class="mb-3">
+            <label class="form-label">Indikator Sebelum <span class="text-danger">*</span></label>
+            <textarea class="form-control" name="indikator_sebelum" required></textarea>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Indikator Sesudah <span class="text-danger">*</span></label>
+            <textarea class="form-control" name="indikator_sesudah" required></textarea>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Analisis Dampak <span class="text-danger">*</span></label>
+            <textarea class="form-control" name="analisis_dampak" required></textarea>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Kesimpulan Dampak <span class="text-danger">*</span></label>
+            <textarea class="form-control" name="kesimpulan_dampak" required></textarea>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Tanggal Review</label>
+            <input type="date" class="form-control" value="<?php echo date('Y-m-d'); ?>" disabled>
+          </div>
+
+          <hr>
+
+          <h6 class="text-danger">Governance (Otomatis Sistem)</h6>
+
+          <div class="mb-3">
+            <label class="form-label">Status Temuan</label>
+            <input type="text" class="form-control" value="Menunggu Penutupan" disabled>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Tanggal Penutupan</label>
+            <input type="date" class="form-control" disabled>
+          </div>
+
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+          <button type="submit" class="btn btn-warning">Simpan Impact Review</button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="modalGovernanceUpdate" tabindex="-1">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+
+      <div class="modal-header bg-danger text-white">
+        <h5 class="modal-title">
+          Update Governance Temuan
+        </h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+
+      <form action="/temuan/update-governance" method="POST">
+        <div class="modal-body">
+
+          <!-- Hidden ID -->
+          <input type="hidden" name="id_temuan" id="id_temuan_governance">
+
+          <div class="mb-3">
+            <label class="form-label">Status Temuan</label>
+            <select name="status_temuan" class="form-select" required>
+              <option value="Draft">Draft</option>
+              <option value="Diajukan">Diajukan</option>
+              <option value="Disetujui">Disetujui</option>
+              <option value="Dalam Perbaikan">Dalam Perbaikan</option>
+              <option value="Selesai">Selesai</option>
+              <option value="Ditutup">Ditutup</option>
+              <option value="Diarsipkan">Diarsipkan</option>
+            </select>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Disetujui Oleh</label>
+            <input type="text" name="disetujui_oleh" class="form-control">
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Tanggal Persetujuan</label>
+            <input type="date" name="tanggal_persetujuan" class="form-control">
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Tanggal Penutupan</label>
+            <input type="date" name="tanggal_penutupan" class="form-control">
+          </div>
+
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="arsip" value="1">
+            <label class="form-check-label">
+              Tandai sebagai Arsip
+            </label>
+          </div>
+
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+            Batal
+          </button>
+          <button type="submit" class="btn btn-danger">
+            Simpan Governance
+          </button>
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+</div>
 <?php include('5script.php'); ?>
 
 

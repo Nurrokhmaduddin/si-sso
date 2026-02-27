@@ -25,50 +25,52 @@
         <div class="col-md-12">
           <!-- ========== CARD : Filter & Export ========== -->
           <div class="card">
-            <!-- <div class="card-header">
-              <h5 class="card-title mb-0"><i class="fas fa-filter "></i> Judul Tabel yang terdampak tombol aksi ini </h5>              
-            </div> -->
             <div class="card-body ">
-              <div class="row">
+              <table class="table table-sm table-hover table-bordered table-striped deta">
+                <tbody>
+                  <tr>
+                    <td width="30%"><b> Kurikulum</b></td>
+                    <td>2023</td>
+                  </tr>
+                  <tr>
+                    <td width="30%"><b> Set Pemetaan:</b></td>
+                    <td>Peta v1.0</td>
+                  </tr>
+                  <tr>
+                    <td width="30%"><b> Mahasiswa</b></td>
+                    <td>VEGA AYU CENTYA (20521098)</td>
+                  </tr>
+                  <tr>
+                    <td width="30%"><b> Angkatan</b></td>
+                    <td>2024</td>
+                  </tr>
+                  <tr>
+                    <td width="30%"><b> Status</b></td>
+                    <td>Aktif</td>
+                  </tr>
 
-                <div class="col-md-6">
-                  <b>Kurikulum:</b> 2023 &nbsp;
-                </div>                
-                <div class="col-md-6">
-                  <b>Set Pemetaan:</b> v1.0
-                </div>
-                <div class="col-md-6">
-                  <b>NIM:</b> 20521098
-                </div>
-                <div class="col-md-6">
-                  <b>Angkatan:</b> 2020
-                </div>
-                <div class="col-md-6">
-                  <b>Nama :</b> VEGA AYU CENTYA
-                </div>
-                
-                <div class="col-md-6">
-                  <b>Status :</b> Aktif
-                </div>
-                
-              </div>
+                </tbody>
+              </table>
             </div>
             <div class="card-footer">
               <div class="card-tools ms-auto">
+                <button type="button" class="btn btn-outline-secondary btn-sm" onclick="window.location.href='monev-cpl-individual.php'">
+                  <i class="fas fa-reply me-1"></i> Kembali
+                </button>
                 <button class="btn btn-outline-info btn-sm " data-bs-toggle="modal" data-bs-target="#modalFilter">
-                  <i class="fas fa-filter me-1"></i> Filter
+                  <i class="fas fa-search me-1"></i> Pencarian
                 </button>                
                 <button type="button" class="btn btn-outline-success btn-sm">
                   <i class="fas fa-file-download me-1"></i> Export
-                </button>                
+                </button>   
               </div>
-
             </div>
           </div>
 
         
+        
   <!-- ========== CARD 3: KPI row ========== --> 
-  <style>
+<!--   <style>
     body { background: #f4f6f9; }
     .kpi { border-radius: 10px; padding: 18px; color: #fff; }
     .kpi .big { font-size: 1.6rem; font-weight:700; }
@@ -89,13 +91,13 @@
         <div class="small">capai ketuntasan</div>
       </div>
     </div>
-    <!-- <div class="col-md-3">
+    <div class="col-md-3">
       <div class="kpi bg-primary">
         <div class="small">Rata-rata CPL</div>
         <div class="big" id="kpiAvg">75.65</div>
         <div class="small">dari 10 CPL</div>
       </div>
-    </div> -->
+    </div>
     <div class="col-md-3">
       <div class="kpi " style="background:#20c997;">
         <div class="small">Rata-rata IK</div>
@@ -117,7 +119,7 @@
         <div class="small">dari 78 MK</div>
       </div>
     </div>
-  </div>
+  </div> -->
 
 
   <!-- TAB NAV  -->
@@ -1298,43 +1300,47 @@ canvas {
 <div class="modal fade" id="modalFilter" tabindex="-1" aria-labelledby="modalFilterLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content rounded-3 shadow">
+      
       <div class="modal-header bg-info text-white">
-        <h5 class="modal-title" id="modalFilterLabel">Filter Data</h5>
+        <h5 class="modal-title" id="modalFilterLabel"> Pencarian Mahasiswa</h5>
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
+
       <form action="" method="GET">
 
         <div class="modal-body">
-          <!-- Catatan penting -->
-          <div class="alert alert-warning mb-3" role="alert" style="font-size: 0.9rem;">
-            <b>Informasi:</b> Halaman ini otomatis menampilkan data angkatan terbaru saat pertama dibuka. Data awal yang tampil adalah angkatan [2025].
+
+          <!-- Informasi -->
+          <div class="alert alert-info mb-3" role="alert" style="font-size: 0.9rem;">
+            <b>Informasi:</b> Masukkan NIM mahasiswa yang ingin dicari. 
+            Anda dapat mengisi sebagian NIM untuk pencarian lebih fleksibel.
           </div>
+
           <div class="mb-3">
-            <label for="angkatan" class="form-label">Angkatan</label>
-            <select name="angkatan" id="angkatan" class="form-select">
-              <option value="">-- Pilih Angkatan --</option>
-              <option value="2025">2025</option>
-              <option value="2024">2024</option>
-              <option value="2023">2023</option>
-            </select>
+            <label for="nim" class="form-label">NIM Mahasiswa</label>
+            <input 
+              type="text" 
+              name="nim" 
+              id="nim" 
+              class="form-control" 
+              placeholder="Contoh: 20231001"
+              value="<?= isset($_GET['nim']) ? htmlspecialchars($_GET['nim']) : '' ?>"
+            >
           </div>
-          <div class="mb-3">
-            <label for="status" class="form-label">Status</label>
-            <select name="status" id="status" class="form-select">
-              <option value="">-- Pilih Status --</option>
-              <option value="Aktif">Aktif</option>
-              <option value="NonAktif">NonAktif</option>
-            </select>
-          </div>
-       
-       </div>
+
+        </div>
 
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
-          <button type="submit" class="btn btn-info">Terapkan Filter</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+            Batal
+          </button>
+          <button type="submit" class="btn btn-info">
+             Cari 
+          </button>
         </div>
 
       </form>
+
     </div>
   </div>
 </div>

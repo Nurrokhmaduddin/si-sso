@@ -36,7 +36,7 @@
                 </div>
               
               <div class="col-md-5">
-                <b>Periode Yudisium :</b> 2021/2023 - 4 
+                <b>Periode Yudisium :</b> Jan 2027 
               </div>
              <!--  <div class="col-md-5">
                 <b>Status Mahasiswa:</b> Aktif - Semua
@@ -106,6 +106,83 @@
             </div>
           </div>
         </div>
+
+         <!-- ========== CARD :  Grafik Radar CPL & Progress ========== --> 
+<div class="card">
+  <!-- <div class="card-header">
+    <h5 class="card-title mb-0"><i class="fas fa-chart-bar me-2"></i>Level 1 – Ringkasan</h5>
+    <div class="card-tools">
+      <small class="text-muted">Batch Yudisium Terpilih</i></h5></small> 
+    </div> 
+  </div> -->
+  <div class="card-body p-3">
+    <div class="row">
+
+      <!-- KIRI: Pie Chart -->
+      <div class="col-lg-6">
+        <!-- <h6><b>Proporsi Angkatan Batch Yudisium</b></h6> -->
+        <canvas id="chartLulusanBatch" width="100%" height="180"></canvas>
+      </div>
+      <!-- KANAN -->
+      <div class="col-lg-6">
+        <!-- <h6><b>Tabel Performa Batch Yudisium</b></h6> -->
+        <table class="table table-bordered table-striped table-sm">
+          <thead class=" text-center">
+            <tr>
+              <th>Indikator</th>
+              <th>Batch Jan 2027</th>
+            </tr>
+          </thead>
+          <tbody class="text-center">
+            <tr>
+              <td >Jumlah Lulusan</td>
+              <td>80</td>
+            </tr>
+            <tr>
+              <td>IPK Rata-rata</td>
+              <td>3.42</td>
+            </tr>
+            <tr>
+              <td>CPL Rata-rata</td>
+              <td>83%</td>
+            </tr>
+            <tr>
+              <td>% Tepat Waktu</td>
+              <td>72%</td>
+            </tr>        
+            <tr>     
+              <td>Tidak Pernah Remedial</td>
+              <td>40(50%)</td>
+            </tr>
+            <tr>
+
+              <td>Remedial Ringan (1–2 MK)</td>
+              <td>28(35%)</td>
+            </tr>
+            <tr>    
+              <td>Remedial Tinggi (≥ 3 MK)</td>
+              <td>12(15%)</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="4">
+                <strong>Cara membaca tabel:</strong><br>
+                Remedial tinggi didefinisikan sebagai mahasiswa yang pernah mengulang ≥ 3 Mata Kuliah atau > 20% MK selama masa studi.
+                Angka "Persentase" menunjukkan proporsi dari total 80 lulusan pada Batch Jan 2027.<br>
+                Rata-rata jumlah remedial per lulusan: <strong>1.8 MK</strong>.
+              </td>
+            </tr>
+          </tfoot>
+        </table>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
 <!-- Level 2 -->
 <div class="card">
   <div class="card-header">
@@ -206,7 +283,7 @@
 <!-- Tabel Tren 5 batch -->
 <div class="card">
   <div class="card-header">
-    <h5 class="card-title mb-0"><i class="fas fa-chart-bar me-2"></i>Level 4 - Tren Perbandingan</h5>
+    <h5 class="card-title mb-0"><i class="fas fa-chart-bar me-2"></i>Level 4 - Tren Perbandingan rata-rata setiap CPL</h5>
     <div class="card-tools">
       <small class="text-muted">5 Batch Yudisium Terakhir</i></h5></small>
     </div>
@@ -299,6 +376,10 @@
         <tr>
           <td colspan="11">
             <strong>Cara Membaca Tabel:</strong><br>
+            Tabel ini menunjukkan tren mutu CPL rata-rata berdasarkan periode kelulusan.
+            Ini bukan tren per angkatan masuk, melainkan evaluasi mutu output sistem dari waktu ke waktu.
+            Jika nilai meningkat secara bertahap berarti ada perbaikan mutu pembelajaran,
+            sedangkan stagnasi atau penurunan menunjukkan perlunya evaluasi kebijakan akademik.<br>
             - Tabel menampilkan perbandingan capaian rata-rata tiap CPL pada 5 batch yudisium.<br>
             - Angka menunjukkan persentase capaian CPL.<br>
             - Nilai berwarna <span style="color:red;">merah</span> menunjukkan capaian di bawah 65% (perlu perhatian/analisis lebih lanjut).<br>
@@ -309,9 +390,9 @@
     </table>
   </div>
 </div>
-    
+
 <!-- ========== CARD : Distribusi Angkatan ========== -->
-<div class="card">
+<!-- <div class="card">
   <div class="card-header">
     <h5 class="card-title mb-0"><i class="fas fa-chart-bar me-2"></i>Distribusi Angkatan Mahasiswa</h5>
     <div class="card-tools">
@@ -327,7 +408,6 @@
       <th>Angkatan Masuk</th>
       <th>Jumlah Lulusan</th>
       <th>Persentase (%)</th>
-      <th>Kategori Ketepatan Studi</th>
     </tr>
   </thead>
   <tbody class="text-center">
@@ -336,21 +416,18 @@
       <td>2020</td>
       <td>50</td>
       <td>62%</td>
-      <td><span class="badge bg-success">Tepat Waktu</span></td>
     </tr>
     <tr>
       <td>2</td>
       <td>2021</td>
       <td>20</td>
       <td>25%</td>
-      <td><span class="badge bg-info text-dark">Lebih Cepat</span></td>
     </tr>
     <tr>
       <td>3</td>
       <td>2019</td>
       <td>10</td>
       <td>13%</td>
-      <td><span class="badge bg-warning text-dark">Terlambat</span></td>
     </tr>
   </tbody>
   <tfoot>
@@ -366,104 +443,49 @@
   </tfoot>
 </table>
 </div>
-</div>
-<!-- ========== CARD : Proporsi Mahasiswa ========== -->
- <div class="card">
-          <div class="card-body">
-    <h6><b>Proporsi Mahasiswa dengan Remedial Tinggi</b></h6>
-<table class="table table-bordered table-striped table-sm">
-  <thead class=" text-center">
-    <tr>
-      <th>No</th>
-      <th>Kategori Remedial</th>
-      <th>Jumlah Mahasiswa</th>
-      <th>Persentase (%)</th>
-      <th>Keterangan Akademik</th>
-    </tr>
-  </thead>
-  <tbody class="text-center">
-    <tr>
-      <td>1</td>
-      <td>Tidak Pernah Remedial</td>
-      <td>40</td>
-      <td>50%</td>
-      <td><span class="badge bg-success">Stabil / Kuat Akademik</span></td>
-    </tr>
-    <tr>
-      <td>2</td>
-      <td>Remedial Ringan (1–2 MK)</td>
-      <td>25</td>
-      <td>31%</td>
-      <td><span class="badge bg-info text-dark">Perlu Penyesuaian</span></td>
-    </tr>
-    <tr>
-      <td>3</td>
-      <td>Remedial Tinggi (≥ 3 MK)</td>
-      <td>15</td>
-      <td>19%</td>
-      <td><span class="badge bg-warning text-dark">Perlu Perhatian</span></td>
-    </tr>
-  </tbody>
-  <tfoot>
-    <tr>
-      <td colspan="5">
-        <strong>Total Lulusan: 80 Mahasiswa.</strong><br>
-        Definisi operasional: Remedial tinggi didefinisikan sebagai mahasiswa yang pernah mengulang ≥ 3 Mata Kuliah 
-        atau lebih dari 20% MK selama masa studi.<br>
-        Cara membaca tabel: Kolom "Persentase" menunjukkan proporsi dari total 80 lulusan pada Batch Juli 2026.
-        Sebanyak 50% lulusan tidak pernah remedial (menunjukkan performa akademik stabil),
-        sementara 19% termasuk kategori remedial tinggi, yang dapat menjadi bahan evaluasi mutu pembelajaran.
-        Rata-rata jumlah remedial per lulusan: <strong>1.8 MK</strong>.
-      </td>
-    </tr>
-  </tfoot>
-</table>
-</div>
-</div>
+</div> -->
+
 
 <!-- ========== CARD : tren antar batch ========== -->
-<div class="card">
+<!-- <div class="card">
   <div class="card-body">
     <h6><b>Tabel Perbandingan Batch Yudisium (Monitoring Periodik)</b></h6>
     <table class="table table-bordered table-striped table-sm">
       <thead class=" text-center">
         <tr>
           <th>Indikator</th>
-          <th>Batch Jan 2026</th>
-          <th>Batch Jul 2026</th>
-          <th>Perubahan</th>
+          <th>Batch Jan 2027</th>
         </tr>
       </thead>
       <tbody class="text-center">
         <tr>
           <td class="text-start">Jumlah Lulusan</td>
-          <td>65</td>
           <td>80</td>
-          <td><span class="badge bg-success">Naik</span></td>
         </tr>
         <tr>
           <td class="text-start">IPK Rata-rata</td>
           <td>3.42</td>
-          <td>3.38</td>
-          <td><span class="badge bg-warning text-dark">Turun Tipis</span></td>
         </tr>
         <tr>
           <td class="text-start">CPL Rata-rata</td>
           <td>83%</td>
-          <td>81%</td>
-          <td><span class="badge bg-warning text-dark">Turun</span></td>
         </tr>
         <tr>
           <td class="text-start">% Tepat Waktu</td>
           <td>72%</td>
-          <td>68%</td>
-          <td><span class="badge bg-danger">Menurun</span></td>
+        </tr>        
+        <tr>     
+          <td>Tidak Pernah Remedial</td>
+          <td>40(50%)</td>
         </tr>
         <tr>
-          <td class="text-start">Remedial Tinggi</td>
-          <td>14%</td>
-          <td>19%</td>
-          <td><span class="badge bg-danger">Meningkat</span></td>
+
+          <td>Remedial Ringan (1–2 MK)</td>
+          <td>28(35%)</td>
+        </tr>
+        <tr>    
+          <td>Remedial Tinggi (≥ 3 MK)</td>
+          <td>12(15%)</td>
         </tr>
       </tbody>
       <tfoot>
@@ -474,62 +496,22 @@
             Kolom "Perubahan" menunjukkan arah perbedaan dari Jan 2026 ke Jul 2026.
             Jika IPK dan CPL menurun serta persentase remedial tinggi meningkat,
             maka perlu evaluasi terhadap proses pembelajaran pada periode tersebut.
-            Tabel ini bersifat monitoring mutu output secara periodik.
+            Tabel ini bersifat monitoring mutu output secara periodik.<br>
+            <strong>Total Lulusan: 80 Mahasiswa.</strong><br>
+        Definisi operasional: Remedial tinggi didefinisikan sebagai mahasiswa yang pernah mengulang ≥ 3 Mata Kuliah 
+        atau lebih dari 20% MK selama masa studi.<br>
+        Cara membaca tabel: Kolom "Persentase" menunjukkan proporsi dari total 80 lulusan pada Batch Juli 2026.
+        Sebanyak 50% lulusan tidak pernah remedial (menunjukkan performa akademik stabil),
+        sementara 19% termasuk kategori remedial tinggi, yang dapat menjadi bahan evaluasi mutu pembelajaran.
+        Rata-rata jumlah remedial per lulusan: <strong>1.8 MK</strong>.
           </td>
         </tr>
       </tfoot>
     </table>
 
-    <h6><b>Tabel Perbandingan Batch Yudisium (Monitoring Periodik)</b></h6>
-    <table class="table table-bordered table-striped table-sm">
-      <thead class=" text-center">
-        <tr>
-          <th>No</th>
-          <th>Periode Yudisium</th>
-          <th>CPL Rata-rata (%)</th>
-          <th>Tren</th>
-        </tr>
-      </thead>
-      <tbody class="text-center">
-        <tr>
-          <td>1</td>
-          <td>Jan 2025</td>
-          <td>79%</td>
-          <td><span class="badge bg-secondary">Baseline</span></td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Jul 2025</td>
-          <td>81%</td>
-          <td><span class="badge bg-success">Meningkat</span></td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>Jan 2026</td>
-          <td>82%</td>
-          <td><span class="badge bg-success">Meningkat</span></td>
-        </tr>
-        <tr>
-          <td>4</td>
-          <td>Jul 2026</td>
-          <td>81%</td>
-          <td><span class="badge bg-warning text-dark">Fluktuatif</span></td>
-        </tr>
-      </tbody>
-      <tfoot>
-        <tr>
-          <td colspan="4">
-            <strong>Cara membaca tabel:</strong><br>
-            Tabel ini menunjukkan tren mutu CPL rata-rata berdasarkan periode kelulusan.
-            Ini bukan tren per angkatan masuk, melainkan evaluasi mutu output sistem dari waktu ke waktu.
-            Jika nilai meningkat secara bertahap berarti ada perbaikan mutu pembelajaran,
-            sedangkan stagnasi atau penurunan menunjukkan perlunya evaluasi kebijakan akademik.
-          </td>
-        </tr>
-      </tfoot>
-    </table>
+    
   </div>
-</div>
+</div> -->
 <!-- ========== CARD : tabel distribusi lulusan ========== -->
 <div class="card">
   <div class="card-header d-flex align-items-center">
@@ -553,7 +535,7 @@
             <th>Lulusan tepat waktu(y,n)</th>
             <th>IPK</th>
             <th>Kategori Remedial(0, 1-2, >3)</th>
-            <th>Aksi(detail)</th>
+            <th>Aksi</th>
 
           </tr>
         </thead>
@@ -581,7 +563,7 @@
   <td class="text-center">2</td>
   <td>19312376</td>
   <td>Ho Aldika Novaldy Sumampow</td>
-  <td class="text-center">2019</td>
+  <td class="text-center">2020</td>
   <td>Civil Engineering Regular</td>
   <td class="text-center">75</td>
   <td class="text-center">Y</td>
@@ -598,7 +580,7 @@
   <td class="text-center">3</td>
   <td>19312406</td>
   <td>Annisa Regita Sintowati</td>
-  <td class="text-center">2019</td>
+  <td class="text-center">2020</td>
   <td>Civil Engineering Regular</td>
   <td class="text-center">69</td>
   <td class="text-center">N</td>
@@ -661,1592 +643,11 @@
     <button class="btn btn-sm btn-outline-info">Detail</button>
   </td>
 </tr>
-
-
-
-          <!-- <tr>
-            <td class="text-center">1</td>
-            <td>19312137</td>
-            <td>Pramita Widyadari</td>
-            <td>pramita.widyadari@univ.ac.id</td>
-            <td class="text-center">2019</td>
-            <td>Civil Engineering Regular</td>
-            <td class="text-center"><img style="width:40px;" alt="Foto"></td>
-            <td class="text-center"><span class="badge badge-info">Aktif</span></td>
-            <td class="text-center">
-              <button type="button" class="btn btn-sm btn-outline-warning"><i class="fas fa-key"></i></button>
-              <button type="button" class="btn btn-sm btn-outline-primary"><i class="fas fa-edit"></i></button>
-              <button type="button" class="btn btn-sm btn-outline-danger"><i class="fas fa-trash"></i></button>
-            </td>
-          </tr>
-
-          <tr>
-            <td class="text-center">2</td>
-            <td>19312376</td>
-            <td>Ho Aldika Novaldy Sumampow</td>
-            <td>aldika.sumampow@univ.ac.id</td>
-            <td class="text-center">2019</td>
-            <td>Civil Engineering Regular</td>
-            <td class="text-center"><img style="width:40px;" alt="Foto"></td>
-            <td class="text-center"><span class="badge badge-warning">Cuti</span></td>
-            <td class="text-center">
-              <button class="btn btn-sm btn-outline-info" onclick="window.location.href='monev-cpl-individual1.php' " ><i class="fas fa-info-circle"></i></button>
-              <button class="btn btn-sm btn-outline-primary"><i class="fas fa-upload"></i></button>
-              <button class="btn btn-sm btn-outline-success"><i class="fas fa-download"></i></button>
-            </td>
-          </tr>
-
-          <tr>
-            <td class="text-center">3</td>
-            <td>19312406</td>
-            <td>Annisa Regita Sintowati</td>
-            <td>annisa.sintowati@univ.ac.id</td>
-            <td class="text-center">2019</td>
-            <td>Civil Engineering Regular</td>
-            <td class="text-center"><img style="width:40px;" alt="Foto"></td>
-            <td class="text-center"><span class="badge badge-danger">Skors</span></td>
-            <td class="text-center">
-              <div class="btn-group">
-                <a href="portfolio_cpmk_detail2.php" target="_blank" class="btn btn-sm btn-outline-info">
-                  <i class="fas fa-external-link-alt"></i> View
-                </a>
-                <button type="button" class="btn btn-sm btn-outline-info dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown"></button>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#"><i class="fas fa-edit text-primary"></i> Edit</a></li>
-                  <li><a class="dropdown-item" href="#"><i class="fas fa-trash text-danger"></i> Hapus</a></li>
-                  <li><a class="dropdown-item" href="#"><i class="fas fa-key text-warning"></i> Ubah Password</a></li>
-                </ul>
-              </div>
-            </td>
-          </tr>
-
-          <tr>
-            <td class="text-center">4</td>
-            <td>19312418</td>
-            <td>Claudia Monica Aditama</td>
-            <td>claudia.aditama@univ.ac.id</td>
-            <td class="text-center">2019</td>
-            <td>Civil Engineering Regular</td>
-            <td class="text-center"><img style="width:40px;" alt="Foto"></td>
-            <td class="text-center"><span class="badge badge-danger">Drop Out</span></td>
-            <td class="text-center">
-              <button class="btn btn-sm btn-outline-warning">🔑</button>
-            </td>
-          </tr>
-          <tr>
-
-            <td class="text-center">5</td>
-            <td>19312424</td>
-            <td>Filza Aliyah Tasya</td>
-            <td>filza.tasya@univ.ac.id</td>
-            <td class="text-center">2019</td>
-            <td>Civil Engineering IP</td>
-            <td class="text-center"><img style="width:40px;" alt="Foto"></td>
-            <td class="text-center"><span class="badge badge-danger">Passed Out</span></td>
-            <td class="text-center">
-              <button class="btn btn-sm btn-outline-warning">🔑</button>
-            </td>
-          </tr>
-
-          <tr>
-            <td class="text-center">6</td>
-            <td>19312424</td>
-            <td>Filza Aliyah Tasya</td>
-            <td>filza.tasya@univ.ac.id</td>
-            <td class="text-center">2019</td>
-            <td>Civil Engineering Regular</td>
-            <td class="text-center"><img style="width:40px;" alt="Foto"></td>
-            <td class="text-center"><span class="badge badge-success">Lulus</span></td>
-            <td class="text-center">
-              <div class="btn-group">
-                <button type="button" class="btn btn-sm btn-outline-info dropdown-toggle" 
-                data-bs-toggle="dropdown" aria-expanded="false">
-                <i class="fas fa-ellipsis-h"></i> Action
-              </button>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#"><i class="fas fa-edit text-primary"></i> Edit Link</a></li>
-                <li><a class="dropdown-item" href="#"><i class="fas fa-trash-alt text-danger"></i> Hapus Data</a></li>
-                <li><a class="dropdown-item" href="#"><i class="fas fa-key text-warning"></i> Ubah Password</a></li>
-                <li><a class="dropdown-item" href="#"><i class="fas fa-upload text-success"></i> Upload File</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="portfolio_cpmk_detail2.php" target="_blank">
-                  <i class="fas fa-external-link-alt text-info"></i> View Link</a></li>
-                  <li><a class="dropdown-item" href="#"><i class="fas fa-download text-success"></i> Download File</a></li>
-                </ul>
-              </div>
-            </td>
-          </tr> -->
-
         </tbody>
       </table>
     </div>
   </div>
 </div>
-<!-- ========== CARD 4: Chart CPL/IK/CPMK/MK Min/Max/Rerata ========== -->
-        <div class="card">
-          <div class="card-header">
-            <h5 class="card-title mb-0"><i class="fas fa-chart-bar me-2"></i> CPL - Rata-rata Capaian (Hijau)</h5>
-            <div class="card-tools">
-              <small class="text-muted">Angkatan Terpilih</small>
-            </div>
-          </div>
-          <div class="card-body chart-container">
-            <canvas id="chartCPL" width="100%" height="22"></canvas>
-            <div class="row text-center mt-3">
-              <div class="col">
-                <button class="btn btn-outline-info btn-sm w-100" data-bs-toggle="collapse" data-bs-target="#daftarIKCPL11">
-                  Rangking Performa
-                </button>
-              </div>
-              <div class="col">
-                <button class="btn btn-outline-info btn-sm w-100" data-bs-toggle="collapse" data-bs-target="#daftarIKCPL12">
-                  Rangking Mahasiswa
-                </button>
-              </div>
-              <div class="col">
-                <button class="btn btn-outline-info btn-sm w-100" data-bs-toggle="collapse" data-bs-target="#daftarIKCPL13">
-                  Daftar Min/Max/Rerata
-                </button>
-              </div>
-              <div class="col">
-                <button class="btn btn-outline-danger btn-sm w-100" data-bs-toggle="collapse" onclick="openAllRisikoPreview()">
-                  Performa Risiko
-                </button>
-              </div>
-              <div class="col">
-                <button class="btn btn-outline-danger btn-sm w-100" data-bs-toggle="collapse" onclick="openAllStudentsPreview()">
-                  Mahasiswa Risiko
-                </button>
-              </div>
-            </div>
-          </div>         
-        </div>
-        <!-- Rangking Performa -->
-        <!-- Rangking Mahasiswa -->
-        <div class="row collapse" id="daftarIKCPL12">
-          <!-- Card Lowest -->
-          <div class="col-12 col-md-6">
-            <div class="card">
-              <div class="card-header">
-                <h5 class="card-title mb-0">🔽 Top 5 CPL Nilai Terendah</h5>
-              </div>
-              <div class="card-body">
-                <h3>Lowest 5</h3>
-                <table border="1" cellpadding="8" cellspacing="0" width="100%">
-                  <thead>
-                    <tr>
-                      <th>Ranking</th>
-                      <th>CPL</th>
-                      <th class="text-center">Nilai</th>
-                      <th>NIM</th>
-                      <th>NAMA</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>
-                        <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                          <div style="background:#f54242; width:10%; height:12px; border-radius:4px;"></div>
-                        </div>
-                      </td>
-                      <td>CPL-01</td>
-                      <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="min" data-value="57">20</span></td>
-                      <td>20241099</td>
-                      <td>Andi Saputra</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                          <div style="background:#f54242; width:25%; height:12px; border-radius:4px;"></div>
-                        </div>
-                      </td>
-                      <td>CPL-04</td>
-                      <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="min" data-value="57">30</span></td>
-                      <td>20241002</td>
-                      <td>Siti Rahma</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                          <div style="background:#f54242; width:35%; height:12px; border-radius:4px;"></div>
-                        </div>
-                      </td>
-                      <td>CPL-05</td>
-                      <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="min" data-value="57">50</span></td>
-                      <td>20241055</td>
-                      <td>Budi Santoso</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                          <div style="background:#f54242; width:50%; height:12px; border-radius:4px;"></div>
-                        </div>
-                      </td>
-                      <td>CPL-09</td>
-                      <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="min" data-value="57">51</span></td>
-                      <td>20241077</td>
-                      <td>Nina Lestari</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                          <div style="background:#f54242; width:70%; height:12px; border-radius:4px;"></div>
-                        </div>
-                      </td>
-                      <td>CPL-10</td>
-                      <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="min" data-value="57">57</span></td>
-                      <td>20241011</td>
-                      <td>Rian Kurnia</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-          <!-- Card Highest -->
-          <div class="col-12 col-md-6">
-            <div class="card">
-              <div class="card-header">
-                <h5 class="card-title mb-0">🔼 Top 5 CPL Nilai Tertinggi</h5>
-              </div>
-              <div class="card-body">
-                <h3>Highest 5</h3>
-                <table border="1" cellpadding="8" cellspacing="0" width="100%">
-                  <thead>
-                    <tr>
-                      <th>Ranking</th>
-                      <th>CPL</th>
-                      <th class="text-center">Nilai</th>
-                      <th>NIM</th>
-                      <th>NAMA</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>                      
-                      <td>
-                        <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                          <div style="background:#4287f5; width:95%; height:12px; border-radius:4px;"></div>
-                        </div>
-                        <td>CPL-10</td>
-                      </td>
-                      <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="max" data-value="95">95</span></td>
-                      <td>20241099</td>
-                      <td>Andi Saputra</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                          <div style="background:#4287f5; width:85%; height:12px; border-radius:4px;"></div>
-                        </div>
-                      </td>
-                      <td>CPL-10</td>
-                      <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="max" data-value="95">90</span></td>
-                      <td>20241099</td>
-                      <td>Andi Saputra</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                          <div style="background:#4287f5; width:78%; height:12px; border-radius:4px;"></div>
-                        </div>
-                      </td>
-                      <td>CPL-09</td>
-                     <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="max" data-value="95">85</span></td>
-                      <td>20241099</td>
-                      <td>Andi Saputra</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                          <div style="background:#4287f5; width:65%; height:12px; border-radius:4px;"></div>
-                        </div>
-                      </td>
-                      <td>CPL-01</td>
-                     <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="max" data-value="95">70</span></td>
-                      <td>20241099</td>
-                      <td>Andi Saputra</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                          <div style="background:#4287f5; width:50%; height:12px; border-radius:4px;"></div>
-                        </div>
-                      </td>
-                      <td>CPL-01</td>
-                      <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="max" data-value="95">70</span></td>
-                      <td>20241002</td>
-                      <td>Siti Rahma</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- daftar min/max/rerate -->
-        <div class="card collapse" id="daftarIKCPL13" >
-          <div class="card-header d-flex align-items-center">
-            <h5 class="card-title mb-0"><i class="fas fa-table me-2"></i> Tabel CPL — Min / Max / Rerata</h5>
-            <div class="card-tools ms-auto">
-              <small class="text-muted">Klik angka Min/Max untuk melihat 1 mahasiswa (NIM / Nama / Nilai)</small>
-            </div>
-          </div>
-          <div class="card-body">
-            <div class="table-responsive">
-              <table id="tblCplStats" class="table table-hover table-bordered table-sm">
-                <thead class="table-light">
-                  <tr>
-                    <th style="width: 40px">#</th>
-                    <th>CPL Code</th>
-                    <th class="text-center">Min</th>
-                    <th class="text-center">Max</th>
-                    <th class="text-center">Rerata (%)</th>
-                  </tr>
-                </thead>
-                <tbody>                
-                  <tr>
-                    <td>1</td>
-                    <td>CPL-01: Pemahaman Dasar Polimer</td>
-                    <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="min" data-value="61">61</span></td>
-                    <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="max" data-value="88">88</span></td>
-                    <td class="text-center">72.14</td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>CPL-02: Teori Komposit</td>
-                    <td class="text-center"><span class="clickable" data-cpl="CPL-02" data-type="min" data-value="55">55</span></td>
-                    <td class="text-center"><span class="clickable" data-cpl="CPL-02" data-type="max" data-value="94">94</span></td>
-                    <td class="text-center">77.86</td>
-                  </tr>
-                  <tr>
-                    <td>3</td>
-                    <td>CPL-03: Aplikasi Polimer</td>
-                    <td class="text-center"><span class="clickable" data-cpl="CPL-03" data-type="min" data-value="68">68</span></td>
-                    <td class="text-center"><span class="clickable" data-cpl="CPL-03" data-type="max" data-value="91">91</span></td>
-                    <td class="text-center">76.14</td>
-                  </tr>
-                  <tr>
-                    <td>4</td>
-                    <td>CPL-04: Proses Produksi</td>
-                    <td class="text-center"><span class="clickable" data-cpl="CPL-04" data-type="min" data-value="60">60</span></td>
-                    <td class="text-center"><span class="clickable" data-cpl="CPL-04" data-type="max" data-value="86">86</span></td>
-                    <td class="text-center">74.00</td>
-                  </tr>
-                  <tr>
-                    <td>5</td>
-                    <td>CPL-05: Analisis Material</td>
-                    <td class="text-center"><span class="clickable" data-cpl="CPL-05" data-type="min" data-value="58">58</span></td>
-                    <td class="text-center"><span class="clickable" data-cpl="CPL-05" data-type="max" data-value="89">89</span></td>
-                    <td class="text-center">75.30</td>
-                  </tr>
-                  <tr>
-                    <td>6</td>
-                    <td>CPL-06: Keselamatan & Etika</td>
-                    <td class="text-center"><span class="clickable" data-cpl="CPL-06" data-type="min" data-value="65">65</span></td>
-                    <td class="text-center"><span class="clickable" data-cpl="CPL-06" data-type="max" data-value="92">92</span></td>
-                    <td class="text-center">78.20</td>
-                  </tr>
-                  <tr>
-                    <td>7</td>
-                    <td>CPL-07: Desain Proses</td>
-                    <td class="text-center"><span class="clickable" data-cpl="CPL-07" data-type="min" data-value="59">59</span></td>
-                    <td class="text-center"><span class="clickable" data-cpl="CPL-07" data-type="max" data-value="87">87</span></td>
-                    <td class="text-center">73.40</td>
-                  </tr>
-                  <tr>
-                    <td>8</td>
-                    <td>CPL-08: Metode Eksperimental</td>
-                    <td class="text-center"><span class="clickable" data-cpl="CPL-08" data-type="min" data-value="62">62</span></td>
-                    <td class="text-center"><span class="clickable" data-cpl="CPL-08" data-type="max" data-value="90">90</span></td>
-                    <td class="text-center">76.80</td>
-                  </tr>
-                  <tr>
-                    <td>9</td>
-                    <td>CPL-09: Statistik & Analisis Data</td>
-                    <td class="text-center"><span class="clickable" data-cpl="CPL-09" data-type="min" data-value="57">57</span></td>
-                    <td class="text-center"><span class="clickable" data-cpl="CPL-09" data-type="max" data-value="85">85</span></td>
-                    <td class="text-center">71.50</td>
-                  </tr>
-                  <tr>
-                    <td>10</td>
-                    <td>CPL-10: Komunikasi Teknis</td>
-                    <td class="text-center"><span class="clickable" data-cpl="CPL-10" data-type="min" data-value="64">64</span></td>
-                    <td class="text-center"><span class="clickable" data-cpl="CPL-10" data-type="max" data-value="88">88</span></td>
-                    <td class="text-center">75.00</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>        
-          <div class="card-footer d-flex justify-content-between">            
-          </div>
-        </div>
-
-        <!-- ========== CARD 4: Chart CPL/IK/CPMK/MK Min/Max/Rerata ========== -->
-        <div class="card">
-          <div class="card-header">
-            <h5 class="card-title mb-0"><i class="fas fa-chart-bar me-2"></i>IK - Rata-rata Capaian (Oranye)</h5>
-            <div class="card-tools">
-              <small class="text-muted">Angkatan Terpilih</small>
-            </div>
-          </div>
-          <div class="card-body chart-container">
-            <canvas id="chartIK" width="100%" height="22"></canvas>
-            <div class="row text-center mt-3">
-              <div class="col">
-                <button class="btn btn-outline-info btn-sm w-100" data-bs-toggle="collapse" data-bs-target="#daftarIKCPL21">
-                  Rangking Performa
-                </button>
-              </div>
-              <div class="col">
-                <button class="btn btn-outline-info btn-sm w-100" data-bs-toggle="collapse" data-bs-target="#daftarIKCPL22">
-                  Rangking Mahasiswa
-                </button>
-              </div>
-              <div class="col">
-                <button class="btn btn-outline-info btn-sm w-100" data-bs-toggle="collapse" data-bs-target="#daftarIKCPL23">
-                  Daftar Min/Max/Rerata
-                </button>
-              </div>
-              <div class="col">
-                <button class="btn btn-outline-danger btn-sm w-100" data-bs-toggle="collapse" onclick="openAllRisikoPreview()">
-                  Performa Risiko
-                </button>
-              </div>
-              <div class="col">
-                <button class="btn btn-outline-danger btn-sm w-100" data-bs-toggle="collapse" onclick="openAllStudentsPreview()">
-                  Mahasiswa Risiko
-                </button>
-              </div>
-            </div>
-          </div>         
-        </div>
-        <!-- Rangking Performa -->
-        <!-- Rangking Mahasiswa -->
-        <div class="row collapse" id="daftarIKCPL22">
-          <!-- Card Lowest -->
-          <div class="col-12 col-md-6">
-            <div class="card">
-              <div class="card-header">
-                <h5 class="card-title mb-0">🔽 Top 5 IK Nilai Terendah</h5>
-              </div>
-              <div class="card-body">
-                <h3>Lowest 5</h3>
-                <table border="1" cellpadding="8" cellspacing="0" width="100%">
-                  <thead>
-                    <tr>
-                      <th>Ranking</th>
-                      <th>IK</th>
-                      <th class="text-center">Nilai</th>
-                      <th>NIM</th>
-                      <th>NAMA</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>
-                        <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                          <div style="background:#f54242; width:10%; height:12px; border-radius:4px;"></div>
-                        </div>
-                      </td>
-                      <td>IK-11</td>
-                      <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="min" data-value="57">20</span></td>
-                      <td>20241099</td>
-                      <td>Andi Saputra</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                          <div style="background:#f54242; width:25%; height:12px; border-radius:4px;"></div>
-                        </div>
-                      </td>
-                      <td>IK-14</td>
-                      <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="min" data-value="57">30</span></td>
-                      <td>20241002</td>
-                      <td>Siti Rahma</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                          <div style="background:#f54242; width:35%; height:12px; border-radius:4px;"></div>
-                        </div>
-                      </td>
-                      <td>IK-14</td>
-                      <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="min" data-value="57">50</span></td>
-                      <td>20241055</td>
-                      <td>Budi Santoso</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                          <div style="background:#f54242; width:50%; height:12px; border-radius:4px;"></div>
-                        </div>
-                      </td>
-                      <td>IK-11</td>
-                      <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="min" data-value="57">51</span></td>
-                      <td>20241077</td>
-                      <td>Nina Lestari</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                          <div style="background:#f54242; width:70%; height:12px; border-radius:4px;"></div>
-                        </div>
-                      </td>
-                      <td>IK-17</td>
-                      <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="min" data-value="57">57</span></td>
-                      <td>20241011</td>
-                      <td>Rian Kurnia</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-          <!-- Card Highest -->
-          <div class="col-12 col-md-6">
-            <div class="card">
-              <div class="card-header">
-                <h5 class="card-title mb-0">🔼 Top 5 IK Nilai Tertinggi</h5>
-              </div>
-              <div class="card-body">
-                <h3>Highest 5</h3>
-                <table border="1" cellpadding="8" cellspacing="0" width="100%">
-                  <thead>
-                    <tr>
-                      <th>Ranking</th>
-                      <th>CPIK</th>
-                      <th class="text-center">Nilai</th>
-                      <th>NIM</th>
-                      <th>NAMA</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>                      
-                      <td>
-                        <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                          <div style="background:#4287f5; width:95%; height:12px; border-radius:4px;"></div>
-                        </div>
-                        <td>IK-21</td>
-                      </td>
-                      <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="max" data-value="95">95</span></td>
-                      <td>20241099</td>
-                      <td>Andi Saputra</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                          <div style="background:#4287f5; width:85%; height:12px; border-radius:4px;"></div>
-                        </div>
-                      </td>
-                      <td>IK-15</td>
-                      <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="max" data-value="95">90</span></td>
-                      <td>20241099</td>
-                      <td>Andi Saputra</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                          <div style="background:#4287f5; width:78%; height:12px; border-radius:4px;"></div>
-                        </div>
-                      </td>
-                      <td>IK-16</td>
-                      <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="max" data-value="95">85</span></td>
-                      <td>20241099</td>
-                      <td>Andi Saputra</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                          <div style="background:#4287f5; width:65%; height:12px; border-radius:4px;"></div>
-                        </div>
-                      </td>
-                      <td>IK-21</td>
-                      <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="max" data-value="95">70</span></td>
-                      <td>20241099</td>
-                      <td>Andi Saputra</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                          <div style="background:#4287f5; width:50%; height:12px; border-radius:4px;"></div>
-                        </div>
-                      </td>
-                      <td>IK-23</td>
-                      <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="max" data-value="95">70</span></td>
-                      <td>20241002</td>
-                      <td>Siti Rahma</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- daftar min/max/rerate -->
-        <div class="card collapse" id="daftarIKCPL23" >
-          <div class="card-header d-flex align-items-center">
-            <h5 class="card-title mb-0"><i class="fas fa-table me-2"></i> Tabel CPL — Min / Max / Rerata</h5>
-            <div class="card-tools ms-auto">
-              <small class="text-muted">Klik angka Min/Max untuk melihat 1 mahasiswa (NIM / Nama / Nilai)</small>
-            </div>
-          </div>
-          <div class="card-body">
-            <div class="table-responsive">
-              <table id="tblCplStats" class="table table-hover table-bordered table-sm">
-                <thead class="table-light">
-                  <tr>
-                    <th style="width: 40px">#</th>
-                    <th>CPL Code</th>
-                    <th class="text-center">Min</th>
-                    <th class="text-center">Max</th>
-                    <th class="text-center">Rerata (%)</th>
-                  </tr>
-                </thead>
-                <tbody>                
-                  <tr>
-                    <td>1</td>
-                    <td>CPL-01: Pemahaman Dasar Polimer</td>
-                    <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="min" data-value="61">61</span></td>
-                    <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="max" data-value="88">88</span></td>
-                    <td class="text-center">72.14</td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>CPL-02: Teori Komposit</td>
-                    <td class="text-center"><span class="clickable" data-cpl="CPL-02" data-type="min" data-value="55">55</span></td>
-                    <td class="text-center"><span class="clickable" data-cpl="CPL-02" data-type="max" data-value="94">94</span></td>
-                    <td class="text-center">77.86</td>
-                  </tr>
-                  <tr>
-                    <td>3</td>
-                    <td>CPL-03: Aplikasi Polimer</td>
-                    <td class="text-center"><span class="clickable" data-cpl="CPL-03" data-type="min" data-value="68">68</span></td>
-                    <td class="text-center"><span class="clickable" data-cpl="CPL-03" data-type="max" data-value="91">91</span></td>
-                    <td class="text-center">76.14</td>
-                  </tr>
-                  <tr>
-                    <td>4</td>
-                    <td>CPL-04: Proses Produksi</td>
-                    <td class="text-center"><span class="clickable" data-cpl="CPL-04" data-type="min" data-value="60">60</span></td>
-                    <td class="text-center"><span class="clickable" data-cpl="CPL-04" data-type="max" data-value="86">86</span></td>
-                    <td class="text-center">74.00</td>
-                  </tr>
-                  <tr>
-                    <td>5</td>
-                    <td>CPL-05: Analisis Material</td>
-                    <td class="text-center"><span class="clickable" data-cpl="CPL-05" data-type="min" data-value="58">58</span></td>
-                    <td class="text-center"><span class="clickable" data-cpl="CPL-05" data-type="max" data-value="89">89</span></td>
-                    <td class="text-center">75.30</td>
-                  </tr>
-                  <tr>
-                    <td>6</td>
-                    <td>CPL-06: Keselamatan & Etika</td>
-                    <td class="text-center"><span class="clickable" data-cpl="CPL-06" data-type="min" data-value="65">65</span></td>
-                    <td class="text-center"><span class="clickable" data-cpl="CPL-06" data-type="max" data-value="92">92</span></td>
-                    <td class="text-center">78.20</td>
-                  </tr>
-                  <tr>
-                    <td>7</td>
-                    <td>CPL-07: Desain Proses</td>
-                    <td class="text-center"><span class="clickable" data-cpl="CPL-07" data-type="min" data-value="59">59</span></td>
-                    <td class="text-center"><span class="clickable" data-cpl="CPL-07" data-type="max" data-value="87">87</span></td>
-                    <td class="text-center">73.40</td>
-                  </tr>
-                  <tr>
-                    <td>8</td>
-                    <td>CPL-08: Metode Eksperimental</td>
-                    <td class="text-center"><span class="clickable" data-cpl="CPL-08" data-type="min" data-value="62">62</span></td>
-                    <td class="text-center"><span class="clickable" data-cpl="CPL-08" data-type="max" data-value="90">90</span></td>
-                    <td class="text-center">76.80</td>
-                  </tr>
-                  <tr>
-                    <td>9</td>
-                    <td>CPL-09: Statistik & Analisis Data</td>
-                    <td class="text-center"><span class="clickable" data-cpl="CPL-09" data-type="min" data-value="57">57</span></td>
-                    <td class="text-center"><span class="clickable" data-cpl="CPL-09" data-type="max" data-value="85">85</span></td>
-                    <td class="text-center">71.50</td>
-                  </tr>
-                  <tr>
-                    <td>10</td>
-                    <td>CPL-10: Komunikasi Teknis</td>
-                    <td class="text-center"><span class="clickable" data-cpl="CPL-10" data-type="min" data-value="64">64</span></td>
-                    <td class="text-center"><span class="clickable" data-cpl="CPL-10" data-type="max" data-value="88">88</span></td>
-                    <td class="text-center">75.00</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>        
-          <div class="card-footer d-flex justify-content-between">            
-          </div>
-        </div>
-
-        <!-- ========== CARD 4: Chart CPL/IK/CPMK/MK Min/Max/Rerata ========== -->
-        <div class="card">
-          <div class="card-header">
-            <h5 class="card-title mb-0"><i class="fas fa-chart-bar me-2"></i>CPMK - Rata-rata Capaian (Merah)</h5>
-            <div class="card-tools">
-              <small class="text-muted">Angkatan Terpilih</small>
-            </div>
-          </div>
-          <div class="card-body chart-container">
-            <canvas id="chartCPMK" width="100%" height="22"></canvas>
-            <div class="row text-center mt-3">
-              <div class="col">
-                <button class="btn btn-outline-info btn-sm w-100" data-bs-toggle="collapse" data-bs-target="#daftarIKCPL31">
-                  Rangking Performa
-                </button>
-              </div>
-              <div class="col">
-                <button class="btn btn-outline-info btn-sm w-100" data-bs-toggle="collapse" data-bs-target="#daftarIKCPL32">
-                  Rangking Mahasiswa
-                </button>
-              </div>
-              <div class="col">
-                <button class="btn btn-outline-info btn-sm w-100" data-bs-toggle="collapse" data-bs-target="#daftarIKCPL33">
-                  Daftar Min/Max/Rerata
-                </button>
-              </div>
-              <div class="col">
-                <button class="btn btn-outline-danger btn-sm w-100" data-bs-toggle="collapse" onclick="openAllRisikoPreview()">
-                  Performa Risiko
-                </button>
-              </div>
-              <div class="col">
-                <button class="btn btn-outline-danger btn-sm w-100" data-bs-toggle="collapse" onclick="openAllStudentsPreview()">
-                  Mahasiswa Risiko
-                </button>
-              </div>
-            </div>
-          </div>         
-        </div>
-        <!-- Rangking Performa -->
-        <!-- Rangking Mahasiswa -->
-        <div class="row collapse" id="daftarIKCPL32" >
-          <!-- Card Lowest -->
-          <div class="col-12 col-md-6">
-            <div class="card">
-              <div class="card-header">
-                <h5 class="card-title mb-0">🔽 Top 5 CPMK Nilai Terendah</h5>
-              </div>
-              <div class="card-body">
-                <h3>Lowest 5</h3>
-                <table border="1" cellpadding="8" cellspacing="0" width="100%">
-                  <thead>
-                    <tr>
-                      <th>Ranking</th>
-                      <th>CPMK</th>
-                      <th class="text-center">Nilai</th>
-                      <th>NIM</th>
-                      <th>NAMA</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>
-                        <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                          <div style="background:#f54242; width:10%; height:12px; border-radius:4px;"></div>
-                        </div>
-                      </td>
-                      <td>STK114-1</td>
-                      <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="min" data-value="57">20</span></td>
-                      <td>20241099</td>
-                      <td>Andi Saputra</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                          <div style="background:#f54242; width:25%; height:12px; border-radius:4px;"></div>
-                        </div>
-                      </td>
-                      <td>STK114-1</td>
-                      <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="min" data-value="57">30</span></td>
-                      <td>20241002</td>
-                      <td>Siti Rahma</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                          <div style="background:#f54242; width:35%; height:12px; border-radius:4px;"></div>
-                        </div>
-                      </td>
-                      <td>STK115-1</td>
-                      <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="min" data-value="57">50</span></td>
-                      <td>20241055</td>
-                      <td>Budi Santoso</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                          <div style="background:#f54242; width:50%; height:12px; border-radius:4px;"></div>
-                        </div>
-                      </td>
-                      <td>STK116-1</td>
-                      <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="min" data-value="57">51</span></td>
-                      <td>20241077</td>
-                      <td>Nina Lestari</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                          <div style="background:#f54242; width:70%; height:12px; border-radius:4px;"></div>
-                        </div>
-                      </td>
-                      <td>STK144-4</td>
-                      <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="min" data-value="57">57</span></td>
-                      <td>20241011</td>
-                      <td>Rian Kurnia</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-          <!-- Card Highest -->
-          <div class="col-12 col-md-6">
-            <div class="card">
-              <div class="card-header">
-                <h5 class="card-title mb-0">🔼 Top 5 CPMK Nilai Tertinggi</h5>
-              </div>
-              <div class="card-body">
-                <h3>Highest 5</h3>
-                <table border="1" cellpadding="8" cellspacing="0" width="100%">
-                  <thead>
-                    <tr>
-                      <th>Ranking</th>
-                      <th>CPMK</th>
-                      <th class="text-center">Nilai</th>
-                      <th>NIM</th>
-                      <th>NAMA</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>                      
-                      <td>
-                        <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                          <div style="background:#4287f5; width:95%; height:12px; border-radius:4px;"></div>
-                        </div>
-                        <td>STS911-4</td>
-                      </td>
-                      <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="max" data-value="95">95</span></td>
-                      <td>20241099</td>
-                      <td>Andi Saputra</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                          <div style="background:#4287f5; width:85%; height:12px; border-radius:4px;"></div>
-                        </div>
-                      </td>
-                      <td>STS916-1</td>
-                      <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="max" data-value="95">90</span></td>
-                      <td>20241099</td>
-                      <td>Andi Saputra</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                          <div style="background:#4287f5; width:78%; height:12px; border-radius:4px;"></div>
-                        </div>
-                      </td>
-                      <td>STS913-2</td>
-                      <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="max" data-value="95">85</span></td>
-                      <td>20241099</td>
-                      <td>Andi Saputra</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                          <div style="background:#4287f5; width:65%; height:12px; border-radius:4px;"></div>
-                        </div>
-                      </td>
-                      <td>STS991-3</td>
-                      <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="max" data-value="95">70</span></td>
-                      <td>20241099</td>
-                      <td>Andi Saputra</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                          <div style="background:#4287f5; width:50%; height:12px; border-radius:4px;"></div>
-                        </div>
-                      </td>
-                      <td>STS914-5</td>
-                      <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="max" data-value="95">70</span></td>
-                      <td>20241002</td>
-                      <td>Siti Rahma</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- daftar min/max/rerate -->
-        <div class="card collapse" id="daftarIKCPL33" >
-          <div class="card-header d-flex align-items-center">
-            <h5 class="card-title mb-0"><i class="fas fa-table me-2"></i> Tabel CPL — Min / Max / Rerata</h5>
-            <div class="card-tools ms-auto">
-              <small class="text-muted">Klik angka Min/Max untuk melihat 1 mahasiswa (NIM / Nama / Nilai)</small>
-            </div>
-          </div>
-          <div class="card-body">
-            <div class="table-responsive">
-              <table id="tblCplStats" class="table table-hover table-bordered table-sm">
-                <thead class="table-light">
-                  <tr>
-                    <th style="width: 40px">#</th>
-                    <th>CPL Code</th>
-                    <th class="text-center">Min</th>
-                    <th class="text-center">Max</th>
-                    <th class="text-center">Rerata (%)</th>
-                  </tr>
-                </thead>
-                <tbody>                
-                  <tr>
-                    <td>1</td>
-                    <td>CPL-01: Pemahaman Dasar Polimer</td>
-                    <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="min" data-value="61">61</span></td>
-                    <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="max" data-value="88">88</span></td>
-                    <td class="text-center">72.14</td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>CPL-02: Teori Komposit</td>
-                    <td class="text-center"><span class="clickable" data-cpl="CPL-02" data-type="min" data-value="55">55</span></td>
-                    <td class="text-center"><span class="clickable" data-cpl="CPL-02" data-type="max" data-value="94">94</span></td>
-                    <td class="text-center">77.86</td>
-                  </tr>
-                  <tr>
-                    <td>3</td>
-                    <td>CPL-03: Aplikasi Polimer</td>
-                    <td class="text-center"><span class="clickable" data-cpl="CPL-03" data-type="min" data-value="68">68</span></td>
-                    <td class="text-center"><span class="clickable" data-cpl="CPL-03" data-type="max" data-value="91">91</span></td>
-                    <td class="text-center">76.14</td>
-                  </tr>
-                  <tr>
-                    <td>4</td>
-                    <td>CPL-04: Proses Produksi</td>
-                    <td class="text-center"><span class="clickable" data-cpl="CPL-04" data-type="min" data-value="60">60</span></td>
-                    <td class="text-center"><span class="clickable" data-cpl="CPL-04" data-type="max" data-value="86">86</span></td>
-                    <td class="text-center">74.00</td>
-                  </tr>
-                  <tr>
-                    <td>5</td>
-                    <td>CPL-05: Analisis Material</td>
-                    <td class="text-center"><span class="clickable" data-cpl="CPL-05" data-type="min" data-value="58">58</span></td>
-                    <td class="text-center"><span class="clickable" data-cpl="CPL-05" data-type="max" data-value="89">89</span></td>
-                    <td class="text-center">75.30</td>
-                  </tr>
-                  <tr>
-                    <td>6</td>
-                    <td>CPL-06: Keselamatan & Etika</td>
-                    <td class="text-center"><span class="clickable" data-cpl="CPL-06" data-type="min" data-value="65">65</span></td>
-                    <td class="text-center"><span class="clickable" data-cpl="CPL-06" data-type="max" data-value="92">92</span></td>
-                    <td class="text-center">78.20</td>
-                  </tr>
-                  <tr>
-                    <td>7</td>
-                    <td>CPL-07: Desain Proses</td>
-                    <td class="text-center"><span class="clickable" data-cpl="CPL-07" data-type="min" data-value="59">59</span></td>
-                    <td class="text-center"><span class="clickable" data-cpl="CPL-07" data-type="max" data-value="87">87</span></td>
-                    <td class="text-center">73.40</td>
-                  </tr>
-                  <tr>
-                    <td>8</td>
-                    <td>CPL-08: Metode Eksperimental</td>
-                    <td class="text-center"><span class="clickable" data-cpl="CPL-08" data-type="min" data-value="62">62</span></td>
-                    <td class="text-center"><span class="clickable" data-cpl="CPL-08" data-type="max" data-value="90">90</span></td>
-                    <td class="text-center">76.80</td>
-                  </tr>
-                  <tr>
-                    <td>9</td>
-                    <td>CPL-09: Statistik & Analisis Data</td>
-                    <td class="text-center"><span class="clickable" data-cpl="CPL-09" data-type="min" data-value="57">57</span></td>
-                    <td class="text-center"><span class="clickable" data-cpl="CPL-09" data-type="max" data-value="85">85</span></td>
-                    <td class="text-center">71.50</td>
-                  </tr>
-                  <tr>
-                    <td>10</td>
-                    <td>CPL-10: Komunikasi Teknis</td>
-                    <td class="text-center"><span class="clickable" data-cpl="CPL-10" data-type="min" data-value="64">64</span></td>
-                    <td class="text-center"><span class="clickable" data-cpl="CPL-10" data-type="max" data-value="88">88</span></td>
-                    <td class="text-center">75.00</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>        
-          <div class="card-footer d-flex justify-content-between">            
-          </div>
-        </div>
-
-        <!-- ========== CARD 4: Chart CPL/IK/CPMK/MK Min/Max/Rerata ========== -->
-        <div class="card">
-          <div class="card-header">
-            <h5 class="card-title mb-0"><i class="fas fa-chart-bar me-2"></i> MK - Rata-rata Capaian (Biru)</h5>
-            <div class="card-tools">
-              <small class="text-muted">Angkatan Terpilih</small>
-            </div>
-          </div>
-          <div class="card-body chart-container">
-            <canvas id="chartMK" width="100%" height="22"></canvas>
-            <div class="row text-center mt-3">
-              <div class="col">
-                <button class="btn btn-outline-info btn-sm w-100" data-bs-toggle="collapse" data-bs-target="#daftarIKCPL41">
-                  Rangking Performa
-                </button>
-              </div>
-              <div class="col">
-                <button class="btn btn-outline-info btn-sm w-100" data-bs-toggle="collapse" data-bs-target="#daftarIKCPL42">
-                  Rangking Mahasiswa
-                </button>
-              </div>
-              <div class="col">
-                <button class="btn btn-outline-info btn-sm w-100" data-bs-toggle="collapse" data-bs-target="#daftarIKCPL43">
-                  Daftar Min/Max/Rerata
-                </button>
-              </div>
-              <div class="col">
-                <button class="btn btn-outline-danger btn-sm w-100" data-bs-toggle="collapse" onclick="openAllRisikoPreview()">
-                  Performa Risiko
-                </button>
-              </div>
-              <div class="col">
-                <button class="btn btn-outline-danger btn-sm w-100" data-bs-toggle="collapse" onclick="openAllStudentsPreview()">
-                  Mahasiswa Risiko
-                </button>
-              </div>
-            </div>
-          </div>      
-        </div>
-        <!-- Rangking Performa -->
-        <div class="row collapse" id="daftarIKCPL41" >
-          <!-- Card Lowest -->
-          <div class="col-12 col-md-6">
-            <div class="card">
-              <div class="card-header">
-                <h5 class="card-title mb-0">🔽 Top 5 MK Performa Terendah</h5>
-              </div>
-              <div class="card-body">
-                <div class="table-responsive">
-                  <table id="tblCplStats" class="table table-hover table-bordered table-sm">
-                    <thead class="table-light">
-                      <tr>
-                        <th>Ranking</th>
-                        <th class="text-center" style="width: 140px">Rerata Nilai Akhir</th>
-                        <th>MK</th>
-                        <th>Deskripsi</th>
-                      </tr>
-                    </thead>
-                    <tbody>                
-                      <tr>
-                        <td>
-                          <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                            <div style="background:#f54242; width:10%; height:12px; border-radius:4px;"></div>
-                          </div>
-                        </td>
-                        <td class="text-center"><span class="clickable" data-MK="MK-01" data-type="min" data-value="57">20</span></td>
-                        <td>STK314</td>
-                        <td>Fisika Dasar 2</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                            <div style="background:#f54242; width:25%; height:12px; border-radius:4px;"></div>
-                          </div>
-                        </td>
-                        <td class="text-center"><span class="clickable" data-MK="MK-01" data-type="min" data-value="57">30</span></td>
-                        <td>STK114</td>
-                        <td>Azas Teknik Kimia 1</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                            <div style="background:#f54242; width:35%; height:12px; border-radius:4px;"></div>
-                          </div>
-                        </td>
-                        <td class="text-center"><span class="clickable" data-MK="MK-01" data-type="min" data-value="57">50</span></td>
-                        <td>STK115</td>
-                        <td>Aljabar Linear</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                            <div style="background:#f54242; width:50%; height:12px; border-radius:4px;"></div>
-                          </div>
-                        </td>
-                        <td class="text-center"><span class="clickable" data-MK="MK-01" data-type="min" data-value="57">51</span></td>
-                        <td>STK116</td>
-                        <td>Bahasa Inggris</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                            <div style="background:#f54242; width:70%; height:12px; border-radius:4px;"></div>
-                          </div>
-                        </td>
-                        <td class="text-center"><span class="clickable" data-MK="MK-01" data-type="min" data-value="57">57</span></td>
-                        <td>STK144</td>
-                        <td>Perancangan Alat Proses</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>               
-              </div>
-            </div>
-          </div>
-          <!-- Card Highest -->
-          <div class="col-12 col-md-6">
-            <div class="card">
-              <div class="card-header">
-                <h5 class="card-title mb-0">🔼 Top 5 MK Performa Tertinggi</h5>
-              </div>
-              <div class="card-body">
-                <div class="table-responsive">
-                  <table id="tblCplStats" class="table table-hover table-bordered table-sm">
-                    <thead class="table-light">
-                      <tr>
-                        <th>Ranking</th>
-                        <th class="text-center" style="width: 140px">Rerata Nilai Akhir</th>
-                        <th>MK</th>
-                        <th>Deskripsi</th>
-                      </tr>
-                    </thead>
-                    <tbody>                
-                      <tr>                      
-                        <td>
-                          <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                            <div style="background:#4287f5; width:95%; height:12px; border-radius:4px;"></div>
-                          </div>
-                        </td>
-                        <td class="text-center"><span class="clickable" data-MK="MK-01" data-type="max" data-value="95">95</span></td>
-                        <td>STS911</td>
-                        <td>Bahasa Inggris</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                            <div style="background:#4287f5; width:85%; height:12px; border-radius:4px;"></div>
-                          </div>
-                        </td>
-                        <td class="text-center"><span class="clickable" data-MK="MK-01" data-type="max" data-value="95">90</span></td>
-                        <td>STS916</td>
-                        <td>Ekonomi Teknik</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                            <div style="background:#4287f5; width:78%; height:12px; border-radius:4px;"></div>
-                          </div>
-                        </td>
-                        <td class="text-center"><span class="clickable" data-MK="MK-01" data-type="max" data-value="95">85</span></td>
-                        <td>UNI913</td>
-                        <td>Kuliah Kerja Nyata</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                            <div style="background:#4287f5; width:65%; height:12px; border-radius:4px;"></div>
-                          </div>
-                        </td>
-                        <td class="text-center"><span class="clickable" data-MK="MK-01" data-type="max" data-value="95">70</span></td>
-                        <td>STS991</td>
-                        <td>Fisika Dasar</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                            <div style="background:#4287f5; width:50%; height:12px; border-radius:4px;"></div>
-                          </div>
-                        </td>
-                        <td class="text-center"><span class="clickable" data-MK="MK-01" data-type="max" data-value="95">70</span></td>
-                        <td>STS914</td>
-                        <td>Islam Ulil Albab</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-
-                
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Rangking Mahasiswa -->
-        <div class="row collapse" id="daftarIKCPL42" >
-          <!-- Card Lowest -->
-          <div class="col-12 col-md-6">
-            <div class="card">
-              <div class="card-header">
-                <h5 class="card-title mb-0">🔽 Top 10 MK Nilai Terendah</h5>
-              </div>
-              <div class="card-body">
-                <div class="table-responsive">
-                  <table id="tblCplStats" class="table table-hover table-bordered table-sm">
-                    <thead class="table-light">
-                      <tr>
-                        <th>Ranking</th>
-                        <th class="text-center" style="width: 100px">Nilai Akhir</th>
-                        <th>MK</th>
-                        <th>NIM</th>
-                        <th>NAMA</th>
-                      </tr>
-                    </thead>
-                    <tbody>                
-                      <tr>
-                        <td>
-                          <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                            <div style="background:#f54242; width:10%; height:12px; border-radius:4px;"></div>
-                          </div>
-                        </td>
-                        <td class="text-center"><span class="clickable" data-MK="MK-01" data-type="min" data-value="57">20</span></td>
-                        <td>STK114</td>
-                        <td>20241099</td>
-                        <td>Andi Saputra</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                            <div style="background:#f54242; width:22%; height:12px; border-radius:4px;"></div>
-                          </div>
-                        </td>
-                        <td class="text-center"><span class="clickable" data-MK="MK-01" data-type="min" data-value="57">30</span></td>
-                        <td>STK115</td>
-                        <td>20241002</td>
-                        <td>Siti Rahma</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                            <div style="background:#f54242; width:25%; height:12px; border-radius:4px;"></div>
-                          </div>
-                        </td>
-                        <td class="text-center"><span class="clickable" data-MK="MK-01" data-type="min" data-value="57">44</span></td>
-                        <td>STK119</td>
-                        <td>20241055</td>
-                        <td>Budi Santoso</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                            <div style="background:#f54242; width:35%; height:12px; border-radius:4px;"></div>
-                          </div>
-                        </td>
-                        <td class="text-center"><span class="clickable" data-MK="MK-01" data-type="min" data-value="57">45</span></td>
-                        <td>STK116</td>
-                        <td>20241077</td>
-                        <td>Nina Lestari</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                            <div style="background:#f54242; width:37%; height:12px; border-radius:4px;"></div>
-                          </div>
-                        </td>
-                        <td class="text-center"><span class="clickable" data-MK="MK-01" data-type="min" data-value="57">49</span></td>
-                        <td>STK144</td>
-                        <td>20241011</td>
-                        <td>Rian Kurnia</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                            <div style="background:#f54242; width:40%; height:12px; border-radius:4px;"></div>
-                          </div>
-                        </td>
-                        <td class="text-center"><span class="clickable" data-MK="MK-01" data-type="min" data-value="57">50</span></td>
-                        <td>STK521</td>
-                        <td>20241099</td>
-                        <td>Andi Saputra</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                            <div style="background:#f54242; width:45%; height:12px; border-radius:4px;"></div>
-                          </div>
-                        </td>
-                        <td class="text-center"><span class="clickable" data-MK="MK-01" data-type="min" data-value="57">50</span></td>
-                        <td>STK911</td>
-                        <td>20241002</td>
-                        <td>Siti Rahma</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                            <div style="background:#f54242; width:45%; height:12px; border-radius:4px;"></div>
-                          </div>
-                        </td>
-                        <td class="text-center"><span class="clickable" data-MK="MK-01" data-type="min" data-value="57">56</span></td>
-                        <td>STK914</td>
-                        <td>20241055</td>
-                        <td>Budi Santoso</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                            <div style="background:#f54242; width:50%; height:12px; border-radius:4px;"></div>
-                          </div>
-                        </td>
-                        <td class="text-center"><span class="clickable" data-MK="MK-01" data-type="min" data-value="57">56</span></td>
-                        <td>STK921</td>
-                        <td>20241077</td>
-                        <td>Nina Lestari</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                            <div style="background:#f54242; width:70%; height:12px; border-radius:4px;"></div>
-                          </div>
-                        </td>
-                        <td class="text-center"><span class="clickable" data-MK="MK-01" data-type="min" data-value="57">57</span></td>
-                        <td>STK925</td>
-                        <td>20241011</td>
-                        <td>Rian Kurnia</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Card Highest -->
-          <div class="col-12 col-md-6">
-            <div class="card">
-              <div class="card-header">
-                <h5 class="card-title mb-0">🔼 Top 10 MK Nilai Tertinggi</h5>
-              </div>
-              <div class="card-body">
-                <div class="table-responsive">
-                  <table id="tblCplStats" class="table table-hover table-bordered table-sm">
-                    <thead class="table-light">
-                      <tr>
-                        <th>Ranking</th>
-                        <th class="text-center" style="width: 100px">Nilai Akhir</th>
-                        <th>MK</th>
-                        <th>NIM</th>
-                        <th>NAMA</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>                      
-                        <td>
-                          <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                            <div style="background:#4287f5; width:95%; height:12px; border-radius:4px;"></div>
-                          </div>
-                        </td>
-                        <td class="text-center"><span class="clickable" data-MK="MK-01" data-type="max" data-value="95">95</span></td>
-                        <td>STS911</td>
-                        <td>20241099</td>
-                        <td>Andi Saputra</td>
-                      </tr>
-                      <tr>                      
-                        <td>
-                          <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                            <div style="background:#4287f5; width:95%; height:12px; border-radius:4px;"></div>
-                          </div>
-                        </td>
-                        <td class="text-center"><span class="clickable" data-MK="MK-01" data-type="max" data-value="95">94</span></td>
-                        <td>STS981</td>
-                        <td>20241099</td>
-                        <td>Andi Saputra</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                            <div style="background:#4287f5; width:85%; height:12px; border-radius:4px;"></div>
-                          </div>
-                        </td>
-                        <td class="text-center"><span class="clickable" data-MK="MK-01" data-type="max" data-value="95">90</span></td>
-                        <td>STS916</td>
-                        <td>20241099</td>
-                        <td>Andi Saputra</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                            <div style="background:#4287f5; width:85%; height:12px; border-radius:4px;"></div>
-                          </div>
-                        </td>
-                        <td class="text-center"><span class="clickable" data-MK="MK-01" data-type="max" data-value="95">89</span></td>
-                        <td>STS916</td>
-                        <td>20241002</td>
-                        <td>Siti Rahma</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                            <div style="background:#4287f5; width:78%; height:12px; border-radius:4px;"></div>
-                          </div>
-                        </td>
-                        <td class="text-center"><span class="clickable" data-MK="MK-01" data-type="max" data-value="95">85</span></td>
-                        <td>STS913</td>
-                        <td>20241099</td>
-                        <td>Andi Saputra</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                            <div style="background:#4287f5; width:78%; height:12px; border-radius:4px;"></div>
-                          </div>
-                        </td>
-                        <td class="text-center"><span class="clickable" data-MK="MK-01" data-type="max" data-value="95">85</span></td>
-                        <td>STS913</td>
-                        <td>13521171</td>
-                        <td>Taufik Kusuma</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                            <div style="background:#4287f5; width:65%; height:12px; border-radius:4px;"></div>
-                          </div>
-                        </td>
-                        <td class="text-center"><span class="clickable" data-MK="MK-01" data-type="max" data-value="95">70</span></td>
-                        <td>STS991</td>
-                        <td>20241099</td>
-                        <td>Andi Saputra</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                            <div style="background:#4287f5; width:65%; height:12px; border-radius:4px;"></div>
-                          </div>
-                        </td>
-                        <td class="text-center"><span class="clickable" data-MK="MK-01" data-type="max" data-value="95">68</span></td>
-                        <td>STS991</td>
-                        <td>13521143</td>
-                        <td>Ega Nur Hidayat</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                            <div style="background:#4287f5; width:50%; height:12px; border-radius:4px;"></div>
-                          </div>
-                        </td>
-                        <td class="text-center"><span class="clickable" data-MK="MK-01" data-type="max" data-value="95">67</span></td>
-                        <td>STS914</td>
-                        <td>20241002</td>
-                        <td>Siti Rahma</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                            <div style="background:#4287f5; width:50%; height:12px; border-radius:4px;"></div>
-                          </div>
-                        </td>
-                        <td class="text-center"><span class="clickable" data-MK="MK-01" data-type="max" data-value="95">67</span></td>
-                        <td>STS914</td>
-                        <td>16521014</td>
-                        <td>Satya Aditya</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-
-
-              </div>
-            </div>
-          </div>
-        </div>        
-        <!-- daftar min/max/rerate -->
-        <div class="card collapse" id="daftarIKCPL43" >
-          <div class="card-header d-flex align-items-center">
-            <h5 class="card-title mb-0"><i class="fas fa-table me-2"></i> Tabel CPL — Min / Max / Rerata</h5>
-            <div class="card-tools ms-auto">
-              <small class="text-muted">Klik angka Min/Max untuk melihat 1 mahasiswa (NIM / Nama / Nilai)</small>
-            </div>
-          </div>
-          <div class="card-body">
-            <div class="table-responsive">
-              <table id="tblCplStats" class="table table-hover table-bordered table-sm">
-                <thead class="table-light">
-                  <tr>
-                    <th style="width: 40px">#</th>
-                    <th>CPL Code</th>
-                    <th class="text-center">Min</th>
-                    <th class="text-center">Max</th>
-                    <th class="text-center">Rerata (%)</th>
-                  </tr>
-                </thead>
-                <tbody>                
-                  <tr>
-                    <td>1</td>
-                    <td>CPL-01: Pemahaman Dasar Polimer</td>
-                    <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="min" data-value="61">61</span></td>
-                    <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="max" data-value="88">88</span></td>
-                    <td class="text-center">72.14</td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>CPL-02: Teori Komposit</td>
-                    <td class="text-center"><span class="clickable" data-cpl="CPL-02" data-type="min" data-value="55">55</span></td>
-                    <td class="text-center"><span class="clickable" data-cpl="CPL-02" data-type="max" data-value="94">94</span></td>
-                    <td class="text-center">77.86</td>
-                  </tr>
-                  <tr>
-                    <td>3</td>
-                    <td>CPL-03: Aplikasi Polimer</td>
-                    <td class="text-center"><span class="clickable" data-cpl="CPL-03" data-type="min" data-value="68">68</span></td>
-                    <td class="text-center"><span class="clickable" data-cpl="CPL-03" data-type="max" data-value="91">91</span></td>
-                    <td class="text-center">76.14</td>
-                  </tr>
-                  <tr>
-                    <td>4</td>
-                    <td>CPL-04: Proses Produksi</td>
-                    <td class="text-center"><span class="clickable" data-cpl="CPL-04" data-type="min" data-value="60">60</span></td>
-                    <td class="text-center"><span class="clickable" data-cpl="CPL-04" data-type="max" data-value="86">86</span></td>
-                    <td class="text-center">74.00</td>
-                  </tr>
-                  <tr>
-                    <td>5</td>
-                    <td>CPL-05: Analisis Material</td>
-                    <td class="text-center"><span class="clickable" data-cpl="CPL-05" data-type="min" data-value="58">58</span></td>
-                    <td class="text-center"><span class="clickable" data-cpl="CPL-05" data-type="max" data-value="89">89</span></td>
-                    <td class="text-center">75.30</td>
-                  </tr>
-                  <tr>
-                    <td>6</td>
-                    <td>CPL-06: Keselamatan & Etika</td>
-                    <td class="text-center"><span class="clickable" data-cpl="CPL-06" data-type="min" data-value="65">65</span></td>
-                    <td class="text-center"><span class="clickable" data-cpl="CPL-06" data-type="max" data-value="92">92</span></td>
-                    <td class="text-center">78.20</td>
-                  </tr>
-                  <tr>
-                    <td>7</td>
-                    <td>CPL-07: Desain Proses</td>
-                    <td class="text-center"><span class="clickable" data-cpl="CPL-07" data-type="min" data-value="59">59</span></td>
-                    <td class="text-center"><span class="clickable" data-cpl="CPL-07" data-type="max" data-value="87">87</span></td>
-                    <td class="text-center">73.40</td>
-                  </tr>
-                  <tr>
-                    <td>8</td>
-                    <td>CPL-08: Metode Eksperimental</td>
-                    <td class="text-center"><span class="clickable" data-cpl="CPL-08" data-type="min" data-value="62">62</span></td>
-                    <td class="text-center"><span class="clickable" data-cpl="CPL-08" data-type="max" data-value="90">90</span></td>
-                    <td class="text-center">76.80</td>
-                  </tr>
-                  <tr>
-                    <td>9</td>
-                    <td>CPL-09: Statistik & Analisis Data</td>
-                    <td class="text-center"><span class="clickable" data-cpl="CPL-09" data-type="min" data-value="57">57</span></td>
-                    <td class="text-center"><span class="clickable" data-cpl="CPL-09" data-type="max" data-value="85">85</span></td>
-                    <td class="text-center">71.50</td>
-                  </tr>
-                  <tr>
-                    <td>10</td>
-                    <td>CPL-10: Komunikasi Teknis</td>
-                    <td class="text-center"><span class="clickable" data-cpl="CPL-10" data-type="min" data-value="64">64</span></td>
-                    <td class="text-center"><span class="clickable" data-cpl="CPL-10" data-type="max" data-value="88">88</span></td>
-                    <td class="text-center">75.00</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>                 
-        </div>
-
-
 
 
 
@@ -2365,485 +766,10 @@ Secara khusus, halaman ini menampilkan perkembangan rata-rata Capaian Pembelajar
 </div>
 
 
-  <!-- Modal: Student detail (when clicking a value) -->
-  <div class="modal fade" id="modalValueDetail" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-sm">
-      <div class="modal-content">
-        <div class="modal-header bg-info text-white">
-          <h6 class="modal-title" id="modalValueTitle">Detail Nilai</h6>
-          <button type="button" class="btn-close btn-close-white" data-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <dl class="row mb-0">
-            <dt class="col-5">NIM</dt><dd class="col-7" id="mdNim">-</dd>
-            <dt class="col-5">Nama</dt><dd class="col-7" id="mdName">-</dd>
-            <dt class="col-5">IK</dt><dd class="col-7" id="mdIk">-</dd>
-            <dt class="col-5">CPMK</dt><dd class="col-7" id="mdCpmk">-</dd>
-            <dt class="col-5">Nilai</dt><dd class="col-7" id="mdValue">-</dd>
-          </dl>
-        </div>
-        <div class="modal-footer">
-          <button class="btn btn-secondary btn-sm" data-dismiss="modal">Tutup</button>
-          <a id="viewDocBtn" class="btn btn-primary btn-sm" href="#" target="_blank">Lihat Dokumen</a>
-        </div>
-      </div>
-    </div>
-  </div>
+ 
 
-  <!-- Modal: Preview Risk Students -->
-  <div class="modal fade" id="modalPreviewAll" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header bg-secondary text-white">
-          <h6 class="modal-title">Preview Mahasiswa Risiko (sample)</h6>
-          <button type="button" class="btn-close btn-close-white" data-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <table class="table table-sm table-bordered">
-            <thead class="table-light"><tr><th>#</th><th>NIM</th><th>Nama</th><th>CP Lower</th></tr></thead>
-            <tbody>
-              <tr><td>1</td><td>20241099</td><td>Mahasiswa Minimal</td><td>61 (CPL-01)</td></tr>
-              <tr><td>2</td><td>20241077</td><td>Siswa Risiko</td><td>48 (CPL-04)</td></tr>
-              <tr><td>3</td><td>20241055</td><td>Contoh Lain</td><td>45 (CPL-09)</td></tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="modal-footer">
-          <button class="btn btn-secondary btn-sm" data-dismiss="modal">Tutup</button>
-        </div>
-      </div>
-    </div>
-  </div>
+ 
 
-  <!-- Modal: Preview Risk Performance -->
-  <div class="modal fade" id="modalRisikoAll" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header bg-secondary text-white">
-          <h6 class="modal-title">Preview Performa Risiko (sample)</h6>
-          <button type="button" class="btn-close btn-close-white" data-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <table class="table table-sm table-bordered">
-            <thead class="table-light"><tr><th>#</th><th>Kode</th><th>Deskripsi</th><th>Nilai Performa</th></tr></thead>
-            <tbody>
-              <tr><td>1</td><td>CPL-01</td><td>lorem ipsum</td><td>61 </td></tr>
-              <tr><td>2</td><td>CPL-04</td><td>lorem ipsum</td><td>48 </td></tr>
-              <tr><td>3</td><td>CPL-06</td><td>Contoh Lain</td><td>45 </td></tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="modal-footer">
-          <button class="btn btn-secondary btn-sm" data-dismiss="modal">Tutup</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Modal: Show single student (on clicking min/max) -->
-  <div class="modal fade" id="modalStudent" tabindex="-1" aria-labelledby="modalStudentLabel" aria-hidden="true">
-    <div class="modal-dialog modal-sm">
-      <div class="modal-content">
-        <div class="modal-header bg-info text-white">
-          <h5 class="modal-title" id="modalStudentLabel"><i class="fas fa-user-graduate me-2"></i> Detil Mahasiswa</h5>
-          <button type="button" class="btn-close btn-close-white" data-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <dl class="row mb-0">
-            <dt class="col-5">NIM</dt><dd class="col-7" id="stuNim">-</dd>
-            <dt class="col-5">Nama</dt><dd class="col-7" id="stuName">-</dd>
-            <dt class="col-5">Jenis</dt><dd class="col-7" id="stuType">-</dd>
-            <dt class="col-5">Nilai</dt><dd class="col-7" id="stuValue">-</dd>
-          </dl>
-        </div>
-        <div class="modal-footer">
-          <button class="btn btn-secondary btn-sm" data-dismiss="modal">Tutup</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <script>
-/* ========== Clickable min/max handler (show modal with single student) ========== */
-    $(document).on('click', '.clickable', function() {
-      const cpl = $(this).data('cpl');
-  const type = $(this).data('type'); // 'min' atau 'max'
-  const value = $(this).data('value');
-
-  // dummy student selection logic (for mockup)
-  let student;
-  if(type === 'min') {
-    student = { nim: '20241099', name: 'Mahasiswa Minimal', value: value, type: 'Min' };
-  } else {
-    student = { nim: '20241002', name: 'Mahasiswa Maksimal', value: value, type: 'Max' };
-  }
-
-  $('#modalStudentLabel').text(cpl + ' — ' + (type === 'min' ? 'Minimum' : 'Maximum'));
-  $('#stuNim').text(student.nim);
-  $('#stuName').text(student.name);
-  $('#stuValue').text(student.value);
-  $('#stuType').text(student.type);
-
-  var modal = new bootstrap.Modal(document.getElementById('modalStudent'));
-  modal.show();
-});
-
-/* ========== Export CSV (from table tblCplStats) ========== */
-    function tableToCSV(filename = 'cpl_stats.csv') {
-      const rows = [];
-      $('#tblCplStats thead tr').each(function() {
-        const cols = $(this).find('th').map((i, th) => $(th).text().trim()).get();
-        rows.push(cols.join(','));
-      });
-      $('#tblCplStats tbody tr').each(function() {
-        const cols = $(this).find('td').map((i, td) => {
-      // remove inner tags (like span)
-      return $(td).text().trim().replace(/,/g, ''); // crude comma remove
-    }).get();
-        rows.push(cols.join(','));
-      });
-
-      const csvString = rows.join('\n');
-      const blob = new Blob([csvString], { type: 'text/csv' });
-      const link = document.createElement('a');
-      link.href = URL.createObjectURL(blob);
-      link.download = filename;
-      document.body.appendChild(link);
-      link.click();
-      link.remove();
-    }
-    $('#btnExportCsv').on('click', function(){ tableToCSV(); });
-
-/* ========== Filter modal: apply dummy filter ========== */
-    $('#formFilter').on('submit', function(e){
-      e.preventDefault();
-  // read values (dummy)
-      const set = $('#filterSet').val();
-      const angkatan = $('#filterAngkatan').val();
-      const peminatan = $('#filterPeminatan').val();
-
-  // just display in header row, or apply to chart/table if dynamic back-end
-      alert('Filter diterapkan:\\nSet: ' + set + '\\nAngkatan: ' + angkatan + '\\nPeminatan: ' + peminatan);
-      $('#modalFilter').modal('hide');
-    });
-
-/* ========== Utility: openAllStudentsPreview (dummy) ========== */
-    function openAllStudentsPreview(){
-      var modal = new bootstrap.Modal(document.getElementById('modalPreviewAll'));
-      modal.show();
-    }
-
-/* ========== small helper for demo: applyDummyFilter ========== */
-    function applyDummyFilter(){
-      alert('Filter dummy diterapkan (preview).');
-    }
-
-/* ========== (Optional) Prepare CSV export for other tables if needed ========== */
-
-  </script>
-
-  <script>     
-    // -------------------------
-    // Populate tables & KPI
-    // -------------------------
-    function populateRekap() {
-      const tbody = document.getElementById('tableRekapBody');
-      tbody.innerHTML = '';
-      CPLS.forEach((c,i) => {
-        const gap = (c.avg - c.target).toFixed(2);
-        const status = gap >= 0 ? 'green' : (gap >= -10 ? 'yellow' : 'red');
-        const tr = document.createElement('tr');
-        tr.style.cursor = 'pointer';
-        tr.innerHTML = `
-          <td>${i+1}</td>
-          <td><strong>${c.code}</strong><div class="small text-muted">${c.name}</div></td>
-          <td class="text-center">${c.avg}</td>
-          <td class="text-center">${c.target}</td>
-          <td class="text-center">${gap}%</td>
-          <td class="text-center"><span class="status-dot ${status==='green'?'status-green':status==='yellow'?'status-yellow':'status-red'}"></span></td>
-        `;
-        tr.addEventListener('click', ()=> {
-          // highlight and scroll to granular - simple behavior: filter detail rows by sample
-          alert('Buka drilldown CPL: ' + c.code + '\\n(Mockup) — men-scroll ke tabel detail');
-          document.getElementById('tblDetail').scrollIntoView({behavior:'smooth'});
-        });
-        tbody.appendChild(tr);
-      });
-
-      // KPI summary
-      const avgAll = (CPLS.reduce((s,x)=>s+x.avg,0) / CPLS.length).toFixed(2);
-      document.getElementById('kpiAvg').textContent = avgAll;
-      const reached = CPLS.filter(x=>x.avg >= x.target).length;
-      document.getElementById('kpiReached').textContent = reached + ' / ' + CPLS.length;
-      const gapAvg = (avgAll - 80).toFixed(2);
-      document.getElementById('kpiGap').textContent = (gapAvg>0?('+'):'') + gapAvg + '%';
-      const riskCount = detailRows.filter(r=>r.value < 50).length;
-      document.getElementById('kpiRisk').textContent = riskCount;
-      document.getElementById('summaryShort').textContent = `Rata-rata CPL: ${avgAll} — Gap vs Target: ${gapAvg}%`;
-    }
-
-    
-    function populateDetail() {
-      const tbody = document.getElementById('tblDetailBody');
-      tbody.innerHTML = '';
-      detailRows.forEach(r => {
-        const tdValue = `<a href="#" class="link-primary text-decoration-none value-link" data-nim="${r.nim}" data-name="${r.name}" data-ik="${r.ik}" data-cpmk="${r.cpmk}" data-value="${r.value}" data-doc="${r.doc}">${r.value}</a>`;
-        const tr = document.createElement('tr');
-        tr.innerHTML = `
-          <td>${r.nim}</td>
-          <td>${r.name}</td>
-          <td>${r.ik}</td>
-          <td>${r.cpmk}</td>
-          <td class="text-center">${tdValue}</td>
-          <td class="text-center">${r.prog}</td>
-          <td><a class="btn btn-sm btn-outline-secondary" href="${r.doc}">Dokumen</a></td>
-        `;
-        tbody.appendChild(tr);
-      });
-
-      // attach click handlers for value links
-      document.querySelectorAll('.value-link').forEach(el=>{
-        el.addEventListener('click', function(ev){
-          ev.preventDefault();
-          const nim = this.dataset.nim;
-          const name = this.dataset.name;
-          const ik = this.dataset.ik;
-          const cpmk = this.dataset.cpmk;
-          const value = this.dataset.value;
-          document.getElementById('modalValueTitle').textContent = `${cpmk} — Nilai`;
-          document.getElementById('mdNim').textContent = nim;
-          document.getElementById('mdName').textContent = name;
-          document.getElementById('mdIk').textContent = ik;
-          document.getElementById('mdCpmk').textContent = cpmk;
-          document.getElementById('mdValue').textContent = value;
-          document.getElementById('viewDocBtn').href = this.dataset.doc || '#';
-          const modal = new bootstrap.Modal(document.getElementById('modalValueDetail'));
-          modal.show();
-        });
-      });
-    }
-
-      
-    // -------------------------
-    // UI helpers
-    // -------------------------
-    function openAllStudentsPreview(){ const modal = new bootstrap.Modal(document.getElementById('modalPreviewAll')); modal.show(); }
-    function openAllRisikoPreview(){ const modal = new bootstrap.Modal(document.getElementById('modalRisikoAll')); modal.show(); }
-
-    function applyDummyFilter(){
-      // apply values from modal inputs when user clicks "Terapkan"
-      const set = document.getElementById('filterSet').value || 'KT-6 (K20)';
-      const ang = document.getElementById('filterAngkatan').value || '2024';
-      const prodi = document.getElementById('filterProdi').value || 'Teknik Kimia Reguler';
-      document.getElementById('summarySet').textContent = set;
-      document.getElementById('summaryAngkatan').textContent = ang;
-      document.getElementById('summaryProdi').textContent = prodi;
-      // close modal if open
-      const modalEl = document.getElementById('modalFilter');
-      const bs = bootstrap.Modal.getInstance(modalEl);
-      if(bs) bs.hide();
-      // in real app, perform XHR to backend to update data. Here we simply repopulate with same dummy.
-      populateRekap();
-      populateEws();
-      populateDetail();
-      renderCharts();
-      alert('Filter diterapkan (mock). Data dummy tetap sama.');
-    }
-
-    // Attach filter form submit
-    document.getElementById('formFilter').addEventListener('submit', function(e){
-      e.preventDefault();
-      applyDummyFilter();
-    });
-
-    // Export button
-    document.getElementById('btnExportAll').addEventListener('click', function(){
-      downloadCSV('rekap_cpl_all.csv', tableToCSVArray_());
-    });
-
-    // On page load populate
-    (function init(){
-      populateRekap();
-      populateEws();
-      populateDetail();
-      renderCharts();
-    })();
-
-    // detail export wrapper
-    function downloadCSVDetail(){
-      downloadCSV('detail_mhs.csv', detailTableToCSVArray());
-    }
-
-    // link functions used in buttons elsewhere
-    window.downloadCSV = downloadCSV;
-    window.tableToCSVArray = tableToCSVArray_;
-    window.detailTableToCSVArray = detailTableToCSVArray;
-    window.openAllStudentsPreview = openAllStudentsPreview;
-    window.applyDummyFilter = applyDummyFilter;
-    window.downloadCSVDetail = downloadCSVDetail;
-
-  </script>
-<script>
-// -------------------------------------------------
-// 1) GENERATOR DATA DUMMY SECARA OTOMATIS
-// -------------------------------------------------
-
-// 11 CPL
-const cplLabels = Array.from({length: 11}, (_, i) => `CPL-${String(i+1).padStart(2,'0')}`);
-const cplAverages = cplLabels.map(() => randomScore());
-
-// 24 IK
-const ikLabels = Array.from({length: 24}, (_, i) => `IK-${String(i+1).padStart(2,'0')}`);
-const ikAverages = ikLabels.map(() => randomScore());
-
-// 258 CPMK  (format: STKxxx-n)
-const cpmkLabels = Array.from({length: 258}, (_, i) => {
-    const mkCode = `STK${String(500 + Math.floor(i/5)).padStart(3,'0')}`;
-    const num = (i % 5) + 1;
-    return `${mkCode}-${num}`;
-});
-const cpmkAverages = cpmkLabels.map(() => randomScore());
-
-// 78 MK
-const mkLabels = Array.from({length: 78}, (_, i) => `STK${String(600 + i).padStart(3,'0')}`);
-const mkAverages = mkLabels.map(() => randomScore());
-
-// -------------------------------------------------
-// 2) FUNCTION RANDOM SCORE
-// -------------------------------------------------
-function randomScore() {
-    return Number((0 + Math.random()*100).toFixed(2)); // rentang 0–100
-}
-
-// -------------------------------------------------
-// 3) FUNGSI GENERATOR BARCHART UMUM
-// -------------------------------------------------
-
-function generateBarChart(canvasId, labels, data, labelName, color) {
-    const ctx = document.getElementById(canvasId).getContext("2d");
-    new Chart(ctx, {
-        type: "bar",
-        data: {
-            labels: labels,
-            datasets: [{
-                label: labelName,
-                data: data,
-                backgroundColor: color.bg,
-                borderColor: color.border,
-                borderWidth: 2
-            }]
-        },
-        options: {
-            responsive: true,
-            scales: {
-                x: { ticks: { maxRotation: 90, minRotation: 45 } },
-                y: {
-                    beginAtZero: true,
-                    max: 100
-                }
-            }
-        }
-    });
-}
-
-// -------------------------------------------------
-// 4) GENERATE 4 BARCHART
-// -------------------------------------------------
-
-generateBarChart("chartCPL", cplLabels, cplAverages, "Rata-rata CPL", {
-    bg: "rgba(75, 192, 75, 0.7)", border: "rgb(75, 192, 75)"       // hijau
-});
-
-generateBarChart("chartIK", ikLabels, ikAverages, "Rata-rata IK", {
-    bg: "rgba(255, 159, 64, 0.7)", border: "rgb(255, 159, 64)"     // oranye
-});
-
-generateBarChart("chartCPMK", cpmkLabels, cpmkAverages, "Rata-rata CPMK", {
-    bg: "rgba(255, 99, 132, 0.7)", border: "rgb(255, 99, 132)"     // merah
-});
-
-generateBarChart("chartMK", mkLabels, mkAverages, "Rata-rata MK", {
-    bg: "rgba(54, 162, 235, 0.7)", border: "rgb(54, 162, 235)"     // biru
-});
-
-</script>
-
-<script>
-// ------------------------------------------------------------
-// 1) TEMPAT INPUT DATA CPMK
-// Cukup edit bagian ini saja!
-// Format: { code: "STKxxx-n", value: 0-100 }
-// ------------------------------------------------------------
-const cpmkData = [
-    { code: "STK623-1", value: 72.5 },
-    { code: "STK623-2", value: 81.2 },
-    { code: "STK623-3", value: 66.7 },
-    { code: "STK610-4", value: 90.1 },
-    { code: "STK611-2", value: 58.3 },
-    { code: "STK615-1", value: 77.4 },
-    { code: "STK620-3", value: 69.8 },
-    { code: "STK620-4", value: 82.6 },
-    { code: "STK621-1", value: 94.0 },
-    { code: "STK622-3", value: 88.2 },
-    // ... lanjutkan data asli kamu
-];
-
-// ------------------------------------------------------------
-// 2) PROSES DATA: URUTKAN & PILIH 10 TERENDAH / 10 TERTINGGI
-// ------------------------------------------------------------
-const sortedData = [...cpmkData].sort((a, b) => a.value - b.value);
-
-const lowest10 = sortedData.slice(0, 10);
-const highest10 = sortedData.slice(-10).reverse(); // highest → descending
-
-// ------------------------------------------------------------
-// 3) FUNGSI GENERATOR CHART HORIZONTAL
-// ------------------------------------------------------------
-function generateHorizontalChart(canvasId, labels, values, bgColor, borderColor) {
-    const ctx = document.getElementById(canvasId).getContext("2d");
-
-    new Chart(ctx, {
-        type: "bar",
-        data: {
-            labels: labels,
-            datasets: [{
-                label: "Nilai CPMK",
-                data: values,
-                backgroundColor: bgColor,
-                borderColor: borderColor,
-                borderWidth: 2
-            }]
-        },
-        options: {
-            indexAxis: "y", // Membuat horizontal
-            responsive: true,
-            scales: {
-                x: { beginAtZero: true, max: 100 }
-            }
-        }
-    });
-}
-
-// ------------------------------------------------------------
-// 4) PANGGIL CHART KIRI & KANAN
-// ------------------------------------------------------------
-generateHorizontalChart(
-    "chartLowest",
-    lowest10.map(d => d.code),
-    lowest10.map(d => d.value),
-    "rgba(255, 99, 132, 0.7)",   // merah lembut
-    "rgb(255, 99, 132)"
-);
-
-generateHorizontalChart(
-    "chartHighest",
-    highest10.map(d => d.code),
-    highest10.map(d => d.value),
-    "rgba(75, 192, 75, 0.7)",   // hijau lembut
-    "rgb(75, 192, 75)"
-);
-
-</script>
 
 
 <script>
@@ -2907,7 +833,7 @@ generateHorizontalChart(
           max: 120,
           title: {
             display: true,
-            text: 'Jumlah Mahasiswa'
+            text: 'Jumlah Lulusan'
           }
         }
       }
@@ -2987,5 +913,41 @@ new Chart(ctx, {
     }
   }
 });
+</script>
+
+<script>
+  var ctx12 = document.getElementById('chartLulusanBatch').getContext('2d');
+  new Chart(ctx12, {
+    type: 'pie',
+    data: {
+      labels: ['Angkatan 2020', 'Angkatan 2021', 'Angkatan 2019'],
+      datasets: [{
+        data: [50, 20, 10], // sesuai tabel
+
+        backgroundColor: [
+          '#007bff', // 2020 - biru
+          '#28a745', // 2021 - hijau
+          '#ffc107'  // 2019 - kuning
+        ],
+
+        borderColor: '#ffffff',
+        borderWidth: 2
+      }]
+    },
+    options: {
+      plugins: {
+        legend: {
+          position: 'top'
+        },
+        tooltip: {
+          callbacks: {
+            label: function(context) {
+              return context.label + ': ' + context.raw + ' lulusan';
+            }
+          }
+        }
+      }
+    }
+  });
 </script>
 <?php include('5script.php'); ?>

@@ -1,4 +1,4 @@
-<?php $page = 'beranda'; ?>
+<?php $page = 'beranda_dosen'; ?>
 <?php include('1header.php'); ?>
 <?php include('2navbar.php'); ?>
 <?php include('3sidebar.php'); ?>
@@ -20,7 +20,7 @@
       <div class="container-fluid">
 
         <!-- Welcome Card -->
-        <div class="card">
+        <!-- <div class="card">
           <div class="card-body">
             <h2 class="mb-0">
               <i class="far fa-smile"></i>
@@ -30,7 +30,7 @@
               Sistem Informasi Learning Outcome Assessment (LOA)
             </p>
           </div>
-        </div>
+        </div> -->
 
         <!-- Info Cards -->
         <div class="row mb-3">
@@ -134,7 +134,7 @@
                         <td align="center">A</td>
                         <td align="center"><b>27</b></td>                                         
                         <td class="text-center">
-                          <button type="button" onclick="window.location='perkuliahan-portofolio-kelas-detail.php'" class="btn btn-sm btn-outline-info"> <i class='fas fa-info-circle'> </i></button>
+                          <button type="button" onclick="window.location='perkuliahan-portofolio-kelas-detail.php'" class="btn btn-xs btn-outline-info"> <i class='fas fa-info-circle'> </i></button>
                         </td>
                       </td>
                     </tr>
@@ -149,7 +149,7 @@
                       <td align="center">C</td>
                       <td align="center"><b>33</b></td>
                       <td class="text-center">
-                        <button type="button" onclick="window.location='perkuliahan-portofolio-kelas-detail.php'" class="btn btn-sm btn-outline-info"> <i class='fas fa-info-circle'> </i></button>
+                        <button type="button" onclick="window.location='perkuliahan-portofolio-kelas-detail.php'" class="btn btn-xs btn-outline-info"> <i class='fas fa-info-circle'> </i></button>
                       </td>
                     </tr>
 
@@ -163,7 +163,7 @@
                       <td align="center">B</td>
                       <td align="center"><b>26</b></td>
                       <td class="text-center">
-                        <button type="button" onclick="window.location='perkuliahan-portofolio-kelas-detail.php'" class="btn btn-sm btn-outline-info"> <i class='fas fa-info-circle'> </i></button>
+                        <button type="button" onclick="window.location='perkuliahan-portofolio-kelas-detail.php'" class="btn btn-xs btn-outline-info"> <i class='fas fa-info-circle'> </i></button>
                       </td>
                     </tr>
                     <tr>
@@ -176,7 +176,7 @@
                       <td align="center">D</td>
                       <td align="center"><b>23</b></td>
                       <td class="text-center">
-                        <button type="button" onclick="window.location='perkuliahan-portofolio-kelas-detail.php'" class="btn btn-sm btn-outline-info"> <i class='fas fa-info-circle'> </i></button>
+                        <button type="button" onclick="window.location='perkuliahan-portofolio-kelas-detail.php'" class="btn btn-xs btn-outline-info"> <i class='fas fa-info-circle'> </i></button>
                       </td>
                     </tr>
                     <tr>
@@ -189,7 +189,7 @@
                       <td align="center">F</td>
                       <td align="center"><b>25</b></td>
                       <td class="text-center">
-                       <button type="button" onclick="window.location='perkuliahan-portofolio-kelas-detail.php'" class="btn btn-sm btn-outline-info"> <i class='fas fa-info-circle'> </i></button>
+                       <button type="button" onclick="window.location='perkuliahan-portofolio-kelas-detail.php'" class="btn btn-xs btn-outline-info"> <i class='fas fa-info-circle'> </i></button>
                       </td>
                     </tr>
                     <tr>
@@ -202,7 +202,7 @@
                       <td align="center">E</td>
                       <td align="center"><b>22</b></td>
                       <td class="text-center">
-                        <button type="button" onclick="window.location='perkuliahan-portofolio-kelas-detail.php'" class="btn btn-sm btn-outline-info"> <i class='fas fa-info-circle'> </i></button>
+                        <button type="button" onclick="window.location='perkuliahan-portofolio-kelas-detail.php'" class="btn btn-xs btn-outline-info"> <i class='fas fa-info-circle'> </i></button>
                       </td>
                     </tr>
                     <tr>
@@ -215,7 +215,7 @@
                       <td align="center">F</td>
                       <td align="center"><b>24</b></td>
                       <td class="text-center">
-                        <button type="button" onclick="window.location='perkuliahan-portofolio-kelas-detail.php'" class="btn btn-sm btn-outline-info"> <i class='fas fa-info-circle'> </i></button>
+                        <button type="button" onclick="window.location='perkuliahan-portofolio-kelas-detail.php'" class="btn btn-xs btn-outline-info"> <i class='fas fa-info-circle'> </i></button>
                       </td>
                     </tr>
                     <tr>
@@ -228,7 +228,7 @@
                       <td align="center">C</td>
                       <td align="center"><b>20</b></td>
                       <td class="text-center">
-                        <button type="button" onclick="window.location='perkuliahan-portofolio-kelas-detail.php'" class="btn btn-sm btn-outline-info"> <i class='fas fa-info-circle'> </i></button>
+                        <button type="button" onclick="window.location='perkuliahan-portofolio-kelas-detail.php'" class="btn btn-xs btn-outline-info"> <i class='fas fa-info-circle'> </i></button>
                       </td>
                     </tr>
                     <tr>
@@ -241,7 +241,7 @@
                       <td align="center">G</td>
                       <td align="center"><b>24</b></td>
                       <td class="text-center">
-                        <button type="button" onclick="window.location='perkuliahan-portofolio-kelas-detail.php'" class="btn btn-sm btn-outline-info"> <i class='fas fa-info-circle'> </i></button>
+                        <button type="button" onclick="window.location='perkuliahan-portofolio-kelas-detail.php'" class="btn btn-xs btn-outline-info"> <i class='fas fa-info-circle'> </i></button>
                       </td>
                     </tr>
                     <tr>
@@ -254,7 +254,7 @@
                       <td align="center">E</td>
                       <td align="center"><b>22</b></td>
                       <td class="text-center">
-                        <button type="button" onclick="window.location='perkuliahan-portofolio-kelas-detail.php'" class="btn btn-sm btn-outline-info"> <i class='fas fa-info-circle'> </i></button>
+                        <button type="button" onclick="window.location='perkuliahan-portofolio-kelas-detail.php'" class="btn btn-xs btn-outline-info"> <i class='fas fa-info-circle'> </i></button>
                       </td>
                     </tr>
                     <tr>
@@ -267,8 +267,8 @@
                       <td align="center">D</td>
                       <td align="center"><b>24</b></td>
                       <td class="text-center">
-                        <button type="button" class="btn btn-sm btn-outline-info" onclick="window.location='progres-kelas-semester-detail.php'"><i class="fas fa-info-circle"></i></button>
-                        <a href="data-portofolio-cpmk.pdf" download class="btn btn-sm btn-outline-success"><i class="fas fa-download"></i></a>
+                        <button type="button" class="btn btn-xs btn-outline-info" onclick="window.location='progres-kelas-semester-detail.php'"><i class="fas fa-info-circle"></i></button>
+                        <a href="data-portofolio-cpmk.pdf" download class="btn btn-xs btn-outline-success"><i class="fas fa-download"></i></a>
                       </td>
                     </tr>
 

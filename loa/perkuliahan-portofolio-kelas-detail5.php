@@ -118,10 +118,10 @@
           <!-- TAB NAV (Semester) -->
            <ul class="nav nav-tabs">
             <li class="nav-item" onclick="window.location='perkuliahan-portofolio-kelas-detail.php'"><a class="nav-link ">Portofolio</a></li>
-            <li class="nav-item" onclick="window.location='perkuliahan-portofolio-kelas-detail4.php'"><a class="nav-link active">Soal Ujian</a></li>
+            <li class="nav-item" onclick="window.location='perkuliahan-portofolio-kelas-detail4.php'"><a class="nav-link ">Soal Ujian</a></li>
             <li class="nav-item" onclick="window.location='perkuliahan-portofolio-kelas-detail2.php'"><a class="nav-link ">Penilaian Mahasiswa</a></li>
             <!-- <li class="nav-item" onclick="window.location='perkuliahan-portofolio-kelas-detail3.php'"><a class="nav-link ">Laporan(Grafik/Tabel)</a></li> -->
-            <li class="nav-item" onclick="window.location='perkuliahan-portofolio-kelas-detail5.php'"><a class="nav-link ">Refleksi Kelas</a></li>
+            <li class="nav-item" onclick="window.location='perkuliahan-portofolio-kelas-detail5.php'"><a class="nav-link active">Refleksi Kelas</a></li>
           </ul>
 
 
@@ -132,97 +132,281 @@
                                 <button type="button" class="btn btn-xs btn-info"><i class="fas fa-link"></i> Download</button>
                               </a> <i>update_at</i>
                             </td> -->
-          <!-- ========== CARD : soal ujian========== --> 
-<div class="card">
-  <!-- <div class="card-header">
-    <h5 class="mb-0">Daftar Soal Ujian</h5>
+          <!-- ========== CARD : refleksi kelas ========== --> 
+<!-- ========== CARD : Form Pengisian TAG Kelas oleh Dosen ========== -->
+<div class="card ">
+
+ <!--  <div class="card-header">
+    <h3 class="card-title">
+      <i class="fas fa-tags mr-1"></i>
+      Form Pengisian TAG Generalisasi Kelas (Berbasis OBE & CPMK)
+    </h3>
   </div> -->
-  <div class="card-body">
 
-    <div class="table-responsive">
-      <table class="table table-sm table-hover table-bordered table-striped deta">
-        <thead>
-          <tr class="text-uppercase">
-            <th width="50">No</th>
-            <th width="150">Tanggal Ujian</th>
-            <th>Keterangan</th>
-            <th width="100" class="text-center">Aksi</th>
-          </tr>
-        </thead>
-        <tbody>
+  <form action="#" method="post">
+    <div class="card-body">
 
-          <tr>
-            <td>1</td>
-            <td>10 Maret 2025</td>
-            <td>Ujian Tengah Semester - Mekanika Tanah. UTS Semester Genap 2024/2025</td>
-            <td class="text-center"><button class="btn btn-sm btn-outline-success">
-                <i class="fas fa-download"></i>
-              </button>
-              <button class="btn btn-sm btn-outline-danger">
-                <i class="fas fa-trash"></i>
-              </button>
-            </td>
-          </tr>
+      <!-- ================= 1. KETERcapaian CPMK ================= -->
+      <h5 class="text-primary"><strong>1. Ketercapaian CPMK (Core OBE)</strong></h5>
 
-          <tr>
-            <td>2</td>
-            <td>25 Juni 2025</td>
-            <td>Ujian Akhir Semester - Struktur Beton. UAS Semester Genap 2024/2025</td>
-            <td class="text-center"><button class="btn btn-sm btn-outline-info">
-                <i class="fas fa-paperclip"></i>
-              </button>
-              <button class="btn btn-sm btn-outline-danger">
-                <i class="fas fa-trash"></i>
-              </button>
-            </td>
-          </tr>
+      <div class="form-group">
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="c1" name="tag[]" value="CPMK_Tercapai_Kuat">
+          <label class="custom-control-label" for="c1">#CPMK_Tercapai_Kuat</label>
+        </div>
 
-          <tr>
-            <td>3</td>
-            <td>5 April 2025</td>
-            <td>Kuis 1 - Geoteknik. Evaluasi Bab 1 dan 2</td>
-            <td class="text-center"><button class="btn btn-sm btn-outline-success">
-                <i class="fas fa-download"></i>
-              </button>
-              <button class="btn btn-sm btn-outline-danger">
-                <i class="fas fa-trash"></i>
-              </button>
-            </td>
-          </tr>
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="c2" name="tag[]" value="CPMK_Tercapai_Minimal">
+          <label class="custom-control-label" for="c2">#CPMK_Tercapai_Minimal</label>
+        </div>
 
-          <tr>
-            <td>4</td>
-            <td>20 April 2025</td>
-            <td>Kuis 2 - Analisis Struktur. Evaluasi Bab 3 dan 4</td>
-            <td class="text-center"><button class="btn btn-sm btn-outline-success">
-                <i class="fas fa-download"></i>
-              </button>
-              <button class="btn btn-sm btn-outline-danger">
-                <i class="fas fa-trash"></i>
-              </button>
-            </td>
-          </tr>
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="c3" name="tag[]" value="CPMK_Tidak_Tercapai">
+          <label class="custom-control-label" for="c3">#CPMK_Tidak_Tercapai</label>
+        </div>
 
-          <tr>
-            <td>5</td>
-            <td>30 Maret 2025</td>
-            <td>Remedial UTS - Mekanika Tanah. Khusus mahasiswa yang belum tuntas</td>
-            <td class="text-center"><button class="btn btn-sm btn-outline-success">
-                <i class="fas fa-download"></i>
-              </button>
-              <button class="btn btn-sm btn-outline-danger">
-                <i class="fas fa-trash"></i>
-              </button>
-            </td>
-          </tr>
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="c4" name="tag[]" value="Variansi_Tinggi">
+          <label class="custom-control-label" for="c4">#Variansi_Tinggi</label>
+        </div>
 
-        </tbody>
-      </table>
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="c5" name="tag[]" value="Dominan_Nilai_Menengah">
+          <label class="custom-control-label" for="c5">#Dominan_Nilai_Menengah</label>
+        </div>
+
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="c6" name="tag[]" value="CPMK_Tergantung_Tugas">
+          <label class="custom-control-label" for="c6">#CPMK_Tergantung_Tugas</label>
+        </div>
+      </div>
+
+      <hr>
+
+      <!-- ================= 2. BEBAN KOGNITIF ================= -->
+      <h5 class="text-primary"><strong>2. Beban Kognitif & Kompleksitas</strong></h5>
+
+      <div class="form-group">
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="c7" name="tag[]" value="Materi_Terlalu_Padat">
+          <label class="custom-control-label" for="c7">#Materi_Terlalu_Padat</label>
+        </div>
+
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="c8" name="tag[]" value="Lonjakan_Kesulitan">
+          <label class="custom-control-label" for="c8">#Lonjakan_Kesulitan</label>
+        </div>
+
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="c9" name="tag[]" value="Prasyarat_Lemah">
+          <label class="custom-control-label" for="c9">#Prasyarat_Lemah</label>
+        </div>
+
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="c10" name="tag[]" value="Butuh_Pemecahan_Materi">
+          <label class="custom-control-label" for="c10">#Butuh_Pemecahan_Materi</label>
+        </div>
+
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="c11" name="tag[]" value="Butuh_Pengayaan">
+          <label class="custom-control-label" for="c11">#Butuh_Pengayaan</label>
+        </div>
+      </div>
+
+      <hr>
+
+      <!-- ================= 3. METODE ================= -->
+      <h5 class="text-primary"><strong>3. Metode & Aktivitas Pembelajaran</strong></h5>
+
+      <div class="form-group">
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="c12" name="tag[]" value="Diskusi_Tidak_Efektif">
+          <label class="custom-control-label" for="c12">#Diskusi_Tidak_Efektif</label>
+        </div>
+
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="c13" name="tag[]" value="Studi_Kasus_Efektif">
+          <label class="custom-control-label" for="c13">#Studi_Kasus_Efektif</label>
+        </div>
+
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="c14" name="tag[]" value="Praktikum_Menguatkan_CPMK">
+          <label class="custom-control-label" for="c14">#Praktikum_Menguatkan_CPMK</label>
+        </div>
+
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="c15" name="tag[]" value="Ceramah_Tidak_Cukup">
+          <label class="custom-control-label" for="c15">#Ceramah_Tidak_Cukup</label>
+        </div>
+
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="c16" name="tag[]" value="Project_Based_Learning_Efektif">
+          <label class="custom-control-label" for="c16">#Project_Based_Learning_Efektif</label>
+        </div>
+      </div>
+
+      <hr>
+
+      <!-- ================= CATATAN TAMBAHAN ================= -->
+      <h5 class="text-primary"><strong>Catatan Tambahan (Opsional)</strong></h5>
+
+      <div class="form-group">
+        <textarea class="form-control" rows="3" name="catatan_tag"
+          placeholder="Tambahkan penjelasan singkat jika diperlukan..."></textarea>
+      </div>
+
     </div>
 
-  </div>
+    <div class="card-footer text-right">
+      <button type="submit" class="btn btn-primary">
+        <i class="fas fa-save mr-1"></i> Simpan TAG
+      </button>
+    </div>
+
+  </form>
+
 </div>
 
+
+<!-- ========== CARD : Form Refleksi Akhir Semester Dosen ========== -->
+<div class="card card-primary">
+  <div class="card-header">
+    <h3 class="card-title">
+      <i class="fas fa-clipboard-check mr-1"></i>
+      Formulir Refleksi Akhir Semester
+    </h3>
+  </div>
+
+  <form action="#" method="post">
+    <div class="card-body">
+
+      <!-- ================= 1. Refleksi Ketercapaian OBE ================= -->
+      <h5 class="mb-3 text-primary"><strong>1. Refleksi Ketercapaian OBE</strong></h5>
+
+      <div class="form-group">
+        <label>CPMK mana yang paling konsisten tercapai? Mengapa?</label>
+        <textarea class="form-control" rows="3" name="ref_cpmk_konsisten"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label>CPMK mana yang paling bermasalah? Pada bagian apa mahasiswa mulai tertinggal?</label>
+        <textarea class="form-control" rows="3" name="ref_cpmk_bermasalah"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label>Apakah CPMK terlalu ambisius untuk kondisi mahasiswa saat ini?</label>
+        <textarea class="form-control" rows="2" name="ref_cpmk_ambisius"></textarea>
+      </div>
+
+      <hr>
+
+      <!-- ================= 2. Refleksi Metode Pembelajaran ================= -->
+      <h5 class="mb-3 text-primary"><strong>2. Refleksi Metode Pembelajaran</strong></h5>
+
+      <div class="form-group">
+        <label>Aktivitas pembelajaran apa yang paling berdampak pada pencapaian CPMK?</label>
+        <textarea class="form-control" rows="3" name="ref_metode_efektif"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label>Metode apa yang terasa tidak bekerja?</label>
+        <textarea class="form-control" rows="2" name="ref_metode_tidak_efektif"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label>Apakah ada momen kelas yang menjadi turning point (positif/negatif)?</label>
+        <textarea class="form-control" rows="2" name="ref_turning_point"></textarea>
+      </div>
+
+      <hr>
+
+      <!-- ================= 3. Refleksi Penilaian ================= -->
+      <h5 class="mb-3 text-primary"><strong>3. Refleksi Penilaian & Instrumen</strong></h5>
+
+      <div class="form-group">
+        <label>Apakah instrumen benar-benar mengukur CPMK?</label>
+        <textarea class="form-control" rows="3" name="ref_instrumen_validitas"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label>Bagian rubrik mana yang sering disalahpahami mahasiswa?</label>
+        <textarea class="form-control" rows="2" name="ref_rubrik"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label>Apakah bobot penilaian sudah proporsional?</label>
+        <textarea class="form-control" rows="2" name="ref_bobot"></textarea>
+      </div>
+
+      <hr>
+
+      <!-- ================= 4. Refleksi Mahasiswa ================= -->
+      <h5 class="mb-3 text-primary"><strong>4. Refleksi Mahasiswa</strong></h5>
+
+      <div class="form-group">
+        <label>Pola kelemahan mahasiswa yang paling dominan?</label>
+        <textarea class="form-control" rows="3" name="ref_pola_kelemahan"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label>Sumber kelemahan: prasyarat, motivasi, atau desain pembelajaran?</label>
+        <textarea class="form-control" rows="2" name="ref_sumber_kelemahan"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label>Mahasiswa tipe apa yang paling terbantu? Siapa yang tertinggal?</label>
+        <textarea class="form-control" rows="2" name="ref_tipe_mahasiswa"></textarea>
+      </div>
+
+      <hr>
+
+      <!-- ================= 5. Refleksi Diri Dosen ================= -->
+      <h5 class="mb-3 text-primary"><strong>5. Refleksi Diri Dosen</strong></h5>
+
+      <div class="form-group">
+        <label>Bagian mana dari perkuliahan yang paling melelahkan secara mental?</label>
+        <textarea class="form-control" rows="2" name="ref_kelelahan"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label>Materi apa yang perlu dikuasai lebih dalam sebelum mengajar lagi?</label>
+        <textarea class="form-control" rows="2" name="ref_penguasaan_materi"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label>Keputusan pedagogis apa yang akan diubah jika diulang?</label>
+        <textarea class="form-control" rows="2" name="ref_keputusan_ubah"></textarea>
+      </div>
+
+      <hr>
+
+      <!-- ================= 6. Refleksi ke Depan (Action Plan) ================= -->
+      <h5 class="mb-3 text-primary"><strong>6. Refleksi ke Depan (Action Plan)</strong></h5>
+
+      <div class="form-group">
+        <label>Jika kelas ini diajar ulang, 1 hal apa yang pasti diubah?</label>
+        <textarea class="form-control" rows="2" name="ref_ubah_pasti"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label>Perubahan kecil paling realistis semester depan?</label>
+        <textarea class="form-control" rows="2" name="ref_perubahan_realistis"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label>Pengadaan apa yang paling berdampak meningkatkan CPMK?</label>
+        <textarea class="form-control" rows="2" name="ref_pengadaan"></textarea>
+      </div>
+
+    </div>
+
+    <div class="card-footer text-right">
+      <button type="submit" class="btn btn-primary">
+        <i class="fas fa-save mr-1"></i> Simpan Refleksi
+      </button>
+    </div>
+  </form>
+</div>
 
 
 

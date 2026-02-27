@@ -8,7 +8,7 @@
 
   <section class="content-header">
     <div class="container-fluid">
-      <h3 class="mb-0">Rapat Evaluasi 
+      <h3 class="mb-0">Dokumentasi Keputusan & Kebijakan 
         <button type="button" class="btn btn-tool" data-bs-toggle="modal" data-bs-target="#modalBantuan" title="Bantuan"><i class="fas fa-question-circle"></i>
         </button> 
       </h3>
@@ -369,6 +369,9 @@ tapi analisis distribusi & bobot yang membuatnya bermakna.
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
+        <p>
+          Halaman ini digunakan untuk menyimpan dan mengelola dokumen resmi terkait kebijakan dan keputusan implementasi OBE, seperti notulen rapat penting, SK, penetapan struktur, kebijakan akademik, serta dokumen formal lainnya sebagai bagian dari dokumentasi dan evidence penjaminan mutu.
+        </p>
         <p>
           Menu untuk <strong>upload file PDF Rapat Evaluasi</strong> dan menampilkan daftar file yang telah diunggah. 
         </p>

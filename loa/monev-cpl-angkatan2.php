@@ -307,11 +307,11 @@
       <small class="text-muted">Angkatan Terpilih</small>
     </div>
   </div>
-  <div class="card-body">
+  <div class="card-body p-0">
     <table class="table table-hover table-bordered table-sm">
       <thead style="background-color: #f2f2f2;">
         <tr>
-          <th width="190px">Periode Semester</th>
+          <th width="220px">Periode Semester</th>
           <th>CPL 1</th>
           <th>CPL 2</th>
           <th>CPL 3</th>
@@ -326,11 +326,11 @@
       </thead>
       <tbody>
         <tr>
-          <td><button  class="btn btn-sm btn-outline-info"onclick="window.location.href='detail.php'">sem1 [2024/2025 - Ganjil]</button></td>
+          <td>sem1 [2024/2025 - Ganjil]</td>
           <td>24</td><td>12</td><td>09</td><td>06</td><td>02</td><td>12</td><td>23</td><td>13</td><td>24</td><td>5</td>
         </tr>
         <tr>
-          <td><button  class="btn btn-sm btn-outline-info"onclick="window.location.href='detail.php'">sem2 [2024/2025 - Genap]</button></td>
+          <td>sem2 [2024/2025 - Genap]</td>
           <td>70</td><td>75</td><td>72</td><td>78</td><td>80</td><td>82</td><td>85</td><td>84</td><td>83</td><td>5</td>
         </tr>
         <tr>
@@ -342,11 +342,11 @@
           <td>85</td><td>87</td><td>86</td><td>88</td><td>90</td><td>92</td><td>91</td><td>93</td><td>94</td><td>5</td>
         </tr>
         <tr>
-          <td><button  class="btn btn-sm btn-outline-info"onclick="window.location.href='detail.php'">sem5 [2026/2027 - Ganjil]</button></td>
+          <td>>sem5 [2026/2027 - Ganjil]</td>
           <td>72</td><td>74</td><td>76</td><td>78</td><td>79</td><td>81</td><td>83</td><td>84</td><td>86</td><td>9</td>
         </tr>
         <tr>
-          <td><button  class="btn btn-sm btn-outline-info"onclick="window.location.href='detail.php'">sem6 [2026/2027 - Genap]</button></td>
+          <td>sem6 [2026/2027 - Genap]</td>
           <td>60</td><td>65</td><td>68</td><td>70</td><td>72</td><td>75</td><td>77</td><td>79</td><td>80</td><td>9</td>
         </tr>
         <tr>

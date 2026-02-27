@@ -251,7 +251,7 @@
             <li class="nav-item">
               <a href="pemetaan-zend.php" class="nav-link <?php echo $page == 'pemetaan_zend' ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
-                <p>Pemetaan CPL-IK-CPMK</p>
+                <p>Struktur Pemetaan</p>
               </a>
             </li>
 
@@ -327,6 +327,12 @@
               <a href="perkuliahan-portofolio-kelas.php" class="nav-link <?php echo $page == 'portofolio_kelas' ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Portofolio Kelas</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="progres-perwalian.php" class="nav-link <?php echo $page == 'progress_perwalian' ? 'active' : ''; ?>">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Perwalian</p>
               </a>
             </li>
             <li class="nav-item">
@@ -461,8 +467,8 @@
       
 
  <!-- PENGEMBANGAN OBE -->
-        <li class="nav-item <?php echo in_array($page, ['progress_kelas','progress_mk','progress_pemetaan','progress_cpl','progress_perwalian','evaluasi_rapat','evaluasi_pembelajaran']) ? 'menu-open' : ''; ?>">
-          <a href="#" class="nav-link <?php echo in_array($page, ['progress_kelas','progress_mk','progress_pemetaan','progress_cpl','progress_perwalian','evaluasi_rapat','evaluasi_pembelajaran']) ? 'active' : ''; ?>">
+        <li class="nav-item <?php echo in_array($page, ['progress_kelas','progress_mk','progress_pemetaan','progress_cpl','evaluasi_rapat','evaluasi_pembelajaran','evaluasi_kemajuan','evaluasi_lulusan','evaluasi_kurikulum']) ? 'menu-open' : ''; ?>">
+          <a href="#" class="nav-link <?php echo in_array($page, ['progress_kelas','progress_mk','progress_pemetaan','progress_cpl','evaluasi_rapat','evaluasi_pembelajaran','evaluasi_kemajuan','evaluasi_lulusan','evaluasi_kurikulum']) ? 'active' : ''; ?>">
             <i class="nav-icon fas fa-chart-line"></i>
             <p>
               Pengembangan OBE
@@ -478,35 +484,42 @@
               </a>
             </li>
             <li class="nav-item">
-              <a href="evaluasi-kemajuan.php" class="nav-link <?php echo $page == 'evaluasi_pembelaja' ? 'active' : ''; ?>">
+              <a href="evaluasi-kemajuan.php" class="nav-link <?php echo $page == 'evaluasi_kemajuan' ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Evaluasi Kemajuan</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="#.php" class="nav-link <?php echo $page == 'progress_pemetaa' ? 'active' : ''; ?>">
+              <a href="evaluasi-lulusan.php" class="nav-link <?php echo $page == 'evaluasi_lulusan' ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Evaluasi Lulusan</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="#.php" class="nav-link <?php echo $page == 'progress_pemetaan' ? 'active' : ''; ?>">
+              <a href="evaluasi-kurikulum.php" class="nav-link <?php echo $page == 'evaluasi_kurikulum' ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Evaluasi Kurikulum</p>
               </a>
             </li>
-            <li class="nav-item">
+             <li class="nav-item">
+              <a href="evaluasi-rapat.php" class="nav-link <?php echo $page == 'evaluasi_rapat' ? 'active' : ''; ?>">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Keputusan & Kebijakan</p>
+              </a>
+            </li>
+
+            <!-- <li class="nav-item">
               <a href="progres-pemetaan.php" class="nav-link <?php echo $page == 'progress_pemetaan' ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Progres Pemetaan</p>
               </a>
-            </li>
-            <li class="nav-item">
+            </li> -->
+            <!-- <li class="nav-item">
               <a href="progres-kelas-semester.php" class="nav-link <?php echo $page == 'progress_kelas' ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Progres kelas</p>
               </a>
-            </li>
+            </li> -->
             <li class="nav-item">
               <a href="progres-mk-semester.php" class="nav-link <?php echo $page == 'progress_mk' ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
@@ -520,12 +533,7 @@
               </a>
             </li>
             
-            <li class="nav-item">
-              <a href="progres-rapat.php" class="nav-link <?php echo $page == 'evaluasi_rapat' ? 'active' : ''; ?>">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Hasil dan Tindak Rapat</p>
-              </a>
-            </li>
+           
 
             <!-- <li class="nav-item">
               <a href="rekap-status-mahasiswa.php" class="nav-link">
@@ -547,12 +555,12 @@
                 <p>Eval Dosen oleh Mhs</p>
               </a>
             </li> -->
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <a href="progres-perwalian.php" class="nav-link <?php echo $page == 'progress_perwalian' ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Perwalian</p>
               </a>
-            </li>
+            </li> -->
             
 
           

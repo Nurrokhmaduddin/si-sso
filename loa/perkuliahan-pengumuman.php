@@ -108,7 +108,7 @@
                   <td>1</td>
                   <td>Perubahan Jadwal UTS Semester Genap 2024/2025</td>
                   <td>Jadwal UTS mengalami penyesuaian pada tanggal 12–18 Mei 2025. Mahasiswa diminta mengecek ulang jadwal di portal akademik.</td>
-                  <td><span class="badge bg-success">Publish</span></td>
+                  <td><span class="badge bg-info">Publish</span></td>
                   <td>
                     <button class="btn btn-sm btn-outline-primary"><i class="fas fa-edit"></i></button>
                     <button class="btn btn-sm btn-outline-danger"><i class="fas fa-trash"></i></button>
@@ -119,7 +119,7 @@
                   <td>2</td>
                   <td>Pengisian KRS Semester Ganjil 2025/2026</td>
                   <td>Pengisian KRS dibuka mulai 1–10 Agustus 2025 melalui sistem informasi akademik.</td>
-                  <td><span class="badge bg-success">Publish</span></td>
+                  <td><span class="badge bg-info">Publish</span></td>
                   <td>
                     <button class="btn btn-sm btn-outline-primary"><i class="fas fa-edit"></i></button>
                     <button class="btn btn-sm btn-outline-danger"><i class="fas fa-trash"></i></button>
@@ -130,7 +130,7 @@
                   <td>3</td>
                   <td>Workshop Penulisan Skripsi</td>
                   <td>Akan diadakan workshop penulisan skripsi bagi mahasiswa semester akhir pada tanggal 20 Maret 2025.</td>
-                  <td><span class="badge bg-secondary">Draft</span></td>
+                  <td><span class="badge bg-secondary">Arsip</span></td>
                   <td>
                     <button class="btn btn-sm btn-outline-primary"><i class="fas fa-edit"></i></button>
                     <button class="btn btn-sm btn-outline-danger"><i class="fas fa-trash"></i></button>
@@ -141,7 +141,7 @@
                   <td>4</td>
                   <td>Libur Nasional dan Cuti Bersama</td>
                   <td>Kegiatan perkuliahan diliburkan pada tanggal 1 Juni 2025 dalam rangka Hari Lahir Pancasila.</td>
-                  <td><span class="badge bg-success">Publish</span></td>
+                  <td><span class="badge bg-info">Publish</span></td>
                   <td>
                     <button class="btn btn-sm btn-outline-primary"><i class="fas fa-edit"></i></button>
                     <button class="btn btn-sm btn-outline-danger"><i class="fas fa-trash"></i></button>
@@ -152,7 +152,7 @@
                   <td>5</td>
                   <td>Pengumpulan Laporan PKL</td>
                   <td>Batas akhir pengumpulan laporan PKL adalah 30 April 2025 pukul 23.59 WIB.</td>
-                  <td><span class="badge bg-success">Publish</span></td>
+                  <td><span class="badge bg-info">Publish</span></td>
                   <td>
                     <button class="btn btn-sm btn-outline-primary"><i class="fas fa-edit"></i></button>
                     <button class="btn btn-sm btn-outline-danger"><i class="fas fa-trash"></i></button>
@@ -163,7 +163,7 @@
                   <td>6</td>
                   <td>Pendaftaran Wisuda Periode II 2025</td>
                   <td>Pendaftaran wisuda dibuka mulai 5 Juli 2025 melalui sistem akademik.</td>
-                  <td><span class="badge bg-secondary">Draft</span></td>
+                  <td><span class="badge bg-secondary">Arsip</span></td>
                   <td>
                     <button class="btn btn-sm btn-outline-primary"><i class="fas fa-edit"></i></button>
                     <button class="btn btn-sm btn-outline-danger"><i class="fas fa-trash"></i></button>
@@ -174,7 +174,7 @@
                   <td>7</td>
                   <td>Evaluasi Pembelajaran Semester Genap</td>
                   <td>Mahasiswa diwajibkan mengisi evaluasi pembelajaran sebelum melihat nilai akhir.</td>
-                  <td><span class="badge bg-success">Publish</span></td>
+                  <td><span class="badge bg-info">Publish</span></td>
                   <td>
                     <button class="btn btn-sm btn-outline-primary"><i class="fas fa-edit"></i></button>
                     <button class="btn btn-sm btn-outline-danger"><i class="fas fa-trash"></i></button>
@@ -185,7 +185,7 @@
                   <td>8</td>
                   <td>Pengajuan Cuti Akademik</td>
                   <td>Mahasiswa yang ingin mengajukan cuti akademik dapat mengisi formulir online sebelum 15 Februari 2025.</td>
-                  <td><span class="badge bg-success">Publish</span></td>
+                  <td><span class="badge bg-info">Publish</span></td>
                   <td>
                     <button class="btn btn-sm btn-outline-primary"><i class="fas fa-edit"></i></button>
                     <button class="btn btn-sm btn-outline-danger"><i class="fas fa-trash"></i></button>
@@ -196,7 +196,7 @@
                   <td>9</td>
                   <td>Beasiswa Prestasi Akademik 2025</td>
                   <td>Pendaftaran beasiswa prestasi akademik dibuka untuk mahasiswa dengan IPK ≥ 3.50.</td>
-                  <td><span class="badge bg-secondary">Draft</span></td>
+                  <td><span class="badge bg-secondary">Arsip</span></td>
                   <td>
                     <button class="btn btn-sm btn-outline-primary"><i class="fas fa-edit"></i></button>
                     <button class="btn btn-sm btn-outline-danger"><i class="fas fa-trash"></i></button>
@@ -207,7 +207,7 @@
                   <td>10</td>
                   <td>Perpanjangan Masa Studi Mahasiswa</td>
                   <td>Mahasiswa yang mendekati batas masa studi wajib melapor ke bagian akademik.</td>
-                  <td><span class="badge bg-success">Publish</span></td>
+                  <td><span class="badge bg-info">Publish</span></td>
                   <td>
                     <button class="btn btn-sm btn-outline-primary"><i class="fas fa-edit"></i></button>
                     <button class="btn btn-sm btn-outline-danger"><i class="fas fa-trash"></i></button>
@@ -218,7 +218,7 @@
                   <td>11</td>
                   <td>Ujian Perbaikan Nilai</td>
                   <td>Ujian perbaikan nilai akan dilaksanakan pada minggu terakhir semester berjalan.</td>
-                  <td><span class="badge bg-success">Publish</span></td>
+                  <td><span class="badge bg-info">Publish</span></td>
                   <td>
                     <button class="btn btn-sm btn-outline-primary"><i class="fas fa-edit"></i></button>
                     <button class="btn btn-sm btn-outline-danger"><i class="fas fa-trash"></i></button>
@@ -339,7 +339,7 @@
             <label class="form-label fw-medium">Status</label>
             <select class="form-select">
               <option value="publish">Publish</option>
-              <option value="draft">Draft</option>
+              <option value="arsip">Arsip</option>
             </select>
           </div>
 
