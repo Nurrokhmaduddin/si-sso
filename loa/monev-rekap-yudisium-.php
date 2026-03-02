@@ -52,7 +52,8 @@
                 <button type="button" class="btn btn-outline-success btn-sm">
                   <i class="fas fa-file-download me-1"></i> Export
                 </button>    
-                <button type="button" class="btn btn-sm btn-outline-info" onclick="window.location='detail-cpl.html'"><i class="fas fa-info-circle"></i></button>            
+                <button type="button" class="btn btn-sm btn-outline-info" onclick="window.location='detail-cpl.html'"><i class="fas fa-info-circle"></i></button> 
+                <a class="btn btn-sm btn-outline-primary" href="formulir-evaluasi.php" target="_blank"><i class="fas fa-clipboard-list me-1"> </i>Catat Temuan </a>            
               </div>
 
             </div>
@@ -555,7 +556,7 @@
   <td class="text-center">3.62</td>
   <td class="text-center">0</td>
   <td class="text-center">
-    <button class="btn btn-sm btn-outline-info">Detail</button>
+    <button class="btn btn-sm btn-outline-info" onclick="window.location.href='monev-rekap-individual-detail.php'">Detail</button>
   </td>
 </tr>
 

@@ -1,4 +1,4 @@
-<?php $page = 'monev_cpl'; ?>
+<?php $page = 'monev_tahunan'; ?>
 <?php include('1header.php'); ?>
 <?php include('2navbar.php'); ?>
 <?php include('3sidebar.php'); ?>
@@ -55,7 +55,8 @@
                 </button>    
                 <button type="button" class="btn btn-outline-primary btn-sm " data-bs-toggle="modal" data-bs-target="#modalTambahTemuan">
                   <i class="fas fa-clipboard-list me-1"></i> Catat Temuan
-                </button>              
+                </button> 
+                <a class="btn btn-sm btn-outline-primary" href="formulir-evaluasi.php" target="_blank"><i class="fas fa-clipboard-list me-1"> </i>Catat Temuan </a>         
               </div>
 
             </div>
@@ -193,7 +194,7 @@ canvas {
       </thead>
       <tbody>
         <tr>
-          <td><a href="detail.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td>
+          <td><a href="monev-rekap-tahunan-detail.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td>
           <td>1</td>
           <td>CPL-01</td>
           <td>72</td>
@@ -202,7 +203,7 @@ canvas {
           <td><span class="badge bg-secondary">Menaik</span></td>
         </tr>
         <tr>
-          <td><a href="detail.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td>
+          <td><a href="monev-rekap-tahunan-detail.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td>
           <td>2</td>
           <td>CPL-02</td>
           <td>85</td>
@@ -211,7 +212,7 @@ canvas {
           <td><span class="badge bg-danger">Menurun</span></td>
         </tr>
         <tr>
-          <td><a href="detail.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td>
+          <td><a href="monev-rekap-tahunan-detail.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td>
           <td>3</td>
           <td>CPL-03</td>
           <td>90</td>
@@ -220,7 +221,7 @@ canvas {
           <td><span class="badge bg-warning text-dark">Fluktuatif</span></td>
         </tr>
         <tr>
-          <td><a href="detail.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td>
+          <td><a href="monev-rekap-tahunan-detail.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td>
           <td>4</td>
           <td>CPL-04</td>
           <td>78</td>
@@ -229,7 +230,7 @@ canvas {
           <td><span class="badge bg-secondary">Stabil</span></td>
         </tr>
         <tr>
-          <td><a href="detail.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td>
+          <td><a href="monev-rekap-tahunan-detail.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td>
           <td>5</td>
           <td>CPL-05</td>
           <td>65</td>
@@ -238,7 +239,7 @@ canvas {
           <td><span class="badge bg-secondary">Menaik</span></td>
         </tr>
         <tr>
-          <td><a href="detail.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td>
+          <td><a href="monev-rekap-tahunan-detail.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td>
           <td>6</td>
           <td>CPL-06</td>
           <td>88</td>
@@ -247,7 +248,7 @@ canvas {
           <td><span class="badge bg-danger">Menurun</span></td>
         </tr>
         <tr>
-          <td><a href="detail.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td>
+          <td><a href="monev-rekap-tahunan-detail.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td>
           <td>7</td>
           <td>CPL-07</td>
           <td>70</td>
@@ -256,7 +257,7 @@ canvas {
           <td><span class="badge bg-warning text-dark">Fluktuatif</span></td>
         </tr>
         <tr>
-          <td><a href="detail.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td>
+          <td><a href="monev-rekap-tahunan-detail.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td>
           <td>8</td>
           <td>CPL-08</td>
           <td>92</td>
@@ -265,7 +266,7 @@ canvas {
           <td><span class="badge bg-secondary">Stabil</span></td>
         </tr>
         <tr>
-          <td><a href="detail.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td>
+          <td><a href="monev-rekap-tahunan-detail.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td>
           <td>9</td>
           <td>CPL-09</td>
           <td>76</td>
@@ -274,7 +275,7 @@ canvas {
           <td><span class="badge bg-secondary">Menaik</span></td>
         </tr>
         <tr>
-          <td><a href="detail.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td>
+          <td><a href="monev-rekap-tahunan-detail.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td>
           <td>10</td>
           <td>CPL-10</td>
           <td>83</td>
@@ -311,31 +312,31 @@ canvas {
 
         <!-- IK 01 - 05 -->
         <tr>
-          <td><a href="detail-ik.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td>
+          <td><a href="monev-rekap-tahunan-detail2.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td>
           <td>1</td><td>IK-01</td>
           <td>70</td><td>74</td><td>79</td>
           <td><span class="badge bg-secondary">Menaik</span></td>
         </tr>
         <tr>
-          <td><a href="#" class="btn btn-sm btn-outline-info">📄 Detail</a></td>
+          <td><a href="monev-rekap-tahunan-detail2.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td>
           <td>2</td><td>IK-02</td>
           <td>82</td><td>80</td><td>76</td>
           <td><span class="badge bg-danger">Menurun</span></td>
         </tr>
         <tr>
-          <td><a href="#" class="btn btn-sm btn-outline-info">📄 Detail</a></td>
+          <td><a href="monev-rekap-tahunan-detail2.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td>
           <td>3</td><td>IK-03</td>
           <td>88</td><td>90</td><td>89</td>
           <td><span class="badge bg-warning text-dark">Fluktuatif</span></td>
         </tr>
         <tr>
-          <td><a href="#" class="btn btn-sm btn-outline-info">📄 Detail</a></td>
+          <td><a href="monev-rekap-tahunan-detail2.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td>
           <td>4</td><td>IK-04</td>
           <td>78</td><td>78</td><td>79</td>
           <td><span class="badge bg-secondary">Stabil</span></td>
         </tr>
         <tr>
-          <td><a href="#" class="btn btn-sm btn-outline-info">📄 Detail</a></td>
+          <td><a href="monev-rekap-tahunan-detail2.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td>
           <td>5</td><td>IK-05</td>
           <td>65</td><td>69</td><td>73</td>
           <td><span class="badge bg-secondary">Menaik</span></td>
@@ -343,31 +344,31 @@ canvas {
 
         <!-- IK 06 - 10 -->
         <tr>
-          <td><a href="#" class="btn btn-sm btn-outline-info">📄 Detail</a></td>
+          <td><a href="monev-rekap-tahunan-detail2.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td>
           <td>6</td><td>IK-06</td>
           <td>90</td><td>87</td><td>84</td>
           <td><span class="badge bg-danger">Menurun</span></td>
         </tr>
         <tr>
-          <td><a href="#" class="btn btn-sm btn-outline-info">📄 Detail</a></td>
+          <td><a href="monev-rekap-tahunan-detail2.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td>
           <td>7</td><td>IK-07</td>
           <td>72</td><td>75</td><td>74</td>
           <td><span class="badge bg-warning text-dark">Fluktuatif</span></td>
         </tr>
         <tr>
-          <td><a href="#" class="btn btn-sm btn-outline-info">📄 Detail</a></td>
+          <td><a href="monev-rekap-tahunan-detail2.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td>
           <td>8</td><td>IK-08</td>
           <td>91</td><td>92</td><td>93</td>
           <td><span class="badge bg-secondary">Stabil</span></td>
         </tr>
         <tr>
-          <td><a href="#" class="btn btn-sm btn-outline-info">📄 Detail</a></td>
+          <td><a href="monev-rekap-tahunan-detail2.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td>
           <td>9</td><td>IK-09</td>
           <td>75</td><td>80</td><td>83</td>
           <td><span class="badge bg-secondary">Menaik</span></td>
         </tr>
         <tr>
-          <td><a href="#" class="btn btn-sm btn-outline-info">📄 Detail</a></td>
+          <td><a href="monev-rekap-tahunan-detail2.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td>
           <td>10</td><td>IK-10</td>
           <td>84</td><td>81</td><td>79</td>
           <td><span class="badge bg-danger">Menurun</span></td>
@@ -376,29 +377,29 @@ canvas {
         <!-- IK 11 - 20 -->
         <!-- Pola dibuat variasi agar realistis -->
 
-        <tr><td><a href="#" class="btn btn-sm btn-outline-info">📄 Detail</a></td><td>11</td><td>IK-11</td><td>77</td><td>79</td><td>82</td><td><span class="badge bg-secondary">Menaik</span></td></tr>
-        <tr><td><a href="#" class="btn btn-sm btn-outline-info">📄 Detail</a></td><td>12</td><td>IK-12</td><td>86</td><td>84</td><td>83</td><td><span class="badge bg-danger">Menurun</span></td></tr>
-        <tr><td><a href="#" class="btn btn-sm btn-outline-info">📄 Detail</a></td><td>13</td><td>IK-13</td><td>73</td><td>73</td><td>74</td><td><span class="badge bg-secondary">Stabil</span></td></tr>
-        <tr><td><a href="#" class="btn btn-sm btn-outline-info">📄 Detail</a></td><td>14</td><td>IK-14</td><td>68</td><td>72</td><td>76</td><td><span class="badge bg-secondary">Menaik</span></td></tr>
-        <tr><td><a href="#" class="btn btn-sm btn-outline-info">📄 Detail</a></td><td>15</td><td>IK-15</td><td>92</td><td>90</td><td>88</td><td><span class="badge bg-danger">Menurun</span></td></tr>
-        <tr><td><a href="#" class="btn btn-sm btn-outline-info">📄 Detail</a></td><td>16</td><td>IK-16</td><td>80</td><td>82</td><td>81</td><td><span class="badge bg-warning text-dark">Fluktuatif</span></td></tr>
-        <tr><td><a href="#" class="btn btn-sm btn-outline-info">📄 Detail</a></td><td>17</td><td>IK-17</td><td>71</td><td>75</td><td>78</td><td><span class="badge bg-secondary">Menaik</span></td></tr>
-        <tr><td><a href="#" class="btn btn-sm btn-outline-info">📄 Detail</a></td><td>18</td><td>IK-18</td><td>89</td><td>88</td><td>90</td><td><span class="badge bg-warning text-dark">Fluktuatif</span></td></tr>
-        <tr><td><a href="#" class="btn btn-sm btn-outline-info">📄 Detail</a></td><td>19</td><td>IK-19</td><td>76</td><td>78</td><td>78</td><td><span class="badge bg-secondary">Stabil</span></td></tr>
-        <tr><td><a href="#" class="btn btn-sm btn-outline-info">📄 Detail</a></td><td>20</td><td>IK-20</td><td>69</td><td>72</td><td>75</td><td><span class="badge bg-secondary">Menaik</span></td></tr>
+        <tr><td><a href="monev-rekap-tahunan-detail2.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td><td>11</td><td>IK-11</td><td>77</td><td>79</td><td>82</td><td><span class="badge bg-secondary">Menaik</span></td></tr>
+        <tr><td><a href="monev-rekap-tahunan-detail2.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td><td>12</td><td>IK-12</td><td>86</td><td>84</td><td>83</td><td><span class="badge bg-danger">Menurun</span></td></tr>
+        <tr><td><a href="monev-rekap-tahunan-detail2.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td><td>13</td><td>IK-13</td><td>73</td><td>73</td><td>74</td><td><span class="badge bg-secondary">Stabil</span></td></tr>
+        <tr><td><a href="monev-rekap-tahunan-detail2.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td><td>14</td><td>IK-14</td><td>68</td><td>72</td><td>76</td><td><span class="badge bg-secondary">Menaik</span></td></tr>
+        <tr><td><a href="monev-rekap-tahunan-detail2.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td><td>15</td><td>IK-15</td><td>92</td><td>90</td><td>88</td><td><span class="badge bg-danger">Menurun</span></td></tr>
+        <tr><td><a href="monev-rekap-tahunan-detail2.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td><td>16</td><td>IK-16</td><td>80</td><td>82</td><td>81</td><td><span class="badge bg-warning text-dark">Fluktuatif</span></td></tr>
+        <tr><td><a href="monev-rekap-tahunan-detail2.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td><td>17</td><td>IK-17</td><td>71</td><td>75</td><td>78</td><td><span class="badge bg-secondary">Menaik</span></td></tr>
+        <tr><td><a href="monev-rekap-tahunan-detail2.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td><td>18</td><td>IK-18</td><td>89</td><td>88</td><td>90</td><td><span class="badge bg-warning text-dark">Fluktuatif</span></td></tr>
+        <tr><td><a href="monev-rekap-tahunan-detail2.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td><td>19</td><td>IK-19</td><td>76</td><td>78</td><td>78</td><td><span class="badge bg-secondary">Stabil</span></td></tr>
+        <tr><td><a href="monev-rekap-tahunan-detail2.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td><td>20</td><td>IK-20</td><td>69</td><td>72</td><td>75</td><td><span class="badge bg-secondary">Menaik</span></td></tr>
 
         <!-- IK 21 - 30 -->
 
-        <tr><td><a href="#" class="btn btn-sm btn-outline-info">📄 Detail</a></td><td>21</td><td>IK-21</td><td>83</td><td>80</td><td>77</td><td><span class="badge bg-danger">Menurun</span></td></tr>
-        <tr><td><a href="#" class="btn btn-sm btn-outline-info">📄 Detail</a></td><td>22</td><td>IK-22</td><td>74</td><td>77</td><td>80</td><td><span class="badge bg-secondary">Menaik</span></td></tr>
-        <tr><td><a href="#" class="btn btn-sm btn-outline-info">📄 Detail</a></td><td>23</td><td>IK-23</td><td>90</td><td>91</td><td>92</td><td><span class="badge bg-secondary">Stabil</span></td></tr>
-        <tr><td><a href="#" class="btn btn-sm btn-outline-info">📄 Detail</a></td><td>24</td><td>IK-24</td><td>67</td><td>70</td><td>73</td><td><span class="badge bg-secondary">Menaik</span></td></tr>
-        <tr><td><a href="#" class="btn btn-sm btn-outline-info">📄 Detail</a></td><td>25</td><td>IK-25</td><td>85</td><td>83</td><td>82</td><td><span class="badge bg-danger">Menurun</span></td></tr>
-        <tr><td><a href="#" class="btn btn-sm btn-outline-info">📄 Detail</a></td><td>26</td><td>IK-26</td><td>79</td><td>79</td><td>80</td><td><span class="badge bg-secondary">Stabil</span></td></tr>
-        <tr><td><a href="#" class="btn btn-sm btn-outline-info">📄 Detail</a></td><td>27</td><td>IK-27</td><td>72</td><td>76</td><td>75</td><td><span class="badge bg-warning text-dark">Fluktuatif</span></td></tr>
-        <tr><td><a href="#" class="btn btn-sm btn-outline-info">📄 Detail</a></td><td>28</td><td>IK-28</td><td>88</td><td>86</td><td>85</td><td><span class="badge bg-danger">Menurun</span></td></tr>
-        <tr><td><a href="#" class="btn btn-sm btn-outline-info">📄 Detail</a></td><td>29</td><td>IK-29</td><td>75</td><td>78</td><td>82</td><td><span class="badge bg-secondary">Menaik</span></td></tr>
-        <tr><td><a href="#" class="btn btn-sm btn-outline-info">📄 Detail</a></td><td>30</td><td>IK-30</td><td>91</td><td>90</td><td>89</td><td><span class="badge bg-warning text-dark">Fluktuatif</span></td></tr>
+        <tr><td><a href="monev-rekap-tahunan-detail2.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td><td>21</td><td>IK-21</td><td>83</td><td>80</td><td>77</td><td><span class="badge bg-danger">Menurun</span></td></tr>
+        <tr><td><a href="monev-rekap-tahunan-detail2.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td><td>22</td><td>IK-22</td><td>74</td><td>77</td><td>80</td><td><span class="badge bg-secondary">Menaik</span></td></tr>
+        <tr><td><a href="monev-rekap-tahunan-detail2.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td><td>23</td><td>IK-23</td><td>90</td><td>91</td><td>92</td><td><span class="badge bg-secondary">Stabil</span></td></tr>
+        <tr><td><a href="monev-rekap-tahunan-detail2.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td><td>24</td><td>IK-24</td><td>67</td><td>70</td><td>73</td><td><span class="badge bg-secondary">Menaik</span></td></tr>
+        <tr><td><a href="monev-rekap-tahunan-detail2.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td><td>25</td><td>IK-25</td><td>85</td><td>83</td><td>82</td><td><span class="badge bg-danger">Menurun</span></td></tr>
+        <tr><td><a href="monev-rekap-tahunan-detail2.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td><td>26</td><td>IK-26</td><td>79</td><td>79</td><td>80</td><td><span class="badge bg-secondary">Stabil</span></td></tr>
+        <tr><td><a href="monev-rekap-tahunan-detail2.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td><td>27</td><td>IK-27</td><td>72</td><td>76</td><td>75</td><td><span class="badge bg-warning text-dark">Fluktuatif</span></td></tr>
+        <tr><td><a href="monev-rekap-tahunan-detail2.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td><td>28</td><td>IK-28</td><td>88</td><td>86</td><td>85</td><td><span class="badge bg-danger">Menurun</span></td></tr>
+        <tr><td><a href="monev-rekap-tahunan-detail2.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td><td>29</td><td>IK-29</td><td>75</td><td>78</td><td>82</td><td><span class="badge bg-secondary">Menaik</span></td></tr>
+        <tr><td><a href="monev-rekap-tahunan-detail2.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td><td>30</td><td>IK-30</td><td>91</td><td>90</td><td>89</td><td><span class="badge bg-warning text-dark">Fluktuatif</span></td></tr>
 
       </tbody>
     </table>
@@ -406,14 +407,14 @@ canvas {
 </div>
 
 <!-- ========== CARD : Detail info per Mata Kuliah ========== -->
-<div class="card shadow-sm">
+<!-- <div class="card shadow-sm">
   <div class="card-header bg-info text-white">
     <h5 class="mb-0">Detail info per CPL</h5>
   </div>
 
   <div class="card-body">
 
-    <!-- Identitas Mata Kuliah -->
+
     <h6><b>Identitas CPL</b></h6>
     <table class="table table-sm table-bordered mb-4">
       <tr>
@@ -446,7 +447,7 @@ canvas {
     </table>
 
     <canvas id="chartCPL1" width="100%" height="30"></canvas>
-   <!--  <h6 class="font-weight-bold">Daftar Indikator Kinerja (IK)</h6>
+    <h6 class="font-weight-bold">Daftar Indikator Kinerja (IK)</h6>
     <div class="table-responsive">
       <table class="table table-sm table-bordered">
         <thead class="thead-dark">
@@ -470,9 +471,9 @@ canvas {
           </tr>
         </tbody>
       </table>
-    </div> -->
+    </div>
   </div>
-</div>
+</div> -->
 
 <!-- ========== CARD 4: Chart CPL-IK ========== -->     
 <!--         <div class="card">   
@@ -517,8 +518,7 @@ canvas {
         </div> -->
 
          <!-- ========== CARD 4: Chart IK ========== -->     
-        <div class="card">   
-          <!-- CARD HEADER -->  
+       <!--  <div class="card">   
           <div class="card-header ">         
             <h5 class="card-title mb-0">
               <button class="btn btn-sm btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#chartCPLIK2">
@@ -527,14 +527,11 @@ canvas {
               IK 1 – Kemampuan untuk menginternalisasi semangat kemandirian dan Kewirausahaan
             </h5>
           </div>
-          <!-- CARD BODY -->
-          <div class="card-body collapse" id="chartCPLIK2" >
-            <!-- Chart Container -->
+
             <div class="chart-container">
               <canvas id="chartCPL2" width="100%" height="30"></canvas>
             </div>
           </div>
-          <!-- CARD FOOTER -->
           <div class="card-footer collapse" id="chartCPLIK2"  >
             <h6 class="font-weight-bold">Daftar CPMK</h6>
             <div class="table-responsive">
@@ -559,11 +556,10 @@ canvas {
               </table>
             </div>
           </div>
-        </div>
+        </div> -->
 
  <!-- ========== CARD 4: Chart IK ========== -->     
-        <div class="card">   
-          <!-- CARD HEADER -->  
+        <!-- <div class="card">   
           <div class="card-header ">         
             <h5 class="card-title mb-0">
               <button class="btn btn-sm btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#chartCPLIK3">
@@ -572,14 +568,11 @@ canvas {
               IK 2 – Kemampuan untuk menginternalisasi semangat kemandirian dan Kewirausahaan
             </h5>
           </div>
-          <!-- CARD BODY -->
           <div class="card-body collapse" id="chartCPLIK3">
-            <!-- Chart Container -->
             <div class="chart-container">
               <canvas id="chartCPL3" width="100%" height="30"></canvas>
             </div>
           </div>
-          <!-- CARD FOOTER -->
           <div class="card-footer collapse" id="chartCPLIK3">
             <h6 class="font-weight-bold">Daftar CPMK</h6>
             <div class="table-responsive">
@@ -604,11 +597,10 @@ canvas {
               </table>
             </div>
           </div>
-        </div>
+        </div> -->
 
  <!-- ========== CARD 4: Chart IK ========== -->     
-        <div class="card">   
-          <!-- CARD HEADER -->  
+        <!-- <div class="card">   
           <div class="card-header ">         
             <h5 class="card-title mb-0">
               <button class="btn btn-sm btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#chartCPLIK4">
@@ -617,14 +609,11 @@ canvas {
               IK 3 – Kemampuan untuk menginternalisasi semangat kemandirian dan Kewirausahaan
             </h5>
           </div>
-          <!-- CARD BODY -->
           <div class="card-body collapse" id="chartCPLIK4">
-            <!-- Chart Container -->
             <div class="chart-container">
               <canvas id="chartCPL4" width="100%" height="30"></canvas>
             </div>
           </div>
-          <!-- CARD FOOTER -->
           <div class="card-footer collapse" id="chartCPLIK4">
             <h6 class="font-weight-bold">Daftar CPMK</h6>
             <div class="table-responsive">
@@ -649,7 +638,7 @@ canvas {
               </table>
             </div>
           </div>
-        </div>
+        </div> -->
 
 
 

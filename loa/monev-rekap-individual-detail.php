@@ -54,7 +54,7 @@
             </div>
             <div class="card-footer">
               <div class="card-tools ms-auto">
-                <button type="button" class="btn btn-outline-secondary btn-sm" onclick="window.location.href='monev-cpl-individual.php'">
+                <button type="button" class="btn btn-outline-secondary btn-sm" onclick="window.location.href='monev-rekap-individual-.php'">
                   <i class="fas fa-reply me-1"></i> Kembali
                 </button>
                 <button class="btn btn-outline-info btn-sm " data-bs-toggle="modal" data-bs-target="#modalFilter">
@@ -124,13 +124,13 @@
 
   <!-- TAB NAV  -->
   <ul class="nav nav-tabs">   
-    <li class="nav-item" onclick="window.location='monev-cpl-individual1.php'"><a class="nav-link active">Grafik</a></li>
-    <li class="nav-item" onclick="window.location='monev-cpl-individual2.php'"><a class="nav-link ">Tabel</a></li>
-    <li class="nav-item" onclick="window.location='monev-cpl-individual4.php'"><a class="nav-link ">Riwayat CPL</a></li>
-    <li class="nav-item" onclick="window.location='monev-cpl-individual5.php'"><a class="nav-link ">Riwayat IK</a></li>
-    <li class="nav-item" onclick="window.location='monev-cpl-individual3.php'"><a class="nav-link ">Riwayat MK</a></li>
-    <li class="nav-item" onclick="window.location='monev-cpl-individual6.php'"><a class="nav-link ">Riwayat KHS</a></li>
-    <li class="nav-item" onclick="window.location='monev-cpl-individual7.php'"><a class="nav-link ">IPK</a></li>
+    <li class="nav-item" onclick="window.location='monev-rekap-individual-detail.php'"><a class="nav-link active">Grafik</a></li>
+    <li class="nav-item" onclick="window.location='monev-rekap-individual-detail2.php'"><a class="nav-link ">Tabel</a></li>
+    <li class="nav-item" onclick="window.location='monev-rekap-individual-detail4.php'"><a class="nav-link ">Riwayat CPL</a></li>
+    <li class="nav-item" onclick="window.location='monev-rekap-individual-detail5.php'"><a class="nav-link ">Riwayat IK</a></li>
+    <li class="nav-item" onclick="window.location='monev-rekap-individual-detail3.php'"><a class="nav-link ">Riwayat MK</a></li>
+    <li class="nav-item" onclick="window.location='monev-rekap-individual-detail6.php'"><a class="nav-link ">Riwayat KHS</a></li>
+    <li class="nav-item" onclick="window.location='monev-rekap-individual-detail7.php'"><a class="nav-link ">IPK</a></li>
   </ul>
 
 

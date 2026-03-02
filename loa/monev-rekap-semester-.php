@@ -1,4 +1,4 @@
-<?php $page = 'monev_cpmk'; ?>
+<?php $page = 'monev_semester'; ?>
 <?php include('1header.php'); ?>
 <?php include('2navbar.php'); ?>
 <?php include('3sidebar.php'); ?>
@@ -52,7 +52,8 @@
                 </button>                
                 <button type="button" class="btn btn-outline-success btn-sm">
                   <i class="fas fa-file-download me-1"></i> Export
-                </button>                
+                </button>    
+                <a class="btn btn-sm btn-outline-primary" href="formulir-evaluasi.php" target="_blank"><i class="fas fa-clipboard-list me-1"> </i>Catat Temuan </a>             
               </div>
 
             </div>
@@ -516,7 +517,7 @@
             <td class="text-center">3</td>
             <td class="text-center">1</td>
             <td class="text-center">
-              <a href="detail.php?kode=STS704" class="btn btn-sm btn-outline-info">
+              <a href="monev-rekap-semester-detail.php" class="btn btn-sm btn-outline-info">
                 📄 Detail
               </a>
             </td>
@@ -528,7 +529,7 @@
             <td class="text-center">3</td>
             <td class="text-center">1</td>
             <td class="text-center">
-              <a href="detail.php?kode=STS913" class="btn btn-sm btn-outline-info">
+              <a href="monev-rekap-semester-detail.php" class="btn btn-sm btn-outline-info">
                 📄 Detail
               </a>
             </td>
@@ -540,7 +541,7 @@
             <td class="text-center">3</td>
             <td class="text-center">1</td>
             <td class="text-center">
-              <a href="detail.php?kode=51175111" class="btn btn-sm btn-outline-info">
+              <a href="monev-rekap-semester-detail.php" class="btn btn-sm btn-outline-info">
                 📄 Detail
               </a>
             </td>
@@ -552,19 +553,19 @@
             <td class="text-center">2</td>
             <td class="text-center">3</td>
             <td class="text-center">
-              <a href="detail.php?kode=STS-101" class="btn btn-sm btn-outline-info">
+              <a href="monev-rekap-semester-detail.php" class="btn btn-sm btn-outline-info">
                 📄 Detail
               </a>
             </td>
           </tr>
           <tr>
             <td class="text-center">5</td>
-            <td class="text-center">STS307</td>
+            <td class="text-center">STS102</td>
             <td>Bahan Perkerasan Jalan (+Pr)</td>
             <td class="text-center">4</td>
             <td class="text-center">3</td>
             <td class="text-center">
-              <a href="detail.php?kode=STS307" class="btn btn-sm btn-outline-info">
+              <a href="monev-rekap-semester-detail.php" class="btn btn-sm btn-outline-info">
                 📄 Detail
               </a>
             </td>
@@ -576,7 +577,7 @@
             <td class="text-center">3</td>
             <td class="text-center">3</td>
             <td class="text-center">
-              <a href="detail.php?kode=STS702" class="btn btn-sm btn-outline-info">
+              <a href="monev-rekap-semester-detail.php" class="btn btn-sm btn-outline-info">
                 📄 Detail
               </a>
             </td>
@@ -588,7 +589,7 @@
             <td class="text-center">2</td>
             <td class="text-center">3</td>
             <td class="text-center">
-              <a href="detail.php?kode=51195142" class="btn btn-sm btn-outline-info">
+              <a href="monev-rekap-semester-detail.php" class="btn btn-sm btn-outline-info">
                 📄 Detail
               </a>
             </td>
@@ -600,7 +601,7 @@
             <td class="text-center">3</td>
             <td class="text-center">3</td>
             <td class="text-center">
-              <a href="detail.php?kode=51155081" class="btn btn-sm btn-outline-info">
+              <a href="monev-rekap-semester-detail.php" class="btn btn-sm btn-outline-info">
                 📄 Detail
               </a>
             </td>
@@ -612,7 +613,7 @@
             <td class="text-center">2</td>
             <td class="text-center">5</td>
             <td class="text-center">
-              <a href="detail.php?kode=STS904" class="btn btn-sm btn-outline-info">
+              <a href="monev-rekap-semester-detail.php" class="btn btn-sm btn-outline-info">
                 📄 Detail
               </a>
             </td>
@@ -624,7 +625,7 @@
             <td class="text-center">3</td>
             <td class="text-center">5</td>
             <td class="text-center">
-              <a href="detail.php?kode=51153061" class="btn btn-sm btn-outline-info">
+              <a href="monev-rekap-semester-detail.php" class="btn btn-sm btn-outline-info">
                 📄 Detail
               </a>
             </td>
@@ -636,14 +637,13 @@
 </div>
 
 <!-- ========== CARD : Detail info per Mata Kuliah ========== -->
-<div class="card shadow-sm">
+<!-- <div class="card shadow-sm">
   <div class="card-header bg-info text-white">
     <h5 class="mb-0">Detail info per Mata Kuliah</h5>
   </div>
 
   <div class="card-body">
 
-    <!-- Identitas Mata Kuliah -->
     <h6><b>Identitas Mata Kuliah</b></h6>
     <table class="table table-sm table-bordered mb-4">
       <tr>
@@ -668,7 +668,6 @@
       </tr>
     </table>
 
-    <!-- tabel tren 3 periode -->  
     <h6><b>Tren Capaian Pembelajaran Mata Kuliah <i>3 Tahun Terakhir</i></b></h6>
     <div class="table-responsive mb-4">
       <table class="table table1 table-bordered table-striped table-sm">
@@ -715,11 +714,9 @@
     </div>
 
 
-    <!-- Grafik Rentang Nilai -->
     <h6><b>Distribusi Nilai Mahasiswa <i>Berdasarkan Rentang Nilai</i> </b></h6>
     <canvas id="stackedCPMKChart" height="70" class="mb-4"></canvas>
 
-    <!-- Tabel Perbandingan kelas-->
     <h6><b>Perbandingan Capaian Pembelajaran <i>Antar Kelas</i></b> </h6>
     <div class="table-responsive">
       <table class="table table-bordered table-sm table-striped">
@@ -799,8 +796,6 @@
             <td>42</td>
           </tr>
 
-          <!-- Baris Kesimpulan Final -->
-          <!-- <tr class="table-info font-weight-bold"> -->
             <tr class="table-info ">
               <td colspan="3">Agregasi Semua Kelas</td>
               <td>78</td>
@@ -857,7 +852,7 @@
       </td>
     </tr>
   </div>
-</div>
+</div> -->
 
 
 

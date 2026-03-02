@@ -56,7 +56,8 @@
                 </button>                
                 <button type="button" class="btn btn-outline-success btn-sm">
                   <i class="fas fa-file-download me-1"></i> Export
-                </button>                
+                </button>  
+                <a class="btn btn-sm btn-outline-primary" href="formulir-evaluasi.php" target="_blank"><i class="fas fa-clipboard-list me-1"> </i>Catat Temuan </a>               
               </div>
 
             </div>
@@ -297,33 +298,49 @@
           </div>
         </div> -->
 
-        
-        
+        <!-- ========== CARD : grafik detail 10 CPL ========== -->
+        <div class="card " id="cardGrafik">
+          <div class="card-header">
+            <h3 class="card-title">Grafik rerata 10 CPL sepanjang max.9 semester</h3>
+            <div class="card-tools">
+              <small class="text-muted">Angkatan Terpilih</small>
+              <button class="btn btn-sm btn-outline-primary" onclick="showTabel()">
+                 Versi Tabel
+              </button>
+            </div>
+          </div>
+          <div class="card-body">
+            <canvas id="chartCPLSemester" style="width:100%; height:400px;"></canvas>
+          </div>
+        </div>
         <!-- ========== CARD : Tabel detail 10 CPL ========== -->
-<div class="card">
-  <div class="card-header">
-    <h3 class="card-title">Detail rerata 10 CPL sepanjang max.9 semester</h3>
-    <div class="card-tools">
-      <small class="text-muted">Angkatan Terpilih</small>
-    </div>
-  </div>
-  <div class="card-body p-0">
-    <table class="table table-hover table-bordered table-sm">
-      <thead style="background-color: #f2f2f2;">
-        <tr>
-          <th width="220px">Periode Semester</th>
-          <th>CPL 1</th>
-          <th>CPL 2</th>
-          <th>CPL 3</th>
-          <th>CPL 4</th>
-          <th>CPL 5</th>
-          <th>CPL 6</th>
-          <th>CPL 7</th>
-          <th>CPL 8</th>
-          <th>CPL 9</th>
-          <th>CPL 10</th>
-        </tr>
-      </thead>
+        <div class="card d-none" id="cardTabel">
+          <div class="card-header">
+            <h3 class="card-title">Detail rerata 10 CPL sepanjang max.9 semester</h3>
+            <div class="card-tools">
+              <small class="text-muted">Angkatan Terpilih</small>
+              <button class="btn btn-sm btn-outline-primary" onclick="showGrafik()">
+                 Versi Grafik
+              </button>
+            </div>            
+          </div>
+          <div class="card-body p-0">
+            <table class="table table-hover table-bordered table-sm">
+              <thead style="background-color: #f2f2f2;">
+                <tr>
+                  <th width="220px">Periode Semester</th>
+                  <th>CPL 1</th>
+                  <th>CPL 2</th>
+                  <th>CPL 3</th>
+                  <th>CPL 4</th>
+                  <th>CPL 5</th>
+                  <th>CPL 6</th>
+                  <th>CPL 7</th>
+                  <th>CPL 8</th>
+                  <th>CPL 9</th>
+                  <th>CPL 10</th>
+                </tr>
+              </thead>
       <tbody>
         <tr>
           <td>sem1 [2024/2025 - Ganjil]</td>
@@ -338,7 +355,7 @@
           <td><a href="#detailCPL1" class="btn btn-sm btn-outline-info">65</a></td><td>68</td><td>70</td><td>74</td><td>76</td><td>78</td><td>80</td><td>82</td><td>81</td><td>5</td>
         </tr>
         <tr>
-          <td><button  class="btn btn-sm btn-outline-info"onclick="window.location.href='detail.php'">sem4 [2025/2026 - Genap]</button></td>
+          <td>sem4 [2025/2026 - Genap]</td>
           <td>85</td><td>87</td><td>86</td><td>88</td><td>90</td><td>92</td><td>91</td><td>93</td><td>94</td><td>5</td>
         </tr>
         <tr>
@@ -350,16 +367,16 @@
           <td>60</td><td>65</td><td>68</td><td>70</td><td>72</td><td>75</td><td>77</td><td>79</td><td>80</td><td>9</td>
         </tr>
         <tr>
-          <td><button  class="btn btn-sm btn-outline-info"onclick="window.location.href='detail.php'">sem7 [2027/2028 - Ganjil]</button></td>
+          <td>sem7 [2027/2028 - Ganjil]</td>
           <td>88</td><td>85</td><td>87</td><td>89</td><td>90</td><td>91</td><td>92</td><td>93</td><td>94</td><td>9</td>
         </tr>
         <tr>
-          <td><button  class="btn btn-sm btn-outline-info"onclick="window.location.href='detail.php'">sem8 [2027/2028 - Genap]</button></td>
+          <td>sem8 [2027/2028 - Genap]</td>
           <td>75</td><td>78</td><td>80</td><td>82</td><td>83</td><td>85</td><td>87</td><td>88</td><td>90</td><td>9</td>
         </tr>
         <tr>
-          <td><button  class="btn btn-sm btn-outline-info"onclick="window.location.href='detail.php'">sem9 [2028/2029 - Ganjil]</button></td>
-          <td>68</td><td>70</td><td>73</td><td>75</td><td>77</td><td>79</td><td>81</td><td>82</td><td>84</td><td>9</td>
+          <td><button  class="btn btn-sm btn-outline-info"onclick="window.location.href='monev-rekap-angkatan-detail.php'">sem9 [2028/2029 - Ganjil]</button></td>
+          <td>68</td><td>70</td><td><button  class="btn btn-sm btn-outline-info"onclick="window.location.href='monev-rekap-angkatan-detail2.php'">73</button></td><td>75</td><td>77</td><td>79</td><td>81</td><td>82</td><td>84</td><td>9</td>
         </tr>
         <tr>
           <td>Perkembangan Tren </td>
@@ -405,42 +422,40 @@
               </thead>
               <tbody>
                 <tr>
-                  <td><button  class="btn btn-sm btn-outline-info"onclick="window.location.href='detail.php'">sem1 [2024/2025 - Ganjil]</button></td>
+                  <td>sem1 [2024/2025 - Ganjil]</td>
                   <td>24</td><td>12</td><td>09</td><td>06</td><td>02</td><td>12</td><td>23</td><td>13</td><td>24</td><td>5</td><td>...</td>
                 </tr>
                 <tr>
-                  <td><button  class="btn btn-sm btn-outline-info"onclick="window.location.href='detail.php'">sem2 [2024/2025 - Genap]</button></td>
+                  <td>sem2 [2024/2025 - Genap]</td>
                   <td>70</td><td>75</td><td>72</td><td>78</td><td>80</td><td>82</td><td>85</td><td>84</td><td>83</td><td>5</td><td>...</td>
                 </tr>
                 <tr>
-                  <td><button  class="btn btn-sm btn-outline-info"onclick="window.location.href='detail.php'">sem3 [2025/2026 - Ganjil]</button></td>
+                  <td>sem3 [2025/2026 - Ganjil]</td>
                   <td>65</td><td>68</td><td>70</td><td><a href="#detailIK1" class="btn btn-sm btn-outline-info">74</a></td><td>76</td><td>78</td><td>80</td><td>82</td><td>81</td><td>5</td><td>...</td>
                 </tr>
                 <tr>
-                  <td><button  class="btn btn-sm btn-outline-info"onclick="window.location.href='detail.php'">sem4 [2025/2026 - Genap]</button></td>
+                  <td>sem4 [2025/2026 - Genap]</td>
                   <td>85</td><td>87</td><td>86</td><td>88</td><td>90</td><td>92</td><td>91</td><td>93</td><td>94</td><td>5</td><td>...</td>
                 </tr>
                 <tr>
-                  <td><button  class="btn btn-sm btn-outline-info"onclick="window.location.href='detail.php'">sem5 [2026/2027 - Ganjil]</button></td>
+                  <td>sem5 [2026/2027 - Ganjil]</td>
                   <td>72</td><td>74</td><td>76</td><td>78</td><td>79</td><td>81</td><td>83</td><td>84</td><td>86</td><td>9</td><td>...</td>
                 </tr>
                 <tr>
-                  <td><button  class="btn btn-sm btn-outline-info"onclick="window.location.href='detail.php'">sem6 [2026/2027 - Genap]</button></td>
+                  <td>sem6 [2026/2027 - Genap]</td>
                   <td>60</td><td>65</td><td>68</td><td>70</td><td>72</td><td>75</td><td>77</td><td>79</td><td>80</td><td>9</td><td>...</td>
                 </tr>
                 <tr>
-                  <td><button  class="btn btn-sm btn-outline-info"onclick="window.location.href='detail.php'">sem7 [2027/2028 - Ganjil]</button></td>
+                  <td>sem7 [2027/2028 - Ganjil]</td>
                   <td>88</td><td>85</td><td>87</td><td>89</td><td>90</td><td>91</td><td>92</td><td>93</td><td>94</td><td>9</td><td>...</td>
                 </tr>
                 <tr>
-                  <td><button  class="btn btn-sm btn-outline-info"onclick="window.location.href='detail.php'">sem8 [2027/2028 - Genap]</button></td>
+                  <td>sem8 [2027/2028 - Genap]</td>
                   <td>75</td><td>78</td><td>80</td><td>82</td><td>83</td><td>85</td><td>87</td><td>88</td><td>90</td><td>9</td><td>...</td>
                 </tr>
                 <tr>
-                  <td><button class="btn btn-sm btn-outline-info" onclick="window.location.href='detail.php'">
-                    sem9 [2028/2029 - Ganjil]
-                  </button></td>
-                  <td>68</td><td>70</td><td>73</td><td>75</td><td>77</td><td>79</td><td>81</td><td>82</td><td>84</td><td>9</td><td>...</td>
+                  <td>sem9 [2028/2029 - Ganjil]</td>
+                  <td>68</td><td>70</td><td><button  class="btn btn-sm btn-outline-info"onclick="window.location.href='monev-rekap-angkatan-detail3.php'">73</button></td><td>75</td><td>77</td><td>79</td><td>81</td><td>82</td><td>84</td><td>9</td><td>...</td>
                 </tr>
                 <tr>
                   <td>Perkembangan Tren </td>
@@ -457,7 +472,7 @@
             </table>
           </div>
         </div>
-<!-- ========== CARD : tabel istribusi mahasiswa ========== -->  
+<!-- ========== CARD : tabel distribusi mahasiswa ========== -->  
 <!-- <table class="table table-hover table-bordered table-sm">
   <thead>
     <tr>
@@ -474,15 +489,12 @@
 </table>
  -->
 
-<!-- ========== CARD : Detail info per Mata Kuliah ========== -->
-<div class="card shadow-sm" id="detailallCPL">
+<!-- ===== CARD : Detail info per Periode Semester (all CPL)  ======= -->
+<!-- <div class="card shadow-sm" id="detailallCPL">
   <div class="card-header bg-info text-white">
     <h5 class="mb-0">Detail info per Periode Semester (all CPL)</h5>
   </div>
-
   <div class="card-body">
-
-    <!-- Identitas Mata Kuliah -->
     <h6><b>Identitas Periode Semester - Angkatan</b></h6>
     <table class="table table-sm table-bordered mb-4">
       <tr>
@@ -498,9 +510,8 @@
         <td>sem3 [2025/2026 - Ganjil]</td>
       </tr>
     </table>
-
     <canvas id="chartCPL1" width="100%" height="30" class="mb-4"></canvas>
-   <!-- Tabel Perbandingan kelas-->
+
     <h6><b>Perbandingan %CPL <i>Antar Angkatan</i></b> </h6>
     <div class="table-responsive">
       <table class="table table-bordered table-striped table-sm text-center">
@@ -518,7 +529,6 @@
           </tr>
         </thead>
         <tbody>
-
           <tr>
             <td>% CPL Angkatan 2022</td>
             <td>68</td>
@@ -530,7 +540,6 @@
             <td>85</td>
             <td>87</td>
           </tr>
-
           <tr>
             <td>% CPL Angkatan 2023</td>
             <td>72</td>
@@ -542,7 +551,6 @@
             <td>82</td>
             <td>89</td>
           </tr>
-
           <tr>
             <td>% CPL Angkatan 2024</td>
             <td>75</td>
@@ -554,7 +562,6 @@
             <td>78</td>
             <td>90</td>
           </tr>
-
           <tr>
             <td>Perkembangan Tren</td>
             <td><span class="badge bg-success">Menaik</span></td>
@@ -566,14 +573,13 @@
             <td><span class="badge bg-danger">Menurun</span></td>
             <td><span class="badge bg-success">Menaik</span></td>
           </tr>
-
-          
-
         </tbody>
       </table>
     </div>
   </div>
-</div>
+</div> -->
+
+
 <!-- ========== CARD 4: Chart CPL-IK ========== -->     
         <!-- <div class="card">   
 
@@ -775,14 +781,11 @@
 </div> -->
 
 <!-- ========== CARD : Detail info per Mata Kuliah ========== -->
-<div class="card shadow-sm" id="detailCPL1">
+<!-- <div class="card shadow-sm" id="detailCPL1">
   <div class="card-header bg-info text-white">
     <h5 class="mb-0">Detail info per Periode Semester (each CPL)</h5>
   </div>
-
   <div class="card-body">
-
-    <!-- Identitas Mata Kuliah -->
     <h6><b>Identitas CPL </b></h6>
     <table class="table table-sm table-bordered mb-4">
       <tr>
@@ -817,7 +820,6 @@
         <td>12</td>
       </tr>
     </table>
-
     <canvas id="chartCPL2" width="100%" height="30"></canvas>
     <h6 class="font-weight-bold">Daftar Indikator Kinerja (IK)</h6>
     <div class="table-responsive">
@@ -844,7 +846,6 @@
         </tbody>
       </table>
     </div>
-<!-- Tabel Perbandingan kelas-->
     <h6><b>Perbandingan Capaian <i>Antar Angkatan</i></b> </h6>
     <div class="table-responsive">
       <table class="table table-bordered table-striped table-sm text-center">
@@ -857,28 +858,24 @@
           </tr>
         </thead>
         <tbody>
-
           <tr>
             <td>% CPL Angkatan 2022</td>
             <td>68</td>
             <td>70</td>
             <td>74</td>
           </tr>
-
           <tr>
             <td>% CPL Angkatan 2023</td>
             <td>72</td>
             <td>69</td>
             <td>76</td>
           </tr>
-
           <tr>
             <td>% CPL Angkatan 2024</td>
             <td>75</td>
             <td>71</td>
             <td>80</td>
           </tr>
-
           <tr>
             <td>Perkembangan Tren</td>
             <td><span class="badge bg-success">Menaik</span></td>
@@ -888,10 +885,13 @@
         </tbody>
       </table>
     </div>
-
-
   </div>
-</div>
+</div> -->
+
+
+
+
+
          <!-- ========== CARD 4: Chart CPL-IK ========== -->     
         <!-- <div class="card">  
           <div class="card-header ">         
@@ -933,14 +933,11 @@
           </div>
         </div> -->
 <!-- ========== CARD : Detail info per Mata Kuliah ========== -->
-<div class="card shadow-sm" id="detailIK1">
+<!-- <div class="card shadow-sm" id="detailIK1">
   <div class="card-header bg-info text-white">
     <h5 class="mb-0">Detail info per Periode Semester (each IK)</h5>
   </div>
-
   <div class="card-body">
-
-    <!-- Identitas Mata Kuliah -->
     <h6><b>Identitas IK </b></h6>
     <table class="table table-sm table-bordered mb-4">
       <tr>
@@ -971,9 +968,7 @@
         <td>4</td>
       </tr>
     </table>
-
     <canvas id="chartCPL4" width="100%" height="30"></canvas>
-
     <h6 class="font-weight-bold">Daftar Capaian Pembelajaran Mata Kuliah (CPMK)</h6>
     <div class="table-responsive">
       <table class="table table-sm table-bordered">
@@ -996,11 +991,9 @@
             <td> UKU111-2</td>
             <td>Mahasiswa mampu menulis laporan/tulisan akademik sesuai kaidah bahasa dan struktur penulisan yang baik.</td>
           </tr>
-
         </tbody>
       </table>
     </div>
-<!-- Tabel Perbandingan kelas-->
     <h6><b>Perbandingan Capaian <i>Antar Angkatan</i></b> </h6>
     <div class="table-responsive">
       <table class="table table-bordered table-striped table-sm text-center">
@@ -1049,10 +1042,8 @@
         </tbody>
       </table>
     </div>
-
-
   </div>
-</div>
+</div> -->
 
 
         </div>
@@ -1413,65 +1404,65 @@ new Chart(ctx, {
 });
 </script>
 
-              <script>
-                const ctx2 = document.getElementById("chartCPL2");
+<script>
+  const ctx2 = document.getElementById("chartCPL2");
 
-                new Chart(ctx2, {
-                  type: 'bar',
-                  data: {
-                    labels: ['IK 4', 'IK 5',  'CPL2'],
-                    datasets: [
-                      {
-                        label: 'Rerata Skor',
-                        data: [82, 75,  81.66],
-                        backgroundColor: '#6c757d',
-                        borderColor: '#6c757d',
-                        borderWidth: 1
-                      },
-                      {
-                        label: '% Mahasiswa Tuntas',
-                        data: [90, 80, 87.33],
-                        backgroundColor: '#007bff',
-                        borderColor: '#007bff',
-                        borderWidth: 1
-                      }
-                    ]
-                  },
-                  options: {
-                    responsive: true,
-                    plugins: {
-                      legend: { position: 'top' },
-                      annotation: {
-                        annotations: {
-                          targetLine: {
-                            type: 'line',
-                            yMin: 85,      // <<< TARGET CAPAIAN
-                            yMax: 85,
-                            borderColor: 'red',
-                            borderWidth: 2,
-                            borderDash: [6, 6],
-                            label: {
-                              display: true,
-                              content: 'Target 85',
-                              position: 'start',
-                              color: 'red',
-                              backgroundColor: 'rgba(255,255,255,0.7)',
-                              padding: 4
-                            }
-                          }
-                        }
-                      }
-                    },
-                    scales: {
-                      y: {
-                        beginAtZero: true
-                      }
-                    }
-                  }
-                });
+  new Chart(ctx2, {
+    type: 'bar',
+    data: {
+      labels: ['IK 4', 'IK 5',  'CPL2'],
+      datasets: [
+        {
+          label: 'Rerata Skor',
+          data: [82, 75,  81.66],
+          backgroundColor: '#6c757d',
+          borderColor: '#6c757d',
+          borderWidth: 1
+        },
+        {
+          label: '% Mahasiswa Tuntas',
+          data: [90, 80, 87.33],
+          backgroundColor: '#007bff',
+          borderColor: '#007bff',
+          borderWidth: 1
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: { position: 'top' },
+        annotation: {
+          annotations: {
+            targetLine: {
+              type: 'line',
+              yMin: 85,      // <<< TARGET CAPAIAN
+              yMax: 85,
+              borderColor: 'red',
+              borderWidth: 2,
+              borderDash: [6, 6],
+              label: {
+                display: true,
+                content: 'Target 85',
+                position: 'start',
+                color: 'red',
+                backgroundColor: 'rgba(255,255,255,0.7)',
+                padding: 4
+              }
+            }
+          }
+        }
+      },
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
 
 
-              </script>
+</script>
 
 
              
@@ -1842,5 +1833,126 @@ new Chart(ctx4, {
         }
     }
 });
+</script>
+<script>
+const ctxCPL = document.getElementById('chartCPLSemester').getContext('2d');
+
+new Chart(ctxCPL, {
+  type: 'line',
+  data: {
+    labels: [
+      'CPL 1','CPL 2','CPL 3','CPL 4','CPL 5',
+      'CPL 6','CPL 7','CPL 8','CPL 9','CPL 10'
+    ],
+
+
+    datasets: [
+      {
+        label: 'Sem 1 (2024/2025 - Ganjil)',
+        data: [53,40,48,51,49,53,50,47,52,49],
+        borderColor: '#6c757d',
+        backgroundColor: '#6c757d',
+        tension: 0.3
+      },
+
+      {
+        label: 'Sem 2 (2024/2025 - Genap)',
+        data: [55,57,53,56,54,58,55,52,57,54],
+        borderColor: '#6c757d',
+        backgroundColor: '#6c757d',
+        tension: 0.3
+      },
+
+      {
+        label: 'Sem 3 (2025/2026 - Ganjil)',
+        data: [60,62,58,61,59,59,60,57,62,59],
+        borderColor: '#dc3545',
+        backgroundColor: '#dc3545',
+        tension: 0.3
+      },
+
+      {
+        label: 'Sem 4 (2025/2026 - Genap)',
+        data: [65,67,63,61,64,62,65,62,67,64],
+        borderColor: '#dc3545',
+        backgroundColor: '#dc3545',
+        tension: 0.3
+      },
+
+      {
+        label: 'Sem 5 (2026/2027 - Ganjil)',
+        data: [70,72,68,68,69,73,70,67,72,69],
+        borderColor: '#ff9800',
+        backgroundColor: '#ff9800',
+        tension: 0.3
+      },
+
+      {
+        label: 'Sem 6 (2026/2027 - Genap)',
+        data: [75,77,73,76,74,78,75,72,77,74],
+        borderColor: '#ff9800',
+        backgroundColor: '#ff9800',
+        tension: 0.3
+      },
+
+      {
+        label: 'Sem 7 (2027/2028 - Ganjil)',
+        data: [80,82,78,81,79,83,80,77,82,79],
+        borderColor: '#4aa6ff',
+        backgroundColor: '#4aa6ff',
+        tension: 0.3
+      },
+
+      {
+        label: 'Sem 8 (2027/2028 - Genap)',
+        data: [85,87,83,86,84,88,80,82,87,84],
+        borderColor: '#4aa6ff',
+        backgroundColor: '#4aa6ff',
+        tension: 0.3
+      },
+
+      {
+        label: 'Sem 9 (2028/2029 - Ganjil)',
+        data: [90,92,88,91,89,93,82,87,92,89],
+        borderColor: '#007bff',
+        backgroundColor: '#007bff',
+        tension: 0.3,
+        borderWidth: 3
+      }
+
+    ]
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: true,
+    plugins: {
+      legend: {
+        position: 'bottom'
+      },
+      title: {
+        display: false,
+        text: 'Detail Rerata 10 CPL Sepanjang Maks. 9 Semester'
+      }
+    },
+    scales: {
+      y: {
+        beginAtZero: false,
+        max: 100
+      }
+    }
+  }
+});
+</script>
+
+<script>
+function showTabel() {
+  document.getElementById('cardGrafik').classList.add('d-none');
+  document.getElementById('cardTabel').classList.remove('d-none');
+}
+
+function showGrafik() {
+  document.getElementById('cardTabel').classList.add('d-none');
+  document.getElementById('cardGrafik').classList.remove('d-none');
+}
 </script>
 <?php include('5script.php'); ?>

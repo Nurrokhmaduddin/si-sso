@@ -115,7 +115,7 @@
   <tbody>
     <tr>
       <td>TM-2025-001</td>
-      <td>Evaluasi Akademik</td>
+      <td>Perkembangan</td>
       <td>RPS Mata Kuliah Pemrograman Web</td>
       <td>Semester Ganjil 2024/2025</td>
       <td>RPS belum sepenuhnya mengacu pada CPL dan belum memuat asesmen berbasis OBE.</td>
@@ -153,7 +153,7 @@
 
     <tr>
       <td>TM-2025-002</td>
-      <td>Evaluasi Layanan</td>
+      <td>Perkembangan</td>
       <td>Pelayanan Administrasi Akademik</td>
       <td>Triwulan I 2025</td>
       <td>Waktu pelayanan surat aktif kuliah melebihi standar 3 hari kerja.</td>

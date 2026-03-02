@@ -134,7 +134,7 @@
   <div class="card-body">
     <div class="row">
 
-     <div class="chart-container" style="height:600px;">
+     <div class="chart-container" style="width:100%; height:400px;">
     <canvas id="horizontalBarChart"></canvas>
 </div>
 

@@ -46,7 +46,7 @@
             <div class="card-body ">
               <div class="row">
                 <div class="col-md-6">
-                  <b>Jenis[mandatory]:</b> Kemajuan/Perkembangan
+                  <b>Jenis[mandatory]:</b> Kurikulum/Sistem
                 </div>
                               
                 <div class="col-md-6">
@@ -140,7 +140,7 @@
       <td>TM-2025-001</td>
       <td>Kurikulum</td>
       <td>KRK-OBE-03</td>
-      <td>Evaluasi Kurikulum</td>
+      <td>Sistem</td>
       <td>RPS Semester 3</td>
       <td>Ganjil 2024/2025</td>
       <td>40% RPS belum mengacu pada standar OBE terutama pada CPMK dan asesmen.</td>

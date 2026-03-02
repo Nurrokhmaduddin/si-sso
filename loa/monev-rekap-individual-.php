@@ -52,7 +52,8 @@
                 </button>                
                 <button type="button" class="btn btn-outline-success btn-sm">
                   <i class="fas fa-file-download me-1"></i> Export
-                </button>                
+                </button>   
+                <a class="btn btn-sm btn-outline-primary" href="formulir-evaluasi.php" target="_blank"><i class="fas fa-clipboard-list me-1"> </i>Catat Temuan </a>              
               </div>
 
             </div>
@@ -179,7 +180,7 @@
             <td class="text-center"><img style="width:40px;" alt="Foto"></td>
             <td class="text-center"><span class="badge badge-warning">Cuti</span></td>
             <td class="text-center">
-              <button class="btn btn-sm btn-outline-info" onclick="window.location.href='monev-cpl-individual1.php' " ><i class="fas fa-info-circle"></i></button>
+              <button class="btn btn-sm btn-outline-info" onclick="window.location.href='monev-rekap-individual-detail.php' " ><i class="fas fa-info-circle"></i></button>
               <button class="btn btn-sm btn-outline-primary"><i class="fas fa-upload"></i></button>
               <button class="btn btn-sm btn-outline-success"><i class="fas fa-download"></i></button>
             </td>

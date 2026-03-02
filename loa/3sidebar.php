@@ -347,8 +347,8 @@
 
 
         <!-- MONITORING OBE -->
-        <li class="nav-item <?php echo in_array($page, ['status_mahasiswa','status_pemetaan','monev_individu','monev_kelas','monev_cpl','monev_angkatan','monev_yudisium','monev_cpmk']) ? 'menu-open' : ''; ?>">
-          <a href="#" class="nav-link <?php echo in_array($page, ['status_mahasiswa','status_pemetaan','monev_individu','monev_kelas','monev_cpl','monev_angkatan','monev_yudisium','monev_cpmk']) ? 'active' : ''; ?>">
+        <li class="nav-item <?php echo in_array($page, ['status_mahasiswa','status_pemetaan','monev_individu','monev_kelas','monev_tahunan','monev_angkatan','monev_yudisium','monev_semester']) ? 'menu-open' : ''; ?>">
+          <a href="#" class="nav-link <?php echo in_array($page, ['status_mahasiswa','status_pemetaan','monev_individu','monev_kelas','monev_tahunan','monev_angkatan','monev_yudisium','monev_semester']) ? 'active' : ''; ?>">
             <i class="nav-icon fas fa-chart-pie"></i>
             <p>
               Monitoring OBE
@@ -373,7 +373,7 @@
             </li> -->
 
             <li class="nav-item">
-              <a href="monev-rekap-kelas.php" class="nav-link <?php echo $page == 'monev_kelas' ? 'active' : ''; ?>">
+              <a href="monev-rekap-kelas-.php" class="nav-link <?php echo $page == 'monev_kelas' ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Monev Kelas</p>
               </a>
@@ -385,7 +385,7 @@
               </a>
             </li> -->
             <li class="nav-item">
-              <a href="monev-rekap-cpmk.php" class="nav-link <?php echo $page == 'monev_cpmk' ? 'active' : ''; ?>">
+              <a href="monev-rekap-semester-.php" class="nav-link <?php echo $page == 'monev_semester' ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Monev Semester</p>
               </a>
@@ -409,7 +409,7 @@
               </a>
             </li> -->
             <li class="nav-item">
-              <a href="monev-rekap-tahunan.php" class="nav-link <?php echo $page == 'monev_cpl' ? 'active' : ''; ?>">
+              <a href="monev-rekap-tahunan-.php" class="nav-link <?php echo $page == 'monev_tahunan' ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Monev Setahun</p>
               </a>
@@ -433,7 +433,7 @@
               </a>
             </li> -->
             <li class="nav-item">
-              <a href="monev-cpl-individual.php" class="nav-link <?php echo $page == 'monev_individu' ? 'active' : ''; ?>">
+              <a href="monev-rekap-individual-.php" class="nav-link <?php echo $page == 'monev_individu' ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Monev Individu</p>
               </a>
@@ -446,14 +446,14 @@
               </a>
             </li> -->
             <li class="nav-item">
-              <a href="monev-cpl-angkatan2.php" class="nav-link <?php echo $page == 'monev_angkatan' ? 'active' : ''; ?>">
+              <a href="monev-rekap-angkatan-.php" class="nav-link <?php echo $page == 'monev_angkatan' ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Monev Angkatan</p>
               </a>
             </li>
 
             <li class="nav-item">
-              <a href="monev-cpl-yudisium.php" class="nav-link <?php echo $page == 'monev_yudisium' ? 'active' : ''; ?>">
+              <a href="monev-rekap-yudisium-.php" class="nav-link <?php echo $page == 'monev_yudisium' ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Monev Yudisium</p>
               </a>
