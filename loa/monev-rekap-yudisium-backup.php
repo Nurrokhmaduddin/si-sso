@@ -108,155 +108,46 @@
           </div>
         </div>
 
-         
-
-
-<!-- Level 2 -->
+         <!-- ========== CARD :  Grafik Radar CPL & Progress ========== --> 
 <div class="card">
   <!-- <div class="card-header">
-    <h5 class="card-title mb-0"><i class="fas fa-chart-bar me-2"></i>10 CPL Lulusan</h5>
+    <h5 class="card-title mb-0"><i class="fas fa-chart-bar me-2"></i>Level 1 – Ringkasan</h5>
     <div class="card-tools">
-      <small class="text-muted">5 Batch Yudisium Terakhir</i></h5></small>
-    </div>
+      <small class="text-muted">Batch Yudisium Terpilih</i></h5></small> 
+    </div> 
   </div> -->
-  <div class="card-body">
-   
-<canvas id="chartCPL1" width="100%" height="30" class="mb-4"></canvas>
-<table class="table table-bordered table-striped table-sm ">
-    <thead>
-        <tr>
-            <th>CPL</th>
-            <th>Deskripsi CPL</th>
-            <th>% Tuntas CPL</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>CPL 1</td>
-            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut l</td>
-            <td>95%</td>
-        </tr>
-        <tr>
-            <td>CPL 2</td>
-            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut l</td>
-            <td>80%</td>
-        </tr>
-        <tr>
-            <td>CPL 3</td>
-           <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut l</td>
-            <td style="color:red;">60%</td>
-        </tr>
-        <tr>
-            <td>CPL 4</td>
-            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut l</td>
-            <td>88%</td>
-        </tr>
-        <tr>
-            <td>CPL 5</td>
-            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut l</td>
-            <td>92%</td>
-        </tr>
-        <tr>
-            <td>CPL 6</td>
-            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut l</td>
-            <td>85%</td>
-        </tr>
-        <tr>
-            <td>CPL 7</td>
-            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut l</td>
-            <td>98%</td>
-        </tr>
-        <tr>
-            <td>CPL 8</td>
-            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut l</td>
-            <td>83%</td>
-        </tr>
-        <tr>
-            <td>CPL 9</td>
-            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut l</td>
-            <td>75%</td>
-        </tr>
-        <tr>
-            <td>CPL 10</td>
-            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut l</td>
-            <td style="color:red;">58%</td>
-        </tr>
-    </tbody>
-    <tfoot>
-        <tr>
-            <td colspan="3">
-                <strong>Cara Membaca Tabel:</strong><br>                
-                - % Lulus CPL menunjukkan persentase mahasiswa yang mencapai batas minimal ketuntasan (misalnya ≥70).<br>
-                - Nilai berwarna <span style="color:red;">merah</span> menunjukkan gagal mencapai batas standar (>= 65%) dan perlu evaluasi lebih lanjut.
-            </td>
-        </tr>
-    </tfoot>
-</table>
-</div>
-</div>
-
-
-<!-- Grafik Rentang Nilai -->
-<div class="card">
-  <div class="card-header">
-    <h5 class="card-title mb-0"><i class="fas fa-chart-bar me-2"></i> Distribusi CPL Lulusan</h5>
-    <div class="card-tools">
-      <small class="text-muted">Batch Yudisium Terpilih</i></h5></small>
-    </div>
-  </div>
-  <div class="card-body">
-
-    <canvas id="stackedCPMKChart" height="70" class="mb-4"></canvas>
+  <div class="card-body p-3">
     <div class="row">
 
       <!-- KIRI: Pie Chart -->
       <div class="col-lg-6">
         <!-- <h6><b>Proporsi Angkatan Batch Yudisium</b></h6> -->
         <canvas id="chartLulusanBatch"  ></canvas>
-
       </div>
       <!-- KANAN -->
-      <div class="col-lg-6 ">
-        <!-- <canvas id="chartCPL1" width="100%" height="50" class="mb-4"></canvas> -->
-        <!-- <canvas id="stackedCPMKChart" width="100%" height="50" class="mb-4"></canvas> -->
-        <br><br>
+      <div class="col-lg-6">
         <!-- <h6><b>Tabel Performa Batch Yudisium</b></h6> -->
-        <table class="table table-bordered table-striped table-sm ">
+        <table class="table table-bordered table-striped table-sm">
           <thead class=" text-center">
             <tr>
-              <th>No</th>
               <th>Indikator</th>
               <th> Batch Jan 2027</th>
             </tr>
           </thead>
           <tbody class="text-center">
             <tr>
-              <td>1</td>
               <td >Jumlah Lulusan</td>
-              <td>120</td>
+              <td>80</td>
             </tr>
             <tr>
-              <td>2</td>
               <td>IPK Rata-rata</td>
               <td>3.42</td>
             </tr>
             <tr>
-              <td>3</td>
               <td>CPL Rata-rata</td>
               <td>83.78</td>
             </tr>
             <tr>
-              <td>4</td>
               <td>Lulusan Tepat Waktu (< 9 sem)</td>
               <td>57(72%)</td>
             </tr>        
@@ -270,12 +161,11 @@
               <td>28(35%)</td>
             </tr> -->
             <tr>    
-              <td>5</td>
               <td>Lulusan Remedial Tinggi (≥ 3 MK)</td>
               <td>12(15%)</td>
             </tr>
           </tbody>
-          <!-- <tfoot>
+          <tfoot>
             <tr>
               <td colspan="4">
                 <strong>Cara membaca tabel:</strong><br>
@@ -284,7 +174,7 @@
                 Rata-rata jumlah remedial per lulusan: <strong>1.8 MK</strong>.
               </td>
             </tr>
-          </tfoot> -->
+          </tfoot>
         </table>
 
       </div>
@@ -293,10 +183,108 @@
 </div>
 
 
+
+<!-- Level 2 -->
+<div class="card">
+  <div class="card-header">
+    <h5 class="card-title mb-0"><i class="fas fa-chart-bar me-2"></i>Level 2 – 10 CPL Lulusan</h5>
+    <div class="card-tools">
+      <!-- <small class="text-muted">5 Batch Yudisium Terakhir</i></h5></small> -->
+    </div>
+  </div>
+  <div class="card-body">
+   
+<canvas id="chartCPL1" width="100%" height="30" class="mb-4"></canvas>
+<table class="table table-bordered table-striped table-sm ">
+    <thead>
+        <tr>
+            <th>CPL</th>
+            <th>Rata-rata CPL</th>
+            <th>% Tuntas CPL</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>CPL 1</td>
+            <td>82</td>
+            <td>95%</td>
+        </tr>
+        <tr>
+            <td>CPL 2</td>
+            <td>70</td>
+            <td>80%</td>
+        </tr>
+        <tr>
+            <td>CPL 3</td>
+            <td style="color:red;">63</td>
+            <td style="color:red;">60%</td>
+        </tr>
+        <tr>
+            <td>CPL 4</td>
+            <td>78</td>
+            <td>88%</td>
+        </tr>
+        <tr>
+            <td>CPL 5</td>
+            <td>85</td>
+            <td>92%</td>
+        </tr>
+        <tr>
+            <td>CPL 6</td>
+            <td>74</td>
+            <td>85%</td>
+        </tr>
+        <tr>
+            <td>CPL 7</td>
+            <td>90</td>
+            <td>98%</td>
+        </tr>
+        <tr>
+            <td>CPL 8</td>
+            <td>76</td>
+            <td>83%</td>
+        </tr>
+        <tr>
+            <td>CPL 9</td>
+            <td>68</td>
+            <td>75%</td>
+        </tr>
+        <tr>
+            <td>CPL 10</td>
+            <td style="color:red;">61</td>
+            <td style="color:red;">58%</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="3">
+                <strong>Cara Membaca Tabel:</strong><br>
+                - Rata-rata CPL menunjukkan nilai agregat capaian lulusan pada masing-masing CPL.<br>
+                - % Lulus CPL menunjukkan persentase mahasiswa yang mencapai batas minimal ketuntasan (misalnya ≥75).<br>
+                - Nilai berwarna <span style="color:red;">merah</span> menunjukkan capaian di bawah standar dan perlu evaluasi lebih lanjut.
+            </td>
+        </tr>
+    </tfoot>
+</table>
+</div>
+</div>
+<!-- Grafik Rentang Nilai -->
+<div class="card">
+  <div class="card-header">
+    <h5 class="card-title mb-0"><i class="fas fa-chart-bar me-2"></i>Level 3 – Distribusi CPL Lulusan</h5>
+    <div class="card-tools">
+      <small class="text-muted">Berdasarkan Rentang Nilai</i></h5></small>
+    </div>
+  </div>
+  <div class="card-body">
+
+    <canvas id="stackedCPMKChart" height="70" class="mb-4"></canvas>
+  </div>
+</div>
 <!-- Tabel Tren 5 batch -->
 <div class="card">
   <div class="card-header">
-    <h5 class="card-title mb-0"><i class="fas fa-chart-bar me-2"></i>Tren Perbandingan ketercapaian CPL</h5>
+    <h5 class="card-title mb-0"><i class="fas fa-chart-bar me-2"></i>Level 4 - Tren Perbandingan rata-rata setiap CPL</h5>
     <div class="card-tools">
       <small class="text-muted">3 Batch Yudisium Terakhir</i></h5></small>
     </div>
@@ -401,18 +389,6 @@
         </tr>
       </tfoot>
     </table>
-  </div>
-</div>
-<!-- ========== CARD :  Grafik Radar CPL & Progress ========== --> 
-<div class="card d-none">
-  <!-- <div class="card-header">
-    <h5 class="card-title mb-0"><i class="fas fa-chart-bar me-2"></i>Level 1 – Ringkasan</h5>
-    <div class="card-tools">
-      <small class="text-muted">Batch Yudisium Terpilih</i></h5></small> 
-    </div> 
-  </div> -->
-  <div class="card-body p-3">
-    
   </div>
 </div>
 
@@ -538,7 +514,7 @@
   </div>
 </div> -->
 <!-- ========== CARD : tabel distribusi lulusan ========== -->
-<!-- <div class="card">
+<div class="card">
   <div class="card-header d-flex align-items-center">
     <h5 class="card-title mb-0">Daftar Lulusan</h5>    
     
@@ -567,113 +543,113 @@
         <tbody>
 
 
-          <tr>
-            <td class="text-center">1</td>
-            <td>19312137</td>
-            <td>Pramita Widyadari</td>
-            <td class="text-center">2019</td>
-            <td>Civil Engineering Regular</td>
-            <td class="text-center">82</td>
-            <td class="text-center">Y</td>
-            <td class="text-center">8</td>
-            <td class="text-center">Y</td>
-            <td class="text-center">3.62</td>
-            <td class="text-center">0</td>
-            <td class="text-center">
-              <button class="btn btn-sm btn-outline-info" onclick="window.location.href='monev-rekap-individual-detail.php'">Detail</button>
-            </td>
-          </tr>
+<tr>
+  <td class="text-center">1</td>
+  <td>19312137</td>
+  <td>Pramita Widyadari</td>
+  <td class="text-center">2019</td>
+  <td>Civil Engineering Regular</td>
+  <td class="text-center">82</td>
+  <td class="text-center">Y</td>
+  <td class="text-center">8</td>
+  <td class="text-center">Y</td>
+  <td class="text-center">3.62</td>
+  <td class="text-center">0</td>
+  <td class="text-center">
+    <button class="btn btn-sm btn-outline-info" onclick="window.location.href='monev-rekap-individual-detail.php'">Detail</button>
+  </td>
+</tr>
 
-          <tr>
-            <td class="text-center">2</td>
-            <td>19312376</td>
-            <td>Ho Aldika Novaldy Sumampow</td>
-            <td class="text-center">2020</td>
-            <td>Civil Engineering Regular</td>
-            <td class="text-center">75</td>
-            <td class="text-center">Y</td>
-            <td class="text-center">8</td>
-            <td class="text-center">Y</td>
-            <td class="text-center">3.28</td>
-            <td class="text-center">1-2</td>
-            <td class="text-center">
-              <button class="btn btn-sm btn-outline-info">Detail</button>
-            </td>
-          </tr>
+<tr>
+  <td class="text-center">2</td>
+  <td>19312376</td>
+  <td>Ho Aldika Novaldy Sumampow</td>
+  <td class="text-center">2020</td>
+  <td>Civil Engineering Regular</td>
+  <td class="text-center">75</td>
+  <td class="text-center">Y</td>
+  <td class="text-center">8</td>
+  <td class="text-center">Y</td>
+  <td class="text-center">3.28</td>
+  <td class="text-center">1-2</td>
+  <td class="text-center">
+    <button class="btn btn-sm btn-outline-info">Detail</button>
+  </td>
+</tr>
 
-          <tr>
-            <td class="text-center">3</td>
-            <td>19312406</td>
-            <td>Annisa Regita Sintowati</td>
-            <td class="text-center">2020</td>
-            <td>Civil Engineering Regular</td>
-            <td class="text-center">69</td>
-            <td class="text-center">N</td>
-            <td class="text-center">10</td>
-            <td class="text-center">N</td>
-            <td class="text-center">3.10</td>
-            <td class="text-center">>3</td>
-            <td class="text-center">
-              <button class="btn btn-sm btn-outline-info">Detail</button>
-            </td>
-          </tr>
+<tr>
+  <td class="text-center">3</td>
+  <td>19312406</td>
+  <td>Annisa Regita Sintowati</td>
+  <td class="text-center">2020</td>
+  <td>Civil Engineering Regular</td>
+  <td class="text-center">69</td>
+  <td class="text-center">N</td>
+  <td class="text-center">10</td>
+  <td class="text-center">N</td>
+  <td class="text-center">3.10</td>
+  <td class="text-center">>3</td>
+  <td class="text-center">
+    <button class="btn btn-sm btn-outline-info">Detail</button>
+  </td>
+</tr>
 
-          <tr>
-            <td class="text-center">4</td>
-            <td>19312418</td>
-            <td>Claudia Monica Aditama</td>
-            <td class="text-center">2019</td>
-            <td>Civil Engineering Regular</td>
-            <td class="text-center">80</td>
-            <td class="text-center">Y</td>
-            <td class="text-center">8</td>
-            <td class="text-center">Y</td>
-            <td class="text-center">3.45</td>
-            <td class="text-center">0</td>
-            <td class="text-center">
-              <button class="btn btn-sm btn-outline-info">Detail</button>
-            </td>
-          </tr>
+<tr>
+  <td class="text-center">4</td>
+  <td>19312418</td>
+  <td>Claudia Monica Aditama</td>
+  <td class="text-center">2019</td>
+  <td>Civil Engineering Regular</td>
+  <td class="text-center">80</td>
+  <td class="text-center">Y</td>
+  <td class="text-center">8</td>
+  <td class="text-center">Y</td>
+  <td class="text-center">3.45</td>
+  <td class="text-center">0</td>
+  <td class="text-center">
+    <button class="btn btn-sm btn-outline-info">Detail</button>
+  </td>
+</tr>
 
-          <tr>
-            <td class="text-center">5</td>
-            <td>19312424</td>
-            <td>Filza Aliyah Tasya</td>
-            <td class="text-center">2019</td>
-            <td>Civil Engineering IP</td>
-            <td class="text-center">85</td>
-            <td class="text-center">Y</td>
-            <td class="text-center">8</td>
-            <td class="text-center">Y</td>
-            <td class="text-center">3.55</td>
-            <td class="text-center">0</td>
-            <td class="text-center">
-              <button class="btn btn-sm btn-outline-info">Detail</button>
-            </td>
-          </tr>
+<tr>
+  <td class="text-center">5</td>
+  <td>19312424</td>
+  <td>Filza Aliyah Tasya</td>
+  <td class="text-center">2019</td>
+  <td>Civil Engineering IP</td>
+  <td class="text-center">85</td>
+  <td class="text-center">Y</td>
+  <td class="text-center">8</td>
+  <td class="text-center">Y</td>
+  <td class="text-center">3.55</td>
+  <td class="text-center">0</td>
+  <td class="text-center">
+    <button class="btn btn-sm btn-outline-info">Detail</button>
+  </td>
+</tr>
 
-          <tr>
-            <td class="text-center">6</td>
-            <td>19312430</td>
-            <td>Rizky Maulana</td>
-            <td class="text-center">2019</td>
-            <td>Civil Engineering Regular</td>
-            <td class="text-center">64</td>
-            <td class="text-center">N</td>
-            <td class="text-center">12</td>
-            <td class="text-center">N</td>
-            <td class="text-center">2.98</td>
-            <td class="text-center">>3</td>
-            <td class="text-center">
-              <button class="btn btn-sm btn-outline-info">Detail</button>
-            </td>
-          </tr>
+<tr>
+  <td class="text-center">6</td>
+  <td>19312430</td>
+  <td>Rizky Maulana</td>
+  <td class="text-center">2019</td>
+  <td>Civil Engineering Regular</td>
+  <td class="text-center">64</td>
+  <td class="text-center">N</td>
+  <td class="text-center">12</td>
+  <td class="text-center">N</td>
+  <td class="text-center">2.98</td>
+  <td class="text-center">>3</td>
+  <td class="text-center">
+    <button class="btn btn-sm btn-outline-info">Detail</button>
+  </td>
+</tr>
         </tbody>
       </table>
     </div>
   </div>
 </div>
- -->
+
 
 
 
@@ -781,19 +757,38 @@ apakah ada lulusan yg tidak memenuhi standar minimal?
 Apakah ada CPL yang konsisten lemah saat lulus?
 
 Apakah ada perbaikan kualitas lulusan dari tahun ke tahun?
+
 Apakah perubahan kurikulum berdampak ke kualitas akhir?
 
-Fokusnya kualitas akhir dan konsistensinya.
+Fokusnya bukan lagi growth semester,
+tapi kualitas akhir dan konsistensinya.
         </p>
-        
+        <p>
+Jenis chart:
+Line Chart → Tren Semester
+Bar Chart → Perbandingan Kelas
+Radar Chart → Profil Lulusan
+Heatmap → CPL vs Semester 
+        </p>
+        <p>
+          Ringkasan capaian CPL per Kelompok Mahasiswa, perkembangan, peringatan dini (EWS), disajikan dalam bentuk grafik dan tabel (Mockup data statis)
+        </p>
         <p>
           Laporan halaman ini menjawab 'apakah lulusan kita benar-benar kompeten'
         </p>
         <p>
-          snapshot CPL by batch yudisium adalah gambaran CPL Mahasiswa yang lulus pada satu periode  yudisium tertentu tanpa memandang tahun masuknya(bisa campuran angkatan dan bahkan kurikulum), sehingga tujuannya adalah memonitor mutu output lulusan terkini; informmasi yag perlu disajikan meliputi jumlah lulusan periode tersebut, distribusi angkatan masuk, IPK rerata dan distribusinya, lama studi rerata rerata CPL dan distribusinya, persentasi remedial tinggi (misal >3 MK) remidial. dan perbandingan dengan batch yudisium sebelumnya untuk melihat stabilitas output periodik. singkatnya  snapshot batch yudisium menjawab " bagaimana mutu lulusan yang keluar pada periode ini?"
+          snapshot CPL by batch yudisium adalah gambaran CPL Mahasiswa yang lulus pada satu periode  yudisium tertentu tanpa memandang tahun masuknya(bisa campuran angkatan dan bahkan kurikulum), sehingga tujuannya adalah memonitor mutu output lulusan terkini; informmasi yag perlu disajikan meliputi jumlah lulusan periode tersebut, distribusi angkatan masuk, IPK rerata dan distribusinya, lama studi rerata rerata CPL dan distribusinya, persentasi remedial tinggi (misal >3 MK) remidial. dan perbandingan denan batch yudisium sebelumnya untuk melihat stabilitas output periodik. singkkatnya  snapsho batch yudisium menjawab " bagaimana mutu lulusan yang keluar pada periode ini?"
           untuk mutu lulusan.
         </p>
-               
+        <p>
+          Halaman ringkasan ini disusun sebagai instrumen monitoring dan evaluasi mutu lulusan secara periodik. Melalui tampilan ini, pengguna dapat melihat apakah mayoritas mahasiswa lulus tepat waktu atau terdapat kecenderungan keterlambatan pada periode tertentu.
+
+Selain itu, laporan ini membantu mengidentifikasi apakah capaian lulusan sudah kuat sejak awal proses pembelajaran atau terdapat indikasi perbaikan nilai (misalnya melalui remedial) yang signifikan.
+
+Dari sisi mutu akademik, ringkasan ini juga berfungsi untuk menilai stabilitas kualitas lulusan antar periode, mendeteksi potensi penurunan capaian, serta mengamati kemungkinan perubahan beban akademik yang berdampak pada hasil pembelajaran.
+
+Secara khusus, halaman ini menampilkan perkembangan rata-rata Capaian Pembelajaran Lulusan (CPL) dari waktu ke waktu berdasarkan periode kelulusan, sehingga dapat menjadi dasar analisis tren dan pengambilan keputusan akademik yang berbasis data.
+        </p>        
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
@@ -850,7 +845,7 @@ Fokusnya kualitas akhir dan konsistensinya.
       responsive: true,
       plugins: {
         legend: {
-          position: 'top'
+          position: 'bottom'
         },
         tooltip: {
           mode: 'index',
@@ -894,23 +889,23 @@ new Chart(ctx, {
       {
         label: 'Batas Standar',
         type: 'line',
-        yMin: 65, 
-        yMax: 65,
+        yMin: 80, 
+        yMax: 80,
         backgroundColor: 'rgba(255,255,255,0.7)',
         borderColor: 'red',
         borderWidth: 2,
         borderDash: [6, 6],
       },
-      // {
-      //   label: 'Rerata Skor',
-      //   data: [82, 80, 79, 83, 78, 81, 77, 72, 70, 74],
-      //   backgroundColor: '#6c757d',
-      //   borderColor: '#6c757d',
-      //   borderWidth: 1
-      // },
       {
-        label: '% Mahasiswa Tuntas CPL',
-        data: [95, 80, 60, 88, 92, 85, 98, 83, 75, 58],
+        label: 'Rerata Skor',
+        data: [82, 80, 79, 83, 78, 81, 77, 72, 70, 74],
+        backgroundColor: '#6c757d',
+        borderColor: '#6c757d',
+        borderWidth: 1
+      },
+      {
+        label: '% Mahasiswa Tuntas',
+        data: [85, 81, 82, 84, 80, 81, 80, 61, 50, 67],
         backgroundColor: '#007bff',
         borderColor: '#007bff',
         borderWidth: 1
@@ -925,8 +920,8 @@ new Chart(ctx, {
         annotations: {
           targetLine: {
             type: 'line',
-            yMin: 65,
-            yMax: 65,
+            yMin: 80,
+            yMax: 80,
             borderColor: 'red',
             borderWidth: 2,
             borderDash: [6, 6],
@@ -943,22 +938,7 @@ new Chart(ctx, {
       }
     },
     scales: {
-      x: {
-        ticks: {
-          display: true
-        },
-        grid: {
-          display: false  
-        }
-      },
-      
       y: {
-        ticks: {
-          display: true
-        },
-        grid: {
-          display: true  
-        },
         beginAtZero: true,
         max: 100
       }

@@ -85,8 +85,8 @@
         </li>
 
         <!-- MASTER DATA -->
-        <li class="nav-item">
-          <a href="#" class="nav-link">
+        <li class="nav-item <?php echo in_array($page, ['master_mahasiswa']) ? 'menu-open' : ''; ?>">
+          <a href="#" class="nav-link <?php echo in_array($page, ['master_mahasiswa']) ? 'active' : ''; ?>">
             <i class="nav-icon fas fa-database"></i>
             <p>
               Master Data
@@ -95,98 +95,300 @@
           </a>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="master-user.php" class="nav-link">
+              <a href="master-mahasiswa.php" class="nav-link <?php echo $page == 'master_mahasiswa' ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
-                <p>Data User</p>
+                <p>Mahasiswa</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="master-kategori.php" class="nav-link">
+              <a href="master-dosen.php" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
-                <p>Data Kategori</p>
+                <p>Dosen & Pembimbing</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="master-dosen.php" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Admin</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="master-dosen.php" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Pejabat Fakultas</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="master-dosen.php" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Language Advisor</p>
+              </a>
+            </li>
+             <li class="nav-item">
+              <a href="master-dosen.php" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Sumber Daya</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="master-dosen.php" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Kelompok Peminatan</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="master-dosen.php" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Bidang Keahlian</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="master-dosen.php" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Pengaturan Periode</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="master-dosen.php" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Media Publikasi/Diseminasi</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="master-dosen.php" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Rubrik TA (TA Sktipsi, TA RBB, TA Magang, Responsi Magang, Responsi RBB)</p>
               </a>
             </li>
           </ul>
         </li>
 
         <!-- PROSES AKTIVITAS -->
-        <li class="nav-item">
-          <a href="#" class="nav-link">
-            <i class="nav-icon fas fa-tasks"></i>
+        <li class="nav-item <?php echo in_array($page, ['taskboard','pengumuman','ta_pendaftaran','ta_bimbingan','ta_pendaftaran_ujian','ta_ujian','ta_publikasi_diseminasi']) ? 'menu-open' : ''; ?>">
+          <a href="#" class="nav-link <?php echo in_array($page, ['taskboard','pengumuman','ta_pendaftaran','ta_bimbingan','ta_pendaftaran_ujian','ta_ujian','ta_publikasi_diseminasi']) ? 'active' : ''; ?>">
+            <i class="nav-icon fas fa-exchange-alt"></i>
             <p>
-              Proses Aktivitas TA
+              Proses Aktivitas
               <i class="right fas fa-angle-left"></i>
             </p>
           </a>
 
           <ul class="nav nav-treeview">
-
+            <!-- USER (LEVEL 2) -->
+            <li class="nav-item"> 
+              <a href="taskboard.php" class="nav-link <?php echo $page == 'taskboard' ? 'active' : ''; ?>">
+                <i class="nav-icon fas fa-exchange-alt"></i>
+                <p>Papan Tugas</p>
+              </a>
+            </li>
             <li class="nav-item">
-              <a href="aktivitas1-pendaftaran.php" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Pendaftaran</p>
+              <a href="pengumuman.php" class="nav-link <?php echo $page == 'pengumuman' ? 'active' : ''; ?>">
+                <i class="nav-icon fas fa-exchange-alt"></i>
+                <p>Pengumuman</p>
               </a>
             </li>
 
-            <li class="nav-item">
-              <a href="aktivitas2-penentuan-topik.php" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Penentuan Topik</p>
+             <li class="nav-item <?php echo in_array($page, ['']) ? 'menu-open' : ''; ?>">
+              <a href="#" class="nav-link <?php echo in_array($page, ['ta_pendaftaran','ta_bimbingan','ta_pendaftaran_ujian','ta_ujian','ta_publikasi_diseminasi']) ? 'active' : ''; ?>">
+                <i class="nav-icon fas fa-exchange-alt"></i>
+                <p>
+                  Tugas Akhir
+                  <i class="right fas fa-angle-left"></i>
+                </p>
               </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="ta-pendaftaran.php" class="nav-link <?php echo $page == 'ta_pendaftaran' ? 'active' : ''; ?>">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Pendaftaran Bimbingan</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="ta-bimbingan.php" class="nav-link <?php echo $page == 'ta_bimbingan' ? 'active' : ''; ?>">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Bimbingan TA</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="ta-pendaftaran-ujian.php" class="nav-link <?php echo $page == 'ta_pendaftaran_ujian' ? 'active' : ''; ?>">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Pendaftaran Ujian</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="ta-ujian.php" class="nav-link <?php echo $page == 'ta_ujian' ? 'active' : ''; ?>">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Ujian TA</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="ta-publikasi-diseminasi.php" class="nav-link <?php echo $page == 'ta_publikasi_diseminasi' ? 'active' : ''; ?>">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Publikasi/Diseminasi</p>
+                  </a>
+                </li>
+              </ul>
             </li>
+            
 
             <li class="nav-item">
-              <a href="aktivitas-input.php" class="nav-link">
-              <a href="aktivitas3-penentuan-pembimbing.php" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Input Aktivitas</p>
-                <p>Penentuan Pembimbing</p>
+              <a href="#" class="nav-link">
+                <i class="nav-icon fas fas fa-exchange-alt"></i>
+                <p>
+                  Pelaksanaan Magang
+                  <i class="right fas fa-angle-left"></i>
+                </p>
               </a>
+              <ul class="nav nav-treeview">
+
+                <li class="nav-item">
+                  <a href="aktivitas1-pendaftaran.php" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Pendaftaran Magang</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="aktivitas4-bimbingan-proposal.php" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Bimbingan </p>
+                  </a>
+                </li>
+
+                <li class="nav-item">
+                  <a href="aktivitas6-pendaftaran-sidang.php" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Pendaftaran Responsi</p>
+                  </a>
+                </li>
+
+                <li class="nav-item">
+                  <a href="aktivitas7-sidang-ujian.php" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Responsi Magang</p>
+                  </a>
+                </li>
+              </ul>
             </li>
 
-            <li class="nav-item">
-              <a href="aktivitas4-bimbingan-proposal.php" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Bimbingan Proposal</p>
-              </a>
-            </li>
 
             <li class="nav-item">
-              <a href="aktivitas-verifikasi.php" class="nav-link">
-              <a href="aktivitas5-bimbingan-laporan.php" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Verifikasi</p>
-                <p>Bimbingan Laporan</p>
+              <a href="#" class="nav-link">
+                <i class="nav-icon fas fas fa-exchange-alt"></i>
+                <p>
+                  Implementasi RBB
+                  <i class="right fas fa-angle-left"></i>
+                </p>
               </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="aktivitas1-pendaftaran.php" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Pendaftaran RBB</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="aktivitas4-bimbingan-proposal.php" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Bimbingan </p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="aktivitas6-pendaftaran-sidang.php" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Pendaftaran Responsi</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="aktivitas7-sidang-ujian.php" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Responsi RBB</p>
+                  </a>
+                </li>
+              </ul>
             </li>
 
-            <li class="nav-item">
-              <a href="aktivitas6-pendaftaran-sidang.php" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Pendaftaran Sidang</p>
-              </a>
-            </li>
-
-            <li class="nav-item">
-              <a href="aktivitas7-sidang-ujian.php" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Sidang Ujian</p>
-              </a>
-            </li>
-
-            <li class="nav-item">
-              <a href="aktivitas8-bimbingan-pasca-ujian.php" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Bimbingan Pasca Ujian</p>
-              </a>
-            </li>
 
           </ul>
         </li>
+                
+
+
+            
+
+      <!-- PROSES AKTIVITAS -->
+     <!--  <li class="nav-item">
+        <a href="#" class="nav-link">
+          <i class="nav-icon fas fas fa-exchange-alt"></i>
+          <p>
+            Proses Aktivitas 
+            <i class="right fas fa-angle-left"></i>
+          </p>
+        </a>
+
+        <ul class="nav nav-treeview">
+
+          <li class="nav-item">
+            <a href="aktivitas1-pendaftaran.php" class="nav-link">
+              <i class="far fa-circle nav-icon"></i>
+              <p>Pendaftaran</p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="aktivitas2-penentuan-topik.php" class="nav-link">
+              <i class="far fa-circle nav-icon"></i>
+              <p>Penentuan Topik</p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="aktivitas3-penentuan-pembimbing.php" class="nav-link">
+              <i class="far fa-circle nav-icon"></i>
+              <p>Penentuan Pembimbing</p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="aktivitas4-bimbingan-proposal.php" class="nav-link">
+              <i class="far fa-circle nav-icon"></i>
+              <p>Bimbingan Proposal</p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="aktivitas5-bimbingan-laporan.php" class="nav-link">
+              <i class="far fa-circle nav-icon"></i>
+              <p>Bimbingan Laporan</p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="aktivitas6-pendaftaran-sidang.php" class="nav-link">
+              <i class="far fa-circle nav-icon"></i>
+              <p>Pendaftaran Sidang</p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="aktivitas7-sidang-ujian.php" class="nav-link">
+              <i class="far fa-circle nav-icon"></i>
+              <p>Sidang Ujian</p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="aktivitas8-bimbingan-pasca-ujian.php" class="nav-link">
+              <i class="far fa-circle nav-icon"></i>
+              <p>Bimbingan Pasca Ujian</p>
+            </a>
+          </li>
+
+        </ul>
+      </li> -->
 
 
         <!-- MANAJ AKTIVITAS -->
-        <li class="nav-item">
+        <!-- <li class="nav-item">
           <a href="#" class="nav-link">
             <i class="nav-icon fas fa-folder-open"></i>
             <p>
@@ -220,18 +422,60 @@
               </a>
             </li>
           </ul>
-        </li>
+        </li> -->
 
         <!-- MONITOR AKTIVITAS -->
         <li class="nav-item">
           <a href="#" class="nav-link">
             <i class="nav-icon fas fa-chart-pie"></i>
             <p>
-              Monitor Aktivitas
+              Laporan Monitoring
               <i class="right fas fa-angle-left"></i>
             </p>
           </a>
           <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <a href="monitor-skripsi.php" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>kinerja pembimbing</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="monitor-skripsi.php" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>kinerja  mahasiswa</p>
+              </a>
+            </li>
+             <li class="nav-item">
+              <a href="monitor-skripsi.php" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Pustaka tugas akhir</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="monitor-skripsi.php" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Pustaka publikasi/diseminasi</p>
+              </a>
+            </li>
+              <li class="nav-item">
+              <a href="monitor-skripsi.php" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>penilaian pembimbing</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="monitor-skripsi.php" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>rekap nilai ujian TA</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="monitor-skripsi.php" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>rekap nilai responsi</p>
+              </a>
+            </li>
             <li class="nav-item">
               <a href="monitor-skripsi.php" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
@@ -250,35 +494,114 @@
                 <p>Historis</p>
               </a>
             </li>
+            
+
+
+
+
+
+
           </ul>
         </li>
-
+<!-- KONFIGURASI -->
+<li class="nav-item <?php echo in_array($page, ['konfigurasi_loa','konfigurasi_notifikasi']) ? 'menu-open' : ''; ?>">
+  <a href="#" class="nav-link <?php echo in_array($page, ['konfigurasi_loa','konfigurasi_notifikasi']) ? 'active' : ''; ?>">
+    <i class="nav-icon fas fa-sliders-h"></i>
+    <p>
+      Konfigurasi
+      <i class="right fas fa-angle-left"></i>
+    </p>
+  </a>
+  <ul class="nav nav-treeview">
+    <li class="nav-item">
+      <a href="konfigurasi-loa.php" class="nav-link <?php echo $page == 'konfigurasi_loa' ? 'active' : ''; ?>">
+        <i class="far fa-circle nav-icon"></i>
+        <p>Parameter PTA</p>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="konfigurasi-loa.php" class="nav-link <?php echo $page == 'konfigurasi_loa' ? 'active' : ''; ?>">
+        <i class="far fa-circle nav-icon"></i>
+        <p>Template Dokumen (TA,Magang, RBB)</p>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="konfigurasi-notifikasi.php" class="nav-link <?php echo $page == 'konfigurasi_notifikasi' ? 'active' : ''; ?>">
+        <i class="far fa-circle nav-icon"></i>
+        <p>Template Notifikasi</p>
+      </a>
+    </li>
+  </ul>
+</li>
         <!-- PENGATURAN -->
-        <li class="nav-item">
-          <a href="#" class="nav-link">
-            <i class="nav-icon fas fa-cogs"></i>
+        <li class="nav-item <?php echo in_array($page, ['pengaturan_user','pengaturan_role']) ? 'menu-open' : ''; ?>">
+          <a href="#" class="nav-link <?php echo in_array($page, ['pengaturan_user','pengaturan_role']) ? 'active' : ''; ?>">
+            <i class="nav-icon fas fa-cog"></i>
             <p>
               Pengaturan
               <i class="right fas fa-angle-left"></i>
             </p>
           </a>
           <ul class="nav nav-treeview">
-            <li class="nav-item">
-              <a href="pengaturan-aplikasi.php" class="nav-link">
+            <!-- USER (LEVEL 2) -->
+             <li class="nav-item <?php echo in_array($page, ['pengaturan_user']) ? 'menu-open' : ''; ?>">
+              <a href="#" class="nav-link <?php echo in_array($page, ['pengaturan_user']) ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
-                <p>Parameter Aktivitas</p>
+                <p>
+                  User
+                  <i class="right fas fa-angle-left"></i>
+                </p>
+              </a>
+
+              <!-- LEVEL 3 -->
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="pengaturan-user.php" class="nav-link <?php echo $page == 'pengaturan_user' ? 'active' : ''; ?>">
+                    <i class="nav-icon"></i>
+                    <p>Data User</p>
+                  </a>
+                </li>
+
+                <li class="nav-item">
+                  <a href="role-user.php" class="nav-link">
+                    <i class="far fa-dot-circle nav-icon"></i>
+                    <p>Role User</p>
+                  </a>
+                </li>
+
+                <li class="nav-item">
+                  <a href="reset-password.php" class="nav-link">
+                    <i class="far fa-dot-circle nav-icon"></i>
+                    <p>Reset Password</p>
+                  </a>
+                </li>
+              </ul>
+
+            </li>
+            <li class="nav-item">
+              <a href="pengaturan-users.php" class="nav-link <?php echo $page == 'pengaturan_user' ? 'active' : ''; ?>">
+                <i class="far fa-circle nav-icon"></i>
+                <p>User</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="pengaturan-aplikasi.php" class="nav-link">
+              <a href="pengaturan-roles.php" class="nav-link <?php echo $page == 'pengaturan_role' ? 'active' : ''; ?>">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Peran & Hak Akses</p>
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="aktivitas-laporan.php" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Audit Log</p>
+              </a>
+            </li>
+           
+            <li class="nav-item">
+              <a href="pengaturan-app.php" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Aplikasi</p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="pengaturan-user.php" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Hak Akses</p>
               </a>
             </li>
           </ul>

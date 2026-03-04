@@ -43,9 +43,9 @@
               <!-- <div class="col-md-6">
                 <b>Status Mahasiswa:</b> Semua
               </div> -->
-                <!-- <div class="col-md-6">
+                <div class="col-md-6">
                   <b>MK Tempuh hingga(kumulatif):</b> Semester 1 saja atau semua  &nbsp;
-                </div>  -->
+                </div> 
 
               </div>
             </div>
@@ -180,48 +180,31 @@
 
 
 <!-- ========== CARD :  Grafik Radar CPL & Progress ========== --> 
-<!-- <div class="card p-3">
+<div class="card p-3">
   <div class="row">
 
-
+    <!-- KIRI: Radar Chart -->
     <div class="col-lg-6">
       <canvas id="chartStatusAngkatan2" width="100%" height="180"></canvas>
     </div>
 
-
+    <!-- KANAN -->
     <div class="col-lg-6 d-flex flex-column">
+
+      <!-- BAR CHART 1 -->
       <div class="d-flex flex-column flex-grow-1">
         <div class="flex-grow-1 mb-2">
           <canvas id="chartCPL"></canvas>
         </div>
       </div>
+
+
+      <!-- BAR CHART 2 -->
       <div class="d-flex flex-column flex-grow-1">
         <div class="flex-grow-1 mb-2">
           <canvas id="chartIK2"></canvas>
         </div>
       </div>
-
-
-    </div>
-  </div>
-</div> -->
-<!-- ========== CARD :  Grafik Radar CPL & Progress ========== --> 
-<div class="card p-3">
-  <div class="row">
-
-
-    <div class="col-lg-8">
-      <canvas id="chartCPL3" width="100%" height="190"></canvas>
-    </div>
-
-
-    <div class="col-lg-4 d-flex flex-column">
-      <div class="d-flex flex-column flex-grow-1">
-        <div class="flex-grow-1 mb-2">
-          <canvas id="chartStatusAngkatan2"></canvas>
-        </div>
-      </div>
-     
 
 
     </div>
@@ -318,7 +301,7 @@
         <!-- ========== CARD : grafik detail 10 CPL ========== -->
         <div class="card " id="cardGrafik">
           <div class="card-header">
-            <h3 class="card-title">Grafik Line Kemajuan semua CPL</h3>
+            <h3 class="card-title">Grafik rerata 10 CPL sepanjang max.9 semester</h3>
             <div class="card-tools">
               <small class="text-muted">Angkatan Terpilih</small>
               <button class="btn btn-sm btn-outline-primary" onclick="showTabel()">
@@ -333,7 +316,7 @@
         <!-- ========== CARD : Tabel detail 10 CPL ========== -->
         <div class="card d-none" id="cardTabel">
           <div class="card-header">
-            <h3 class="card-title">Tabel Data Kemajuan semua CPL</h3>
+            <h3 class="card-title">Detail rerata 10 CPL sepanjang max.9 semester</h3>
             <div class="card-tools">
               <small class="text-muted">Angkatan Terpilih</small>
               <button class="btn btn-sm btn-outline-primary" onclick="showGrafik()">
@@ -414,13 +397,13 @@
                 <!-- ========== CARD : Tabel detail 30 IK ========== -->
         <div class="card">
           <div class="card-header">
-            <h3 class="card-title">Tabel Data Kemajuan semua IK </h3>
+            <h3 class="card-title">Detail rerata semua IK sepanjang max.9 semester</h3>
             <div class="card-tools">
               <small class="text-muted">Angkatan Terpilih</small>
             </div>
           </div>
           <div class="card-body">
-            <table class="table table-hover table-bordered table-sm datatables1">
+            <table class="table table-hover table-bordered table-sm">
               <thead style="background-color: #f2f2f2;">
                 <tr>
                   <th width="190px">Periode Semester</th>
@@ -1751,7 +1734,7 @@ function generateBarChart(canvasId, labels, data, labelName, color) {
           scales: {
             x: {
               ticks: {
-                display: true   // ⬅️ MATIKAN LABEL BAWAH
+                display: false   // ⬅️ MATIKAN LABEL BAWAH
               },
               grid: {
                 display: false   // (opsional) hilangkan garis grid vertikal
@@ -1930,7 +1913,7 @@ new Chart(ctxCPL, {
 
       {
         label: 'Sem 9 (2028/2029 - Ganjil)',
-        data: [90,92,88,91,89,93,82,87,92,94],
+        data: [90,92,88,91,89,93,82,87,92,89],
         borderColor: '#007bff',
         backgroundColor: '#007bff',
         tension: 0.3,
@@ -1971,35 +1954,5 @@ function showGrafik() {
   document.getElementById('cardTabel').classList.add('d-none');
   document.getElementById('cardGrafik').classList.remove('d-none');
 }
-</script>
-<script>
-  // ----- Radar CPL -----
-  const radarCtx = document.getElementById('radarCPL').getContext('2d');
-  const radarCPL = new Chart(radarCtx, {
-    type: 'radar',
-    data: {
-      labels: ['CPL 1', 'CPL 2', 'CPL 3', 'CPL 4', 'CPL 5', 'CPL 6', 'CPL 7', 'CPL 8', 'CPL 9', 'CPL 10', 'CPL 11'],
-      datasets: [{
-        label: 'Rerata Nilai CPL ',
-        data: [90, 90, 90, 90, 90, 90, 90, 90, 90, 90, 90],
-            // Warna hijau lembut (lebih nyaman di mata)
-        backgroundColor: 'rgba(80, 200, 120, 0.35)',
-        borderColor: 'rgba(60, 160, 95, 0.9)',
-        borderWidth: 2,
-        pointBackgroundColor: 'rgba(60, 160, 95, 1)'
-      }]
-    },
-    options: {
-      responsive: true,
-    maintainAspectRatio: false,
-      scales: {
-        r: {
-          min: 0,
-          max: 100,
-          ticks: { stepSize: 10 }
-        }
-      }
-    }
-  });
 </script>
 <?php include('5script.php'); ?>

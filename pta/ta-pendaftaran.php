@@ -1,4 +1,4 @@
-<?php $page = 'taskboard'; ?>
+<?php $page = 'ta_pendaftaran'; ?>
 <?php include('1header.php'); ?>
 <?php include('2navbar.php'); ?>
 <?php include('3sidebar.php'); ?>
@@ -8,7 +8,7 @@
 
   <section class="content-header">
     <div class="container-fluid">
-      <h3 class="mb-0">All Notifications
+      <h3 class="mb-0">Pendaftaran Tugas Akhir
         <button type="button" class="btn btn-tool" data-bs-toggle="modal" data-bs-target="#modalBantuan" title="Bantuan"><i class="fas fa-question-circle"></i>
         </button>
       </h3>
@@ -28,7 +28,7 @@
               <div class="row">
 
                 <div class="col-md-6">
-                  <b>Rentang Waktu :</b> 2023 &nbsp;
+                  <b>Periode Akademik :</b> 2023/2024 - Genap &nbsp;
                 </div>   
                 <div class="col-md-6">
                   <b>Status:</b> Semua
@@ -53,42 +53,47 @@
   <div class="card-body">
     <div class="table-responsive">
       <table class="table table-bordered table-striped table-sm datatables1">
-        <thead>
-          <tr>
-            <th>Time</th>
-            <th>Type</th>
-            <th>Title</th>
-            <th>Description</th>
-            <th>Action</th>
-          </tr>
+        <thead class="table-primary">
+            <tr>
+                <th>No</th>
+                <th>Tahun Akademik</th>
+                <th>Mahasiswa</th>
+                <th>Aktivitas</th>
+                <th>Judul</th>
+                <th>Dosen Pembimbing</th>
+                <th>Status Stage</th>
+                <th>Tanggal Mulai</th>
+                <th>Tanggal Selesai</th>
+                <th>Dokumen / File</th>
+                <th>Catatan / Notes</th>
+                <th>Aksi</th>
+                <th>Tanggal Pendaftaran</th>
+                <th>Formulir Pengajuan</th>
+                <th>Persetujuan Awal</th>
+            </tr>
         </thead>
         <tbody>
-
-          <!-- Required Action Example -->
-          <tr>
-            <td>2025-03-15 14:23:00</td>
-            <td><i class="fas fa-exclamation-circle notif-icon action-required"></i> Required</td>
-            <td>Approval Needed</td>
-            <td>You have <strong>8 actions</strong> requiring your confirmation.</td>
-            <td>
-              <button type="button" class="btn btn-outline-danger btn-sm" onclick="window.location.href='detail.php'"> Action
-              </button>
-            </td>
-          </tr>
-
-          <!-- Regular Message Example -->
-          <tr>
-            <td>2025-03-15 23:10:00</td>
-            <td><i class="fas fa-envelope notif-icon regular-msg"></i> Message</td>
-            <td>New Messages</td>
-            <td>You received <strong>4 new messages</strong> from system updates.</td>
-            <td>
-              <button class="btn btn-outline-info btn-sm " data-bs-toggle="modal" data-bs-target="#notifModal"> View
-              </button>
-            </td>
-          </tr>
+            <tr>
+                <td>1</td>
+                <td>2025-GASAL</td>
+                <td>Ahmad Nur</td>
+                <td>Skripsi</td>
+                <td>Analisis Data Akademik</td>
+                <td>Dr. Budi Santoso</td>
+                <td>In Progress</td>
+                <td>2025-01-01</td>
+                <td>-</td>
+                <td>/uploads/form_skripsi.pdf</td>
+                <td>Menunggu validasi</td>
+                <td>
+                    <button class="btn btn-sm btn-info">Detail</button>
+                </td>
+                <td>2025-01-05</td>
+                <td>/uploads/form_pengajuan.pdf</td>
+                <td>Disetujui Kaprodi</td>
+            </tr>
         </tbody>
-      </table>
+    </table>
 
 
     </div>
@@ -366,11 +371,3 @@
       </div>
 
 <?php include('5script.php'); ?>
-
-
-
-
-
-
-
-

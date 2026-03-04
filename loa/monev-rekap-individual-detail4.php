@@ -116,172 +116,111 @@
   <ul class="nav nav-tabs">   
     <li class="nav-item" onclick="window.location='monev-rekap-individual-detail.php'"><a class="nav-link ">Grafik</a></li>
     <li class="nav-item" onclick="window.location='monev-rekap-individual-detail2.php'"><a class="nav-link ">Tabel</a></li>
-    <li class="nav-item" onclick="window.location='monev-rekap-individual-detail4.php'"><a class="nav-link ">Riwayat CPL</a></li>
+    <li class="nav-item" onclick="window.location='monev-rekap-individual-detail4.php'"><a class="nav-link active">Riwayat CPL</a></li>
     <!-- <li class="nav-item" onclick="window.location='monev-rekap-individual-detail5.php'"><a class="nav-link ">Riwayat IK</a></li> -->
-    <li class="nav-item" onclick="window.location='monev-rekap-individual-detail3.php'"><a class="nav-link active">Riwayat MK</a></li>
+    <li class="nav-item" onclick="window.location='monev-rekap-individual-detail3.php'"><a class="nav-link ">Riwayat MK</a></li>
     <li class="nav-item" onclick="window.location='monev-rekap-individual-detail6.php'"><a class="nav-link "> KHS</a></li>
     <li class="nav-item" onclick="window.location='monev-rekap-individual-detail7.php'"><a class="nav-link ">IPK</a></li>
   </ul>
 
 
-
-
-<!-- ========== CARD 4:  Tabel CPL & Progress ========== --> 
-          <div id="tab_1">
-            <div class="card">
-              <div class="card-header">
-                <h5 class="card-title mb-0"><i class="fas fa-calendar-alt me-2"></i> Penempuhan Mata Kuliah</h5>
-                <div class="card-tools">
-                  <small class="text-muted">warna kuning adalah nilai dari perbaikan</small>
-                </div>
-              </div>
-              <div class="card-body p-0">
-
-                <div class="table-responsive">
-                  <table class="table table-sm table-hover table-bordered table-striped deta">
-                    <!-- THEAD -->
-                    <thead class="table-dark text-center">
-                     <tr align="center" >
-                      <!-- <th rowspan="2" style="vertical-align: middle;">Periode</th> -->
-                      <th rowspan="2" style="vertical-align: middle;">Mata Kuliah</th>
-                      <th rowspan="2" style="vertical-align: middle;">Nilai Akhir <br>(Angka)</th>
-                      <th colspan="15">Nilai CPMK</th>
-                    </tr>
-                      <tr align="center">                        
-                        <th>1</th>
-                        <th>2</th>
-                        <th>3</th>
-                        <th>4</th>
-                        <th>5</th>
-                        <th>6</th>
-                        <th>7</th>
-                        <th>8</th>
-                        <th>9</th>
-                        <th>10</th>
-                        <th>11</th>
-                        <th>12</th>
-                        <th>13</th>
-                        <th>14</th>
-                        <th>n</th>
-                      </tr>
-                    </thead>
-                    <!-- TBODY -->
-                    <tbody>
-                      <tr>
-                        <td colspan="17" class="bg-secondary" align="center">2023/2024 Genap</td>
-                      </tr>
-                      <tr>
-                        <!-- <td>2023/2024 Genap</td> -->
-                        <td>STK912 Kalkulus 3</td>    
-                        <td align="center">78</td>
-                        <td>68</td>
-                        <td>72</td>
-                        <td class="bg-warning">74</td>
-                        <td>58</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <!-- <td>2023/2024 Genap</td> -->
-                        <td>STK732 Metode Penelitian</td>    
-                        <td align="center">88</td>
-                        <td>88</td>
-                        <td>72</td>
-                        <td>74</td>
-                        <td>68</td>
-                        <td>89</td>
-                        <td>67</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <td colspan="17" class="bg-secondary" align="center">2023/2024 Gasal</td>
-                      </tr>
-                      <tr>
-                        <!-- <td>2023/2024 Gasal</td> -->
-                        <td>STK732 Pengantar Penelitian</td>    
-                        <td align="center">78</td>
-                        <td>78</td>
-                        <td>62</td>
-                        <td>64</td>
-                        <td>58</td>
-                        <td class="bg-warning">79</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <!-- <td>2023/2024 Gasal</td> -->
-                        <td>STK432 Pengantar Bahasa Indonesia</td>    
-                        <td align="center">78</td>
-                        <td>78</td>
-                        <td>62</td>
-                        <td>64</td>
-                        <td>58</td>
-                        <td class="bg-warning">79</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <td colspan="17" class="bg-secondary" align="center">2022/2023 Gasal</td>
-                      </tr>
-                      <tr>
-                        <!-- <td>2022/2023 Genap</td> -->
-                        <td>STK111 Pendidikan Agama</td>    
-                        <td align="center">78</td>
-                        <td>78</td>
-                        <td>62</td>
-                        <td>64</td>
-                        <td>58</td>
-                        <td class="bg-warning">79</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
+        <!-- ========== CARD : grafik detail 10 CPL ========== -->
+        <div class="card " id="cardGrafik">
+          <div class="card-header">
+            <h3 class="card-title">Grafik Line Kemajuan semua CPL</h3>
+            <div class="card-tools">
+              <small class="text-muted">Angkatan Terpilih</small>
+              <button class="btn btn-sm btn-outline-primary" onclick="showTabel()">
+                 Versi Tabel
+              </button>
             </div>
           </div>
+          <div class="card-body">
+            <canvas id="chartCPLSemester" style="width:100%; height:400px;"></canvas>
+          </div>
+        </div>
+                <!-- ========== CARD : Tabel detail 10 CPL ========== -->
+        <div class="card d-none" id="cardTabel">
+          <div class="card-header">
+            <h3 class="card-title">Tabel Data Kemajuan semua CPL</h3>
+            <div class="card-tools">
+              <small class="text-muted">Angkatan Terpilih</small>
+              <button class="btn btn-sm btn-outline-primary" onclick="showGrafik()">
+                 Versi Grafik
+              </button>
+            </div>            
+          </div>
+          <div class="card-body p-0">
+            <table class="table table-hover table-bordered table-sm">
+              <thead style="background-color: #f2f2f2;">
+                <tr>
+                  <th width="220px">Periode Semester</th>
+                  <th>CPL 1</th>
+                  <th>CPL 2</th>
+                  <th>CPL 3</th>
+                  <th>CPL 4</th>
+                  <th>CPL 5</th>
+                  <th>CPL 6</th>
+                  <th>CPL 7</th>
+                  <th>CPL 8</th>
+                  <th>CPL 9</th>
+                  <th>CPL 10</th>
+                </tr>
+              </thead>
+      <tbody>
+        <tr>
+          <td>sem1 [2024/2025 - Ganjil]</td>
+          <td>24</td><td>12</td><td>09</td><td>06</td><td>02</td><td>12</td><td>23</td><td>13</td><td>24</td><td>5</td>
+        </tr>
+        <tr>
+          <td>sem2 [2024/2025 - Genap]</td>
+          <td>70</td><td>75</td><td>72</td><td>78</td><td>80</td><td>82</td><td>85</td><td>84</td><td>83</td><td>5</td>
+        </tr>
+        <tr>
+          <td><a href="#detailallCPL" class="btn btn-sm btn-outline-info">sem3 [2025/2026 - Ganjil]</a></td>
+          <td><a href="#detailCPL1" class="btn btn-sm btn-outline-info">65</a></td><td>68</td><td>70</td><td>74</td><td>76</td><td>78</td><td>80</td><td>82</td><td>81</td><td>5</td>
+        </tr>
+        <tr>
+          <td>sem4 [2025/2026 - Genap]</td>
+          <td>85</td><td>87</td><td>86</td><td>88</td><td>90</td><td>92</td><td>91</td><td>93</td><td>94</td><td>5</td>
+        </tr>
+        <tr>
+          <td>>sem5 [2026/2027 - Ganjil]</td>
+          <td>72</td><td>74</td><td>76</td><td>78</td><td>79</td><td>81</td><td>83</td><td>84</td><td>86</td><td>9</td>
+        </tr>
+        <tr>
+          <td>sem6 [2026/2027 - Genap]</td>
+          <td>60</td><td>65</td><td>68</td><td>70</td><td>72</td><td>75</td><td>77</td><td>79</td><td>80</td><td>9</td>
+        </tr>
+        <tr>
+          <td>sem7 [2027/2028 - Ganjil]</td>
+          <td>88</td><td>85</td><td>87</td><td>89</td><td>90</td><td>91</td><td>92</td><td>93</td><td>94</td><td>9</td>
+        </tr>
+        <tr>
+          <td>sem8 [2027/2028 - Genap]</td>
+          <td>75</td><td>78</td><td>80</td><td>82</td><td>83</td><td>85</td><td>87</td><td>88</td><td>90</td><td>9</td>
+        </tr>
+        <tr>
+          <td><button  class="btn btn-sm btn-outline-info"onclick="window.location.href='monev-rekap-angkatan-detail.php'">sem9 [2028/2029 - Ganjil]</button></td>
+          <td>68</td><td>70</td><td><button  class="btn btn-sm btn-outline-info"onclick="window.location.href='monev-rekap-angkatan-detail2.php'">73</button></td><td>75</td><td>77</td><td>79</td><td>81</td><td>82</td><td>84</td><td>9</td>
+        </tr>
+        <tr>
+          <td>Perkembangan Tren </td>
+          <td>fluktuatif</td><td>stagnan</td><td>menaik</td><td>menurun</td><td>menaik</td><td>fluktiatif</td><td>menaik</td><td>menurun</td><td>menurun</td><td>stagnan</td>
+        </tr>
+      </tbody>
+      <tfoot style="background-color: #f9f9f9; font-weight: bold;">
+        <tr>
+          <td colspan="11">
+            <i>Sebanyak</i> 8 dari 10 CPL (80%) <i>menunjukkan tren peningkatan capaian dari semester awal hingga semester akhir.
+            Evaluasi dilakukan dengan melihat rerata capaian tiap semester serta konsistensi nilai ≥75 sebagai batas standar ketuntasan CPL.</i>baris status, dapat di 'klik', untuk melihat lebih detail.atau kolom semester,dapat di 'klik', untuk melihat lebih detail.
+          </td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+</div>
+
 
 
 
@@ -411,6 +350,126 @@
     </div>
   </div>
 
+<script>
+const ctxCPL = document.getElementById('chartCPLSemester').getContext('2d');
 
+new Chart(ctxCPL, {
+  type: 'line',
+  data: {
+    labels: [
+      'CPL 1','CPL 2','CPL 3','CPL 4','CPL 5',
+      'CPL 6','CPL 7','CPL 8','CPL 9','CPL 10'
+    ],
+
+
+    datasets: [
+      {
+        label: 'Sem 1 (2024/2025 - Ganjil)',
+        data: [53,40,48,51,49,53,50,47,52,49],
+        borderColor: '#6c757d',
+        backgroundColor: '#6c757d',
+        tension: 0.3
+      },
+
+      {
+        label: 'Sem 2 (2024/2025 - Genap)',
+        data: [55,57,53,56,54,58,55,52,57,54],
+        borderColor: '#6c757d',
+        backgroundColor: '#6c757d',
+        tension: 0.3
+      },
+
+      {
+        label: 'Sem 3 (2025/2026 - Ganjil)',
+        data: [60,62,58,61,59,59,60,57,62,59],
+        borderColor: '#dc3545',
+        backgroundColor: '#dc3545',
+        tension: 0.3
+      },
+
+      {
+        label: 'Sem 4 (2025/2026 - Genap)',
+        data: [65,67,63,61,64,62,65,62,67,64],
+        borderColor: '#dc3545',
+        backgroundColor: '#dc3545',
+        tension: 0.3
+      },
+
+      {
+        label: 'Sem 5 (2026/2027 - Ganjil)',
+        data: [70,72,68,68,69,73,70,67,72,69],
+        borderColor: '#ff9800',
+        backgroundColor: '#ff9800',
+        tension: 0.3
+      },
+
+      {
+        label: 'Sem 6 (2026/2027 - Genap)',
+        data: [75,77,73,76,74,78,75,72,77,74],
+        borderColor: '#ff9800',
+        backgroundColor: '#ff9800',
+        tension: 0.3
+      },
+
+      {
+        label: 'Sem 7 (2027/2028 - Ganjil)',
+        data: [80,82,78,81,79,83,80,77,82,79],
+        borderColor: '#4aa6ff',
+        backgroundColor: '#4aa6ff',
+        tension: 0.3
+      },
+
+      {
+        label: 'Sem 8 (2027/2028 - Genap)',
+        data: [85,87,83,86,84,88,80,82,87,84],
+        borderColor: '#4aa6ff',
+        backgroundColor: '#4aa6ff',
+        tension: 0.3
+      },
+
+      {
+        label: 'Sem 9 (2028/2029 - Ganjil)',
+        data: [90,92,88,91,89,93,82,87,92,89],
+        borderColor: '#007bff',
+        backgroundColor: '#007bff',
+        tension: 0.3,
+        borderWidth: 3
+      }
+
+    ]
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: true,
+    plugins: {
+      legend: {
+        position: 'bottom'
+      },
+      title: {
+        display: false,
+        text: 'Detail Rerata 10 CPL Sepanjang Maks. 9 Semester'
+      }
+    },
+    scales: {
+      y: {
+        beginAtZero: false,
+        max: 100
+      }
+    }
+  }
+});
+</script>
+
+<script>
+function showTabel() {
+  document.getElementById('cardGrafik').classList.add('d-none');
+  document.getElementById('cardTabel').classList.remove('d-none');
+}
+
+function showGrafik() {
+  document.getElementById('cardTabel').classList.add('d-none');
+  document.getElementById('cardGrafik').classList.remove('d-none');
+}
+</script>
 
 <?php include('5script.php'); ?>

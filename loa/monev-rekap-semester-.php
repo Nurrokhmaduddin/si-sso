@@ -418,7 +418,7 @@
 <!-- ========== CARD :  Tabel daftar detail CPMK ========== --> 
 <div class="card">
   <div class="card-header">
-    Daftar Rekap Capaian CPMK Seluruh Mata Kuliah 
+    Daftar CPMK 
     <div class="card-tools">
       <small class="text-muted">Semester Terpilih</small>
     </div>
@@ -620,7 +620,7 @@
           </tr>
           <tr>
             <td class="text-center">10</td>
-            <td class="text-center">51153061</td>
+            <td class="text-center">STS009</td>
             <td>Water Structures Design</td>
             <td class="text-center">3</td>
             <td class="text-center">5</td>

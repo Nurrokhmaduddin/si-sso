@@ -86,55 +86,6 @@
 
   <div class="card-body">
 
-
-
-    <!-- tabel tren 3 periode -->  
-    <h6><b>Tren Capaian Pembelajaran Mata Kuliah <i>3 Tahun Terakhir</i></b></h6>
-    <div class="table-responsive mb-4">
-      <table class="table table1 table-bordered table-striped table-sm">
-        <thead>
-          <tr>
-            <th>No</th>
-            <th>Indicator</th>
-            <th>2 Year Prior</th>
-            <th>1 Year Prior</th>
-            <th>Selected Year</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>1</td>
-            <td>% Mahasiswa Tuntas CPMK 1</td>
-            <td>85%</td>
-            <td>80%</td>
-            <td>92%</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>% Mahasiswa Tuntas CPMK 2</td>
-            <td>78%</td>
-            <td>75%</td>
-            <td>88%</td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>% Mahasiswa Tuntas CPMK 3</td>
-            <td>90%</td>
-            <td>82%</td>
-            <td>85%</td>
-          </tr>
-          <tr>
-            <td>4</td>
-            <td>% Mahasiswa Tuntas CPMK 4</td>
-            <td>88%</td>
-            <td>86%</td>
-            <td>90%</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-
     <!-- Grafik Rentang Nilai -->
     <h6><b>Distribusi Nilai Mahasiswa <i>Berdasarkan Rentang Nilai</i> </b></h6>
     <canvas id="stackedCPMKChart" height="70" class="mb-4"></canvas>
@@ -273,9 +224,55 @@
   </div>
 </div>
 
-
-
-
+<div class="card">
+  <div class="card-body">
+    <!-- tabel tren 3 periode -->  
+    <h6><b>Tren Capaian Pembelajaran Mata Kuliah <i>3 Tahun Terakhir</i></b></h6>
+    <div class="table-responsive mb-4">
+      <table class="table table1 table-bordered table-striped table-sm">
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>Indicator</th>
+            <th>2 Year Prior</th>
+            <th>1 Year Prior</th>
+            <th>Selected Year</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>% Mahasiswa Tuntas CPMK 1</td>
+            <td>85%</td>
+            <td>80%</td>
+            <td>92%</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>% Mahasiswa Tuntas CPMK 2</td>
+            <td>78%</td>
+            <td>75%</td>
+            <td>88%</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>% Mahasiswa Tuntas CPMK 3</td>
+            <td>90%</td>
+            <td>82%</td>
+            <td>85%</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>% Mahasiswa Tuntas CPMK 4</td>
+            <td>88%</td>
+            <td>86%</td>
+            <td>90%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
 
 
         </div>

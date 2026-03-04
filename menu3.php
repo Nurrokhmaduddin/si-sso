@@ -27,89 +27,42 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/1.13.3/css/OverlayScrollbars.min.css">
 
 <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap5.min.css">
+<style>
+    /* ===== CONTENT ===== */
 
- 
-        <style>
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 20px;
+    }
 
-body {
-  background: #f8f9fc;
-  font-family: 'Segoe UI', sans-serif;
-}
+    .menu-card {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 24px;
+      text-align: center;
+      cursor: pointer;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
 
-/* ===== Top Bar ===== */
-.top-bar {
-  background: white;
-  height: 70px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 30px;
-  border-bottom: 1px solid #e9ecef;
-}
+    .menu-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 28px rgba(0,0,0,0.1);
+    }
 
-.top-bar h1 {
-  font-size: 1.25rem;
-  font-weight: 600;
-  margin: 0;
-  color: #343a40;
-}
+    .menu-card h3 {
+      margin: 0;
+      font-size: 16px;
+      font-weight: 600;
+    }
 
-/* ===== Menu Section ===== */
-.menu-wrapper {
-  padding: 20px 20px;
-}
+    .menu-card p {
+      margin-top: 6px;
+      font-size: 13px;
+      color: #6b7280;
+    }
 
-.menu-description {
-  color: #6c757d;
-  font-size: 0.95rem;
-  margin-bottom: 20px;
-}
-
-/* Default (tidak hover) */
-.menu-card {
-  background: white;
-  border-radius: 16px;
-  padding: 35px 20px;
-  text-decoration: none;
-  color: #6c757d; /* abu-abu */
-  transition: all 0.25s ease;
-  border: 1px solid #f1f3f5;
-}
-
-.menu-card i {
-  font-size: 26px;
-  margin-bottom: 15px;
-  color: #6c757d; /* abu-abu */
-  transition: color 0.25s ease;
-}
-
-.menu-card h6 {
-  font-weight: 600;
-  margin: 0;
-  font-size: 0.95rem;
-  color: inherit; /* ikut warna parent */
-  transition: color 0.25s ease;
-}
-
-/* Hover */
-.menu-card:hover {
-  background: #007bff;
-  transform: translateY(-6px);
-  box-shadow: 0 15px 35px rgba(0,0,0,0.06);
-  border-color: #dee2e6;
-  color: white; /* ubah semua jadi white */
-}
-
-/* Paksa icon ikut berubah */
-.menu-card:hover i {
-  color: white;
-}
-
-.dropdown-toggle {
-  border-radius: 30px;
-  padding: 6px 14px;
-  font-size: 0.9rem;
-}
     /* ===== FOOTER ===== */
     .footer {
       text-align: center;
@@ -117,7 +70,40 @@ body {
       font-size: 12px;
       color: #9ca3af;
     }
-</style>
+  </style>
+  <style type="text/css">
+    .menu-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 24px;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.menu-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.1);
+}
+
+  </style>
+        <style>
+          /* ====== BOTTOM SECTION ====== */
+.bottom-section {
+  min-height: 450px;
+  text-align: center;
+}
+
+.description {
+  font-size: 0.95rem;
+  color: #4a5568;
+}
+
+        </style>
 </head>
 <body class="hold-transition layout-top-nav">
 <div class="wrapper">
@@ -180,129 +166,53 @@ body {
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
    
-<!-- ===== Menu Section ===== -->
-<div class="menu-wrapper container text-center">
-  <p class="menu-description">
-    Silahkan pilih sistem informasi atau proses bisnis yang ingin diakses
-  </p>
+   <!-- Bottom Section -->
+   <div class="bottom-section container ">
+    <!-- <h1>MENU UTAMA</h1> -->
+    <p class="description">[Pengguna Aktif] Silahkan pilih sistem informasi atau proses bisnis yang ingin diakses</p>
+    <div class="row g-4 justify-content-center menu-grid">
 
-  <div class="row g-4 justify-content-center">
-
-    <div class="col-md-3 col-6">
-      <a href="sso/" class="menu-card d-block">
-        <i class="fas fa-network-wired"></i>
-        <h6>SI-SSO</h6>
+      <a href="sso/" class="menu-card">
+        <h3>SSO</h3>
+        <p>Single Sign-On</p>
       </a>
-    </div>
-  <!-- Proses A -->
-  <div class="col-md-3 col-6">
-    <a href="#" class="menu-card d-block">
-      <i class="fas fa-cogs"></i>
-      <h6>Proses A</h6>
-    </a>
-  </div>
+      
+      <div class="menu-card"><h3>Proses A</h3><p>Modul Proses A</p></div>
+      <div class="menu-card"><h3>Proses B</h3><p>Modul Proses B</p></div>
+      <div class="menu-card"><h3>Akad</h3><p>Manajemen Akad</p></div>
 
-  <!-- Proses B -->
-  <div class="col-md-3 col-6">
-    <a href="#" class="menu-card d-block">
-      <i class="fas fa-cogs"></i>
-      <h6>Proses B</h6>
-    </a>
-  </div>
-  <!-- AKAD -->
-  <div class="col-md-3 col-6">
-    <a href="akad/" class="menu-card d-block">
-      <i class="fas fa-network-wired"></i>
-      <h6>SI-AKAD</h6>
-    </a>
-  </div>
-
-
-    <div class="col-md-3 col-6">
-      <a href="loa/" class="menu-card d-block">
-        <i class="fas fa-tv"></i>
-        <h6>SI-LOA</h6>
+      <a href="loa/" class="menu-card">
+        <h3>LOA</h3>
+        <p>Learning Outcome Assessment</p>
       </a>
-    </div>
 
-    <div class="col-md-3 col-6">
-      <a href="pta/" class="menu-card d-block">
-        <i class="fas fa-tv"></i>
-        <h6>SI-PTA</h6>
+      <a href="pta/" class="menu-card">
+        <h3>PTA</h3>
+        <p>Pengelolaan Tugas Akhir</p>
       </a>
-    </div>
-    <div class="col-md-3 col-6">
-      <a href="cme/" class="menu-card d-block">
-        <i class="fas fa-desktop"></i>
-        <h6>SI-CME</h6>
+
+      <div class="menu-card"><h3>LAB</h3><p>Manajemen Laboratorium</p></div>
+      <div class="menu-card"><h3>CME</h3><p>Conference Management Eventr</p></div>
+
+      <div class="menu-card"><h3>Marketing</h3><p>Divisi Pemasaran</p></div>
+      <div class="menu-card"><h3>Sales</h3><p>Divisi Penjualan</p></div>
+      <div class="menu-card"><h3>Operation</h3><p>Operasional</p></div>
+      <div class="menu-card"><h3>Finance</h3><p>Keuangan</p></div>
+
+      <div class="menu-card"><h3>Office</h3><p>Administrasi Kantor</p></div>
+      <a href="sekolah/" class="menu-card">
+        <h3>School</h3>
+        <p>Pengelolaan Sekolah</p>
       </a>
-    </div>
-    <div class="col-md-3 col-6">
-      <a href="mlab/" class="menu-card d-block">
-        <i class="fas fa-laptop"></i>
-        <h6>SI-MLAB</h6>
+      <a href="sqa/" class="menu-card">
+        <h3>SQA</h3>
+        <p>Test QA</p>
       </a>
+
+
+      
     </div>
-
-
-  <!-- Marketing -->
-  <div class="col-md-3 col-6">
-    <a href="#" class="menu-card d-block">
-      <i class="fas fa-bullhorn"></i>
-      <h6>Marketing</h6>
-    </a>
   </div>
-
-  <!-- Sales -->
-  <div class="col-md-3 col-6">
-    <a href="#" class="menu-card d-block">
-      <i class="fas fa-chart-line"></i>
-      <h6>Sales</h6>
-    </a>
-  </div>
-
-  <!-- Proses B -->
-  <div class="col-md-3 col-6">
-    <a href="#" class="menu-card d-block">
-      <i class="fas fa-cogs"></i>
-      <h6>Operation</h6>
-    </a>
-  </div>
-  <!-- Finance -->
-  <div class="col-md-3 col-6">
-    <a href="#" class="menu-card d-block">
-      <i class="fas fa-wallet"></i>
-      <h6>Finance</h6>
-    </a>
-  </div>
-
-  <!-- Office -->
-  <div class="col-md-3 col-6">
-    <a href="#" class="menu-card d-block">
-      <i class="fas fa-building"></i>
-      <h6>Office</h6>
-    </a>
-  </div>
-
-  <!-- School -->
-  <div class="col-md-3 col-6">
-    <a href="sekolah/" class="menu-card d-block">
-      <i class="fas fa-school"></i>
-      <h6>School</h6>
-    </a>
-  </div>
-
-  <!-- SQA -->
-  <div class="col-md-3 col-6">
-    <a href="sqa/" class="menu-card d-block">
-      <i class="fas fa-vial"></i>
-      <h6>SQA</h6>
-    </a>
-  </div>
-
-</div>
-  </div>
-</div>
   
 </div>
   <!-- /.content-wrapper -->

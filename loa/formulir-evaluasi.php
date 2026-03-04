@@ -71,13 +71,13 @@
 
             <div class="mb-3">
               <label class="form-label">Objek Evaluasi <span class="text-danger">*</span></label>
-              <input type="text" name="objek" class="form-control" placeholder="Contoh: CPL 4 - Angk 2021" required>
+              <input type="text" name="objek" class="form-control" placeholder="Contoh: CPL 4 - Angk 2021 - periode kumulatif sem1-sem8" required>
             </div>
 
-          <div class="mb-3">
+          <!-- <div class="mb-3">
             <label class="form-label">Periode <span class="text-danger">*</span></label>
             <input type="text" class="form-control" name="periode" required placeholder="Contoh: 2024/2025">
-          </div>
+          </div> -->
 
 
           <div class="mb-3">

@@ -1,4 +1,4 @@
-<?php $page = 'taskboard'; ?>
+<?php $page = 'master_mahasiswa'; ?>
 <?php include('1header.php'); ?>
 <?php include('2navbar.php'); ?>
 <?php include('3sidebar.php'); ?>
@@ -8,7 +8,7 @@
 
   <section class="content-header">
     <div class="container-fluid">
-      <h3 class="mb-0">All Notifications
+      <h3 class="mb-0">Mahasiswa
         <button type="button" class="btn btn-tool" data-bs-toggle="modal" data-bs-target="#modalBantuan" title="Bantuan"><i class="fas fa-question-circle"></i>
         </button>
       </h3>
@@ -24,12 +24,38 @@
         <div class="col-md-12">
           <!-- ========== CARD : Filter & Export ========== -->
           <div class="card">
+            <!-- <div class="card-header">
+              <h5 class="card-title mb-0"><i class="fas fa-filter "></i> Judul Tabel yang terdampak tombol aksi ini<button type="button" class="btn btn-tool" data-bs-toggle="modal" data-bs-target="#modalBantuan" title="Bantuan">
+                <i class="fas fa-question-circle"></i>
+              </button> </h5>
+              <div class="card-tools ms-auto">
+                <button class="btn btn-outline-info btn-sm " data-bs-toggle="modal" data-bs-target="#modalFilter">
+                  <i class="fas fa-filter me-1"></i> Filter
+                </button>
+                <button type="button" class="btn btn-outline-primary btn-sm " data-bs-toggle="modal" data-bs-target="#modalTambahData">
+                  <i class="fas fa-plus me-1"></i> Add
+                </button>
+                <button type="button" class="btn btn-outline-primary btn-sm " data-bs-toggle="modal" data-bs-target="#modalImpor">
+                  <i class="fas fa-file-upload me-1"></i> Import
+                </button>                
+                <button type="button" class="btn btn-outline-success btn-sm">
+                  <i class="fas fa-file-download me-1"></i> Export
+                </button>
+                 <button type="button" class="btn btn-outline-danger btn-sm" data-bs-toggle="modal" data-bs-target="#modalResetData">
+                  <i class="fas fa-ban me-1"></i> Reset
+                </button>
+                
+              </div>
+            </div> -->
             <div class="card-body ">
               <div class="row">
 
                 <div class="col-md-6">
-                  <b>Rentang Waktu :</b> 2023 &nbsp;
+                  <b>Angkatan:</b> 2023 &nbsp;
                 </div>   
+                <div class="col-md-6">
+                  <b>Jalur:</b> Semua
+                </div>
                 <div class="col-md-6">
                   <b>Status:</b> Semua
                 </div>
@@ -42,6 +68,18 @@
                 <button class="btn btn-outline-info btn-sm " data-bs-toggle="modal" data-bs-target="#modalFilter">
                   <i class="fas fa-filter me-1"></i> Filter
                 </button>
+                <button type="button" class="btn btn-outline-primary btn-sm " data-bs-toggle="modal" data-bs-target="#modalTambahData">
+                  <i class="fas fa-plus me-1"></i> Add
+                </button>
+                <button type="button" class="btn btn-outline-primary btn-sm " data-bs-toggle="modal" data-bs-target="#modalImpor">
+                  <i class="fas fa-file-upload me-1"></i> Import
+                </button>                
+                <button type="button" class="btn btn-outline-success btn-sm">
+                  <i class="fas fa-file-download me-1"></i> Export
+                </button>
+                <button type="button" class="btn btn-outline-danger btn-sm">
+                  <i class="fas fa-ban me-1"></i> Reset
+                </button>    
               </div>
             </div>
             
@@ -50,47 +88,143 @@
 
          <!-- ========== CARD : Tabel  Granular ========== -->
 <div class="card">
+<!--   <div class="card-header d-flex align-items-center">
+    <h5 class="card-title mb-0">Daftar Mahasiswa</h5>    
+  </div>
+ -->
   <div class="card-body">
     <div class="table-responsive">
       <table class="table table-bordered table-striped table-sm datatables1">
         <thead>
-          <tr>
-            <th>Time</th>
-            <th>Type</th>
-            <th>Title</th>
-            <th>Description</th>
-            <th>Action</th>
+          <tr class="text-uppercase text-center">
+            <th width="5px">No.</th>
+            <th>Username</th>
+            <th>DisplayName</th>
+            <th>Email/Nomor HP</th>
+            <th>Angkatan</th>
+            <th>Jalur/Jurusan</th>
+            <th>Foto</th>
+            <th>Status</th>
+            <th>Aksi</th>
           </tr>
         </thead>
         <tbody>
 
-          <!-- Required Action Example -->
           <tr>
-            <td>2025-03-15 14:23:00</td>
-            <td><i class="fas fa-exclamation-circle notif-icon action-required"></i> Required</td>
-            <td>Approval Needed</td>
-            <td>You have <strong>8 actions</strong> requiring your confirmation.</td>
-            <td>
-              <button type="button" class="btn btn-outline-danger btn-sm" onclick="window.location.href='detail.php'"> Action
-              </button>
+            <td class="text-center">1</td>
+            <td>19312137</td>
+            <td>Pramita Widyadari</td>
+            <td>pramita.widyadari@univ.ac.id</td>
+            <td class="text-center">2019</td>
+            <td>Civil Engineering Regular</td>
+            <td class="text-center"><img style="width:40px;" alt="Foto"></td>
+            <td class="text-center"><span class="badge badge-info">Aktif</span></td>
+            <td class="text-center">
+              <button type="button" class="btn btn-sm btn-outline-warning"><i class="fas fa-key"></i></button>
+              <button type="button" class="btn btn-sm btn-outline-primary"><i class="fas fa-edit"></i></button>
+              <button type="button" class="btn btn-sm btn-outline-danger"><i class="fas fa-trash"></i></button>
             </td>
           </tr>
 
-          <!-- Regular Message Example -->
           <tr>
-            <td>2025-03-15 23:10:00</td>
-            <td><i class="fas fa-envelope notif-icon regular-msg"></i> Message</td>
-            <td>New Messages</td>
-            <td>You received <strong>4 new messages</strong> from system updates.</td>
-            <td>
-              <button class="btn btn-outline-info btn-sm " data-bs-toggle="modal" data-bs-target="#notifModal"> View
-              </button>
+            <td class="text-center">2</td>
+            <td>19312376</td>
+            <td>Ho Aldika Novaldy Sumampow</td>
+            <td>aldika.sumampow@univ.ac.id</td>
+            <td class="text-center">2019</td>
+            <td>Civil Engineering Regular</td>
+            <td class="text-center"><img style="width:40px;" alt="Foto"></td>
+            <td class="text-center"><span class="badge badge-warning">Cuti</span></td>
+            <td class="text-center">
+              <button class="btn btn-sm btn-outline-info" onclick="window.location.href='monev-cpl-individual1.php' " ><i class="fas fa-info-circle"></i></button>
+              <button class="btn btn-sm btn-outline-primary"><i class="fas fa-upload"></i></button>
+              <button class="btn btn-sm btn-outline-success"><i class="fas fa-download"></i></button>
             </td>
           </tr>
+
+          <tr>
+            <td class="text-center">3</td>
+            <td>19312406</td>
+            <td>Annisa Regita Sintowati</td>
+            <td>annisa.sintowati@univ.ac.id</td>
+            <td class="text-center">2019</td>
+            <td>Civil Engineering Regular</td>
+            <td class="text-center"><img style="width:40px;" alt="Foto"></td>
+            <td class="text-center"><span class="badge badge-danger">Skors</span></td>
+            <td class="text-center">
+              <div class="btn-group">
+                <a href="portfolio_cpmk_detail2.php" target="_blank" class="btn btn-sm btn-outline-info">
+                  <i class="fas fa-external-link-alt"></i> View
+                </a>
+                <button type="button" class="btn btn-sm btn-outline-info dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown"></button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#"><i class="fas fa-edit text-primary"></i> Edit</a></li>
+                  <li><a class="dropdown-item" href="#"><i class="fas fa-trash text-danger"></i> Hapus</a></li>
+                  <li><a class="dropdown-item" href="#"><i class="fas fa-key text-warning"></i> Ubah Password</a></li>
+                </ul>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="text-center">4</td>
+            <td>19312418</td>
+            <td>Claudia Monica Aditama</td>
+            <td>claudia.aditama@univ.ac.id</td>
+            <td class="text-center">2019</td>
+            <td>Civil Engineering Regular</td>
+            <td class="text-center"><img style="width:40px;" alt="Foto"></td>
+            <td class="text-center"><span class="badge badge-danger">Drop Out</span></td>
+            <td class="text-center">
+              <button class="btn btn-sm btn-outline-warning">🔑</button>
+            </td>
+          </tr>
+          <tr>
+
+            <td class="text-center">5</td>
+            <td>19312424</td>
+            <td>Filza Aliyah Tasya</td>
+            <td>filza.tasya@univ.ac.id</td>
+            <td class="text-center">2019</td>
+            <td>Civil Engineering IP</td>
+            <td class="text-center"><img style="width:40px;" alt="Foto"></td>
+            <td class="text-center"><span class="badge badge-danger">Passed Out</span></td>
+            <td class="text-center">
+              <button class="btn btn-sm btn-outline-warning">🔑</button>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="text-center">6</td>
+            <td>19312424</td>
+            <td>Filza Aliyah Tasya</td>
+            <td>filza.tasya@univ.ac.id</td>
+            <td class="text-center">2019</td>
+            <td>Civil Engineering Regular</td>
+            <td class="text-center"><img style="width:40px;" alt="Foto"></td>
+            <td class="text-center"><span class="badge badge-success">Lulus</span></td>
+            <td class="text-center">
+              <div class="btn-group">
+                <button type="button" class="btn btn-sm btn-outline-info dropdown-toggle" 
+                data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fas fa-ellipsis-h"></i> Action
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#"><i class="fas fa-edit text-primary"></i> Edit Link</a></li>
+                <li><a class="dropdown-item" href="#"><i class="fas fa-trash-alt text-danger"></i> Hapus Data</a></li>
+                <li><a class="dropdown-item" href="#"><i class="fas fa-key text-warning"></i> Ubah Password</a></li>
+                <li><a class="dropdown-item" href="#"><i class="fas fa-upload text-success"></i> Upload File</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="portfolio_cpmk_detail2.php" target="_blank">
+                  <i class="fas fa-external-link-alt text-info"></i> View Link</a></li>
+                  <li><a class="dropdown-item" href="#"><i class="fas fa-download text-success"></i> Download File</a></li>
+                </ul>
+              </div>
+            </td>
+          </tr>
+
         </tbody>
       </table>
-
-
     </div>
   </div>
 </div>
@@ -338,39 +472,5 @@
   </div>
 </div>
 
-      <!-- Modal Popup -->
-      <div class="modal fade" id="notifModal" tabindex="-1" aria-labelledby="notifModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="notifModalLabel">Notification Details</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              <p><strong>Title:</strong> <span id="modalTitle"></span></p>
-              <p><strong>Description:</strong></p>
-              <p id="modalDesc"></p>
-
-              <div class="form-check mt-3">
-                <input class="form-check-input" type="checkbox" value="" id="markAsRead">
-                <label class="form-check-label" for="markAsRead">
-                  Anggap sudah dibaca dan tidak dimunculkan lagi
-                </label>
-              </div>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            </div>
-          </div>
-        </div>
-      </div>
 
 <?php include('5script.php'); ?>
-
-
-
-
-
-
-
-

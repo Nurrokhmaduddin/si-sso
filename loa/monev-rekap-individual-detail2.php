@@ -116,7 +116,7 @@
   <ul class="nav nav-tabs">   
     <li class="nav-item" onclick="window.location='monev-rekap-individual-detail.php'"><a class="nav-link ">Grafik</a></li>
     <li class="nav-item" onclick="window.location='monev-rekap-individual-detail2.php'"><a class="nav-link active">Tabel</a></li>
-    <li class="nav-item" onclick="window.location='monev-rekap-individual-detail3.php'"><a class="nav-link ">Riwayat</a></li>
+    <li class="nav-item" onclick="window.location='monev-rekap-individual-detail3.php'"><a class="nav-link ">Riwayat MK</a></li>
   </ul>
 
 

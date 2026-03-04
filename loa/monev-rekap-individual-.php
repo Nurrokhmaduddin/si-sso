@@ -266,7 +266,146 @@
               </div>
             </td>
           </tr>
-
+<tr>
+            <td class="text-center">7</td>
+            <td>19312424</td>
+            <td>Filza Aliyah Tasya</td>
+            <td>filza.tasya@univ.ac.id</td>
+            <td class="text-center">2019</td>
+            <td>Civil Engineering Regular</td>
+            <td class="text-center"><img style="width:40px;" alt="Foto"></td>
+            <td class="text-center"><span class="badge badge-success">Lulus</span></td>
+            <td class="text-center">
+              <div class="btn-group">
+                <button type="button" class="btn btn-sm btn-outline-info dropdown-toggle" 
+                data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fas fa-ellipsis-h"></i> Action
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#"><i class="fas fa-edit text-primary"></i> Edit Link</a></li>
+                <li><a class="dropdown-item" href="#"><i class="fas fa-trash-alt text-danger"></i> Hapus Data</a></li>
+                <li><a class="dropdown-item" href="#"><i class="fas fa-key text-warning"></i> Ubah Password</a></li>
+                <li><a class="dropdown-item" href="#"><i class="fas fa-upload text-success"></i> Upload File</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="portfolio_cpmk_detail2.php" target="_blank">
+                  <i class="fas fa-external-link-alt text-info"></i> View Link</a></li>
+                  <li><a class="dropdown-item" href="#"><i class="fas fa-download text-success"></i> Download File</a></li>
+                </ul>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="text-center">8</td>
+            <td>19312424</td>
+            <td>Filza Aliyah Tasya</td>
+            <td>filza.tasya@univ.ac.id</td>
+            <td class="text-center">2019</td>
+            <td>Civil Engineering Regular</td>
+            <td class="text-center"><img style="width:40px;" alt="Foto"></td>
+            <td class="text-center"><span class="badge badge-success">Lulus</span></td>
+            <td class="text-center">
+              <div class="btn-group">
+                <button type="button" class="btn btn-sm btn-outline-info dropdown-toggle" 
+                data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fas fa-ellipsis-h"></i> Action
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#"><i class="fas fa-edit text-primary"></i> Edit Link</a></li>
+                <li><a class="dropdown-item" href="#"><i class="fas fa-trash-alt text-danger"></i> Hapus Data</a></li>
+                <li><a class="dropdown-item" href="#"><i class="fas fa-key text-warning"></i> Ubah Password</a></li>
+                <li><a class="dropdown-item" href="#"><i class="fas fa-upload text-success"></i> Upload File</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="portfolio_cpmk_detail2.php" target="_blank">
+                  <i class="fas fa-external-link-alt text-info"></i> View Link</a></li>
+                  <li><a class="dropdown-item" href="#"><i class="fas fa-download text-success"></i> Download File</a></li>
+                </ul>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="text-center">9</td>
+            <td>19312424</td>
+            <td>Filza Aliyah Tasya</td>
+            <td>filza.tasya@univ.ac.id</td>
+            <td class="text-center">2019</td>
+            <td>Civil Engineering Regular</td>
+            <td class="text-center"><img style="width:40px;" alt="Foto"></td>
+            <td class="text-center"><span class="badge badge-success">Lulus</span></td>
+            <td class="text-center">
+              <div class="btn-group">
+                <button type="button" class="btn btn-sm btn-outline-info dropdown-toggle" 
+                data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fas fa-ellipsis-h"></i> Action
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#"><i class="fas fa-edit text-primary"></i> Edit Link</a></li>
+                <li><a class="dropdown-item" href="#"><i class="fas fa-trash-alt text-danger"></i> Hapus Data</a></li>
+                <li><a class="dropdown-item" href="#"><i class="fas fa-key text-warning"></i> Ubah Password</a></li>
+                <li><a class="dropdown-item" href="#"><i class="fas fa-upload text-success"></i> Upload File</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="portfolio_cpmk_detail2.php" target="_blank">
+                  <i class="fas fa-external-link-alt text-info"></i> View Link</a></li>
+                  <li><a class="dropdown-item" href="#"><i class="fas fa-download text-success"></i> Download File</a></li>
+                </ul>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="text-center">10</td>
+            <td>19312424</td>
+            <td>Filza Aliyah Tasya</td>
+            <td>filza.tasya@univ.ac.id</td>
+            <td class="text-center">2019</td>
+            <td>Civil Engineering Regular</td>
+            <td class="text-center"><img style="width:40px;" alt="Foto"></td>
+            <td class="text-center"><span class="badge badge-success">Lulus</span></td>
+            <td class="text-center">
+              <div class="btn-group">
+                <button type="button" class="btn btn-sm btn-outline-info dropdown-toggle" 
+                data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fas fa-ellipsis-h"></i> Action
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#"><i class="fas fa-edit text-primary"></i> Edit Link</a></li>
+                <li><a class="dropdown-item" href="#"><i class="fas fa-trash-alt text-danger"></i> Hapus Data</a></li>
+                <li><a class="dropdown-item" href="#"><i class="fas fa-key text-warning"></i> Ubah Password</a></li>
+                <li><a class="dropdown-item" href="#"><i class="fas fa-upload text-success"></i> Upload File</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="portfolio_cpmk_detail2.php" target="_blank">
+                  <i class="fas fa-external-link-alt text-info"></i> View Link</a></li>
+                  <li><a class="dropdown-item" href="#"><i class="fas fa-download text-success"></i> Download File</a></li>
+                </ul>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="text-center">11</td>
+            <td>19312424</td>
+            <td>Filza Aliyah Tasya</td>
+            <td>filza.tasya@univ.ac.id</td>
+            <td class="text-center">2019</td>
+            <td>Civil Engineering Regular</td>
+            <td class="text-center"><img style="width:40px;" alt="Foto"></td>
+            <td class="text-center"><span class="badge badge-success">Lulus</span></td>
+            <td class="text-center">
+              <div class="btn-group">
+                <button type="button" class="btn btn-sm btn-outline-info dropdown-toggle" 
+                data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fas fa-ellipsis-h"></i> Action
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#"><i class="fas fa-edit text-primary"></i> Edit Link</a></li>
+                <li><a class="dropdown-item" href="#"><i class="fas fa-trash-alt text-danger"></i> Hapus Data</a></li>
+                <li><a class="dropdown-item" href="#"><i class="fas fa-key text-warning"></i> Ubah Password</a></li>
+                <li><a class="dropdown-item" href="#"><i class="fas fa-upload text-success"></i> Upload File</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="portfolio_cpmk_detail2.php" target="_blank">
+                  <i class="fas fa-external-link-alt text-info"></i> View Link</a></li>
+                  <li><a class="dropdown-item" href="#"><i class="fas fa-download text-success"></i> Download File</a></li>
+                </ul>
+              </div>
+            </td>
+          </tr>
         </tbody>
       </table>
     </div>

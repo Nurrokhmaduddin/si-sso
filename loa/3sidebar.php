@@ -411,7 +411,7 @@
             <li class="nav-item">
               <a href="monev-rekap-tahunan-.php" class="nav-link <?php echo $page == 'monev_tahunan' ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
-                <p>Monev Setahun</p>
+                <p>Monev Tahunan</p>
               </a>
             </li>
 
@@ -520,12 +520,12 @@
                 <p>Progres kelas</p>
               </a>
             </li> -->
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <a href="progres-mk-semester.php" class="nav-link <?php echo $page == 'progress_mk' ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Progres MK</p>
               </a>
-            </li>
+            </li> -->
             <li class="nav-item">
               <a href="progres-cpl-semester.php" class="nav-link <?php echo $page == 'progress_cpl' ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
@@ -611,9 +611,9 @@
           </a>
           <ul class="nav nav-treeview">
             <!-- USER (LEVEL 2) -->
-             <li class="nav-item <?php echo in_array($page, ['pengaturan_user']) ? 'menu-open' : ''; ?>">
-              <a href="#" class="nav-link <?php echo in_array($page, ['pengaturan_user']) ? 'active' : ''; ?>">
-                <i class="far fa-circle nav-icon"></i>
+             <li class="nav-item <?php echo in_array($page, ['']) ? 'menu-open' : ''; ?>">
+              <a href="#" class="nav-link <?php echo in_array($page, ['pengaturan_user','pengaturan_role']) ? 'active' : ''; ?>">
+                <i class="nav-icon fas fa-cog"></i>
                 <p>
                   User
                   <i class="right fas fa-angle-left"></i>
@@ -623,16 +623,16 @@
               <!-- LEVEL 3 -->
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="pengaturan-user.php" class="nav-link <?php echo $page == 'pengaturan_user' ? 'active' : ''; ?>">
-                    <i class="nav-icon"></i>
-                    <p>Data User</p>
+                  <a href="pengaturan-users.php" class="nav-link <?php echo $page == 'pengaturan_user' ? 'active' : ''; ?>">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Data Pengguna</p>
                   </a>
                 </li>
 
                 <li class="nav-item">
-                  <a href="role-user.php" class="nav-link">
-                    <i class="far fa-dot-circle nav-icon"></i>
-                    <p>Role User</p>
+                  <a href="pengaturan-roles.php" class="nav-link <?php echo $page == 'pengaturan_role' ? 'active' : ''; ?>">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Peran & Hak Akses</p>
                   </a>
                 </li>
 
@@ -645,18 +645,18 @@
               </ul>
 
             </li>
-            <li class="nav-item">
-              <a href="pengaturan-users.php" class="nav-link <?php echo $page == 'pengaturan_user' ? 'active' : ''; ?>">
+            <!-- <li class="nav-item">
+              <a href="pengaturan-users.php" class="nav-link <?php echo $page == 'pengaturan_users' ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
                 <p>User</p>
               </a>
-            </li>
-            <li class="nav-item">
+            </li> -->
+            <!-- <li class="nav-item">
               <a href="pengaturan-roles.php" class="nav-link <?php echo $page == 'pengaturan_role' ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Peran & Hak Akses</p>
               </a>
-            </li>
+            </li> -->
             
             <li class="nav-item">
               <a href="aktivitas-laporan.php" class="nav-link">

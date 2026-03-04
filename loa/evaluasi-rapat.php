@@ -66,54 +66,7 @@
 
           </div>
 
-Level Longitudinal – “Peningkatan Berkelanjutan” Itu Maksudnya Apa?
 
-Jawabannya: bisa dua-duanya, dan memang seharusnya mencakup keduanya.
-
-🔹 A. Peningkatan pada Level Pelaksanaan (Teaching Improvement)
-
-Contoh:
-
-Semester 1: CPMK 2 = 64%
-
-Dosen ubah metode → tambah studi kasus
-
-Semester 2: CPMK 2 = 78%
-
-Ini peningkatan berkelanjutan di:
-
-Level proses pembelajaran
-
-Unitnya bisa:
-
-Antar semester
-
-Antar tahun akademik
-
-Antar kelas
-
-🔹 B. Peningkatan pada Level Struktur (Curriculum Improvement)
-
-Contoh:
-
-CPL 3 rendah selama 2 tahun
-
-Prodi revisi mapping bobot
-
-Tambah MK pendukung
-
-2 tahun berikutnya CPL 3 naik
-
-Ini peningkatan berkelanjutan di:
-
-Level desain kurikulum
-
-Jadi longitudinal itu bukan cuma angka naik,
-tapi bukti bahwa:
-
-Ada tindakan → ada dampak → terukur → berulang
-
-Itulah makna continuous improvement.
 <!-- ========== CARD 3: Tabel saja ========== -->
           <div class="card">
             <!-- <div class="card-header d-flex align-items-center">
@@ -162,51 +115,6 @@ Itulah makna continuous improvement.
             </tbody>
           </table>
 
-🔹 A. Evaluasi Hasil (Refleksi)
-
-Input oleh dosen/prodi:
-
-Contoh field:
-
-Analisis capaian (kenapa rendah/tinggi)
-
-Faktor penyebab
-
-Kendala
-
-Temuan kelas
-
-🔹 B. Rencana Perbaikan
-
-Field:
-
-Tindakan perbaikan
-
-Level tindakan (kelas/MK/kurikulum)
-
-Target perbaikan
-
-Periode implementasi
-
-🔹 C. Monitoring Dampak
-
-Semester berikutnya:
-
-Apakah target tercapai?
-
-Ada peningkatan?
-
-Ini membentuk siklus:
-
-Plan → Do → Check → Act
-
-Tanpa modul ini, sistem hanya:
-
-Monitoring statistik
-
-Dengan modul ini, sistem menjadi:
-
-Sistem kendali mutu berbasis PDCA
               </div>
             </div>
             <!-- /.card-body -->
@@ -214,7 +122,147 @@ Sistem kendali mutu berbasis PDCA
         </div>
       </div>
     </div>
-    Apakah Evaluasi & Rencana Perbaikan Harus di Semua Level?
+   
+  </section>
+
+
+
+<?php include('4footer.php'); ?>
+
+<!-- Modal Filter -->
+<div class="modal fade" id="modalFilter" tabindex="-1" aria-labelledby="modalFilterLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content rounded-3 shadow">
+      <div class="modal-header bg-info text-white">
+        <h5 class="modal-title" id="modalFilterLabel">Filter Data</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form action="" method="GET">
+        <div class="modal-body">
+
+          <!-- Catatan penting -->
+          <div class="alert alert-warning mb-3" role="alert" style="font-size: 0.9rem;">
+            <b>Informasi:</b> Halaman ini otomatis menampilkan data angkatan terbaru saat pertama dibuka. Data awal yang tampil adalah angkatan [2025].
+          </div>
+
+          <!-- Pilihan -->
+          <div class="mb-3">
+            <label for="lembaga" class="form-label">Status</label>
+            <select name="lembaga" id="lembaga" class="form-select">
+              <option value="">-- Pilih --</option>
+              <option value="IABEE" >pilihan 1</option>
+              <option value="LAM TEKNIK" >pilihan 2</option>
+              <option value="BATAP" >pilihan 3</option>
+              <option value="EDUSQUAD">pilihan 4</option>
+            </select>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+            <button type="submit" class="btn btn-info">Terapkan Filter</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal Bantuan -->
+<div class="modal fade" id="modalBantuan" tabindex="-1" aria-labelledby="modalBantuanLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header bg-primary text-white">
+        <h5 class="modal-title" id="modalBantuanLabel">Bantuan Tabel</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>
+          Halaman ini digunakan untuk menyimpan dan mengelola dokumen resmi terkait kebijakan dan keputusan implementasi OBE, seperti notulen rapat penting, SK, penetapan struktur, kebijakan akademik, serta dokumen formal lainnya sebagai bagian dari dokumentasi dan evidence penjaminan mutu.
+        </p>
+        <p>
+          Menu untuk <strong>upload file PDF Rapat Evaluasi</strong> dan menampilkan daftar file yang telah diunggah. 
+        </p>
+        <p>
+          Saya sarankan struktur seperti ini:
+
+Dosen (Per Kelas)
+
+✔ Evaluasi hasil
+✔ Rencana perbaikan kelas
+
+Koordinator MK
+
+✔ Evaluasi agregat semua kelas
+✔ Rencana perbaikan MK
+
+Prodi
+
+✔ Evaluasi CPL
+✔ Evaluasi mapping
+✔ Rencana perbaikan kurikulum
+
+Tidak perlu semua level mengisi semua hal.
+Cukup sesuai perannya.
+        </p>
+        <p>
+          1. Cohort View
+
+Gunakan ketika ingin menjawab:
+
+Apakah mutu lulusan stabil antar angkatan?
+
+Apakah CPL angkatan 2020 lebih baik dari 2021?
+
+Apakah perubahan kurikulum 2022 berdampak?
+
+Dipakai untuk:
+✔ Pilar 1 – Outcome jangka panjang
+✔ Pilar 2 – Stabilitas antar angkatan
+
+Tidak cocok untuk analisis operasional harian.
+
+🟢 2. Semester View
+
+Gunakan ketika ingin menjawab:
+
+Bagaimana performa kelas semester ini?
+
+Apakah CPMK semester ini rendah?
+
+Apakah metode baru efektif?
+
+Dipakai untuk:
+✔ Evaluasi dosen
+✔ Monitoring proses
+✔ Tindakan cepat
+
+Ini analisis mikro-operasional.
+
+🟠 3. Academic Year View
+
+Gunakan ketika ingin menjawab:
+
+Bagaimana performa sistem dalam 1 tahun akademik?
+
+Apakah terjadi anomali tahun ini?
+
+Bagaimana rata-rata CPL seluruh mahasiswa tahun ini?
+
+Ini analisis sistem tahunan.
+
+Dipakai untuk:
+✔ Laporan tahunan
+✔ Audit internal
+✔ Akreditasi
+
+6️⃣ Perbandingan Ringkas
+View  Unit Analisis Tujuan  Level
+Cohort  Angkatan mahasiswa  Stabilitas & mutu lulusan Strategis
+Semester  Kelas/MK periode tertentu Evaluasi proses Operasional
+Academic Year Seluruh sistem 1 tahun  Monitoring sistem Manajerial
+        </p>
+        <p> Apakah Evaluasi & Rencana Perbaikan Harus di Semua Level?
 
 Secara ideal OBE: ya, tapi proporsional.
 Tidak semua level perlu detail yang sama.
@@ -315,88 +363,105 @@ Apakah ada CPL dengan capaian rendah terus-menerus?
 
 Jadi mapping itu dasar,
 tapi analisis distribusi & bobot yang membuatnya bermakna.
-  </section>
+</p>
+<p>
+  
+🔹 A. Evaluasi Hasil (Refleksi)
 
+Input oleh dosen/prodi:
 
+Contoh field:
 
-<?php include('4footer.php'); ?>
+Analisis capaian (kenapa rendah/tinggi)
 
-<!-- Modal Filter -->
-<div class="modal fade" id="modalFilter" tabindex="-1" aria-labelledby="modalFilterLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content rounded-3 shadow">
-      <div class="modal-header bg-info text-white">
-        <h5 class="modal-title" id="modalFilterLabel">Filter Data</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <form action="" method="GET">
-        <div class="modal-body">
+Faktor penyebab
 
-          <!-- Catatan penting -->
-          <div class="alert alert-warning mb-3" role="alert" style="font-size: 0.9rem;">
-            <b>Informasi:</b> Halaman ini otomatis menampilkan data angkatan terbaru saat pertama dibuka. Data awal yang tampil adalah angkatan [2025].
-          </div>
+Kendala
 
-          <!-- Pilihan -->
-          <div class="mb-3">
-            <label for="lembaga" class="form-label">Status</label>
-            <select name="lembaga" id="lembaga" class="form-select">
-              <option value="">-- Pilih --</option>
-              <option value="IABEE" >pilihan 1</option>
-              <option value="LAM TEKNIK" >pilihan 2</option>
-              <option value="BATAP" >pilihan 3</option>
-              <option value="EDUSQUAD">pilihan 4</option>
-            </select>
-          </div>
+Temuan kelas
 
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
-            <button type="submit" class="btn btn-info">Terapkan Filter</button>
-          </div>
-        </div>
-      </form>
-    </div>
-  </div>
-</div>
+🔹 B. Rencana Perbaikan
 
+Field:
 
-<!-- Modal Bantuan -->
-<div class="modal fade" id="modalBantuan" tabindex="-1" aria-labelledby="modalBantuanLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <div class="modal-header bg-primary text-white">
-        <h5 class="modal-title" id="modalBantuanLabel">Bantuan Tabel</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <p>
-          Halaman ini digunakan untuk menyimpan dan mengelola dokumen resmi terkait kebijakan dan keputusan implementasi OBE, seperti notulen rapat penting, SK, penetapan struktur, kebijakan akademik, serta dokumen formal lainnya sebagai bagian dari dokumentasi dan evidence penjaminan mutu.
-        </p>
-        <p>
-          Menu untuk <strong>upload file PDF Rapat Evaluasi</strong> dan menampilkan daftar file yang telah diunggah. 
-        </p>
-        <p>
-          Saya sarankan struktur seperti ini:
+Tindakan perbaikan
 
-Dosen (Per Kelas)
+Level tindakan (kelas/MK/kurikulum)
 
-✔ Evaluasi hasil
-✔ Rencana perbaikan kelas
+Target perbaikan
 
-Koordinator MK
+Periode implementasi
 
-✔ Evaluasi agregat semua kelas
-✔ Rencana perbaikan MK
+🔹 C. Monitoring Dampak
 
-Prodi
+Semester berikutnya:
 
-✔ Evaluasi CPL
-✔ Evaluasi mapping
-✔ Rencana perbaikan kurikulum
+Apakah target tercapai?
 
-Tidak perlu semua level mengisi semua hal.
-Cukup sesuai perannya.
-        </p>
+Ada peningkatan?
+
+Ini membentuk siklus:
+
+Plan → Do → Check → Act
+
+Tanpa modul ini, sistem hanya:
+
+Monitoring statistik
+
+Dengan modul ini, sistem menjadi:
+
+Sistem kendali mutu berbasis PDCA
+</p>
+<p>
+  Level Longitudinal – “Peningkatan Berkelanjutan” Itu Maksudnya Apa?
+
+Jawabannya: bisa dua-duanya, dan memang seharusnya mencakup keduanya.
+
+🔹 A. Peningkatan pada Level Pelaksanaan (Teaching Improvement)
+
+Contoh:
+
+Semester 1: CPMK 2 = 64%
+
+Dosen ubah metode → tambah studi kasus
+
+Semester 2: CPMK 2 = 78%
+
+Ini peningkatan berkelanjutan di:
+
+Level proses pembelajaran
+
+Unitnya bisa:
+
+Antar semester
+
+Antar tahun akademik
+
+Antar kelas
+
+🔹 B. Peningkatan pada Level Struktur (Curriculum Improvement)
+
+Contoh:
+
+CPL 3 rendah selama 2 tahun
+
+Prodi revisi mapping bobot
+
+Tambah MK pendukung
+
+2 tahun berikutnya CPL 3 naik
+
+Ini peningkatan berkelanjutan di:
+
+Level desain kurikulum
+
+Jadi longitudinal itu bukan cuma angka naik,
+tapi bukti bahwa:
+
+Ada tindakan → ada dampak → terukur → berulang
+
+Itulah makna continuous improvement.
+</p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
@@ -414,56 +479,63 @@ Cukup sesuai perannya.
       <!-- Header -->
       <div class="modal-header bg-light">
         <h5 class="modal-title fw-semibold">
-          <i class="fas fa-bullhorn me-2 text-primary"></i>
-          Tambah Pengumuman Akademik
+          <i class="fas fa-upload me-2 text-primary"></i>
+          Upload Dokumen Akademik
         </h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
       </div>
 
-      <!-- Body -->
-      <div class="modal-body">
-        <form action="#" method="POST">
+      <!-- Form -->
+      <form action="proses-upload.php" method="POST" enctype="multipart/form-data">
 
-          <!-- Judul -->
+        <!-- Body -->
+        <div class="modal-body">
+
+          <!-- Tanggal Upload -->
           <div class="mb-3">
-            <label class="form-label fw-medium">Judul Pengumuman</label>
-            <input type="text" class="form-control" placeholder="Masukkan judul pengumuman" required>
+            <label class="form-label fw-medium">Tanggal Upload</label>
+            <input type="date" 
+                   name="tanggal_upload" 
+                   class="form-control" 
+                   required>
           </div>
 
-          <!-- Isi -->
+          <!-- Keterangan -->
           <div class="mb-3">
-            <label class="form-label fw-medium">Isi Pengumuman</label>
-            <textarea class="form-control" rows="5" placeholder="Tulis isi pengumuman..." required></textarea>
+            <label class="form-label fw-medium">Keterangan</label>
+            <textarea name="keterangan" 
+                      class="form-control" 
+                      rows="4" 
+                      placeholder="Tulis keterangan dokumen..." 
+                      required></textarea>
           </div>
 
-          <!-- Status -->
+          <!-- Pilih File -->
           <div class="mb-3">
-            <label class="form-label fw-medium">Status</label>
-            <select class="form-select">
-              <option value="publish">Publish</option>
-              <option value="draft">Draft</option>
-            </select>
+            <label class="form-label fw-medium">Pilih File</label>
+            <input type="file" 
+                   name="file_upload" 
+                   class="form-control" 
+                   accept=".pdf,.doc,.docx,.xls,.xlsx,.png,.jpg,.jpeg"
+                   required>
+            <small class="text-muted">
+              Format: PDF, Word, Excel, JPG, PNG. Maksimal 5MB.
+            </small>
           </div>
 
-          <!-- Tanggal Publish -->
-          <div class="mb-3">
-            <label class="form-label fw-medium">Tanggal Publish</label>
-            <input type="date" class="form-control">
-            <small class="text-muted">Kosongkan jika status Draft</small>
-          </div>
+        </div>
 
-        </form>
-      </div>
+        <!-- Footer -->
+        <div class="modal-footer bg-light">
+          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+            Batal
+          </button>
+          <button type="submit" name="submit_upload" class="btn btn-primary">
+            <i class="fas fa-save me-2"></i>Simpan
+          </button>
+        </div>
 
-      <!-- Footer -->
-      <div class="modal-footer bg-light">
-        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
-          Batal
-        </button>
-        <button type="submit" class="btn btn-primary">
-          <i class="fas fa-save me-2"></i>Simpan
-        </button>
-      </div>
+      </form>
 
     </div>
   </div>
@@ -471,58 +543,3 @@ Cukup sesuai perannya.
 
 <?php include('5script.php'); ?>
 
-1. Cohort View
-
-Gunakan ketika ingin menjawab:
-
-Apakah mutu lulusan stabil antar angkatan?
-
-Apakah CPL angkatan 2020 lebih baik dari 2021?
-
-Apakah perubahan kurikulum 2022 berdampak?
-
-Dipakai untuk:
-✔ Pilar 1 – Outcome jangka panjang
-✔ Pilar 2 – Stabilitas antar angkatan
-
-Tidak cocok untuk analisis operasional harian.
-
-🟢 2. Semester View
-
-Gunakan ketika ingin menjawab:
-
-Bagaimana performa kelas semester ini?
-
-Apakah CPMK semester ini rendah?
-
-Apakah metode baru efektif?
-
-Dipakai untuk:
-✔ Evaluasi dosen
-✔ Monitoring proses
-✔ Tindakan cepat
-
-Ini analisis mikro-operasional.
-
-🟠 3. Academic Year View
-
-Gunakan ketika ingin menjawab:
-
-Bagaimana performa sistem dalam 1 tahun akademik?
-
-Apakah terjadi anomali tahun ini?
-
-Bagaimana rata-rata CPL seluruh mahasiswa tahun ini?
-
-Ini analisis sistem tahunan.
-
-Dipakai untuk:
-✔ Laporan tahunan
-✔ Audit internal
-✔ Akreditasi
-
-6️⃣ Perbandingan Ringkas
-View  Unit Analisis Tujuan  Level
-Cohort  Angkatan mahasiswa  Stabilitas & mutu lulusan Strategis
-Semester  Kelas/MK periode tertentu Evaluasi proses Operasional
-Academic Year Seluruh sistem 1 tahun  Monitoring sistem Manajerial

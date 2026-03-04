@@ -171,14 +171,33 @@ canvas {
         <button class="btn btn-outline-danger btn-sm flex-fill col-5" onclick="openAllRisikoPreview()">CPMK Belum Tuntas</button>
       </div> -->
 </div>
-<!-- ========== CARD 4: tabel tren 3 periode ========== -->  
-<div class="card">
+<!-- ================= CARD: Perbandingan Periode ================= -->
+<div class="card" id="cardGrafik">
   <div class="card-header">
-    <h5 class="card-title mb-0">Tren Capaian 10 CPL (3 Periode)</h5>
+    <h3 class="card-title">Grafik Radar Rata-rata semua CPL</h3>
     <div class="card-tools">
-      <small class="text-muted">Data rerata capaian per tahun</small>
-    </div>
-  </div>
+      <small class="text-muted">3 Tahun Terakhir</small>
+      <button class="btn btn-sm btn-outline-primary" onclick="showTabel()">
+       Versi Tabel
+     </button>
+   </div>
+ </div>
+ <div class="card-body">
+
+  <canvas id="radarPeriode" height="500px"></canvas>
+</div>
+</div>
+<!-- ========== CARD 4: tabel tren 3 periode ========== -->  
+<div class="card d-none" id="cardTabel">
+  <div class="card-header">
+    <h5 class="card-title mb-0">Tabel Tren Rata-rata semua CPL</h5>
+    <div class="card-tools">
+      <small class="text-muted">3 Tahun Terakhir</small>
+      <button class="btn btn-sm btn-outline-primary" onclick="showGrafik()">
+       Versi Grafik
+     </button>
+   </div>
+ </div>
   <div class="card-body">
     <table class="table table-bordered table-striped table-sm datatables1">
       <thead class="table-light">
@@ -287,12 +306,15 @@ canvas {
     </table>
   </div>
 </div>
+
+
+
 <!-- ========== CARD: Tabel Tren 30 IK (3 Periode) ========== -->  
 <div class="card">
   <div class="card-header">
-    <h5 class="card-title mb-0">Tren Capaian 30 IK (3 Periode)</h5>
+    <h5 class="card-title mb-0">Tren Capaian Rata-rata semua IK </h5>
     <div class="card-tools">
-      <small class="text-muted">Data rerata capaian indikator kinerja per tahun</small>
+      <small class="text-muted">3 Tahun Terakhir</small>
     </div>
   </div>
   <div class="card-body">
@@ -1340,8 +1362,8 @@ generateHorizontalChart(
     data: {
       labels: ['CPL 1', 'CPL 2', 'CPL 3', 'CPL 4', 'CPL 5', 'CPL 6', 'CPL 7', 'CPL 8', 'CPL 9', 'CPL 10', 'CPL 11'],
       datasets: [{
-        label: 'Rerata Nilai CPL gg',
-        data: [80, 90, 75, 85, 88,65, 67, 70, 55, 30, 23],
+        label: 'Rerata Nilai CPL ',
+        data: [90, 90, 90, 90, 90, 90, 90, 90, 90, 90, 90],
             // Warna hijau lembut (lebih nyaman di mata)
         backgroundColor: 'rgba(80, 200, 120, 0.35)',
         borderColor: 'rgba(60, 160, 95, 0.9)',
@@ -1652,5 +1674,102 @@ new Chart(ctx4, {
 });
 </script>
 
+<script>
 
+// ===============================
+// DATA DUMMY (Ganti sesuai kebutuhan)
+// ===============================
+
+const labelsCPL = [
+  'CPL 1','CPL 2','CPL 3','CPL 4','CPL 5',
+  'CPL 6','CPL 7','CPL 8','CPL 9','CPL 10','CPL 11'
+];
+
+const periodeA = [75, 82, 70, 88, 90, 65, 72, 60, 55, 45, 50];
+const periodeB = [80, 85, 78, 90, 92, 70, 76, 68, 60, 55, 58];
+const periodeC = [90, 90, 90, 90, 90, 90, 90, 90, 90, 90, 90];
+
+
+// ===============================
+// 1️⃣ RADAR CHART (2 Periode)
+// ===============================
+
+const radarCth = document.getElementById('radarPeriode').getContext('2d');
+
+new Chart(radarCth, {
+  type: 'radar',
+  data: {
+    labels: labelsCPL,
+    datasets: [
+      {
+        label: '2 Year Prior',
+        data: periodeA,
+        backgroundColor: 'rgba(108,117,125,0.20)',
+        borderColor: 'rgba(108,117,125,0.85)',
+        borderWidth: 2,
+        pointBackgroundColor: 'rgba(108,117,125,1)'
+      },
+      {
+        label: '1 Year Prior',
+        data: periodeB,
+        backgroundColor: 'rgba(13,110,253,0.22)',
+        borderColor: 'rgba(13,110,253,0.95)',
+        borderWidth: 2,
+        pointBackgroundColor: 'rgba(13,110,253,1)'
+      },
+      // {
+      //   label: '1 Year Prior',
+      //   data: periodeB,
+      //   backgroundColor: 'rgba(255,152,0,0.22)',
+      //   borderColor: 'rgba(245,124,0,0.95)',
+      //   borderWidth: 2,
+      //   pointBackgroundColor: 'rgba(245,124,0,1)'
+      // },
+      // {
+      //   label: 'Selected Year',
+      //   data: periodeC,
+      //   backgroundColor: 'rgba(13,110,253,0.22)',
+      //   borderColor: 'rgba(13,110,253,0.95)',
+      //   borderWidth: 3,
+      //   pointBackgroundColor: 'rgba(13,110,253,1)'
+      // }
+      {
+      label: 'Selected Year',
+      data: periodeC,
+      backgroundColor: 'rgba(80, 200, 120, 0.35)',
+      borderColor: 'rgba(60, 160, 95, 0.9)',
+      borderWidth: 3,
+      pointBackgroundColor: 'rgba(60, 160, 95, 1)'
+    }
+    ]
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    scales: {
+      r: {
+        min: 0,
+        max: 100,
+        ticks: { stepSize: 20 }
+      }
+    },
+    plugins: {
+      legend: {
+        position: 'top'
+      }
+    }
+  }
+});
+</script>
+<script>
+function showTabel() {
+  document.getElementById('cardGrafik').classList.add('d-none');
+  document.getElementById('cardTabel').classList.remove('d-none');
+}
+
+function showGrafik() {
+  document.getElementById('cardTabel').classList.add('d-none');
+  document.getElementById('cardGrafik').classList.remove('d-none');
+}
+</script>
 <?php include('5script.php'); ?>

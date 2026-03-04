@@ -39,11 +39,11 @@
       </tr>
       <tr>
         <th>Periode Semester</th>
-        <td>sem3 [2025/2026 - Ganjil]</td>
+        <td>sem9 [2028/2029 - Ganjil]</td>
       </tr>
       <tr>
         <th style="width:200px;">Kode CPL</th>
-        <td>CPL 1</td>
+        <td>CPL 3</td>
       </tr>
       <tr>
         <th>Deskripsi</th>
@@ -107,7 +107,7 @@
       </table>
     </div>
 <!-- Tabel Perbandingan kelas-->
-    <h6><b>Perbandingan Capaian <i>Antar Angkatan</i></b> </h6>
+    <h6><b>Perbandingan Capaian sem3 [2025/2026 - Ganjil] <i>Antar Angkatan</i></b> </h6>
     <div class="table-responsive">
       <table class="table table-bordered table-striped table-sm text-center">
         <thead class="table-dark">
@@ -121,21 +121,21 @@
         <tbody>
 
           <tr>
-            <td>% CPL Angkatan 2022</td>
+            <td>% Tuntas Angkatan 2022</td>
             <td>68</td>
             <td>70</td>
             <td>74</td>
           </tr>
 
           <tr>
-            <td>% CPL Angkatan 2023</td>
+            <td>% Tuntas Angkatan 2023</td>
             <td>72</td>
             <td>69</td>
             <td>76</td>
           </tr>
 
           <tr>
-            <td>% CPL Angkatan 2024</td>
+            <td>% Tuntas Angkatan 2024</td>
             <td>75</td>
             <td>71</td>
             <td>80</td>
@@ -250,7 +250,7 @@
   new Chart(ctx2, {
     type: 'bar',
     data: {
-      labels: ['IK 4', 'IK 5',  'CPL2'],
+      labels: ['IK 4', 'IK 5',  'CPL 3'],
       datasets: [
         {
           label: 'Rerata Skor',

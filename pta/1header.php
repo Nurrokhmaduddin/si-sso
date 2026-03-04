@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SSO v4 | CDN Version</title>
 
-
   <!-- Google Font -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
 
@@ -26,10 +25,6 @@
 
 <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap5.min.css">
 
-
-
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
@@ -37,5 +32,12 @@
 $q = $_SERVER['QUERY_STRING'] ?? '';
 // atau rebuild dari $_GET:
 $q = !empty($_GET) ? '?'.http_build_query($_GET) : '';
+?>
 
+<?php 
+// Ambil peran 
+$role = isset($_GET['peran']) && $_GET['peran'] !== '' ? ucfirst($_GET['peran']) : 'SuperAdmin'; 
+// Ambil seluruh query string (peran & data lain) 
+$q = $_SERVER['QUERY_STRING']; 
+$q = $q ? "?$q" : ""; 
 ?>
