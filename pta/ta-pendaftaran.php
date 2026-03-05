@@ -64,12 +64,7 @@
                 <th>Status Stage</th>
                 <th>Tanggal Mulai</th>
                 <th>Tanggal Selesai</th>
-                <th>Dokumen / File</th>
-                <th>Catatan / Notes</th>
                 <th>Aksi</th>
-                <th>Tanggal Pendaftaran</th>
-                <th>Formulir Pengajuan</th>
-                <th>Persetujuan Awal</th>
             </tr>
         </thead>
         <tbody>
@@ -83,14 +78,9 @@
                 <td>In Progress</td>
                 <td>2025-01-01</td>
                 <td>-</td>
-                <td>/uploads/form_skripsi.pdf</td>
-                <td>Menunggu validasi</td>
                 <td>
                     <button class="btn btn-sm btn-info">Detail</button>
                 </td>
-                <td>2025-01-05</td>
-                <td>/uploads/form_pengajuan.pdf</td>
-                <td>Disetujui Kaprodi</td>
             </tr>
         </tbody>
     </table>

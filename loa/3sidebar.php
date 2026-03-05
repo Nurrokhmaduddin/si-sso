@@ -601,8 +601,8 @@
   </ul>
 </li>
         <!-- PENGATURAN -->
-        <li class="nav-item <?php echo in_array($page, ['pengaturan_user','pengaturan_role']) ? 'menu-open' : ''; ?>">
-          <a href="#" class="nav-link <?php echo in_array($page, ['pengaturan_user','pengaturan_role']) ? 'active' : ''; ?>">
+        <li class="nav-item <?php echo in_array($page, ['pengaturan_user','pengaturan_role','pengaturan_app']) ? 'menu-open' : ''; ?>">
+          <a href="#" class="nav-link <?php echo in_array($page, ['pengaturan_user','pengaturan_role','pengaturan_app']) ? 'active' : ''; ?>">
             <i class="nav-icon fas fa-cog"></i>
             <p>
               Pengaturan
@@ -635,13 +635,18 @@
                     <p>Peran & Hak Akses</p>
                   </a>
                 </li>
-
                 <li class="nav-item">
+                  <a href="reset-password.php" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Reset Password</p>
+                  </a>
+                </li>
+                <!-- <li class="nav-item">
                   <a href="reset-password.php" class="nav-link">
                     <i class="far fa-dot-circle nav-icon"></i>
                     <p>Reset Password</p>
                   </a>
-                </li>
+                </li> -->
               </ul>
 
             </li>
@@ -660,14 +665,14 @@
             
             <li class="nav-item">
               <a href="aktivitas-laporan.php" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
+                <i class="fas fa-cog nav-icon"></i>
                 <p>Audit Log</p>
               </a>
             </li>
            
             <li class="nav-item">
-              <a href="pengaturan-app.php" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
+              <a href="pengaturan-app.php" class="nav-link <?php echo $page == 'pengaturan_app' ? 'active' : ''; ?>">
+                <i class="fas fa-cog nav-icon"></i>
                 <p>Aplikasi</p>
               </a>
             </li>

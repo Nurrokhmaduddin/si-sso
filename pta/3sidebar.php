@@ -425,8 +425,8 @@
         </li> -->
 
         <!-- MONITOR AKTIVITAS -->
-        <li class="nav-item">
-          <a href="#" class="nav-link">
+        <li class="nav-item <?php echo in_array($page, ['monev_ta','monev_penilaian_pembimbing','monev_pustaka_publikasi','monev_pustaka_ta','monev_kinerja_mahasiswa','monev_kinerja_pembimbing','monev_nilai_ujian','monev_nilai_responsi','monev_magang','monev_rbb','monev_ta_publikasi']) ? 'menu-open' : ''; ?>">
+          <a href="#" class="nav-link <?php echo in_array($page, ['monev_ta','monev_penilaian_pembimbing','monev_pustaka_publikasi','monev_pustaka_ta','monev_kinerja_mahasiswa','monev_kinerja_pembimbing','monev_nilai_ujian','monev_nilai_responsi','monev_magang','monev_rbb','monev_ta_publikasi']) ? 'active' : ''; ?>">
             <i class="nav-icon fas fa-chart-pie"></i>
             <p>
               Laporan Monitoring
@@ -434,54 +434,72 @@
             </p>
           </a>
           <ul class="nav nav-treeview">
+             <li class="nav-item">
+              <a href="monev-ta.php" class="nav-link <?php echo $page == 'monev_ta' ? 'active' : ''; ?>">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Tugas Akhir</p>
+              </a>
+            </li>
             <li class="nav-item">
-              <a href="monitor-skripsi.php" class="nav-link">
+              <a href="monev-ta-publikasi.php" class="nav-link <?php echo $page == 'monev_ta_publikasi' ? 'active' : ''; ?>">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Publikasi & Diseminasi</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="monev-magang.php" class="nav-link <?php echo $page == 'monev_magang' ? 'active' : ''; ?>">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Pelaksanaan Magang</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="monev-rbb.php" class="nav-link <?php echo $page == 'monev_rbb' ? 'active' : ''; ?>">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Implementasi RBB</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="monev-kinerja-pembimbing.php" class="nav-link <?php echo $page == 'monev_kinerja_pembimbing' ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
                 <p>kinerja pembimbing</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="monitor-skripsi.php" class="nav-link">
+              <a href="monev-kinerja-mahasiswa.php" class="nav-link <?php echo $page == 'monev_kinerja_mahasiswa' ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
                 <p>kinerja  mahasiswa</p>
               </a>
             </li>
-             <li class="nav-item">
-              <a href="monitor-skripsi.php" class="nav-link">
+             <!-- <li class="nav-item">
+              <a href="monev-pustaka-ta.php" class="nav-link <?php echo $page == 'monev_pustaka_ta' ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Pustaka tugas akhir</p>
               </a>
-            </li>
-            <li class="nav-item">
-              <a href="monitor-skripsi.php" class="nav-link">
+            </li> -->
+           <!--  <li class="nav-item">
+              <a href="monev-pustaka-publikasi.php" class="nav-link <?php echo $page == 'monev_pustaka_publikasi' ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
-                <p>Pustaka publikasi/diseminasi</p>
+                <p>Pustaka publikasi</p>
               </a>
-            </li>
+            </li> -->
               <li class="nav-item">
-              <a href="monitor-skripsi.php" class="nav-link">
+              <a href="monev-penilaian-pembimbing.php" class="nav-link <?php echo $page == 'monev_penilaian_pembimbing' ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
-                <p>penilaian pembimbing</p>
+                <p>Penilaian Pembimbing</p>
               </a>
             </li>
-            <li class="nav-item">
-              <a href="monitor-skripsi.php" class="nav-link">
+            <!-- <li class="nav-item">
+              <a href="monev-nilai-ujian.php" class="nav-link <?php echo $page == 'monev_nilai_ujian' ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
                 <p>rekap nilai ujian TA</p>
               </a>
-            </li>
-            <li class="nav-item">
-              <a href="monitor-skripsi.php" class="nav-link">
+            </li> -->
+            <!-- <li class="nav-item">
+              <a href="monev-nilai-responsi.php" class="nav-link <?php echo $page == 'monev_nilai_responsi' ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
                 <p>rekap nilai responsi</p>
               </a>
-            </li>
-            <li class="nav-item">
-              <a href="monitor-skripsi.php" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Rekap TA</p>
-              </a>
-            </li>
+            </li> -->
             <li class="nav-item">
               <a href="monitor-realtime.php" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>

@@ -64,13 +64,7 @@
                 <th>Status Stage</th>
                 <th>Tanggal Mulai</th>
                 <th>Tanggal Selesai</th>
-                <th>Dokumen / File</th>
-                <th>Catatan / Notes</th>
                 <th>Aksi</th>
-                <th>Dokumen Proposal</th>
-                <th>Revisi Bab</th>
-                <th>Catatan Pembimbing</th>
-                <th>Status Review</th>
             </tr>
         </thead>
         <tbody>
@@ -84,16 +78,9 @@
                 <td>In Progress</td>
                 <td>2025-01-20</td>
                 <td>-</td>
-                <td>/uploads/proposal.pdf</td>
-                <td>Revisi Bab 2</td>
                 <td>
-                    <button class="btn btn-sm btn-info">Detail</button>
+                    <button class="btn btn-sm btn-info" onclick="window.location='ta-zend.php'">Detail</button>
                 </td>
-                <td>/uploads/proposal.pdf</td>
-                <td>Bab 2 dan Bab 3</td>
-                <td>Kritik & Saran</td>
-                <td>Waiting Review</td>
-            </tr>
         </tbody>
     </table>
 
