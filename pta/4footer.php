@@ -12,7 +12,7 @@
     <div class="p-3">
     <h5>Pengaturan Tema</h5>
     <p>Aktifkan mode gelap atau terang.</p>
-  </div>
+    </div>
   </aside>
   <!-- /.control-sidebar -->
 </div>

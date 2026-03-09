@@ -188,7 +188,7 @@
               </a>
             </li>
 
-             <li class="nav-item <?php echo in_array($page, ['']) ? 'menu-open' : ''; ?>">
+             <li class="nav-item <?php echo in_array($page, ['ta_pendaftaran']) ? 'menu-open' : ''; ?>">
               <a href="#" class="nav-link <?php echo in_array($page, ['ta_pendaftaran','ta_bimbingan','ta_pendaftaran_ujian','ta_ujian','ta_publikasi_diseminasi']) ? 'active' : ''; ?>">
                 <i class="nav-icon fas fa-exchange-alt"></i>
                 <p>
@@ -429,7 +429,7 @@
           <a href="#" class="nav-link <?php echo in_array($page, ['monev_ta','monev_penilaian_pembimbing','monev_pustaka_publikasi','monev_pustaka_ta','monev_kinerja_mahasiswa','monev_kinerja_pembimbing','monev_nilai_ujian','monev_nilai_responsi','monev_magang','monev_rbb','monev_ta_publikasi']) ? 'active' : ''; ?>">
             <i class="nav-icon fas fa-chart-pie"></i>
             <p>
-              Laporan Monitoring
+               Monitoring
               <i class="right fas fa-angle-left"></i>
             </p>
           </a>
@@ -500,7 +500,7 @@
                 <p>rekap nilai responsi</p>
               </a>
             </li> -->
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <a href="monitor-realtime.php" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Realtime</p>
@@ -511,7 +511,7 @@
                 <i class="far fa-circle nav-icon"></i>
                 <p>Historis</p>
               </a>
-            </li>
+            </li> -->
             
 
 

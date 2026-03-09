@@ -669,6 +669,12 @@
                 <p>Audit Log</p>
               </a>
             </li>
+            <li class="nav-item">
+              <a href="pengaturan-notifikasi.php" class="nav-link">
+                <i class="fas fa-cog nav-icon"></i>
+                <p>Daftar Notifikasi</p>
+              </a>
+            </li>
            
             <li class="nav-item">
               <a href="pengaturan-app.php" class="nav-link <?php echo $page == 'pengaturan_app' ? 'active' : ''; ?>">

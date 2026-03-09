@@ -98,7 +98,7 @@
     </div> -->
     <div class="card-body">
       <button id="btnTandaiDibaca" class="btn btn-sm btn-outline-primary ">Tandai Dibaca</button>
-      <table class="table table-bordered table-hover table-sm ">
+      <table class="table table-bordered table-striped table-hover table-sm ">
         <thead class="table-dark">
           <tr>
             <th><input type="checkbox"></th>
@@ -122,13 +122,22 @@
             <small><i>02-03-2025 10:00</i></small> 
           </td>
         </tr>
-        <tr class="table-info">
+        <tr>
           <td><input type="checkbox" class="chk-new"></td>
           <td class="text-center">2</td>
           <td>
-            <button class="btn btn-xs btn-outline-primary " data-bs-toggle="modal" data-bs-target="#modalMhs"><i class="fas fa-reply"></i> Balas</button>
-            Pembimbing TA #1 | Nama Aktor 
-            <br>
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <div>
+                <strong>Pembimbing TA #1 | Nama Aktor</strong>
+              </div>
+              <div>
+                <button class="btn btn-xs btn-outline-primary" 
+                data-bs-toggle="modal" 
+                data-bs-target="#modalMhs">
+                <i class="fas fa-reply"></i> Balas
+                </button>
+              </div>
+            </div>
             <span class="badge badge-new">⭐ NEW</span>
             <span 
             class="badge bg-info text-dark cursor-pointer"
@@ -136,26 +145,26 @@
             data-bs-target="#modalPesan1"
             title="Klik untuk melihat pesan asal">
             💬 Balasan #1
-          </span>
-          <strong>Arahan</strong> <br>
-          Perjelas gap penelitian. Lorem ipsum dolor sit amet, consectetur
-          adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br>
-          <small><i>01-03-2025 09:10</i></small> 
-        </td>
-      </tr>
-      <tr>
-        <td></td>
-        <td class="text-center">1</td>
-        <td >
-          <strong>Update Progres</strong><br>
-          Draft Bab I sudah diunggah. Lorem ipsum dolor sit amet, consectetur
-          adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br>
-          <small><i>28-02-2025 16:30</i></small>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+            </span>
+            <strong>Arahan</strong> <br>
+            Perjelas gap penelitian. Lorem ipsum dolor sit amet, consectetur
+            adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br>
+            <small><i>01-03-2025 09:10</i></small> 
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="text-center">1</td>
+          <td >
+            <strong>Update Progres</strong><br>
+            Draft Bab I sudah diunggah. Lorem ipsum dolor sit amet, consectetur
+            adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br>
+            <small><i>Tuesday, 13 January 2026 09:20</i></small>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>
 
 

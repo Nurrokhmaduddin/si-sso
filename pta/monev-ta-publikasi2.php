@@ -98,8 +98,8 @@
 </div>
  <!-- TAB NAV (Semester) -->
            <ul class="nav nav-tabs">
-            <li class="nav-item" onclick="window.location='monev-ta.php'"><a class="nav-link ">Berlangsung</a></li>
-            <li class="nav-item" onclick="window.location='monev-ta2.php'"><a class="nav-link active">Selesai</a></li>
+            <li class="nav-item" onclick="window.location='monev-ta-publikasi.php'"><a class="nav-link ">Realtime</a></li>
+            <li class="nav-item" onclick="window.location='monev-ta-publikasi2.php'"><a class="nav-link active">Historis</a></li>
           </ul>
   <!-- ========== CARD : Chart ========== --> 
   <div class="card">

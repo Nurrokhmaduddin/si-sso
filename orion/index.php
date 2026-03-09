@@ -1,0 +1,277 @@
+<?php $page='';?>
+<?php include "1header.php"; ?>
+<?php include "2navbar.php"; ?>
+<?php include "3sidebar.php"; ?>
+ 
+
+<!-- Content Wrapper -->
+  <div class="content-wrapper" style="min-height: 600px;">
+    <div class="content-header">
+      <!-- <div class="container-fluid"> -->
+        <!-- <h2 class="mb-0"><i class="far fa-smile"></i> Selamat Datang, [nama pengguna]</h2> -->
+        <!-- <p class="text-muted">Sistem Informasi - Single Sign On (SSO)</p>         -->
+      <!-- </div> -->
+    </div>
+    <section class="content">
+      <div class="container-fluid">
+
+        <style>
+  .kpi-card {
+  transition: all 0.25s ease;
+}
+
+.kpi-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.08);
+}
+
+.kpi-icon {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-size: 2rem;
+  opacity: 0.25;
+}
+</style>
+
+
+<div class="content">
+
+  <!-- HEADER -->
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <div>
+      <h2 class="page-title mb-0">📊 Dashboard Penjualan</h2>
+      <p class="page-description text-muted">
+        Ringkasan performa penjualan dan transaksi tahun berjalan.
+      </p>
+    </div>
+    <button class="btn btn-sm btn-outline-primary shadow-sm">🔄 Refresh Data</button>
+  </div>
+
+  <!-- KPI CARDS -->
+<div class="row g-3 mb-4">
+
+  <!-- TOP PRODUCT -->
+  <div class="col-md-3">
+    <div class="card kpi-card border-0 shadow-sm rounded-4 bg-success-subtle">
+      <div class="card-body position-relative">
+        <i class="bi bi-box-seam kpi-icon text-success"></i>
+        <small class="text-success fw-semibold text-uppercase">Top Terjual</small>
+        <h5 class="fw-bold mb-1 mt-2">Nama Produk</h5>
+        <span class="badge bg-success">Last 365 Days</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOP SALES -->
+<!--   <div class="col-md-3">
+    <div class="card kpi-card border-0 shadow-sm rounded-4 bg-info-subtle">
+      <div class="card-body position-relative">
+        <i class="bi bi-person-badge kpi-icon text-primary"></i>
+        <small class="text-info fw-semibold text-uppercase">Top Sales (Insentif)</small>
+        <h5 class="fw-bold mb-1 mt-2">Nama Sales</h5>
+        <span class="badge bg-info">Last 365 Days</span>
+      </div>
+    </div>
+  </div> -->
+
+<!-- TOP SUPPLIER -->
+  <div class="col-md-3">
+    <div class="card kpi-card border-0 shadow-sm rounded-4 bg-info-subtle">
+      <div class="card-body position-relative">
+        <i class="bi bi-person-badge kpi-icon text-primary"></i>
+        <small class="text-info fw-semibold text-uppercase">Top Supplier</small>
+        <h5 class="fw-bold mb-1 mt-2">Nama Supplier</h5>
+        <span class="badge bg-info">Last 365 Days</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOP CUSTOMER -->
+  <div class="col-md-3">
+    <div class="card kpi-card border-0 shadow-sm rounded-4 bg-primary-subtle">
+      <div class="card-body position-relative">
+        <i class="bi bi-shop kpi-icon text-primary"></i>
+        <small class="text-primary fw-semibold text-uppercase">
+          Top Toko
+        </small>
+        <h5 class="fw-bold mb-1 mt-2">Nama Toko</h5>
+        <span class="badge bg-primary">Last 365 Days</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOP Penjualan -->
+  <div class="col-md-3">
+    <div class="card kpi-card border-0 shadow-sm rounded-4 bg-warning-subtle">
+      <div class="card-body position-relative">
+        <i class="bi bi-cart-check kpi-icon text-warning"></i>
+        <small class="text-warning fw-semibold text-uppercase">Top Dibeli</small>
+        <h5 class="fw-bold mb-1 mt-2">Nama Produk</h5>
+        <span class="badge bg-warning text-dark">Last 365 Days</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+  <!-- TABLE SECTION -->
+  <div class="row g-4">
+
+    <!-- TOP SELL PRODUK -->
+    <div class="col-md-6">
+      <div class="card border-0 shadow-sm rounded-4">
+        <div class="card-header bg-white fw-semibold d-flex justify-content-between align-items-center">
+          <span>🥇 Top 5 Produk Terjual</span>
+          <small class="text-muted">Last 30 Days</small>
+        </div>
+        <div class="card-body p-0">
+          <table class="table table-hover table-striped mb-0 align-middle">
+            <thead class="table-light">
+              <tr>
+                <th width="60">Rank</th>
+                <th>Produk</th>
+                <th class="text-end">Qty</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><span class="badge bg-warning">1</span></td><td>PRD-001</td><td class="text-end">320</td></tr>
+              <tr><td><span class="badge bg-secondary">2</span></td><td>PRD-002</td><td class="text-end">290</td></tr>
+              <tr><td><span class="badge bg-secondary">3</span></td><td>PRD-003</td><td class="text-end">260</td></tr>
+              <tr><td>4</td><td>PRD-004</td><td class="text-end">240</td></tr>
+              <tr><td>5</td><td>PRD-005</td><td class="text-end">210</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- TOP BUY PRODUK -->
+    <div class="col-md-6">
+      <div class="card border-0 shadow-sm rounded-4">
+        <div class="card-header bg-white fw-semibold d-flex justify-content-between align-items-center">
+          <span>🛒 Top 5 Produk Dibeli</span>
+          <small class="text-muted">Last 30 Days</small>
+        </div>
+        <div class="card-body p-0">
+          <table class="table table-hover table-striped mb-0 align-middle">
+            <thead class="table-light">
+              <tr>
+                <th width="60">Rank</th>
+                <th>Produk</th>
+                <th class="text-end">Qty</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><span class="badge bg-warning">1</span></td><td>PRD-010</td><td class="text-end">410</td></tr>
+              <tr><td><span class="badge bg-secondary">2</span></td><td>PRD-011</td><td class="text-end">380</td></tr>
+              <tr><td><span class="badge bg-secondary">3</span></td><td>PRD-012</td><td class="text-end">350</td></tr>
+              <tr><td>4</td><td>PRD-013</td><td class="text-end">330</td></tr>
+              <tr><td>5</td><td>PRD-014</td><td class="text-end">300</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- TOP SALES -->
+   <!--  <div class="col-md-6">
+      <div class="card border-0 shadow-sm rounded-4">
+        <div class="card-header bg-white fw-semibold d-flex justify-content-between align-items-center">
+          <span>🧑‍💼 Top 5 Sales (Insentif)</span>
+          <small class="text-muted">Last 30 Days</small>
+        </div>
+        <div class="card-body p-0">
+          <table class="table table-hover table-striped mb-0 align-middle">
+            <thead class="table-light">
+              <tr>
+                <th width="60">Rank</th>
+                <th>Sales</th>
+                <th class="text-end">Insentif</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><span class="badge bg-warning">1</span></td><td>SLS-001</td><td class="text-end">Rp 25.000.000</td></tr>
+              <tr><td><span class="badge bg-secondary">2</span></td><td>SLS-002</td><td class="text-end">Rp 22.000.000</td></tr>
+              <tr><td><span class="badge bg-secondary">3</span></td><td>SLS-003</td><td class="text-end">Rp 19.500.000</td></tr>
+              <tr><td>4</td><td>SLS-004</td><td class="text-end">Rp 17.000.000</td></tr>
+              <tr><td>5</td><td>SLS-005</td><td class="text-end">Rp 15.000.000</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div> -->
+
+   
+    <!-- TOP TOKO -->
+    <div class="col-md-6">
+      <div class="card border-0 shadow-sm rounded-4">
+        <div class="card-header bg-white fw-semibold d-flex justify-content-between align-items-center">
+          <span>🏪 Top 5 Toko (Pembayaran)</span>
+          <small class="text-muted">Last 30 Days</small>
+        </div>
+        <div class="card-body p-0">
+          <table class="table table-hover table-striped mb-0 align-middle">
+            <thead class="table-light">
+              <tr>
+                <th width="60">Rank</th>
+                <th>Customer</th>
+                <th class="text-end">Total Terbayar</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><span class="badge bg-warning">1</span></td><td>TKO-001</td><td class="text-end">Rp 120.000.000</td></tr>
+              <tr><td><span class="badge bg-secondary">2</span></td><td>TKO-002</td><td class="text-end">Rp 110.000.000</td></tr>
+              <tr><td><span class="badge bg-secondary">3</span></td><td>TKO-003</td><td class="text-end">Rp 98.000.000</td></tr>
+              <tr><td>4</td><td>TKO-004</td><td class="text-end">Rp 85.000.000</td></tr>
+              <tr><td>5</td><td>TKO-005</td><td class="text-end">Rp 75.000.000</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+ <!-- TOP Supplier -->
+    <div class="col-md-6">
+      <div class="card border-0 shadow-sm rounded-4">
+        <div class="card-header bg-white fw-semibold d-flex justify-content-between align-items-center">
+          <span>🧑‍💼 Top 5 Supplier (Pembelian)</span>
+          <small class="text-muted">Last 30 Days</small>
+        </div>
+        <div class="card-body p-0">
+          <table class="table table-hover table-striped mb-0 align-middle">
+            <thead class="table-light">
+              <tr>
+                <th width="60">Rank</th>
+                <th>Supplier</th>
+                <th class="text-end">Total Pembelian</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><span class="badge bg-warning">1</span></td><td>SLS-001</td><td class="text-end">Rp 25.000.000</td></tr>
+              <tr><td><span class="badge bg-secondary">2</span></td><td>SLS-002</td><td class="text-end">Rp 22.000.000</td></tr>
+              <tr><td><span class="badge bg-secondary">3</span></td><td>SLS-003</td><td class="text-end">Rp 19.500.000</td></tr>
+              <tr><td>4</td><td>SLS-004</td><td class="text-end">Rp 17.000.000</td></tr>
+              <tr><td>5</td><td>SLS-005</td><td class="text-end">Rp 15.000.000</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+</div>
+
+    </div>
+  </section>
+</div>
+
+<?php include "4footer.php"; ?>
+
+
+<?php include "5script.php"; ?>

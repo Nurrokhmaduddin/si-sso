@@ -118,141 +118,141 @@
 
     </div>
   </div>
-  <!-- ========== CARD : Chart ========== --> 
-<div class="card">
-  <div class="card-header">
-    <h5 class="card-title mb-0"><i class="fas fa-chart-bar me-2"></i>Daftar Dosen dan Beban Pembimbingan</h5>
-    <div class="card-tools">
-      <!-- <small class="text-muted">berlangsung</i></h5></small> -->
+  <!-- ========== CARD : Daftar Dosen ========== --> 
+  <div class="card">
+    <div class="card-header">
+      <h5 class="card-title mb-0"><i class="fas fa-chart-bar me-2"></i>Daftar Dosen dan Beban Pembimbingan</h5>
+      <div class="card-tools">
+        <!-- <small class="text-muted">berlangsung</i></h5></small> -->
+      </div>
     </div>
-  </div>
-  <div class="card-body">
-<!-- <canvas id="chartLulusanBatch"  ></canvas> -->
-        <table class="table table-bordered table-striped table-sm datatables1">
-          <thead class="text-center">
-          <tr>
-            <th>NIDN</th>
-            <th>Nama Dosen</th>
-            <th>Aktif</th>
-            <th>Pasif</th>
-            <th>Macet</th>
-            <th>Total</th>
-            <th>Aksi</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>113110409</td>
-            <td>Raden Roro Ratna Roostika, S.E., MAC., Ph.D</td>
-            <td class="text-center">1</td>
-            <td class="text-center">2</td>
-            <td class="text-center">3</td>
-            <td class="text-center">6</td>
-            <td class="text-center">
-              <a href="#" class="btn btn-sm btn-primary">Detail</a>
-            </td>
-          </tr>
-          <tr>
-            <td>143110401</td>
-            <td>Muafi, Prof., Dr., S.E., M.Si.</td>
-            <td class="text-center">1</td>
-            <td class="text-center">2</td>
-            <td class="text-center">3</td>
-            <td class="text-center">6</td>
-            <td class="text-center">
-              <a href="#" class="btn btn-sm btn-primary">Detail</a>
-            </td>
-          </tr>
-          <tr>
-            <td>153110102</td>
-            <td>Istyakara Muslichah, S.E., MBA.</td>
-            <td class="text-center">1</td>
-            <td class="text-center">2</td>
-            <td class="text-center">3</td>
-            <td class="text-center">6</td>
-            <td class="text-center">
-              <a href="#" class="btn btn-sm btn-primary">Detail</a>
-            </td>
-          </tr>
-          <tr>
-            <td>153111308</td>
-            <td>Bagus Panuntun, S.E., M.B.A.</td>
-            <td class="text-center">1</td>
-            <td class="text-center">2</td>
-            <td class="text-center">3</td>
-            <td class="text-center">6</td>
-            <td class="text-center">
-              <a href="#" class="btn btn-sm btn-primary">Detail</a>
-            </td>
-          </tr>
-          <tr>
-            <td>183110101</td>
-            <td>Jaya Addin Linando, S.E., MBA., Dr.rer.soc.oec.</td>
-            <td class="text-center">2</td>
-            <td class="text-center">3</td>
-            <td class="text-center">4</td>
-            <td class="text-center">9</td>
-            <td class="text-center">
-              <a href="#" class="btn btn-sm btn-primary">Detail</a>
-            </td>
-          </tr>
-          <tr>
-            <td>183111301</td>
-            <td>Endy Gunanto Marsasi, Dr., R., M.M.</td>
-            <td class="text-center">2</td>
-            <td class="text-center">3</td>
-            <td class="text-center">4</td>
-            <td class="text-center">9</td>
-            <td class="text-center">
-              <a href="#" class="btn btn-sm btn-primary">Detail</a>
-            </td>
-          </tr>
-          <tr>
-            <td>193110102</td>
-            <td>Alldila Nadhira Ayu Setyaning, S.E., MBA.</td>
-            <td class="text-center">2</td>
-            <td class="text-center">3</td>
-            <td class="text-center">4</td>
-            <td class="text-center">9</td>
-            <td class="text-center">
-              <a href="#" class="btn btn-sm btn-primary">Detail</a>
-            </td>
-          </tr>
-          <tr>
-            <td>233110107</td>
-            <td>Hanifa Nur Fadhilla S.E., M.B.A.</td>
-            <td class="text-center">2</td>
-            <td class="text-center">3</td>
-            <td class="text-center">4</td>
-            <td class="text-center">9</td>
-            <td class="text-center">
-              <a href="#" class="btn btn-sm btn-primary">Detail</a>
-            </td>
-          </tr>
-          <tr>
-            <td>883110103</td>
-            <td>Albari, Dr., Drs., M.Si.</td>
-            <td class="text-center">2</td>
-            <td class="text-center">3</td>
-            <td class="text-center">4</td>
-            <td class="text-center">9</td>
-            <td class="text-center">
-              <a href="#" class="btn btn-sm btn-primary">Detail</a>
-            </td>
-          </tr>
-          <tr>
-            <td>883110107</td>
-            <td>Siti Nursyamsiah, Dra., M.M.</td>
-            <td class="text-center">2</td>
-            <td class="text-center">3</td>
-            <td class="text-center">4</td>
-            <td class="text-center">9</td>
-            <td class="text-center">
-              <a href="#" class="btn btn-sm btn-primary">Detail</a>
-            </td>
-          </tr>
-        </tbody>
-        </table>
+    <div class="card-body">
+    <!-- <canvas id="chartLulusanBatch"  ></canvas> -->
+    <table class="table table-bordered table-striped table-sm datatables1">
+      <thead class="text-center">
+        <tr>
+          <th>NIDN</th>
+          <th>Nama Dosen</th>
+          <th>Aktif</th>
+          <th>Pasif</th>
+          <th>Macet</th>
+          <th>Total</th>
+          <th>Aksi</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>113110409</td>
+          <td>Raden Roro Ratna Roostika, S.E., MAC., Ph.D</td>
+          <td class="text-center">1</td>
+          <td class="text-center">2</td>
+          <td class="text-center">3</td>
+          <td class="text-center">6</td>
+          <td class="text-center">
+            <a href="#" class="btn btn-sm btn-primary">Detail</a>
+          </td>
+        </tr>
+        <tr>
+          <td>143110401</td>
+          <td>Muafi, Prof., Dr., S.E., M.Si.</td>
+          <td class="text-center">1</td>
+          <td class="text-center">2</td>
+          <td class="text-center">3</td>
+          <td class="text-center">6</td>
+          <td class="text-center">
+            <a href="#" class="btn btn-sm btn-primary">Detail</a>
+          </td>
+        </tr>
+        <tr>
+          <td>153110102</td>
+          <td>Istyakara Muslichah, S.E., MBA.</td>
+          <td class="text-center">1</td>
+          <td class="text-center">2</td>
+          <td class="text-center">3</td>
+          <td class="text-center">6</td>
+          <td class="text-center">
+            <a href="#" class="btn btn-sm btn-primary">Detail</a>
+          </td>
+        </tr>
+        <tr>
+          <td>153111308</td>
+          <td>Bagus Panuntun, S.E., M.B.A.</td>
+          <td class="text-center">1</td>
+          <td class="text-center">2</td>
+          <td class="text-center">3</td>
+          <td class="text-center">6</td>
+          <td class="text-center">
+            <a href="#" class="btn btn-sm btn-primary">Detail</a>
+          </td>
+        </tr>
+        <tr>
+          <td>183110101</td>
+          <td>Jaya Addin Linando, S.E., MBA., Dr.rer.soc.oec.</td>
+          <td class="text-center">2</td>
+          <td class="text-center">3</td>
+          <td class="text-center">4</td>
+          <td class="text-center">9</td>
+          <td class="text-center">
+            <a href="#" class="btn btn-sm btn-primary">Detail</a>
+          </td>
+        </tr>
+        <tr>
+          <td>183111301</td>
+          <td>Endy Gunanto Marsasi, Dr., R., M.M.</td>
+          <td class="text-center">2</td>
+          <td class="text-center">3</td>
+          <td class="text-center">4</td>
+          <td class="text-center">9</td>
+          <td class="text-center">
+            <a href="#" class="btn btn-sm btn-primary">Detail</a>
+          </td>
+        </tr>
+        <tr>
+          <td>193110102</td>
+          <td>Alldila Nadhira Ayu Setyaning, S.E., MBA.</td>
+          <td class="text-center">2</td>
+          <td class="text-center">3</td>
+          <td class="text-center">4</td>
+          <td class="text-center">9</td>
+          <td class="text-center">
+            <a href="#" class="btn btn-sm btn-primary">Detail</a>
+          </td>
+        </tr>
+        <tr>
+          <td>233110107</td>
+          <td>Hanifa Nur Fadhilla S.E., M.B.A.</td>
+          <td class="text-center">2</td>
+          <td class="text-center">3</td>
+          <td class="text-center">4</td>
+          <td class="text-center">9</td>
+          <td class="text-center">
+            <a href="#" class="btn btn-sm btn-primary">Detail</a>
+          </td>
+        </tr>
+        <tr>
+          <td>883110103</td>
+          <td>Albari, Dr., Drs., M.Si.</td>
+          <td class="text-center">2</td>
+          <td class="text-center">3</td>
+          <td class="text-center">4</td>
+          <td class="text-center">9</td>
+          <td class="text-center">
+            <a href="#" class="btn btn-sm btn-primary">Detail</a>
+          </td>
+        </tr>
+        <tr>
+          <td>883110107</td>
+          <td>Siti Nursyamsiah, Dra., M.M.</td>
+          <td class="text-center">2</td>
+          <td class="text-center">3</td>
+          <td class="text-center">4</td>
+          <td class="text-center">9</td>
+          <td class="text-center">
+            <a href="#" class="btn btn-sm btn-primary">Detail</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
 
   </div>
 </div>
