@@ -219,8 +219,8 @@ Sales -->
         </ul>
       </li>
 <!-- OPERATION -->
- <li class="nav-item <?php echo in_array($page, ['operasional_stok_gudang','operasional_stok_rekap','operasional_stok_opname','operasional_stok_pelacakan']) ? 'menu-open' : ''; ?>">
-        <a href="#" class="nav-link <?php echo in_array($page, ['operasional_stok_gudang','operasional_stok_rekap','operasional_stok_opname','operasional_stok_pelacakan']) ? 'active' : ''; ?>">
+ <li class="nav-item <?php echo in_array($page, ['operasional_stok_gudang','operasional_stok_rekap','operasional_stok_opname','operasional_stok_pelacakan','transaksi_pengiriman']) ? 'menu-open' : ''; ?>">
+        <a href="#" class="nav-link <?php echo in_array($page, ['operasional_stok_gudang','operasional_stok_rekap','operasional_stok_opname','operasional_stok_pelacakan','transaksi_pengiriman']) ? 'active' : ''; ?>">
     <i class="nav-icon fas fa-warehouse"></i>
     <p>
       Operation
@@ -229,7 +229,7 @@ Sales -->
   </a>
   <ul class="nav nav-treeview">
     <li class="nav-item">
-      <a href="transaksi-pengiriman.php" class="nav-link <?php echo $page == 'transaksi_pengiriman' ? 'active' : ''; ?>">
+      <a href="transaksi-pengiriman.php" class="nav-link <?php echo $page == 'transaksi_pengirima' ? 'active' : ''; ?>">
         <i class="nav-icon far fa-circle"></i>
         <p>
           Picking barang
@@ -237,7 +237,7 @@ Sales -->
       </a>
     </li>
     <li class="nav-item">
-      <a href="transaksi-pengiriman.php" class="nav-link <?php echo $page == 'transaksi_pengiriman' ? 'active' : ''; ?>">
+      <a href="transaksi-pengiriman.php" class="nav-link <?php echo $page == 'transaksi_pengirima' ? 'active' : ''; ?>">
         <i class="nav-icon far fa-circle"></i>
         <p>
           Packing

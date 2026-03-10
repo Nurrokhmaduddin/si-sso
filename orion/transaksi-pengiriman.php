@@ -1,4 +1,4 @@
-<?php $page = 'transaksi_pengirimans'; ?>
+<?php $page = 'transaksi_pengiriman'; ?>
 <?php include('1header.php'); ?>
 <?php include('2navbar.php'); ?>
 <?php include('3sidebar.php'); ?>

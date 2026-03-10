@@ -100,9 +100,6 @@
               <button type="button" class="btn btn-warning mrg-btn btn-sm btn-aksi1421 btn-disabled" onclick="detail(&#39;Y0hka01YZzBsN1d4VFpqSlhNVFF6dG4wMDAwOA&#39;, &#39;1421&#39;, &#39;trx&#39;)" fdprocessedid="i14toq"><i class="fas fa-envelope-open"></i> Draf</button>
 
               <button type="button" class="btn btn-danger mrg-btn btn-sm btn-aksi1421 btn-disabled" title="Cancel" onclick="cancel(&#39;1421&#39;)" fdprocessedid="aonhom"><i class="fas fa-times"></i> Batal</button>
-
-
-              <b style="color: gray;" class="hidden loading-aksi1421"><i class="fas fa-spinner fa-pulse"></i> Loading</b>
             </td>
           </tr>
           <tr align="center">
@@ -122,9 +119,6 @@
               <button type="button" class="btn btn-warning mrg-btn btn-sm btn-aksi1033 btn-disabled" onclick="detail(&#39;YUc4Mk1Wb3d5MzhHcWRETjRNM0V6bDEwMDAwOA&#39;, &#39;1033&#39;, &#39;trx&#39;)" fdprocessedid="gm1yi"><i class="fas fa-envelope-open"></i> Draf</button>
 
               <button type="button" class="btn btn-danger mrg-btn btn-sm btn-aksi1033 btn-disabled" title="Cancel" onclick="cancel(&#39;1033&#39;)" fdprocessedid="qf1asn"><i class="fas fa-times"></i> Batal</button>
-
-
-              <b style="color: gray;" class="hidden loading-aksi1033"><i class="fas fa-spinner fa-pulse"></i> Loading</b>
             </td>
           </tr>
           <tr align="center">
@@ -143,9 +137,6 @@
               <button type="button" class="btn btn-info mrg-btn btn-sm btn-aksi1431 btn-disabled" onclick="detail(&#39;U1V4Nk1XVTBQMHp0b1l6TmxNVVl6clUwMDAwOA&#39;, &#39;1431&#39;, &#39;&#39;)" fdprocessedid="9tlzgf"><i class="fas fa-list"></i></button>
 
               <button type="button" class="btn btn-warning mrg-btn btn-sm btn-aksi1431 btn-disabled" onclick="edit(&#39;1431&#39;)" fdprocessedid="ml5b1n"><i class="fas fa-edit"></i> Edit</button>
-
-
-              <b style="color: gray;" class="hidden loading-aksi1431"><i class="fas fa-spinner fa-pulse"></i> Loading</b>
             </td>
           </tr>
           <tr align="center">
@@ -164,9 +155,6 @@
               <button type="button" class="btn btn-info mrg-btn btn-sm btn-aksi1430 btn-disabled" onclick="detail(&#39;VGxjeFJUUmFNMEoyZkZJd1VESWQzYzBtNHUwMDAxMA&#39;, &#39;1430&#39;, &#39;&#39;)" fdprocessedid="31anhg"><i class="fas fa-list"></i></button>
 
               <button type="button" class="btn btn-warning mrg-btn btn-sm btn-aksi1430 btn-disabled" onclick="edit(&#39;1430&#39;)" fdprocessedid="t0x7pzj"><i class="fas fa-edit"></i> Edit</button>
-
-
-              <b style="color: gray;" class="hidden loading-aksi1430"><i class="fas fa-spinner fa-pulse"></i> Loading</b>
             </td>
           </tr>
           <tr align="center">
@@ -185,9 +173,6 @@
               <button type="button" class="btn btn-info mrg-btn btn-sm btn-aksi1429 btn-disabled" onclick="detail(&#39;UzNBeU1VODBacjN6eGVUSk9PVzh6dEowMDAwOA&#39;, &#39;1429&#39;, &#39;&#39;)" fdprocessedid="cli0mq"><i class="fas fa-list"></i></button>
 
               <button type="button" class="btn btn-warning mrg-btn btn-sm btn-aksi1429 btn-disabled" onclick="edit(&#39;1429&#39;)" fdprocessedid="q29zh"><i class="fas fa-edit"></i> Edit</button>
-
-
-              <b style="color: gray;" class="hidden loading-aksi1429"><i class="fas fa-spinner fa-pulse"></i> Loading</b>
             </td>
           </tr>
           <tr align="center">
@@ -206,9 +191,6 @@
               <button type="button" class="btn btn-info mrg-btn btn-sm btn-aksi1428 btn-disabled" onclick="detail(&#39;VlZreFR6UnJNajdvMWtBNFN6SWQzYzBtSDcwMDAxMA&#39;, &#39;1428&#39;, &#39;&#39;)" fdprocessedid="qxk908"><i class="fas fa-list"></i></button>
 
               <button type="button" class="btn btn-warning mrg-btn btn-sm btn-aksi1428 btn-disabled" onclick="edit(&#39;1428&#39;)" fdprocessedid="fd0vcs"><i class="fas fa-edit"></i> Edit</button>
-
-
-              <b style="color: gray;" class="hidden loading-aksi1428"><i class="fas fa-spinner fa-pulse"></i> Loading</b>
             </td>
           </tr>
           <tr align="center">
@@ -227,9 +209,6 @@
               <button type="button" class="btn btn-info mrg-btn btn-sm btn-aksi1427 btn-disabled" onclick="detail(&#39;U0ZZeGFqUlBNa204cnRJM1pUSWQzYzBtTlYwMDAxMA&#39;, &#39;1427&#39;, &#39;&#39;)" fdprocessedid="k6wudh"><i class="fas fa-list"></i></button>
 
               <button type="button" class="btn btn-warning mrg-btn btn-sm btn-aksi1427 btn-disabled" onclick="edit(&#39;1427&#39;)" fdprocessedid="ek6swi"><i class="fas fa-edit"></i> Edit</button>
-
-
-              <b style="color: gray;" class="hidden loading-aksi1427"><i class="fas fa-spinner fa-pulse"></i> Loading</b>
             </td>
           </tr>
           <tr align="center">
@@ -248,9 +227,6 @@
               <button type="button" class="btn btn-info mrg-btn btn-sm btn-aksi1426 btn-disabled" onclick="detail(&#39;YTBjeGFqUk1NbXNPaWEwMlpqSWQzYzBtMlowMDAxMA&#39;, &#39;1426&#39;, &#39;&#39;)" fdprocessedid="vyqqq7"><i class="fas fa-list"></i></button>
 
               <button type="button" class="btn btn-warning mrg-btn btn-sm btn-aksi1426 btn-disabled" onclick="edit(&#39;1426&#39;)" fdprocessedid="ax741j"><i class="fas fa-edit"></i> Edit</button>
-
-
-              <b style="color: gray;" class="hidden loading-aksi1426"><i class="fas fa-spinner fa-pulse"></i> Loading</b>
             </td>
           </tr>
           <tr align="center">
@@ -269,9 +245,6 @@
               <button type="button" class="btn btn-info mrg-btn btn-sm btn-aksi1425 btn-disabled" onclick="detail(&#39;VkVFek1WYzBBNmxVVldESnBOVmd6eDQwMDAwOA&#39;, &#39;1425&#39;, &#39;&#39;)" fdprocessedid="kb4yt"><i class="fas fa-list"></i></button>
 
               <button type="button" class="btn btn-warning mrg-btn btn-sm btn-aksi1425 btn-disabled" onclick="edit(&#39;1425&#39;)" fdprocessedid="qoyi9d"><i class="fas fa-edit"></i> Edit</button>
-
-
-              <b style="color: gray;" class="hidden loading-aksi1425"><i class="fas fa-spinner fa-pulse"></i> Loading</b>
             </td>
           </tr>
           <tr align="center">
@@ -290,9 +263,6 @@
               <button type="button" class="btn btn-info mrg-btn btn-sm btn-aksi1424 btn-disabled" onclick="detail(&#39;TjJFeFRqUk9NbUtQbGo4MFNqSWQzYzBtaWYwMDAxMA&#39;, &#39;1424&#39;, &#39;&#39;)" fdprocessedid="aj5iq9"><i class="fas fa-list"></i></button>
 
               <button type="button" class="btn btn-warning mrg-btn btn-sm btn-aksi1424 btn-disabled" onclick="edit(&#39;1424&#39;)" fdprocessedid="3avnpi"><i class="fas fa-edit"></i> Edit</button>
-
-
-              <b style="color: gray;" class="hidden loading-aksi1424"><i class="fas fa-spinner fa-pulse"></i> Loading</b>
             </td>
           </tr>
         </tbody>

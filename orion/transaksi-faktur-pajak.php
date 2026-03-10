@@ -90,20 +90,11 @@
             <td>PJ/004424</td>
             <td style="text-align: right !important">22.730.130,70</td>
             <td align="center">
-              <button type="button" class="btn btn-success btn-sm btn-aksi4897" data-toggle="dropdown" fdprocessedid="rzljxj">
-                <span class="sr-only">Toggle Dropdown</span><i class="fas fa-print"></i>
-              </button>
-              <div class="dropdown-menu" role="menu">
-                <a class="dropdown-item" href="https://orion-houseware.my.id/faktur_pajak/print/UldrMFRUaHFPVWJaUUQ4M1l6SWQzYzBtdTAwMDAxMA" target="_blank">PDF</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="https://orion-houseware.my.id/faktur_pajak/ekspor/WjNKNE5IbzQ3MERsSlFqbGpOMlV6dHUwMDAwOA" target="_blank">Excel</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="https://orion-houseware.my.id/faktur_pajak/xml/UjBGT05GTTQxMzRIWmJ6bHlOMFl6U3UwMDAwOA" target="_blank">XML</a>
-              </div>
+              <button type="button" class="btn btn-success btn-sm"><i class="fas fa-print"></i></button>
+             
+              <button type="button" class="btn btn-info btn-sm"  title="Detail"><i class="fas fa-list"></i></button>
 
-              <button type="button" class="btn btn-info mrg-btn btn-sm btn-aksi4897 btn-disabled" title="Detail" onclick="detail(&#39;VFdFMFFqaENPVWg2YlE4M1lUSWQzYzBtaG4wMDAxMA&#39;, &#39;4897&#39;)" fdprocessedid="unjd88"><i class="fas fa-list"></i></button>
-
-              <button type="button" class="btn btn-primary mrg-btn btn-sm btn-aksi4897 btn-disabled" title="Laporkan Faktur Pajak" onclick="lunas(&#39;4897&#39;)" fdprocessedid="uwi0gv"><i class="fas fa-check"></i></button>
+              <button type="button" class="btn btn-primary btn-sm"><i class="fas fa-check"></i></button>
             </td>
           </tr>
           <tr align="center">
@@ -114,22 +105,11 @@
             <td>PJ/004428</td>
             <td style="text-align: right !important">4.624.911,00</td>
             <td align="center">
-              <button type="button" class="btn btn-success btn-sm btn-aksi4901" data-toggle="dropdown" fdprocessedid="p11lo">
-                <span class="sr-only">Toggle Dropdown</span><i class="fas fa-print"></i>
-              </button>
-              <div class="dropdown-menu" role="menu">
-                <a class="dropdown-item" href="https://orion-houseware.my.id/faktur_pajak/print/Vm5KME5HVTVBSDFXZ2VUQnhNVmN6WHgwMDAwOA" target="_blank">PDF</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="https://orion-houseware.my.id/faktur_pajak/ekspor/VlUwMFJEbFBNR0VMNWFNeFdqSWQzYzBtdlAwMDAxMA" target="_blank">Excel</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="https://orion-houseware.my.id/faktur_pajak/xml/YVZJMFlUbHVNRVpCTk1reFVUSWQzYzBtQ0cwMDAxMA" target="_blank">XML</a>
-              </div>
+              <button type="button" class="btn btn-success btn-sm"><i class="fas fa-print"></i></button>
+             
+              <button type="button" class="btn btn-info btn-sm"  title="Detail"><i class="fas fa-list"></i></button>
 
-              <button type="button" class="btn btn-info mrg-btn btn-sm btn-aksi4901 btn-disabled" title="Detail" onclick="detail(&#39;UkZFMFRqbFJNRGl5ODRjeFpESWQzYzBtVUswMDAxMA&#39;, &#39;4901&#39;)" fdprocessedid="lwa5zh"><i class="fas fa-list"></i></button>
-
-              <button type="button" class="btn btn-primary mrg-btn btn-sm btn-aksi4901 btn-disabled" title="Laporkan Faktur Pajak" onclick="lunas(&#39;4901&#39;)" fdprocessedid="8wxetk"><i class="fas fa-check"></i></button>
-
-              <b style="color: gray;" class="hidden loading-aksi4901"><i class="fas fa-spinner fa-pulse"></i> Loading</b>
+              <button type="button" class="btn btn-primary btn-sm"><i class="fas fa-check"></i></button>
             </td>
           </tr>
           <tr align="center">
@@ -140,22 +120,11 @@
             <td>PJ/004429</td>
             <td style="text-align: right !important">5.765.400,00</td>
             <td align="center">
-              <button type="button" class="btn btn-success btn-sm btn-aksi4902" data-toggle="dropdown" fdprocessedid="t7rv6k">
-                <span class="sr-only">Toggle Dropdown</span><i class="fas fa-print"></i>
-              </button>
-              <div class="dropdown-menu" role="menu">
-                <a class="dropdown-item" href="https://orion-houseware.my.id/faktur_pajak/print/WkdjMFFUbHZNRkFsZndZeVVqSWQzYzBtWWwwMDAxMA" target="_blank">PDF</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="https://orion-houseware.my.id/faktur_pajak/ekspor/TjFoR05HMDVCUGdrblJ6QkRNa296cWkwMDAwOA" target="_blank">Excel</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="https://orion-houseware.my.id/faktur_pajak/xml/VTBaYU5GTTVWNjF2d1lqQXhNbm96b2QwMDAwOA" target="_blank">XML</a>
-              </div>
+              <button type="button" class="btn btn-success btn-sm"><i class="fas fa-print"></i></button>
+             
+              <button type="button" class="btn btn-info btn-sm"  title="Detail"><i class="fas fa-list"></i></button>
 
-              <button type="button" class="btn btn-info mrg-btn btn-sm btn-aksi4902 btn-disabled" title="Detail" onclick="detail(&#39;VWxob05FNDVjOW1KeVN6QTNNbG96SDcwMDAwOA&#39;, &#39;4902&#39;)" fdprocessedid="wh1sww"><i class="fas fa-list"></i></button>
-
-              <button type="button" class="btn btn-primary mrg-btn btn-sm btn-aksi4902 btn-disabled" title="Laporkan Faktur Pajak" onclick="lunas(&#39;4902&#39;)" fdprocessedid="424gi7"><i class="fas fa-check"></i></button>
-
-              <b style="color: gray;" class="hidden loading-aksi4902"><i class="fas fa-spinner fa-pulse"></i> Loading</b>
+              <button type="button" class="btn btn-primary btn-sm"><i class="fas fa-check"></i></button>
             </td>
           </tr>
           <tr align="center">
@@ -166,22 +135,11 @@
             <td>PJ/004433</td>
             <td style="text-align: right !important">4.155.200,00</td>
             <td align="center">
-              <button type="button" class="btn btn-success btn-sm btn-aksi4906" data-toggle="dropdown" fdprocessedid="g05qzl">
-                <span class="sr-only">Toggle Dropdown</span><i class="fas fa-print"></i>
-              </button>
-              <div class="dropdown-menu" role="menu">
-                <a class="dropdown-item" href="https://orion-houseware.my.id/faktur_pajak/print/Ym5VME1qbG5NREZqcERZMlJqSWQzYzBtV1gwMDAxMA" target="_blank">PDF</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="https://orion-houseware.my.id/faktur_pajak/ekspor/YTFjMGJqbExNR2NQeHF3MldqSWQzYzBtbW0wMDAxMA" target="_blank">Excel</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="https://orion-houseware.my.id/faktur_pajak/xml/V20wME56bFlNR3EzdWM0MlFqSWQzYzBta3gwMDAxMA" target="_blank">XML</a>
-              </div>
+              <button type="button" class="btn btn-success btn-sm"><i class="fas fa-print"></i></button>
+             
+              <button type="button" class="btn btn-info btn-sm"  title="Detail"><i class="fas fa-list"></i></button>
 
-              <button type="button" class="btn btn-info mrg-btn btn-sm btn-aksi4906 btn-disabled" title="Detail" onclick="detail(&#39;UTNRMFp6bFJNSFFRWVVZMmRqSWQzYzBtZHUwMDAxMA&#39;, &#39;4906&#39;)" fdprocessedid="mvj2o"><i class="fas fa-list"></i></button>
-
-              <button type="button" class="btn btn-primary mrg-btn btn-sm btn-aksi4906 btn-disabled" title="Laporkan Faktur Pajak" onclick="lunas(&#39;4906&#39;)" fdprocessedid="rwcptw"><i class="fas fa-check"></i></button>
-
-              <b style="color: gray;" class="hidden loading-aksi4906"><i class="fas fa-spinner fa-pulse"></i> Loading</b>
+              <button type="button" class="btn btn-primary btn-sm"><i class="fas fa-check"></i></button>
             </td>
           </tr>
           <tr align="center">
@@ -192,22 +150,11 @@
             <td>PJ/004442</td>
             <td style="text-align: right !important">1.163.400,00</td>
             <td align="center">
-              <button type="button" class="btn btn-success btn-sm btn-aksi4915" data-toggle="dropdown" fdprocessedid="lu7v44">
-                <span class="sr-only">Toggle Dropdown</span><i class="fas fa-print"></i>
-              </button>
-              <div class="dropdown-menu" role="menu">
-                <a class="dropdown-item" href="https://orion-houseware.my.id/faktur_pajak/print/ZDJvMGFEbE1NVTVRb2I0MWJESWQzYzBtQTkwMDAxMA" target="_blank">PDF</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="https://orion-houseware.my.id/faktur_pajak/ekspor/U25VMFF6bHpNVW9wNWVnMWFESWQzYzBtNkQwMDAxMA" target="_blank">Excel</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="https://orion-houseware.my.id/faktur_pajak/xml/TkZRMFlqbFNNVEMzcVBFMWNESWQzYzBtZXkwMDAxMA" target="_blank">XML</a>
-              </div>
+             <button type="button" class="btn btn-success btn-sm"><i class="fas fa-print"></i></button>
+             
+              <button type="button" class="btn btn-info btn-sm"  title="Detail"><i class="fas fa-list"></i></button>
 
-              <button type="button" class="btn btn-info mrg-btn btn-sm btn-aksi4915 btn-disabled" title="Detail" onclick="detail(&#39;VEZRMGVUbDRNVWY4cHFNMU5qSWQzYzBtQXUwMDAxMA&#39;, &#39;4915&#39;)" fdprocessedid="o8bfo"><i class="fas fa-list"></i></button>
-
-              <button type="button" class="btn btn-primary mrg-btn btn-sm btn-aksi4915 btn-disabled" title="Laporkan Faktur Pajak" onclick="lunas(&#39;4915&#39;)" fdprocessedid="vs1f6"><i class="fas fa-check"></i></button>
-
-              <b style="color: gray;" class="hidden loading-aksi4915"><i class="fas fa-spinner fa-pulse"></i> Loading</b>
+              <button type="button" class="btn btn-primary btn-sm"><i class="fas fa-check"></i></button>
             </td>
           </tr>
           <tr align="center">
@@ -218,22 +165,11 @@
             <td>PJ/004443</td>
             <td style="text-align: right !important">2.915.820,00</td>
             <td align="center">
-              <button type="button" class="btn btn-success btn-sm btn-aksi4916" data-toggle="dropdown" fdprocessedid="n4jklj">
-                <span class="sr-only">Toggle Dropdown</span><i class="fas fa-print"></i>
-              </button>
-              <div class="dropdown-menu" role="menu">
-                <a class="dropdown-item" href="https://orion-houseware.my.id/faktur_pajak/print/VkZKM05HMDVObGlRV2FERnBObkF6NVYwMDAwOA" target="_blank">PDF</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="https://orion-houseware.my.id/faktur_pajak/ekspor/UkUxeU5EUTV2M0JiNWNqRlNObW96VEswMDAwOA" target="_blank">Excel</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="https://orion-houseware.my.id/faktur_pajak/xml/ZDNvMGJqbFhNWDR6anVNMmF6SWQzYzBtNncwMDAxMA" target="_blank">XML</a>
-              </div>
+              <button type="button" class="btn btn-success btn-sm"><i class="fas fa-print"></i></button>
+             
+              <button type="button" class="btn btn-info btn-sm"  title="Detail"><i class="fas fa-list"></i></button>
 
-              <button type="button" class="btn btn-info mrg-btn btn-sm btn-aksi4916 btn-disabled" title="Detail" onclick="detail(&#39;TWpVM05HRTVFdlljU1ZURlVObXd6ZXUwMDAwOA&#39;, &#39;4916&#39;)" fdprocessedid="y13mn"><i class="fas fa-list"></i></button>
-
-              <button type="button" class="btn btn-primary mrg-btn btn-sm btn-aksi4916 btn-disabled" title="Laporkan Faktur Pajak" onclick="lunas(&#39;4916&#39;)" fdprocessedid="fm8rwd"><i class="fas fa-check"></i></button>
-
-              <b style="color: gray;" class="hidden loading-aksi4916"><i class="fas fa-spinner fa-pulse"></i> Loading</b>
+              <button type="button" class="btn btn-primary btn-sm"><i class="fas fa-check"></i></button>
             </td>
           </tr>
           <tr align="center">
@@ -244,22 +180,11 @@
             <td>PJ/004448</td>
             <td style="text-align: right !important">6.802.545,00</td>
             <td align="center">
-              <button type="button" class="btn btn-success btn-sm btn-aksi4921" data-toggle="dropdown" fdprocessedid="0harom">
-                <span class="sr-only">Toggle Dropdown</span><i class="fas fa-print"></i>
-              </button>
-              <div class="dropdown-menu" role="menu">
-                <a class="dropdown-item" href="https://orion-houseware.my.id/faktur_pajak/print/T1ZGa05FMDU4UDhHNlJUSjZNVGN6c0gwMDAwOA" target="_blank">PDF</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="https://orion-houseware.my.id/faktur_pajak/ekspor/VTFVME5HWTVSZjNsalN6SmtNVXN6aUowMDAwOA" target="_blank">Excel</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="https://orion-houseware.my.id/faktur_pajak/xml/UTNScU5HczU3NENZTmFqSmpNVTB6WGowMDAwOA" target="_blank">XML</a>
-              </div>
+              <button type="button" class="btn btn-success btn-sm"><i class="fas fa-print"></i></button>
+             
+              <button type="button" class="btn btn-info btn-sm"  title="Detail"><i class="fas fa-list"></i></button>
 
-              <button type="button" class="btn btn-info mrg-btn btn-sm btn-aksi4921 btn-disabled" title="Detail" onclick="detail(&#39;ZFVFMFRqbEJNbXlnM2tneE56SWQzYzBtN0owMDAxMA&#39;, &#39;4921&#39;)" fdprocessedid="9jouuj"><i class="fas fa-list"></i></button>
-
-              <button type="button" class="btn btn-primary mrg-btn btn-sm btn-aksi4921 btn-disabled" title="Laporkan Faktur Pajak" onclick="lunas(&#39;4921&#39;)" fdprocessedid="mctnxv"><i class="fas fa-check"></i></button>
-
-              <b style="color: gray;" class="hidden loading-aksi4921"><i class="fas fa-spinner fa-pulse"></i> Loading</b>
+              <button type="button" class="btn btn-primary btn-sm"><i class="fas fa-check"></i></button>
             </td>
           </tr>
           <tr align="center">
@@ -270,22 +195,11 @@
             <td>PJ/004449</td>
             <td style="text-align: right !important">2.512.000,00</td>
             <td align="center">
-              <button type="button" class="btn btn-success btn-sm btn-aksi4922" data-toggle="dropdown" fdprocessedid="k47d8r">
-                <span class="sr-only">Toggle Dropdown</span><i class="fas fa-print"></i>
-              </button>
-              <div class="dropdown-menu" role="menu">
-                <a class="dropdown-item" href="https://orion-houseware.my.id/faktur_pajak/print/VEVVMFZUbE1NbGwzM0ljeU1USWQzYzBtMFkwMDAxMA" target="_blank">PDF</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="https://orion-houseware.my.id/faktur_pajak/ekspor/TjJZM05IQTVZemcwSlN6SlVNa016ZFgwMDAwOA" target="_blank">Excel</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="https://orion-houseware.my.id/faktur_pajak/xml/TVhJeU5GUTVqd1dsVGRqSlRNbVl6bTAwMDAwOA" target="_blank">XML</a>
-              </div>
+             <button type="button" class="btn btn-success btn-sm"><i class="fas fa-print"></i></button>
+             
+              <button type="button" class="btn btn-info btn-sm"  title="Detail"><i class="fas fa-list"></i></button>
 
-              <button type="button" class="btn btn-info mrg-btn btn-sm btn-aksi4922 btn-disabled" title="Detail" onclick="detail(&#39;VjNCS05FUTU5UVYwV01USmlNbVV6ejMwMDAwOA&#39;, &#39;4922&#39;)" fdprocessedid="egm0uf"><i class="fas fa-list"></i></button>
-
-              <button type="button" class="btn btn-primary mrg-btn btn-sm btn-aksi4922 btn-disabled" title="Laporkan Faktur Pajak" onclick="lunas(&#39;4922&#39;)" fdprocessedid="iblk8"><i class="fas fa-check"></i></button>
-
-              <b style="color: gray;" class="hidden loading-aksi4922"><i class="fas fa-spinner fa-pulse"></i> Loading</b>
+              <button type="button" class="btn btn-primary btn-sm"><i class="fas fa-check"></i></button>
             </td>
           </tr>
           <tr align="center">
@@ -296,22 +210,11 @@
             <td>PJ/004450</td>
             <td style="text-align: right !important">4.017.600,00</td>
             <td align="center">
-              <button type="button" class="btn btn-success btn-sm btn-aksi4923" data-toggle="dropdown" fdprocessedid="3eye6">
-                <span class="sr-only">Toggle Dropdown</span><i class="fas fa-print"></i>
-              </button>
-              <div class="dropdown-menu" role="menu">
-                <a class="dropdown-item" href="https://orion-houseware.my.id/faktur_pajak/print/Wm5JME1EbHNNbmI5dW5jemRESWQzYzBteTUwMDAxMA" target="_blank">PDF</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="https://orion-houseware.my.id/faktur_pajak/ekspor/TWxORk5HWTVKQjBNSmVqSnhNM2t6SWkwMDAwOA" target="_blank">Excel</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="https://orion-houseware.my.id/faktur_pajak/xml/VnpFMFNUbHJNa3psVGt3emJESWQzYzBteVkwMDAxMA" target="_blank">XML</a>
-              </div>
+            <button type="button" class="btn btn-success btn-sm"><i class="fas fa-print"></i></button>
+             
+              <button type="button" class="btn btn-info btn-sm"  title="Detail"><i class="fas fa-list"></i></button>
 
-              <button type="button" class="btn btn-info mrg-btn btn-sm btn-aksi4923 btn-disabled" title="Detail" onclick="detail(&#39;U0ZJd05FRTVMN2xrVFRESnFNMmN6MVIwMDAwOA&#39;, &#39;4923&#39;)" fdprocessedid="t6uxae"><i class="fas fa-list"></i></button>
-
-              <button type="button" class="btn btn-primary mrg-btn btn-sm btn-aksi4923 btn-disabled" title="Laporkan Faktur Pajak" onclick="lunas(&#39;4923&#39;)" fdprocessedid="mcdhcv"><i class="fas fa-check"></i></button>
-
-              <b style="color: gray;" class="hidden loading-aksi4923"><i class="fas fa-spinner fa-pulse"></i> Loading</b>
+              <button type="button" class="btn btn-primary btn-sm"><i class="fas fa-check"></i></button>
             </td>
           </tr>
           <tr align="center">
@@ -322,22 +225,11 @@
             <td>PJ/004451</td>
             <td style="text-align: right !important">8.016.000,00</td>
             <td align="center">
-              <button type="button" class="btn btn-success btn-sm btn-aksi4924" data-toggle="dropdown" fdprocessedid="vkhomi">
-                <span class="sr-only">Toggle Dropdown</span><i class="fas fa-print"></i>
-              </button>
-              <div class="dropdown-menu" role="menu">
-                <a class="dropdown-item" href="https://orion-houseware.my.id/faktur_pajak/print/WlVaS05IQTVRYTVvS1J6SnZOR2d6UGswMDAwOA" target="_blank">PDF</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="https://orion-houseware.my.id/faktur_pajak/ekspor/U1RWWk5ESTVTQXVRUU1ESXdOR1V6Q2YwMDAwOA" target="_blank">Excel</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="https://orion-houseware.my.id/faktur_pajak/xml/Um1zMFZUbG5NbHRDUjRjME1qSWQzYzBtZ1QwMDAxMA" target="_blank">XML</a>
-              </div>
+              <button type="button" class="btn btn-success btn-sm"><i class="fas fa-print"></i></button>
+             
+              <button type="button" class="btn btn-info btn-sm"  title="Detail"><i class="fas fa-list"></i></button>
 
-              <button type="button" class="btn btn-info mrg-btn btn-sm btn-aksi4924 btn-disabled" title="Detail" onclick="detail(&#39;U2pjMFFUazFNazF6b3JnMFV6SWQzYzBtUmswMDAxMA&#39;, &#39;4924&#39;)" fdprocessedid="j45dch"><i class="fas fa-list"></i></button>
-
-              <button type="button" class="btn btn-primary mrg-btn btn-sm btn-aksi4924 btn-disabled" title="Laporkan Faktur Pajak" onclick="lunas(&#39;4924&#39;)" fdprocessedid="63xp7o"><i class="fas fa-check"></i></button>
-
-              <b style="color: gray;" class="hidden loading-aksi4924"><i class="fas fa-spinner fa-pulse"></i> Loading</b>
+              <button type="button" class="btn btn-primary btn-sm"><i class="fas fa-check"></i></button>
             </td>
           </tr>
         </tbody>

@@ -90,12 +90,8 @@
             <td align="right">17.000,00</td>
             <td align="left">IMAM - SOKARAJA DEPO</td>
             <td align="center">
-
-              <button type="button" class="btn btn-primary mrg-btn btn-aksi4570 btn-sm btn-disabled" onclick="edit(&#39;4570&#39;)" fdprocessedid="k6qn6x"><i class="fas fa-edit"></i></button>
-
-              <button type="button" class="btn btn-danger mrg-btn btn-sm btn-aksi4570 btn-disabled" onclick="hapus(&#39;4570&#39;)" fdprocessedid="2phb9"><i class="fas fa-trash"></i></button>
-
-              <b style="color: gray;" class="hidden loading-aksi4570"><i class="fas fa-spinner fa-pulse"></i> Loading</b>
+              <button type="button" class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></button>
+              <button type="button" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></button>
             </td>
           </tr>
           <tr align="center">
@@ -106,12 +102,8 @@
             <td align="right">23.000,00</td>
             <td align="left">33 KOLI</td>
             <td align="center">
-
-              <button type="button" class="btn btn-primary mrg-btn btn-aksi4569 btn-sm btn-disabled" onclick="edit(&#39;4569&#39;)" fdprocessedid="hkkaxa"><i class="fas fa-edit"></i></button>
-
-              <button type="button" class="btn btn-danger mrg-btn btn-sm btn-aksi4569 btn-disabled" onclick="hapus(&#39;4569&#39;)" fdprocessedid="8zati"><i class="fas fa-trash"></i></button>
-
-              <b style="color: gray;" class="hidden loading-aksi4569"><i class="fas fa-spinner fa-pulse"></i> Loading</b>
+<button type="button" class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></button>
+              <button type="button" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></button>
             </td>
           </tr>
           <tr align="center">
@@ -122,12 +114,8 @@
             <td align="right">90.000,00</td>
             <td align="left">TIMURRAYA 6</td>
             <td align="center">
-
-              <button type="button" class="btn btn-primary mrg-btn btn-aksi4568 btn-sm btn-disabled" onclick="edit(&#39;4568&#39;)" fdprocessedid="yyq06hs"><i class="fas fa-edit"></i></button>
-
-              <button type="button" class="btn btn-danger mrg-btn btn-sm btn-aksi4568 btn-disabled" onclick="hapus(&#39;4568&#39;)" fdprocessedid="rpwnmj"><i class="fas fa-trash"></i></button>
-
-              <b style="color: gray;" class="hidden loading-aksi4568"><i class="fas fa-spinner fa-pulse"></i> Loading</b>
+<button type="button" class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></button>
+              <button type="button" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></button>
             </td>
           </tr>
           <tr align="center">
@@ -138,12 +126,8 @@
             <td align="right">110.000,00</td>
             <td align="left">SUBUR 7</td>
             <td align="center">
-
-              <button type="button" class="btn btn-primary mrg-btn btn-aksi4567 btn-sm btn-disabled" onclick="edit(&#39;4567&#39;)" fdprocessedid="t21l0q"><i class="fas fa-edit"></i></button>
-
-              <button type="button" class="btn btn-danger mrg-btn btn-sm btn-aksi4567 btn-disabled" onclick="hapus(&#39;4567&#39;)" fdprocessedid="15rtmxc"><i class="fas fa-trash"></i></button>
-
-              <b style="color: gray;" class="hidden loading-aksi4567"><i class="fas fa-spinner fa-pulse"></i> Loading</b>
+<button type="button" class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></button>
+              <button type="button" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></button>
             </td>
           </tr>
           <tr align="center">
@@ -154,12 +138,8 @@
             <td align="right">60.000,00</td>
             <td align="left">TIMURAYA 4</td>
             <td align="center">
-
-              <button type="button" class="btn btn-primary mrg-btn btn-aksi4566 btn-sm btn-disabled" onclick="edit(&#39;4566&#39;)" fdprocessedid="8ekav"><i class="fas fa-edit"></i></button>
-
-              <button type="button" class="btn btn-danger mrg-btn btn-sm btn-aksi4566 btn-disabled" onclick="hapus(&#39;4566&#39;)" fdprocessedid="ixjde"><i class="fas fa-trash"></i></button>
-
-              <b style="color: gray;" class="hidden loading-aksi4566"><i class="fas fa-spinner fa-pulse"></i> Loading</b>
+<button type="button" class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></button>
+              <button type="button" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></button>
             </td>
           </tr>
           <tr align="center">
@@ -170,12 +150,8 @@
             <td align="right">192.000,00</td>
             <td align="left">DIKARI 16</td>
             <td align="center">
-
-              <button type="button" class="btn btn-primary mrg-btn btn-aksi4565 btn-sm btn-disabled" onclick="edit(&#39;4565&#39;)" fdprocessedid="gdj5r"><i class="fas fa-edit"></i></button>
-
-              <button type="button" class="btn btn-danger mrg-btn btn-sm btn-aksi4565 btn-disabled" onclick="hapus(&#39;4565&#39;)" fdprocessedid="kqu961"><i class="fas fa-trash"></i></button>
-
-              <b style="color: gray;" class="hidden loading-aksi4565"><i class="fas fa-spinner fa-pulse"></i> Loading</b>
+<button type="button" class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></button>
+              <button type="button" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></button>
             </td>
           </tr>
           <tr align="center">
@@ -186,12 +162,8 @@
             <td align="right">6.738.750,00</td>
             <td align="left">KALKULATOR 1.518.750 - AMRI 750 - DWI ENDAH 3.JT - AMRI 200 - DWI MAS 270 RB - AMRI 1 JT</td>
             <td align="center">
-
-              <button type="button" class="btn btn-primary mrg-btn btn-aksi4564 btn-sm btn-disabled" onclick="edit(&#39;4564&#39;)" fdprocessedid="6zy482"><i class="fas fa-edit"></i></button>
-
-              <button type="button" class="btn btn-danger mrg-btn btn-sm btn-aksi4564 btn-disabled" onclick="hapus(&#39;4564&#39;)" fdprocessedid="m2fsnq"><i class="fas fa-trash"></i></button>
-
-              <b style="color: gray;" class="hidden loading-aksi4564"><i class="fas fa-spinner fa-pulse"></i> Loading</b>
+<button type="button" class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></button>
+              <button type="button" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></button>
             </td>
           </tr>
           <tr align="center">
@@ -202,12 +174,8 @@
             <td align="right">528.500,00</td>
             <td align="left">IMAM MAJALENGKA</td>
             <td align="center">
-
-              <button type="button" class="btn btn-primary mrg-btn btn-aksi4563 btn-sm btn-disabled" onclick="edit(&#39;4563&#39;)" fdprocessedid="cuna2"><i class="fas fa-edit"></i></button>
-
-              <button type="button" class="btn btn-danger mrg-btn btn-sm btn-aksi4563 btn-disabled" onclick="hapus(&#39;4563&#39;)" fdprocessedid="tashfn"><i class="fas fa-trash"></i></button>
-
-              <b style="color: gray;" class="hidden loading-aksi4563"><i class="fas fa-spinner fa-pulse"></i> Loading</b>
+<button type="button" class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></button>
+              <button type="button" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></button>
             </td>
           </tr>
           <tr align="center">
@@ -218,12 +186,8 @@
             <td align="right">50.000,00</td>
             <td align="left">SUPRI - NEW DHIA</td>
             <td align="center">
-
-              <button type="button" class="btn btn-primary mrg-btn btn-aksi4562 btn-sm btn-disabled" onclick="edit(&#39;4562&#39;)" fdprocessedid="3wu03v"><i class="fas fa-edit"></i></button>
-
-              <button type="button" class="btn btn-danger mrg-btn btn-sm btn-aksi4562 btn-disabled" onclick="hapus(&#39;4562&#39;)" fdprocessedid="bv9rz4"><i class="fas fa-trash"></i></button>
-
-              <b style="color: gray;" class="hidden loading-aksi4562"><i class="fas fa-spinner fa-pulse"></i> Loading</b>
+<button type="button" class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></button>
+              <button type="button" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></button>
             </td>
           </tr>
           <tr align="center">
@@ -234,12 +198,8 @@
             <td align="right">415.500,00</td>
             <td align="left">BANJAR MAJENANG PURBALINGGA</td>
             <td align="center">
-
-              <button type="button" class="btn btn-primary mrg-btn btn-aksi4561 btn-sm btn-disabled" onclick="edit(&#39;4561&#39;)" fdprocessedid="6fdpun"><i class="fas fa-edit"></i></button>
-
-              <button type="button" class="btn btn-danger mrg-btn btn-sm btn-aksi4561 btn-disabled" onclick="hapus(&#39;4561&#39;)" fdprocessedid="v5tmy"><i class="fas fa-trash"></i></button>
-
-              <b style="color: gray;" class="hidden loading-aksi4561"><i class="fas fa-spinner fa-pulse"></i> Loading</b>
+<button type="button" class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></button>
+              <button type="button" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></button>
             </td>
           </tr>
         </tbody>

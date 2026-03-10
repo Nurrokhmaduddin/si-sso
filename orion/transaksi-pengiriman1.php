@@ -1,4 +1,4 @@
-<?php $page = 'transaksi_insentif_sales'; ?>
+<?php $page = 'transaksi_pengiriman'; ?>
 <?php include('1header.php'); ?>
 <?php include('2navbar.php'); ?>
 <?php include('3sidebar.php'); ?>
@@ -61,8 +61,8 @@
 
   <!-- TAB NAV  -->
   <ul class="nav nav-tabs">   
-    <li class="nav-item" onclick="window.location='transaksi-pengiriman.php'"><a class="nav-link ">Pemberian</a></li>
-    <li class="nav-item" onclick="window.location='transaksi-pengiriman1.php'"><a class="nav-link active">Insentif</a></li>
+    <li class="nav-item" onclick="window.location='transaksi-pengiriman.php'"><a class="nav-link ">Penataan</a></li>
+    <li class="nav-item" onclick="window.location='transaksi-pengiriman1.php'"><a class="nav-link active">Pengiriman</a></li>
   </ul>
 
          <!-- ========== CARD : Tabel  Granular ========== -->

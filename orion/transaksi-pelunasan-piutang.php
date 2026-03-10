@@ -106,8 +106,6 @@
             <td align="center">
 
               <button type="button" class="btn btn-primary mrg-btn btn-sm btn-aksi2018 btn-disabled" title="Lunasi" onclick="bayar(&#39;2018&#39;)" fdprocessedid="3o3dr"><i class="fas fa-money-bill-wave"></i></button>
-
-              <b style="color: gray;" class="hidden loading-aksi2018"><i class="fas fa-spinner fa-pulse"></i> Loading</b>
             </td>
           </tr>
           <tr align="center">
@@ -121,10 +119,7 @@
             <td align="right">5.015.500,00</td>
             <td align="right">4.910.606,00</td>
             <td align="center">
-
               <button type="button" class="btn btn-primary mrg-btn btn-sm btn-aksi2292 btn-disabled" title="Lunasi" onclick="bayar(&#39;2292&#39;)" fdprocessedid="o9h5y9"><i class="fas fa-money-bill-wave"></i></button>
-
-              <b style="color: gray;" class="hidden loading-aksi2292"><i class="fas fa-spinner fa-pulse"></i> Loading</b>
             </td>
           </tr>
           <tr align="center">
@@ -138,10 +133,7 @@
             <td align="right">788.109,00</td>
             <td align="right">142.145,25</td>
             <td align="center">
-
               <button type="button" class="btn btn-primary mrg-btn btn-sm btn-aksi2347 btn-disabled" title="Lunasi" onclick="bayar(&#39;2347&#39;)" fdprocessedid="gh4b68"><i class="fas fa-money-bill-wave"></i></button>
-
-              <b style="color: gray;" class="hidden loading-aksi2347"><i class="fas fa-spinner fa-pulse"></i> Loading</b>
             </td>
           </tr>
           <tr align="center">
@@ -155,10 +147,7 @@
             <td align="right">14.719.800,00</td>
             <td align="right">161.983,00</td>
             <td align="center">
-
               <button type="button" class="btn btn-primary mrg-btn btn-sm btn-aksi2506 btn-disabled" title="Lunasi" onclick="bayar(&#39;2506&#39;)" fdprocessedid="e0obo"><i class="fas fa-money-bill-wave"></i></button>
-
-              <b style="color: gray;" class="hidden loading-aksi2506"><i class="fas fa-spinner fa-pulse"></i> Loading</b>
             </td>
           </tr>
           <tr align="center">
@@ -172,10 +161,7 @@
             <td align="right">2.034.632,00</td>
             <td align="right">402.868,00</td>
             <td align="center">
-
               <button type="button" class="btn btn-primary mrg-btn btn-sm btn-aksi2592 btn-disabled" title="Lunasi" onclick="bayar(&#39;2592&#39;)" fdprocessedid="hpozg"><i class="fas fa-money-bill-wave"></i></button>
-
-              <b style="color: gray;" class="hidden loading-aksi2592"><i class="fas fa-spinner fa-pulse"></i> Loading</b>
             </td>
           </tr>
           <tr align="center">
@@ -189,10 +175,7 @@
             <td align="right">1.244.045,00</td>
             <td align="right">756.955,00</td>
             <td align="center">
-
               <button type="button" class="btn btn-primary mrg-btn btn-sm btn-aksi2607 btn-disabled" title="Lunasi" onclick="bayar(&#39;2607&#39;)" fdprocessedid="ouzzaa"><i class="fas fa-money-bill-wave"></i></button>
-
-              <b style="color: gray;" class="hidden loading-aksi2607"><i class="fas fa-spinner fa-pulse"></i> Loading</b>
             </td>
           </tr>
           <tr align="center">
@@ -206,10 +189,7 @@
             <td align="right">1.278.300,00</td>
             <td align="right">141.435,00</td>
             <td align="center">
-
               <button type="button" class="btn btn-primary mrg-btn btn-sm btn-aksi2818 btn-disabled" title="Lunasi" onclick="bayar(&#39;2818&#39;)" fdprocessedid="g6m5vr"><i class="fas fa-money-bill-wave"></i></button>
-
-              <b style="color: gray;" class="hidden loading-aksi2818"><i class="fas fa-spinner fa-pulse"></i> Loading</b>
             </td>
           </tr>
           <tr align="center">
@@ -223,10 +203,7 @@
             <td align="right">0,00</td>
             <td align="right">3.963.653,00</td>
             <td align="center">
-
               <button type="button" class="btn btn-primary mrg-btn btn-sm btn-aksi2943 btn-disabled" title="Lunasi" onclick="bayar(&#39;2943&#39;)" fdprocessedid="d3z6ns"><i class="fas fa-money-bill-wave"></i></button>
-
-              <b style="color: gray;" class="hidden loading-aksi2943"><i class="fas fa-spinner fa-pulse"></i> Loading</b>
             </td>
           </tr>
           <tr align="center">
@@ -240,10 +217,7 @@
             <td align="right">0,00</td>
             <td align="right">3.489.048,00</td>
             <td align="center">
-
               <button type="button" class="btn btn-primary mrg-btn btn-sm btn-aksi2945 btn-disabled" title="Lunasi" onclick="bayar(&#39;2945&#39;)" fdprocessedid="g1et1"><i class="fas fa-money-bill-wave"></i></button>
-
-              <b style="color: gray;" class="hidden loading-aksi2945"><i class="fas fa-spinner fa-pulse"></i> Loading</b>
             </td>
           </tr>
           <tr align="center">
@@ -257,10 +231,7 @@
             <td align="right">0,00</td>
             <td align="right">1.557.000,00</td>
             <td align="center">
-
               <button type="button" class="btn btn-primary mrg-btn btn-sm btn-aksi2950 btn-disabled" title="Lunasi" onclick="bayar(&#39;2950&#39;)" fdprocessedid="m5qigs"><i class="fas fa-money-bill-wave"></i></button>
-
-              <b style="color: gray;" class="hidden loading-aksi2950"><i class="fas fa-spinner fa-pulse"></i> Loading</b>
             </td>
           </tr>
         </tbody>

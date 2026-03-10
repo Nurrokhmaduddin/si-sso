@@ -98,12 +98,9 @@
             <td align="right">549.780,00</td>
             <td align="right">158.044,50</td>
             <td align="center">
-
               <a href="https://orion-houseware.my.id/piutang/print/ZUdOVE0xa1c0S0tlNWNqaENNd3lpMDAwMDc" target="_blank"><button type="button" class="btn btn-success mrg-btn btn-sm btn-aksi398 btn-disabled" title="Print Piutang" fdprocessedid="39zxf"><i class="fas fa-print"></i></button></a>
 
               <button type="button" class="btn btn-info mrg-btn btn-sm btn-aksi398 btn-disabled" title="Detail" onclick="detail(&#39;TXpnelV6dzZ1aWxoT0dveVRlMDAwMDY&#39;, &#39;398&#39;)" fdprocessedid="6810n"><i class="fas fa-list"></i></button>
-
-              <b style="color: gray;" class="hidden loading-aksi398"><i class="fas fa-spinner fa-pulse"></i> Loading</b>
             </td>
           </tr>
           <tr align="center">
@@ -114,12 +111,9 @@
             <td align="right">16.796.881,50</td>
             <td align="right">701.849,12</td>
             <td align="center">
-
               <a href="https://orion-houseware.my.id/piutang/print/T1ZjemJqNGNqYWw2TjFJeXZrMDAwMDY" target="_blank"><button type="button" class="btn btn-success mrg-btn btn-sm btn-aksi397 btn-disabled" title="Print Piutang" fdprocessedid="fvg7nj"><i class="fas fa-print"></i></button></a>
 
               <button type="button" class="btn btn-info mrg-btn btn-sm btn-aksi397 btn-disabled" title="Detail" onclick="detail(&#39;Vmprek5UcHpMbGxsTjNneWl6MDAwMDY&#39;, &#39;397&#39;)" fdprocessedid="t49ir"><i class="fas fa-list"></i></button>
-
-              <b style="color: gray;" class="hidden loading-aksi397"><i class="fas fa-spinner fa-pulse"></i> Loading</b>
             </td>
           </tr>
           <tr align="center">
@@ -130,12 +124,9 @@
             <td align="right">727.350,00</td>
             <td align="right">2.500,00</td>
             <td align="center">
-
               <a href="https://orion-houseware.my.id/piutang/print/VUhjeldUaldyQWxOTmpZeTJuMDAwMDY" target="_blank"><button type="button" class="btn btn-success mrg-btn btn-sm btn-aksi396 btn-disabled" title="Print Piutang" fdprocessedid="djfkz"><i class="fas fa-print"></i></button></a>
 
               <button type="button" class="btn btn-info mrg-btn btn-sm btn-aksi396 btn-disabled" title="Detail" onclick="detail(&#39;VWxnemFqdll1TGw2TmtveXRjMDAwMDY&#39;, &#39;396&#39;)" fdprocessedid="dpjwkc"><i class="fas fa-list"></i></button>
-
-              <b style="color: gray;" class="hidden loading-aksi396"><i class="fas fa-spinner fa-pulse"></i> Loading</b>
             </td>
           </tr>
           <tr align="center">
@@ -146,12 +137,9 @@
             <td align="right">274.002,00</td>
             <td align="right">488.872,10</td>
             <td align="center">
-
               <a href="https://orion-houseware.my.id/piutang/print/T0d3emJET3JCRGw2TlZBeTRTMDAwMDY" target="_blank"><button type="button" class="btn btn-success mrg-btn btn-sm btn-aksi395 btn-disabled" title="Print Piutang" fdprocessedid="dio1ro"><i class="fas fa-print"></i></button></a>
 
               <button type="button" class="btn btn-info mrg-btn btn-sm btn-aksi395 btn-disabled" title="Detail" onclick="detail(&#39;Y0RnemNEYVN1UmxTTlRBeTN6MDAwMDY&#39;, &#39;395&#39;)" fdprocessedid="kymmwnp"><i class="fas fa-list"></i></button>
-
-              <b style="color: gray;" class="hidden loading-aksi395"><i class="fas fa-spinner fa-pulse"></i> Loading</b>
             </td>
           </tr>
           <tr align="center">
@@ -162,12 +150,9 @@
             <td align="right">12.641.744,65</td>
             <td align="right">202.166,40</td>
             <td align="center">
-
               <a href="https://orion-houseware.my.id/piutang/print/UWtGak0xRTk3YXZjNU5UUkpNd1hGMDAwMDc" target="_blank"><button type="button" class="btn btn-success mrg-btn btn-sm btn-aksi394 btn-disabled" title="Print Piutang" fdprocessedid="k0ugzw"><i class="fas fa-print"></i></button></a>
 
               <button type="button" class="btn btn-info mrg-btn btn-sm btn-aksi394 btn-disabled" title="Detail" onclick="detail(&#39;T0RVeE0yNE9HaWY4NVRUUXhNd0hYMDAwMDc&#39;, &#39;394&#39;)" fdprocessedid="1upipx"><i class="fas fa-list"></i></button>
-
-              <b style="color: gray;" class="hidden loading-aksi394"><i class="fas fa-spinner fa-pulse"></i> Loading</b>
             </td>
           </tr>
           <tr align="center">
@@ -178,12 +163,9 @@
             <td align="right">5.404.800,00</td>
             <td align="right">0,00</td>
             <td align="center">
-
               <a href="https://orion-houseware.my.id/piutang/print/TVZRemFEVHl4ZWw1TTNFeUhkMDAwMDY" target="_blank"><button type="button" class="btn btn-success mrg-btn btn-sm btn-aksi393 btn-disabled" title="Print Piutang" fdprocessedid="28dotv"><i class="fas fa-print"></i></button></a>
 
               <button type="button" class="btn btn-info mrg-btn btn-sm btn-aksi393 btn-disabled" title="Detail" onclick="detail(&#39;VVVKRk0wd2hvY0ZpNVpUTXlNd2NxMDAwMDc&#39;, &#39;393&#39;)" fdprocessedid="qkjw4q"><i class="fas fa-list"></i></button>
-
-              <b style="color: gray;" class="hidden loading-aksi393"><i class="fas fa-spinner fa-pulse"></i> Loading</b>
             </td>
           </tr>
           <tr align="center">
@@ -194,12 +176,9 @@
             <td align="right">7.536.238,10</td>
             <td align="right">2.771.429,60</td>
             <td align="center">
-
               <a href="https://orion-houseware.my.id/piutang/print/UzJjek5US2ZlSmxqTW5BeXNPMDAwMDY" target="_blank"><button type="button" class="btn btn-success mrg-btn btn-sm btn-aksi392 btn-disabled" title="Print Piutang" fdprocessedid="dgknyo"><i class="fas fa-print"></i></button></a>
 
               <button type="button" class="btn btn-info mrg-btn btn-sm btn-aksi392 btn-disabled" title="Detail" onclick="detail(&#39;YVhvemFUdTd6cWwyTWpVeWJNMDAwMDY&#39;, &#39;392&#39;)" fdprocessedid="r1dn9"><i class="fas fa-list"></i></button>
-
-              <b style="color: gray;" class="hidden loading-aksi392"><i class="fas fa-spinner fa-pulse"></i> Loading</b>
             </td>
           </tr>
           <tr align="center">
@@ -210,12 +189,9 @@
             <td align="right">2.928.528,50</td>
             <td align="right">157.250,00</td>
             <td align="center">
-
               <a href="https://orion-houseware.my.id/piutang/print/Y1djelFUQ3hwZGx5TVdneXJDMDAwMDY" target="_blank"><button type="button" class="btn btn-success mrg-btn btn-sm btn-aksi391 btn-disabled" title="Print Piutang" fdprocessedid="zuk46l"><i class="fas fa-print"></i></button></a>
 
               <button type="button" class="btn btn-info mrg-btn btn-sm btn-aksi391 btn-disabled" title="Detail" onclick="detail(&#39;VDJRelJEM1NtN2xXTVVreXNxMDAwMDY&#39;, &#39;391&#39;)" fdprocessedid="d34gek"><i class="fas fa-list"></i></button>
-
-              <b style="color: gray;" class="hidden loading-aksi391"><i class="fas fa-spinner fa-pulse"></i> Loading</b>
             </td>
           </tr>
           <tr align="center">
@@ -226,12 +202,9 @@
             <td align="right">12.249.765,00</td>
             <td align="right">397.178,50</td>
             <td align="center">
-
               <a href="https://orion-houseware.my.id/piutang/print/VUVnek5EZ2RSZmwxTUZveUVoMDAwMDY" target="_blank"><button type="button" class="btn btn-success mrg-btn btn-sm btn-aksi390 btn-disabled" title="Print Piutang" fdprocessedid="vwali"><i class="fas fa-print"></i></button></a>
 
               <button type="button" class="btn btn-info mrg-btn btn-sm btn-aksi390 btn-disabled" title="Detail" onclick="detail(&#39;ZFdodE0yZzQ2UzJsNVJ6QldNd3ZHMDAwMDc&#39;, &#39;390&#39;)" fdprocessedid="esrnbw"><i class="fas fa-list"></i></button>
-
-              <b style="color: gray;" class="hidden loading-aksi390"><i class="fas fa-spinner fa-pulse"></i> Loading</b>
             </td>
           </tr>
           <tr align="center">
@@ -242,12 +215,9 @@
             <td align="right">1.993.950,00</td>
             <td align="right">396.324,40</td>
             <td align="center">
-
               <a href="https://orion-houseware.my.id/piutang/print/ZG1SeU0xUVJYb3NCNE9UbE5NdzBvMDAwMDc" target="_blank"><button type="button" class="btn btn-success mrg-btn btn-sm btn-aksi389 btn-disabled" title="Print Piutang" fdprocessedid="3nzzka"><i class="fas fa-print"></i></button></a>
 
               <button type="button" class="btn btn-info mrg-btn btn-sm btn-aksi389 btn-disabled" title="Detail" onclick="detail(&#39;VEZnemJUNHR0Ymd6T1VjeTF4MDAwMDY&#39;, &#39;389&#39;)" fdprocessedid="ydq9bp"><i class="fas fa-list"></i></button>
-
-              <b style="color: gray;" class="hidden loading-aksi389"><i class="fas fa-spinner fa-pulse"></i> Loading</b>
             </td>
           </tr>
         </tbody>

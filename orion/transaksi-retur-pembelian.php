@@ -94,12 +94,9 @@
               <span class="badge badge-warning">DRAF</span>
             </td>
             <td align="center">
-              
               <button type="button" class="btn btn-warning mrg-btn btn-sm btn-aksi100 btn-disabled" onclick="detail(&#39;UjFneFRqVXRza0JGTUZNeURUMDAwMDY&#39;, &#39;100&#39;, &#39;trx&#39;)" fdprocessedid="dr63tt"><i class="fas fa-envelope-open"></i> Draf</button>
 
               <button type="button" class="btn btn-danger mrg-btn btn-sm btn-aksi100 btn-disabled" title="Cancel" onclick="cancel(&#39;100&#39;)" fdprocessedid="f8f5w"><i class="fas fa-times"></i> Batal</button>
-              
-              <b style="color: gray;" class="hidden loading-aksi100"><i class="fas fa-spinner fa-pulse"></i> Loading</b>
             </td>
           </tr>
           <tr align="center">
@@ -113,15 +110,11 @@
               <span class="badge badge-success">SUBMIT</span>
             </td>
             <td align="center">
-              
               <a href="https://orion-houseware.my.id/return_pembelian/print/UW5WMU1WUVJQNFd4MVZ6SnZNd3NMMDAwMDc" target="_blank"><button type="button" class="btn btn-success mrg-btn btn-sm btn-aksi152 btn-disabled" title="Print Retur Pembelian" fdprocessedid="6xw8l9"><i class="fas fa-print"></i></button></a>
 
               <button type="button" class="btn btn-info mrg-btn btn-sm btn-aksi152 btn-disabled" onclick="detail(&#39;UWxkbE1XWTc0T0NaMVV6SjBNd0xlMDAwMDc&#39;, &#39;152&#39;, &#39;&#39;)" fdprocessedid="narhr"><i class="fas fa-list"></i></button>
 
               <button type="button" class="btn btn-warning mrg-btn btn-sm btn-aksi152 btn-disabled" onclick="edit(&#39;152&#39;)" fdprocessedid="qr3xk"><i class="fas fa-edit"></i> Edit</button>
-
-              
-              <b style="color: gray;" class="hidden loading-aksi152"><i class="fas fa-spinner fa-pulse"></i> Loading</b>
             </td>
           </tr>
           <tr align="center">
@@ -135,15 +128,11 @@
               <span class="badge badge-success">SUBMIT</span>
             </td>
             <td align="center">
-              
               <a href="https://orion-houseware.my.id/return_pembelian/print/ZDI0eFF6UVppVFZNTVdJeTFXMDAwMDY" target="_blank"><button type="button" class="btn btn-success mrg-btn btn-sm btn-aksi151 btn-disabled" title="Print Retur Pembelian" fdprocessedid="thsck"><i class="fas fa-print"></i></button></a>
 
               <button type="button" class="btn btn-info mrg-btn btn-sm btn-aksi151 btn-disabled" onclick="detail(&#39;V0dNeFRqb2M2OFU1TVhNeVlCMDAwMDY&#39;, &#39;151&#39;, &#39;&#39;)" fdprocessedid="brzpih"><i class="fas fa-list"></i></button>
 
               <button type="button" class="btn btn-warning mrg-btn btn-sm btn-aksi151 btn-disabled" onclick="edit(&#39;151&#39;)" fdprocessedid="lauwl9"><i class="fas fa-edit"></i> Edit</button>
-
-              
-              <b style="color: gray;" class="hidden loading-aksi151"><i class="fas fa-spinner fa-pulse"></i> Loading</b>
             </td>
           </tr>
           <tr align="center">
@@ -157,15 +146,11 @@
               <span class="badge badge-success">SUBMIT</span>
             </td>
             <td align="center">
-              
               <a href="https://orion-houseware.my.id/return_pembelian/print/UnpSNU1YY1Q4NG93MVdEQmlNd0xEMDAwMDc" target="_blank"><button type="button" class="btn btn-success mrg-btn btn-sm btn-aksi150 btn-disabled" title="Print Retur Pembelian" fdprocessedid="d8gwj"><i class="fas fa-print"></i></button></a>
 
               <button type="button" class="btn btn-info mrg-btn btn-sm btn-aksi150 btn-disabled" onclick="detail(&#39;TjNZeGFqQXVqOVZSTUU0eTE4MDAwMDY&#39;, &#39;150&#39;, &#39;&#39;)" fdprocessedid="cbxrz9"><i class="fas fa-list"></i></button>
 
               <button type="button" class="btn btn-warning mrg-btn btn-sm btn-aksi150 btn-disabled" onclick="edit(&#39;150&#39;)" fdprocessedid="hd6veg"><i class="fas fa-edit"></i> Edit</button>
-
-              
-              <b style="color: gray;" class="hidden loading-aksi150"><i class="fas fa-spinner fa-pulse"></i> Loading</b>
             </td>
           </tr>
           <tr align="center">
@@ -179,15 +164,11 @@
               <span class="badge badge-success">SUBMIT</span>
             </td>
             <td align="center">
-              
               <a href="https://orion-houseware.my.id/return_pembelian/print/T1dVeGRUTTRoTlJOT1RBeVZrMDAwMDY" target="_blank"><button type="button" class="btn btn-success mrg-btn btn-sm btn-aksi149 btn-disabled" title="Print Retur Pembelian" fdprocessedid="89wm3"><i class="fas fa-print"></i></button></a>
 
               <button type="button" class="btn btn-info mrg-btn btn-sm btn-aksi149 btn-disabled" onclick="detail(&#39;VWxOek1Wb2YzVWNKMFFUbG5Nd0p2MDAwMDc&#39;, &#39;149&#39;, &#39;&#39;)" fdprocessedid="owctbb"><i class="fas fa-list"></i></button>
 
               <button type="button" class="btn btn-warning mrg-btn btn-sm btn-aksi149 btn-disabled" onclick="edit(&#39;149&#39;)" fdprocessedid="jvoad"><i class="fas fa-edit"></i> Edit</button>
-
-              
-              <b style="color: gray;" class="hidden loading-aksi149"><i class="fas fa-spinner fa-pulse"></i> Loading</b>
             </td>
           </tr>
           <tr align="center">
@@ -201,15 +182,11 @@
               <span class="badge badge-success">SUBMIT</span>
             </td>
             <td align="center">
-              
               <a href="https://orion-houseware.my.id/return_pembelian/print/YmxjeFdqNGlEd1IxT0d3eXRRMDAwMDY" target="_blank"><button type="button" class="btn btn-success mrg-btn btn-sm btn-aksi148 btn-disabled" title="Print Retur Pembelian" fdprocessedid="csvj9"><i class="fas fa-print"></i></button></a>
 
               <button type="button" class="btn btn-info mrg-btn btn-sm btn-aksi148 btn-disabled" onclick="detail(&#39;YzFobU1VUVVWT3dzME9EaERNd3luMDAwMDc&#39;, &#39;148&#39;, &#39;&#39;)" fdprocessedid="spl1s9"><i class="fas fa-list"></i></button>
 
               <button type="button" class="btn btn-warning mrg-btn btn-sm btn-aksi148 btn-disabled" onclick="edit(&#39;148&#39;)" fdprocessedid="mqyoou"><i class="fas fa-edit"></i> Edit</button>
-
-              
-              <b style="color: gray;" class="hidden loading-aksi148"><i class="fas fa-spinner fa-pulse"></i> Loading</b>
             </td>
           </tr>
           <tr align="center">
@@ -223,15 +200,11 @@
               <span class="badge badge-success">SUBMIT</span>
             </td>
             <td align="center">
-              
               <a href="https://orion-houseware.my.id/return_pembelian/print/WjI0eFFqd2gxZlJrTjJzeUc4MDAwMDY" target="_blank"><button type="button" class="btn btn-success mrg-btn btn-sm btn-aksi147 btn-disabled" title="Print Retur Pembelian" fdprocessedid="lpjitb"><i class="fas fa-print"></i></button></a>
 
               <button type="button" class="btn btn-info mrg-btn btn-sm btn-aksi147 btn-disabled" onclick="detail(&#39;TTFORk1UQUVVUVRjMFRUZEhNdzFjMDAwMDc&#39;, &#39;147&#39;, &#39;&#39;)" fdprocessedid="9v08k6"><i class="fas fa-list"></i></button>
 
               <button type="button" class="btn btn-warning mrg-btn btn-sm btn-aksi147 btn-disabled" onclick="edit(&#39;147&#39;)" fdprocessedid="lc31g"><i class="fas fa-edit"></i> Edit</button>
-
-              
-              <b style="color: gray;" class="hidden loading-aksi147"><i class="fas fa-spinner fa-pulse"></i> Loading</b>
             </td>
           </tr>
           <tr align="center">
@@ -245,15 +218,11 @@
               <span class="badge badge-success">SUBMIT</span>
             </td>
             <td align="center">
-              
               <a href="https://orion-houseware.my.id/return_pembelian/print/V2xreFFqUWZEWFExTlRVeUtvMDAwMDY" target="_blank"><button type="button" class="btn btn-success mrg-btn btn-sm btn-aksi145 btn-disabled" title="Print Retur Pembelian" fdprocessedid="sl6ad"><i class="fas fa-print"></i></button></a>
 
               <button type="button" class="btn btn-info mrg-btn btn-sm btn-aksi145 btn-disabled" onclick="detail(&#39;ZDNoek1URWdLT1FwME9EVXdNd0sxMDAwMDc&#39;, &#39;145&#39;, &#39;&#39;)" fdprocessedid="cs9mrl"><i class="fas fa-list"></i></button>
 
               <button type="button" class="btn btn-warning mrg-btn btn-sm btn-aksi145 btn-disabled" onclick="edit(&#39;145&#39;)" fdprocessedid="2h1ior"><i class="fas fa-edit"></i> Edit</button>
-
-              
-              <b style="color: gray;" class="hidden loading-aksi145"><i class="fas fa-spinner fa-pulse"></i> Loading</b>
             </td>
           </tr>
           <tr align="center">
@@ -267,15 +236,11 @@
               <span class="badge badge-success">SUBMIT</span>
             </td>
             <td align="center">
-              
               <a href="https://orion-houseware.my.id/return_pembelian/print/T1hsV01YVUR6NVlUME1qSkRNd0lWMDAwMDc" target="_blank"><button type="button" class="btn btn-success mrg-btn btn-sm btn-aksi142 btn-disabled" title="Print Retur Pembelian" fdprocessedid="d1z43"><i class="fas fa-print"></i></button></a>
 
               <button type="button" class="btn btn-info mrg-btn btn-sm btn-aksi142 btn-disabled" onclick="detail(&#39;WVVJeGFEN3ZEVVI2TW5VeXFxMDAwMDY&#39;, &#39;142&#39;, &#39;&#39;)" fdprocessedid="bit3cm"><i class="fas fa-list"></i></button>
 
               <button type="button" class="btn btn-warning mrg-btn btn-sm btn-aksi142 btn-disabled" onclick="edit(&#39;142&#39;)" fdprocessedid="rjtovg"><i class="fas fa-edit"></i> Edit</button>
-
-              
-              <b style="color: gray;" class="hidden loading-aksi142"><i class="fas fa-spinner fa-pulse"></i> Loading</b>
             </td>
           </tr>
           <tr align="center">
@@ -289,15 +254,11 @@
               <span class="badge badge-success">SUBMIT</span>
             </td>
             <td align="center">
-              
               <a href="https://orion-houseware.my.id/return_pembelian/print/UTBneFRqY2F2clJyTUZNeWJQMDAwMDY" target="_blank"><button type="button" class="btn btn-success mrg-btn btn-sm btn-aksi140 btn-disabled" title="Print Retur Pembelian" fdprocessedid="wgfayp"><i class="fas fa-print"></i></button></a>
 
               <button type="button" class="btn btn-info mrg-btn btn-sm btn-aksi140 btn-disabled" onclick="detail(&#39;T0RCTk1XUUh6UVFoMGF6QnpNdzJsMDAwMDc&#39;, &#39;140&#39;, &#39;&#39;)" fdprocessedid="9ro1x"><i class="fas fa-list"></i></button>
 
               <button type="button" class="btn btn-warning mrg-btn btn-sm btn-aksi140 btn-disabled" onclick="edit(&#39;140&#39;)" fdprocessedid="vfsgj"><i class="fas fa-edit"></i> Edit</button>
-
-              
-              <b style="color: gray;" class="hidden loading-aksi140"><i class="fas fa-spinner fa-pulse"></i> Loading</b>
             </td>
           </tr>
         </tbody>

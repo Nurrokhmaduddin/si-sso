@@ -131,16 +131,17 @@
             <thead class="table-light">
               <tr>
                 <th width="60">Rank</th>
-                <th>Produk</th>
+                <th>Kode Produk</th>
+                <th>Merek</th>
                 <th class="text-end">Qty</th>
               </tr>
             </thead>
             <tbody>
-              <tr><td><span class="badge bg-warning">1</span></td><td>PRD-001</td><td class="text-end">320</td></tr>
-              <tr><td><span class="badge bg-secondary">2</span></td><td>PRD-002</td><td class="text-end">290</td></tr>
-              <tr><td><span class="badge bg-secondary">3</span></td><td>PRD-003</td><td class="text-end">260</td></tr>
-              <tr><td>4</td><td>PRD-004</td><td class="text-end">240</td></tr>
-              <tr><td>5</td><td>PRD-005</td><td class="text-end">210</td></tr>
+              <tr><td><span class="badge bg-warning">1</span></td><td>PRD-001</td><td>BBC</td><td class="text-end">320</td></tr>
+              <tr><td><span class="badge bg-secondary">2</span></td><td>PRD-002</td><td>BBC</td><td class="text-end">290</td></tr>
+              <tr><td><span class="badge bg-secondary">3</span></td><td>PRD-003</td><td>BBC</td><td class="text-end">260</td></tr>
+              <tr><td>4</td><td>PRD-004</td><td>BBC</td><td class="text-end">240</td></tr>
+              <tr><td>5</td><td>PRD-005</td><td>BBC</td><td class="text-end">210</td></tr>
             </tbody>
           </table>
         </div>
@@ -160,16 +161,17 @@
             <thead class="table-light">
               <tr>
                 <th width="60">Rank</th>
-                <th>Produk</th>
+                <th>Kode Produk</th>
+                <th>Merek</th>
                 <th class="text-end">Qty</th>
               </tr>
             </thead>
             <tbody>
-              <tr><td><span class="badge bg-warning">1</span></td><td>PRD-010</td><td class="text-end">410</td></tr>
-              <tr><td><span class="badge bg-secondary">2</span></td><td>PRD-011</td><td class="text-end">380</td></tr>
-              <tr><td><span class="badge bg-secondary">3</span></td><td>PRD-012</td><td class="text-end">350</td></tr>
-              <tr><td>4</td><td>PRD-013</td><td class="text-end">330</td></tr>
-              <tr><td>5</td><td>PRD-014</td><td class="text-end">300</td></tr>
+              <tr><td><span class="badge bg-warning">1</span></td><td>PRD-010</td><td>BBC</td><td class="text-end">410</td></tr>
+              <tr><td><span class="badge bg-secondary">2</span></td><td>PRD-011</td><td>BBC</td><td class="text-end">380</td></tr>
+              <tr><td><span class="badge bg-secondary">3</span></td><td>PRD-012</td><td>BBC</td><td class="text-end">350</td></tr>
+              <tr><td>4</td><td>PRD-013</td><td>BBC</td><td class="text-end">330</td></tr>
+              <tr><td>5</td><td>PRD-014</td><td>BBC</td><td class="text-end">300</td></tr>
             </tbody>
           </table>
         </div>
