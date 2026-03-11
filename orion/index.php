@@ -140,8 +140,8 @@
               <tr><td><span class="badge bg-warning">1</span></td><td>PRD-001</td><td>BBC</td><td class="text-end">320</td></tr>
               <tr><td><span class="badge bg-secondary">2</span></td><td>PRD-002</td><td>BBC</td><td class="text-end">290</td></tr>
               <tr><td><span class="badge bg-secondary">3</span></td><td>PRD-003</td><td>BBC</td><td class="text-end">260</td></tr>
-              <tr><td>4</td><td>PRD-004</td><td>BBC</td><td class="text-end">240</td></tr>
-              <tr><td>5</td><td>PRD-005</td><td>BBC</td><td class="text-end">210</td></tr>
+              <tr><td><span class="badge bg-secondary">4</span></td><td>PRD-004</td><td>BBC</td><td class="text-end">240</td></tr>
+              <tr><td><span class="badge bg-secondary">5</span></td><td>PRD-005</td><td>BBC</td><td class="text-end">210</td></tr>
             </tbody>
           </table>
         </div>
@@ -157,8 +157,8 @@
           <small class="text-muted">Last 30 Days</small>
         </div>
         <div class="card-body p-0">
-          <table class="table table-hover table-striped mb-0 align-middle">
-            <thead class="table-light">
+          <table class="table table-hover mb-0 align-middle">
+            <thead class="table-secondary">
               <tr>
                 <th width="60">Rank</th>
                 <th>Kode Produk</th>
@@ -167,11 +167,26 @@
               </tr>
             </thead>
             <tbody>
-              <tr><td><span class="badge bg-warning">1</span></td><td>PRD-010</td><td>BBC</td><td class="text-end">410</td></tr>
-              <tr><td><span class="badge bg-secondary">2</span></td><td>PRD-011</td><td>BBC</td><td class="text-end">380</td></tr>
-              <tr><td><span class="badge bg-secondary">3</span></td><td>PRD-012</td><td>BBC</td><td class="text-end">350</td></tr>
-              <tr><td>4</td><td>PRD-013</td><td>BBC</td><td class="text-end">330</td></tr>
-              <tr><td>5</td><td>PRD-014</td><td>BBC</td><td class="text-end">300</td></tr>
+              <tr class="table- fw-bold">
+                <td><span class="badge bg-warning">1</span></td><td>PRD-010</td><td>BBC</td><td class="text-end">410</td>
+              </tr>
+              <tr class="table-">
+                <td><span class="badge bg-info">2</span></td><td>PRD-011</td><td>BBC</td><td class="text-end">380</td>
+              </tr>
+              <tr class="table-">
+                <td><span class="badge bg-info">3</span></td><td>PRD-012</td><td>BBC</td><td class="text-end">350</td>
+              </tr>
+              <tr class="text-muted">
+                <td><span class="badge bg-secondary">4</span></td><td>PRD-013</td><td>BBC</td><td class="text-end"><h9>330</h9></td>
+              </tr>
+              <tr class="text-muted">
+                <td><span class="badge bg-secondary">5</span></td><td>PRD-014</td><td>BBC</td><td class="text-end">300</td>
+              </tr>
+              <!-- <tr><td><span class="badge bg-warning">1</span></td><td><b>PRD-010</b></td><td><b>BBC</b></td><td class="text-end"><b>410</b></td></tr>
+              <tr><td><span class="badge bg-info">2</span></td><td>PRD-011</td><td>BBC</td><td class="text-end">380</td></tr>
+              <tr><td><span class="badge bg-info">3</span></td><td>PRD-012</td><td>BBC</td><td class="text-end">350</td></tr>
+              <tr><td><span class="badge bg-secondary">4</span></td><td><small>PRD-013</small></td><td><small>BBC</small></td><td class="text-end"><h9>330</h9></td></tr>
+              <tr><td><span class="badge bg-secondary">5</span></td><td><small>PRD-014</small></td><td><small>BBC</small></td><td class="text-end"><small>300</small></td></tr> -->
             </tbody>
           </table>
         </div>

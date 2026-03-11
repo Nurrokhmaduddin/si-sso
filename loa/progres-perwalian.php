@@ -103,7 +103,7 @@
                       <td>AANG KUNAEFIS.Ag., M.Ag.</td>
                       <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
                       <td>
-                        <button class="btn btn-sm btn-outline-info" onclick="window.location.href='konseling.php'">📄 Konseling</button>
+                        <button class="btn btn-sm btn-outline-info" onclick="window.location.href='progres-perwalian1.php'">📄 Konseling</button>
                       </td>
                     </tr>
 
@@ -113,7 +113,7 @@
                       <td>Abdullah Ahmad Dzikrullah S.Si., M.Sc.</td>
                       <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
                       <td>
-                        <button class="btn btn-sm btn-outline-info" onclick="window.location.href='konseling.php'">📄 Konseling</button>
+                        <button class="btn btn-sm btn-outline-info" onclick="window.location.href='progres-perwalian1.php'">📄 Konseling</button>
                       </td>
                     </tr>
 
@@ -123,7 +123,7 @@
                       <td>Adityawan Sigit, S.T., M.T.</td>
                       <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
                       <td>
-                        <button class="btn btn-sm btn-outline-info" onclick="window.location.href='konseling.php'">📄 Konseling</button>
+                        <button class="btn btn-sm btn-outline-info" onclick="window.location.href='progres-perwalian1.php'">📄 Konseling</button>
                       </td>
                     </tr>
 
@@ -133,7 +133,7 @@
                       <td>Ahmad Asroni S.Fil., S.Th.I., M.Hum.</td>
                       <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
                       <td>
-                        <button class="btn btn-sm btn-outline-info" onclick="window.location.href='konseling.php'">📄 Konseling</button>
+                        <button class="btn btn-sm btn-outline-info" onclick="window.location.href='progres-perwalian1.php'">📄 Konseling</button>
                       </td>
                     </tr>
 
@@ -143,7 +143,7 @@
                       <td>Ahmad Sadzali, Lc., M.H.</td>
                       <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
                       <td>
-                        <button class="btn btn-sm btn-outline-info" onclick="window.location.href='konseling.php'">📄 Konseling</button>
+                        <button class="btn btn-sm btn-outline-info" onclick="window.location.href='progres-perwalian1.php'">📄 Konseling</button>
                       </td>
                     </tr>
 
@@ -153,7 +153,7 @@
                       <td>Ahmad Zubaidi S.Pd., M.Pd.</td>
                       <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
                       <td>
-                        <button class="btn btn-sm btn-outline-info" onclick="window.location.href='konseling.php'">📄 Konseling</button>
+                        <button class="btn btn-sm btn-outline-info" onclick="window.location.href='progres-perwalian1.php'">📄 Konseling</button>
                       </td>
                     </tr>
 
@@ -163,7 +163,7 @@
                       <td>Ahmadi S.Si., M.Sc.</td>
                       <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
                       <td>
-                        <button class="btn btn-sm btn-outline-info" onclick="window.location.href='konseling.php'">📄 Konseling</button>
+                        <button class="btn btn-sm btn-outline-info" onclick="window.location.href='progres-perwalian1.php'">📄 Konseling</button>
                       </td>
                     </tr>
 
@@ -173,7 +173,7 @@
                       <td>Aisya Galuh Laksita, S.T., M.Eng</td>
                       <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
                       <td>
-                        <button class="btn btn-sm btn-outline-info" onclick="window.location.href='konseling.php'">📄 Konseling</button>
+                        <button class="btn btn-sm btn-outline-info" onclick="window.location.href='progres-perwalian1.php'">📄 Konseling</button>
                       </td>
                     </tr>
 
@@ -183,7 +183,7 @@
                       <td>Aisyah Nur Jannah, S.T., M.Sc.</td>
                       <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
                       <td>
-                        <button class="btn btn-sm btn-outline-info" onclick="window.location.href='konseling.php'">📄 Konseling</button>
+                        <button class="btn btn-sm btn-outline-info" onclick="window.location.href='progres-perwalian1.php'">📄 Konseling</button>
                       </td>
                     </tr>
 
@@ -193,7 +193,7 @@
                       <td>Albani Musyafa', S.T., M.T., Ph.D.</td>
                       <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
                       <td>
-                        <button class="btn btn-sm btn-outline-info" onclick="window.location.href='konseling.php'">📄 Konseling</button>
+                        <button class="btn btn-sm btn-outline-info" onclick="window.location.href='progres-perwalian1.php'">📄 Konseling</button>
                       </td>
                     </tr>
 
@@ -203,7 +203,7 @@
                       <td>Ali Mahmud Ashshiddiqi S.Pd.I., M.A.</td>
                       <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
                       <td>
-                        <button class="btn btn-sm btn-outline-info" onclick="window.location.href='konseling.php'">📄 Konseling</button>
+                        <button class="btn btn-sm btn-outline-info" onclick="window.location.href='progres-perwalian1.php'">📄 Konseling</button>
                       </td>
                     </tr>
 
@@ -213,7 +213,7 @@
                       <td>Alif Lukmanul Hakim S.Fil., M.Phil.</td>
                       <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
                       <td>
-                        <button class="btn btn-sm btn-outline-info" onclick="window.location.href='konseling.php'">📄 Konseling</button>
+                        <button class="btn btn-sm btn-outline-info" onclick="window.location.href='progres-perwalian1.php'">📄 Konseling</button>
                       </td>
                     </tr>
 
@@ -223,7 +223,7 @@
                       <td>Allan Fatchan Gani Wardhana S.H., M.H.</td>
                       <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
                       <td>
-                        <button class="btn btn-sm btn-outline-info" onclick="window.location.href='konseling.php'">📄 Konseling</button>
+                        <button class="btn btn-sm btn-outline-info" onclick="window.location.href='progres-perwalian1.php'">📄 Konseling</button>
                       </td>
                     </tr>
 
@@ -233,7 +233,7 @@
                       <td>Andi Purnomo, S.T., M.T.</td>
                       <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
                       <td>
-                        <button class="btn btn-sm btn-outline-info" onclick="window.location.href='konseling.php'">📄 Konseling</button>
+                        <button class="btn btn-sm btn-outline-info" onclick="window.location.href='progres-perwalian1.php'">📄 Konseling</button>
                       </td>
                     </tr>
 
@@ -243,7 +243,7 @@
                       <td>Anggit Mas Arifudin, S.T., M.T.</td>
                       <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
                       <td>
-                        <button class="btn btn-sm btn-outline-info" onclick="window.location.href='konseling.php'">📄 Konseling</button>
+                        <button class="btn btn-sm btn-outline-info" onclick="window.location.href='progres-perwalian1.php'">📄 Konseling</button>
                       </td>
                     </tr>
 
@@ -253,7 +253,7 @@
                       <td>Anisa Nur Amalina S.T., M.Eng.</td>
                       <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
                       <td>
-                        <button class="btn btn-sm btn-outline-info" onclick="window.location.href='konseling.php'">📄 Konseling</button>
+                        <button class="btn btn-sm btn-outline-info" onclick="window.location.href='progres-perwalian1.php'">📄 Konseling</button>
                       </td>
                     </tr>
 
@@ -263,7 +263,7 @@
                       <td>Annisa Nur Lathifah S.Si., M.Biotech., M.Agr., Ph.D.</td>
                       <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
                       <td>
-                        <button class="btn btn-sm btn-outline-info" onclick="window.location.href='konseling.php'">📄 Konseling</button>
+                        <button class="btn btn-sm btn-outline-info" onclick="window.location.href='progres-perwalian1.php'">📄 Konseling</button>
                       </td>
                     </tr>
 
@@ -273,7 +273,7 @@
                       <td>Any Juliani S.T., M.Sc.(Res.Eng.)</td>
                       <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
                       <td>
-                        <button class="btn btn-sm btn-outline-info" onclick="window.location.href='konseling.php'">📄 Konseling</button>
+                        <button class="btn btn-sm btn-outline-info" onclick="window.location.href='progres-perwalian1.php'">📄 Konseling</button>
                       </td>
                     </tr>
 
@@ -283,7 +283,7 @@
                       <td>Arum Handini Primandari S.Pd.Si., M.Sc.</td>
                       <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
                       <td>
-                        <button class="btn btn-sm btn-outline-info" onclick="window.location.href='konseling.php'">📄 Konseling</button>
+                        <button class="btn btn-sm btn-outline-info" onclick="window.location.href='progres-perwalian1.php'">📄 Konseling</button>
                       </td>
                     </tr>
 
@@ -293,7 +293,7 @@
                       <td>ASISTEN DOSEN FTSP</td>
                       <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
                       <td>
-                        <button class="btn btn-sm btn-outline-info" onclick="window.location.href='konseling.php'">📄 Konseling</button>
+                        <button class="btn btn-sm btn-outline-info" onclick="window.location.href='progres-perwalian1.php'">📄 Konseling</button>
                       </td>
                     </tr>
                   </tbody>

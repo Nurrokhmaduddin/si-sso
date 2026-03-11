@@ -184,7 +184,7 @@ canvas {
  </div>
  <div class="card-body">
 
-  <canvas id="radarPeriode" height="500px"></canvas>
+  <canvas id="radarPeriode" height="450px"></canvas>
 </div>
 </div>
 <!-- ========== CARD 4: tabel tren 3 periode ========== -->  
@@ -199,11 +199,11 @@ canvas {
    </div>
  </div>
   <div class="card-body">
-    <table class="table table-bordered table-striped table-sm datatables1">
+    <table class="table table-bordered table-striped table-sm ">
       <thead class="table-light">
         <tr>
           <th>Aksi</th>
-          <th>No</th>
+          <!-- <th>No</th> -->
           <th>Kode CPL</th>
           <th>2 Year Prior</th>
           <th>1 Year Prior</th>
@@ -214,7 +214,7 @@ canvas {
       <tbody>
         <tr>
           <td><a href="monev-rekap-tahunan-detail.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td>
-          <td>1</td>
+          <!-- <td>1</td> -->
           <td>CPL-01</td>
           <td>72</td>
           <td>75</td>
@@ -223,7 +223,7 @@ canvas {
         </tr>
         <tr>
           <td><a href="monev-rekap-tahunan-detail.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td>
-          <td>2</td>
+          <!-- <td>2</td> -->
           <td>CPL-02</td>
           <td>85</td>
           <td>82</td>
@@ -232,7 +232,7 @@ canvas {
         </tr>
         <tr>
           <td><a href="monev-rekap-tahunan-detail.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td>
-          <td>3</td>
+          <!-- <td>3</td> -->
           <td>CPL-03</td>
           <td>90</td>
           <td>88</td>
@@ -241,7 +241,7 @@ canvas {
         </tr>
         <tr>
           <td><a href="monev-rekap-tahunan-detail.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td>
-          <td>4</td>
+          <!-- <td>4</td> -->
           <td>CPL-04</td>
           <td>78</td>
           <td>78</td>
@@ -250,7 +250,7 @@ canvas {
         </tr>
         <tr>
           <td><a href="monev-rekap-tahunan-detail.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td>
-          <td>5</td>
+          <!-- <td>5</td> -->
           <td>CPL-05</td>
           <td>65</td>
           <td>70</td>
@@ -259,7 +259,7 @@ canvas {
         </tr>
         <tr>
           <td><a href="monev-rekap-tahunan-detail.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td>
-          <td>6</td>
+          <!-- <td>6</td> -->
           <td>CPL-06</td>
           <td>88</td>
           <td>85</td>
@@ -268,7 +268,7 @@ canvas {
         </tr>
         <tr>
           <td><a href="monev-rekap-tahunan-detail.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td>
-          <td>7</td>
+          <!-- <td>7</td> -->
           <td>CPL-07</td>
           <td>70</td>
           <td>74</td>
@@ -277,7 +277,7 @@ canvas {
         </tr>
         <tr>
           <td><a href="monev-rekap-tahunan-detail.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td>
-          <td>8</td>
+          <!-- <td>8</td> -->
           <td>CPL-08</td>
           <td>92</td>
           <td>92</td>
@@ -286,7 +286,7 @@ canvas {
         </tr>
         <tr>
           <td><a href="monev-rekap-tahunan-detail.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td>
-          <td>9</td>
+          <!-- <td>9</td> -->
           <td>CPL-09</td>
           <td>76</td>
           <td>81</td>
@@ -295,7 +295,7 @@ canvas {
         </tr>
         <tr>
           <td><a href="monev-rekap-tahunan-detail.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td>
-          <td>10</td>
+          <!-- <td>10</td> -->
           <td>CPL-10</td>
           <td>83</td>
           <td>79</td>

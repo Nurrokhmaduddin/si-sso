@@ -222,14 +222,14 @@
       <!-- KIRI: Pie Chart -->
       <div class="col-lg-6">
         <!-- <h6><b>Proporsi Angkatan Batch Yudisium</b></h6> -->
-        <canvas id="chartLulusanBatch"  ></canvas>
+        <canvas id="chartLulusanBatch" height="40" ></canvas>
 
       </div>
       <!-- KANAN -->
       <div class="col-lg-6 ">
         <!-- <canvas id="chartCPL1" width="100%" height="50" class="mb-4"></canvas> -->
         <!-- <canvas id="stackedCPMKChart" width="100%" height="50" class="mb-4"></canvas> -->
-        <br><br>
+        <br>
         <!-- <h6><b>Tabel Performa Batch Yudisium</b></h6> -->
         <table class="table table-bordered table-striped table-sm ">
           <thead class=" text-center">

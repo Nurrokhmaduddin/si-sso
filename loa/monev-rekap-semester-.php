@@ -506,6 +506,7 @@
             <th>Nama MK</th>
             <th> CPMK</th>
             <th> Semester Tempuh</th>
+            <th> Jumlah Mahasiswa</th>
             <th>Aksi</th>
           </tr>
         </thead>
@@ -516,6 +517,7 @@
             <td>Metode Pelaksanaan Bangunan</td>
             <td class="text-center">3</td>
             <td class="text-center">1</td>
+            <td>90</td>
             <td class="text-center">
               <a href="monev-rekap-semester-detail.php" class="btn btn-sm btn-outline-info">
                 📄 Detail
@@ -528,6 +530,7 @@
             <td>Struktur Komposit</td>
             <td class="text-center">3</td>
             <td class="text-center">1</td>
+            <td>90</td>
             <td class="text-center">
               <a href="monev-rekap-semester-detail.php" class="btn btn-sm btn-outline-info">
                 📄 Detail
@@ -540,6 +543,7 @@
             <td>Building Structures Design</td>
             <td class="text-center">3</td>
             <td class="text-center">1</td>
+            <td>140</td>
             <td class="text-center">
               <a href="monev-rekap-semester-detail.php" class="btn btn-sm btn-outline-info">
                 📄 Detail
@@ -552,6 +556,7 @@
             <td>Engineering Statistics</td>
             <td class="text-center">2</td>
             <td class="text-center">3</td>
+            <td>140</td>
             <td class="text-center">
               <a href="monev-rekap-semester-detail.php" class="btn btn-sm btn-outline-info">
                 📄 Detail
@@ -564,6 +569,7 @@
             <td>Bahan Perkerasan Jalan (+Pr)</td>
             <td class="text-center">4</td>
             <td class="text-center">3</td>
+            <td>140</td>
             <td class="text-center">
               <a href="monev-rekap-semester-detail.php" class="btn btn-sm btn-outline-info">
                 📄 Detail
@@ -576,6 +582,7 @@
             <td>Struktur Baja</td>
             <td class="text-center">3</td>
             <td class="text-center">3</td>
+            <td>70</td>
             <td class="text-center">
               <a href="monev-rekap-semester-detail.php" class="btn btn-sm btn-outline-info">
                 📄 Detail
@@ -588,6 +595,7 @@
             <td>Perancangan Struktur Jembatan</td>
             <td class="text-center">2</td>
             <td class="text-center">3</td>
+            <td>50</td>
             <td class="text-center">
               <a href="monev-rekap-semester-detail.php" class="btn btn-sm btn-outline-info">
                 📄 Detail
@@ -600,6 +608,7 @@
             <td>Introduction to Earthquake Engineering</td>
             <td class="text-center">3</td>
             <td class="text-center">3</td>
+            <td>4</td>
             <td class="text-center">
               <a href="monev-rekap-semester-detail.php" class="btn btn-sm btn-outline-info">
                 📄 Detail
@@ -612,6 +621,7 @@
             <td>BIM untuk Manajemen Konstruksi</td>
             <td class="text-center">2</td>
             <td class="text-center">5</td>
+            <td>140</td>
             <td class="text-center">
               <a href="monev-rekap-semester-detail.php" class="btn btn-sm btn-outline-info">
                 📄 Detail
@@ -624,6 +634,7 @@
             <td>Water Structures Design</td>
             <td class="text-center">3</td>
             <td class="text-center">5</td>
+            <td>140</td>
             <td class="text-center">
               <a href="monev-rekap-semester-detail.php" class="btn btn-sm btn-outline-info">
                 📄 Detail

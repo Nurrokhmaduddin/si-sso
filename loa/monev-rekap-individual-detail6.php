@@ -130,7 +130,7 @@
     <!-- <li class="nav-item" onclick="window.location='monev-rekap-individual-detail5.php'"><a class="nav-link ">Riwayat IK</a></li> -->
     <li class="nav-item" onclick="window.location='monev-rekap-individual-detail3.php'"><a class="nav-link ">Riwayat MK</a></li>
     <li class="nav-item" onclick="window.location='monev-rekap-individual-detail6.php'"><a class="nav-link active"> KHS</a></li>
-    <li class="nav-item" onclick="window.location='monev-rekap-individual-detail7.php'"><a class="nav-link ">IPK</a></li>
+    <!-- <li class="nav-item" onclick="window.location='monev-rekap-individual-detail7.php'"><a class="nav-link ">IPK</a></li> -->
   </ul>
 
 

@@ -88,25 +88,25 @@
                         </tr>
                         <!-- Baris 2: IK -->
                         <tr>
-                          <th data-bs-toggle="tooltip" title="IK 1: Menunjukkan perilaku islami pada setiap peran yang dijalani (50%)">IK 1 </th>
-                          <th>IK 2 </th>
-                          <th>IK 3</th>
-                          <th>IK 4 </th>
-                          <th>IK 5</th>
-                          <th>IK 6 </th>
-                          <th>IK 7 </th>
-                          <th>IK 8 </th>
-                          <th>IK 9 </th>
+                          <th data-bs-toggle="tooltip" title="IK 1: Menunjukkan perilaku islami pada setiap peran yang dijalani (50%)">IK 1 (50%)</th>
+                          <th>IK 2 (50%)</th>
+                          <th>IK 3 (30%)</th>
+                          <th>IK 4 (70%)</th>
+                          <th>IK 5 (40%)</th>
+                          <th>IK 6 (30%)</th>
+                          <th>IK 7 (30%)</th>
+                          <th>IK 8 (50%)</th>
+                          <th>IK 9 (50%)</th>
                           <th>IK 10</th>
                           <th>IK 11</th>
                           <th>IK 12</th>
                           <th>IK 13</th>
                           <th>IK 14</th>
                           <th>IK 15</th>
-                          <th>IK 16 </th>
-                          <th>IK 17 </th>
-                          <th>IK 18 </th>
-                          <th>IK 19 </th>
+                          <th>IK 16 (100%)</th>
+                          <th>IK 17 (65%)</th>
+                          <th>IK 18 (35%)</th>
+                          <th>IK 19 (100%)</th>
                         </tr>
                       </thead>
 
@@ -118,7 +118,7 @@
                         <tr>
                           <td>STE120</td>
                           <td data-bs-toggle="tooltip" title="Deskripsi CPMK 1">1</td>
-                          <td class="text-center">v</td><td></td>
+                          <td class="text-center">60%</td><td></td>
                           <td></td><td></td>
                           <td></td><td></td><td></td>
                           <td></td><td></td>
@@ -131,7 +131,7 @@
                         <tr>
                           <td>STE120</td>
                           <td>2</td>
-                          <td></td><td class="text-center">v</td>
+                          <td></td><td class="text-center">100%</td>
                           <td></td><td></td>
                           <td></td><td></td><td></td>
                           <td></td><td></td>
@@ -145,7 +145,7 @@
                           <td>STE121</td>
                           <td>1</td>
                           <td></td><td></td>
-                          <td class="text-center">v</td><td></td>
+                          <td class="text-center">100%</td><td></td>
                           <td></td><td></td><td></td>
                           <td></td><td></td>
                           <td></td><td></td>
@@ -163,7 +163,7 @@
                           <td>STE122</td>
                           <td>1</td>
                           <td></td><td></td>
-                          <td></td><td class="text-center">v</td>
+                          <td></td><td class="text-center">100%</td>
                           <td></td><td></td><td></td>
                           <td></td><td></td>
                           <td></td><td></td>
@@ -177,7 +177,7 @@
                           <td>1</td>
                           <td></td><td></td>
                           <td></td><td></td>
-                          <td class="text-center">v</td><td></td><td></td>
+                          <td class="text-center">100%</td><td></td><td></td>
                           <td></td><td></td>
                           <td></td><td></td>
                           <td></td><td></td>
@@ -196,7 +196,7 @@
                           <td></td><td></td>
                           <td></td><td></td>
                           <td></td><td></td><td></td>
-                          <td class="text-center">v</td><td></td>
+                          <td class="text-center">100%</td><td></td>
                           <td></td><td></td>
                           <td></td><td></td>
                           <td></td><td></td>
@@ -206,7 +206,7 @@
                         <tr>
                           <td>STE124</td>
                           <td>2</td>
-                          <td class="text-center">v</td><td></td>
+                          <td class="text-center">40%</td><td></td>
                           <td></td><td></td>
                           <td></td><td></td>
                           <td></td><td></td><td></td>

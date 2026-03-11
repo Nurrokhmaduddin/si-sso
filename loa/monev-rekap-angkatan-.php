@@ -211,7 +211,7 @@
 
 
     <div class="col-lg-8">
-      <canvas id="chartCPL3" width="100%" height="190"></canvas>
+      <canvas id="chartCPL3" width="100%" height="50"></canvas>
     </div>
 
 
@@ -420,7 +420,8 @@
             </div>
           </div>
           <div class="card-body">
-            <table class="table table-hover table-bordered table-sm datatables1">
+            <div class="table-responsive">
+            <table class="table table-hover table-bordered table-sm ">
               <thead style="background-color: #f2f2f2;">
                 <tr>
                   <th width="190px">Periode Semester</th>
@@ -448,7 +449,7 @@
                 </tr>
                 <tr>
                   <td>sem3 [2025/2026 - Ganjil]</td>
-                  <td>65</td><td>68</td><td>70</td><td><a href="#detailIK1" class="btn btn-sm btn-outline-info">74</a></td><td>76</td><td>78</td><td>80</td><td>82</td><td>81</td><td>5</td><td>...</td>
+                  <td>65</td><td>68</td><td>70</td><td><button  class="btn btn-sm btn-outline-info"onclick="window.location.href='monev-rekap-angkatan-detail3.php'">73</button></td><td>76</td><td>78</td><td>80</td><td>82</td><td>81</td><td>5</td><td>...</td>
                 </tr>
                 <tr>
                   <td>sem4 [2025/2026 - Genap]</td>
@@ -472,7 +473,7 @@
                 </tr>
                 <tr>
                   <td>sem9 [2028/2029 - Ganjil]</td>
-                  <td>68</td><td>70</td><td><button  class="btn btn-sm btn-outline-info"onclick="window.location.href='monev-rekap-angkatan-detail3.php'">73</button></td><td>75</td><td>77</td><td>79</td><td>81</td><td>82</td><td>84</td><td>9</td><td>...</td>
+                  <td>68</td><td>70</td><td><a href="#detailIK1" class="btn btn-sm btn-outline-info">74</a></td><td>75</td><td>77</td><td>79</td><td>81</td><td>82</td><td>84</td><td>9</td><td>...</td>
                 </tr>
                 <tr>
                   <td>Perkembangan Tren </td>
@@ -488,6 +489,7 @@
               </tfoot>
             </table>
           </div>
+        </div>
         </div>
 <!-- ========== CARD : tabel distribusi mahasiswa ========== -->  
 <!-- <table class="table table-hover table-bordered table-sm">
@@ -1866,7 +1868,7 @@ new Chart(ctxCPL, {
     datasets: [
       {
         label: 'Sem 1 (2024/2025 - Ganjil)',
-        data: [53,40,48,51,49,53,50,47,52,49],
+        data: [0,0,5,8,6,4,10,7,5,3],
         borderColor: '#6c757d',
         backgroundColor: '#6c757d',
         tension: 0.3
@@ -1874,7 +1876,7 @@ new Chart(ctxCPL, {
 
       {
         label: 'Sem 2 (2024/2025 - Genap)',
-        data: [55,57,53,56,54,58,55,52,57,54],
+        data: [10,8,12,15,14,13,18,12,16,14],
         borderColor: '#6c757d',
         backgroundColor: '#6c757d',
         tension: 0.3
@@ -1882,7 +1884,7 @@ new Chart(ctxCPL, {
 
       {
         label: 'Sem 3 (2025/2026 - Ganjil)',
-        data: [60,62,58,61,59,59,60,57,62,59],
+        data: [22,18,24,26,23,25,24,21,27,24],
         borderColor: '#dc3545',
         backgroundColor: '#dc3545',
         tension: 0.3
@@ -1890,7 +1892,7 @@ new Chart(ctxCPL, {
 
       {
         label: 'Sem 4 (2025/2026 - Genap)',
-        data: [65,67,63,61,64,62,65,62,67,64],
+        data: [35,30,38,40,37,39,42,34,41,38],
         borderColor: '#dc3545',
         backgroundColor: '#dc3545',
         tension: 0.3
@@ -1898,7 +1900,7 @@ new Chart(ctxCPL, {
 
       {
         label: 'Sem 5 (2026/2027 - Ganjil)',
-        data: [70,72,68,68,69,73,70,67,72,69],
+        data: [48,44,52,55,51,54,56,47,55,52],
         borderColor: '#ff9800',
         backgroundColor: '#ff9800',
         tension: 0.3
@@ -1906,7 +1908,7 @@ new Chart(ctxCPL, {
 
       {
         label: 'Sem 6 (2026/2027 - Genap)',
-        data: [75,77,73,76,74,78,75,72,77,74],
+        data: [60,55,63,66,62,65,67,58,66,63],
         borderColor: '#ff9800',
         backgroundColor: '#ff9800',
         tension: 0.3
@@ -1914,7 +1916,7 @@ new Chart(ctxCPL, {
 
       {
         label: 'Sem 7 (2027/2028 - Ganjil)',
-        data: [80,82,78,81,79,83,80,77,82,79],
+        data: [80,62,74,74,74,83,82,77,82,70],
         borderColor: '#4aa6ff',
         backgroundColor: '#4aa6ff',
         tension: 0.3
@@ -1922,7 +1924,7 @@ new Chart(ctxCPL, {
 
       {
         label: 'Sem 8 (2027/2028 - Genap)',
-        data: [85,87,83,86,84,88,80,82,87,84],
+        data: [80,62,80,83,81,84,82,77,82,82],
         borderColor: '#4aa6ff',
         backgroundColor: '#4aa6ff',
         tension: 0.3
@@ -1930,7 +1932,7 @@ new Chart(ctxCPL, {
 
       {
         label: 'Sem 9 (2028/2029 - Ganjil)',
-        data: [90,92,88,91,89,93,82,87,92,94],
+        data: [90,65,88,91,89,93,82,87,92,94],
         borderColor: '#007bff',
         backgroundColor: '#007bff',
         tension: 0.3,
@@ -1953,7 +1955,7 @@ new Chart(ctxCPL, {
     },
     scales: {
       y: {
-        beginAtZero: false,
+        beginAtZero: true,
         max: 100
       }
     }
@@ -2001,5 +2003,69 @@ function showGrafik() {
       }
     }
   });
+</script>
+<script>
+const ctx3 = document.getElementById("chartCPL3");
+
+new Chart(ctx3, {
+  type: 'bar',
+  data: {
+    labels: [
+      'CPL 1','CPL 2','CPL 3','CPL 4','CPL 5',
+      'CPL 6','CPL 7','CPL 8','CPL 9','CPL 10'
+    ],
+    datasets: [
+      // {
+      //   label: 'Batas Standar',
+      //   type: 'line',
+      //   yMin: 80, 
+      //   yMax: 80,
+      //   backgroundColor: 'rgba(255,255,255,0.7)',
+      //   borderColor: 'red',
+      //   borderWidth: 2,
+      //   borderDash: [6, 6],
+      // },
+      {
+        label: 'Rerata Nilai CPL',
+         data: [90,65,88,91,89,93,82,87,92,94],
+        backgroundColor: 'rgba(75, 192, 75, 0.7)',
+        borderColor: 'rgb(75, 192, 75)',
+        borderWidth: 2
+      }
+    ]
+  },
+  options: {
+    responsive: true,
+    plugins: {
+      legend: { position: 'top' },
+      annotation: {
+        annotations: {
+          // targetLine: {
+          //   type: 'line',
+          //   yMin: 80,
+          //   yMax: 80,
+          //   borderColor: 'red',
+          //   borderWidth: 2,
+          //   borderDash: [6, 6],
+          //   label: {
+          //     display: true,
+          //     content: 'Target % Mahasiswa = 60',
+          //     position: 'start',
+          //     color: 'red',
+          //     backgroundColor: 'rgba(255,255,255,0.7)',
+          //     padding: 4
+          //   }
+          // }
+        }
+      }
+    },
+    scales: {
+      y: {
+        beginAtZero: true,
+        max: 100
+      }
+    }
+  }
+});
 </script>
 <?php include('5script.php'); ?>

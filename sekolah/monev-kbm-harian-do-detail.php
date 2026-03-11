@@ -252,50 +252,112 @@
         </div>
         <div class="card-body table-responsive">
           <table class="table table-bordered table-sm">
-            <thead class="thead-light">
-              <tr>
-                <th>#</th>
-                <th style="width:5%">No</th>
-                <th style="width:25%">Nama Murid</th>
-                <th style="width:10%">Status</th>
-                <th style="width:60%">Catatan Fasilitator</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><button class="btn btn-outline-primary btn-xs"><i class="fas fa-edit"></i></button></td>
-                <td>1</td>
-                <td>Ameera Nur Fauziyyah</td>
-                <td>
-                  <span class="badge badge-success">Hadir</span>
-                </td>
-                <td>
-                  Aktif mengikuti kegiatan, mampu bekerja sama dalam kelompok.
-                </td>
-              </tr>
-              <tr>
-                <td><button class="btn btn-outline-primary btn-xs"><i class="fas fa-edit"></i></button></td>
-                <td>2</td>
-                <td>Ramadatiya Leo Pradana</td>
-                <td>
-                  <span class="badge badge-danger">Tidak Hadir</span>
-                </td>
-                <td>
-                  Izin tidak masuk karena kondisi kesehatan.
-                </td>
-              </tr>
-              <tr>
-                <td><button class="btn btn-outline-primary btn-xs"><i class="fas fa-edit"></i></button></td>
-                <td>3</td>
-                <td>Nama Murid Lain</td>
-                <td>
-                  <span class="badge badge-success">Hadir</span>
-                </td>
-                <td>
-                  Perlu pendampingan saat diskusi kelompok, namun menunjukkan antusiasme.
-                </td>
-              </tr>
-            </tbody>
+             
+  <tr>
+    <th>#</th>
+    <th style="width:5%">No</th>
+    <th style="width:25%">Nama Murid</th>
+    <th style="width:10%" class="text-center">Kehadiran</th>
+    <th>Catatan Kehadiran</th>
+    <th style="width:12%" class="text-center">Status Progres</th>
+    <th>Catatan Progres</th>
+  </tr>
+</thead>
+
+<tbody>
+
+<tr>
+  <td><button class="btn btn-outline-primary btn-xs"><i class="fas fa-edit"></i></button></td>
+  <td>1</td>
+  <td>Ameera Nur Fauziyyah</td>
+  <td class="text-center">
+    <span class="badge badge-success">Hadir</span>
+  </td>
+  <td>
+    Hadir tepat waktu dan mengikuti kegiatan pembelajaran sejak awal kelas.
+  </td>
+  <td class="text-center">
+    <span class="badge badge-success">Improvement</span>
+  </td>
+  <td>
+    Menunjukkan peningkatan pemahaman materi dan aktif saat diskusi kelompok.
+  </td>
+</tr>
+
+<tr>
+  <td><button class="btn btn-outline-primary btn-xs"><i class="fas fa-edit"></i></button></td>
+  <td>2</td>
+  <td>Ramadatiya Leo Pradana</td>
+  <td class="text-center">
+    <span class="badge badge-danger">Tidak Hadir</span>
+  </td>
+  <td>
+    Tidak hadir karena sakit berdasarkan informasi dari orang tua.
+  </td>
+  <td class="text-center">
+    <span class="badge badge-secondary">Non Significant</span>
+  </td>
+  <td>
+    Progres belum dapat dinilai karena tidak mengikuti kegiatan pembelajaran hari ini.
+  </td>
+</tr>
+
+<tr>
+  <td><button class="btn btn-outline-primary btn-xs"><i class="fas fa-edit"></i></button></td>
+  <td>3</td>
+  <td>Dimas Arka Pratama</td>
+  <td class="text-center">
+    <span class="badge badge-success">Hadir</span>
+  </td>
+  <td>
+    Hadir namun datang terlambat sekitar 10 menit setelah kelas dimulai.
+  </td>
+  <td class="text-center">
+    <span class="badge badge-warning">Stable</span>
+  </td>
+  <td>
+    Memahami materi dasar, namun masih perlu dorongan untuk lebih aktif dalam diskusi.
+  </td>
+</tr>
+
+<tr>
+  <td><button class="btn btn-outline-primary btn-xs"><i class="fas fa-edit"></i></button></td>
+  <td>4</td>
+  <td>Fathin Zahra Nabila</td>
+  <td class="text-center">
+    <span class="badge badge-success">Hadir</span>
+  </td>
+  <td>
+    Mengikuti seluruh kegiatan pembelajaran dengan baik dan tertib.
+  </td>
+  <td class="text-center">
+    <span class="badge badge-success">Improvement</span>
+  </td>
+  <td>
+    Lebih percaya diri saat menyampaikan pendapat dibandingkan pertemuan sebelumnya.
+  </td>
+</tr>
+
+<tr>
+  <td><button class="btn btn-outline-primary btn-xs"><i class="fas fa-edit"></i></button></td>
+  <td>5</td>
+  <td>Rafi Alghifari</td>
+  <td class="text-center">
+    <span class="badge badge-warning">Terlambat</span>
+  </td>
+  <td>
+    Datang terlambat sekitar 15 menit karena keterlambatan transportasi.
+  </td>
+  <td class="text-center">
+    <span class="badge badge-warning">Stable</span>
+  </td>
+  <td>
+    Tetap mampu mengikuti materi setelah diberikan penjelasan tambahan oleh pengajar.
+  </td>
+</tr>
+
+</tbody>
+            
           </table>
         </div>
         <div class="card-footer">

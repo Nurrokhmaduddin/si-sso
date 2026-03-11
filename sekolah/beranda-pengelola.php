@@ -120,7 +120,21 @@ include "3sidebar.php";
               <tbody>
                 <tr>
                   <td class="text-center">1</td>
-                  <td>Mengetahuisecara kualitatif seberaapa lengkap isian harianlaporannya dari para fasilitator</td>
+                  <td>Mengetahuisecara kualitatif seberapa lengkap isian harianlaporannya dari para fasilitator</td>
+                  <td>?????</td>
+                  <td>?????</td>
+                  <td>?????</td>
+                </tr>
+                <tr>
+                  <td class="text-center">1</td>
+                  <td>mengetahui keakifan fasil dalam mmbua report secara  umum dan peeer anak.</td>
+                  <td>?????</td>
+                  <td>?????</td>
+                  <td>?????</td>
+                </tr>
+                <tr>
+                  <td class="text-center">1</td>
+                  <td>mengetahui pfoma dan keaktifan walimurid .</td>
                   <td>?????</td>
                   <td>?????</td>
                   <td>?????</td>

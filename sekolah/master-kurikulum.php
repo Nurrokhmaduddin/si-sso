@@ -84,7 +84,7 @@
 <tbody>
 	<tr>
 		<td class="text-center">1</td>
-		<td>Akhlak</td>
+		<td>Akhlak (70%)</td>
 		<td>
 			Peserta didik mampu menunjukkan perilaku berakhlak mulia, beriman dan bertakwa kepada Tuhan Yang Maha Esa,
 			jujur, disiplin, bertanggung jawab, peduli terhadap sesama dan lingkungan, serta menerapkan nilai-nilai

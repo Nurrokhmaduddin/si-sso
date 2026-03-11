@@ -60,7 +60,7 @@
                 <button class="btn btn-outline-info btn-sm " data-bs-toggle="modal" data-bs-target="#modalFilter">
                   <i class="fas fa-search me-1"></i> Pencarian
                 </button>                
-                <button type="button" class="btn btn-outline-success btn-sm">
+                <button type="button" class="btn btn-outline-success btn-sm" onclick="window.location='data-cpl-individual.pdf'">
                   <i class="fas fa-file-download me-1"></i> Export
                 </button>   
               </div>
@@ -130,7 +130,7 @@
     <!-- <li class="nav-item" onclick="window.location='monev-rekap-individual-detail5.php'"><a class="nav-link ">Riwayat IK</a></li> -->
     <li class="nav-item" onclick="window.location='monev-rekap-individual-detail3.php'"><a class="nav-link ">Riwayat MK</a></li>
     <li class="nav-item" onclick="window.location='monev-rekap-individual-detail6.php'"><a class="nav-link "> KHS</a></li>
-    <li class="nav-item" onclick="window.location='monev-rekap-individual-detail7.php'"><a class="nav-link ">IPK</a></li>
+    <!-- <li class="nav-item" onclick="window.location='monev-rekap-individual-detail7.php'"><a class="nav-link ">IPK</a></li> -->
   </ul>
 
 
@@ -958,7 +958,7 @@ canvas {
 
 
         <!-- ========== CARD : Chart MK ========== -->
-        <div class="card">
+        <!-- <div class="card">
           <div class="card-header">
             <h5 class="card-title mb-0"><i class="fas fa-chart-bar me-2"></i> MK - Rata-rata Capaian (Biru)</h5>
             <div class="card-tools">
@@ -987,8 +987,7 @@ canvas {
               
             </div>
           </div>      
-        </div>
-        <!-- Rangking Performa -->
+        </div> -->
         <div class="row collapse" id="daftarIKCPL41" >
           <!-- Card Lowest -->
           <div class="col-12 col-md-6">
@@ -1141,12 +1140,11 @@ canvas {
             </div>
           </div>
         </div>
-        <!-- daftar MK -->
         <div class="card collapse" id="daftarIKCPL43" >
           <div class="card-header d-flex align-items-center">
             <h5 class="card-title mb-0"><i class="fas fa-table me-2"></i> Tabel Pencapaian</h5>
             <div class="card-tools ms-auto">
-              <!-- <small class="text-muted">Klik angka Min/Max untuk melihat 1 mahasiswa (NIM / Nama / Nilai)</small> -->
+              <small class="text-muted">Klik angka Min/Max untuk melihat 1 mahasiswa (NIM / Nama / Nilai)</small>
             </div>
           </div>
           <div class="card-body">
@@ -1282,6 +1280,54 @@ canvas {
         </div>
        
 
+
+<!-- ============ card : tabel deskripsi CPL ====== -->
+<div class="card"> 
+  <div class="card-header"> 
+    <h5>Rekapitulasi Capaian CPL</h5> 
+  </div> 
+  <div class="card-body"> 
+    <table class="table table-sm table-bordered table-striped">
+      <thead> 
+        <tr> 
+          <th width="5%">CPL</th> <th width="75%">Deskripsi</th> <th width="20%">Capaian Akhir</th> 
+        </tr> 
+      </thead> 
+      <tbody> 
+        <tr> 
+          <td>1</td> <td>Mampu menunjukkan sikap ketakwaan kepada Tuhan yang Maha Esa dengan menjalankan syariat-Nya, menjunjung nilai keislaman dan keIndonesian, serta mengintegrasikan islam dalam bidang ilmu Teknik elektro</td> <td>75.74</td> 
+        </tr> 
+        <tr> 
+          <td>2</td> <td>Kemampuan untuk menerapkan matematika, ilmu pengetahuan alam dan/atau material, teknologi informasi dan keteknikan untuk mendapatkan pemahaman yang menyeluruh mengenai prinsip-prinsip teknik elektro</td> <td>76.4</td> 
+        </tr> 
+        <tr> 
+          <td>3</td> <td>Kemampuan untuk mendesain komponen, sistem, dan/atau proses untuk memenuhi kebutuhan bidang teknik elektro dalam batasan realistis dengan memanfaatkan potensi sumber daya lokal dan nasional dalam perspektif global</td> <td>75.45</td> 
+        </tr> 
+        <tr> 
+          <td>4</td> <td>Kemampuan untuk mendesain dan melaksanakan eksperimen laboratorium dan/atau lapangan serta menganalisis dan mengartikan data untuk memperkuat penilaian teknik</td> <td>74.58</td> 
+        </tr> 
+        <tr> 
+          <td>5</td> <td>Kemampuan untuk mengindentifikasi, memformulasikan, menganalisa, dan memecahkan masalah teknik elektro</td> <td>69.73</td> 
+        </tr> 
+        <tr> 
+          <td>6</td> <td>Kemampuan untuk mengaplikasikan metode, keahlian, dan piranti modern yang diperlukan untuk praktik teknik elektro</td> <td>65.69</td> 
+        </tr> 
+        <tr> 
+          <td>7</td> <td>Kemampuan untuk berkomunikasi secara efektif secara lisan dan tulisan</td> <td>74.6</td> 
+        </tr> 
+        <tr> 
+          <td>8</td> <td>Kemampuan untuk merencanakan, menyelesaikan, dan mengevaluasi tugas dalam batasan yang telah ditentukan</td> <td>76.6</td> 
+        </tr> 
+        <tr> 
+          <td>9</td> <td>Kemampuan untuk bekerja dalam tim multidisiplin dan multikultural secara inklusif</td> <td>72.42</td> 
+        </tr> 
+        <tr> 
+          <td>10</td> <td>Kemampuan untuk akuntabel dan bertanggungjawab kepada masyarakat serta mengikuti etika profesional dalam menyelesaikan masalah keteknikan</td> <td>80.96</td> 
+        </tr> 
+      </tbody> 
+    </table> 
+  </div> 
+</div> 
 
 
 

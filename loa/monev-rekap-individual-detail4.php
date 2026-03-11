@@ -29,38 +29,43 @@
               <h5 class="card-title mb-0"><i class="fas fa-filter "></i> Judul Tabel yang terdampak tombol aksi ini </h5>              
             </div> -->
             <div class="card-body ">
-              <div class="row">
+              <table class="table table-sm table-hover table-bordered table-striped deta">
+                <tbody>
+                  <tr>
+                    <td width="30%"><b> Kurikulum</b></td>
+                    <td>2023</td>
+                  </tr>
+                  <tr>
+                    <td width="30%"><b> Set Pemetaan:</b></td>
+                    <td>Peta v1.0</td>
+                  </tr>
+                  <tr>
+                    <td width="30%"><b> Mahasiswa</b></td>
+                    <td>VEGA AYU CENTYA (20521098)</td>
+                  </tr>
+                  <tr>
+                    <td width="30%"><b> Angkatan</b></td>
+                    <td>2024</td>
+                  </tr>
+                  <tr>
+                    <td width="30%"><b> Status</b></td>
+                    <td>Aktif</td>
+                  </tr>
 
-                <div class="col-md-6">
-                  <b>Kurikulum:</b> 2023 &nbsp;
-                </div>                
-                <div class="col-md-6">
-                  <b>Set Pemetaan:</b> v1.0
-                </div>
-                <div class="col-md-6">
-                  <b>NIM:</b> 20521098
-                </div>
-                <div class="col-md-6">
-                  <b>Angkatan:</b> 2020
-                </div>
-                <div class="col-md-6">
-                  <b>Nama :</b> VEGA AYU CENTYA
-                </div>
-                
-                <div class="col-md-6">
-                  <b>Status :</b> Aktif
-                </div>
-                
-              </div>
+                </tbody>
+              </table>
             </div>
             <div class="card-footer">
-              <div class="card-tools ms-auto">
+             <div class="card-tools ms-auto">
+                <button type="button" class="btn btn-outline-secondary btn-sm" onclick="window.location.href='monev-rekap-individual-.php'">
+                  <i class="fas fa-reply me-1"></i> Kembali
+                </button>
                 <button class="btn btn-outline-info btn-sm " data-bs-toggle="modal" data-bs-target="#modalFilter">
-                  <i class="fas fa-filter me-1"></i> Filter
+                  <i class="fas fa-search me-1"></i> Pencarian
                 </button>                
                 <button type="button" class="btn btn-outline-success btn-sm">
                   <i class="fas fa-file-download me-1"></i> Export
-                </button>                
+                </button>   
               </div>
 
             </div>
@@ -81,7 +86,7 @@
     .ewstable td, .ewstable th { vertical-align: middle; }
     .table-fixed-height { max-height: 360px; overflow:auto; }
   </style>       
-  <div class="row g-3 mb-3">
+  <!-- <div class="row g-3 mb-3">
     <div class="col-md-3">
       <div class="kpi bg-primary">
         <div class="small">Rata-rata CPL</div>
@@ -110,7 +115,7 @@
         <div class="small">dari 78 MK</div>
       </div>
     </div>
-  </div>
+  </div> -->
 
 <!-- TAB NAV  -->
   <ul class="nav nav-tabs">   
@@ -120,7 +125,7 @@
     <!-- <li class="nav-item" onclick="window.location='monev-rekap-individual-detail5.php'"><a class="nav-link ">Riwayat IK</a></li> -->
     <li class="nav-item" onclick="window.location='monev-rekap-individual-detail3.php'"><a class="nav-link ">Riwayat MK</a></li>
     <li class="nav-item" onclick="window.location='monev-rekap-individual-detail6.php'"><a class="nav-link "> KHS</a></li>
-    <li class="nav-item" onclick="window.location='monev-rekap-individual-detail7.php'"><a class="nav-link ">IPK</a></li>
+    <!-- <li class="nav-item" onclick="window.location='monev-rekap-individual-detail7.php'"><a class="nav-link ">IPK</a></li> -->
   </ul>
 
 
@@ -129,7 +134,6 @@
           <div class="card-header">
             <h3 class="card-title">Grafik Line Kemajuan semua CPL</h3>
             <div class="card-tools">
-              <small class="text-muted">Angkatan Terpilih</small>
               <button class="btn btn-sm btn-outline-primary" onclick="showTabel()">
                  Versi Tabel
               </button>

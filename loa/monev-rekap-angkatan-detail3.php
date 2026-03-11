@@ -104,7 +104,7 @@
       </table>
     </div>
 <!-- Tabel Perbandingan kelas-->
-<h6><b>Perbandingan Capaian <i>Antar Angkatan</i></b> </h6>
+<h6><b>Perbandingan Capaian Semester 3 <i>Antar Angkatan</i></b> </h6>
 <div class="table-responsive">
   <table class="table table-bordered table-striped table-sm text-center">
     <thead class="table-dark">

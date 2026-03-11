@@ -54,11 +54,11 @@
       </tr>
       <tr>
         <th>Jumlah IK</th>
-        <td>3</td>
+        <td>2</td>
       </tr>
       <tr>
         <th>Jumlah CPMK</th>
-        <td>12</td>
+        <td>7</td>
       </tr>
     </table>
             </div>
@@ -88,26 +88,25 @@
           <tr>
             <th style="width: 80px;">Kode IK</th>
             <th>Deskripsi IK</th>
+            <th style="width: 90px;">Mahasiswa Tuntas(%)</th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>IK 1</td>
+          <tr>  
+            <td>IK 4</td>
             <td>Mahasiswa mampu menyampaikan informasi secara lisan secara runtut, jelas, dan mudah dipahami.</td>
+            <td>75</td>
           </tr>
           <tr>
-            <td>IK 2</td>
+            <td>IK 5</td>
             <td>Mahasiswa mampu menulis laporan/tulisan akademik sesuai kaidah bahasa dan struktur penulisan yang baik.</td>
-          </tr>
-          <tr>
-            <td>IK 3</td>
-            <td>Mahasiswa mampu berkomunikasi secara profesional dalam konteks akademik dan industri, termasuk etika komunikasi digital.</td>
+            <td>71</td>
           </tr>
         </tbody>
       </table>
     </div>
 <!-- Tabel Perbandingan kelas-->
-    <h6><b>Perbandingan Capaian sem3 [2025/2026 - Ganjil] <i>Antar Angkatan</i></b> </h6>
+    <h6><b>Perbandingan Capaian Semester 9 <i>Antar Angkatan</i></b> </h6>
     <div class="table-responsive">
       <table class="table table-bordered table-striped table-sm text-center">
         <thead class="table-dark">
@@ -245,62 +244,63 @@
   </div>
 </div>
 <script>
-  const ctx2 = document.getElementById("chartCPL2");
+const ctx2 = document.getElementById("chartCPL2");
 
-  new Chart(ctx2, {
-    type: 'bar',
-    data: {
-      labels: ['IK 4', 'IK 5',  'CPL 3'],
-      datasets: [
-        {
-          label: 'Rerata Skor',
-          data: [82, 75,  81.66],
-          backgroundColor: '#6c757d',
-          borderColor: '#6c757d',
-          borderWidth: 1
-        },
-        {
-          label: '% Mahasiswa Tuntas',
-          data: [90, 80, 87.33],
-          backgroundColor: '#007bff',
-          borderColor: '#007bff',
-          borderWidth: 1
+new Chart(ctx2, {
+  type: 'bar',
+  data: {
+    labels: ['IK 4', 'IK 5', 'CPL 3'],
+    datasets: [
+      {
+        label: 'Rerata Skor',
+        data: [82, 75, 81.66],
+        backgroundColor: '#6c757d',
+        borderColor: '#6c757d',
+        borderWidth: 1
+      },
+      {
+        label: '% Mahasiswa Tuntas',
+        data: [75, 71, 80],
+        backgroundColor: '#007bff',
+        borderColor: '#007bff',
+        borderWidth: 1
+      }
+    ]
+  },
+  options: {
+    responsive: true,
+    plugins: {
+      legend: {
+        position: 'top'
+      },
+      annotation: {
+        annotations: {
+          targetLine: {
+            type: 'line',
+            yMin: 65,
+            yMax: 65,
+            borderColor: 'red',
+            borderWidth: 2,
+            borderDash: [6,6],
+            label: {
+              display: true,
+              content: 'Target 65',
+              position: 'end',
+              backgroundColor: 'rgba(255,255,255,0.7)',
+              color: 'red',
+              padding: 4
+            }
+          }
         }
-      ]
+      }
     },
-    options: {
-      responsive: true,
-      plugins: {
-        legend: { position: 'top' },
-        annotation: {
-          annotations: {
-            targetLine: {
-              type: 'line',
-                            yMin: 85,      // <<< TARGET CAPAIAN
-                            yMax: 85,
-                            borderColor: 'red',
-                            borderWidth: 2,
-                            borderDash: [6, 6],
-                            label: {
-                              display: true,
-                              content: 'Target 85',
-                              position: 'start',
-                              color: 'red',
-                              backgroundColor: 'rgba(255,255,255,0.7)',
-                              padding: 4
-                            }
-                          }
-                        }
-                      }
-                    },
-                    scales: {
-                      y: {
-                        beginAtZero: true
-                      }
-                    }
-                  }
-                });
-
-
-              </script>
+    scales: {
+      y: {
+        beginAtZero: true,
+        max: 100
+      }
+    }
+  }
+});
+</script>
 <?php include('5script.php'); ?>

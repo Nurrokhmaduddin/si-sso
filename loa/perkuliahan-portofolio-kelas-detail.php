@@ -101,7 +101,7 @@
                 </button> -->
                <!--  <button type="button" class="btn btn-outline-primary btn-sm " data-bs-toggle="modal" data-bs-target="#modalTambahData">
                   <i class="fas fa-plus me-1"></i> Add
-                </button> -->
+                </button> --> 
                 <!-- <button type="button" class="btn btn-outline-primary btn-sm " data-bs-toggle="modal" data-bs-target="#modalImpor">
                   <i class="fas fa-file-upload me-1"></i> Import
                 </button>  
@@ -137,7 +137,7 @@
               <table id="tbl" name="tbl" class="table table-sm table-hover table-bordered table-striped deta">
                   <tbody>
                     <tr>
-                      <td><button type="button" class="btn btn-xs btn-primary" ><i class="fas fa-edit"></i></button> 
+                      <td><button type="button" class="btn btn-xs btn-primary" data-bs-toggle="modal" data-bs-target="#modalEditData"><i class="fas fa-edit"></i></button> 
                         Dokumen RPS <span class="badge badge-success">Valid</span></td>
                         <td width="40%">
                           <a href="#" target="_blank" title="Unduh RPS">
@@ -146,7 +146,7 @@
                         </td>
                       </tr>
                       <tr>
-                        <td><button type="button" class="btn btn-xs btn-primary" ><i class="fas fa-edit"></i></button> 
+                        <td><button type="button" class="btn btn-xs btn-primary" data-bs-toggle="modal" data-bs-target="#modalEditData"><i class="fas fa-edit"></i></button>
                         Materi Pembelajaran (slides, modul, bahan ajar) </td>
                         <td width="40%">
                           <a href="#" target="_blank">
@@ -155,7 +155,7 @@
                         </td>
                       </tr>
                       <tr>
-                        <td><button type="button" class="btn btn-xs btn-primary" ><i class="fas fa-edit"></i></button>
+                        <td><button type="button" class="btn btn-xs btn-primary" data-bs-toggle="modal" data-bs-target="#modalEditData"><i class="fas fa-edit"></i></button>
                           Dokumen Penugasan Mahasiswa <span class="badge badge-secondary">Proses</span></td>
                           <td width="40%">
                             <a href="https://drive.google.com/drive/folders/1Ba6yZ2KLWZC992tVO7wxpcfxaOYb8Eyi?usp=drive_link" target="_blank">
@@ -173,7 +173,7 @@
                             </td>
                           </tr> -->
                           <tr>
-                            <td><button type="button" class="btn btn-xs btn-primary" ><i class="fas fa-edit"></i></button>
+                            <td><button type="button" class="btn btn-xs btn-primary" data-bs-toggle="modal" data-bs-target="#modalEditData"><i class="fas fa-edit"></i></button>
                             Evaluasi Dosen oleh Mahasiswa</td>
                             <td width="40%">
                               <a href="portfolio_cpmk_detail2.php" target="_blank">
@@ -291,7 +291,137 @@
 
       </div>
     </div>
+<!-- ================= Card  : Catatan evaluasi dan pengembangan) ============== -->
+          <div class="row mb-4">
+            <div class="col-12">
+              <h4 class="mb-1">Catatan Evaluasi dan Perencanaan</h4>
+              <small class="text-muted">
+                Kolom kiri menampilkan catatan <strong>Periode A</strong> (arsip/sebelumnya).  
+                Kolom kanan digunakan untuk mengisi dan menyimpan catatan <strong>Periode B</strong>.
+              </small>
+            </div>
+          </div>
 
+
+          <!-- ROW 1 : EVALUASI  -->
+          <div class="row mb-4">
+
+            <!-- KIRI : Periode A -->
+            <div class="col-lg-6">
+              <div class="card h-100 shadow-sm">
+                <div class="card-header bg-secondary text-white">
+                  <h5 class="mb-0">
+                    <i class="fas fa-clipboard-list me-2"></i>
+                    Evaluasi Hasil Pembelajaran
+                  </h5>
+                  <small>Periode A</small>
+                </div>
+                <div class="card-body">
+                  <p class="mb-0">
+                    secara keseluruhan pembelajaran telah berjalan dengan baik
+                  </p>
+                </div>
+              </div>
+            </div>
+
+
+            <!-- KANAN : Periode B -->
+            <div class="col-lg-6">
+              <div class="card h-100 shadow-sm border-primary">
+                <div class="card-header bg-primary text-white">
+                  <h5 class="mb-0">
+                    <i class="fas fa-edit me-2"></i>
+                    Evaluasi Hasil Pembelajaran
+                  </h5>
+                  <small>Periode B</small>
+                </div>
+
+                <form action="https://loa.simtekim-uii.id/loa/portofolio_cpmk/edit_evaluasi_hasil"
+                method="POST">
+                <input type="hidden" name="id" value="4100">
+
+                <div class="card-body">
+                  <textarea class="form-control"
+                  name="evaluasi_hasil"
+                  placeholder="Tuliskan evaluasi periode B..."
+                  style="min-height:200px;"></textarea>
+                </div>
+
+                <div class="card-footer bg-white">
+                  <button type="submit" class="btn btn-primary w-100">
+                    <i class="fas fa-save me-1"></i> Simpan Evaluasi Periode B
+                  </button>
+                </div>
+              </form>
+
+            </div>
+          </div>
+          </div>
+          <!--  ROW 2 : RENCANA  -->
+          <div class="row mb-4">
+
+            <!-- KIRI : Periode A -->
+            <div class="col-lg-6">
+              <div class="card h-100 shadow-sm">
+                <div class="card-header bg-secondary text-white">
+                  <h5 class="mb-0">
+                    <i class="fas fa-chart-line me-2"></i>
+                    Rencana Pengembangan Perkuliahan
+                  </h5>
+                  <small>Periode A</small>
+                </div>
+                <div class="card-body">
+                  <p class="mb-0">
+                    perlu meningkatkan interaksi
+                  </p>
+                </div>
+              </div>
+            </div>
+
+
+            <!-- KANAN : Periode B -->
+            <div class="col-lg-6">
+              <div class="card h-100 shadow-sm border-primary">
+                <div class="card-header bg-primary text-white">
+                  <h5 class="mb-0">
+                    <i class="fas fa-edit me-2"></i>
+                    Rencana Pengembangan Perkuliahan
+                  </h5>
+                  <small>Periode B</small>
+                </div>
+
+                <form action="https://loa.simtekim-uii.id/loa/portofolio_cpmk/edit_rencana_pengembangan"
+                method="POST">
+                <input type="hidden" name="id" value="4100">
+
+                <div class="card-body">
+                  <textarea class="form-control"
+                  name="rencana_pengembangan"
+                  placeholder="Tuliskan rencana periode B..."
+                  style="min-height:200px;"></textarea>
+                </div>
+
+                <div class="card-footer bg-white">
+                  <button type="submit" class="btn btn-primary w-100">
+                    <i class="fas fa-save me-1"></i> Simpan Rencana Periode B
+                  </button>
+                </div>
+              </form>
+
+            </div>
+          </div>
+          </div>
+
+
+
+
+
+
+
+
+
+
+          
 
       </div>
     </div>
@@ -353,6 +483,69 @@
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
       </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Edit Data -->
+<div class="modal fade" id="modalEditData" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-md modal-dialog-centered">
+    <div class="modal-content border-0 shadow">
+
+      <!-- Header -->
+      <div class="modal-header bg-light">
+        <h5 class="modal-title fw-semibold">
+          <i class="fas fa-plus-circle text-primary me-2"></i>
+          Input Portofolio (nama dokumen)
+        </h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <!-- Body -->
+      <div class="modal-body">
+        <form id="formTambahSoal">
+
+          <!-- Pilih Tipe -->
+          <div class="mb-3">
+            <label class="form-label d-block">Tipe Lampiran</label>
+            
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="tipeSoal" id="pilihFile" value="file" checked>
+              <label class="form-check-label" for="pilihFile">Upload File</label>
+            </div>
+
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="tipeSoal" id="pilihLink" value="link">
+              <label class="form-check-label" for="pilihLink">Input Link</label>
+            </div>
+          </div>
+
+          <!-- Input File -->
+          <div class="mb-3" id="inputFileWrapper">
+            <label class="form-label">Upload File Soal</label>
+            <input type="file" class="form-control">
+            <small class="text-muted">Format: PDF / DOC / DOCX</small>
+          </div>
+
+          <!-- Input Link -->
+          <div class="mb-3 d-none" id="inputLinkWrapper">
+            <label class="form-label">Link Soal</label>
+            <input type="url" class="form-control" placeholder="https://...">
+          </div>
+
+        </form>
+      </div>
+
+      <!-- Footer -->
+      <div class="modal-footer bg-light">
+        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+          Batal
+        </button>
+        <button type="submit" class="btn btn-primary" form="formTambahSoal">
+          <i class="fas fa-save me-1"></i> Simpan
+        </button>
+      </div>
+
     </div>
   </div>
 </div>
