@@ -90,3 +90,61 @@ $(document).ready(function() {
   }); 
   }); 
   </script>
+
+  
+<!-- Modal Feedback -->
+<div class="modal fade" id="modalFeedback" tabindex="-1" aria-labelledby="modalFeedbackLabel" aria-hidden="true">
+  <div class="modal-dialog modal-md">
+    <div class="modal-content rounded-3 shadow">
+
+      <!-- Header -->
+      <div class="modal-header bg-info text-white">
+        <h5 class="modal-title" id="modalFeedbackLabel"><i class="fas fa-clipboard-list me-2"></i>Send Feedback</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <!-- Form -->
+      <form action="" method="POST" enctype="multipart/form-data">
+        <div class="modal-body">
+
+          <!-- Jenis Feedback -->
+          <div class="mb-3">
+            <label class="form-label">Apa yang ingin Anda sampaikan?</label>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="feedbackType" id="feedbackBug" value="bug">
+              <label class="form-check-label" for="feedbackBug">Laporan Bug</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="feedbackType" id="feedbackFitur" value="fitur">
+              <label class="form-check-label" for="feedbackFitur">Usulan Fitur</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="feedbackType" id="feedbackSaran" value="saran">
+              <label class="form-check-label" for="feedbackSaran">Saran Perbaikan</label>
+            </div>
+          </div>
+
+          <!-- Pesan -->
+          <div class="mb-3">
+            <label for="feedbackMessage" class="form-label">Pesan Anda:</label>
+            <textarea class="form-control" id="feedbackMessage" name="feedbackMessage" rows="4" placeholder="Tulis pesan Anda di sini..."></textarea>
+          </div>
+
+          <!-- Lampiran -->
+          <div class="mb-3">
+            <label for="feedbackAttachment" class="form-label">Lampiran Screenshot</label>
+            <input type="file" class="form-control" id="feedbackAttachment" name="feedbackAttachment" accept="image/*">
+          </div>
+
+        </div>
+
+        <!-- Footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+          <button type="submit" class="btn btn-info text-white">Kirim Feedback</button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+</div>

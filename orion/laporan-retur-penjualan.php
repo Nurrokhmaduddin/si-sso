@@ -1,4 +1,4 @@
-<?php $page = 'transaksi_pengiriman'; ?>
+<?php $page = 'laporan_retur_penjualan'; ?>
 <?php include('1header.php'); ?>
 <?php include('2navbar.php'); ?>
 <?php include('3sidebar.php'); ?>
@@ -8,7 +8,7 @@
 
   <section class="content-header">
     <div class="container-fluid">
-      <h3 class="mb-0"> Data Diterima Sales
+      <h3 class="mb-0"> Laporan Retur Penjualan
         <button type="button" class="btn btn-tool" data-bs-toggle="modal" data-bs-target="#modalBantuan" title="Bantuan"><i class="fas fa-question-circle"></i>
         </button>
       </h3>
@@ -28,11 +28,14 @@
               <div class="row">
 
                 <div class="col-md-6">
-                  <b>Sales:</b> Semua
+                  <b>Periode Tanggal:</b> 01 Jan 2026 - 09 Mar 2026
                 </div>
-               <!--  <div class="col-md-6">
-                  <b>Status:</b> Semua
-                </div> -->
+                <div class="col-md-6">
+                  <b>Gudang:</b> Semua Gudang
+                </div>
+                 <div class="col-md-6">
+                  <b>Toko:</b> Semua Toko
+                </div>
 
               </div>
             </div>
@@ -42,184 +45,108 @@
                 <button class="btn btn-outline-info btn-sm " data-bs-toggle="modal" data-bs-target="#modalFilter">
                   <i class="fas fa-filter me-1"></i> Filter
                 </button>
-                <!-- <button type="button" class="btn btn-outline-primary btn-sm " data-bs-toggle="modal" data-bs-target="#modalTambahData">
-                  <i class="fas fa-plus me-1"></i> Add
-                </button> -->
-                <!-- <button type="button" class="btn btn-outline-primary btn-sm " data-bs-toggle="modal" data-bs-target="#modalImpor">
-                  <i class="fas fa-file-upload me-1"></i> Import
-                </button>                
                 <button type="button" class="btn btn-outline-success btn-sm">
                   <i class="fas fa-file-download me-1"></i> Export
                 </button>
-                <button type="button" class="btn btn-outline-danger btn-sm">
-                  <i class="fas fa-ban me-1"></i> Reset
-                </button>     -->
               </div>
             </div>
             
           </div>
 
-  <!-- TAB NAV  -->
-  <ul class="nav nav-tabs">   
-    <li class="nav-item" onclick="window.location='transaksi-pengiriman.php'"><a class="nav-link ">Penataan</a></li>
-    <li class="nav-item" onclick="window.location='transaksi-pengiriman1.php'"><a class="nav-link active">Pengiriman</a></li>
-  </ul>
+
 
          <!-- ========== CARD : Tabel  Granular ========== -->
 <div class="card">
-  <div class="card-header d-flex align-items-center">
-    <h5 class="card-title mb-0">Daftar </h5>    
-    
-  </div>
-
+  <!-- <div class="card-header">
+    <h3 class="card-title me-1">Rekap Produk Retur Penjualan</h3>
+    <small>by rentang tanggal retur, by gudang, </small>
+  </div> -->
   <div class="card-body">
-    <div class="table-responsive">
-      <table class="table table-bordered table-striped table-sm datatables1">
-        <thead>
-          <tr align="center">
-            <th>No.</th>
-            <th>Tanggal</th>
-            <th>Tanggal Pengiriman</th>
-            <th>No Faktur</th>
-            <th>Toko Penerima</th>
-            <th>Nama Sales</th>
-            <th>Total Penjualan (Rp)</th>
-            <th>Status</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr align="center">
-            <td>1</td>
-            <td>03-Aug-2024</td>
-            <td>04-Dec-2024</td>
-            <td>PJ/03082024/PO-0022/01</td>
-            <td>LUWES PALUR</td>
-            <td>IWAN</td>                        <td align="right">3.349.934,40</td>
+    <table class="table table-sm table-bordered datatables1">
+      <thead>
+        <tr class="text-center">
+          <th>Produk</th>
+          <th style="width:15%">Qty Retur</th>
+          <th style="width:20%">Nilai Retur</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Minyak Goreng 1L</td>
+          <td class="text-center">120</td>
+          <td class="text-right">Rp 3.600.000</td>
+        </tr>
+        <tr>
+          <td>Beras Premium</td>
+          <td class="text-center">60</td>
+          <td class="text-right">Rp 5.400.000</td>
+        </tr>
+        <tr>
+          <td>Gula Pasir 1Kg</td>
+          <td class="text-center">45</td>
+          <td class="text-right">Rp 900.000</td>
+        </tr>
 
-            <td align="center">
-              <span class="badge badge-danger">Retur sebagian</span>
-            </td>
-          </tr>
-          <tr align="center">
-            <td>2</td>
-            <td>07-Aug-2024</td>
-            <td>07-Aug-2024</td>
-            <td>PJ/07082024/PO-0007/01</td>
-            <td>PEMBELI</td>
-            <td>OFFICE</td>                        <td align="right">627.875,00</td>
-
-            <td align="center">
-              <span class="badge badge-success">Diterima</span>
-            </td>
-          </tr>
-          <tr align="center">
-            <td>3</td>
-            <td>08-Aug-2024</td>
-            <td>01-Oct-2024</td>
-            <td>PJ/08082024/PO-0021/03</td>
-            <td>VASUJA INTERNASIONAL</td>
-            <td>OFFICE</td>                        <td align="right">24.284.400,00</td>
- 
-            <td align="center">
-              <span class="badge badge-success">Diterima</span>
-            </td>
-          </tr>
-          <tr align="center">
-            <td>4</td>
-            <td>09-Aug-2024</td>
-            <td>09-Aug-2024</td>
-            <td>PJ/09082024/PO-0027/01</td>
-            <td>PEMBELI</td>
-            <td>OFFICE</td>                        <td align="right">132.610,50</td>
-
-            <td align="center">
-              <span class="badge badge-success">Diterima</span>
-            </td>
-          </tr>
-          <tr align="center">
-            <td>5</td>
-            <td>09-Aug-2024</td>
-            <td>11-Oct-2024</td>
-            <td>PJ/09082024/PO-0030/01</td>
-            <td>ZAM ZAM TALOK</td>
-            <td>OFFICE</td>                        <td align="right">29.268.639,60</td>
-
-            <td align="center">
-              <span class="badge badge-success">Diterima</span>
-            </td>
-          </tr>
-          <tr align="center">
-            <td>6</td>
-            <td>09-Aug-2024</td>
-            <td>12-Aug-2024</td>
-            <td>PJ/09082024/PO-0053/01</td>
-            <td>ZAM ZAM KALIWADAS</td>
-            <td>OFFICE</td>                        <td align="right">604.500,00</td>
-       
-            <td align="center">
-              <span class="badge badge-success">Diterima</span>
-            </td>
-          </tr>
-          <tr align="center">
-            <td>7</td>
-            <td>10-Aug-2024</td>
-            <td>10-Aug-2024</td>
-            <td>PJ/10082024/PO-0029/01</td>
-            <td>PEMBELI</td>
-            <td>OFFICE</td>                        <td align="right">102.600,00</td>
-
-            <td align="center">
-              <span class="badge badge-success">Diterima</span>
-            </td>
-          </tr>
-          <tr align="center">
-            <td>8</td>
-            <td>10-Aug-2024</td>
-            <td>17-Oct-2024</td>
-            <td>PJ/10082024/PO-0057/01</td>
-            <td>3 RATU</td>
-            <td>OFFICE</td>                        <td align="right">7.525.980,00</td>
-
-            <td align="center">
-              <span class="badge badge-success">Diterima</span>
-            </td>
-          </tr>
-          <tr align="center">
-            <td>9</td>
-            <td>10-Aug-2024</td>
-            <td>17-Oct-2024</td>
-            <td>PJ/10082024/PO-0057/02</td>
-            <td>3 RATU</td>
-            <td>OFFICE</td>                        <td align="right">6.033.975,00</td>
-
-            <td align="center">
-              <span class="badge badge-success">Diterima</span>
-            </td>
-          </tr>
-          <tr align="center">
-            <td>10</td>
-            <td>10-Aug-2024</td>
-            <td>17-Oct-2024</td>
-            <td>PJ/10082024/PO-0057/03</td>
-            <td>3 RATU</td>
-            <td>OFFICE</td>                        <td align="right">5.518.310,00</td>
-  
-            <td align="center">
-              <span class="badge badge-success">Diterima</span>
-            </td>
-          </tr>
-        </tbody>
-        <tfoot>
-          <tr align="center">
-            <th colspan="6">Total</th>
-            <th style="text-align: right !important;">12.486.889.269,05</th>
-            <th></th>
-          </tr>
-        </tfoot>
-      </table>
-    </div>
+        
+      </tbody>
+      <tfoot>
+        <tr class="table-secondary fw-bold">
+          <td>Total</td>
+          <td class="text-center">225</td>
+          <td class="text-right">Rp 9.900.000</td>
+        </tr>
+      </tfoot>
+    </table>
   </div>
 </div>
+
+
+<!-- <div class="card">
+  <div class="card-header">
+    <h3 class="card-title">Detail Transaksi Pengiriman</h3>
+  </div>
+
+  <div class="card-body p-0">
+    <table class="table table-sm table-hover">
+      <thead class="table-light">
+        <tr>
+          <th>Tanggal</th>
+          <th>No Surat Jalan</th>
+          <th>Customer</th>
+          <th style="width:15%">Nilai</th>
+          <th style="width:15%">Status</th>
+          <th style="width:15%">Tanggal Respon</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>10 Jan 2026</td>
+          <td>SJ-00123</td>
+          <td>Toko Berkah</td>
+          <td class="text-right">Rp 2.500.000</td>
+          <td><span class="badge badge-success">Diterima</span></td>
+          <td>11 Jan 2026</td>
+        </tr>
+        <tr>
+          <td>10 Jan 2026</td>
+          <td>SJ-00124</td>
+          <td>UD Makmur</td>
+          <td class="text-right">Rp 1.200.000</td>
+          <td><span class="badge badge-warning">Retur</span></td>
+          <td>12 Jan 2026</td>
+        </tr>
+        <tr>
+          <td>11 Jan 2026</td>
+          <td>SJ-00125</td>
+          <td>Toko Sinar Jaya</td>
+          <td class="text-right">Rp 3.400.000</td>
+          <td><span class="badge badge-danger">Dikembalikan</span></td>
+          <td>12 Jan 2026</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div> -->
 
           
 

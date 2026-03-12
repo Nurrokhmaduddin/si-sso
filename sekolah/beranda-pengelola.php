@@ -139,7 +139,13 @@ include "3sidebar.php";
                   <td>?????</td>
                   <td>?????</td>
                 </tr>
-
+<tr>
+                  <td class="text-center">1</td>
+                  <td>keuangan sekolah. kalau para  orangua, apakah banyak atau sdikit yang sudah lunas, per periode tahun akademik</td>
+                  <td>?????</td>
+                  <td>?????</td>
+                  <td>?????</td>
+                </tr>
                 <tr>
                   <td class="text-center">1</td>
                   <td>Memproses pembayaran SPP & biaya kegiatan</td>

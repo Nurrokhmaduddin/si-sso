@@ -50,6 +50,13 @@
         <li><a href="../Profile.html" class="dropdown-item"><i class="fas fa-user-circle me-2"></i>Profile</a></li>
         <li><a href="../activity-log.html" class="dropdown-item"><i class="fas fa-cog me-2"></i>Activity Log</a></li>
         <li><hr class="dropdown-divider"></li>
+        <li>
+          <a href="#" class="dropdown-item text-info" data-bs-toggle="modal" data-bs-target="#modalFeedback">
+            <i class="fas fa-clipboard-list me-2"></i>
+            Feedback
+          </a>
+        </li>
+        <!-- <li><a href="../" class="dropdown-item text-primary"><i class="fas fa-cog me-2"></i>Laporan Masalah</a></li> -->
         <li><a href="../" class="dropdown-item text-danger"><i class="fas fa-sign-out-alt me-2"></i>Logout</a></li>
       </ul>
     </li>

@@ -61,7 +61,7 @@
 
   <!-- TAB NAV  -->
   <ul class="nav nav-tabs">   
-    <li class="nav-item" onclick="window.location='transaksi-pengiriman.php'"><a class="nav-link active">Penataan</a></li>
+    <li class="nav-item" onclick="window.location='transaksi-pengiriman.php'"><a class="nav-link active">Penugasan</a></li>
     <li class="nav-item" onclick="window.location='transaksi-pengiriman1.php'"><a class="nav-link ">Pengiriman</a></li>
   </ul>
 

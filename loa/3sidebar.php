@@ -601,8 +601,8 @@
   </ul>
 </li>
         <!-- PENGATURAN -->
-        <li class="nav-item <?php echo in_array($page, ['pengaturan_user','pengaturan_role','pengaturan_app']) ? 'menu-open' : ''; ?>">
-          <a href="#" class="nav-link <?php echo in_array($page, ['pengaturan_user','pengaturan_role','pengaturan_app']) ? 'active' : ''; ?>">
+        <li class="nav-item <?php echo in_array($page, ['pengaturan_user','pengaturan_role','pengaturan_app','pengaturan_feedback']) ? 'menu-open' : ''; ?>">
+          <a href="#" class="nav-link <?php echo in_array($page, ['pengaturan_user','pengaturan_role','pengaturan_app','pengaturan_feedback']) ? 'active' : ''; ?>">
             <i class="nav-icon fas fa-cog"></i>
             <p>
               Pengaturan
@@ -611,7 +611,7 @@
           </a>
           <ul class="nav nav-treeview">
             <!-- USER (LEVEL 2) -->
-             <li class="nav-item <?php echo in_array($page, ['']) ? 'menu-open' : ''; ?>">
+             <li class="nav-item <?php echo in_array($page, ['g']) ? 'menu-open' : ''; ?>">
               <a href="#" class="nav-link <?php echo in_array($page, ['pengaturan_user','pengaturan_role']) ? 'active' : ''; ?>">
                 <i class="nav-icon fas fa-cog"></i>
                 <p>
@@ -619,7 +619,6 @@
                   <i class="right fas fa-angle-left"></i>
                 </p>
               </a>
-
               <!-- LEVEL 3 -->
               <ul class="nav nav-treeview">
                 <li class="nav-item">
@@ -668,6 +667,51 @@
                 <i class="fas fa-cog nav-icon"></i>
                 <p>Audit Log</p>
               </a>
+            </li>
+            <!-- USER (LEVEL 2) -->
+             <li class="nav-item <?php echo in_array($page, ['g']) ? 'menu-open' : ''; ?>">
+              <a href="#" class="nav-link <?php echo in_array($page, ['pengaturan_feedback']) ? 'active' : ''; ?>">
+                <i class="nav-icon fas fa-cog"></i>
+                <p>
+                  Audit Feedback
+                  <i class="right fas fa-angle-left"></i>
+                </p>
+              </a>
+              <!-- LEVEL 3 -->
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="pengaturan-feedback.php" class="nav-link <?php echo $page == 'pengaturan_feedback' ? 'active' : ''; ?>">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Data Feedback</p>
+                  </a>
+                </li>
+
+                <li class="nav-item">
+                  <a href="pengaturan-feedback1.php" class="nav-link <?php echo $page == 'pengaturan_role' ? 'active' : ''; ?>">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Analisis Feedback</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="pengaturan-feedback2.php" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Status Penanganan</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="pengaturan-feedback3.php" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Kategori Feedback</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="pengaturan-feedback4.php" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Rekap Feedback</p>
+                  </a>
+                </li>
+              </ul>
+
             </li>
             <li class="nav-item">
               <a href="pengaturan-notifikasi.php" class="nav-link">
@@ -736,3 +780,4 @@
     </div>
   </div>
 </div>
+

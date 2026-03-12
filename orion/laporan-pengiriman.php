@@ -60,18 +60,16 @@
   <div class="card-body">
     <div class="table-responsive">
       <table class="table table-bordered table-striped table-sm datatables1">
-        <thead>
+        <thead class="table-dark">
           <tr align="center">
             <th>No.</th>
-            <th>Nama Sales</th>
-            <th>Tanggal Insentif</th>
-            <th>Total Insentif</th>
+            <th>Nama Driver</th>
+            <th>Tanggal Kirim</th>
+            <th>Nilai Faktur</th>
             <th>Aksi</th>
           </tr>
         </thead>
-        <tfoot>
-          <tr align="center"><th colspan="3" rowspan="1">Total</th><th style="text-align: right !important;" rowspan="1" colspan="1">10.031.294,88</th><th rowspan="1" colspan="1"></th></tr>
-        </tfoot>
+        
         <tbody><tr class="odd"><td class="dtr-control" style="text-align: center;">1</td><td style="text-align: left;">SUPRI</td><td style="text-align: center;">29-Jan-2026</td><td style="text-align: right !important;">1.051.775,16</td><td style="text-align: center;">
           <div class="btn-group">
             <button type="button" class="btn btn-success btn-sm btn-aksi37" data-toggle="dropdown" fdprocessedid="ubp6dh">
@@ -134,10 +132,152 @@
           </button>
         </td></tr>
       </tbody>
+      <tfoot>
+          <tr class="table-secondary " ><th colspan="3" style="text-align: center;">Total</th><th style="text-align: right !important;" colspan="1">10.031.294,88</th><th colspan="1"></th></tr>
+        </tfoot>
     </table>
     </div>
   </div>
 </div>
+
+<div class="card">
+  <div class="card-header">
+    <h3 class="card-title">Rekap Pengiriman</h3>
+  </div>
+
+  <div class="card-body">
+    <table class="table table-sm table-bordered">
+      <thead>
+        <tr class="text-center">
+          <th>Status</th>
+          <th style="width:15%">Jumlah Faktur</th>
+          <th style="width:20%">Nilai Faktur</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Nota Diterima</td>
+          <td class="text-center">145(72%)</td>
+          <td class="text-right">Rp 35.000.000</td>
+          
+        </tr>
+        <tr>
+          <td>Nota Dikembalikan</td>
+          <td class="text-center">32(16%)</td>
+          <td class="text-right">Rp 85.000.000</td>
+        </tr>
+        <tr>
+          <td>Dikembalikan dengan Retur</td>
+          <td class="text-center">24(12%)</td>
+          <td class="text-right">Rp 35.000.000</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th>Total</th>
+          <th class="text-center">201(100%)</th>
+          <td class="text-right">Rp 155.000.000</td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+</div>
+<!-- ```
+
+# 3️⃣ Rekap Customer
+
+```html
+<div class="card">
+  <div class="card-header">
+    <h3 class="card-title">Rekap Pengiriman per Customer</h3>
+  </div>
+
+  <div class="card-body p-0">
+    <table class="table table-sm table-striped">
+      <thead class="table-light">
+        <tr>
+          <th>Customer</th>
+          <th style="width:12%">Total Pengiriman</th>
+          <th style="width:12%">Diterima</th>
+          <th style="width:12%">Dikembalikan</th>
+          <th style="width:12%">Retur</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Toko Sinar Jaya</td>
+          <td class="text-center">12</td>
+          <td class="text-center">10</td>
+          <td class="text-center">1</td>
+          <td class="text-center">1</td>
+        </tr>
+        <tr>
+          <td>UD Makmur</td>
+          <td class="text-center">10</td>
+          <td class="text-center">7</td>
+          <td class="text-center">1</td>
+          <td class="text-center">2</td>
+        </tr>
+        <tr>
+          <td>Toko Berkah</td>
+          <td class="text-center">8</td>
+          <td class="text-center">6</td>
+          <td class="text-center">2</td>
+          <td class="text-center">0</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div> -->
+
+
+
+<!-- <div class="card">
+  <div class="card-header">
+    <h3 class="card-title">Detail Transaksi Pengiriman</h3>
+  </div>
+
+  <div class="card-body p-0">
+    <table class="table table-sm table-hover">
+      <thead class="table-light">
+        <tr>
+          <th>Tanggal</th>
+          <th>No Surat Jalan</th>
+          <th>Customer</th>
+          <th style="width:15%">Nilai</th>
+          <th style="width:15%">Status</th>
+          <th style="width:15%">Tanggal Respon</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>10 Jan 2026</td>
+          <td>SJ-00123</td>
+          <td>Toko Berkah</td>
+          <td class="text-right">Rp 2.500.000</td>
+          <td><span class="badge badge-success">Diterima</span></td>
+          <td>11 Jan 2026</td>
+        </tr>
+        <tr>
+          <td>10 Jan 2026</td>
+          <td>SJ-00124</td>
+          <td>UD Makmur</td>
+          <td class="text-right">Rp 1.200.000</td>
+          <td><span class="badge badge-warning">Retur</span></td>
+          <td>12 Jan 2026</td>
+        </tr>
+        <tr>
+          <td>11 Jan 2026</td>
+          <td>SJ-00125</td>
+          <td>Toko Sinar Jaya</td>
+          <td class="text-right">Rp 3.400.000</td>
+          <td><span class="badge badge-danger">Dikembalikan</span></td>
+          <td>12 Jan 2026</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div> -->
 
           
 
