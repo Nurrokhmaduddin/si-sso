@@ -1,4 +1,4 @@
-<?php $page = 'transaksi_pengirimans'; ?>
+<?php $page = 'transaksi_pengiriman'; ?>
 <?php include('1header.php'); ?>
 <?php include('2navbar.php'); ?>
 <?php include('3sidebar.php'); ?>
@@ -50,16 +50,16 @@
 
              <div class="card-footer">
               <div class="card-tools ms-auto">
-                <button type="button" class="btn btn-outline-secondary btn-sm" onclick="window.location.href='transaksi-pengiriman.php'">
+                <button type="button" class="btn btn-outline-secondary btn-sm" onclick="window.location.href='transaksi-pengiriman1.php'">
                   <i class="fas fa-reply me-1"></i> Kembali
                 </button>
-                <button class="btn btn-outline-info btn-sm " data-bs-toggle="modal" data-bs-target="#modalFilter">
+                <!-- <button class="btn btn-outline-info btn-sm " data-bs-toggle="modal" data-bs-target="#modalFilter">
                   <i class="fas fa-filter me-1"></i> Filter
-                </button>
+                </button> -->
                 <button type="button" class="btn btn-outline-primary btn-sm " data-bs-toggle="modal" data-bs-target="#modalTambahData">
-                  <i class="fas fa-plus me-1"></i> Add
+                  <i class="fas fa-check me-1"></i> Verifikasi Semua
                 </button>
-                <button type="button" class="btn btn-outline-primary btn-sm " data-bs-toggle="modal" data-bs-target="#modalImpor">
+                <!-- <button type="button" class="btn btn-outline-primary btn-sm " data-bs-toggle="modal" data-bs-target="#modalImpor">
                   <i class="fas fa-file-upload me-1"></i> Import
                 </button>                
                 <button type="button" class="btn btn-outline-success btn-sm">
@@ -67,7 +67,7 @@
                 </button>
                 <button type="button" class="btn btn-outline-danger btn-sm">
                   <i class="fas fa-ban me-1"></i> Reset
-                </button>    
+                </button>     -->
               </div>
             </div>
             
@@ -99,12 +99,14 @@
                       <td align="left">LARIS KLATEN</td>
                       <td align="left">OFFICE</td>                        <td align="right">15.999.448,50</td>
                       <td align="center">
-                        <span class="badge badge-warning">KIRIM</span>
+                        <span class="badge badge-warning">SEDANG KIRIM</span>
                       </td>
                       <td align="center">
+                        <button type="button" class="btn btn-outline-primary btn-sm" ><i class="fas fa-check me-1"></i> Verifikasi</button>
+<!-- 
 <button class="btn btn-xs btn-outline-primary btn-block">Nota Ditinggal</button>
-<button class="btn btn-xs btn-outline-primary btn-block">Nota Dikembalikan</button>   
-<button class="btn btn-xs btn-outline-primary btn-block">Kembali dgn Retur</button>
+<button class="btn btn-xs btn-outline-primary btn-block">Nota Dikembalikan</button> 
+<button class="btn btn-xs btn-outline-primary btn-block">Kembali dgn Retur</button> -->
                       </td>
                     </tr>
                     <tr align="center">
@@ -114,15 +116,10 @@
                       <td align="left">DEPO PELITA SOKARAJA</td>
                       <td align="left">OFFICE</td>                        <td align="right">1.670.400,00</td>
                       <td align="center">
-                        <span class="badge badge-success">SUBMIT</span>
+                            <span class="badge badge-warning">SEDANG KIRIM</span>
                       </td>
                       <td align="center">
-
-                        <a href="https://orion-houseware.my.id/penjualan/print/TW1FMVNqRXdOVWRQTUtrNFJ6SWQzYzBtYzQwMDAxMA" target="_blank"><button type="button" class="btn btn-success mrg-btn btn-sm btn-aksi5158 btn-disabled" title="Print Penjualan" fdprocessedid="jef48b"><i class="fas fa-print"></i></button></a>
-
-                        <button type="button" class="btn btn-info mrg-btn btn-sm btn-aksi5158 btn-disabled" title="Detail" onclick="detail(&#39;WVRjMWJURnNOWGF2bHZvNFVESWQzYzBtbVYwMDAxMA&#39;, &#39;5158&#39;)" fdprocessedid="il4ccl"><i class="fas fa-list"></i></button>
-
-                        <button type="button" class="btn btn-warning mrg-btn btn-sm btn-aksi5158 btn-disabled" onclick="edit(&#39;5158&#39;)" fdprocessedid="xzossk"><i class="fas fa-edit"></i> Edit</button>
+                        <button type="button" class="btn btn-outline-primary btn-sm" ><i class="fas fa-check me-1"></i> Verifikasi</button>
                       </td>
                     </tr>
                     <tr align="center">
@@ -132,15 +129,11 @@
                       <td align="left">DEPO PELITA SOKARAJA</td>
                       <td align="left">OFFICE</td>                        <td align="right">21.459.000,00</td>
                       <td align="center">
-                        <span class="badge badge-success">SUBMIT</span>
+                        <span class="badge badge-success">TERKIRIM</span>
                       </td>
                       <td align="center">
-
-                        <a href="https://orion-houseware.my.id/penjualan/print/Wlc4d05VWXhqYUp6QVFqVXhOell6Z2kwMDAwOA" target="_blank"><button type="button" class="btn btn-success mrg-btn btn-sm btn-aksi5157 btn-disabled" title="Print Penjualan" fdprocessedid="lmrrpp"><i class="fas fa-print"></i></button></a>
-
-                        <button type="button" class="btn btn-info mrg-btn btn-sm btn-aksi5157 btn-disabled" title="Detail" onclick="detail(&#39;UVRjMVV6RTNOVXM4cGhnM1lqSWQzYzBtWTkwMDAxMA&#39;, &#39;5157&#39;)" fdprocessedid="ghe0xm"><i class="fas fa-list"></i></button>
-
-                        <button type="button" class="btn btn-warning mrg-btn btn-sm btn-aksi5157 btn-disabled" onclick="edit(&#39;5157&#39;)" fdprocessedid="b715v7"><i class="fas fa-edit"></i> Edit</button>
+                        <a href="#" target="_blank"><button type="button" class="btn btn-success mrg-btn btn-sm" title="Print Penjualan" fdprocessedid="lmrrpp"><i class="fas fa-print"></i></button></a>
+                        <button type="button" class="btn btn-info btn-sm" title="Detail" ><i class="fas fa-list"></i></button>
                       </td>
                     </tr>
                     <tr align="center">
@@ -150,15 +143,11 @@
                       <td align="left">SURYA TOSERBA CILEDUG</td>
                       <td align="left">ANDRE</td>                        <td align="right">1.048.942,50</td>
                       <td align="center">
-                        <span class="badge badge-success">SUBMIT</span>
+                        <span class="badge badge-success">TERKIRIM</span>
                       </td>
                       <td align="center">
-
-                        <a href="https://orion-houseware.my.id/penjualan/print/VFZwTE5Vd3hTNzN1OVV6Vm9Oamd6ZkQwMDAwOA" target="_blank"><button type="button" class="btn btn-success mrg-btn btn-sm btn-aksi5156 btn-disabled" title="Print Penjualan" fdprocessedid="jnpqdz"><i class="fas fa-print"></i></button></a>
-
-                        <button type="button" class="btn btn-info mrg-btn btn-sm btn-aksi5156 btn-disabled" title="Detail" onclick="detail(&#39;TlZRMk5WSXhxYWRoT2JUVm9Oak16blcwMDAwOA&#39;, &#39;5156&#39;)" fdprocessedid="ypw047"><i class="fas fa-list"></i></button>
-
-                        <button type="button" class="btn btn-warning mrg-btn btn-sm btn-aksi5156 btn-disabled" onclick="edit(&#39;5156&#39;)" fdprocessedid="g6k26d"><i class="fas fa-edit"></i> Edit</button>
+                        <a href="#" target="_blank"><button type="button" class="btn btn-success mrg-btn btn-sm" title="Print Penjualan" fdprocessedid="lmrrpp"><i class="fas fa-print"></i></button></a>
+                        <button type="button" class="btn btn-info btn-sm" title="Detail" ><i class="fas fa-list"></i></button>
                       </td>
                     </tr>
                     <tr align="center">
@@ -168,15 +157,11 @@
                       <td align="left">LARIS KLATEN</td>
                       <td align="left">OFFICE</td>                        <td align="right">2.268.000,00</td>
                       <td align="center">
-                        <span class="badge badge-success">SUBMIT</span>
+                        <span class="badge badge-success">TERKIRIM</span>
                       </td>
                       <td align="center">
-
-                        <a href="https://orion-houseware.my.id/penjualan/print/YkVwck5VZ3hBMU9NM01UVnZOR3d6R3IwMDAwOA" target="_blank"><button type="button" class="btn btn-success mrg-btn btn-sm btn-aksi5154 btn-disabled" title="Print Penjualan" fdprocessedid="ggslkk"><i class="fas fa-print"></i></button></a>
-
-                        <button type="button" class="btn btn-info mrg-btn btn-sm btn-aksi5154 btn-disabled" title="Detail" onclick="detail(&#39;YmxRMVN6RnJOVVV4VDU0MGVESWQzYzBteGowMDAxMA&#39;, &#39;5154&#39;)" fdprocessedid="lv082d"><i class="fas fa-list"></i></button>
-
-                        <button type="button" class="btn btn-warning mrg-btn btn-sm btn-aksi5154 btn-disabled" onclick="edit(&#39;5154&#39;)" fdprocessedid="ac1v77"><i class="fas fa-edit"></i> Edit</button>
+                        <a href="#" target="_blank"><button type="button" class="btn btn-success mrg-btn btn-sm" title="Print Penjualan" fdprocessedid="lmrrpp"><i class="fas fa-print"></i></button></a>
+                        <button type="button" class="btn btn-info btn-sm" title="Detail" ><i class="fas fa-list"></i></button>
                       </td>
                     </tr>
                     <tr align="center">
@@ -186,15 +171,11 @@
                       <td align="left">TOKO BATES</td>
                       <td align="left">SUPRI</td>                        <td align="right">3.096.865,00</td>
                       <td align="center">
-                        <span class="badge badge-success">SUBMIT</span>
+                        <span class="badge badge-success">TERKIRIM</span>
                       </td>
                       <td align="center">
-
-                        <a href="https://orion-houseware.my.id/penjualan/print/YmxjMVV6RnpOVUVOc3FJelVqSWQzYzBtVk4wMDAxMA" target="_blank"><button type="button" class="btn btn-success mrg-btn btn-sm btn-aksi5153 btn-disabled" title="Print Penjualan" fdprocessedid="8szpln"><i class="fas fa-print"></i></button></a>
-
-                        <button type="button" class="btn btn-info mrg-btn btn-sm btn-aksi5153 btn-disabled" title="Detail" onclick="detail(&#39;Y1RCWE5UQXhhU0VMMU1UVkVNMHN6eTAwMDAwOA&#39;, &#39;5153&#39;)" fdprocessedid="3a6ffi"><i class="fas fa-list"></i></button>
-
-                        <button type="button" class="btn btn-warning mrg-btn btn-sm btn-aksi5153 btn-disabled" onclick="edit(&#39;5153&#39;)" fdprocessedid="jcam4b"><i class="fas fa-edit"></i> Edit</button>
+                        <a href="#" target="_blank"><button type="button" class="btn btn-success mrg-btn btn-sm" title="Print Penjualan" fdprocessedid="lmrrpp"><i class="fas fa-print"></i></button></a>
+                        <button type="button" class="btn btn-info btn-sm" title="Detail" ><i class="fas fa-list"></i></button>
                       </td>
                     </tr>
                     <tr align="center">
@@ -204,15 +185,11 @@
                       <td align="left">JODO SWALAYAN</td>
                       <td align="left">OFFICE</td>                        <td align="right">405.000,00</td>
                       <td align="center">
-                        <span class="badge badge-success">SUBMIT</span>
+                        <span class="badge badge-success">TERKIRIM</span>
                       </td>
                       <td align="center">
-
-                        <a href="https://orion-houseware.my.id/penjualan/print/T1ZVMVVURm1OWEhkZUZjeWJqSWQzYzBtNFIwMDAxMA" target="_blank"><button type="button" class="btn btn-success mrg-btn btn-sm btn-aksi5152 btn-disabled" title="Print Penjualan" fdprocessedid="7pzhn"><i class="fas fa-print"></i></button></a>
-
-                        <button type="button" class="btn btn-info mrg-btn btn-sm btn-aksi5152 btn-disabled" title="Detail" onclick="detail(&#39;UlVsQ05XSXhLRlhNa1p6VnpNbTB6T1YwMDAwOA&#39;, &#39;5152&#39;)" fdprocessedid="3sfb0w"><i class="fas fa-list"></i></button>
-
-                        <button type="button" class="btn btn-warning mrg-btn btn-sm btn-aksi5152 btn-disabled" onclick="edit(&#39;5152&#39;)" fdprocessedid="3t7lp"><i class="fas fa-edit"></i> Edit</button>
+                        <a href="#" target="_blank"><button type="button" class="btn btn-success mrg-btn btn-sm" title="Print Penjualan" fdprocessedid="lmrrpp"><i class="fas fa-print"></i></button></a>
+                        <button type="button" class="btn btn-info btn-sm" title="Detail" ><i class="fas fa-list"></i></button>
                       </td>
                     </tr>
                     <tr align="center">
@@ -222,15 +199,11 @@
                       <td align="left">SUPRI</td>
                       <td align="left">OFFICE</td>                        <td align="right">54.000,00</td>
                       <td align="center">
-                        <span class="badge badge-success">SUBMIT</span>
+                        <span class="badge badge-success">TERKIRIM</span>
                       </td>
                       <td align="center">
-
-                        <a href="https://orion-houseware.my.id/penjualan/print/WlhCU05Vc3hkWkNzSVZqVjJNVlV6T3kwMDAwOA" target="_blank"><button type="button" class="btn btn-success mrg-btn btn-sm btn-aksi5151 btn-disabled" title="Print Penjualan" fdprocessedid="brd6bf"><i class="fas fa-print"></i></button></a>
-
-                        <button type="button" class="btn btn-info mrg-btn btn-sm btn-aksi5151 btn-disabled" title="Detail" onclick="detail(&#39;T1ZGS05UWXhaM2R3eWFqVlVNVU16eGowMDAwOA&#39;, &#39;5151&#39;)" fdprocessedid="tj0oha"><i class="fas fa-list"></i></button>
-
-                        <button type="button" class="btn btn-warning mrg-btn btn-sm btn-aksi5151 btn-disabled" onclick="edit(&#39;5151&#39;)" fdprocessedid="3vuxr"><i class="fas fa-edit"></i> Edit</button>
+                        <a href="#" target="_blank"><button type="button" class="btn btn-success mrg-btn btn-sm" title="Print Penjualan" fdprocessedid="lmrrpp"><i class="fas fa-print"></i></button></a>
+                        <button type="button" class="btn btn-info btn-sm" title="Detail" ><i class="fas fa-list"></i></button>
                       </td>
                     </tr>
                     <tr align="center">
@@ -240,15 +213,11 @@
                       <td align="left">SUPRI</td>
                       <td align="left">OFFICE</td>                        <td align="right">105.000,00</td>
                       <td align="center">
-                        <span class="badge badge-success">SUBMIT</span>
+                        <span class="badge badge-success">TERKIRIM</span>
                       </td>
                       <td align="center">
-
-                        <a href="https://orion-houseware.my.id/penjualan/print/Y1V3MU16RllOVnN0YUJVd1VqSWQzYzBtcmkwMDAxMA" target="_blank"><button type="button" class="btn btn-success mrg-btn btn-sm btn-aksi5150 btn-disabled" title="Print Penjualan" fdprocessedid="2xpqp"><i class="fas fa-print"></i></button></a>
-
-                        <button type="button" class="btn btn-info mrg-btn btn-sm btn-aksi5150 btn-disabled" title="Detail" onclick="detail(&#39;UnpGSU5XNHhBVDVPYVl6VlRNR1F6Y2IwMDAwOA&#39;, &#39;5150&#39;)" fdprocessedid="qhgso"><i class="fas fa-list"></i></button>
-
-                        <button type="button" class="btn btn-warning mrg-btn btn-sm btn-aksi5150 btn-disabled" onclick="edit(&#39;5150&#39;)" fdprocessedid="tgzr5p"><i class="fas fa-edit"></i> Edit</button>
+                        <a href="#" target="_blank"><button type="button" class="btn btn-success mrg-btn btn-sm" title="Print Penjualan" fdprocessedid="lmrrpp"><i class="fas fa-print"></i></button></a>
+                        <button type="button" class="btn btn-info btn-sm" title="Detail" ><i class="fas fa-list"></i></button>
                       </td>
                     </tr>
                     <tr align="center">
@@ -258,15 +227,11 @@
                       <td align="left">SURYA TOSERBA KARANGGETAS</td>
                       <td align="left">ANDRE</td>                        <td align="right">5.756.295,50</td>
                       <td align="center">
-                        <span class="badge badge-success">SUBMIT</span>
+                        <span class="badge badge-success">TERKIRIM</span>
                       </td>
                       <td align="center">
-
-                        <a href="https://orion-houseware.my.id/penjualan/print/YW1FMWJqRktORjA3UHhRNWRqSWQzYzBtRkEwMDAxMA" target="_blank"><button type="button" class="btn btn-success mrg-btn btn-sm btn-aksi5149 btn-disabled" title="Print Penjualan" fdprocessedid="695xep"><i class="fas fa-print"></i></button></a>
-
-                        <button type="button" class="btn btn-info mrg-btn btn-sm btn-aksi5149 btn-disabled" title="Detail" onclick="detail(&#39;WkVjMVF6RkpOR2NWNkNFNWJESWQzYzBtVjEwMDAxMA&#39;, &#39;5149&#39;)" fdprocessedid="vzy7f3"><i class="fas fa-list"></i></button>
-
-                        <button type="button" class="btn btn-warning mrg-btn btn-sm btn-aksi5149 btn-disabled" onclick="edit(&#39;5149&#39;)" fdprocessedid="8xg7nx"><i class="fas fa-edit"></i> Edit</button>
+                        <a href="#" target="_blank"><button type="button" class="btn btn-success mrg-btn btn-sm" title="Print Penjualan" fdprocessedid="lmrrpp"><i class="fas fa-print"></i></button></a>
+                        <button type="button" class="btn btn-info btn-sm" title="Detail" ><i class="fas fa-list"></i></button>
                     </tr>
                   </tbody>
       </table>
