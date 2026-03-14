@@ -59,12 +59,13 @@
                 <button type="button" class="btn btn-outline-primary btn-sm " data-bs-toggle="modal" data-bs-target="#modalTambahData">
                   <i class="fas fa-check me-1"></i> Verifikasi Semua
                 </button>
+                <button type="button" class="btn btn-outline-success btn-sm" title="print surat jalan">
+                  <i class="fas fa-file-download me-1"></i> Print Semua Surat Jalan
+                </button>
                 <!-- <button type="button" class="btn btn-outline-primary btn-sm " data-bs-toggle="modal" data-bs-target="#modalImpor">
                   <i class="fas fa-file-upload me-1"></i> Import
                 </button>                
-                <button type="button" class="btn btn-outline-success btn-sm">
-                  <i class="fas fa-file-download me-1"></i> Export
-                </button>
+                
                 <button type="button" class="btn btn-outline-danger btn-sm">
                   <i class="fas fa-ban me-1"></i> Reset
                 </button>     -->
@@ -82,25 +83,25 @@
                   <thead>
                     <tr align="center">
                       <th style="min-width: 40px;">No.</th>
-                      <th style="min-width: 90px;">Tanggal Pengiriman</th>
                       <th style="min-width: 80px;">No Faktur</th>
                       <th style="min-width: 150px;">Toko Penerima</th>
                       <th style="min-width: 80px;">Nama Sales</th>
                       <th style="min-width: 100px;">Total Harga Jual (Rp)</th>
                       <th style="min-width: 60px;">Status</th>
+                      <th style="min-width: 90px;">Catatan</th>
                       <th style="min-width: 160px;">Aksi</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr align="center">
                       <td>1</td>
-                      <td>09-Mar-2026</td>
                       <td>PJ/004681</td>
                       <td align="left">LARIS KLATEN</td>
                       <td align="left">OFFICE</td>                        <td align="right">15.999.448,50</td>
                       <td align="center">
                         <span class="badge badge-warning">SEDANG KIRIM</span>
                       </td>
+                      <td>-</td>
                       <td align="center">
                         <button type="button" class="btn btn-outline-primary btn-sm" ><i class="fas fa-check me-1"></i> Verifikasi</button>
 <!-- 
@@ -111,26 +112,26 @@
                     </tr>
                     <tr align="center">
                       <td>2</td>
-                      <td>09-Mar-2026</td>
                       <td>PJ/004684</td>
                       <td align="left">DEPO PELITA SOKARAJA</td>
                       <td align="left">OFFICE</td>                        <td align="right">1.670.400,00</td>
                       <td align="center">
                             <span class="badge badge-warning">SEDANG KIRIM</span>
                       </td>
+                      <td>-</td>
                       <td align="center">
                         <button type="button" class="btn btn-outline-primary btn-sm" ><i class="fas fa-check me-1"></i> Verifikasi</button>
                       </td>
                     </tr>
                     <tr align="center">
                       <td>3</td>
-                      <td>09-Mar-2026</td>
                       <td>PJ/004683</td>
                       <td align="left">DEPO PELITA SOKARAJA</td>
                       <td align="left">OFFICE</td>                        <td align="right">21.459.000,00</td>
                       <td align="center">
                         <span class="badge badge-success">TERKIRIM</span>
                       </td>
+                      <td>aman semua barangnya</td>
                       <td align="center">
                         <a href="#" target="_blank"><button type="button" class="btn btn-success mrg-btn btn-sm" title="Print Penjualan" fdprocessedid="lmrrpp"><i class="fas fa-print"></i></button></a>
                         <button type="button" class="btn btn-info btn-sm" title="Detail" ><i class="fas fa-list"></i></button>
@@ -138,13 +139,13 @@
                     </tr>
                     <tr align="center">
                       <td>4</td>
-                      <td>09-Mar-2026</td>
                       <td>PJ/004682</td>
                       <td align="left">SURYA TOSERBA CILEDUG</td>
                       <td align="left">ANDRE</td>                        <td align="right">1.048.942,50</td>
                       <td align="center">
                         <span class="badge badge-success">TERKIRIM</span>
                       </td>
+                      <td>aman semua barangnya</td>
                       <td align="center">
                         <a href="#" target="_blank"><button type="button" class="btn btn-success mrg-btn btn-sm" title="Print Penjualan" fdprocessedid="lmrrpp"><i class="fas fa-print"></i></button></a>
                         <button type="button" class="btn btn-info btn-sm" title="Detail" ><i class="fas fa-list"></i></button>
@@ -152,13 +153,13 @@
                     </tr>
                     <tr align="center">
                       <td>5</td>
-                      <td>09-Mar-2026</td>
                       <td>PJ/004680</td>
                       <td align="left">LARIS KLATEN</td>
                       <td align="left">OFFICE</td>                        <td align="right">2.268.000,00</td>
                       <td align="center">
                         <span class="badge badge-success">TERKIRIM</span>
                       </td>
+                      <td>aman semua barangnya</td>
                       <td align="center">
                         <a href="#" target="_blank"><button type="button" class="btn btn-success mrg-btn btn-sm" title="Print Penjualan" fdprocessedid="lmrrpp"><i class="fas fa-print"></i></button></a>
                         <button type="button" class="btn btn-info btn-sm" title="Detail" ><i class="fas fa-list"></i></button>
@@ -166,13 +167,13 @@
                     </tr>
                     <tr align="center">
                       <td>6</td>
-                      <td>09-Mar-2026</td>
                       <td>PJ/004679</td>
                       <td align="left">TOKO BATES</td>
                       <td align="left">SUPRI</td>                        <td align="right">3.096.865,00</td>
                       <td align="center">
                         <span class="badge badge-success">TERKIRIM</span>
                       </td>
+                      <td>beberapa ada yang retur</td>
                       <td align="center">
                         <a href="#" target="_blank"><button type="button" class="btn btn-success mrg-btn btn-sm" title="Print Penjualan" fdprocessedid="lmrrpp"><i class="fas fa-print"></i></button></a>
                         <button type="button" class="btn btn-info btn-sm" title="Detail" ><i class="fas fa-list"></i></button>
@@ -180,13 +181,13 @@
                     </tr>
                     <tr align="center">
                       <td>7</td>
-                      <td>07-Mar-2026</td>
                       <td>PJ/004678</td>
                       <td align="left">JODO SWALAYAN</td>
                       <td align="left">OFFICE</td>                        <td align="right">405.000,00</td>
                       <td align="center">
                         <span class="badge badge-success">TERKIRIM</span>
                       </td>
+                      <td>aman semua barangnya</td>
                       <td align="center">
                         <a href="#" target="_blank"><button type="button" class="btn btn-success mrg-btn btn-sm" title="Print Penjualan" fdprocessedid="lmrrpp"><i class="fas fa-print"></i></button></a>
                         <button type="button" class="btn btn-info btn-sm" title="Detail" ><i class="fas fa-list"></i></button>
@@ -194,13 +195,13 @@
                     </tr>
                     <tr align="center">
                       <td>8</td>
-                      <td>07-Mar-2026</td>
                       <td>PJ/004677</td>
                       <td align="left">SUPRI</td>
                       <td align="left">OFFICE</td>                        <td align="right">54.000,00</td>
                       <td align="center">
                         <span class="badge badge-success">TERKIRIM</span>
                       </td>
+                      <td>aman semua barangnya</td>
                       <td align="center">
                         <a href="#" target="_blank"><button type="button" class="btn btn-success mrg-btn btn-sm" title="Print Penjualan" fdprocessedid="lmrrpp"><i class="fas fa-print"></i></button></a>
                         <button type="button" class="btn btn-info btn-sm" title="Detail" ><i class="fas fa-list"></i></button>
@@ -208,13 +209,13 @@
                     </tr>
                     <tr align="center">
                       <td>9</td>
-                      <td>07-Mar-2026</td>
                       <td>PJ/004676</td>
                       <td align="left">SUPRI</td>
                       <td align="left">OFFICE</td>                        <td align="right">105.000,00</td>
                       <td align="center">
                         <span class="badge badge-success">TERKIRIM</span>
                       </td>
+                      <td>aman semua barangnya</td>
                       <td align="center">
                         <a href="#" target="_blank"><button type="button" class="btn btn-success mrg-btn btn-sm" title="Print Penjualan" fdprocessedid="lmrrpp"><i class="fas fa-print"></i></button></a>
                         <button type="button" class="btn btn-info btn-sm" title="Detail" ><i class="fas fa-list"></i></button>
@@ -222,13 +223,13 @@
                     </tr>
                     <tr align="center">
                       <td>10</td>
-                      <td>07-Mar-2026</td>
                       <td>PJ/004675</td>
                       <td align="left">SURYA TOSERBA KARANGGETAS</td>
                       <td align="left">ANDRE</td>                        <td align="right">5.756.295,50</td>
                       <td align="center">
                         <span class="badge badge-success">TERKIRIM</span>
                       </td>
+                      <td>aman semua barangnya</td>
                       <td align="center">
                         <a href="#" target="_blank"><button type="button" class="btn btn-success mrg-btn btn-sm" title="Print Penjualan" fdprocessedid="lmrrpp"><i class="fas fa-print"></i></button></a>
                         <button type="button" class="btn btn-info btn-sm" title="Detail" ><i class="fas fa-list"></i></button>

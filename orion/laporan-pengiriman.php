@@ -182,6 +182,213 @@
     </table>
   </div>
 </div>
+
+
+<!-- ========== CARD : Tabel  Granular ========== -->
+          <div class="card">
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table table-bordered table-striped table-sm datatables1">
+                  <table class="table table-bordered table-striped table-sm datatables1">
+                    <thead>
+                      <tr align="center">
+                        <th style="min-width:40px;">No</th>
+                        <th style="min-width:110px;">Tanggal Kirim</th>
+                        <th style="min-width:110px;">Tanggal Terima</th>
+                        <th>Nama Driver</th>
+                        <th style="min-width:100px;">No Faktur</th>
+                        <th style="min-width:180px;">Toko Penerima</th>
+                        <th style="min-width:100px;">Nama Sales</th>
+                        <th style="min-width:120px;">Total Harga Jual (Rp)</th>
+                        <th style="min-width:90px;">Status</th>
+                        <th style="min-width:180px;">Catatan</th>
+                        <th style="min-width:120px;">Aksi</th>
+                      </tr>
+                    </thead>
+
+                    <tbody>
+
+                      <tr align="center">
+                        <td>1</td>
+                        <td>12 Mar 2026</td>
+                        <td>13 Mar 2026</td>
+                        <td style="text-align: left;">SUPRI</td>
+                        <td>PJ/004681</td>
+                        <td align="left">LARIS KLATEN</td>
+                        <td>OFFICE</td>
+                        <td align="right">15.999.448,50</td>
+                        <td><span class="badge badge-success">TERKIRIM</span></td>
+                        <td align="left">aman semua barangnya</td>
+                        <td align="center">
+                          <a href="#" target="_blank">
+                            <button type="button" class="btn btn-success btn-sm" title="Print"><i class="fas fa-print"></i></button>
+                          </a>
+                          <button type="button" class="btn btn-info btn-sm" title="Detail"><i class="fas fa-list"></i></button>
+                        </td>
+                      </tr>
+
+                      <tr align="center">
+                        <td>2</td>
+                        <td>12 Mar 2026</td>
+                        <td>13 Mar 2026</td>
+                        <td style="text-align: left;">SUPRI</td>
+                        <td>PJ/004684</td>
+                        <td align="left">DEPO PELITA SOKARAJA</td>
+                        <td>OFFICE</td>
+                        <td align="right">1.670.400,00</td>
+                        <td><span class="badge badge-success">TERKIRIM</span></td>
+                        <td align="left">aman semua barangnya</td>
+                        <td align="center">
+                          <a href="#" target="_blank">
+                            <button class="btn btn-success btn-sm"><i class="fas fa-print"></i></button>
+                          </a>
+                          <button class="btn btn-info btn-sm"><i class="fas fa-list"></i></button>
+                        </td>
+                      </tr>
+
+                      <tr align="center">
+                        <td>3</td>
+                        <td>12 Mar 2026</td>
+                        <td>13 Mar 2026</td>
+                        <td style="text-align: left;">SUPRI</td>
+                        <td>PJ/004683</td>
+                        <td align="left">DEPO PELITA SOKARAJA</td>
+                        <td>OFFICE</td>
+                        <td align="right">21.459.000,00</td>
+                        <td><span class="badge badge-success">TERKIRIM</span></td>
+                        <td align="left">aman semua barangnya</td>
+                        <td align="center">
+                          <a href="#" target="_blank">
+                            <button class="btn btn-success btn-sm"><i class="fas fa-print"></i></button>
+                          </a>
+                          <button class="btn btn-info btn-sm"><i class="fas fa-list"></i></button>
+                        </td>
+                      </tr>
+
+                      <tr align="center">
+                        <td>4</td>
+                        <td>11 Mar 2026</td>
+                        <td>12 Mar 2026</td>
+                        <td style="text-align: left;">SUPRI</td>
+                        <td>PJ/004682</td>
+                        <td align="left">SURYA TOSERBA CILEDUG</td>
+                        <td>ANDRE</td>
+                        <td align="right">1.048.942,50</td>
+                        <td><span class="badge badge-success">TERKIRIM</span></td>
+                        <td align="left">aman semua barangnya</td>
+                        <td align="center">
+                          <a href="#"><button class="btn btn-success btn-sm"><i class="fas fa-print"></i></button></a>
+                          <button class="btn btn-info btn-sm"><i class="fas fa-list"></i></button>
+                        </td>
+                      </tr>
+
+                      <tr align="center">
+                        <td>5</td>
+                        <td>11 Mar 2026</td>
+                        <td>12 Mar 2026</td>
+                        <td style="text-align: left;">SUPRI</td>
+                        <td>PJ/004680</td>
+                        <td align="left">LARIS KLATEN</td>
+                        <td>OFFICE</td>
+                        <td align="right">2.268.000,00</td>
+                        <td><span class="badge badge-success">TERKIRIM</span></td>
+                        <td align="left">aman semua barangnya</td>
+                        <td align="center">
+                          <a href="#"><button class="btn btn-success btn-sm"><i class="fas fa-print"></i></button></a>
+                          <button class="btn btn-info btn-sm"><i class="fas fa-list"></i></button>
+                        </td>
+                      </tr>
+
+                      <tr align="center">
+                        <td>6</td>
+                        <td>11 Mar 2026</td>
+                        <td>12 Mar 2026</td>
+                        <td style="text-align: left;">SUPRI</td>
+                        <td>PJ/004679</td>
+                        <td align="left">TOKO BATES</td>
+                        <td>SUPRI</td>
+                        <td align="right">3.096.865,00</td>
+                        <td><span class="badge badge-success">TERKIRIM</span></td>
+                        <td align="left">beberapa ada yang retur</td>
+                        <td align="center">
+                          <a href="#"><button class="btn btn-success btn-sm"><i class="fas fa-print"></i></button></a>
+                          <button class="btn btn-info btn-sm"><i class="fas fa-list"></i></button>
+                        </td>
+                      </tr>
+
+                      <tr align="center">
+                        <td>7</td>
+                        <td>10 Mar 2026</td>
+                        <td>10 Mar 2026</td>
+                        <td style="text-align: left;">SUPRI</td>
+                        <td>PJ/004678</td>
+                        <td align="left">JODO SWALAYAN</td>
+                        <td>OFFICE</td>
+                        <td align="right">405.000,00</td>
+                        <td><span class="badge badge-success">TERKIRIM</span></td>
+                        <td align="left">aman semua barangnya</td>
+                        <td align="center">
+                          <a href="#"><button class="btn btn-success btn-sm"><i class="fas fa-print"></i></button></a>
+                          <button class="btn btn-info btn-sm"><i class="fas fa-list"></i></button>
+                        </td>
+                      </tr>
+
+                      <tr align="center">
+                        <td>8</td>
+                        <td>10 Mar 2026</td>
+                        <td>11 Mar 2026</td>
+                        <td style="text-align: left;">SUPRI</td>
+                        <td>PJ/004677</td>
+                        <td align="left">SUPRI</td>
+                        <td>OFFICE</td>
+                        <td align="right">54.000,00</td>
+                        <td><span class="badge badge-success">TERKIRIM</span></td>
+                        <td align="left">aman semua barangnya</td>
+                        <td align="center">
+                          <a href="#"><button class="btn btn-success btn-sm"><i class="fas fa-print"></i></button></a>
+                          <button class="btn btn-info btn-sm"><i class="fas fa-list"></i></button>
+                        </td>
+                      </tr>
+
+                      <tr align="center">
+                        <td>9</td>
+                        <td>09 Mar 2026</td>
+                        <td>10 Mar 2026</td>
+                        <td style="text-align: left;">SUPRI</td>
+                        <td>PJ/004676</td>
+                        <td align="left">ANDRE</td>
+                        <td>OFFICE</td>
+                        <td align="right">105.000,00</td>
+                        <td><span class="badge badge-success">TERKIRIM</span></td>
+                        <td align="left">aman semua barangnya</td>
+                        <td align="center">
+                          <a href="#"><button class="btn btn-success btn-sm"><i class="fas fa-print"></i></button></a>
+                          <button class="btn btn-info btn-sm"><i class="fas fa-list"></i></button>
+                        </td>
+                      </tr>
+
+                      <tr align="center">
+                        <td>10</td>
+                        <td>09 Mar 2026</td>
+                        <td>10 Mar 2026</td>
+                        <td style="text-align: left;">SUPRI</td>
+                        <td>PJ/004675</td>
+                        <td align="left">SURYA TOSERBA KARANGGETAS</td>
+                        <td>ANDRE</td>
+                        <td align="right">5.756.295,50</td>
+                        <td><span class="badge badge-success">TERKIRIM</span></td>
+                        <td align="left">aman semua barangnya</td>
+                        <td align="center">
+                          <a href="#"><button class="btn btn-success btn-sm"><i class="fas fa-print"></i></button></a>
+                          <button class="btn btn-info btn-sm"><i class="fas fa-list"></i></button>
+                        </td>
+                      </tr>
+
+                    </tbody>
+                  </table>
+    </div>
+  </div>
+</div>
 <!-- ```
 
 # 3️⃣ Rekap Customer

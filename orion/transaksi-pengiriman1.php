@@ -84,6 +84,7 @@
             <th>Nama Driver</th>
             <th>Tanggal Pengiriman</th>
             <th>Nominal Pengiriman</th>
+            <th>Jumlah Faktur</th>
             <th>Status</th>
             <th>Aksi</th>
           </tr>
@@ -94,11 +95,12 @@
             <td>ANDRE</td>
             <td>01-Jan-2025</td>
             <td align="right">3.556.852,89</td>
+            <td>4</td>
             <td align="center">
               <span class="badge badge-warning">SEDANG KIRIM</span>
             </td>
             <td align="center">
-              <button type="button" class="btn btn-outline-success btn-sm"><i class="fas fa-print"></i></button>
+              <button type="button" class="btn btn-outline-success btn-sm" title="print surat jalan"><i class="fas fa-print"></i></button>
               <button type="button" class="btn btn-outline-info btn-sm" title="Detail" onclick="window.location='transaksi-pengiriman-detail.php'" ><i class="fas fa-list"></i></button>
             </td>
           </tr>
@@ -107,11 +109,12 @@
             <td>ANDRE</td>
             <td>01-Feb-2025</td>
             <td align="right">1.588.714,65</td>
+            <td>4</td>
             <td align="center">
               <span class="badge badge-info">VERIFIKASI</span>
             </td>
             <td align="center">
-              <button type="button" class="btn btn-outline-success btn-sm"><i class="fas fa-print"></i></button>
+              <button type="button" class="btn btn-outline-success btn-sm" title="print surat jalan"><i class="fas fa-print"></i></button>
               <button type="button" class="btn btn-outline-info btn-sm" title="Detail" onclick="window.location='transaksi-pengiriman-detail.php'" ><i class="fas fa-list"></i></button>
             </td>
           </tr>
@@ -120,6 +123,7 @@
             <td>SUPRI</td>
             <td>22-Feb-2025</td>
             <td align="right">4.035.276,50</td>
+            <td>3</td>
             <td align="center">
               <span class="badge badge-success">TERKIRIM SEMUA</span>
             </td>
@@ -142,6 +146,7 @@
             <td>SUPRI</td>
             <td>28-Mar-2025</td>
             <td align="right">1.264.150,82</td>
+            <td>4</td>
             <td align="center">
               <span class="badge badge-success">TERKIRIM SEMUA</span>
             </td>
@@ -164,6 +169,7 @@
             <td>ANDRE</td>
             <td>28-Mar-2025</td>
             <td align="right">2.866.514,64</td>
+            <td>1</td>
             <td align="center">
               <span class="badge badge-success">TERKIRIM SEMUA</span>
             </td>
@@ -186,6 +192,7 @@
             <td>ANDRE</td>
             <td>28-Apr-2025</td>
             <td align="right">4.388.495,49</td>
+            <td>4</td>
             <td align="center">
               <span class="badge badge-success">TERKIRIM SEMUA</span>
             </td>
@@ -208,6 +215,7 @@
             <td>SUPRI</td>
             <td>29-Apr-2025</td>
             <td align="right">1.085.091,62</td>
+            <td>4</td>
             <td align="center">
               <span class="badge badge-success">TERKIRIM SEMUA</span>
             </td>
@@ -230,6 +238,7 @@
             <td>ANDRE</td>
             <td>23-May-2025</td>
             <td align="right">2.853.691,39</td>
+            <td>4</td>
             <td align="center">
               <span class="badge badge-success">TERKIRIM SEMUA</span>
             </td>
@@ -252,6 +261,7 @@
             <td>SUPRI</td>
             <td>24-May-2025</td>
             <td align="right">939.560,59</td>
+            <td>4</td>
             <td align="center">
               <span class="badge badge-success">TERKIRIM SEMUA</span>
             </td>
@@ -274,6 +284,7 @@
             <td>ANDRE</td>
             <td>24-Jun-2025</td>
             <td align="right">2.949.365,16</td>
+            <td>4</td>
             <td align="center">
               <span class="badge badge-success">TERKIRIM SEMUA</span>
             </td>

@@ -83,6 +83,9 @@
                 <button type="button" class="btn btn-outline-danger btn-sm">
                   <i class="fas fa-ban me-1"></i> Reset
                 </button>    
+                <button type="button" class="btn btn-outline-danger btn-sm" data-bs-toggle="modal" data-bs-target="#modalGagal">
+                  <i class="fas fa-exclamation-triangle me-1"></i> ErrorHandler
+                </button>
               </div>
             </div>
             
@@ -476,5 +479,33 @@
   </div>
 </div>
 
+<div class="modal fade" id="modalGagal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalGagalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content border-danger border-2 shadow">
+      <div class="modal-header bg-danger text-white">
+        <h5 class="modal-title" id="modalGagalLabel"><i class="fas fa-times-circle me-2"></i>Oops! Terjadi Kesalahan</h5>
+      </div>
+      <div class="modal-body">
+        <p><strong>❌ Masalah:</strong><br> 
+          <span id="errorAction">Upload file gagal.</span></p>
 
+        <p><strong>⚠️ Penyebab:</strong><br> 
+          <span id="errorReason">Format file tidak sesuai (.pdf/.docx) atau ukuran melebihi 5MB.</span></p>
+
+        <p><strong>💡 Solusi:</strong><br> 
+          <span id="errorSolution">Pastikan file sesuai format, ukuran < 5MB, lalu coba unggah lagi.</span></p>
+
+        <p><i>Jika masih gagal, hubungi admin untuk bantuan atau tips lebih lanjut.</i></p>
+
+        <!-- Optional: reward tip gamified -->
+        <div class="alert alert-warning mt-3" role="alert">
+          🔹 Tip: Setiap percobaan upload berhasil akan menambah EXP +20! Jangan menyerah! 🚀
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-dark" id="closeGagal" data-bs-dismiss="modal"><i class="fas fa-check me-1"></i> Tutup</button>
+      </div>
+    </div>
+  </div>
+</div>
 <?php include('5script.php'); ?>

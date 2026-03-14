@@ -255,6 +255,12 @@
                 <p>Report Semester</p>
               </a>
             </li>
+            <li class="nav-item">
+              <a href="monev-kbm-harian-report.php" class="nav-link <?php echo $page == 'report_semester' ? 'active' : ''; ?>">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Report Tahunan</p>
+              </a>
+            </li>
 
           <li class="nav-item">
               <a href="laporan-walikelas.php" class="nav-link <?php echo $page == 'laporan_walikelas' ? 'active' : ''; ?>">
@@ -291,7 +297,30 @@
           </ul>
         </li>
 
-      
+        <!-- KONFIGURASI -->
+        <li class="nav-item <?php echo in_array($page, ['konfigurasi_loa','konfigurasi_notifikasi']) ? 'menu-open' : ''; ?>">
+          <a href="#" class="nav-link <?php echo in_array($page, ['konfigurasi_loa','konfigurasi_notifikasi']) ? 'active' : ''; ?>">
+            <i class="nav-icon fas fa-sliders-h"></i>
+            <p>
+              Konfigurasi
+              <i class="right fas fa-angle-left"></i>
+            </p>
+          </a>
+          <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <a href="konfigurasi-loa.php" class="nav-link <?php echo $page == 'konfigurasi_loa' ? 'active' : ''; ?>">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Parameter SEKOLAH</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="konfigurasi-notifikasi.php" class="nav-link <?php echo $page == 'konfigurasi_notifikasi' ? 'active' : ''; ?>">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Template Notifikasi</p>
+              </a>
+            </li>
+          </ul>
+        </li>
 
 
         <!-- PENGATURAN -->

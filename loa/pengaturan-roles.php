@@ -125,6 +125,9 @@
                   <td>Superadmin</td>
                   <td>Pengguna dengan akses penuh ke seluruh sistem dan manajemen user/role/permission.</td>
                   <td>
+                    <a href="pengaturan-roles-detail.php" class="btn btn-sm btn-outline-primary" title="Pengaturan Hak Akses Peran">
+                      🔐
+                    </a>
                     <button class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#modalEditAkun">✏️</button>
                     <button class="btn btn-sm btn-outline-danger" data-toggle="modal" data-target="#modalHapusAkun">🗑️</button>
                   </td>
@@ -135,6 +138,9 @@
                   <td>Admin</td>
                   <td>Pengguna dengan akses luas ke sistem informasi, bisa menambah user dan assign role di sistem tertentu. contoh:adminprodi</td>
                   <td>
+                    <a href="pengaturan-roles-detail.php" class="btn btn-sm btn-outline-primary" title="Pengaturan Hak Akses Peran">
+                      🔐
+                    </a>
                     <button class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#modalEditAkun">✏️</button>
                     <button class="btn btn-sm btn-outline-danger" data-toggle="modal" data-target="#modalHapusAkun">🗑️</button>
                   </td>
@@ -145,6 +151,9 @@
                   <td>Manajerial</td>
                   <td>Pengguna dengan akses laporan dan monitoring, dapat approve/reject/verifikasi data sesuai proses bisnis. contoh:kaprodi</td>
                   <td>
+                    <a href="pengaturan-roles-detail.php" class="btn btn-sm btn-outline-primary" title="Pengaturan Hak Akses Peran">
+                      🔐
+                    </a>
                     <button class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#modalEditAkun">✏️</button>
                     <button class="btn btn-sm btn-outline-danger" data-toggle="modal" data-target="#modalHapusAkun">🗑️</button>
                   </td>
