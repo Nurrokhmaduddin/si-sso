@@ -138,30 +138,83 @@
 
 
 <!-- ========== CARD 4:  Grafik Radar CPL & Progress ========== --> 
+<style>
+  .chart-box {
+  position: relative;
+  width: 100%;
+}
 
+.radar-box {
+  height: 400px;   /* Radar lebih besar */
+}
+
+.small-box {
+  height: 190px;   /* Bar chart lebih proporsional */
+}
+
+canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+</style>
 <div class="card p-3">
-  <div class="row g-2 align-items-stretch">
+  <div class="row">
 
-    <!-- KIRI: Radar -->
-    <div class="col-lg-4 d-flex">
-      <div class="chart-box w-100 h-100 d-flex">
-        <div style="position:relative; width:100%; height:100%;">
-          <canvas id="radarCPL"></canvas>
-        </div>
+    <!-- KIRI: Radar Chart -->
+    <div class="col-lg-8">
+      <div class="chart-box radar-box">
+        <canvas id="radarCPL"></canvas>
+      </div>
+
+      <!-- Tombol -->
+      <div class="d-flex gap-2 mt-2">
+        <button class="btn btn-outline-info btn-sm flex-fill" data-bs-toggle="collapse" data-bs-target="#daftarIKCPL11">
+          Rangking Performa
+        </button>
+        <button class="btn btn-outline-info btn-sm flex-fill" data-bs-toggle="collapse" data-bs-target="#daftarIKCPL13">
+          Daftar CPL
+        </button>
+        <button class="btn btn-outline-danger btn-sm flex-fill" onclick="openAllRisikoPreview()">
+          Performa Risiko
+        </button>
       </div>
     </div>
 
-    <!-- KANAN: Bar -->
-    <div class="col-lg-8 d-flex">
-      <div class="chart-box w-100 h-100 d-flex flex-column">
 
-        <div class="flex-grow-1" style="position:relative;">
-          <canvas id="chartIKG"></canvas>
+    <!-- KANAN: Dua Bar Chart -->
+    <div class="col-lg-4 d-flex flex-column">
+
+      <!-- BAR CHART 1 -->
+      <div class="d-flex flex-column flex-grow-1">
+        <div class="flex-grow-1 mb-2">
+          <canvas id="chartIK"></canvas>
         </div>
 
+        <!-- Tombol -->
+        <div class="d-flex gap-2 mt-2">
+          <button class="btn btn-outline-info btn-sm flex-fill" data-bs-toggle="collapse" data-bs-target="#daftarIKCPL21">Rangking</button>
+          <button class="btn btn-outline-info btn-sm flex-fill" data-bs-toggle="collapse" data-bs-target="#daftarIKCPL23">Daftar IK</button>
+          <button class="btn btn-outline-danger btn-sm flex-fill" onclick="openAllRisikoPreview()">Risiko</button>
+        </div>
       </div>
-    </div>
 
+
+      <!-- BAR CHART 2 -->
+      <div class="d-flex flex-column flex-grow-1">
+        <div class="flex-grow-1 mb-2">
+          <canvas id="chartCPMK"></canvas>
+        </div>
+
+        <!-- Tombol -->
+        <div class="d-flex gap-2 mt-2">
+          <button class="btn btn-outline-info btn-sm flex-fill" data-bs-toggle="collapse" data-bs-target="#daftarIKCPL31">Rangking</button>
+          <button class="btn btn-outline-info btn-sm flex-fill" data-bs-toggle="collapse" data-bs-target="#daftarIKCPL33">Daftar CPMK</button>
+          <button class="btn btn-outline-danger btn-sm flex-fill" onclick="openAllRisikoPreview()">Risiko</button>
+        </div>
+      </div>
+
+    </div>
   </div>
 </div>
 
@@ -1608,7 +1661,7 @@ function generateBarChart(canvasId, labels, data, labelName, color) {
             scales: {
                  x: {
                   ticks: {
-                    display: true   // ⬅️ MATIKAN LABEL BAWAH
+                    display: false   // ⬅️ MATIKAN LABEL BAWAH
                   },
                   grid: {
                     display: false   // (opsional) hilangkan garis grid vertikal
@@ -1629,7 +1682,7 @@ function generateBarChart(canvasId, labels, data, labelName, color) {
 
 
 
-generateBarChart("chartIK", ikLabels, ikAverages, "Capaian IK, grouping per CPL", {
+generateBarChart("chartIK", ikLabels, ikAverages, "Capaian IK", {
     bg: "rgba(255, 159, 64, 0.7)", border: "rgb(255, 159, 64)"     // oranye
 });
 
@@ -1737,20 +1790,15 @@ generateHorizontalChart(
       }]
     },
     options: {
-      responsive: false,
-      maintainAspectRatio: false,
+      responsive: true,
+    maintainAspectRatio: false,
       scales: {
         r: {
           min: 0,
           max: 100,
-          ticks: {
-          display: false // ❌ sembunyikan angka skala
-        },
-        pointLabels: {
-          padding: -5 // 🔽 dekatkan label ke radar
+          ticks: { stepSize: 10 }
         }
       }
-    }
     }
   });
 
@@ -1883,123 +1931,4 @@ generateHorizontalChart(
     </div>
   </div>
 </div>
-
-<script>
-    const ctxG = document.getElementById('chartIKG').getContext('2d');
-
-    const ikLabelsG = [
-      'IK1.1','IK1.2','IK2.1','IK2.2','IK2.3','IK3.1','IK3.2',
-      'IK4.1','IK4.2','IK5.1','IK5.2','IK6.1','IK7.1','IK7.2',
-      'IK8.1','IK8.2','IK9.1','IK9.2','IK10.1','IK10.2',
-      'IK11.1','IK11.2','IK12.1','IK12.2'
-    ];
-
-    const ikValuesG = {
-      'IK1.1':82,'IK1.2':75,
-      'IK2.1':70,'IK2.2':78,'IK2.3':83,
-      'IK3.1':72,'IK3.2':76,
-      'IK4.1':74,'IK4.2':79,
-      'IK5.1':73,'IK5.2':77,
-      'IK6.1':85,
-      'IK7.1':80,'IK7.2':84,
-      'IK8.1':78,'IK8.2':82,
-      'IK9.1':75,'IK9.2':79,
-      'IK10.1':76,'IK10.2':80,
-      'IK11.1':82,'IK11.2':85,
-      'IK12.1':88,'IK12.2':90
-    };
-
-    const ikToCPLG = {
-      'IK1.1':[1],'IK1.2':[1],
-      'IK2.1':[2],'IK2.2':[2],'IK2.3':[2],
-      'IK3.1':[3],'IK3.2':[3],
-      'IK4.1':[4],'IK4.2':[4],
-      'IK5.1':[5],'IK5.2':[5,1],
-      'IK6.1':[6],
-      'IK7.1':[7],'IK7.2':[7],
-      'IK8.1':[8],'IK8.2':[8],
-      'IK9.1':[9],'IK9.2':[9],
-      'IK10.1':[10],'IK10.2':[10],
-      'IK11.1':[11],'IK11.2':[11],
-      'IK12.1':[12],'IK12.2':[12]
-    };
-
-    const cplColorsG = {
-      1:'#FF9F40B3',2:'#FFFFFF',3:'#FF9F40B3',4:'#FFFFFF',
-      5:'#FF9F40B3',6:'#FFFFFF',7:'#FF9F40B3',8:'#FFFFFF',
-      9:'#FF9F40B3',10:'#FFFFFF',11:'#FF9F40B3',12:'#FFFFFF'
-    };
-     const bdrColorsG = {
-      1:'#FF9F40',2:'#FF9F40',3:'#FF9F40',4:'#FF9F40',
-      5:'#FF9F40',6:'#FF9F40',7:'#FF9F40',8:'#FF9F40',
-      9:'#FF9F40',10:'#FF9F40',11:'#FF9F40',12:'#FF9F40'
-    };
-
-    // Buat array entries "IK x CPL"
-    const entriesG = [];
-    ikLabelsG.forEach(ik => {
-      ikToCPLG[ik].forEach(cpl => {
-        entriesG.push({ ik, value: ikValuesG[ik], cpl });
-      });
-    });
-
-    // Urutkan berdasarkan CPL
-    entriesG.sort((a,b)=>a.cpl - b.cpl);
-
-    // Label X ringkas (IK saja)
-    const labelsXG = entriesG.map(e => e.ik);
-
-    // Data dan warna
-    const dataValuesG = entriesG.map(e => e.value);
-    const barColorsG = entriesG.map(e => cplColorsG[e.cpl]);
-    const borderColorsG = entriesG.map(e => bdrColorsG[e.cpl]);
-
-    new Chart(ctxG, {
-      type: 'bar',
-      data: {
-        labels: labelsXG,
-        datasets: [{
-          label: 'Nilai IK',
-          data: dataValuesG,
-          backgroundColor: barColorsG,
-          borderColor: borderColorsG,
-          borderWidth: 2
-        }]
-      },
-      options: {
-        responsive: true,
-        plugins: {
-          legend: {
-            display: true,
-            labels: {
-              generateLabels: function(chart) {
-                const cpls = Object.keys(cplColorsG);
-                return cpls.map(cpl => ({
-                  text: 'CPL ' + cpl,
-                  fillStyle: cplColorsG[cpl],
-                  strokeStyle: bdrColorsG[cpl],
-                  hidden: false,
-                  index: cpl - 1
-                }));
-              }
-            }
-          },
-          tooltip: {
-            callbacks: {
-              label: function(context) {
-                const idx = context.dataIndex;
-                const e = entriesG[idx]; // referensi ke array entries
-                return e.ik + ' (CPL ' + e.cpl + '): ' + e.value;
-              }
-            }
-          },
-          title: { display: false, text: 'IK per CPL (IK bisa muncul di beberapa CPL) - G' }
-        },
-        scales: {
-          x: { title: { display: false, text: 'IK' } },
-          y: { beginAtZero:true, max:100, title: { display:false, text:'Nilai IK (%)' } }
-        }
-      }
-    });
-  </script>
 <?php include('5script.php'); ?>

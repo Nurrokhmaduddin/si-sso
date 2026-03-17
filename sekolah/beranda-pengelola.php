@@ -118,6 +118,9 @@ include "3sidebar.php";
                 </tr>
               </thead>
               <tbody>
+                Pengelola sekolah dapat melihat rekap pengajuan izin setiap hari.
+                Notifikasi informasi sekolah dikirim melalui WhatsApp.
+                Tersedia fitur blasting email dan WhatsApp untuk mengirim surat resmi dari sekolah.
                 <tr>
                   <td class="text-center">1</td>
                   <td>Mengetahuisecara kualitatif seberapa lengkap isian harianlaporannya dari para fasilitator</td>

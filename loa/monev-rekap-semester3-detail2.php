@@ -1,4 +1,4 @@
-<?php $page = 'monev_semester'; ?>
+<?php $page = 'monev_semester3'; ?>
 <?php include('1header.php'); ?>
 <?php include('2navbar.php'); ?>
 <?php include('3sidebar.php'); ?>
@@ -8,7 +8,7 @@
 
   <section class="content-header">
     <div class="container-fluid">
-      <h3 class="mb-0">Monev Semester MK dan CPMK
+      <h3 class="mb-0">Monev Semester
         <button type="button" class="btn btn-tool" data-bs-toggle="modal" data-bs-target="#modalBantuan" title="Bantuan">
           <i class="fas fa-question-circle"></i>
         </button>
@@ -45,7 +45,6 @@
 
               </div>
             </div>
-            munculkan ada data kuantitatif, dan data kualitatif. untuk keperluan prodi analisis temuan evaluasi, dan membuat keputusan aksi evaluasi. kedua, masukkan barchart perbandingan antar semester akademik,CPMK dan IK nya disini, yang satuan nya adalah %mahasiswa yg tuntas.
             <div class="card-footer">
               <div class="card-tools ms-auto">
                 <button class="btn btn-outline-info btn-sm " data-bs-toggle="modal" data-bs-target="#modalFilter">
@@ -62,7 +61,7 @@
 
 
 
-          <!-- ========== CARD 3: KPI row ========== --> 
+         <!-- ========== CARD 3: KPI row ========== --> 
           <style>
             body { background: #f4f6f9; }
             .kpi { border-radius: 10px; padding: 18px; color: #fff; }
@@ -106,6 +105,19 @@
               </div>
             </div>
           </div>
+
+  <!-- TAB NAV  -->
+  <ul class="nav nav-tabs">   
+    <li class="nav-item" onclick="window.location='monev-rekap-semester3-.php'"><a class="nav-link ">Ringkasan</a></li>
+    <li class="nav-item" onclick="window.location='monev-rekap-semester3-detail0.php'"><a class="nav-link ">IK</a></li>
+    <li class="nav-item" onclick="window.location='monev-rekap-semester3-detail1.php'"><a class="nav-link ">CPMK</a></li>
+    <li class="nav-item" onclick="window.location='monev-rekap-semester3-detail2.php'"><a class="nav-link active">Mata Kuliah</a></li>
+
+  </ul>
+
+
+
+
 
 
 <!-- ========== CARD 4: Chart CPMK Min/Max/Rerata/%Tuntas ========== -->

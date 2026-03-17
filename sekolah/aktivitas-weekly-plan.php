@@ -102,7 +102,10 @@
                     <td class="text-center">2</td>
                     <td>Publish</td>
                     <td class="text-center">
-                      <button class="btn btn-info btn-xs">Detail</button>
+                      <button class="btn btn-outline-info btn-xs"
+                      onclick="window.location.href='aktivitas-weekly-plan-detail2.php'">
+                      Detail
+                    </button>
                       <button class="btn btn-warning btn-xs">Edit</button>
                     </td>
                   </tr>

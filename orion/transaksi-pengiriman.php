@@ -88,8 +88,7 @@
             <th>Toko (kode)</th>
             <th>Sales</th>
             <th>Total Penjualan (Rp)</th>
-            <th>Total Terbayar (Rp)</th>
-            <th>Piutang Dagang (Rp)</th>
+            <th>Status</th>
             <th>Aksi</th>
           </tr>
         </thead>
@@ -102,8 +101,9 @@
             <td align="left">MIROTA SIMANJUTAK (E00074)</td>
             <td align="left">ANDRE</td>
             <td align="right">3.613.500,00</td>
-            <td align="right">3.545.800,00</td>
-            <td align="right">67.700,00</td>
+            <td align="center">
+              <span class="badge badge-warning">ANTRI KEMBALI</span>
+            </td>
             <td align="center">
               <button type="button" 
               class="btn btn-outline-primary btn-sm" 
@@ -122,8 +122,9 @@
             <td align="left">TOKO ANA ELEKTRO (E00106)</td>
             <td align="left">OFFICE</td>
             <td align="right">9.926.106,00</td>
-            <td align="right">5.015.500,00</td>
-            <td align="right">4.910.606,00</td>
+            <td align="center">
+              <span class="badge badge-info">ANTRI KIRIM</span>
+            </td>
             <td align="center">
               <button type="button" class="btn btn-primary mrg-btn btn-sm btn-aksi2292 btn-disabled" title="Lunasi" onclick="bayar(&#39;2292&#39;)" fdprocessedid="o9h5y9"><i class="fas fa-truck"></i></button>
             </td>
@@ -136,8 +137,9 @@
             <td align="left">LARIS MUNTILAN (E00077)</td>
             <td align="left">ANDRE</td>
             <td align="right">930.254,25</td>
-            <td align="right">788.109,00</td>
-            <td align="right">142.145,25</td>
+            <td align="center">
+              <span class="badge badge-info">ANTRI KIRIM</span>
+            </td>
             <td align="center">
               <button type="button" class="btn btn-primary mrg-btn btn-sm btn-aksi2347 btn-disabled" title="Lunasi" onclick="bayar(&#39;2347&#39;)" fdprocessedid="gh4b68"><i class="fas fa-truck"></i></button>
             </td>
@@ -150,8 +152,9 @@
             <td align="left">LARIS TOSERBA PURWOREJO (E00279)</td>
             <td align="left">OFFICE</td>
             <td align="right">14.881.783,00</td>
-            <td align="right">14.719.800,00</td>
-            <td align="right">161.983,00</td>
+            <td align="center">
+              <span class="badge badge-info">ANTRI KIRIM</span>
+            </td>
             <td align="center">
               <button type="button" class="btn btn-primary mrg-btn btn-sm btn-aksi2506 btn-disabled" title="Lunasi" onclick="bayar(&#39;2506&#39;)" fdprocessedid="e0obo"><i class="fas fa-truck"></i></button>
             </td>
@@ -164,8 +167,9 @@
             <td align="left">LARIS TEMANGGUNG (E00085)</td>
             <td align="left">ANDRE</td>
             <td align="right">2.437.500,00</td>
-            <td align="right">2.034.632,00</td>
-            <td align="right">402.868,00</td>
+            <td align="center">
+              <span class="badge badge-info">ANTRI KIRIM</span>
+            </td>
             <td align="center">
               <button type="button" class="btn btn-primary mrg-btn btn-sm btn-aksi2592 btn-disabled" title="Lunasi" onclick="bayar(&#39;2592&#39;)" fdprocessedid="hpozg"><i class="fas fa-truck"></i></button>
             </td>
@@ -178,8 +182,9 @@
             <td align="left">JANU PUTRA (E00202)</td>
             <td align="left">ANDRE</td>
             <td align="right">2.001.000,00</td>
-            <td align="right">1.244.045,00</td>
-            <td align="right">756.955,00</td>
+            <td align="center">
+              <span class="badge badge-info">ANTRI KIRIM</span>
+            </td>
             <td align="center">
               <button type="button" class="btn btn-primary mrg-btn btn-sm btn-aksi2607 btn-disabled" title="Lunasi" onclick="bayar(&#39;2607&#39;)" fdprocessedid="ouzzaa"><i class="fas fa-truck"></i></button>
             </td>
@@ -192,8 +197,9 @@
             <td align="left">LARIS MUNTILAN (E00077)</td>
             <td align="left">ANDRE</td>
             <td align="right">1.419.735,00</td>
-            <td align="right">1.278.300,00</td>
-            <td align="right">141.435,00</td>
+            <td align="center">
+              <span class="badge badge-info">ANTRI KIRIM</span>
+            </td>
             <td align="center">
               <button type="button" class="btn btn-primary mrg-btn btn-sm btn-aksi2818 btn-disabled" title="Lunasi" onclick="bayar(&#39;2818&#39;)" fdprocessedid="g6m5vr"><i class="fas fa-truck"></i></button>
             </td>
@@ -206,8 +212,9 @@
             <td align="left">SWALAYAN SURYA LAKSANA (E00098)</td>
             <td align="left">ANDRE</td>
             <td align="right">3.963.653,00</td>
-            <td align="right">0,00</td>
-            <td align="right">3.963.653,00</td>
+            <td align="center">
+              <span class="badge badge-info">ANTRI KIRIM</span>
+            </td>
             <td align="center">
               <button type="button" class="btn btn-primary mrg-btn btn-sm btn-aksi2943 btn-disabled" title="Lunasi" onclick="bayar(&#39;2943&#39;)" fdprocessedid="d3z6ns"><i class="fas fa-truck"></i></button>
             </td>
@@ -220,8 +227,9 @@
             <td align="left">SWALAYAN SURYA LAKSANA (E00098)</td>
             <td align="left">ANDRE</td>
             <td align="right">3.489.048,00</td>
-            <td align="right">0,00</td>
-            <td align="right">3.489.048,00</td>
+            <td align="center">
+              <span class="badge badge-info">ANTRI KIRIM</span>
+            </td>
             <td align="center">
               <button type="button" class="btn btn-primary mrg-btn btn-sm btn-aksi2945 btn-disabled" title="Lunasi" onclick="bayar(&#39;2945&#39;)" fdprocessedid="g1et1"><i class="fas fa-truck"></i></button>
             </td>
@@ -234,8 +242,9 @@
             <td align="left">SWALAYAN SURYA LAKSANA (E00098)</td>
             <td align="left">ANDRE</td>
             <td align="right">1.557.000,00</td>
-            <td align="right">0,00</td>
-            <td align="right">1.557.000,00</td>
+            <td align="center">
+              <span class="badge badge-info">ANTRI KIRIM</span>
+            </td>
             <td align="center">
               <button type="button" class="btn btn-primary mrg-btn btn-sm btn-aksi2950 btn-disabled" title="Lunasi" onclick="bayar(&#39;2950&#39;)" fdprocessedid="m5qigs"><i class="fas fa-truck"></i></button>
             </td>

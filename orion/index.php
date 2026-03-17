@@ -2,7 +2,8 @@
 <?php include "1header.php"; ?>
 <?php include "2navbar.php"; ?>
 <?php include "3sidebar.php"; ?>
- 
+ <!-- Chart.js CDN -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <!-- Content Wrapper -->
   <div class="content-wrapper" style="min-height: 600px;">
@@ -64,7 +65,7 @@
   </div>
 
   <!-- TOP SALES -->
-<!--   <div class="col-md-3">
+  <!--   <div class="col-md-3">
     <div class="card kpi-card border-0 shadow-sm rounded-4 bg-info-subtle">
       <div class="card-body position-relative">
         <i class="bi bi-person-badge kpi-icon text-primary"></i>
@@ -148,7 +149,6 @@
       </div>
     </div>
 
-
     <!-- TOP BUY PRODUK -->
     <div class="col-md-6">
       <div class="card border-0 shadow-sm rounded-4">
@@ -193,9 +193,8 @@
       </div>
     </div>
 
-
     <!-- TOP SALES -->
-   <!--  <div class="col-md-6">
+    <!--  <div class="col-md-6">
       <div class="card border-0 shadow-sm rounded-4">
         <div class="card-header bg-white fw-semibold d-flex justify-content-between align-items-center">
           <span>🧑‍💼 Top 5 Sales (Insentif)</span>
@@ -221,7 +220,6 @@
         </div>
       </div>
     </div> -->
-
    
     <!-- TOP TOKO -->
     <div class="col-md-6">
@@ -251,38 +249,125 @@
       </div>
     </div>
 
- <!-- TOP Supplier -->
+    <!-- TOP Supplier -->
     <div class="col-md-6">
-      <div class="card border-0 shadow-sm rounded-4">
-        <div class="card-header bg-white fw-semibold d-flex justify-content-between align-items-center">
-          <span>🧑‍💼 Top 5 Supplier (Pembelian)</span>
-          <small class="text-muted">Last 30 Days</small>
+        <div class="card border-0 shadow-sm rounded-4">
+          <div class="card-header bg-white fw-semibold d-flex justify-content-between align-items-center">
+            <span>🧑‍💼 Top 5 Supplier (Pembelian)</span>
+            <small class="text-muted">Last 30 Days</small>
+          </div>
+          <div class="card-body p-0">
+            <table class="table table-hover table-striped mb-0 align-middle">
+              <thead class="table-light">
+                <tr>
+                  <th width="60">Rank</th>
+                  <th>Supplier</th>
+                  <th class="text-end">Total Pembelian</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td><span class="badge bg-warning">1</span></td><td>SLS-001</td><td class="text-end">Rp 25.000.000</td></tr>
+                <tr><td><span class="badge bg-secondary">2</span></td><td>SLS-002</td><td class="text-end">Rp 22.000.000</td></tr>
+                <tr><td><span class="badge bg-secondary">3</span></td><td>SLS-003</td><td class="text-end">Rp 19.500.000</td></tr>
+                <tr><td>4</td><td>SLS-004</td><td class="text-end">Rp 17.000.000</td></tr>
+                <tr><td>5</td><td>SLS-005</td><td class="text-end">Rp 15.000.000</td></tr>
+              </tbody>
+            </table>
+          </div>
         </div>
-        <div class="card-body p-0">
-          <table class="table table-hover table-striped mb-0 align-middle">
-            <thead class="table-light">
-              <tr>
-                <th width="60">Rank</th>
-                <th>Supplier</th>
-                <th class="text-end">Total Pembelian</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td><span class="badge bg-warning">1</span></td><td>SLS-001</td><td class="text-end">Rp 25.000.000</td></tr>
-              <tr><td><span class="badge bg-secondary">2</span></td><td>SLS-002</td><td class="text-end">Rp 22.000.000</td></tr>
-              <tr><td><span class="badge bg-secondary">3</span></td><td>SLS-003</td><td class="text-end">Rp 19.500.000</td></tr>
-              <tr><td>4</td><td>SLS-004</td><td class="text-end">Rp 17.000.000</td></tr>
-              <tr><td>5</td><td>SLS-005</td><td class="text-end">Rp 15.000.000</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
     </div>
+  </div>
+
+<!-- Grafik SECTION -->
+<div class="card card-primary">
+  <div class="card-header">
+    <h3 class="card-title">Grafik Perbandingan Keuangan Bulanan</h3>
+  </div>
+  <div class="card-body">
+    <canvas id="keuanganChart" width="100%" height="30"></canvas>
+  </div>
+</div>
+
+<script>
+
+const ctx = document.getElementById('keuanganChart').getContext('2d');
+
+// contoh label 1 bulan terakhir
+const labels = [];
+const now = new Date();
+
+for (let i = 12; i >= 0; i--) {
+  let d = new Date(now.getFullYear(), now.getMonth() - i, 1);
+
+  let bulan = d.toLocaleString('id-ID', { month: 'short' });
+  let tahun = d.getFullYear();
+
+  labels.push(bulan + " " + tahun);
+}
+
+console.log(labels);
+
+// contoh data (ganti dengan data asli dari database)
+const dataPenjualan = [1200000,1500000,1700000,1400000,1800000,2000000,
+  1200000,1500000,1700000,1400000,1800000,2000000,2100000];
+const dataBiaya = [500000,600000,550000,650000,700000,750000,
+  500000,600000,550000,650000,700000,750000,720000];
+const dataLaba = dataPenjualan.map((p,i)=> p - dataBiaya[i]);
+
+const keuanganChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: labels,
+        datasets: [
+        {
+            label: 'Bruto',
+            data: dataPenjualan,
+            backgroundColor: 'rgba(40,167,69,0.8)'
+        },
+        {
+            label: 'Biaya Operasional',
+            data: dataBiaya,
+            backgroundColor: 'rgba(220,53,69,0.8)'
+        },
+        {
+            label: 'Net Margin',
+            data: dataLaba,
+            backgroundColor: 'rgba(0,123,255,0.8)'
+        }
+        ]
+    },
+    options: {
+        responsive:true,
+        plugins:{
+            legend:{
+                position:'top'
+            },
+            title:{
+                display:false,
+                text:'Perbandingan Keuangan 1 Bulan Terakhir'
+            }
+        },
+        scales:{
+            y:{
+                beginAtZero:true
+            }
+        }
+    }
+});
+
+</script>
+
+
+
+
+
+
+
 
 
   </div>
 
-</div>
+
 
     </div>
   </section>

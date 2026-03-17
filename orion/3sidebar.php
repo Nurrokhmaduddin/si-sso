@@ -43,13 +43,56 @@
 
 
 <!-- BERANDA -->
-<li class="nav-item">
+<!-- <li class="nav-item">
   <a href="index.php" class="nav-link <?php echo $page == '' ? 'active' : ''; ?>">
     <i class="nav-icon fas fa-home"></i>
     <p>
       Beranda
     </p>
   </a>
+</li> -->
+
+<!-- BERANDA -->
+<li class="nav-item <?php echo in_array($page, ['','beranda','beranda-su','beranda-admin','beranda-sales','beranda_mahasiswa']) ? 'menu-open' : ''; ?>">
+  <a href="#" class="nav-link <?php echo in_array($page, ['','beranda','beranda-su','beranda-admin','beranda-sales']) ? 'active' : ''; ?>">
+    <i class="nav-icon fas fa-home"></i>
+    <p>
+      Beranda
+      <i class="right fas fa-angle-left"></i>
+    </p>
+  </a>
+
+  <ul class="nav nav-treeview">
+
+    <li class="nav-item">
+      <a href="index.php" class="nav-link <?php echo $page == '' ? 'active' : ''; ?>">
+        <i class="far fa-circle nav-icon"></i>
+        <p>Superadmin</p>
+      </a>
+    </li>
+
+
+    <li class="nav-item">
+      <a href="beranda-su.php" class="nav-link <?php echo $page == 'beranda-su' ? 'active' : ''; ?>">
+        <i class="far fa-circle nav-icon"></i>
+        <p>Owner</p>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="beranda-admin.php" class="nav-link <?php echo $page == 'beranda-admin' ? 'active' : ''; ?>">
+        <i class="far fa-circle nav-icon"></i>
+        <p>Admin Gudang</p>
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a href="beranda-sales.php" class="nav-link <?php echo $page == 'beranda_sales' ? 'active' : ''; ?>">
+        <i class="far fa-circle nav-icon"></i>
+        <p>Sales</p>
+      </a>
+    </li>
+
+  </ul>
 </li>
         <!-- MASTER DATA -->
         <li class="nav-item <?php echo in_array($page, ['master_tahun','master_semester','master_peminatan','master_jenjang','master_jalur','master_dosen','master_mahasiswa']) ? 'menu-open' : ''; ?>">

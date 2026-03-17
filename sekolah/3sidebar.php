@@ -250,13 +250,13 @@
               </a>
             </li>
             <li class="nav-item">
-              <a href="monev-kbm-harian-report.php" class="nav-link <?php echo $page == 'report_semester' ? 'active' : ''; ?>">
+              <a href="monev-kbm-semester-report.php" class="nav-link <?php echo $page == 'report_semester' ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Report Semester</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="monev-kbm-harian-report.php" class="nav-link <?php echo $page == 'report_semester' ? 'active' : ''; ?>">
+              <a href="monev-kbm-harian-report.php" class="nav-link <?php echo $page == 'report_semestfer' ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Report Tahunan</p>
               </a>

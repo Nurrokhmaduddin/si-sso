@@ -51,7 +51,7 @@
           </a>
         </li> -->
 <!-- BERANDA -->
-        <li class="nav-item <?php echo in_array($page, ['beranda','beranda_dosen']) ? 'menu-open' : ''; ?>">
+        <li class="nav-item <?php echo in_array($page, ['beranda','beranda_admin','beranda_manajer','beranda_dosen','beranda_mahasiswa']) ? 'menu-open' : ''; ?>">
           <a href="#" class="nav-link <?php echo in_array($page, ['beranda','beranda_dosen']) ? 'active' : ''; ?>">
             <i class="nav-icon fas fa-home"></i>
             <p>
@@ -70,14 +70,14 @@
             </li>
 
             <li class="nav-item">
-              <a href="master-prodi.php" class="nav-link <?php echo $page == 'master_prodi' ? 'active' : ''; ?>">
+              <a href="beranda-admin.php" class="nav-link <?php echo $page == 'beranda_admin' ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Admin</p>
               </a>
             </li>
 
             <li class="nav-item">
-              <a href="master-jenjang.php" class="nav-link <?php echo $page == 'master_jenjang' ? 'active' : ''; ?>">
+              <a href="beranda-manajer.php" class="nav-link <?php echo $page == 'beranda_manajer' ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Manajer</p>
               </a>
@@ -90,7 +90,7 @@
             </li>
 
             <li class="nav-item">
-              <a href="master-mahasiswa.php" class="nav-link <?php echo $page == 'master_mahasiswa' ? 'active' : ''; ?>">
+              <a href="beranda-mahasiswa.php" class="nav-link <?php echo $page == 'beranda_mahasiswa' ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Mahasiswa</p>
               </a>
@@ -347,8 +347,8 @@
 
 
         <!-- MONITORING OBE -->
-        <li class="nav-item <?php echo in_array($page, ['status_mahasiswa','status_pemetaan','monev_individu','monev_kelas','monev_tahunan','monev_angkatan','monev_yudisium','monev_semester']) ? 'menu-open' : ''; ?>">
-          <a href="#" class="nav-link <?php echo in_array($page, ['status_mahasiswa','status_pemetaan','monev_individu','monev_kelas','monev_tahunan','monev_angkatan','monev_yudisium','monev_semester']) ? 'active' : ''; ?>">
+        <li class="nav-item <?php echo in_array($page, ['status_mahasiswa','status_pemetaan','monev_individu','monev_kelas','monev_tahunan','monev_angkatan','monev_yudisium','monev_semester','monev_semester3']) ? 'menu-open' : ''; ?>">
+          <a href="#" class="nav-link <?php echo in_array($page, ['status_mahasiswa','status_pemetaan','monev_individu','monev_kelas','monev_tahunan','monev_angkatan','monev_yudisium','monev_semester','monev_semester3']) ? 'active' : ''; ?>">
             <i class="nav-icon fas fa-chart-pie"></i>
             <p>
               Monitoring OBE
@@ -384,8 +384,20 @@
                 <p>Monev Kelas Setahun</p>
               </a>
             </li> -->
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <a href="monev-rekap-semester-.php" class="nav-link <?php echo $page == 'monev_semester' ? 'active' : ''; ?>">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Monev Semester CPMK</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="monev-rekap-semester2-.php" class="nav-link <?php echo $page == 'monev_semester' ? 'active' : ''; ?>">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Monev Semester IK</p>
+              </a>
+            </li> -->
+            <li class="nav-item">
+              <a href="monev-rekap-semester3-.php" class="nav-link <?php echo $page == 'monev_semester3' ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Monev Semester</p>
               </a>
@@ -408,12 +420,12 @@
                 <p>Monev Semester</p>
               </a>
             </li> -->
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <a href="monev-rekap-tahunan-.php" class="nav-link <?php echo $page == 'monev_tahunan' ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Monev Tahunan</p>
               </a>
-            </li>
+            </li> -->
 
 <!-- 
             <li class="nav-item">
@@ -477,7 +489,7 @@
           </a>
 
           <ul class="nav nav-treeview">
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <a href="evaluasi-pembelajaran.php" class="nav-link <?php echo $page == 'evaluasi_pembelajaran' ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Evaluasi Pembelajaran</p>
@@ -499,6 +511,12 @@
               <a href="evaluasi-kurikulum.php" class="nav-link <?php echo $page == 'evaluasi_kurikulum' ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Evaluasi Kurikulum</p>
+              </a>
+            </li> -->
+            <li class="nav-item">
+              <a href="evaluasi-kurikulum.php" class="nav-link <?php echo $page == 'evaluasi_kurikulum' ? 'active' : ''; ?>">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Evaluasi Prodi</p>
               </a>
             </li>
              <li class="nav-item">
@@ -526,12 +544,12 @@
                 <p>Progres MK</p>
               </a>
             </li> -->
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <a href="progres-cpl-semester.php" class="nav-link <?php echo $page == 'progress_cpl' ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Progres CPL </p>
               </a>
-            </li>
+            </li> -->
             
            
 
@@ -590,6 +608,12 @@
       <a href="konfigurasi-loa.php" class="nav-link <?php echo $page == 'konfigurasi_loa' ? 'active' : ''; ?>">
         <i class="far fa-circle nav-icon"></i>
         <p>Parameter LOA</p>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="konfigurasi-Kuesioner.php" class="nav-link <?php echo $page == 'konfigurasi_Kuesioner' ? 'active' : ''; ?>">
+        <i class="far fa-circle nav-icon"></i>
+        <p>Template Refleksi</p>
       </a>
     </li>
     <li class="nav-item">

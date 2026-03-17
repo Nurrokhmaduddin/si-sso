@@ -1,0 +1,182 @@
+<?php $page = 'report_semester'; ?>
+<?php include('1header.php'); ?>
+<?php include('2navbar.php'); ?>
+<?php include('3sidebar.php'); ?>
+
+
+  <div class="content-wrapper" style="min-height: 626.4px;">    
+
+  <section class="content-header">
+    <div class="container-fluid">
+      <h3 class="mb-0">Learning Report Semester</h3>
+        <p class="text-muted mb-0">input plan daily->input report daily->report (daily->weekly->semester)</p>
+    </div>
+  </section>
+
+  <!-- Main content -->
+  <section class="content">
+    <div class="container-fluid">
+      <!-- Main row -->
+      <div class="row">
+        <div class="col-md-12">
+          <!-- ========== CARD : Filter & Export ========== -->
+          <div class="card">
+            <!-- <div class="card-header">
+              <h5 class="card-title mb-0"><i class="fas fa-filter "></i> Daftar Plan Daily<button type="button" class="btn btn-tool" data-bs-toggle="modal" data-bs-target="#modalBantuan" title="Bantuan">
+                <i class="fas fa-question-circle"></i>
+              </button> </h5>              
+            </div> -->
+            <div class="card-body ">
+              <div class="row">
+                <div class="col-md-6">
+                  <b>Tahun Pelajaran:</b> 2024 / 2025 (Ganjil) &nbsp;
+                </div>
+                <div class="col-md-6">
+                  <b>Kelas:</b> SD 4 – Saturnus
+                </div>
+
+              </div>
+            </div>
+            <div class="card-footer">
+              <div class="card-tools ms-auto">
+                <button class="btn btn-outline-info btn-sm " data-bs-toggle="modal" data-bs-target="#modalFilter">
+                  <i class="fas fa-filter me-1"></i> Filter
+                </button>
+                <!-- <button type="button" class="btn btn-outline-primary btn-sm " data-bs-toggle="modal" data-bs-target="#modalTambahData">
+                  <i class="fas fa-plus me-1"></i> Add
+                </button>
+                <button type="button" class="btn btn-outline-primary btn-sm " data-bs-toggle="modal" data-bs-target="#modalImpor">
+                  <i class="fas fa-file-upload me-1"></i> Import
+                </button>                
+                <button type="button" class="btn btn-outline-success btn-sm">
+                  <i class="fas fa-file-download me-1"></i> Export
+                </button>
+                 <button type="button" class="btn btn-outline-danger btn-sm" data-bs-toggle="modal" data-bs-target="#modalResetData">
+                  <i class="fas fa-ban me-1"></i> Reset
+                </button>   -->
+              </div>
+            </div>
+          </div>
+
+
+        <!-- ========== CARD : Tabel  ========== -->
+        <div class="card"> 
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table table1 table-bordered table-striped table-sm datatables1">
+                <thead>
+                  <tr class="text-uppercase text-center">                 
+                    <th width="5px">No.</th>
+                    <th>Periode</th>
+                    <th>Semester</th>
+                    <th>Tingkatan Kelas</th>
+                    <th>Murid</th>
+                    <th style="text-align: center;">Aksi</th>
+                  </tr>                  
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>2024 / 2025</td>
+                    <td>Ganjil</td>
+                    <td>SD 4</td>
+                    <td>Nailah</td>
+                    <td>           
+                      <button class="btn btn-outline-info btn-sm"
+                      onclick="window.location.href='monev-kbm-semester-report-detail.php'"><i class="fas fa-info-circle"></i></button>
+                      <a href="learning_report_20260123.pdf"
+                      class="btn btn-outline-success btn-sm"
+                      download
+                      title="Download Learning Report">
+                      <i class="fas fa-download"></i>
+                    </a>
+                  </td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>2024 / 2025</td>
+                    <td>Ganjil</td>
+                    <td>SD 4</td>
+                    <td>Siti Aminah</td>
+                    <td>
+                      <button class="btn btn-outline-info btn-sm"
+                      onclick="window.location.href='monev-kbm-harian-report-detail.php'"><i class="fas fa-info-circle"></i></button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>2024 / 2025</td>
+                    <td>Ganjil</td>
+                    <td>SD 4</td>
+                    <td>Ahmad Fauzi</td>
+                    <td>
+                      <button class="btn btn-outline-info btn-sm"
+                      onclick="window.location.href='monev-kbm-harian-report-detail.php'"><i class="fas fa-info-circle"></i></button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>2024 / 2025</td>
+                    <td>Ganjil</td>
+                    <td>SD 4</td>
+                    <td>Iftah Bahrol 'Ulum</td>
+                    <td>
+                      <button class="btn btn-outline-info btn-sm"
+                      onclick="window.location.href='monev-kbm-harian-report-detail.php'"><i class="fas fa-info-circle"></i></button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td>2024 / 2025</td>
+                    <td>Ganjil</td>
+                   <td>SD 4</td>
+                    <td>Siti Aminah</td>
+                    <td>
+                      <button class="btn btn-outline-info btn-sm"
+                      onclick="window.location.href='monev-kbm-harian-report-detail.php'"><i class="fas fa-info-circle"></i></button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td>2024 / 2025</td>
+                    <td>Ganjil</td>
+                    <td>SD 4</td>
+                    <td>Ahmad Fauzi</td>
+                    <td>
+                      <button class="btn btn-outline-info btn-sm"
+                      onclick="window.location.href='monev-kbm-harian-report-detail.php'"><i class="fas fa-info-circle"></i></button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>7</td>
+                    <td>2024 / 2025</td>
+                    <td>Ganjil</td>
+                    <td>SD 4</td>
+                    <td>Iftah Bahrol 'Ulum</td>
+                    <td>
+                      <button class="btn btn-outline-info btn-sm"
+                      onclick="window.location.href='monev-kbm-harian-report-detail.php'"><i class="fas fa-info-circle"></i></button>
+                    </td>
+                  </tr>                 
+                </tbody>
+              </table>
+
+               
+
+
+              </div>
+            </div>
+            <!-- /.card-body -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  </div>
+  <!-- /.content-wrapper -->
+
+  
+                
+
+<?php include('4footer.php'); ?>
+<?php include('5script.php'); ?>

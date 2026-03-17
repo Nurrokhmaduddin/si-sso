@@ -1,4 +1,4 @@
-<?php $page = 'beranda_dosen'; ?>
+<?php $page = 'beranda_mahasiswa'; ?>
 <?php include('1header.php'); ?>
 <?php include('2navbar.php'); ?>
 <?php include('3sidebar.php'); ?>
@@ -51,11 +51,11 @@
           <div class="col-md-4">
             <div class="card bg-success text-white">
               <div class="card-body">
-                <h5>CPMK Memenuhi Standar</h5>
+                <h5>CPMK Tuntas</h5>
                 <h3>20 / 34 CPMK</h3>
                 <p class="mb-0">
                   <i class="fas fa-chart-line"></i>
-                  yaitu mahasiswa tuntas ≥ 65%
+                  dengan skor ≥ 70
                 </p>
               </div>
             </div>
@@ -64,11 +64,11 @@
           <div class="col-md-4">
             <div class="card bg-warning text-white">
               <div class="card-body">
-                <h5>Ketuntasan Mata Kuliah</h5>
-                <h3>88% Mahasiswa</h3>
+                <h5>Mata Kuliah Tuntas</h5>
+                <h3>5 / 6 Mata Kuliah</h3>
                 <p class="mb-0">
                   <i class="fas fa-user-graduate"></i>
-                    dengan nilai ≥ C pada semester ini.
+                    dengan nilai akhir huruf ≥ C 
                 </p>
               </div>
             </div>
@@ -92,9 +92,24 @@
                 <canvas id="chartLOA" style="min-height: 250px;"></canvas>
               </div>
             </div> -->
-
+<!-- ========== CARD 4: Chart CPL-IK ========== -->     
+<div class="card">   
+  <div class="card-header ">         
+    <h5 class="card-title mb-0"><i class="fas fa-chart-bar me-2"></i>
+      Bar Chart
+    </h5>
+    <div class="card-tools">
+      <small class="text-muted">matakuliah ditempuh</small>
+    </div>
+  </div>
+  <div class="card-body p-0">
+  <div class="chart-container">
+    <canvas id="chartCPL1" width="100%" height="30"></canvas>
+  </div>     
+  </div> 
+</div>
             <!-- ========== CARD : Stacked Bar Chart ========== -->
-            <div class="card">
+            <!-- <div class="card">
               <div class="card-header">
                 <h5 class="card-title mb-0"><i class="fas fa-chart-bar me-2"></i> Stacked Bar Chart — Proporsi (%)</h5>
                 <div class="card-tools">
@@ -107,7 +122,7 @@
                   <canvas id="stackedChart" width="100%" height="22"></canvas>
                 </div>
               </div>
-            </div>
+            </div> -->
             <!-- ========== CARD : tabel granular kelas ========== -->
             <div class="card">
               <div class="card-body">
@@ -204,73 +219,6 @@
                         <button type="button" onclick="window.location='perkuliahan-portofolio-kelas-detail.php'" class="btn btn-xs btn-outline-info"> <i class='fas fa-info-circle'> </i></button>
                       </td>
                     </tr>
-                    <tr>
-                      <td align="center">7</td>
-                      <td>
-                        Bahan Perkerasan Jalan (+Pr)<br>
-                        <!-- <small><b>(STS307)</b></small> -->
-                      </td>
-                      <td align="center">9</td>
-                      <td align="center">F</td>
-                      <td align="center"><b>24</b></td>
-                      <td class="text-center">
-                        <button type="button" onclick="window.location='perkuliahan-portofolio-kelas-detail.php'" class="btn btn-xs btn-outline-info"> <i class='fas fa-info-circle'> </i></button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td align="center">8</td>
-                      <td>
-                        Metodologi Penelitian<br>
-                        <!-- <small><b>(IF501)</b></small> -->
-                      </td>
-                      <td align="center">9</td>
-                      <td align="center">C</td>
-                      <td align="center"><b>20</b></td>
-                      <td class="text-center">
-                        <button type="button" onclick="window.location='perkuliahan-portofolio-kelas-detail.php'" class="btn btn-xs btn-outline-info"> <i class='fas fa-info-circle'> </i></button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td align="center">9</td>
-                      <td>
-                        Skripsi<br>
-                        <!-- <small><b>(IF601)</b></small> -->
-                      </td>
-                      <td align="center">9</td>
-                      <td align="center">G</td>
-                      <td align="center"><b>24</b></td>
-                      <td class="text-center">
-                        <button type="button" onclick="window.location='perkuliahan-portofolio-kelas-detail.php'" class="btn btn-xs btn-outline-info"> <i class='fas fa-info-circle'> </i></button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td align="center">10</td>
-                      <td>
-                        Bahan Perkerasan Jalan (+Pr)<br>
-                        <!-- <small><b>(STS307)</b></small> -->
-                      </td>
-                      <td align="center">9</td>
-                      <td align="center">E</td>
-                      <td align="center"><b>22</b></td>
-                      <td class="text-center">
-                        <button type="button" onclick="window.location='perkuliahan-portofolio-kelas-detail.php'" class="btn btn-xs btn-outline-info"> <i class='fas fa-info-circle'> </i></button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td align="center">11</td>
-                      <td>
-                        Bahan Perkerasan Jalan (+Pr)<br>
-                        <small><b>(STS307)</b></small>
-                      </td>
-                      <td align="center">9</td>
-                      <td align="center">D</td>
-                      <td align="center"><b>24</b></td>
-                      <td class="text-center">
-                        <button type="button" class="btn btn-xs btn-outline-info" onclick="window.location='progres-kelas-semester-detail.php'"><i class="fas fa-info-circle"></i></button>
-                        <a href="data-portofolio-cpmk.pdf" download class="btn btn-xs btn-outline-success"><i class="fas fa-download"></i></a>
-                      </td>
-                    </tr>
-
                     </tbody>
                   </table>
 
@@ -311,6 +259,19 @@
         </div>
 
 
+<!-- ========== CARD :  Grafik Radar CPL & Progress ========== --> 
+<!-- <div class="card p-3">
+  <div class="row">
+
+
+    <div class="col-lg-12">
+      <canvas id="chartCPL3" width="100%" height="50"></canvas>
+    </div>
+
+
+    
+  </div>
+</div> -->
         <!-- Card Action Capability -->
         <div class="card">
 
@@ -341,177 +302,121 @@
                   <td>USER_LOGIN</td>
                   <td>Submit form</td>
                 </tr>
+
                 <tr>
-                  <td rowspan="6">Class Portfolio Management</td>
-                  <td>Mengakses portofolio kelas perkuliahan</td>
-                  <td>kelas perkuliahan</td>
-                  <td>CLASS_PORTFOLIO_OPENED</td>
-                  <td>Klik menu portofolio</td>
+                  <td>Course Access</td>
+                  <td>Mengakses kelas perkuliahan</td>
+                  <td>mata kuliah, kelas</td>
+                  <td>CLASS_OPENED</td>
+                  <td>Klik daftar kelas</td>
                 </tr>
+
                 <tr>
-                  <!-- <td>Course Planning</td> -->
-                  <td>Upload RPS mata kuliah</td>
-                  <td>deskripsi MK, metode, bobot nilai</td>
-                  <td>RPS_UPLOADED</td>
+                  <td>Learning Material</td>
+                  <td>Mengunduh materi pembelajaran</td>
+                  <td>file materi</td>
+                  <td>LEARNING_MATERIAL_VIEWED</td>
+                  <td>Klik download</td>
+                </tr>
+
+                <!-- <tr>
+                  <td>Assignment Access</td>
+                  <td>Melihat instruksi tugas</td>
+                  <td>dokumen tugas</td>
+                  <td>ASSIGNMENT_VIEWED</td>
+                  <td>Klik dokumen</td>
+                </tr> -->
+
+                <!-- <tr>
+                  <td>Assignment Submission</td>
+                  <td>Mengunggah tugas</td>
+                  <td>file tugas</td>
+                  <td>ASSIGNMENT_SUBMITTED</td>
                   <td>Upload file</td>
                 </tr>
+
                 <tr>
-                  <!-- <td>Learning Material Management</td> -->
-                  <td>Upload materi pembelajaran</td>
-                  <td>file slides / modul / bahan ajar</td>
-                  <td>LEARNING_MATERIAL_UPLOADED</td>
-                  <td>Upload file</td>
-                </tr>
-                <tr>
-                  <!-- <td>Assignment Management</td> -->
-                  <td>Upload dokumen penugasan mahasiswa</td>
-                  <td>file tugas / instruksi tugas</td>
-                  <td>ASSIGNMENT_DOCUMENT_UPLOADED</td>
-                  <td>Upload file</td>
-                </tr>
-                <tr>
-                  <!-- <td>Exam Submission</td> -->
-                  <td>Upload soal ujian</td>
-                  <td>file soal UTS / UAS</td>
-                  <td>EXAM_DOCUMENT_UPLOADED</td>
-                  <td>Upload file</td>
-                </tr>
-                <!-- <tr>
-                  <td>Assessment Setup</td>
-                  <td>Membuat komponen penilaian</td>
-                  <td>jenis assessment, bobot</td>
-                  <td>ASSESSMENT_CREATED</td>
-                  <td>Klik tambah assessment</td>
-                </tr>
-                <tr>
-                  <td>Rubric Management</td>
-                  <td>Menginput rubrik penilaian</td>
-                  <td>kriteria, skor</td>
-                  <td>RUBRIC_CREATED</td>
-                  <td>Isi tabel rubrik</td>
-                </tr> -->
-                <!-- <tr>
-                  <td rowspan="2">Student Assessment</td>
-                  <td>Melihat penilaian mahasiswa</td>
-                  <td>kelas, mahasiswa</td>
-                  <td>STUDENT_GRADES_VIEWED</td>
-                  <td>Klik tab penilaian</td>
-                </tr> -->
-                <tr>
-                  <!-- <td>Grading</td> -->
-                  <td>Input nilai cpmk mahasiswa</td>
-                  <td>nilai CPMK</td>
-                  <td>STUDENT_GRADES_INSERTED</td>
-                  <td>Input tabel nilai</td>
-                </tr>
-                <!-- <tr>
-                  <td>Grading</td>
-                  <td>Penilaian berbasis rubrik</td>
-                  <td>skor rubrik</td>
-                  <td>RUBRIC_SCORE_SUBMITTED</td>
-                  <td>Pilih skor</td>
-                </tr> -->
-                
-                <!-- <tr>
-                  <td>CLO Evaluation</td>
-                  <td>Generate pencapaian CLO</td>
-                  <td>data nilai assessment</td>
-                  <td>CLO_ACHIEVEMENT_CALCULATED</td>
-                  <td>Klik generate</td>
-                </tr> -->
-                <tr>
-                  <td rowspan="5">Management Evaluation</td>
-                  <td>Mengisi evaluasi mata kuliah</td>
-                  <td>refleksi dosen</td>
-                  <td>COURSE_EVALUATION_SUBMITTED</td>
-                  <td>Isi form</td>
-                </tr>
-                <tr>
-                  <!-- <td>Class Reflection</td> -->
-                  <td>Mengisi refleksi kelas</td>
-                  <td>tag refleksi CPMK</td>
-                  <td>CLASS_REFLECTION_SUBMITTED</td>
-                  <td>Checklist tag refleksi</td>
-                </tr>
-                <tr>
-                  <!-- <td>Semester Reflection</td> -->
-                  <td>Mengisi formulir refleksi akhir semester</td>
-                  <td>jawaban refleksi dosen</td>
-                  <td>SEMESTER_REFLECTION_SUBMITTED</td>
-                  <td>Isi form refleksi</td>
-                </tr>
-                <tr>
-                  <!-- <td>CQI Result</td> -->
-                  <td>Menginput evaluasi Pembelajaran kelas</td>
-                  <td>action hasil perbaikan</td>
-                  <td>CQI_PLAN_CREATED</td>
+                  <td>Quiz / Assessment</td>
+                  <td>Mengerjakan kuis online</td>
+                  <td>jawaban kuis</td>
+                  <td>QUIZ_SUBMITTED</td>
                   <td>Submit form</td>
                 </tr>
+
                 <tr>
-                  <!-- <td>CQI Action</td> -->
-                  <td>Menginput rencana perbaikan </td>
-                  <td>action plan matakuliah</td>
-                  <td>CQI_ACTION_CREATED</td>
-                  <td>Submit form</td>
-                </tr>
-                
-                
-                <!-- <tr>
-                  <td>Announcement Management</td>
-                  <td>Membuat pengumuman kelas</td>
-                  <td>judul, isi pengumuman</td>
-                  <td>ANNOUNCEMENT_CREATED</td>
+                  <td>Exam Participation</td>
+                  <td>Mengikuti ujian</td>
+                  <td>jawaban ujian</td>
+                  <td>EXAM_SUBMITTED</td>
                   <td>Submit form</td>
                 </tr> -->
 
+                <tr>
+                  <td>Learning Progress</td>
+                  <td>Melihat progres pencapaian CPMK</td>
+                  <td>data hasil penilaian</td>
+                  <td>CPMK_PROGRESS_VIEWED</td>
+                  <td>Klik dashboard</td>
+                </tr>
 
-                
-                
                 <tr>
-                  <td rowspan="4">OBE Monitoring</td>
-                  <td>Melihat monitoring pencapaian kelas</td>
-                  <td>filter by</td>
-                  <td>MONEV_KELAS_VIEWED</td>
-                  <td>Klik menu monev kelas</td>
+                  <td>Grades Access</td>
+                  <td>Melihat nilai</td>
+                  <td>data nilai</td>
+                  <td>GRADE_VIEWED</td>
+                  <td>Klik tab nilai</td>
                 </tr>
+
                 <tr>
-                  <!-- <td>Reporting</td> -->
-                  <td>Generate laporan OBE kelas</td>
-                  <td>semester, mata kuliah, kelas</td>
-                  <td>COURSE_REPORT_GENERATED</td>
-                  <td>Klik generate report</td>
+                  <td>Feedback Access</td>
+                  <td>Melihat feedback dosen</td>
+                  <td>komentar penilaian</td>
+                  <td>FEEDBACK_VIEWED</td>
+                  <td>Klik detail nilai</td>
                 </tr>
+
+                <!-- <tr>
+                  <td>Discussion Participation</td>
+                  <td>Berpartisipasi dalam diskusi</td>
+                  <td>komentar diskusi</td>
+                  <td>DISCUSSION_POSTED</td>
+                  <td>Submit komentar</td>
+                </tr> -->
+
                 <tr>
-                  <!-- <td>OBE Monitoring</td> -->
-                  <td>Melihat monitoring pencapaian CPMK per semester</td>
-                  <td>filter by</td>
-                  <td>MONEV_SEMESTER_VIEWED</td>
-                  <td>Klik menu monev semester</td>
+                  <td>Announcement Access</td>
+                  <td>Membaca pengumuman kelas</td>
+                  <td>pengumuman</td>
+                  <td>ANNOUNCEMENT_VIEWED</td>
+                  <td>Klik pengumuman</td>
                 </tr>
-                <tr>
-                  <!-- <td>Reporting</td> -->
-                  <td>Generate laporan OBE mata kuliah</td>
-                  <td>semester, mata kuliah, kelas</td>
-                  <td>COURSE_REPORT_GENERATED</td>
-                  <td>Klik generate report</td>
-                </tr>
-                
+
                 <tr>
                   <td>Academic Advisory</td>
-                  <td>Mengakses data perwalian mahasiswa</td>
-                  <td>daftar mahasiswa bimbingan</td>
+                  <td>Melihat data perwalian</td>
+                  <td>data akademik</td>
                   <td>ADVISORY_DATA_VIEWED</td>
                   <td>Klik menu perwalian</td>
                 </tr>
+
+                <!-- <tr>
+                  <td>Course Reflection</td>
+                  <td>Mengisi refleksi pembelajaran</td>
+                  <td>jawaban refleksi</td>
+                  <td>COURSE_REFLECTION_SUBMITTED</td>
+                  <td>Isi form</td>
+                </tr> -->
+
                 <tr>
-                  <td>Graduation Review</td>
-                  <td>Melihat data yudisium mahasiswa</td>
-                  <td>status kelulusan mahasiswa</td>
-                  <td>GRADUATION_DATA_VIEWED</td>
-                  <td>Klik menu yudisium</td>
+                  <td>Profile Management</td>
+                  <td>Memperbarui profil mahasiswa</td>
+                  <td>data profil</td>
+                  <td>PROFILE_UPDATED</td>
+                  <td>Edit form</td>
                 </tr>
               </tbody>
-            </table>
+            </tbody>
+          </table>
           </div>
           <div class="card-footer small text-muted">
             <strong>Lifecycle:</strong>
@@ -541,127 +446,157 @@
                 </tr>
               </thead>
               <tbody>
+                      <td>Memahami progres pembelajaran</td>
+      <td>Persentase progres perkuliahan yang telah diselesaikan</td>
+      <td>Per mata kuliah</td>
+      <td>Progress Bar</td>
+    </tr>
+
+    <tr>
+      <td>Memantau performa akademik</td>
+      <td>Rata-rata nilai sementara</td>
+      <td>Per mata kuliah</td>
+      <td>KPI Card</td>
+    </tr>
+
+    <tr>
+      <td>Mengetahui pencapaian learning outcome</td>
+      <td>Status pencapaian CPMK</td>
+      <td>Per CPMK</td>
+      <td>Radar Chart</td>
+    </tr>
+
+    <tr>
+      <td>Melihat perkembangan nilai</td>
+      <td>Tren nilai dari setiap assessment</td>
+      <td>Per assessment</td>
+      <td>Line Chart</td>
+    </tr>
+
+    <tr>
+      <td>Memantau distribusi nilai pribadi</td>
+      <td>Perbandingan nilai mahasiswa dengan rata-rata kelas</td>
+      <td>Per assessment</td>
+      <td>Bar Chart</td>
+    </tr>
+
+    <!-- <tr>
+      <td>Menghindari keterlambatan tugas</td>
+      <td>Status pengumpulan tugas</td>
+      <td>Per tugas</td>
+      <td>Status Label</td>
+    </tr>
+
+    <tr>
+      <td>Mengetahui tugas yang belum selesai</td>
+      <td>Jumlah tugas yang belum dikumpulkan</td>
+      <td>Per mata kuliah</td>
+      <td>Badge / Counter</td>
+    </tr> -->
+
+    <tr>
+      <td>Memahami kontribusi penilaian</td>
+      <td>Bobot komponen penilaian (tugas, quiz, ujian)</td>
+      <td>Per mata kuliah</td>
+      <td>Donut Chart</td>
+    </tr>
+
+    <!-- <tr>
+      <td>Mengevaluasi pemahaman materi</td>
+      <td>Skor per topik pembelajaran</td>
+      <td>Per topik</td>
+      <td>Horizontal Bar Chart</td>
+    </tr> -->
+
+    <tr>
+      <td>Mengidentifikasi kelemahan belajar</td>
+      <td>CPMK yang belum tercapai</td>
+      <td>Per CPMK</td>
+      <td>Alert / Highlight</td>
+    </tr>
+
+    <!-- <tr>
+      <td>Memantau aktivitas belajar</td>
+      <td>Frekuensi akses materi pembelajaran</td>
+      <td>Per minggu</td>
+      <td>Line Chart</td>
+    </tr> -->
+
+    <tr>
+      <td>Memahami feedback dosen</td>
+      <td>Ringkasan komentar atau evaluasi dosen</td>
+      <td>Per assessment</td>
+      <td>Comment Panel</td>
+    </tr>
+
+    <!-- <tr>
+      <td>Mempersiapkan ujian</td>
+      <td>Daftar materi yang diujikan</td>
+      <td>Per ujian</td>
+      <td>Checklist List</td>
+    </tr> -->
+
+    <tr>
+      <td>Memantau performa keseluruhan</td>
+      <td>Ringkasan performa akademik semester</td>
+      <td>Per semester</td>
+      <td>Dashboard Summary</td>
+    </tr>
+
+    <tr>
+      <td>Mengetahui risiko akademik</td>
+      <td>Indikator peringatan dini (nilai rendah / CPMK belum tercapai)</td>
+      <td>Per mata kuliah</td>
+      <td>Alert Card</td>
+    </tr>
+                
+
+                
+<!-- 
                 <tr>
-                  <td>Memantau keterlibatan mahasiswa</td>
-                  <td>Persentase mahasiswa mengakses materi</td>
-                  <td>Per materi</td>
+                  <td>Memantau pengumpulan tugas</td>
+                  <td>Persentase tugas terkumpul</td>
+                  <td>Per tugas</td>
+                  <td>Donut Chart</td>
+                </tr> -->
+
+                <!-- <tr>
+                  <td>Mengidentifikasi keterlambatan</td>
+                  <td>Jumlah tugas terlambat</td>
+                  <td>Per tugas</td>
                   <td>Bar Chart</td>
-                </tr>
-                <tr>
-                  <td>Melihat distribusi nilai</td>
-                  <td>Distribusi grade A–E</td>
-                  <td>Per kelas</td>
-                  <td>Histogram</td>
-                </tr>
-                <tr>
-                  <td>Mengevaluasi pencapaian CPMK</td>
-                  <td>Persentase mahasiswa mencapai CPMK</td>
-                  <td>Per CPMK</td>
-                  <td>Bar Chart</td>
-                </tr>
+                </tr> -->
 
                 <tr>
-                  <td>Mengidentifikasi mahasiswa berisiko</td>
-                  <td>Jumlah mahasiswa tidak mencapai CPMK</td>
-                  <td>Per CPMK</td>
-                  <td>Alert / Highlight</td>
-                </tr>
-
-                <tr>
-                  <td>Menganalisis efektivitas tugas</td>
-                  <td>Kontribusi tugas terhadap pencapaian CPMK</td>
-                  <td>Per assessment</td>
-                  <td>Stacked Bar</td>
-                </tr>
-                <tr>
-                  <td>Mengetahui performa mata kuliah</td>
-                  <td>Jumlah mahasiswa terdaftar</td>
-                  <td>Per kelas</td>
-                  <td>KPI Card</td>
-                </tr>
-                <tr>
-                  <td>Memastikan pencapaian learning outcome</td>
-                  <td>Persentase pencapaian CLO</td>
-                  <td>Per CLO</td>
-                  <td>Bar Chart</td>
-                </tr>
-                <tr>
-                  <td>Memantau kontribusi ke program studi</td>
-                  <td>Pencapaian PLO dari mata kuliah</td>
-                  <td>Per PLO</td>
-                  <td>Radar Chart</td>
-                </tr>
-                <tr>
-                  <td>Mengetahui performa mahasiswa</td>
+                  <td>Menilai performa mahasiswa</td>
                   <td>Rata-rata nilai kelas</td>
                   <td>Per kelas</td>
                   <td>KPI Card</td>
                 </tr>
-                <tr>
-                  <td>Melihat distribusi nilai mahasiswa</td>
-                  <td>Distribusi grade A–E</td>
+
+                
+
+                
+
+                <!-- <tr>
+                  <td>Memantau aktivitas diskusi</td>
+                  <td>Jumlah partisipasi diskusi mahasiswa</td>
                   <td>Per kelas</td>
-                  <td>Histogram</td>
-                </tr>
-                <tr>
-                  <td>Mengidentifikasi CLO bermasalah</td>
-                  <td>CLO yang tidak mencapai target</td>
-                  <td>Per CLO</td>
-                  <td>Highlight Table</td>
-                </tr>
-                <tr>
-                  <td>Menganalisis assessment</td>
-                  <td>Kontribusi assessment terhadap CLO</td>
-                  <td>Per assessment</td>
-                  <td>Stacked Bar</td>
-                </tr>
-                <tr>
-                  <td>Mengetahui performa mahasiswa per CLO</td>
-                  <td>Persentase mahasiswa lulus CLO</td>
-                  <td>Per CLO</td>
-                  <td>Donut Chart</td>
-                </tr>
-                <tr>
-                  <td>Memantau kualitas evaluasi</td>
-                  <td>Rata-rata skor per assessment</td>
-                  <td>Per assessment</td>
-                  <td>Bar Chart</td>
-                </tr>
-                <tr>
-                  <td>Melihat tren performa kelas</td>
-                  <td>Perbandingan nilai semester sebelumnya</td>
-                  <td>Per semester</td>
                   <td>Line Chart</td>
-                </tr>
-                <tr>
-                  <td>Mendukung evaluasi kurikulum</td>
-                  <td>Kontribusi mata kuliah ke PLO</td>
-                  <td>Program studi</td>
-                  <td>Radar Chart</td>
-                </tr>
-                <tr>
-                  <td>Mendukung continuous improvement</td>
-                  <td>Jumlah CQI action plan</td>
-                  <td>Per semester</td>
+                </tr> -->
+
+               <!--  <tr>
+                  <td>Mengevaluasi proses belajar</td>
+                  <td>Rata-rata waktu penyelesaian tugas</td>
+                  <td>Per tugas</td>
                   <td>KPI Card</td>
-                </tr>
+                </tr> -->
+
                 <tr>
-                  <td>Mengidentifikasi mahasiswa berisiko</td>
-                  <td>Mahasiswa gagal CLO</td>
-                  <td>Per mahasiswa</td>
-                  <td>Alert / Table</td>
-                </tr>
-                <tr>
-                  <td>Memudahkan audit akademik</td>
-                  <td>Status kelengkapan evidence</td>
-                  <td>Per mata kuliah</td>
-                  <td>Status Label</td>
-                </tr>
-                <tr>
-                  <td>Mendukung akreditasi</td>
-                  <td>Course Assessment Report</td>
-                  <td>Per mata kuliah</td>
-                  <td>Export PDF</td>
+                  <td>Mendukung evaluasi pembelajaran</td>
+                  <td>Hasil refleksi mahasiswa</td>
+                  <td>Per kelas</td>
+                  <td>Word Cloud / Summary</td>
                 </tr>
 
               </tbody>
@@ -824,4 +759,189 @@
 
 
 </div>
+
+<!-- Chart Script -->
+<script>
+    const ctx4 = document.getElementById("chartCPL1");
+
+    new Chart(ctx4, {
+        type: 'bar',
+        data: {
+            labels: ['Angka','CPMK 1', 'CPMK 2', 'CPMK 3', 'CPMK 4', 'CPMK 5'],
+            // datasets: [
+            //   {
+            //     label: 'MK A',
+            //     data: [90, 80, 88, 87.33],
+            //     backgroundColor: [
+            //       '#007bff',  
+            //       '#6c757d', 
+            //       '#6c757d', 
+            //       '#6c757d'
+            //     ],
+            //     borderColor: [
+            //       '#007bff',
+            //       '#6c757d',
+            //       '#6c757d',
+            //       '#6c757d'
+            //     ],
+            //     borderWidth: 1
+            //   },
+            //   {
+            //     label: 'MK B',
+            //     data: [90, 80, 88, 87.33],
+            //     backgroundColor: [
+            //       '#007bff',  
+            //       '#6c757d', 
+            //       '#6c757d', 
+            //       '#6c757d' 
+            //     ],
+            //     borderColor: [
+            //       '#007bff',
+            //       '#6c757d',
+            //       '#6c757d',
+            //       '#6c757d'
+            //     ],
+            //     borderWidth: 1
+            //   }
+            // ],
+
+            datasets: [
+                {
+                    label: 'MK A',
+                    data: [82, 75, 88, 81.66,90],
+                    backgroundColor: '#9c057d',
+                    borderColor: '#9c057d',
+                    borderWidth: 1
+                },
+                {
+                    label: 'MK B',
+                    data: [82, 75, 88, 81.66,8,55],
+                    backgroundColor: '#6c759d',
+                    borderColor: '#6c759d',
+                    borderWidth: 1
+                },
+                {
+                    label: 'MK C',
+                    data: [82, 75, 88, 81.66,67],
+                    backgroundColor: '#6c757d',
+                    borderColor: '#6c757d',
+                    borderWidth: 1
+                },
+                {
+                    label: 'MK D',
+                    data: [90, 80, 92, 87.33],
+                    backgroundColor: '#807bff',
+                    borderColor: '#807bff',
+                    borderWidth: 1
+                },
+                {
+                    label: 'MK E',
+                    data: [90, 80, 92, 87.33],
+                    backgroundColor: '#007bff',
+                    borderColor: '#007bff',
+                    borderWidth: 1
+                },
+                {
+                    label: 'MK F',
+                    data: [90, 80, 92, 87.33],
+                    backgroundColor: '#700766',
+                    borderColor: '#700766',
+                    borderWidth: 1
+                }
+            ]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: { position: 'top' },
+                annotation: {
+                    annotations: {
+                        targetLine: {
+                            type: 'line',
+                            yMin: 65,      // <<< TARGET CAPAIAN
+                            yMax: 65,
+                            borderColor: 'red',
+                            borderWidth: 2,
+                            borderDash: [6, 6],
+                            label: {
+                                display: true,
+                                content: 'Target 65',
+                                position: 'start',
+                                color: 'red',
+                                backgroundColor: 'rgba(255,255,255,0.7)',
+                                padding: 4
+                            }
+                        }
+                    }
+                }
+            },
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+</script>
+<script>
+const ctx3 = document.getElementById("chartCPL3");
+
+new Chart(ctx3, {
+  type: 'bar',
+  data: {
+    labels: [
+      'ANgka',
+      'CPMK 1','CPMK 2','CPMK 3','CPMK 4','CPMK 5'
+    ],
+    datasets: [
+      {
+        label: 'Rerata Nilai CPL',
+         data: [90,65,88,91,89,93,82,87,92,94],
+        backgroundColor: 'rgba(75, 192, 75, 0.7)',
+        borderColor: 'rgb(75, 192, 75)',
+        borderWidth: 2
+      },
+      {
+        label: 'Rerata Nilai CPL',
+         data: [90,65,88,91,89,93,82,87,92,94],
+        backgroundColor: 'rgba(90, 90, 75, 0.7)',
+        borderColor: 'rgb(75, 192, 75)',
+        borderWidth: 2
+      }
+    ]
+  },
+  options: {
+    responsive: true,
+    plugins: {
+      legend: { position: 'top' },
+      annotation: {
+        annotations: {
+          targetLine: {
+            type: 'line',
+            yMin: 80,
+            yMax: 80,
+            borderColor: 'red',
+            borderWidth: 2,
+            borderDash: [6, 6],
+            label: {
+              display: true,
+              content: 'Target % Mahasiswa = 60',
+              position: 'start',
+              color: 'red',
+              backgroundColor: 'rgba(255,255,255,0.7)',
+              padding: 4
+            }
+          }
+        }
+      }
+    },
+    scales: {
+      y: {
+        beginAtZero: true,
+        max: 100
+      }
+    }
+  }
+});
+</script>
   <?php include('5script.php'); ?>

@@ -1,4 +1,4 @@
-<?php $page = 'beranda_dosen'; ?>
+<?php $page = 'beranda_admin'; ?>
 <?php include('1header.php'); ?>
 <?php include('2navbar.php'); ?>
 <?php include('3sidebar.php'); ?>
@@ -321,7 +321,7 @@
             </h3>
           </div>
 
-          <div class="card-body p-1">
+          <div class="card-body p-0">
             <table class="table table-bordered table-striped table-sm">
               <thead class="bg-light">
                 <tr class="text-uppercase text-center">
@@ -342,41 +342,27 @@
                   <td>Submit form</td>
                 </tr>
                 <tr>
-                  <td rowspan="6">Class Portfolio Management</td>
-                  <td>Mengakses portofolio kelas perkuliahan</td>
-                  <td>kelas perkuliahan</td>
-                  <td>CLASS_PORTFOLIO_OPENED</td>
-                  <td>Klik menu portofolio</td>
+                  <td>Course Management</td>
+                  <td>Memilih mata kuliah yang diajar</td>
+                  <td>semester, kode MK</td>
+                  <td>COURSE_SELECTED</td>
+                  <td>Klik daftar mata kuliah</td>
                 </tr>
                 <tr>
-                  <!-- <td>Course Planning</td> -->
-                  <td>Upload RPS mata kuliah</td>
+                  <td>Course Planning</td>
+                  <td>Menginput RPS mata kuliah</td>
                   <td>deskripsi MK, metode, bobot nilai</td>
-                  <td>RPS_UPLOADED</td>
-                  <td>Upload file</td>
+                  <td>RPS_CREATED</td>
+                  <td>Isi form</td>
                 </tr>
                 <tr>
-                  <!-- <td>Learning Material Management</td> -->
-                  <td>Upload materi pembelajaran</td>
-                  <td>file slides / modul / bahan ajar</td>
-                  <td>LEARNING_MATERIAL_UPLOADED</td>
-                  <td>Upload file</td>
+                  <td>OBE Mapping</td>
+                  <td>Mapping CLO ke PLO</td>
+                  <td>daftar CLO, PLO</td>
+                  <td>CLO_PLO_MAPPED</td>
+                  <td>Drag & select mapping</td>
                 </tr>
                 <tr>
-                  <!-- <td>Assignment Management</td> -->
-                  <td>Upload dokumen penugasan mahasiswa</td>
-                  <td>file tugas / instruksi tugas</td>
-                  <td>ASSIGNMENT_DOCUMENT_UPLOADED</td>
-                  <td>Upload file</td>
-                </tr>
-                <tr>
-                  <!-- <td>Exam Submission</td> -->
-                  <td>Upload soal ujian</td>
-                  <td>file soal UTS / UAS</td>
-                  <td>EXAM_DOCUMENT_UPLOADED</td>
-                  <td>Upload file</td>
-                </tr>
-                <!-- <tr>
                   <td>Assessment Setup</td>
                   <td>Membuat komponen penilaian</td>
                   <td>jenis assessment, bobot</td>
@@ -389,126 +375,84 @@
                   <td>kriteria, skor</td>
                   <td>RUBRIC_CREATED</td>
                   <td>Isi tabel rubrik</td>
-                </tr> -->
-                <!-- <tr>
-                  <td rowspan="2">Student Assessment</td>
-                  <td>Melihat penilaian mahasiswa</td>
-                  <td>kelas, mahasiswa</td>
-                  <td>STUDENT_GRADES_VIEWED</td>
-                  <td>Klik tab penilaian</td>
-                </tr> -->
+                </tr>
                 <tr>
-                  <!-- <td>Grading</td> -->
-                  <td>Input nilai cpmk mahasiswa</td>
-                  <td>nilai CPMK</td>
-                  <td>STUDENT_GRADES_INSERTED</td>
+                  <td>Student Management</td>
+                  <td>Import daftar mahasiswa</td>
+                  <td>file Excel</td>
+                  <td>STUDENT_IMPORTED</td>
+                  <td>Upload file</td>
+                </tr>
+                <tr>
+                  <td>Grading</td>
+                  <td>Input nilai mahasiswa</td>
+                  <td>nilai tugas/quiz/UTS/UAS</td>
+                  <td>GRADE_INSERTED</td>
                   <td>Input tabel nilai</td>
                 </tr>
-                <!-- <tr>
+                <tr>
                   <td>Grading</td>
                   <td>Penilaian berbasis rubrik</td>
                   <td>skor rubrik</td>
                   <td>RUBRIC_SCORE_SUBMITTED</td>
                   <td>Pilih skor</td>
-                </tr> -->
-                
-                <!-- <tr>
+                </tr>
+                <tr>
+                  <td>Assessment Submission</td>
+                  <td>Upload soal / evidence</td>
+                  <td>file dokumen</td>
+                  <td>ASSESSMENT_EVIDENCE_UPLOADED</td>
+                  <td>Upload file</td>
+                </tr>
+                <tr>
                   <td>CLO Evaluation</td>
                   <td>Generate pencapaian CLO</td>
                   <td>data nilai assessment</td>
                   <td>CLO_ACHIEVEMENT_CALCULATED</td>
                   <td>Klik generate</td>
-                </tr> -->
+                </tr>
                 <tr>
-                  <td rowspan="5">Management Evaluation</td>
+                  <td>Course Evaluation</td>
                   <td>Mengisi evaluasi mata kuliah</td>
                   <td>refleksi dosen</td>
                   <td>COURSE_EVALUATION_SUBMITTED</td>
                   <td>Isi form</td>
                 </tr>
                 <tr>
-                  <!-- <td>Class Reflection</td> -->
-                  <td>Mengisi refleksi kelas</td>
-                  <td>tag refleksi CPMK</td>
-                  <td>CLASS_REFLECTION_SUBMITTED</td>
-                  <td>Checklist tag refleksi</td>
-                </tr>
-                <tr>
-                  <!-- <td>Semester Reflection</td> -->
-                  <td>Mengisi formulir refleksi akhir semester</td>
-                  <td>jawaban refleksi dosen</td>
-                  <td>SEMESTER_REFLECTION_SUBMITTED</td>
-                  <td>Isi form refleksi</td>
-                </tr>
-                <tr>
-                  <!-- <td>CQI Result</td> -->
-                  <td>Menginput evaluasi Pembelajaran kelas</td>
-                  <td>action hasil perbaikan</td>
-                  <td>CQI_PLAN_CREATED</td>
-                  <td>Submit form</td>
-                </tr>
-                <tr>
-                  <!-- <td>CQI Action</td> -->
-                  <td>Menginput rencana perbaikan </td>
-                  <td>action plan matakuliah</td>
+                  <td>CQI Improvement</td>
+                  <td>Menambahkan rencana perbaikan</td>
+                  <td>action plan</td>
                   <td>CQI_ACTION_CREATED</td>
-                  <td>Submit form</td>
-                </tr>
-                
-                
-                <!-- <tr>
-                  <td>Announcement Management</td>
-                  <td>Membuat pengumuman kelas</td>
-                  <td>judul, isi pengumuman</td>
-                  <td>ANNOUNCEMENT_CREATED</td>
-                  <td>Submit form</td>
-                </tr> -->
-
-
-                
-                
-                <tr>
-                  <td rowspan="4">OBE Monitoring</td>
-                  <td>Melihat monitoring pencapaian kelas</td>
-                  <td>filter by</td>
-                  <td>MONEV_KELAS_VIEWED</td>
-                  <td>Klik menu monev kelas</td>
+                  <td>Klik tambah CQI</td>
                 </tr>
                 <tr>
-                  <!-- <td>Reporting</td> -->
-                  <td>Generate laporan OBE kelas</td>
-                  <td>semester, mata kuliah, kelas</td>
+                  <td>Reporting</td>
+                  <td>Generate laporan OBE</td>
+                  <td>semester, mata kuliah</td>
                   <td>COURSE_REPORT_GENERATED</td>
                   <td>Klik generate report</td>
                 </tr>
                 <tr>
-                  <!-- <td>OBE Monitoring</td> -->
-                  <td>Melihat monitoring pencapaian CPMK per semester</td>
-                  <td>filter by</td>
-                  <td>MONEV_SEMESTER_VIEWED</td>
-                  <td>Klik menu monev semester</td>
-                </tr>
-                <tr>
-                  <!-- <td>Reporting</td> -->
-                  <td>Generate laporan OBE mata kuliah</td>
-                  <td>semester, mata kuliah, kelas</td>
-                  <td>COURSE_REPORT_GENERATED</td>
-                  <td>Klik generate report</td>
+                  <td>Data Export</td>
+                  <td>Export laporan</td>
+                  <td>format PDF / Excel</td>
+                  <td>REPORT_EXPORTED</td>
+                  <td>Klik export</td>
                 </tr>
                 
                 <tr>
-                  <td>Academic Advisory</td>
-                  <td>Mengakses data perwalian mahasiswa</td>
-                  <td>daftar mahasiswa bimbingan</td>
-                  <td>ADVISORY_DATA_VIEWED</td>
-                  <td>Klik menu perwalian</td>
+                  <td>System Configuration</td>
+                  <td>Mengakses konfigurasi sistem</td>
+                  <td>parameter sistem</td>
+                  <td>SYSTEM_CONFIGURATION_VIEWED</td>
+                  <td>Klik menu konfigurasi</td>
                 </tr>
                 <tr>
-                  <td>Graduation Review</td>
-                  <td>Melihat data yudisium mahasiswa</td>
-                  <td>status kelulusan mahasiswa</td>
-                  <td>GRADUATION_DATA_VIEWED</td>
-                  <td>Klik menu yudisium</td>
+                  <td>User Settings</td>
+                  <td>Mengubah pengaturan akun</td>
+                  <td>profil pengguna</td>
+                  <td>USER_SETTINGS_UPDATED</td>
+                  <td>Edit form</td>
                 </tr>
               </tbody>
             </table>
@@ -530,7 +474,7 @@
             </h3>
           </div>
 
-          <div class="card-body p-1">
+          <div class="card-body p-0">
             <table class="table table-bordered table-striped table-sm mb-0">
               <thead class="table-dark">
                 <tr class="text-uppercase text-center">
@@ -541,38 +485,6 @@
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td>Memantau keterlibatan mahasiswa</td>
-                  <td>Persentase mahasiswa mengakses materi</td>
-                  <td>Per materi</td>
-                  <td>Bar Chart</td>
-                </tr>
-                <tr>
-                  <td>Melihat distribusi nilai</td>
-                  <td>Distribusi grade A–E</td>
-                  <td>Per kelas</td>
-                  <td>Histogram</td>
-                </tr>
-                <tr>
-                  <td>Mengevaluasi pencapaian CPMK</td>
-                  <td>Persentase mahasiswa mencapai CPMK</td>
-                  <td>Per CPMK</td>
-                  <td>Bar Chart</td>
-                </tr>
-
-                <tr>
-                  <td>Mengidentifikasi mahasiswa berisiko</td>
-                  <td>Jumlah mahasiswa tidak mencapai CPMK</td>
-                  <td>Per CPMK</td>
-                  <td>Alert / Highlight</td>
-                </tr>
-
-                <tr>
-                  <td>Menganalisis efektivitas tugas</td>
-                  <td>Kontribusi tugas terhadap pencapaian CPMK</td>
-                  <td>Per assessment</td>
-                  <td>Stacked Bar</td>
-                </tr>
                 <tr>
                   <td>Mengetahui performa mata kuliah</td>
                   <td>Jumlah mahasiswa terdaftar</td>
@@ -663,7 +575,6 @@
                   <td>Per mata kuliah</td>
                   <td>Export PDF</td>
                 </tr>
-
               </tbody>
             </table>
           </div>

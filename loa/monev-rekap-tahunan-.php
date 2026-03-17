@@ -45,6 +45,7 @@
                 
               </div>
             </div>
+            monev ini tidak relevan, karena prodi sudah punya habit evaluasi tiap semester, bukan tiap tahun. kemudian parameternya hingga IK saja, yg  merupakan agregat CPMK. tidak hingga CPL.
             <div class="card-footer">
               <div class="card-tools ms-auto">
                 <button class="btn btn-outline-info btn-sm " data-bs-toggle="modal" data-bs-target="#modalFilter">

@@ -28,13 +28,6 @@ include "3sidebar.php";
               <li class="breadcrumb-item active">Dashboard v1</li>
             </ol>
           </div><!-- /.col -->
-          <p>Pengajuan izin dilakukan melalui unggah berkas.
-Pengelola sekolah dapat melihat rekap pengajuan izin setiap hari.
-
-Notifikasi informasi sekolah dikirim melalui WhatsApp.
-Wali murid akan menerima notifikasi apabila terdapat surat penting terkait muridnya.
-
-Tersedia fitur blasting email dan WhatsApp untuk mengirim surat resmi dari sekolah.</p>
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
     </div>

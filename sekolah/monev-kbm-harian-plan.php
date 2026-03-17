@@ -88,14 +88,15 @@
                     <td>Senin, 15 Juli 2024</td>
                     <td>Draf</td>
                     <td class="text-center">
-                      <button class="btn btn-outline-info btn-xs"
-                      onclick="window.location.href='monev-kbm-harian-plan-detail.php'">
-                      Detail
-                    </button>
-                    <button class="btn btn-outline-info btn-xs"
-                      onclick="window.location.href='monev-kbm-harian-do-detail.php'">
-                      Report
-                    </button>
+                      <button class="btn btn-outline-info btn-xs" onclick="window.location.href='monev-kbm-harian-plan-detail.php'">
+                        Detail
+                      </button>
+                      <button class="btn btn-outline-info btn-xs" onclick="window.location.href='monev-kbm-harian-do-detail.php'">
+                        Report
+                      </button>
+                      <button class="btn btn-outline-success btn-xs" onclick="window.location.href='data-daily-report.pdf'">
+                        Print
+                      </button>
                     </td>
                   </tr>
                   <tr>
@@ -105,11 +106,12 @@
                     <td>Selasa, 16 Juli 2024</td>
                     <td>Publish</td>
                     <td class="text-center">
-                      <button class="btn btn-outline-info btn-xs"
-                      onclick="window.location.href='monev-kbm-harian-plan-detail2.php'">
-                      Detail
-                    </button>
-                      <button class="btn btn-warning btn-xs">Edit</button>
+                      <button class="btn btn-outline-info btn-xs" onclick="window.location.href='monev-kbm-harian-plan-detail2.php'">
+                        Detail
+                      </button>
+                      <button class="btn btn-outline-info btn-xs" onclick="window.location.href='monev-kbm-harian-do-detail2.php'">
+                        Report
+                      </button>
                     </td>
                   </tr>
                   <tr>

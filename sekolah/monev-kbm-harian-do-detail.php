@@ -376,13 +376,11 @@
 
   
 <!-- PUBLISH ACTION -->
-      <div class="col-md-12">
         <div class="card">          
           <div class="card-body table-responsive">
             <button class="btn btn-outline-primary btn-block">Publish</button>
           </div>
         </div>
-      </div>
   </div>
 </div>
 
@@ -488,9 +486,9 @@
           </div>
           <div class="card-body">
             <textarea class="form-control"
-                      name="catatan_harian"
-                      rows="3"
-                      placeholder="Catatan umum perkembangan kelas hari ini..."></textarea>
+            name="catatan_harian"
+            rows="3"
+            placeholder="Catatan umum perkembangan kelas hari ini..."></textarea>
           </div>
         </div>
 

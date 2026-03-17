@@ -103,6 +103,9 @@ include "3sidebar.php";
                 </tr>
               </thead>
               <tbody>
+                Pengajuan izin dilakukan melalui unggah berkas.
+               menerima Notifikasi informasi sekolah dikirim melalui WhatsApp.
+               Wali murid akan menerima notifikasi apabila terdapat surat penting terkait muridnya.
                 <tr>
                   <td></td>
                   <td>Mengetahui Kegiatan Sekolah orangtua</td>
