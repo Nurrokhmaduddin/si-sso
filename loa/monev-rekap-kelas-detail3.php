@@ -120,8 +120,8 @@
             <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail4.php'"><a class="nav-link ">Remedial</a></li>
             <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail3.php'"><a class="nav-link active">Portofolio</a></li>
             <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail2.php'"><a class="nav-link ">Mahasiswa</a></li>
-            <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail6.php'"><a class="nav-link ">Refleksi</a></li>
-            <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail5.php'"><a class="nav-link ">OBE</a></li>
+            <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail5.php'"><a class="nav-link ">Refleksi</a></li>
+            <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail6.php'"><a class="nav-link ">OBE</a></li>
           </ul>
 
         
@@ -196,50 +196,107 @@
             <!-- /.card-body -->
           </div>
 
+
+<!-- ========== CARD : Refleksi Personal Dosen (1 baris) ========== --> 
+<!-- <div class="card mb-3">
+  <div class="card-header">
+    <h5 class="mb-0">
+      Refleksi Personal Dosen • 2024/2025 - Gasal
+    </h5>
+  </div>
+  <div class="card-body">
+    <div class="mb-3">
+      <h6 class="card-subtitle text-muted">Refleksi Dosen</h6>
+      <p>Praktikum berjalan lancar dan metode diskusi kelompok efektif untuk meningkatkan partisipasi mahasiswa.</p>
+    </div>
+    <div class="mb-3">
+      <h6 class="card-subtitle text-muted">Analisis Kendala</h6>
+      <p>Beberapa mahasiswa kesulitan memahami teori yang dijelaskan terlalu cepat. Waktu diskusi terbatas sehingga beberapa topik kurang mendalam.</p>
+    </div>
+    <div class="mb-3">
+      <h6 class="card-subtitle text-muted">Rencana Perbaikan</h6>
+      <p>Mengurangi penjelasan teori panjang, menambah sesi praktik awal, serta memperpanjang waktu diskusi kelompok.</p>
+    </div>
+  </div>
+</div> -->
+
+<!-- ========== CARD MODERN: Refleksi Personal Dosen ========== -->
+<div class="card shadow-sm mb-3" >
+  <div class="card-header">
+    <h5 class="mb-0">
+      Refleksi Personal Dosen • 2024/2025 - Gasal
+    </h5>
+  </div>
+  <div class="card-body" style="padding: 1rem 1.25rem;">
+    <div class="d-flex flex-column flex-md-row gap-3">
+      <!-- Refleksi Dosen -->
+      <div class="flex-fill p-3" style="background-color: #f8f9fc; border-radius: 0.5rem;">
+        <h6 class="text-muted" style="font-weight: 500; font-size: 0.875rem;">Refleksi Dosen</h6>
+        <p style="margin: 0.5rem 0 0; font-size: 0.9rem; color: #3a3b45;">
+          Praktikum berjalan lancar dan metode diskusi kelompok efektif untuk meningkatkan partisipasi mahasiswa.
+        </p>
+      </div>
+      <!-- Analisis Kendala -->
+      <div class="flex-fill p-3" style="background-color: #f8f9fc; border-radius: 0.5rem;">
+        <h6 class="text-muted" style="font-weight: 500; font-size: 0.875rem;">Analisis Kendala</h6>
+        <p style="margin: 0.5rem 0 0; font-size: 0.9rem; color: #3a3b45;">
+          Beberapa mahasiswa kesulitan memahami teori yang dijelaskan terlalu cepat. Waktu diskusi terbatas sehingga beberapa topik kurang mendalam.
+        </p>
+      </div>
+      <!-- Rencana Perbaikan -->
+      <div class="flex-fill p-3" style="background-color: #f8f9fc; border-radius: 0.5rem;">
+        <h6 class="text-muted" style="font-weight: 500; font-size: 0.875rem;">Rencana Perbaikan</h6>
+        <p style="margin: 0.5rem 0 0; font-size: 0.9rem; color: #3a3b45;">
+          Mengurangi penjelasan teori panjang, menambah sesi praktik awal, serta memperpanjang waktu diskusi kelompok.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
 <!-- ================= Card  : Catatan evaluasi dan pengembangan ================= -->
-        
-          <div class="row">
+<!-- 
+<div class="row">
 
-            <!-- Evaluasi -->
-            <div class="col-lg-6">
-              <div class="card h-100">
-                <div class="card-header bg-secondary text-white">
-                  <h5 class="card-title mb-0">
-                    <i class="fas fa-clipboard-list me-2"></i>
-                    Evaluasi Hasil Pembelajaran
-                  </h5>
-                </div>
 
-                <div class="card-body">
-                  <p class="mb-0">
-                    secara keseluruhan pembelajaran telah berjalan dengan baik
-                  </p>
-                </div>
-            </div>
-          </div>
-
-          <!-- Rencana -->
-          <div class="col-lg-6">
-            <div class="card h-100">
-              <div class="card-header bg-secondary text-white">
-                <h5 class="card-title mb-0">
-                  <i class="fas fa-chart-line me-2"></i>
-                  Rencana Pengembangan Perkuliahan
-                </h5>
-              </div>
-
-              <div class="card-body">
-                  <p class="mb-0">
-                    perlu meningkatkan interaksi
-                  </p>
-                </div>
-          </div>
-        </div>
-
+  <div class="col-lg-6">
+    <div class="card h-100">
+      <div class="card-header bg-secondary text-white">
+        <h5 class="card-title mb-0">
+          <i class="fas fa-clipboard-list me-2"></i>
+          Evaluasi Hasil Pembelajaran
+        </h5>
       </div>
 
+      <div class="card-body">
+        <p class="mb-0">
+          secara keseluruhan pembelajaran telah berjalan dengan baik
+        </p>
+      </div>
+    </div>
+  </div>
 
 
+  <div class="col-lg-6">
+    <div class="card h-100">
+      <div class="card-header bg-secondary text-white">
+        <h5 class="card-title mb-0">
+          <i class="fas fa-chart-line me-2"></i>
+          Rencana Pengembangan Perkuliahan
+        </h5>
+      </div>
+
+      <div class="card-body">
+        <p class="mb-0">
+          perlu meningkatkan interaksi
+        </p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+ -->
           
       </div>
     </div>

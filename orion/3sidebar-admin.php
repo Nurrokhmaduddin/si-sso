@@ -43,13 +43,54 @@
 
 
 <!-- BERANDA -->
-<li class="nav-item">
+<!-- <li class="nav-item">
   <a href="index.php" class="nav-link <?php echo $page == '' ? 'active' : ''; ?>">
     <i class="nav-icon fas fa-home"></i>
     <p>
       Beranda
     </p>
   </a>
+</li> -->
+
+<!-- BERANDA -->
+<li class="nav-item <?php echo in_array($page, ['','beranda','beranda-su','beranda-admin','beranda-sales','beranda_mahasiswa']) ? 'menu-open' : ''; ?>">
+  <a href="#" class="nav-link <?php echo in_array($page, ['','beranda','beranda-su','beranda-admin','beranda-sales']) ? 'active' : ''; ?>">
+    <i class="nav-icon fas fa-home"></i>
+    <p>
+      Beranda
+      <i class="right fas fa-angle-left"></i>
+    </p>
+  </a>
+
+  <ul class="nav nav-treeview">
+
+    <li class="nav-item">
+      <a href="index.php" class="nav-link <?php echo $page == '' ? 'active' : ''; ?>">
+        <i class="far fa-circle nav-icon"></i>
+        <p>Superadmin</p>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="beranda-su.php" class="nav-link <?php echo $page == 'beranda-su' ? 'active' : ''; ?>">
+        <i class="far fa-circle nav-icon"></i>
+        <p>Owner/Manajer/SU</p>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="beranda-admin.php" class="nav-link <?php echo $page == 'beranda-admin' ? 'active' : ''; ?>">
+        <i class="far fa-circle nav-icon"></i>
+        <p>Admin Gudang</p>
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a href="beranda-sales.php" class="nav-link <?php echo $page == 'beranda_sales' ? 'active' : ''; ?>">
+        <i class="far fa-circle nav-icon"></i>
+        <p>Sales</p>
+      </a>
+    </li>
+
+  </ul>
 </li>
         <!-- MASTER DATA -->
         <li class="nav-item <?php echo in_array($page, ['master_tahun','master_semester','master_peminatan','master_jenjang','master_jalur','master_dosen','master_mahasiswa']) ? 'menu-open' : ''; ?>">
@@ -87,26 +128,10 @@
               </a>
             </li>
             <li class="nav-item">
-              <a href="https://orion-houseware.my.id/promo" class="nav-link <?php echo $page == 'transaksi_preorde' ? 'active' : ''; ?>">
-                <i class="nav-icon far fa-circle"></i>
-                <p>
-                  Data Promo
-                </p>
-              </a>
-            </li>
-            <li class="nav-item">
               <a href="https://orion-houseware.my.id/produk" class="nav-link <?php echo $page == 'transaksi_preorde' ? 'active' : ''; ?>">
                 <i class="nav-icon far fa-circle"></i>
                 <p>
                   Data Produk/Barang
-                </p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="https://orion-houseware.my.id/administrator" class="nav-link <?php echo $page == 'transaksi_preorde' ? 'active' : ''; ?>">
-                <i class="nav-icon far fa-circle"></i>
-                <p>
-                  Data Administrator
                 </p>
               </a>
             </li>
@@ -119,18 +144,10 @@
               </a>
             </li>
             <li class="nav-item">
-              <a href="https://orion-houseware.my.id/sales" class="nav-link <?php echo $page == 'transaksi_preorde' ? 'active' : ''; ?>">
+              <a href="https://orion-houseware.my.id/area" class="nav-link <?php echo $page == 'transaksi_preorde' ? 'active' : ''; ?>">
                 <i class="nav-icon far fa-circle"></i>
                 <p>
-                  Data Sales
-                </p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="https://orion-houseware.my.id/mobil" class="nav-link <?php echo $page == 'transaksi_preorde' ? 'active' : ''; ?>">
-                <i class="nav-icon far fa-circle"></i>
-                <p>
-                  Data Mobil
+                  Data Area
                 </p>
               </a>
             </li>
@@ -143,43 +160,52 @@
               </a>
             </li>
             <li class="nav-item">
-              <a href="https://orion-houseware.my.id/area" class="nav-link <?php echo $page == 'transaksi_preorde' ? 'active' : ''; ?>">
+              <a href="https://orion-houseware.my.id/mobil" class="nav-link <?php echo $page == 'transaksi_preorde' ? 'active' : ''; ?>">
                 <i class="nav-icon far fa-circle"></i>
                 <p>
-                  Data Area
+                  Data Mobil
                 </p>
               </a>
             </li>
-            
-
+            <li class="nav-item">
+              <a href="https://orion-houseware.my.id/sales" class="nav-link <?php echo $page == 'transaksi_preorde' ? 'active' : ''; ?>">
+                <i class="nav-icon far fa-circle"></i>
+                <p>
+                  Data Sales
+                </p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="https://orion-houseware.my.id/administrator" class="nav-link <?php echo $page == 'transaksi_preorde' ? 'active' : ''; ?>">
+                <i class="nav-icon far fa-circle"></i>
+                <p>
+                  Data Administrator
+                </p>
+              </a>
+            </li>
           </ul>
         </li>
 
-<!-- Marketing
-
-(optional jika nanti berkembang)
-
-Promo
-
-Customer / Toko
-
-Area
-
-Sales -->
-
-
       <!-- SALES ORDER -->
-      <li class="nav-item <?php echo in_array($page, ['transaksi_preorder']) ? 'menu-open' : ''; ?>">
-        <a href="#" class="nav-link <?php echo in_array($page, ['transaksi_preorder']) ? 'active' : ''; ?>">
+      <li class="nav-item <?php echo in_array($page, ['transaksi_preorder','master_toko','master_promo']) ? 'menu-open' : ''; ?>">
+        <a href="#" class="nav-link <?php echo in_array($page, ['transaksi_preorder','master_toko','master_promo']) ? 'active' : ''; ?>">
           <i class="nav-icon fas fa-handshake"></i>
           <p>
-             Order
+             Pesanan
             <i class="fas fa-angle-left right"></i>
           </p>
         </a>
         <ul class="nav nav-treeview">
           <li class="nav-item">
-            <a href="transaksi-preorder.php" class="nav-link <?php echo $page == 'transaksi_preorder' ? 'active' : ''; ?>">
+             <a href="master-promo.php<?php echo $q;?>" class="nav-link <?php echo $page == 'master_promo' ? 'active' : ''; ?>">
+                <i class="nav-icon far fa-circle"></i>
+                <p>
+                  Ketentuan Promo
+                </p>
+              </a>
+            </li>
+          <li class="nav-item">
+            <a href="transaksi-preorder.php<?php echo $q;?>" class="nav-link <?php echo $page == 'transaksi_preorder' ? 'active' : ''; ?>">
               <i class="nav-icon far fa-circle"></i>
               <p>
                 Pre-Order
@@ -198,49 +224,76 @@ Sales -->
             <a href="transaksi-preorde.php" class="nav-link <?php echo $page == 'transaksi_preorder' ? 'active' : ''; ?>">
               <i class="nav-icon far fa-circle"></i>
               <p>
-                Project Order
-              </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="transaksi-preorde.php" class="nav-link <?php echo $page == 'transaksi_preorder' ? 'active' : ''; ?>">
-              <i class="nav-icon far fa-circle"></i>
-              <p>
                Order Tracking
               </p>
             </a>
           </li>
-
-
-
-
-
-
         </ul>
       </li>
+
 <!-- OPERATION -->
- <li class="nav-item <?php echo in_array($page, ['operasional_stok_gudang','operasional_stok_rekap','operasional_stok_opname','operasional_stok_pelacakan','transaksi_pengiriman']) ? 'menu-open' : ''; ?>">
-        <a href="#" class="nav-link <?php echo in_array($page, ['operasional_stok_gudang','operasional_stok_rekap','operasional_stok_opname','operasional_stok_pelacakan','transaksi_pengiriman']) ? 'active' : ''; ?>">
+ <li class="nav-item <?php echo in_array($page, ['operasional_stok_gudang','operasional_stok_rekap','operasional_stok_opname','operasional_stok_pelacakan']) ? 'menu-open' : ''; ?>">
+        <a href="#" class="nav-link <?php echo in_array($page, ['operasional_stok_gudang','operasional_stok_rekap','operasional_stok_opname','operasional_stok_pelacakan']) ? 'active' : ''; ?>">
     <i class="nav-icon fas fa-warehouse"></i>
     <p>
-      Operation
+      Inventory
       <i class="fas fa-angle-left right"></i>
     </p>
   </a>
   <ul class="nav nav-treeview">
     <li class="nav-item">
-      <a href="transaksi-pengiriman.php" class="nav-link <?php echo $page == 'transaksi_pengirima' ? 'active' : ''; ?>">
+      <a href="operasional-stok-gudang.php" class="nav-link <?php echo $page == 'operasional_stok_gudang' ? 'active' : ''; ?>">
         <i class="nav-icon far fa-circle"></i>
         <p>
-          Picking barang
+          Stok Gudang
         </p>
       </a>
     </li>
     <li class="nav-item">
-      <a href="transaksi-pengiriman.php" class="nav-link <?php echo $page == 'transaksi_pengirima' ? 'active' : ''; ?>">
+      <a href="operasional-stok-opname.php" class="nav-link <?php echo $page == 'operasional_stok_opname' ? 'active' : ''; ?>">
         <i class="nav-icon far fa-circle"></i>
         <p>
-          Packing
+          Stok Opname
+        </p>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="operasional-stok-rekap.php" class="nav-link <?php echo $page == 'operasional_stok_rekap' ? 'active' : ''; ?>">
+        <i class="nav-icon far fa-circle"></i>
+        <p>
+         Kekurangan stok
+       </p>
+     </a>
+   </li>
+    <li class="nav-item">
+      <a href="operasional-stok-pelacakan.php" class="nav-link <?php echo $page == 'operasional_stok_pelacakan' ? 'active' : ''; ?>">
+        <i class="nav-icon far fa-circle"></i>
+        <p>
+          Pelacakan Stok
+        </p>
+      </a>
+    </li>
+    
+ </ul>
+</li>
+
+<!-- FINANCE -->
+<li class="nav-item <?php echo in_array($page, ['transaksi_penjualan','transaksi_piutang','transaksi_pelunasan_piutang','transaksi_retur_penjualan','transaksi_pembelian','transaksi_utang','transaksi_pelunasan_utang','transaksi_retur_pembelian','transaksi_faktur_pajak','transaksi_insentif_sales','transaksi_biaya_operasional','transaksi_pengiriman']) ? 'menu-open' : ''; ?>">
+  <a href="#" class="nav-link <?php echo in_array($page, ['transaksi_penjualan','transaksi_piutang','transaksi_pelunasan_piutang','transaksi_retur_penjualan','transaksi_pembelian','transaksi_utang','transaksi_pelunasan_utang','transaksi_retur_pembelian','transaksi_faktur_pajak','transaksi_insentif_sales','transaksi_biaya_operasional','transaksi_pengiriman']) ? 'active' : ''; ?>">
+    <i class="nav-icon fas fa-exchange-alt"></i>
+    <p>
+      Transaksi
+      <i class="fas fa-angle-left right"></i>
+    </p>
+  </a>
+
+  <ul class="nav nav-treeview">
+
+    <li class="nav-item">
+      <a href="transaksi-penjualan.php" class="nav-link <?php echo $page == 'transaksi_penjualan' ? 'active' : ''; ?>">
+        <i class="nav-icon far fa-circle"></i>
+        <p>
+          Penjualan (Invoice)
         </p>
       </a>
     </li>
@@ -252,83 +305,14 @@ Sales -->
         </p>
       </a>
     </li>
-    <li class="nav-item">
-      <a href="operasional-stok-gudang.php" class="nav-link <?php echo $page == 'operasional_stok_gudang' ? 'active' : ''; ?>">
-        <i class="nav-icon far fa-circle"></i>
-        <p>
-          Stok Gudang
-        </p>
-      </a>
-    </li>
-  </ul>
-  <ul class="nav nav-treeview">
-    <li class="nav-item">
-      <a href="operasional-stok-rekap.php" class="nav-link <?php echo $page == 'operasional_stok_rekap' ? 'active' : ''; ?>">
-        <i class="nav-icon far fa-circle"></i>
-        <p>
-          Stok Rekap
-        </p>
-      </a>
-    </li>
-  </ul>
-  <ul class="nav nav-treeview">
-    <li class="nav-item">
-      <a href="operasional-stok-opname.php" class="nav-link <?php echo $page == 'operasional_stok_opname' ? 'active' : ''; ?>">
-        <i class="nav-icon far fa-circle"></i>
-        <p>
-          Stok Opname
-        </p>
-      </a>
-    </li>
-  </ul>
-  <ul class="nav nav-treeview">
-    
-    <li class="nav-item">
-      <a href="operasional-stok-pelacakan.php" class="nav-link <?php echo $page == 'operasional_stok_pelacakan' ? 'active' : ''; ?>">
-        <i class="nav-icon far fa-circle"></i>
-        <p>
-          Pelacakan
-        </p>
-      </a>
-    </li>
-  </ul>
-</li>
-
-<!-- FINANACE -->
-<li class="nav-item <?php echo in_array($page, ['transaksi_penjualan','transaksi_piutang','transaksi_pelunasan_piutang','transaksi_retur_penjualan','transaksi_pembelian','transaksi_utang','transaksi_pelunasan_utang','transaksi_retur_pembelian','transaksi_faktur_pajak','transaksi_insentif_sales','transaksi_biaya_operasional']) ? 'menu-open' : ''; ?>">
-  <a href="#" class="nav-link <?php echo in_array($page, ['transaksi_penjualan','transaksi_piutang','transaksi_pelunasan_piutang','transaksi_retur_penjualan','transaksi_pembelian','transaksi_utang','transaksi_pelunasan_utang','transaksi_retur_pembelian','transaksi_faktur_pajak','transaksi_insentif_sales','transaksi_biaya_operasional']) ? 'active' : ''; ?>">
-    <i class="nav-icon fas fa-money-bill"></i>
-    <p>
-      Finance
-      <i class="fas fa-angle-left right"></i>
-    </p>
-  </a>
-
-  <ul class="nav nav-treeview">
-    <!-- <li class="nav-item">
-      <a href="transaksi-preorder.php" class="nav-link <?php echo $page == 'transaksi_preorder' ? 'active' : ''; ?>">
-        <i class="nav-icon far fa-circle"></i>
-        <p>
-          Pre-Order
-        </p>
-      </a>
-    </li> -->
-    <li class="nav-item">
-      <a href="transaksi-penjualan.php" class="nav-link <?php echo $page == 'transaksi_penjualan' ? 'active' : ''; ?>">
-        <i class="nav-icon far fa-circle"></i>
-        <p>
-          Penjualan (Invoice)
-        </p>
-      </a>
-    </li>
-    <li class="nav-item">
+<!--     <li class="nav-item">
       <a href="transaksi-piutang.php" class="nav-link <?php echo $page == 'transaksi_piutang' ? 'active' : ''; ?>">
         <i class="nav-icon far fa-circle"></i>
         <p>
            Piutang
         </p>
       </a>
-    </li>
+    </li> -->
     
     <li class="nav-item">
       <a href="transaksi-pelunasan-piutang.php" class="nav-link <?php echo $page == 'transaksi_pelunasan_piutang' ? 'active' : ''; ?>">
@@ -354,14 +338,14 @@ Sales -->
         </p>
       </a>
     </li>
-    <li class="nav-item">
+   <!--  <li class="nav-item">
       <a href="transaksi-utang.php" class="nav-link <?php echo $page == 'transaksi_utang' ? 'active' : ''; ?>">
         <i class="nav-icon far fa-circle"></i>
         <p>
            Utang
         </p>
       </a>
-    </li>
+    </li> -->
     <li class="nav-item">
       <a href="transaksi-pelunasan-utang.php" class="nav-link <?php echo $page == 'transaksi_pelunasan_utang' ? 'active' : ''; ?>">
         <i class="nav-icon far fa-circle"></i>
@@ -448,14 +432,14 @@ Sales -->
         </p>
       </a>
     </li>
-    <li class="nav-item">
+<!--     <li class="nav-item">
       <a href="laporan-retur-penjualan.php" class="nav-link <?php echo $page == 'laporan_retur_penjualan' ? 'active' : ''; ?>">
         <i class="nav-icon far fa-circle"></i>
         <p>
           Lap. Retur Penjualan
         </p>
       </a>
-    </li>
+    </li> -->
     <li class="nav-item">
       <a href="laporan-pembelian.php" class="nav-link <?php echo $page == 'laporan_pembelian' ? 'active' : ''; ?>">
         <i class="nav-icon far fa-circle"></i>
@@ -512,14 +496,14 @@ Sales -->
         </p>
       </a>
     </li>
-     <li class="nav-item">
+     <!-- <li class="nav-item">
       <a href="laporan-stok.php" class="nav-link <?php echo $page == 'laporan_stok' ? 'active' : ''; ?>">
         <i class="nav-icon far fa-circle"></i>
         <p>
           Lap. Stok
         </p>
       </a>
-    </li>
+    </li> -->
   </ul>
 </li>
 <!-- <li class="nav-item has-treeview">

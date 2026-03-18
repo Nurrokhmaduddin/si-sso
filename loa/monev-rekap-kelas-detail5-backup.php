@@ -105,6 +105,11 @@
                 <button type="button" class="btn btn-outline-success btn-sm">
                   <i class="fas fa-file-download me-1"></i> Export
                 </button>
+                <button type="button" 
+                class="btn btn-outline-secondary btn-sm"
+                onclick="window.location.href='perkuliahan-portofolio-kelas-detail5.php'">
+                <span class="fas fa-edit me-1"></span> Pengisian Refleksi
+              </button>
                 <!-- <button type="button" class="btn btn-outline-danger btn-sm">
                   <i class="fas fa-ban me-1"></i> Reset
                 </button> -->    
@@ -116,141 +121,217 @@
           <!-- TAB NAV (Semester) -->
            <ul class="nav nav-tabs">
             <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail.php'"><a class="nav-link ">Final</a></li>
-            <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail4.php'"><a class="nav-link active">Remedial</a></li>
+            <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail4.php'"><a class="nav-link ">Remedial</a></li>
             <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail3.php'"><a class="nav-link ">Portofolio</a></li>
             <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail2.php'"><a class="nav-link ">Mahasiswa</a></li>
-            <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail5.php'"><a class="nav-link ">Refleksi</a></li>
+            <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail5.php'"><a class="nav-link active">Refleksi</a></li>
             <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail6.php'"><a class="nav-link ">OBE</a></li>
           </ul>
      
 
-<!-- ========== CARD : tabel rekap remidi   CPMK ========== -->
-<div class="card">
-  <div class="card-body">
-    <div class="table-responsive">
-      
-      <table class="table table-bordered table-sm table-hover table-striped example1" border="1">
-        <thead>
-          <tr>
-            <th colspan="2" rowspan="2" style="vertical-align: middle; text-align: center;">Daftar CPMK (Remidi)</th>
-            <th><center>Rerata Awal</center></th>
-            <th><center>Rerata Remidi</center></th>
-            <th><center>Ketuntasan (%)</center></th>
-            <th><center>Jumlah Mahasiswa</center></th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td style="width: 10px;">1</td>
-            <td style="width: 40%;">Mahasiswa mengerti dan memahami dasar-dasar polimer, hubungan antara sifat dengan struktur dan perilaku prosesnya.</td>
-            <td align="center">56,14                      </td>
-            <td align="center">80,25                    </td>
-            <td align="center">100,00                      </td>
-            <td align="center">5
-          <tr>
-            <td style="width: 10px;">2</td>
-            <td style="width: 40%;">Mahasiswa mengerti dan memahami dasar-dasar komposit, hubungan antara sifat dengan struktur dan perilaku prosesnya.</td>
-            <td align="center">56,14                      </td>
-            <td align="center">82,10                       </td>
-            <td align="center">100,00                      </td>
-            <td align="center"> 4                     </td>
-          </tr>
-          <tr>
-            <td style="width: 10px;">3</td>
-            <td style="width: 40%;">Mahasiswa mampu mengembangkan aplikasi polimer</td>
-            <td align="center">56,14                      </td>
-            <td align="center"> 78,50                      </td>
-            <td align="center"> 80,00                      </td>
-            <td align="center">12                      </td>
-          </tr>
-          <tr>
-            <td style="width: 10px;">4</td>
-            <td style="width: 40%;">Mahasiswa mampu mengembangkan aplikasi komposit</td>
-            <td align="center">56,14                      </td>
-            <td align="center">79,30                       </td>
-            <td align="center">80,00                      </td>
-            <td align="center"> 24                      </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-</div>
-<!-- ========== CARD : Perbandingan CPMK Bar A vs Bar B ========== -->
-<div class="card">
-  <div class="card-body">
-    <canvas id="chartCpmkCompare" height="120"></canvas>
-  </div>
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script>
-  const ctxCompare = document.getElementById('chartCpmkCompare').getContext('2d');
-
-  // ===== CUSTOM WARNA =====
-  const colorBarA = 'rgba(108, 117, 125, 0.8)';   // Abu-abu (bisa diganti)
-  const colorBarB = 'rgba(0, 123, 255, 0.8)';     // Biru (bisa diganti)
-
-  const chartCpmkCompare = new Chart(ctxCompare, {
-    type: 'bar',
-    data: {
-      labels: ['CPMK 1', 'CPMK 2', 'CPMK 3', 'CPMK 4'],
-      datasets: [
-        {
-          label: 'Bar A',
-          data: [56.14, 56.14, 56.14, 56.14],
-          backgroundColor: colorBarA,
-          borderColor: colorBarA,
-          borderWidth: 1
-        },
-        {
-          label: 'Bar B',
-          data: [80.25, 82.10, 78.50, 79.30],
-          backgroundColor: colorBarB,
-          borderColor: colorBarB,
-          borderWidth: 1
-        }
-      ]
-    },
-    options: {
-      scales: {
-        y: { beginAtZero: true, max: 100 }
-      },
-      plugins: {
-        legend: { display: false },
-        title: {
-          display: true,
-          text: 'Perbandingan Remidi CPMK (Before vs After)'
-        }
-      }
-    }
-  });
-</script>
-<!-- ========== CARD : Chart Row CPMK remidi ========== -->
-<div class="card">
-  <div class="card-header">
-    <h3 class="card-title">
-      <i class="fas fa-chart-bar mr-1"></i>
-      Distribusi Nilai Awal & Remidi per CPMK
-    </h3>
-  </div>
-
+<!-- ========== CARD : Ringkasan Refleksi Kelas untuk Tim Kurikulum ========== -->
+<div class="card ">
   <div class="card-body">
 
-    <!-- CPMK 1 -->
-    <div class="chart-container mb-4" style="height:250px;">
-      <h6 class="text-muted mb-2">CPMK 1</h6>
-      <canvas id="chartCpmk1Compare"></canvas>
+    <!-- ================= TAG UTAMA ================= -->
+    <div class="mb-4">
+      <h5 class="text-primary"><strong>TAG Utama Kelas</strong></h5>
+      <div>
+        <span class="badge badge-danger">#CPMK_Tidak_Tercapai</span>
+        <span class="badge badge-warning">#Variansi_Tinggi</span>
+        <span class="badge badge-info">#Prasyarat_Lemah</span>
+        <span class="badge badge-secondary">#Instrumen_Terlalu_Sulit</span>
+        <span class="badge badge-primary">#Butuh_Pemecahan_Materi</span>
+      </div>
     </div>
 
-    <!-- CPMK 2 -->
-    <div class="chart-container mb-4" style="height:250px;">
-      <h6 class="text-muted mb-2">CPMK 2</h6>
-      <canvas id="chartCpmk2Compare"></canvas>
+    <hr>
+
+    <!-- ================= RINGKASAN OBE ================= -->
+    <div class="mb-4">
+      <h5 class="text-primary"><strong>1. Ringkasan Ketercapaian OBE</strong></h5>
+      <p>
+        CPMK 1 dan 2 relatif tercapai secara konsisten, namun CPMK 3 menunjukkan penurunan signifikan.
+        Mahasiswa mulai tertinggal pada tahap analisis kasus lanjutan.
+        Distribusi nilai menunjukkan variansi tinggi antara mahasiswa kuat dan lemah.
+      </p>
+    </div>
+
+    <!-- ================= METODE ================= -->
+    <div class="mb-4">
+      <h5 class="text-primary"><strong>2. Temuan Metode Pembelajaran</strong></h5>
+      <ul>
+        <li>Studi kasus efektif meningkatkan pemahaman konseptual.</li>
+        <li>Ceramah murni kurang efektif untuk CPMK analitis.</li>
+        <li>Project akhir menjadi bottleneck utama kelas.</li>
+      </ul>
+    </div>
+
+    <!-- ================= PENILAIAN ================= -->
+    <div class="mb-4">
+      <h5 class="text-primary"><strong>3. Evaluasi Instrumen Penilaian</strong></h5>
+      <ul>
+        <li>Rubrik belum dipahami mahasiswa secara merata.</li>
+        <li>Instrumen cenderung mengukur teknis, bukan kedalaman analisis.</li>
+        <li>Bobot tugas akhir terlalu dominan.</li>
+      </ul>
+    </div>
+
+    <!-- ================= POLA MAHASISWA ================= -->
+    <div class="mb-4">
+      <h5 class="text-primary"><strong>4. Pola Mahasiswa</strong></h5>
+      <p>
+        Kelemahan dominan pada prasyarat konseptual.
+        Mahasiswa dengan kemampuan mandiri tinggi berkembang pesat,
+        namun mahasiswa dengan ketergantungan contoh mengalami stagnasi.
+      </p>
+    </div>
+
+    <hr>
+
+    <!-- ================= PRIORITAS TINDAK LANJUT ================= -->
+    <div class="alert alert-warning">
+      <h5><i class="fas fa-exclamation-triangle mr-1"></i> Isu Prioritas</h5>
+      <ul class="mb-0">
+        <li>Lonjakan kesulitan pada CPMK 3</li>
+        <li>Prasyarat mahasiswa belum merata</li>
+        <li>Desain instrumen perlu evaluasi ulang</li>
+      </ul>
+    </div>
+
+    <!-- ================= REKOMENDASI PENGADAAN ================= -->
+    <div class="alert alert-info">
+      <h5><i class="fas fa-lightbulb mr-1"></i> Rekomendasi untuk Prodi</h5>
+      <ul class="mb-0">
+        <li>Pengembangan modul prasyarat sebelum CPMK 3</li>
+        <li>Workshop penyusunan rubrik berbasis OBE</li>
+        <li>Pengadaan software simulasi untuk analisis kasus</li>
+      </ul>
     </div>
 
   </div>
+
+  <div class="card-footer text-right">
+    <button class="btn btn-outline-primary btn-sm">
+      <i class="fas fa-file-download mr-1"></i> Unduh Ringkasan
+    </button>
+  </div>
+
 </div>
+
+
+
+
+
+<!-- ================= REKAP OTOMATIS PER LEVEL (Dummy) ================= -->
+<div class="container mt-4">
+
+  <!-- Rekap Level: Kelas -->
+  <div class="card shadow mb-3" id="rekapKelas">
+    <div class="card-header bg-info text-white">
+      <h3 class="card-title">Rekap Otomatis: Level Kelas</h3>
+    </div>
+    <div class="card-body">
+      <ul class="list-group">
+        <li class="list-group-item"><strong>#CPMK_Tercapai_Kuat</strong> ✅ (Card: Evaluasi Mata Kuliah)</li>
+        <li class="list-group-item"><strong>Pola kelemahan mahasiswa dominan</strong>: Banyak mahasiswa kesulitan pada konsep dasar (Card: Refleksi Mahasiswa)</li>
+        <li class="list-group-item"><strong>#Materi_Terlalu_Padat</strong> ✅ (Card: Evaluasi Mata Kuliah)</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Rekap Level: Dosen -->
+  <div class="card shadow mb-3" id="rekapDosen">
+    <div class="card-header bg-info text-white">
+      <h3 class="card-title">Rekap Otomatis: Level Dosen</h3>
+    </div>
+    <div class="card-body">
+      <ul class="list-group">
+        <li class="list-group-item"><strong>#CPMK_Tercapai_Minimal</strong> ✅ (Card: Evaluasi Mata Kuliah)</li>
+        <li class="list-group-item"><strong>Hal yang diubah jika diajar ulang</strong>: Menambahkan contoh praktikum lebih banyak (Card: Action Plan)</li>
+        <li class="list-group-item"><strong>Mahasiswa tipe yang paling terbantu</strong>: Tipe visual dan kinestetik (Card: Refleksi Mahasiswa)</li>
+        <li class="list-group-item"><strong>Bagian perkuliahan paling melelahkan</strong>: Menjelaskan teori abstrak (Card: Refleksi Diri Dosen)</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Rekap Level: MK -->
+  <div class="card shadow mb-3" id="rekapMK">
+    <div class="card-header bg-info text-white">
+      <h3 class="card-title">Rekap Otomatis: Level MK</h3>
+    </div>
+    <div class="card-body">
+      <ul class="list-group">
+        <li class="list-group-item"><strong>#Dominan_Nilai_Menengah</strong> ✅ (Card: Evaluasi Mata Kuliah)</li>
+        <li class="list-group-item"><strong>Pengadaan berdampak meningkatkan CPMK</strong>: Software simulasi laboratorium (Card: Action Plan)</li>
+        <li class="list-group-item"><strong>Instrumen & Rubrik CPMK</strong>: Cukup jelas, beberapa soal perlu revisi (Card: Refleksi Penilaian)</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Rekap Level: Prodi -->
+  <div class="card shadow mb-3" id="rekapProdi">
+    <div class="card-header bg-info text-white">
+      <h3 class="card-title">Rekap Otomatis: Level Prodi</h3>
+    </div>
+    <div class="card-body">
+      <ul class="list-group">
+        <li class="list-group-item"><strong>#Variansi_Tinggi</strong> ✅ (Card: Evaluasi Mata Kuliah)</li>
+        <li class="list-group-item"><strong>Perubahan kecil semester depan</strong>: Menyesuaikan beban tugas setiap minggu (Card: Action Plan)</li>
+        <li class="list-group-item"><strong>Pengadaan berdampak</strong>: Modul tambahan untuk lab (Card: Action Plan)</li>
+        <li class="list-group-item"><strong>#Butuh_Pengayaan</strong> ✅ (Card: Evaluasi Mata Kuliah)</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -321,116 +402,5 @@ jika ada kesamaan NIM di satu mata kuliah(artinya mahasiswa tempuh >1 kali MK ts
   </div>
 </div>
 
-<!-- ========== CARD : Chart Row CPMK remidi ========== -->
-<script>
-
-// =====================
-// DATA CPMK 1
-// =====================
-const nimCpmk1 = ['NIM 1','NIM 2','NIM 3','NIM 4','NIM 5'];
-
-const nilaiAwalCpmk1 = [60, 75, 55, 80, 70];
-const nilaiRemidiCpmk1 = [75, 80, 70, 85, 78];
-
-const ctxCpmk1 = document.getElementById('chartCpmk1Compare').getContext('2d');
-
-new Chart(ctxCpmk1, {
-  type: 'bar',
-  data: {
-    labels: nimCpmk1,
-    datasets: [
-      {
-        label: 'Nilai Awal',
-        data: nilaiAwalCpmk1,
-        backgroundColor: 'rgba(108, 117, 125, 0.8)',  // abu
-        borderColor: 'rgba(108, 117, 125, 1)',
-        borderWidth: 1
-      },
-      {
-        label: 'Nilai Remidi',
-        data: nilaiRemidiCpmk1,
-        backgroundColor: 'rgba(0, 123, 255, 0.8)',   // biru
-        borderColor: 'rgba(0, 123, 255, 1)',
-        borderWidth: 1
-      }
-    ]
-  },
-  options: {
-    responsive: true,
-    maintainAspectRatio: false,
-    scales: {
-      y: {
-        min: 0,
-        max: 100
-      }
-    },
-    plugins: {
-      legend: { position: 'top' },
-      tooltip: {
-        mode: 'index',
-        intersect: false
-      }
-    }
-  }
-});
-</script>
-<script>
-
-// =====================
-// DATA CPMK 2
-// =====================
-const nimCpmk2 = ['NIM 1','NIM 2','NIM 3','NIM 4'];
-
-const nilaiAwalCpmk2 = [72, 65, 88, 74];
-const nilaiRemidiCpmk2 = [80, 75, 90, 82];
-
-const ctxCpmk2 = document.getElementById('chartCpmk2Compare').getContext('2d');
-
-new Chart(ctxCpmk2, {
-  type: 'bar',
-  data: {
-    labels: nimCpmk2,
-    datasets: [
-      {
-        label: 'Nilai Awal',
-        data: nilaiAwalCpmk2,
-        backgroundColor: 'rgba(108, 117, 125, 0.8)',
-        borderColor: 'rgba(108, 117, 125, 1)',
-        borderWidth: 1
-      },
-      {
-        label: 'Nilai Remidi',
-        data: nilaiRemidiCpmk2,
-        backgroundColor: 'rgba(0, 123, 255, 0.8)',
-        borderColor: 'rgba(0, 123, 255, 1)',
-        borderWidth: 1
-      }
-    ]
-  },
-  options: {
-    responsive: true,
-    maintainAspectRatio: false,
-    scales: {
-      y: {
-        min: 0,
-        max: 100
-      }
-    },
-    plugins: {
-      legend: { position: 'top' },
-      tooltip: {
-        mode: 'index',
-        intersect: false
-      }
-    }
-  }
-});
-</script>
 
 <?php include('5script.php'); ?>
-
-
-
-
-
-

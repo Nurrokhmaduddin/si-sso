@@ -105,6 +105,11 @@
                 <button type="button" class="btn btn-outline-success btn-sm">
                   <i class="fas fa-file-download me-1"></i> Export
                 </button>
+                <button type="button" 
+                class="btn btn-outline-secondary btn-sm"
+                onclick="window.location.href='perkuliahan-portofolio-kelas-detail5.php'">
+                <span class="fas fa-edit me-1"></span> Pengisian Refleksi
+              </button>
                 <!-- <button type="button" class="btn btn-outline-danger btn-sm">
                   <i class="fas fa-ban me-1"></i> Reset
                 </button> -->    
@@ -119,116 +124,192 @@
             <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail4.php'"><a class="nav-link ">Remedial</a></li>
             <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail3.php'"><a class="nav-link ">Portofolio</a></li>
             <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail2.php'"><a class="nav-link ">Mahasiswa</a></li>
-            <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail6.php'"><a class="nav-link ">Refleksi</a></li>
-            <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail5.php'"><a class="nav-link active">OBE</a></li>
+            <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail5.php'"><a class="nav-link active">Refleksi</a></li>
+            <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail6.php'"><a class="nav-link ">OBE</a></li>
           </ul>
+     
 
 
-<!-- ========== CARD : tabel visualisasi CPMK ========== -->
-<div class="card">
-  <div class="card-body">
-    <div class="table-responsive">
-      <table class="table table-bordered table-striped table-sm">
-        <thead class="table-dark text-center">
-          <!-- Baris 1: CPL -->
-          <tr>
-            <!-- <th rowspan="2">Kode MK</th> -->
-            <th rowspan="2" colspan="2">CPMK</th>
-            <th colspan="2" data-bs-toggle="tooltip" title="CPL 1: Bertakwa kepada Tuhan Yang Maha Esa dan berperilaku islami">CPL 1</th>
-            <th colspan="2">CPL 2</th>
-            <th colspan="3">CPL 3</th>
-            <th colspan="2">CPL 4</th>
-            <th colspan="2">CPL 5</th>
-            <th colspan="2">CPL 6</th>
-            <th colspan="2">CPL 7</th>
-            <th>CPL 8</th>
-            <th colspan="2">CPL 9</th>
-            <th>CPL 10</th>
-          </tr>
-          <!-- Baris 2: IK -->
-          <tr>
-            <th data-bs-toggle="tooltip" title="IK 1: Menunjukkan perilaku islami pada setiap peran yang dijalani (50%)">IK 1</th>
-            <th>IK 2</th>
-            <th>IK 3</th>
-            <th>IK 4</th>
-            <th>IK 5</th>
-            <th>IK 6</th>
-            <th>IK 7</th>
-            <th>IK 8</th>
-            <th>IK 9</th>
-            <th>IK 10</th>
-            <th>IK 11</th>
-            <th>IK 12</th>
-            <th>IK 13</th>
-            <th>IK 14</th>
-            <th>IK 15</th>
-            <th>IK 16</th>
-            <th>IK 17</th>
-            <th>IK 18</th>
-            <th>IK 19</th>
-          </tr>
-        </thead>
 
-        <tbody>
-          <tr>
-            <td>STS704</td>
-            <td data-bs-toggle="tooltip" title="Deskripsi CPMK 1">1</td>
-            <td class="text-center">v</td><td></td>
-            <td></td><td></td>
-            <td></td><td></td><td></td>
-            <td></td><td></td>
-            <td></td><td></td>
-            <td></td><td></td>
-            <td></td><td></td>
-            <td></td>
-            <td></td><td></td><td></td>
-          </tr>
-          <tr>
-            <td>STS704</td>
-            <td>2</td>
-            <td></td><td class="text-center">v</td>
-            <td></td><td></td>
-            <td></td><td></td><td></td>
-            <td></td><td></td>
-            <td></td><td></td>
-            <td></td><td></td>
-            <td></td><td></td>
-            <td></td>
-            <td></td><td></td><td></td>
-          </tr>
-          <tr>
-            <td>STS704</td>
-            <td>3</td>
-            <td></td><td></td>
-            <td class="text-center">v</td><td></td>
-            <td></td><td></td><td></td>
-            <td></td><td></td>
-            <td></td><td></td>
-            <td></td><td></td>
-            <td class="text-center">v</td><td></td>
-            <td></td>
-            <td></td><td></td><td></td>
-          </tr>
-          <tr>
-            <td>STS704</td>
-            <td>4</td>
-            <td></td><td></td>
-            <td></td><td></td><td></td>
-            <td class="text-center">v</td><td></td>
-            <td></td><td></td>
-            <td></td><td></td>
-            <td class="text-center">v</td><td></td>
-            <td></td><td></td>
-            <td></td>
-            <td></td><td></td><td></td>
-          </tr>
-        </tbody>
-      </table>
+
+
+<!-- CARD RINGKASAN CATATAN&EVALUASI SEMUA DOSEN KELAS INI -->
+<div class="col-md-12">
+  <div class="card card-primary">
+
+    <!-- HEADER -->
+    <div class="card-header">
+      <h5 class="card-title mb-0">
+        Rekapan Catatan & Evaluasi Kelas
+      </h5>
+      <small class="text-light">
+        Wajib diisi • Kolaboratif (Team Teaching)
+      </small>
     </div>
 
+    <!-- BODY -->
+    <div class="card-body">
+
+
+      <!-- RINGKASAN -->
+      <h6><strong>Ringkasan Umum</strong></h6>
+      <table class="table table-bordered table-sm">
+        <tr>
+          <th>Capaian CPMK</th>
+          <td>2 Tercapai, 1 Kurang</td>
+        </tr>
+        <tr>
+          <th>Partisipasi</th>
+          <td>Sedang</td>
+        </tr>
+        <tr>
+          <th>Metode Efektif</th>
+          <td>Praktikum & Studi Kasus</td>
+        </tr>
+        <tr>
+          <th>Kendala Dominan</th>
+          <td>Perbedaan kemampuan mahasiswa</td>
+        </tr>
+      </table>
+
+      <hr>
+
+      <!-- DOSEN LIST (ACCORDION) -->
+      <h6><strong>Detail Catatan Dosen</strong></h6>
+
+      <div id="accordion">
+
+        <!-- DOSEN 1 -->
+        <div class="card">
+          <div class="card-header">
+            <h6 class="mb-0">
+              <a data-toggle="collapse" href="#dosen1">
+                Ahmad Fauzi
+              </a>
+            </h6>
+          </div>
+          <div id="dosen1" class="collapse show" data-parent="#accordion">
+            <div class="card-body">
+              <p><strong>CPMK:</strong> HTML (✔), Form (⚠)</p>
+              <p><strong>Dinamika:</strong> Partisipasi sedang</p>
+              <p><strong>Metode Efektif:</strong> Live coding</p>
+              <p><strong>Kendala:</strong> Dasar logika mahasiswa lemah</p>
+              <p><strong>Catatan:</strong> Perlu pre-test awal</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- DOSEN 2 -->
+        <div class="card">
+          <div class="card-header">
+            <h6 class="mb-0">
+              <a data-toggle="collapse" href="#dosen2">
+                Siti Rahma
+              </a>
+            </h6>
+          </div>
+          <div id="dosen2" class="collapse" data-parent="#accordion">
+            <div class="card-body">
+              <p><strong>CPMK:</strong> HTML (✔), Form (⚠), CRUD (❌)</p>
+              <p><strong>Dinamika:</strong> Awal pasif, akhir aktif</p>
+              <p><strong>Metode Efektif:</strong> Praktikum langsung</p>
+              <p><strong>Kendala:</strong> Gap kemampuan tinggi</p>
+              <p><strong>Catatan:</strong> Perlu diferensiasi tugas</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- DOSEN 3 -->
+        <div class="card">
+          <div class="card-header">
+            <h6 class="mb-0">
+              <a data-toggle="collapse" href="#dosen3">
+                Budi Santoso
+              </a>
+            </h6>
+          </div>
+          <div id="dosen3" class="collapse" data-parent="#accordion">
+            <div class="card-body">
+              <p><strong>CPMK:</strong> HTML (✔), Form (⚠), CRUD (⚠)</p>
+              <p><strong>Dinamika:</strong> Variatif</p>
+              <p><strong>Metode Efektif:</strong> Studi kasus</p>
+              <p><strong>Kendala:</strong> Kurang latihan mandiri</p>
+              <p><strong>Catatan:</strong> Perlu rubrik penilaian jelas</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <hr>
+
+      <!-- TAGGING -->
+      <h6><strong>Survey Populis (Tagging)</strong></h6>
+      <span class="badge badge-danger">Mahasiswa belum siap (2)</span>
+      <span class="badge badge-success">Metode praktik efektif (3)</span>
+      <span class="badge badge-warning">Waktu tidak cukup (2)</span>
+      <span class="badge badge-info">Assessment perlu perbaikan (2)</span>
+
+      <hr>
+
+      <!-- INSIGHT -->
+      <h6><strong>Insight Otomatis</strong></h6>
+      <ul>
+        <li>Metode praktik paling efektif di semua dosen</li>
+        <li>CPMK lanjutan belum tercapai optimal</li>
+        <li>Gap kemampuan mahasiswa cukup tinggi</li>
+      </ul>
+
+    </div>
+
+    <!-- FOOTER -->
+    <div class="card-footer d-flex justify-content-between">
+      <!-- <button class="btn btn-primary">Tambah Catatan</button> -->
+      <button class="btn btn-outline-secondary">Export Rekap</button>
+    </div>
 
   </div>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -298,5 +379,6 @@ jika ada kesamaan NIM di satu mata kuliah(artinya mahasiswa tempuh >1 kali MK ts
     </div>
   </div>
 </div>
+
 
 <?php include('5script.php'); ?>

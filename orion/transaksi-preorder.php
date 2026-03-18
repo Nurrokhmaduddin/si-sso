@@ -1,18 +1,26 @@
 <?php $page = 'transaksi_preorder'; ?>
 <?php include('1header.php'); ?>
 <?php include('2navbar.php'); ?>
-<?php include('3sidebar.php'); ?>
+<?php
+// Include sidebar sesuai peran
+$sidebar_file = "3sidebar-{$role}.php";
+if (file_exists($sidebar_file)) {
+    include($sidebar_file);
+} else {
+    include('3sidebar.php');
+}
+?>
 
   
 <div class="content-wrapper" style="min-height: 626.4px;">    
 
   <section class="content-header">
     <div class="container-fluid">
-      <h3 class="mb-0"> Data Pre-Order
+      <h3 class="mb-0"> Data Pre-Order (Verified/Approved)
         <button type="button" class="btn btn-tool" data-bs-toggle="modal" data-bs-target="#modalBantuan" title="Bantuan"><i class="fas fa-question-circle"></i>
         </button>
       </h3>
-        <p class="text-muted mb-0">Order = pencatatan permintaan customer.</p>
+        <p class="text-muted mb-0">Pre-Order = pencatatan permintaan customer oleh admin, atau sales order yang sudah di Verified/Approved oleh admin.</p>
     </div>
   </section>
 

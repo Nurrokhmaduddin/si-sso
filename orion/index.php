@@ -1,7 +1,17 @@
 <?php $page='';?>
 <?php include "1header.php"; ?>
 <?php include "2navbar.php"; ?>
-<?php include "3sidebar.php"; ?>
+<?php
+// Include sidebar sesuai peran
+$sidebar_file = "3sidebar-{$role}.php";
+if (file_exists($sidebar_file)) {
+    include($sidebar_file);
+} else {
+    include('3sidebar.php');
+}
+?>
+
+
  <!-- Chart.js CDN -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 

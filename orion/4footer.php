@@ -61,7 +61,7 @@ $(document).ready(function() {
   $(".role-select").on("click", function() {
       let role = $(this).data("role");
 
-      alert("Anda memilih peran: " + role);
+      //alert("Anda memilih peran: " + role); //hanya munculkan alert
 
       // menutup modal setelah pilih
       let modal = bootstrap.Modal.getInstance(document.getElementById('modalPilihPeran'));

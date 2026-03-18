@@ -1,7 +1,15 @@
 <?php $page = 'laporan_laba_rugi'; ?>
 <?php include('1header.php'); ?>
 <?php include('2navbar.php'); ?>
-<?php include('3sidebar.php'); ?>
+<?php
+// Include sidebar sesuai peran
+$sidebar_file = "3sidebar-{$role}.php";
+if (file_exists($sidebar_file)) {
+    include($sidebar_file);
+} else {
+    include('3sidebar.php');
+}
+?>
 
   
 <div class="content-wrapper" style="min-height: 626.4px;">    

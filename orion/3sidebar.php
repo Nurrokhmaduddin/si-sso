@@ -26,7 +26,7 @@
       <a href="#" class="d-block" data-toggle="modal" data-target="#modalPilihPeran">
         <span class="d-block text-white">su</span>
         <small class="text-success ">
-          <i class="fas fa-circle mr-1"></i> Admin
+          <i class="fas fa-circle mr-1"></i> SuperAdmin
         </small>
       </a>
     </div>
@@ -43,56 +43,13 @@
 
 
 <!-- BERANDA -->
-<!-- <li class="nav-item">
+<li class="nav-item">
   <a href="index.php" class="nav-link <?php echo $page == '' ? 'active' : ''; ?>">
     <i class="nav-icon fas fa-home"></i>
     <p>
       Beranda
     </p>
   </a>
-</li> -->
-
-<!-- BERANDA -->
-<li class="nav-item <?php echo in_array($page, ['','beranda','beranda-su','beranda-admin','beranda-sales','beranda_mahasiswa']) ? 'menu-open' : ''; ?>">
-  <a href="#" class="nav-link <?php echo in_array($page, ['','beranda','beranda-su','beranda-admin','beranda-sales']) ? 'active' : ''; ?>">
-    <i class="nav-icon fas fa-home"></i>
-    <p>
-      Beranda
-      <i class="right fas fa-angle-left"></i>
-    </p>
-  </a>
-
-  <ul class="nav nav-treeview">
-
-    <li class="nav-item">
-      <a href="index.php" class="nav-link <?php echo $page == '' ? 'active' : ''; ?>">
-        <i class="far fa-circle nav-icon"></i>
-        <p>Superadmin</p>
-      </a>
-    </li>
-
-
-    <li class="nav-item">
-      <a href="beranda-su.php" class="nav-link <?php echo $page == 'beranda-su' ? 'active' : ''; ?>">
-        <i class="far fa-circle nav-icon"></i>
-        <p>Owner</p>
-      </a>
-    </li>
-    <li class="nav-item">
-      <a href="beranda-admin.php" class="nav-link <?php echo $page == 'beranda-admin' ? 'active' : ''; ?>">
-        <i class="far fa-circle nav-icon"></i>
-        <p>Admin Gudang</p>
-      </a>
-    </li>
-
-    <li class="nav-item">
-      <a href="beranda-sales.php" class="nav-link <?php echo $page == 'beranda_sales' ? 'active' : ''; ?>">
-        <i class="far fa-circle nav-icon"></i>
-        <p>Sales</p>
-      </a>
-    </li>
-
-  </ul>
 </li>
         <!-- MASTER DATA -->
         <li class="nav-item <?php echo in_array($page, ['master_tahun','master_semester','master_peminatan','master_jenjang','master_jalur','master_dosen','master_mahasiswa']) ? 'menu-open' : ''; ?>">
@@ -198,18 +155,100 @@
           </ul>
         </li>
 
+<!-- Marketing
+
+(optional jika nanti berkembang)
+
+Promo
+
+Customer / Toko
+
+Area
+
+Sales -->
 
 
+      <!-- SALES ORDER -->
+      <li class="nav-item <?php echo in_array($page, ['transaksi_preorder','transaksi_salesorder','transaksi_tracking']) ? 'menu-open' : ''; ?>">
+        <a href="#" class="nav-link <?php echo in_array($page, ['transaksi_preorder','transaksi_salesorder','transaksi_tracking']) ? 'active' : ''; ?>">
+          <i class="nav-icon fas fa-handshake"></i>
+          <p>
+             Order
+            <i class="fas fa-angle-left right"></i>
+          </p>
+        </a>
+        <ul class="nav nav-treeview">
+          <li class="nav-item">
+            <a href="transaksi-salesorder.php" class="nav-link <?php echo $page == 'transaksi_salesorder' ? 'active' : ''; ?>">
+              <i class="nav-icon far fa-circle"></i>
+              <p>
+                Sales Order
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="transaksi-preorde.php" class="nav-link <?php echo $page == 'transaksi_preorde' ? 'active' : ''; ?>">
+              <i class="nav-icon far fa-circle"></i>
+              <p>
+                Project Order
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="transaksi-preorder.php" class="nav-link <?php echo $page == 'transaksi_preorder' ? 'active' : ''; ?>">
+              <i class="nav-icon far fa-circle"></i>
+              <p>
+                Confirmed Order
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="transaksi-tracking-order-.php" class="nav-link <?php echo $page == 'transaksi_tracking' ? 'active' : ''; ?>">
+              <i class="nav-icon far fa-circle"></i>
+              <p>
+               Order Tracking
+              </p>
+            </a>
+          </li>
+
+
+
+        </ul>
+      </li>
 <!-- OPERATION -->
- <li class="nav-item <?php echo in_array($page, ['operasional_stok_gudang','operasional_stok_rekap','operasional_stok_opname','operasional_stok_pelacakan']) ? 'menu-open' : ''; ?>">
-        <a href="#" class="nav-link <?php echo in_array($page, ['operasional_stok_gudang','operasional_stok_rekap','operasional_stok_opname','operasional_stok_pelacakan']) ? 'active' : ''; ?>">
+ <li class="nav-item <?php echo in_array($page, ['operasional_stok_gudang','operasional_stok_rekap','operasional_stok_opname','operasional_stok_pelacakan','transaksi_pengiriman']) ? 'menu-open' : ''; ?>">
+        <a href="#" class="nav-link <?php echo in_array($page, ['operasional_stok_gudang','operasional_stok_rekap','operasional_stok_opname','operasional_stok_pelacakan','transaksi_pengiriman']) ? 'active' : ''; ?>">
     <i class="nav-icon fas fa-warehouse"></i>
     <p>
-      Gudang
+      Operation
       <i class="fas fa-angle-left right"></i>
     </p>
   </a>
   <ul class="nav nav-treeview">
+    <li class="nav-item">
+      <a href="transaksi-pengiriman.php" class="nav-link <?php echo $page == 'transaksi_pengirima' ? 'active' : ''; ?>">
+        <i class="nav-icon far fa-circle"></i>
+        <p>
+          Picking barang
+        </p>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="transaksi-pengiriman.php" class="nav-link <?php echo $page == 'transaksi_pengirima' ? 'active' : ''; ?>">
+        <i class="nav-icon far fa-circle"></i>
+        <p>
+          Packing
+        </p>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="transaksi-pengiriman.php" class="nav-link <?php echo $page == 'transaksi_pengiriman' ? 'active' : ''; ?>">
+        <i class="nav-icon far fa-circle"></i>
+        <p>
+          Pengiriman
+        </p>
+      </a>
+    </li>
     <li class="nav-item">
       <a href="operasional-stok-gudang.php" class="nav-link <?php echo $page == 'operasional_stok_gudang' ? 'active' : ''; ?>">
         <i class="nav-icon far fa-circle"></i>
@@ -219,17 +258,7 @@
       </a>
     </li>
   </ul>
-  <ul class="nav nav-treeview">
-    <li class="nav-item">
-      <a href="operasional-stok-rekap.php" class="nav-link <?php echo $page == 'operasional_stok_rekap' ? 'active' : ''; ?>">
-        <i class="nav-icon far fa-circle"></i>
-        <p>
-          Stok Rekap
-        </p>
-      </a>
-    </li>
-  </ul>
-  <ul class="nav nav-treeview">
+    <ul class="nav nav-treeview">
     <li class="nav-item">
       <a href="operasional-stok-opname.php" class="nav-link <?php echo $page == 'operasional_stok_opname' ? 'active' : ''; ?>">
         <i class="nav-icon far fa-circle"></i>
@@ -240,50 +269,53 @@
     </li>
   </ul>
   <ul class="nav nav-treeview">
-    
     <li class="nav-item">
       <a href="operasional-stok-pelacakan.php" class="nav-link <?php echo $page == 'operasional_stok_pelacakan' ? 'active' : ''; ?>">
         <i class="nav-icon far fa-circle"></i>
         <p>
-          Pelacakan
+          Pelacakan Stok
         </p>
       </a>
     </li>
   </ul>
+  <ul class="nav nav-treeview">
+    <li class="nav-item">
+      <a href="operasional-stok-rekap.php" class="nav-link <?php echo $page == 'operasional_stok_rekap' ? 'active' : ''; ?>">
+        <i class="nav-icon far fa-circle"></i>
+        <p>
+          Rekap Kekurangan
+        </p>
+      </a>
+    </li>
+  </ul>
+
+  
 </li>
 
 <!-- FINANACE -->
-<li class="nav-item <?php echo in_array($page, ['transaksi_penjualan','transaksi_piutang','transaksi_pelunasan_piutang','transaksi_retur_penjualan','transaksi_pembelian','transaksi_utang','transaksi_pelunasan_utang','transaksi_retur_pembelian','transaksi_faktur_pajak','transaksi_insentif_sales','transaksi_biaya_operasional','transaksi_pengiriman']) ? 'menu-open' : ''; ?>">
-  <a href="#" class="nav-link <?php echo in_array($page, ['transaksi_penjualan','transaksi_piutang','transaksi_pelunasan_piutang','transaksi_retur_penjualan','transaksi_pembelian','transaksi_utang','transaksi_pelunasan_utang','transaksi_retur_pembelian','transaksi_faktur_pajak','transaksi_insentif_sales','transaksi_biaya_operasional','transaksi_pengiriman']) ? 'active' : ''; ?>">
-    <i class="nav-icon fas fa-exchange-alt"></i>
+<li class="nav-item <?php echo in_array($page, ['transaksi_penjualan','transaksi_piutang','transaksi_pelunasan_piutang','transaksi_retur_penjualan','transaksi_pembelian','transaksi_utang','transaksi_pelunasan_utang','transaksi_retur_pembelian','transaksi_faktur_pajak','transaksi_insentif_sales','transaksi_biaya_operasional']) ? 'menu-open' : ''; ?>">
+  <a href="#" class="nav-link <?php echo in_array($page, ['transaksi_penjualan','transaksi_piutang','transaksi_pelunasan_piutang','transaksi_retur_penjualan','transaksi_pembelian','transaksi_utang','transaksi_pelunasan_utang','transaksi_retur_pembelian','transaksi_faktur_pajak','transaksi_insentif_sales','transaksi_biaya_operasional']) ? 'active' : ''; ?>">
+    <i class="nav-icon fas fa-money-bill"></i>
     <p>
-      Transaksi
+      Finance
       <i class="fas fa-angle-left right"></i>
     </p>
   </a>
 
   <ul class="nav nav-treeview">
-    <li class="nav-item">
+    <!-- <li class="nav-item">
       <a href="transaksi-preorder.php" class="nav-link <?php echo $page == 'transaksi_preorder' ? 'active' : ''; ?>">
         <i class="nav-icon far fa-circle"></i>
         <p>
           Pre-Order
         </p>
       </a>
-    </li>
+    </li> -->
     <li class="nav-item">
       <a href="transaksi-penjualan.php" class="nav-link <?php echo $page == 'transaksi_penjualan' ? 'active' : ''; ?>">
         <i class="nav-icon far fa-circle"></i>
         <p>
           Penjualan (Invoice)
-        </p>
-      </a>
-    </li>
-    <li class="nav-item">
-      <a href="transaksi-pengiriman.php" class="nav-link <?php echo $page == 'transaksi_pengiriman' ? 'active' : ''; ?>">
-        <i class="nav-icon far fa-circle"></i>
-        <p>
-          Pengiriman
         </p>
       </a>
     </li>
@@ -684,8 +716,8 @@
           Dosen
         </button>
 
-        <button class="btn btn-outline-primary w-100 role-select" data-role="Mahasiswa">
-          Mahasiswa
+        <button class="btn btn-outline-primary w-100 role-select" data-role="sales">
+          Sales
         </button>
 
       </div>

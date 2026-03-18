@@ -191,46 +191,34 @@
 <!-- ========== CARD : Catatan Evaluasi MK-Portfolio========== --> 
 <div class="card">
   <div class="card-header">
-    <h5 class="card-title mb-0">
-      <button class="btn btn-sm btn-outline-info" data-bs-toggle="collapse" data-bs-target="#daftarIKCPL2">
-        <i class="fas fa-expand"></i>
-      </button>
-      Log Pengajaran Dosen
-    </h5>
+    <h5>Catatan Evaluasi dan Perencanaan</h5>
   </div>
-  <div class="card-body collapse show" id="daftarIKCPL2" >
+  <div class="card-body">
     <div class="table-responsive">
-      <table class="table table-bordered table-striped datatables1">
+      <table class="table table-bordered table-striped">
         <thead>
           <tr>
-            <th>#</th>
-            <th>Periode Akademik</th>
+            <th>No.</th>
+            <th>Tahun Akademik</th>
             <th>Refleksi Dosen</th>
             <th>Analisis Kendala</th>
             <th>Rencana Perbaikan</th>
-            <th>Aksi</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>2</td>
+            <td>1</td>
             <td>2025 - Gasal</td>
             <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</td>
             <td>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</td>
             <td></td>
-            <td class="text-center">                     
-             <button class="btn btn-sm btn-outline-info" onclick="window.location.href='.php'"><i class="fas fa-info-circle"></i> </button>
-             </td>
-           </tr>
-           <tr>
-            <td>1</td>
-            <td>2025 - Genap</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>2025 - Gasal</td>
             <td>Materi telah tersampaikan sesuai rencana pembelajaran, namun beberapa mahasiswa membutuhkan penjelasan tambahan pada topik tertentu. Partisipasi kelas cukup baik.</td>
             <td>-</td>
             <td>Menambahkan sesi konsultasi mingguan, menyediakan contoh studi kasus tambahan, serta memperbaiki alur penyampaian pada pertemuan awal.</td>
-            <td class="text-center">                     
-              <button class="btn btn-sm btn-outline-info" onclick="window.location.href='.php'"><i class="fas fa-info-circle"></i> </button>
-            </td>
           </tr>
           <tr>
             <td>3</td>
@@ -238,9 +226,6 @@
             <td>Ketercapaian materi berada pada kategori baik. Praktikum berjalan lancar meskipun ada beberapa kendala kecil terkait perangkat laboratorium.</td>
             <td>-</td>
             <td>Melakukan koordinasi dengan laboran, memperbarui panduan praktikum, dan menambah materi pemantapan untuk pertemuan terakhir.</td>
-            <td class="text-center">                     
-              <button class="btn btn-sm btn-outline-info" onclick="window.location.href='.php'"><i class="fas fa-info-circle"></i> </button>
-            </td>
           </tr>
           <tr>
             <td>4</td>
@@ -248,15 +233,238 @@
             <td>Interaksi kelas masih perlu ditingkatkan. Sebagian mahasiswa kurang aktif berdiskusi dan ketepatan waktu pengumpulan tugas masih rendah.</td>
             <td>-</td>
             <td>Menerapkan metode pembelajaran berbasis proyek kecil, memberikan reward aktif partisipasi, dan memperjelas timeline tugas.</td>
-            <td class="text-center">                     
-              <button class="btn btn-sm btn-outline-info" onclick="window.location.href='.php'"><i class="fas fa-info-circle"></i> </button>
-            </td>
           </tr>
         </tbody>
       </table>
     </div>
   </div>
 </div>
+<!-- ========== CARD : Catatan Evaluasi MK-Portfolio========== --> 
+        
+        <div class="card">
+          <div class="card-header ">         
+            <h5 class="card-title mb-0">
+              <button class="btn btn-sm btn-outline-info" data-bs-toggle="collapse" data-bs-target="#daftarIKCPL2">
+                <i class="fas fa-expand"></i>
+              </button>
+              Catatan Evaluasi dan Perencanaan 
+            </h5>
+          </div>
+
+          <div class="card-body">
+            <div id="daftarIKCPL2" class="collapse show table-responsive">
+             <table class="table table1 table-bordered table-striped table-sm datatables1">
+              <thead>
+
+                <tr class="text-uppercase text-center">
+                  <th width="5px">No.</th>
+                  <th>Tahun akademik</th>
+                  <th>Kelas</th>
+                  <th>Evaluasi Pembelajaran</th>
+                  <th>Rencana Pengembangan</th>
+                  <th>Aksi</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="text-center">1</td>
+                  <td>2025 - Gasal</td>
+                  <td>A</td>                    
+                  <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. </td>
+                  <td>Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</td>
+                  <td class="text-center">                     
+                   <button class="btn btn-sm btn-outline-info" onclick="window.location.href='.php'">🔍 Grafik/Tabel</button>
+                   <button class="btn btn-sm btn-outline-info" onclick="window.location.href='portfolio_cpmk_detail.php'">🔍 DetailPortfolio</button>
+                 </td>
+               </tr>
+               <tr>
+                <td class="text-center">2</td>
+                <td>2025 - Gasal</td>
+                <td>B</td>
+                <td>
+                  Materi telah tersampaikan sesuai rencana pembelajaran, namun beberapa mahasiswa
+                  membutuhkan penjelasan tambahan pada topik tertentu. Partisipasi kelas cukup baik.
+                </td>
+                <td>
+                  Menambahkan sesi konsultasi mingguan, menyediakan contoh studi kasus tambahan,
+                  serta memperbaiki alur penyampaian pada pertemuan awal.
+                </td>
+                <td class="text-center">
+                  <button class="btn btn-sm btn-outline-info" onclick="window.location.href='.php'">🔍 Grafik/Tabel</button>
+                  <button class="btn btn-sm btn-outline-info" onclick="window.location.href='portfolio_cpmk_detail.php'">🔍 DetailPortfolio</button>
+                </td>
+              </tr>
+
+              <tr>
+                <td class="text-center">3</td>
+                <td>2024 - Genap</td>
+                <td>A</td>
+                <td>
+                  Ketercapaian materi berada pada kategori baik. Praktikum berjalan lancar meskipun ada
+                  beberapa kendala kecil terkait perangkat laboratorium.
+                </td>
+                <td>
+                  Melakukan koordinasi dengan laboran, memperbarui panduan praktikum, dan
+                  menambah materi pemantapan untuk pertemuan terakhir.
+                </td>
+                <td class="text-center">
+                  <button class="btn btn-sm btn-outline-info" onclick="window.location.href='.php'">🔍 Grafik/Tabel</button>
+                  <button class="btn btn-sm btn-outline-info" onclick="window.location.href='portfolio_cpmk_detail.php'">🔍 DetailPortfolio</button>
+                </td>
+              </tr>
+
+              <tr>
+                <td class="text-center">4</td>
+                <td>2024 - Gasal</td>
+                <td>C</td>
+                <td>
+                  Interaksi kelas masih perlu ditingkatkan. Sebagian mahasiswa kurang aktif berdiskusi
+                  dan ketepatan waktu pengumpulan tugas masih rendah.
+                </td>
+                <td>
+                  Menerapkan metode pembelajaran berbasis proyek kecil, memberikan reward aktif
+                  partisipasi, dan memperjelas timeline tugas.
+                </td>
+                <td class="text-center">
+                  <button class="btn btn-sm btn-outline-info" onclick="window.location.href='.php'">🔍 Grafik/Tabel</button>
+                  <button class="btn btn-sm btn-outline-info" onclick="window.location.href='portfolio_cpmk_detail.php'">🔍 DetailPortfolio</button>
+                </td>
+              </tr>
+
+
+              <!-- Lanjutkan hingga baris ke-20 sesuai data -->
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </div>
+<!-- ================= Card  : Catatan evaluasi dan pengembangan) ============== -->
+          <div class="row mb-4">
+            <div class="col-12">
+              <h4 class="mb-1">Catatan Evaluasi dan Perencanaan</h4>
+              <small class="text-muted">
+                Kolom kiri menampilkan catatan <strong>Periode A</strong> (arsip/sebelumnya).  
+                Kolom kanan digunakan untuk mengisi dan menyimpan catatan <strong>Periode B</strong>.
+              </small>
+            </div>
+          </div>
+
+
+          <!-- ROW 1 : EVALUASI  -->
+          <div class="row mb-4">
+
+            <!-- KIRI : Periode A -->
+            <div class="col-lg-6">
+              <div class="card h-100 shadow-sm">
+                <div class="card-header bg-secondary text-white">
+                  <h5 class="mb-0">
+                    <i class="fas fa-clipboard-list me-2"></i>
+                    Evaluasi Hasil Pembelajaran
+                  </h5>
+                  <small>Periode A</small>
+                </div>
+                <div class="card-body">
+                  <p class="mb-0">
+                    secara keseluruhan pembelajaran telah berjalan dengan baik
+                  </p>
+                </div>
+              </div>
+            </div>
+
+
+            <!-- KANAN : Periode B -->
+            <div class="col-lg-6">
+              <div class="card h-100 shadow-sm border-primary">
+                <div class="card-header bg-primary text-white">
+                  <h5 class="mb-0">
+                    <i class="fas fa-edit me-2"></i>
+                    Evaluasi Hasil Pembelajaran
+                  </h5>
+                  <small>Periode B</small>
+                </div>
+
+                <form action="https://loa.simtekim-uii.id/loa/portofolio_cpmk/edit_evaluasi_hasil"
+                method="POST">
+                <input type="hidden" name="id" value="4100">
+
+                <div class="card-body">
+                  <textarea class="form-control"
+                  name="evaluasi_hasil"
+                  placeholder="Tuliskan evaluasi periode B..."
+                  style="min-height:200px;"></textarea>
+                </div>
+
+                <div class="card-footer bg-white">
+                  <button type="submit" class="btn btn-primary w-100">
+                    <i class="fas fa-save me-1"></i> Simpan Evaluasi Periode B
+                  </button>
+                </div>
+              </form>
+
+            </div>
+          </div>
+          </div>
+          <!--  ROW 2 : RENCANA  -->
+          <div class="row mb-4">
+
+            <!-- KIRI : Periode A -->
+            <div class="col-lg-6">
+              <div class="card h-100 shadow-sm">
+                <div class="card-header bg-secondary text-white">
+                  <h5 class="mb-0">
+                    <i class="fas fa-chart-line me-2"></i>
+                    Rencana Pengembangan Perkuliahan
+                  </h5>
+                  <small>Periode A</small>
+                </div>
+                <div class="card-body">
+                  <p class="mb-0">
+                    perlu meningkatkan interaksi
+                  </p>
+                </div>
+              </div>
+            </div>
+
+
+            <!-- KANAN : Periode B -->
+            <div class="col-lg-6">
+              <div class="card h-100 shadow-sm border-primary">
+                <div class="card-header bg-primary text-white">
+                  <h5 class="mb-0">
+                    <i class="fas fa-edit me-2"></i>
+                    Rencana Pengembangan Perkuliahan
+                  </h5>
+                  <small>Periode B</small>
+                </div>
+
+                <form action="https://loa.simtekim-uii.id/loa/portofolio_cpmk/edit_rencana_pengembangan"
+                method="POST">
+                <input type="hidden" name="id" value="4100">
+
+                <div class="card-body">
+                  <textarea class="form-control"
+                  name="rencana_pengembangan"
+                  placeholder="Tuliskan rencana periode B..."
+                  style="min-height:200px;"></textarea>
+                </div>
+
+                <div class="card-footer bg-white">
+                  <button type="submit" class="btn btn-primary w-100">
+                    <i class="fas fa-save me-1"></i> Simpan Rencana Periode B
+                  </button>
+                </div>
+              </form>
+
+            </div>
+          </div>
+          </div>
+
 
 
 

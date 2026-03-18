@@ -124,289 +124,195 @@
             <li class="nav-item" onclick="window.location='perkuliahan-portofolio-kelas-detail5.php'"><a class="nav-link active">Refleksi Kelas</a></li>
           </ul>
 
+<div class="card-body">
+  Flow mental dosen:<br>
 
-      <!--     <td><button type="button" class="btn btn-xs btn-primary" ><i class="fas fa-edit"></i></button>
-                            Soal Ujian UTS/UAS <span class="badge badge-danger">Rejected</span> (dengan validasi prodi)</td>
-                            <td width="40%">
-                              <a href="https://drive.google.com/drive/folders/1Ba6yZ2KLWZC992tVO7wxpcfxaOYb8Eyi?usp=drive_link" target="_blank">
-                                <button type="button" class="btn btn-xs btn-info"><i class="fas fa-link"></i> Download</button>
-                              </a> <i>update_at</i>
-                            </td> -->
-          <!-- ========== CARD : refleksi kelas ========== --> 
-<!-- ========== CARD : Form Pengisian TAG Kelas oleh Dosen ========== -->
-<div class="card ">
+“Di kelas tadi terjadi apa ya?”
+👉 isi Catatan Kelas<br>
 
- <!--  <div class="card-header">
-    <h3 class="card-title">
-      <i class="fas fa-tags mr-1"></i>
-      Form Pengisian TAG Generalisasi Kelas (Berbasis OBE & CPMK)
-    </h3>
-  </div> -->
+“Ini kayaknya perlu disampaikan ke prodi”
+👉 isi Insight Prodi<br>
 
-  <form action="#" method="post">
-    <div class="card-body">
-
-      <!-- ================= 1. KETERcapaian CPMK ================= -->
-      <h5 class="text-primary"><strong>1. Ketercapaian CPMK (Core OBE)</strong></h5>
-
-      <div class="form-group">
-        <div class="custom-control custom-checkbox">
-          <input type="checkbox" class="custom-control-input" id="c1" name="tag[]" value="CPMK_Tercapai_Kuat">
-          <label class="custom-control-label" for="c1">#CPMK_Tercapai_Kuat</label>
-        </div>
-
-        <div class="custom-control custom-checkbox">
-          <input type="checkbox" class="custom-control-input" id="c2" name="tag[]" value="CPMK_Tercapai_Minimal">
-          <label class="custom-control-label" for="c2">#CPMK_Tercapai_Minimal</label>
-        </div>
-
-        <div class="custom-control custom-checkbox">
-          <input type="checkbox" class="custom-control-input" id="c3" name="tag[]" value="CPMK_Tidak_Tercapai">
-          <label class="custom-control-label" for="c3">#CPMK_Tidak_Tercapai</label>
-        </div>
-
-        <div class="custom-control custom-checkbox">
-          <input type="checkbox" class="custom-control-input" id="c4" name="tag[]" value="Variansi_Tinggi">
-          <label class="custom-control-label" for="c4">#Variansi_Tinggi</label>
-        </div>
-
-        <div class="custom-control custom-checkbox">
-          <input type="checkbox" class="custom-control-input" id="c5" name="tag[]" value="Dominan_Nilai_Menengah">
-          <label class="custom-control-label" for="c5">#Dominan_Nilai_Menengah</label>
-        </div>
-
-        <div class="custom-control custom-checkbox">
-          <input type="checkbox" class="custom-control-input" id="c6" name="tag[]" value="CPMK_Tergantung_Tugas">
-          <label class="custom-control-label" for="c6">#CPMK_Tergantung_Tugas</label>
-        </div>
-      </div>
-
-      <hr>
-
-      <!-- ================= 2. BEBAN KOGNITIF ================= -->
-      <h5 class="text-primary"><strong>2. Beban Kognitif & Kompleksitas</strong></h5>
-
-      <div class="form-group">
-        <div class="custom-control custom-checkbox">
-          <input type="checkbox" class="custom-control-input" id="c7" name="tag[]" value="Materi_Terlalu_Padat">
-          <label class="custom-control-label" for="c7">#Materi_Terlalu_Padat</label>
-        </div>
-
-        <div class="custom-control custom-checkbox">
-          <input type="checkbox" class="custom-control-input" id="c8" name="tag[]" value="Lonjakan_Kesulitan">
-          <label class="custom-control-label" for="c8">#Lonjakan_Kesulitan</label>
-        </div>
-
-        <div class="custom-control custom-checkbox">
-          <input type="checkbox" class="custom-control-input" id="c9" name="tag[]" value="Prasyarat_Lemah">
-          <label class="custom-control-label" for="c9">#Prasyarat_Lemah</label>
-        </div>
-
-        <div class="custom-control custom-checkbox">
-          <input type="checkbox" class="custom-control-input" id="c10" name="tag[]" value="Butuh_Pemecahan_Materi">
-          <label class="custom-control-label" for="c10">#Butuh_Pemecahan_Materi</label>
-        </div>
-
-        <div class="custom-control custom-checkbox">
-          <input type="checkbox" class="custom-control-input" id="c11" name="tag[]" value="Butuh_Pengayaan">
-          <label class="custom-control-label" for="c11">#Butuh_Pengayaan</label>
-        </div>
-      </div>
-
-      <hr>
-
-      <!-- ================= 3. METODE ================= -->
-      <h5 class="text-primary"><strong>3. Metode & Aktivitas Pembelajaran</strong></h5>
-
-      <div class="form-group">
-        <div class="custom-control custom-checkbox">
-          <input type="checkbox" class="custom-control-input" id="c12" name="tag[]" value="Diskusi_Tidak_Efektif">
-          <label class="custom-control-label" for="c12">#Diskusi_Tidak_Efektif</label>
-        </div>
-
-        <div class="custom-control custom-checkbox">
-          <input type="checkbox" class="custom-control-input" id="c13" name="tag[]" value="Studi_Kasus_Efektif">
-          <label class="custom-control-label" for="c13">#Studi_Kasus_Efektif</label>
-        </div>
-
-        <div class="custom-control custom-checkbox">
-          <input type="checkbox" class="custom-control-input" id="c14" name="tag[]" value="Praktikum_Menguatkan_CPMK">
-          <label class="custom-control-label" for="c14">#Praktikum_Menguatkan_CPMK</label>
-        </div>
-
-        <div class="custom-control custom-checkbox">
-          <input type="checkbox" class="custom-control-input" id="c15" name="tag[]" value="Ceramah_Tidak_Cukup">
-          <label class="custom-control-label" for="c15">#Ceramah_Tidak_Cukup</label>
-        </div>
-
-        <div class="custom-control custom-checkbox">
-          <input type="checkbox" class="custom-control-input" id="c16" name="tag[]" value="Project_Based_Learning_Efektif">
-          <label class="custom-control-label" for="c16">#Project_Based_Learning_Efektif</label>
-        </div>
-      </div>
-
-      <hr>
-
-      <!-- ================= CATATAN TAMBAHAN ================= -->
-      <h5 class="text-primary"><strong>Catatan Tambahan (Opsional)</strong></h5>
-
-      <div class="form-group">
-        <textarea class="form-control" rows="3" name="catatan_tag"
-          placeholder="Tambahkan penjelasan singkat jika diperlukan..."></textarea>
-      </div>
-
-    </div>
-
-    <div class="card-footer text-right">
-      <button type="submit" class="btn btn-primary">
-        <i class="fas fa-save mr-1"></i> Simpan TAG
-      </button>
-    </div>
-
-  </form>
+“Kalau saya ngajar lagi, harusnya gimana ya?”
+👉 isi Catatan Pribadi
 
 </div>
+<!-- card-card refleksi -->
+<div class="col-md-12">
+  <div class="card card-primary">
+    <div class="card-header">
+      <h5 class="card-title mb-0">Catatan & Evaluasi Kelas</h5>
+      <small class="text-light">(utama & wajib diisi - Kolaboratif)</small>
+    </div>
 
+    <div class="card-body">
+      Deskripsi:(untuk team teaching & rekap kelas)
 
-<!-- ========== CARD : Form Refleksi Akhir Semester Dosen ========== -->
-<div class="card card-primary">
-  <div class="card-header">
-    <h3 class="card-title">
-      <i class="fas fa-clipboard-check mr-1"></i>
-      Formulir Refleksi Akhir Semester
-    </h3>
+Formulir ini digunakan untuk mencatat hasil evaluasi pelaksanaan perkuliahan pada kelas yang Anda ampu. Isian mencakup capaian pembelajaran, dinamika kelas, metode pengajaran, serta kendala yang dihadapi selama proses pembelajaran.
+
+Catatan yang Anda tuliskan dapat dilihat oleh dosen lain dalam tim pengampu (team teaching) sebagai bahan berbagi pengalaman dan perbaikan bersama. Data ini juga akan direkap untuk memberikan gambaran umum kondisi pembelajaran kepada program studi.
+      <p>
+        Formulir ini digunakan untuk mencatat hasil pelaksanaan perkuliahan pada kelas yang Anda ampu. 
+        Isian mencakup capaian pembelajaran, dinamika kelas, metode pengajaran, serta kendala selama proses belajar.
+      </p>
+
+      <p>
+        Catatan ini dapat dilihat oleh tim dosen pengampu dan akan direkap sebagai gambaran umum kondisi pembelajaran untuk program studi.
+      </p>
+
+      <hr>
+👉 Arah pengisian:
+Fokuskan pada kondisi nyata di kelas, apa yang terjadi, apa yang berhasil, dan apa yang perlu diperbaiki.
+      <strong>Arahan Pengisian:</strong>
+      <ul>
+        <li>Fokus pada kondisi nyata di kelas</li>
+        <li>Catat apa yang berhasil dan tidak</li>
+        <li>Sertakan kendala yang terjadi</li>
+      </ul>
+
+      <hr>
+
+      <strong>Contoh Hal yang Ditanyakan:</strong>
+      <ul>
+        <li>Apakah capaian pembelajaran (CPMK) tercapai?</li>
+        <li>Bagaimana tingkat partisipasi mahasiswa?</li>
+        <li>Metode apa yang paling efektif?</li>
+        <li>Kendala utama selama perkuliahan?</li>
+        <li>Apakah penilaian sudah mencerminkan kemampuan mahasiswa?</li>
+      </ul>
+
+    </div>
+
+    <div class="card-footer d-flex justify-content-between">
+      <button class="btn btn-primary">Isi Evaluasi</button>
+      <button class="btn btn-outline-secondary">Lihat Catatan Tim</button>
+    </div>
   </div>
-
-  <form action="#" method="post">
-    <div class="card-body">
-
-      <!-- ================= 1. Refleksi Ketercapaian OBE ================= -->
-      <h5 class="mb-3 text-primary"><strong>1. Refleksi Ketercapaian OBE</strong></h5>
-
-      <div class="form-group">
-        <label>CPMK mana yang paling konsisten tercapai? Mengapa?</label>
-        <textarea class="form-control" rows="3" name="ref_cpmk_konsisten"></textarea>
-      </div>
-
-      <div class="form-group">
-        <label>CPMK mana yang paling bermasalah? Pada bagian apa mahasiswa mulai tertinggal?</label>
-        <textarea class="form-control" rows="3" name="ref_cpmk_bermasalah"></textarea>
-      </div>
-
-      <div class="form-group">
-        <label>Apakah CPMK terlalu ambisius untuk kondisi mahasiswa saat ini?</label>
-        <textarea class="form-control" rows="2" name="ref_cpmk_ambisius"></textarea>
-      </div>
-
-      <hr>
-
-      <!-- ================= 2. Refleksi Metode Pembelajaran ================= -->
-      <h5 class="mb-3 text-primary"><strong>2. Refleksi Metode Pembelajaran</strong></h5>
-
-      <div class="form-group">
-        <label>Aktivitas pembelajaran apa yang paling berdampak pada pencapaian CPMK?</label>
-        <textarea class="form-control" rows="3" name="ref_metode_efektif"></textarea>
-      </div>
-
-      <div class="form-group">
-        <label>Metode apa yang terasa tidak bekerja?</label>
-        <textarea class="form-control" rows="2" name="ref_metode_tidak_efektif"></textarea>
-      </div>
-
-      <div class="form-group">
-        <label>Apakah ada momen kelas yang menjadi turning point (positif/negatif)?</label>
-        <textarea class="form-control" rows="2" name="ref_turning_point"></textarea>
-      </div>
-
-      <hr>
-
-      <!-- ================= 3. Refleksi Penilaian ================= -->
-      <h5 class="mb-3 text-primary"><strong>3. Refleksi Penilaian & Instrumen</strong></h5>
-
-      <div class="form-group">
-        <label>Apakah instrumen benar-benar mengukur CPMK?</label>
-        <textarea class="form-control" rows="3" name="ref_instrumen_validitas"></textarea>
-      </div>
-
-      <div class="form-group">
-        <label>Bagian rubrik mana yang sering disalahpahami mahasiswa?</label>
-        <textarea class="form-control" rows="2" name="ref_rubrik"></textarea>
-      </div>
-
-      <div class="form-group">
-        <label>Apakah bobot penilaian sudah proporsional?</label>
-        <textarea class="form-control" rows="2" name="ref_bobot"></textarea>
-      </div>
-
-      <hr>
-
-      <!-- ================= 4. Refleksi Mahasiswa ================= -->
-      <h5 class="mb-3 text-primary"><strong>4. Refleksi Mahasiswa</strong></h5>
-
-      <div class="form-group">
-        <label>Pola kelemahan mahasiswa yang paling dominan?</label>
-        <textarea class="form-control" rows="3" name="ref_pola_kelemahan"></textarea>
-      </div>
-
-      <div class="form-group">
-        <label>Sumber kelemahan: prasyarat, motivasi, atau desain pembelajaran?</label>
-        <textarea class="form-control" rows="2" name="ref_sumber_kelemahan"></textarea>
-      </div>
-
-      <div class="form-group">
-        <label>Mahasiswa tipe apa yang paling terbantu? Siapa yang tertinggal?</label>
-        <textarea class="form-control" rows="2" name="ref_tipe_mahasiswa"></textarea>
-      </div>
-
-      <hr>
-
-      <!-- ================= 5. Refleksi Diri Dosen ================= -->
-      <h5 class="mb-3 text-primary"><strong>5. Refleksi Diri Dosen</strong></h5>
-
-      <div class="form-group">
-        <label>Bagian mana dari perkuliahan yang paling melelahkan secara mental?</label>
-        <textarea class="form-control" rows="2" name="ref_kelelahan"></textarea>
-      </div>
-
-      <div class="form-group">
-        <label>Materi apa yang perlu dikuasai lebih dalam sebelum mengajar lagi?</label>
-        <textarea class="form-control" rows="2" name="ref_penguasaan_materi"></textarea>
-      </div>
-
-      <div class="form-group">
-        <label>Keputusan pedagogis apa yang akan diubah jika diulang?</label>
-        <textarea class="form-control" rows="2" name="ref_keputusan_ubah"></textarea>
-      </div>
-
-      <hr>
-
-      <!-- ================= 6. Refleksi ke Depan (Action Plan) ================= -->
-      <h5 class="mb-3 text-primary"><strong>6. Refleksi ke Depan (Action Plan)</strong></h5>
-
-      <div class="form-group">
-        <label>Jika kelas ini diajar ulang, 1 hal apa yang pasti diubah?</label>
-        <textarea class="form-control" rows="2" name="ref_ubah_pasti"></textarea>
-      </div>
-
-      <div class="form-group">
-        <label>Perubahan kecil paling realistis semester depan?</label>
-        <textarea class="form-control" rows="2" name="ref_perubahan_realistis"></textarea>
-      </div>
-
-      <div class="form-group">
-        <label>Pengadaan apa yang paling berdampak meningkatkan CPMK?</label>
-        <textarea class="form-control" rows="2" name="ref_pengadaan"></textarea>
-      </div>
-
-    </div>
-
-    <div class="card-footer text-right">
-      <button type="submit" class="btn btn-primary">
-        <i class="fas fa-save mr-1"></i> Simpan Refleksi
-      </button>
-    </div>
-  </form>
 </div>
+
+
+
+<div class="col-md-12">
+  <div class="card card-purple">
+    <div class="card-header">
+      <h5 class="card-title mb-0">Masukan & Insight untuk Program Studi</h5>
+      <small class="text-light">(lanjutan dari kelas - Strategis)</small>
+    </div>
+
+    <div class="card-body">
+      Deskripsi:(untuk strategic input ke prodi)
+
+Formulir ini digunakan untuk menyampaikan masukan, insight, dan rekomendasi Anda kepada program studi berdasarkan pengalaman mengajar pada mata kuliah dan kelas yang diampu.
+
+Isian dapat mencakup kesiapan mahasiswa, kesesuaian kurikulum, efektivitas metode pembelajaran, hingga kebutuhan dukungan atau perbaikan sistem akademik. Masukan dari seluruh dosen akan direkap sebagai bahan evaluasi dan pengambilan keputusan di tingkat program studi.
+      <p>
+        Formulir ini digunakan untuk menyampaikan masukan, insight, dan rekomendasi kepada program studi berdasarkan pengalaman mengajar.
+      </p>
+
+      <p>
+        Masukan Anda akan direkap bersama dosen lain sebagai bahan evaluasi dan pengambilan keputusan di tingkat program studi.
+      </p>
+
+      <hr>
+👉 Arah pengisian:
+Sampaikan hal-hal penting yang menurut Anda perlu diketahui oleh program studi, terutama yang berdampak pada peningkatan kualitas pembelajaran secara keseluruhan.
+      <strong>Arahan Pengisian:</strong>
+      <ul>
+        <li>Sampaikan hal yang berdampak luas</li>
+        <li>Fokus pada perbaikan sistem atau kurikulum</li>
+        <li>Hindari hanya menceritakan kejadian kelas</li>
+      </ul>
+
+      <hr>
+
+      <strong>Contoh Hal yang Ditanyakan:</strong>
+      <ul>
+        <li>Apakah mahasiswa memiliki prasyarat yang cukup?</li>
+        <li>Apakah terdapat gap atau tumpang tindih materi?</li>
+        <li>Apakah kurikulum sudah sesuai kebutuhan?</li>
+        <li>Apa yang perlu diperbaiki di tingkat prodi?</li>
+        <li>Rekomendasi konkret untuk peningkatan kualitas pembelajaran?</li>
+      </ul>
+
+    </div>
+
+    <div class="card-footer d-flex justify-content-between">
+      <button class="btn btn-purple">Sampaikan Masukan</button>
+      <button class="btn btn-outline-secondary">Lihat Rekap Prodi</button>
+    </div>
+  </div>
+</div>
+
+
+<div class="col-md-12">
+  <div class="card card-success">
+    <div class="card-header">
+      <h5 class="card-title mb-0">Log Pengajaran Dosen</h5>
+      <small class="text-light">(opsional - Personal)</small>
+    </div>
+
+    <div class="card-body">
+      Deskripsi:(untuk personal reuse & improvement)
+
+Formulir ini digunakan sebagai catatan pribadi Anda dalam mengevaluasi pengalaman mengajar pada mata kuliah yang diampu. Isian mencakup penilaian terhadap metode pengajaran, materi, penilaian (assessment), serta rencana perbaikan untuk pelaksanaan di semester berikutnya.
+
+Catatan ini bersifat pribadi dan hanya dapat diakses oleh Anda. Tujuannya adalah membantu Anda mempersiapkan pengajaran yang lebih baik ketika mengampu mata kuliah yang sama di masa mendatang.
+      <p>
+        Formulir ini digunakan sebagai catatan pribadi Anda dalam mengevaluasi pengalaman mengajar pada mata kuliah yang diampu.
+      </p>
+
+      <p>
+        Catatan ini hanya dapat diakses oleh Anda dan bertujuan membantu persiapan pengajaran yang lebih baik di semester berikutnya.
+      </p>
+
+      <hr>
+👉 Arah pengisian:
+Tuliskan secara jujur hal-hal yang menurut Anda berhasil, kurang efektif, serta ide perbaikan yang ingin Anda lakukan di semester berikutnya.
+      <strong>Arahan Pengisian:</strong>
+      <ul>
+        <li>Isi secara jujur dan reflektif</li>
+        <li>Fokus pada pengalaman pribadi mengajar</li>
+        <li>Tuliskan rencana perbaikan konkret</li>
+      </ul>
+
+      <hr>
+
+      <strong>Contoh Hal yang Ditanyakan:</strong>
+      <ul>
+        <li>Apa yang berjalan baik dalam pengajaran saya?</li>
+        <li>Apa yang tidak berjalan sesuai harapan?</li>
+        <li>Metode apa yang akan saya pertahankan?</li>
+        <li>Apa yang perlu saya ubah di semester berikutnya?</li>
+        <li>Hal apa yang tidak boleh terulang?</li>
+      </ul>
+
+    </div>
+
+    <div class="card-footer d-flex justify-content-between">
+      <button class="btn btn-success">Isi Catatan</button>
+      <button class="btn btn-outline-secondary">Lihat Riwayat Saya</button>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

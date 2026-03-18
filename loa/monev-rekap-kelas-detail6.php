@@ -105,11 +105,6 @@
                 <button type="button" class="btn btn-outline-success btn-sm">
                   <i class="fas fa-file-download me-1"></i> Export
                 </button>
-                <button type="button" 
-                class="btn btn-outline-secondary btn-sm"
-                onclick="window.location.href='perkuliahan-portofolio-kelas-detail5.php'">
-                <span class="fas fa-edit me-1"></span> Pengisian Refleksi
-              </button>
                 <!-- <button type="button" class="btn btn-outline-danger btn-sm">
                   <i class="fas fa-ban me-1"></i> Reset
                 </button> -->    
@@ -124,100 +119,143 @@
             <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail4.php'"><a class="nav-link ">Remedial</a></li>
             <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail3.php'"><a class="nav-link ">Portofolio</a></li>
             <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail2.php'"><a class="nav-link ">Mahasiswa</a></li>
-            <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail6.php'"><a class="nav-link active">Refleksi</a></li>
-            <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail5.php'"><a class="nav-link ">OBE</a></li>
+            <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail5.php'"><a class="nav-link ">Refleksi</a></li>
+            <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail6.php'"><a class="nav-link active">OBE</a></li>
           </ul>
-     
 
-<!-- ========== CARD : Ringkasan Refleksi Kelas untuk Tim Kurikulum ========== -->
-<div class="card ">
+
+<!-- ========== CARD : tabel visualisasi CPMK ========== -->
+<div class="card">
   <div class="card-body">
+    <div class="table-responsive">
+      <table class="table table-bordered table-striped table-sm">
+        <thead class="table-dark text-center">
+          <!-- Baris 1: CPL -->
+          <tr>
+            <!-- <th rowspan="2">Kode MK</th> -->
+            <th rowspan="2" colspan="2">CPMK</th>
+            <th colspan="2" data-bs-toggle="tooltip" title="CPL 1: Bertakwa kepada Tuhan Yang Maha Esa dan berperilaku islami">CPL 1</th>
+            <th colspan="2">CPL 2</th>
+            <th colspan="3">CPL 3</th>
+            <th colspan="2">CPL 4</th>
+            <th colspan="2">CPL 5</th>
+            <th colspan="2">CPL 6</th>
+            <th colspan="2">CPL 7</th>
+            <th>CPL 8</th>
+            <th colspan="2">CPL 9</th>
+            <th>CPL 10</th>
+          </tr>
+          <!-- Baris 2: IK -->
+          <tr>
+            <th data-bs-toggle="tooltip" title="IK 1: Menunjukkan perilaku islami pada setiap peran yang dijalani (50%)">IK 1</th>
+            <th>IK 2</th>
+            <th>IK 3</th>
+            <th>IK 4</th>
+            <th>IK 5</th>
+            <th>IK 6</th>
+            <th>IK 7</th>
+            <th>IK 8</th>
+            <th>IK 9</th>
+            <th>IK 10</th>
+            <th>IK 11</th>
+            <th>IK 12</th>
+            <th>IK 13</th>
+            <th>IK 14</th>
+            <th>IK 15</th>
+            <th>IK 16</th>
+            <th>IK 17</th>
+            <th>IK 18</th>
+            <th>IK 19</th>
+          </tr>
+        </thead>
 
-    <!-- ================= TAG UTAMA ================= -->
-    <div class="mb-4">
-      <h5 class="text-primary"><strong>TAG Utama Kelas</strong></h5>
-      <div>
-        <span class="badge badge-danger">#CPMK_Tidak_Tercapai</span>
-        <span class="badge badge-warning">#Variansi_Tinggi</span>
-        <span class="badge badge-info">#Prasyarat_Lemah</span>
-        <span class="badge badge-secondary">#Instrumen_Terlalu_Sulit</span>
-        <span class="badge badge-primary">#Butuh_Pemecahan_Materi</span>
-      </div>
+        <tbody>
+          <tr>
+            <td>STS704</td>
+            <td data-bs-toggle="tooltip" title="Deskripsi CPMK 1">1</td>
+            <td class="text-center">v</td><td></td>
+            <td></td><td></td>
+            <td></td><td></td><td></td>
+            <td></td><td></td>
+            <td></td><td></td>
+            <td></td><td></td>
+            <td></td><td></td>
+            <td></td>
+            <td></td><td></td><td></td>
+          </tr>
+          <tr>
+            <td>STS704</td>
+            <td>2</td>
+            <td></td><td class="text-center">v</td>
+            <td></td><td></td>
+            <td></td><td></td><td></td>
+            <td></td><td></td>
+            <td></td><td></td>
+            <td></td><td></td>
+            <td></td><td></td>
+            <td></td>
+            <td></td><td></td><td></td>
+          </tr>
+          <tr>
+            <td>STS704</td>
+            <td>3</td>
+            <td></td><td></td>
+            <td class="text-center">v</td><td></td>
+            <td></td><td></td><td></td>
+            <td></td><td></td>
+            <td></td><td></td>
+            <td></td><td></td>
+            <td class="text-center">v</td><td></td>
+            <td></td>
+            <td></td><td></td><td></td>
+          </tr>
+          <tr>
+            <td>STS704</td>
+            <td>4</td>
+            <td></td><td></td>
+            <td></td><td></td><td></td>
+            <td class="text-center">v</td><td></td>
+            <td></td><td></td>
+            <td></td><td></td>
+            <td class="text-center">v</td><td></td>
+            <td></td><td></td>
+            <td></td>
+            <td></td><td></td><td></td>
+          </tr>
+        </tbody>
+      </table>
     </div>
-
-    <hr>
-
-    <!-- ================= RINGKASAN OBE ================= -->
-    <div class="mb-4">
-      <h5 class="text-primary"><strong>1. Ringkasan Ketercapaian OBE</strong></h5>
-      <p>
-        CPMK 1 dan 2 relatif tercapai secara konsisten, namun CPMK 3 menunjukkan penurunan signifikan.
-        Mahasiswa mulai tertinggal pada tahap analisis kasus lanjutan.
-        Distribusi nilai menunjukkan variansi tinggi antara mahasiswa kuat dan lemah.
-      </p>
-    </div>
-
-    <!-- ================= METODE ================= -->
-    <div class="mb-4">
-      <h5 class="text-primary"><strong>2. Temuan Metode Pembelajaran</strong></h5>
-      <ul>
-        <li>Studi kasus efektif meningkatkan pemahaman konseptual.</li>
-        <li>Ceramah murni kurang efektif untuk CPMK analitis.</li>
-        <li>Project akhir menjadi bottleneck utama kelas.</li>
-      </ul>
-    </div>
-
-    <!-- ================= PENILAIAN ================= -->
-    <div class="mb-4">
-      <h5 class="text-primary"><strong>3. Evaluasi Instrumen Penilaian</strong></h5>
-      <ul>
-        <li>Rubrik belum dipahami mahasiswa secara merata.</li>
-        <li>Instrumen cenderung mengukur teknis, bukan kedalaman analisis.</li>
-        <li>Bobot tugas akhir terlalu dominan.</li>
-      </ul>
-    </div>
-
-    <!-- ================= POLA MAHASISWA ================= -->
-    <div class="mb-4">
-      <h5 class="text-primary"><strong>4. Pola Mahasiswa</strong></h5>
-      <p>
-        Kelemahan dominan pada prasyarat konseptual.
-        Mahasiswa dengan kemampuan mandiri tinggi berkembang pesat,
-        namun mahasiswa dengan ketergantungan contoh mengalami stagnasi.
-      </p>
-    </div>
-
-    <hr>
-
-    <!-- ================= PRIORITAS TINDAK LANJUT ================= -->
-    <div class="alert alert-warning">
-      <h5><i class="fas fa-exclamation-triangle mr-1"></i> Isu Prioritas</h5>
-      <ul class="mb-0">
-        <li>Lonjakan kesulitan pada CPMK 3</li>
-        <li>Prasyarat mahasiswa belum merata</li>
-        <li>Desain instrumen perlu evaluasi ulang</li>
-      </ul>
-    </div>
-
-    <!-- ================= REKOMENDASI PENGADAAN ================= -->
-    <div class="alert alert-info">
-      <h5><i class="fas fa-lightbulb mr-1"></i> Rekomendasi untuk Prodi</h5>
-      <ul class="mb-0">
-        <li>Pengembangan modul prasyarat sebelum CPMK 3</li>
-        <li>Workshop penyusunan rubrik berbasis OBE</li>
-        <li>Pengadaan software simulasi untuk analisis kasus</li>
-      </ul>
-    </div>
-
   </div>
-
-  <div class="card-footer text-right">
-    <button class="btn btn-outline-primary btn-sm">
-      <i class="fas fa-file-download mr-1"></i> Unduh Ringkasan
-    </button>
-  </div>
-
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
       </div>
@@ -286,6 +324,5 @@ jika ada kesamaan NIM di satu mata kuliah(artinya mahasiswa tempuh >1 kali MK ts
     </div>
   </div>
 </div>
-
 
 <?php include('5script.php'); ?>

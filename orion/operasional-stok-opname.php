@@ -1,7 +1,15 @@
 <?php $page = 'operasional_stok_opname'; ?>
 <?php include('1header.php'); ?>
 <?php include('2navbar.php'); ?>
-<?php include('3sidebar.php'); ?>
+<?php
+// Include sidebar sesuai peran
+$sidebar_file = "3sidebar-{$role}.php";
+if (file_exists($sidebar_file)) {
+    include($sidebar_file);
+} else {
+    include('3sidebar.php');
+}
+?>
 
   
 <div class="content-wrapper" style="min-height: 626.4px;">    
@@ -71,19 +79,62 @@
   <div class="card-body">
     <div class="table-responsive">
       <table class="table table-bordered table-striped table-sm datatables1">
-                       <thead>
-                  <tr align="center">
-                    <th width="5px">No.</th>
-                    <th>Gudang</th>
-                    <th>Tanggal</th>
-                    <th>Penanggung Jawab</th>
-                    <th>Catatan</th>
-                    <th>Aksi</th>
-                  </tr>
-                </thead>
-                <tbody>
-                	
-                </tbody>
+                     
+                    
+    <thead>
+        <tr>
+            <th>No.</th>
+            <th>Gudang</th>
+            <th>Tanggal</th>
+            <th>Penanggung Jawab</th>
+            <th>Catatan</th>
+            <th>Aksi</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>Purwokerto</td>
+            <td>18-Mar-2026</td>
+            <td>MAIL</td>
+            <td>CAMPUR</td>
+            <td><a href="operasional-stok-opname-detail.php<?=$q;?>" class="btn btn-sm btn-info"><i class="fas fa-list"></i></a></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Purwokerto</td>
+            <td>17-Mar-2026</td>
+            <td>RIVAL JENAL</td>
+            <td>-</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Purwokerto</td>
+            <td>16-Mar-2026</td>
+            <td>RIVAL</td>
+            <td>FJN,KIG,MKPL</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Purwokerto</td>
+            <td>13-Mar-2026</td>
+            <td>RIVAL,JENAL</td>
+            <td>CTN,NARA</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Purwokerto</td>
+            <td>11-Mar-2026</td>
+            <td>PAK YONO</td>
+            <td>KENCANA</td>
+            <td></td>
+        </tr>
+    </tbody>
+
+
       </table>
     </div>
   </div>

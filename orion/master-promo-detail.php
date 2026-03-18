@@ -1,4 +1,4 @@
-<?php $page = 'laporan_pelunasan_piutang'; ?>
+<?php $page = 'master_promo'; ?>
 <?php include('1header.php'); ?>
 <?php include('2navbar.php'); ?>
 <?php
@@ -16,7 +16,7 @@ if (file_exists($sidebar_file)) {
 
   <section class="content-header">
     <div class="container-fluid">
-      <h3 class="mb-0"> Laporan Pelunasan Piutang
+      <h3 class="mb-0">Ketentuan Promo
         <button type="button" class="btn btn-tool" data-bs-toggle="modal" data-bs-target="#modalBantuan" title="Bantuan"><i class="fas fa-question-circle"></i>
         </button>
       </h3>
@@ -34,22 +34,14 @@ if (file_exists($sidebar_file)) {
           <div class="card">
             <div class="card-body ">
               <div class="row">
+             
+                <div class="col-md-6">
+                  <b>Area:</b> Semua
+                </div>
+                <div class="col-md-6">
+                  <b>Sales:</b> Semua
+                </div>
 
-                <div class="col-md-6">
-                  <b>Periode Tanggal:</b> 01 Jan 2026 - 09 Mar 2026
-                </div>
-                <div class="col-md-6">
-                  <b>Gudang:</b> Semua Gudang
-                </div>
-                <div class="col-md-6">
-                  <b>Toko:</b> Semua Toko
-                </div>
-                 <div class="col-md-6">
-                  <b>Sales:</b> Semua Sales
-                </div>
-                <div class="col-md-6">
-                  <b>Area:</b> Semua Area
-                </div>
 
               </div>
             </div>
@@ -58,42 +50,170 @@ if (file_exists($sidebar_file)) {
               <div class="card-tools ms-auto">
                 <button class="btn btn-outline-info btn-sm " data-bs-toggle="modal" data-bs-target="#modalFilter">
                   <i class="fas fa-filter me-1"></i> Filter
-                </button>
-                <button type="button" class="btn btn-outline-success btn-sm">
-                  <i class="fas fa-file-download me-1"></i> Export
-                </button>
-                <button type="button" class="btn btn-outline-success btn-sm">
-                  <i class="fas fa-file-download me-1"></i> Export Tanda Terima Tagihan
-                </button>
-                <button type="button" class="btn btn-outline-success btn-sm">
-                  <i class="fas fa-file-download me-1"></i> Export Database
-                </button>
+                </button>        
+                <a href="data-promo.xls" class="btn btn-sm btn-outline-success ">
+                    <i class="fas fa-file-download me-1"></i>Export
+                </a>
               </div>
             </div>
             
           </div>
 
 
-
          <!-- ========== CARD : Tabel  Granular ========== -->
+         <div class="card">
+            <div class="card-header d-flex align-items-center">
+                <h5 class="card-title mb-0">
+                    Detail Promo Toko DEPO PELITA SOKARAJA
+                </h5>  
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered table-striped table-sm datatables1">
+                        <thead>
+                            <tr>
+                                <th>No.</th>
+                                <th>Merek</th>
+                                <th>Diskon 1</th>
+                                <th>Diskon 2</th>
+                                <th>Diskon 3</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>1</td><td>MAKAPAL</td><td>20</td><td>0</td><td>0</td></tr>
+                            <tr><td>2</td><td>SUBRON</td><td>20</td><td>0</td><td>0</td></tr>
+                            <tr><td>3</td><td>LIONSTAR</td><td>0</td><td>0</td><td>0</td></tr>
+                            <tr><td>4</td><td>HOMMY</td><td>20</td><td>7.5</td><td>0</td></tr>
+                            <tr><td>5</td><td>HAWAII</td><td>0</td><td>0</td><td>0</td></tr>
+                            <tr><td>6</td><td>TAKUMA</td><td>0</td><td>0</td><td>0</td></tr>
+                            <tr><td>7</td><td>GBU</td><td>0</td><td>0</td><td>0</td></tr>
+                            <tr><td>8</td><td>BYGY</td><td>0</td><td>0</td><td>0</td></tr>
+                            <tr><td>9</td><td>OWL</td><td>0</td><td>0</td><td>0</td></tr>
+                            <tr><td>10</td><td>TANTOS</td><td>0</td><td>0</td><td>0</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+<!-- ========== CARD : Tabel  Granular ========== -->
 <div class="card">
-  <div class="card-body">
-    <div class="table-responsive">
-      <table class="table table-bordered table-striped table-sm datatables1">
-        
-        <thead>
-                  <tr align="center" role="row"><th class="sorting_disabled" rowspan="1" colspan="1">No.</th><th class="sorting_disabled" rowspan="1" colspan="1">Alamat Gudang</th><th class="sorting_disabled" rowspan="1" colspan="1">Tanggal Pembayaran</th><th class="sorting_disabled" rowspan="1" colspan="1">No Faktur</th><th class="sorting_disabled" rowspan="1" colspan="1">Toko (kode)</th><th class="sorting_disabled" rowspan="1" colspan="1">Area</th><th class="sorting_disabled" rowspan="1" colspan="1">Sales</th><th class="sorting_disabled" rowspan="1" colspan="1">Total Jual</th><th class="sorting_disabled" rowspan="1" colspan="1">Nominal</th><th class="sorting_disabled" rowspan="1" colspan="1">Retur</th><th class="sorting_disabled" rowspan="1" colspan="1">Potongan</th><th class="sorting_disabled" rowspan="1" colspan="1">Ket</th></tr>
-                </thead>
-                <tfoot>
-                  <tr><th style="text-align: center !important;" colspan="7" rowspan="1">Total (Rp)</th><th style="text-align: right !important;" id="totalJual" rowspan="1" colspan="1">705.939.281,52</th><th style="text-align: right !important;" id="totalNominal" rowspan="1" colspan="1">590.477.107,05</th><th style="text-align: right !important;" id="totalRetur" rowspan="1" colspan="1">36.394.558,15</th><th style="text-align: right !important;" id="totalPotongan" rowspan="1" colspan="1">1.553.432,12</th><th rowspan="1" colspan="1"></th></tr>
-                </tfoot>
-              <tbody><tr class="odd"><td class="dtr-control" style="text-align: center;">1</td><td style="text-align: center;">Purwokerto</td><td style="text-align: center;">02-Mar-2026</td><td style="text-align: center;">PJ/003097</td><td style="text-align: left;">BU IFA (E00149)</td><td style="text-align: left;">ADIPALA, CILACAP</td><td style="text-align: left;">SUPRI</td><td style="text-align: right !important;">10.293.600,00</td><td style="text-align: right !important;">793.600,00</td><td style="text-align: right !important;">0,00</td><td style="text-align: right !important;">0,00</td><td style="text-align: left;"></td></tr><tr class="even"><td class="dtr-control" style="text-align: center;">2</td><td style="text-align: center;">Purwokerto</td><td style="text-align: center;">02-Mar-2026</td><td style="text-align: center;">PJ/004041</td><td style="text-align: left;">TK DAMAI (E00309)</td><td style="text-align: left;">CILACAP</td><td style="text-align: left;">SUPRI</td><td style="text-align: right !important;">1.612.150,00</td><td style="text-align: right !important;">612.150,00</td><td style="text-align: right !important;">0,00</td><td style="text-align: right !important;">0,00</td><td style="text-align: left;"></td></tr><tr class="odd"><td class="dtr-control" style="text-align: center;">3</td><td style="text-align: center;">Purwokerto</td><td style="text-align: center;">02-Mar-2026</td><td style="text-align: center;">PJ/004043</td><td style="text-align: left;">YOGI MART (E00032)</td><td style="text-align: left;">BANYUMAS</td><td style="text-align: left;">SUPRI</td><td style="text-align: right !important;">3.307.740,00</td><td style="text-align: right !important;">3.307.740,00</td><td style="text-align: right !important;">0,00</td><td style="text-align: right !important;">0,00</td><td style="text-align: left;"></td></tr><tr class="even"><td class="dtr-control" style="text-align: center;">4</td><td style="text-align: center;">Purwokerto</td><td style="text-align: center;">02-Mar-2026</td><td style="text-align: center;">PJ/002957</td><td style="text-align: left;">RIFSTAR (E00215)</td><td style="text-align: left;">WANAREJA</td><td style="text-align: left;">SUPRI</td><td style="text-align: right !important;">1.464.816,00</td><td style="text-align: right !important;">176.016,00</td><td style="text-align: right !important;">1.288.800,00</td><td style="text-align: right !important;">0,00</td><td style="text-align: left;">POT GAJI INSENTIF FEB 2026</td></tr><tr class="odd"><td class="dtr-control" style="text-align: center;">5</td><td style="text-align: center;">Purwokerto</td><td style="text-align: center;">02-Mar-2026</td><td style="text-align: center;">PJ/002963</td><td style="text-align: left;">RIFSTAR (E00215)</td><td style="text-align: left;">WANAREJA</td><td style="text-align: left;">SUPRI</td><td style="text-align: right !important;">166.000,00</td><td style="text-align: right !important;">166.000,00</td><td style="text-align: right !important;">0,00</td><td style="text-align: right !important;">0,00</td><td style="text-align: left;">POT GAJI INSENTIF FEB 2026</td></tr><tr class="even"><td class="dtr-control" style="text-align: center;">6</td><td style="text-align: center;">Purwokerto</td><td style="text-align: center;">02-Mar-2026</td><td style="text-align: center;">PJ/004549</td><td style="text-align: left;">PEMBELI (E00259)</td><td style="text-align: left;">PWT</td><td style="text-align: left;">OFFICE</td><td style="text-align: right !important;">66.800,00</td><td style="text-align: right !important;">66.800,00</td><td style="text-align: right !important;">0,00</td><td style="text-align: right !important;">0,00</td><td style="text-align: left;"></td></tr><tr class="odd"><td class="dtr-control" style="text-align: center;">7</td><td style="text-align: center;">Purwokerto</td><td style="text-align: center;">02-Mar-2026</td><td style="text-align: center;">PJ/004559</td><td style="text-align: left;">PEMBELI (E00259)</td><td style="text-align: left;">PWT</td><td style="text-align: left;">OFFICE</td><td style="text-align: right !important;">81.000,00</td><td style="text-align: right !important;">81.000,00</td><td style="text-align: right !important;">0,00</td><td style="text-align: right !important;">0,00</td><td style="text-align: left;"></td></tr><tr class="even"><td class="dtr-control" style="text-align: center;">8</td><td style="text-align: center;">Purwokerto</td><td style="text-align: center;">02-Mar-2026</td><td style="text-align: center;">PJ/004435</td><td style="text-align: left;">AMRI (E00191)</td><td style="text-align: left;">PURWOKERTO</td><td style="text-align: left;">OFFICE</td><td style="text-align: right !important;">50.000,00</td><td style="text-align: right !important;">50.000,00</td><td style="text-align: right !important;">0,00</td><td style="text-align: right !important;">0,00</td><td style="text-align: left;">POT GAJI FEB 2026</td></tr><tr class="odd"><td class="dtr-control" style="text-align: center;">9</td><td style="text-align: center;">Purwokerto</td><td style="text-align: center;">02-Mar-2026</td><td style="text-align: center;">PJ/003897</td><td style="text-align: left;">ISMAIL (E00195)</td><td style="text-align: left;">PWT</td><td style="text-align: left;">OFFICE</td><td style="text-align: right !important;">146.400,00</td><td style="text-align: right !important;">146.400,00</td><td style="text-align: right !important;">0,00</td><td style="text-align: right !important;">0,00</td><td style="text-align: left;">POT GAJI FEB 2026</td></tr><tr class="even"><td class="dtr-control" style="text-align: center;">10</td><td style="text-align: center;">Purwokerto</td><td style="text-align: center;">02-Mar-2026</td><td style="text-align: center;">PJ/004436</td><td style="text-align: left;">ISMAIL (E00195)</td><td style="text-align: left;">PWT</td><td style="text-align: left;">OFFICE</td><td style="text-align: right !important;">26.400,00</td><td style="text-align: right !important;">26.400,00</td><td style="text-align: right !important;">0,00</td><td style="text-align: right !important;">0,00</td><td style="text-align: left;">POT GAJI FEB 2026</td></tr></tbody>
-    </table>
+    <div class="card-header d-flex align-items-center">
+        <h5 class="card-title mb-0">
+            List Harga Khusus Per-Produk Toko DEPO PELITA SOKARAJA
+        </h5>  
     </div>
-  </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped table-sm datatables1">
+                <thead>
+                    <tr>
+                        <th>No.</th>
+                        <th>Nama (Kode)</th>
+                        <th>Harga Khusus</th>
+                        <th>Diskon 1</th>
+                        <th>Diskon 2</th>
+                        <th>Diskon 3</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>BAKI/NAMPAN ST 27X20X4,8 (STL(000008))</td>
+                        <td>7.000</td>
+                        <td>10</td>
+                        <td>5</td>
+                        <td>10</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>MANGKOK 5,5 DUA WARNA TYK (TYK-00064)</td>
+                        <td>87.000</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>SARINGAN MIE (GG BAMBU) (SBN(SM-02))</td>
+                        <td>13.200</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>DISPENSER SABUN HA 1737 (STL(000768))</td>
+                        <td>8.250</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>MANTEL SET CELANA ORION (QNA(000733))</td>
+                        <td>105.000</td>
+                        <td>5</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>GARPU 303 18 GRAM SUBRON (SBN(SK18))</td>
+                        <td>6.800</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>SUSUK ST GG KAYU (SBN(KW-T03))</td>
+                        <td>24.000</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>CETAKAN KUE 7 LUBANG (SGO-CP7D)</td>
+                        <td>95.000</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>GASTRONOM + TUTUP SS (RSM(000007))</td>
+                        <td>74.500</td>
+                        <td>20</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>SENDOK 303/18 GRAM SUBRON (SBN(S303-18GR))</td>
+                        <td>6.800</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </div>
 
-          
+
 
 
 
@@ -336,5 +456,34 @@ if (file_exists($sidebar_file)) {
   </div>
 </div>
 
+<div class="modal fade" id="modalGagal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalGagalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content border-danger border-2 shadow">
+      <div class="modal-header bg-danger text-white">
+        <h5 class="modal-title" id="modalGagalLabel"><i class="fas fa-times-circle me-2"></i>Oops! Terjadi Kesalahan</h5>
+      </div>
+      <div class="modal-body">
+        <p><strong>❌ Masalah:</strong><br> 
+          <span id="errorAction">Upload file gagal.</span></p>
 
+        <p><strong>⚠️ Penyebab:</strong><br> 
+          <span id="errorReason">Format file tidak sesuai (.pdf/.docx) atau ukuran melebihi 5MB.</span></p>
+
+        <p><strong>💡 Solusi:</strong><br> 
+          <span id="errorSolution">Pastikan file sesuai format, ukuran < 5MB, lalu coba unggah lagi.</span></p>
+
+        <p><i>Jika masih gagal, hubungi admin untuk bantuan atau tips lebih lanjut.</i></p>
+
+        <!-- Optional: reward tip gamified -->
+        <div class="alert alert-warning mt-3" role="alert">
+          🔹 Tip: Setiap percobaan upload berhasil akan menambah EXP +20! Jangan menyerah! 🚀
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-dark" id="closeGagal" data-bs-dismiss="modal"><i class="fas fa-check me-1"></i> Tutup</button>
+      </div>
+    </div>
+  </div>
+</div>
 <?php include('5script.php'); ?>
+

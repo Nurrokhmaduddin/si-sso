@@ -1,18 +1,26 @@
-<?php $page = 'transaksi_piutang'; ?>
+<?php $page = 'transaksi_tracking'; ?>
 <?php include('1header.php'); ?>
 <?php include('2navbar.php'); ?>
-<?php include('3sidebar.php'); ?>
+<?php
+// Include sidebar sesuai peran
+$sidebar_file = "3sidebar-{$role}.php";
+if (file_exists($sidebar_file)) {
+    include($sidebar_file);
+} else {
+    include('3sidebar.php');
+}
+?>
 
   
 <div class="content-wrapper" style="min-height: 626.4px;">    
 
   <section class="content-header">
     <div class="container-fluid">
-      <h3 class="mb-0"> Data Piutang ??
+      <h3 class="mb-0"> Detail Order Tracking
         <button type="button" class="btn btn-tool" data-bs-toggle="modal" data-bs-target="#modalBantuan" title="Bantuan"><i class="fas fa-question-circle"></i>
         </button>
       </h3>
-        <p class="text-muted mb-0">Keterangan singkat cara baca informasi halaman ini</p>
+        <p class="text-muted mb-0">Order Tracking =  order yang masih Dalam tahap Proses</p>
     </div>
   </section>
 
@@ -25,32 +33,37 @@
           <!-- ========== CARD : Filter & Export ========== -->
           <div class="card">
             <div class="card-body ">
-              <div class="row">
+              
 
-                <div class="col-md-6">
-                  <b>Sales:</b> Semua
-                </div>
-               <!--  <div class="col-md-6">
-                  <b>Status:</b> Semua
-                </div> -->
+               <h5>No PO: PO-00123</h5>
+               <p>Customer: Toko Maju Jaya</p>
+               <p>Total Item: 10 | Total Qty: 500</p>
 
+               <div class="progress">
+                <div class="progress-bar bg-success" style="width:60%">60% (300 / 500)</div>
               </div>
+
+
             </div>
 
              <div class="card-footer">
               <div class="card-tools ms-auto">
+                <button class="btn btn-outline-secondary btn-sm " onclick="window.location='transaksi-tracking-order-.php<?=$q;?>'">
+                  <i class="fas fa-reply me-1"></i> Kembali
+                </button>
                 <button class="btn btn-outline-info btn-sm " data-bs-toggle="modal" data-bs-target="#modalFilter">
                   <i class="fas fa-filter me-1"></i> Filter
                 </button>
-                <button type="button" class="btn btn-outline-primary btn-sm " data-bs-toggle="modal" data-bs-target="#modalTambahData">
-                  <i class="fas fa-plus me-1"></i> Add
-                </button>
-                <!-- <button type="button" class="btn btn-outline-primary btn-sm " data-bs-toggle="modal" data-bs-target="#modalImpor">
-                  <i class="fas fa-file-upload me-1"></i> Import
-                </button>                
                 <button type="button" class="btn btn-outline-success btn-sm">
                   <i class="fas fa-file-download me-1"></i> Export
                 </button>
+                <!-- <button type="button" class="btn btn-outline-primary btn-sm " data-bs-toggle="modal" data-bs-target="#modalTambahData">
+                  <i class="fas fa-plus me-1"></i> Add
+                </button> -->
+                <!-- <button type="button" class="btn btn-outline-primary btn-sm " data-bs-toggle="modal" data-bs-target="#modalImpor">
+                  <i class="fas fa-file-upload me-1"></i> Import
+                </button>                
+                
                 <button type="button" class="btn btn-outline-danger btn-sm">
                   <i class="fas fa-ban me-1"></i> Reset
                 </button>     -->
@@ -59,33 +72,58 @@
             
           </div>
 
+          <!-- ========== CARD : Tabel  Granular ========== -->
+          <div class="card">
+            <div class="card-header d-flex align-items-center">
+              <h5 class="card-title mb-0">Daftar Faktur Penjualan</h5>    
+              
+            </div>
 
-         <!-- ========== CARD : Tabel  Granular ========== -->
-<div class="card">
-  <div class="card-header d-flex align-items-center">
-    <h5 class="card-title mb-0">Daftar </h5>    
-    
-  </div>
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table table-bordered table-striped table-sm datatables1">
+                  <thead >
+                    <tr>
+                      <th>No Faktur</th>
+                      <th>Tanggal Faktur</th>
+                      <th>Qty Kirim</th>
+                      <th>Status</th>
+                      <th>Timeline</th>
+                      <th>Aksi</th>
+                    </tr>
+                  </thead>
+                  <tbody>
 
-  <div class="card-body">
-    <div class="table-responsive">
-      <table class="table table-bordered table-striped table-sm datatables1">
-        <thead>
-          <tr align="center">
-            <th>No.</th>
-            <th>Nama Sales</th>
-            <th>Tanggal Pemberian</th>
-            <th>Total Pemberian</th>
-            <th>Status</th>
-            <th>Aksi</th>
-          </tr>
-        </thead>
-        <tbody>
-        </tbody>
-      </table>
-    </div>
-  </div>
-</div>
+                    <tr>
+                      <td>INV-001</td>
+                      <td>12 Jan 2026</td>
+                      <td>200</td>
+                      <td><span class="badge badge-success">Dikirim</span></td>
+                      <td>
+                        Packing → Faktur → Dikirim → Diterima
+                      </td>
+                      <td>
+                        <a href="transaksi-tracking-order-detail1.php<?=$q;?>" class="btn btn-sm btn-info">Detail Barang</a>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>INV-002</td>
+                      <td>14 Jan 2026</td>
+                      <td>100</td>
+                      <td><span class="badge badge-warning">Dalam Pengiriman</span></td>
+                      <td>
+                        Packing → Faktur → Dikirim → ○
+                      </td>
+                      <td>
+                        <a href="transaksi-tracking-order-detail1.php<?=$q;?>" class="btn btn-sm btn-info">Detail Barang</a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
 
           
 
@@ -145,93 +183,6 @@
     </div>
   </div>
 </div>
-
-
-
-<!-- Modal Tambah Data -->
-<div class="modal fade" id="modalTambahData" tabindex="-1" aria-labelledby="modalTambahDataLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content rounded-3 shadow">
-      <div class="modal-header bg-primary text-white">
-        <h5 class="modal-title" id="modalTambahDataLabel">Tambah Data</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <form action="" method="POST" enctype="multipart/form-data">
-        <div class="modal-body">
-
-          <!-- Informasi -->
-          <div class="alert alert-warning mb-3 py-2" role="alert" style="font-size: 0.9rem;">
-            <i class="fas fa-info-circle me-1"></i>
-            <strong>Catatan:</strong> Semua field yang diberi tanda <span class="text-danger">*</span> wajib diisi.
-          </div>
-
-          <!-- Form Inputs -->
-          <div class="mb-3">
-            <label for="username" class="form-label">NIM <span class="text-danger">*</span></label>
-            <input type="text" class="form-control" id="username" name="username" placeholder="Masukkan Username" required>
-          </div>
-
-          <div class="mb-3">
-            <label for="displayname" class="form-label">Nama Lengkap <span class="text-danger">*</span></label>
-            <input type="text" class="form-control" id="displayname" name="displayname" placeholder="Masukkan Nama Lengkap" required>
-          </div>
-
-          <div class="mb-3">
-            <label for="email" class="form-label">Email <span class="text-danger">*</span></label>
-            <input type="email" class="form-control" id="email" name="email" placeholder="Masukkan Email" required>
-          </div>
-
-          <div class="mb-3">
-            <label for="hp" class="form-label">Nomor HP <span class="text-danger">*</span></label>
-            <input type="text" class="form-control" id="hp" name="hp" placeholder="Masukkan Nomor HP" required>
-          </div>
-          <div class="mb-3">
-            <label for="angkatan" class="form-label">Angkatan</label>
-            <select name="angkatan" id="angkatan" class="form-select">
-              <option value="">-- Pilih Angkatan --</option>
-              <option value="2025">2025</option>
-              <option value="2024">2024</option>
-              <option value="2023">2023</option>
-            </select>
-          </div>
-          <div class="mb-3">
-            <label for="angkatan" class="form-label">Peminatan</label>
-            <select name="angkatan" id="angkatan" class="form-select">
-              <option value="">-- Pilih Peminatan --</option>
-              <option value="2025">A</option>
-              <option value="2024">B</option>
-              <option value="2023">C</option>
-            </select>
-          </div>
-          <div class="mb-3">
-            <label for="status" class="form-label">Status <span class="text-danger">*</span></label>
-            <select class="form-select" id="status" name="status" required>
-              <option value="">-- Pilih Status --</option>
-              <option value="Aktif">Aktif</option>
-              <option value="NonAktif">NonAktif</option>
-              <option value="Cuti">Cuti</option>
-              <option value="Skors">Skors</option>
-              <option value="PassedOut">Passed Out</option>
-              <option value="DropOut">Drop Out</option>
-              <option value="Lulus">Lulus</option>
-            </select>
-          </div>
-
-          <div class="mb-3">
-            <label for="foto" class="form-label">Foto <span class="text-danger">*</span></label>
-            <input type="file" class="form-control" id="foto" name="foto" required>
-          </div>
-        </div>
-
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
-          <button type="submit" class="btn btn-primary">Simpan Data</button>
-        </div>
-      </form>
-    </div>
-  </div>
-</div>
-
 
 <!-- Modal Impor -->
 <div class="modal fade" id="modalImpor" tabindex="-1">
@@ -329,6 +280,5 @@
     </div>
   </div>
 </div>
-
 
 <?php include('5script.php'); ?>

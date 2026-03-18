@@ -1,4 +1,4 @@
-<?php $page = 'laporan_pelunasan_piutang'; ?>
+<?php $page = 'transaksi_tracking'; ?>
 <?php include('1header.php'); ?>
 <?php include('2navbar.php'); ?>
 <?php
@@ -16,11 +16,11 @@ if (file_exists($sidebar_file)) {
 
   <section class="content-header">
     <div class="container-fluid">
-      <h3 class="mb-0"> Laporan Pelunasan Piutang
+      <h3 class="mb-0"> Order Tracking - List
         <button type="button" class="btn btn-tool" data-bs-toggle="modal" data-bs-target="#modalBantuan" title="Bantuan"><i class="fas fa-question-circle"></i>
         </button>
       </h3>
-        <p class="text-muted mb-0">Keterangan singkat cara baca informasi halaman ini</p>
+        <p class="text-muted mb-0">Order Tracking =  order yang masih Dalam tahap Proses</p>
     </div>
   </section>
 
@@ -36,19 +36,10 @@ if (file_exists($sidebar_file)) {
               <div class="row">
 
                 <div class="col-md-6">
-                  <b>Periode Tanggal:</b> 01 Jan 2026 - 09 Mar 2026
+                  <b>Gudang:</b> Semua
                 </div>
                 <div class="col-md-6">
-                  <b>Gudang:</b> Semua Gudang
-                </div>
-                <div class="col-md-6">
-                  <b>Toko:</b> Semua Toko
-                </div>
-                 <div class="col-md-6">
-                  <b>Sales:</b> Semua Sales
-                </div>
-                <div class="col-md-6">
-                  <b>Area:</b> Semua Area
+                  <b>Status:</b> Semua
                 </div>
 
               </div>
@@ -59,39 +50,72 @@ if (file_exists($sidebar_file)) {
                 <button class="btn btn-outline-info btn-sm " data-bs-toggle="modal" data-bs-target="#modalFilter">
                   <i class="fas fa-filter me-1"></i> Filter
                 </button>
+                <button type="button" class="btn btn-outline-primary btn-sm " data-bs-toggle="modal" data-bs-target="#modalTambahData">
+                  <i class="fas fa-plus me-1"></i> Add
+                </button>
+                <!-- <button type="button" class="btn btn-outline-primary btn-sm " data-bs-toggle="modal" data-bs-target="#modalImpor">
+                  <i class="fas fa-file-upload me-1"></i> Import
+                </button>                
                 <button type="button" class="btn btn-outline-success btn-sm">
                   <i class="fas fa-file-download me-1"></i> Export
                 </button>
-                <button type="button" class="btn btn-outline-success btn-sm">
-                  <i class="fas fa-file-download me-1"></i> Export Tanda Terima Tagihan
-                </button>
-                <button type="button" class="btn btn-outline-success btn-sm">
-                  <i class="fas fa-file-download me-1"></i> Export Database
-                </button>
+                <button type="button" class="btn btn-outline-danger btn-sm">
+                  <i class="fas fa-ban me-1"></i> Reset
+                </button>     -->
               </div>
             </div>
             
           </div>
 
 
+          <!-- ========== CARD : Tabel  Granular ========== -->
+          <div class="card">
+            <div class="card-header d-flex align-items-center">
+              <h5 class="card-title mb-0">Daftar Verified Order </h5>    
+              
+            </div>
 
-         <!-- ========== CARD : Tabel  Granular ========== -->
-<div class="card">
-  <div class="card-body">
-    <div class="table-responsive">
-      <table class="table table-bordered table-striped table-sm datatables1">
-        
-        <thead>
-                  <tr align="center" role="row"><th class="sorting_disabled" rowspan="1" colspan="1">No.</th><th class="sorting_disabled" rowspan="1" colspan="1">Alamat Gudang</th><th class="sorting_disabled" rowspan="1" colspan="1">Tanggal Pembayaran</th><th class="sorting_disabled" rowspan="1" colspan="1">No Faktur</th><th class="sorting_disabled" rowspan="1" colspan="1">Toko (kode)</th><th class="sorting_disabled" rowspan="1" colspan="1">Area</th><th class="sorting_disabled" rowspan="1" colspan="1">Sales</th><th class="sorting_disabled" rowspan="1" colspan="1">Total Jual</th><th class="sorting_disabled" rowspan="1" colspan="1">Nominal</th><th class="sorting_disabled" rowspan="1" colspan="1">Retur</th><th class="sorting_disabled" rowspan="1" colspan="1">Potongan</th><th class="sorting_disabled" rowspan="1" colspan="1">Ket</th></tr>
-                </thead>
-                <tfoot>
-                  <tr><th style="text-align: center !important;" colspan="7" rowspan="1">Total (Rp)</th><th style="text-align: right !important;" id="totalJual" rowspan="1" colspan="1">705.939.281,52</th><th style="text-align: right !important;" id="totalNominal" rowspan="1" colspan="1">590.477.107,05</th><th style="text-align: right !important;" id="totalRetur" rowspan="1" colspan="1">36.394.558,15</th><th style="text-align: right !important;" id="totalPotongan" rowspan="1" colspan="1">1.553.432,12</th><th rowspan="1" colspan="1"></th></tr>
-                </tfoot>
-              <tbody><tr class="odd"><td class="dtr-control" style="text-align: center;">1</td><td style="text-align: center;">Purwokerto</td><td style="text-align: center;">02-Mar-2026</td><td style="text-align: center;">PJ/003097</td><td style="text-align: left;">BU IFA (E00149)</td><td style="text-align: left;">ADIPALA, CILACAP</td><td style="text-align: left;">SUPRI</td><td style="text-align: right !important;">10.293.600,00</td><td style="text-align: right !important;">793.600,00</td><td style="text-align: right !important;">0,00</td><td style="text-align: right !important;">0,00</td><td style="text-align: left;"></td></tr><tr class="even"><td class="dtr-control" style="text-align: center;">2</td><td style="text-align: center;">Purwokerto</td><td style="text-align: center;">02-Mar-2026</td><td style="text-align: center;">PJ/004041</td><td style="text-align: left;">TK DAMAI (E00309)</td><td style="text-align: left;">CILACAP</td><td style="text-align: left;">SUPRI</td><td style="text-align: right !important;">1.612.150,00</td><td style="text-align: right !important;">612.150,00</td><td style="text-align: right !important;">0,00</td><td style="text-align: right !important;">0,00</td><td style="text-align: left;"></td></tr><tr class="odd"><td class="dtr-control" style="text-align: center;">3</td><td style="text-align: center;">Purwokerto</td><td style="text-align: center;">02-Mar-2026</td><td style="text-align: center;">PJ/004043</td><td style="text-align: left;">YOGI MART (E00032)</td><td style="text-align: left;">BANYUMAS</td><td style="text-align: left;">SUPRI</td><td style="text-align: right !important;">3.307.740,00</td><td style="text-align: right !important;">3.307.740,00</td><td style="text-align: right !important;">0,00</td><td style="text-align: right !important;">0,00</td><td style="text-align: left;"></td></tr><tr class="even"><td class="dtr-control" style="text-align: center;">4</td><td style="text-align: center;">Purwokerto</td><td style="text-align: center;">02-Mar-2026</td><td style="text-align: center;">PJ/002957</td><td style="text-align: left;">RIFSTAR (E00215)</td><td style="text-align: left;">WANAREJA</td><td style="text-align: left;">SUPRI</td><td style="text-align: right !important;">1.464.816,00</td><td style="text-align: right !important;">176.016,00</td><td style="text-align: right !important;">1.288.800,00</td><td style="text-align: right !important;">0,00</td><td style="text-align: left;">POT GAJI INSENTIF FEB 2026</td></tr><tr class="odd"><td class="dtr-control" style="text-align: center;">5</td><td style="text-align: center;">Purwokerto</td><td style="text-align: center;">02-Mar-2026</td><td style="text-align: center;">PJ/002963</td><td style="text-align: left;">RIFSTAR (E00215)</td><td style="text-align: left;">WANAREJA</td><td style="text-align: left;">SUPRI</td><td style="text-align: right !important;">166.000,00</td><td style="text-align: right !important;">166.000,00</td><td style="text-align: right !important;">0,00</td><td style="text-align: right !important;">0,00</td><td style="text-align: left;">POT GAJI INSENTIF FEB 2026</td></tr><tr class="even"><td class="dtr-control" style="text-align: center;">6</td><td style="text-align: center;">Purwokerto</td><td style="text-align: center;">02-Mar-2026</td><td style="text-align: center;">PJ/004549</td><td style="text-align: left;">PEMBELI (E00259)</td><td style="text-align: left;">PWT</td><td style="text-align: left;">OFFICE</td><td style="text-align: right !important;">66.800,00</td><td style="text-align: right !important;">66.800,00</td><td style="text-align: right !important;">0,00</td><td style="text-align: right !important;">0,00</td><td style="text-align: left;"></td></tr><tr class="odd"><td class="dtr-control" style="text-align: center;">7</td><td style="text-align: center;">Purwokerto</td><td style="text-align: center;">02-Mar-2026</td><td style="text-align: center;">PJ/004559</td><td style="text-align: left;">PEMBELI (E00259)</td><td style="text-align: left;">PWT</td><td style="text-align: left;">OFFICE</td><td style="text-align: right !important;">81.000,00</td><td style="text-align: right !important;">81.000,00</td><td style="text-align: right !important;">0,00</td><td style="text-align: right !important;">0,00</td><td style="text-align: left;"></td></tr><tr class="even"><td class="dtr-control" style="text-align: center;">8</td><td style="text-align: center;">Purwokerto</td><td style="text-align: center;">02-Mar-2026</td><td style="text-align: center;">PJ/004435</td><td style="text-align: left;">AMRI (E00191)</td><td style="text-align: left;">PURWOKERTO</td><td style="text-align: left;">OFFICE</td><td style="text-align: right !important;">50.000,00</td><td style="text-align: right !important;">50.000,00</td><td style="text-align: right !important;">0,00</td><td style="text-align: right !important;">0,00</td><td style="text-align: left;">POT GAJI FEB 2026</td></tr><tr class="odd"><td class="dtr-control" style="text-align: center;">9</td><td style="text-align: center;">Purwokerto</td><td style="text-align: center;">02-Mar-2026</td><td style="text-align: center;">PJ/003897</td><td style="text-align: left;">ISMAIL (E00195)</td><td style="text-align: left;">PWT</td><td style="text-align: left;">OFFICE</td><td style="text-align: right !important;">146.400,00</td><td style="text-align: right !important;">146.400,00</td><td style="text-align: right !important;">0,00</td><td style="text-align: right !important;">0,00</td><td style="text-align: left;">POT GAJI FEB 2026</td></tr><tr class="even"><td class="dtr-control" style="text-align: center;">10</td><td style="text-align: center;">Purwokerto</td><td style="text-align: center;">02-Mar-2026</td><td style="text-align: center;">PJ/004436</td><td style="text-align: left;">ISMAIL (E00195)</td><td style="text-align: left;">PWT</td><td style="text-align: left;">OFFICE</td><td style="text-align: right !important;">26.400,00</td><td style="text-align: right !important;">26.400,00</td><td style="text-align: right !important;">0,00</td><td style="text-align: right !important;">0,00</td><td style="text-align: left;">POT GAJI FEB 2026</td></tr></tbody>
-    </table>
-    </div>
-  </div>
-</div>
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table table-bordered table-striped table-sm datatables1">
+                  <thead>
+                    <tr>
+                      <th>No PO</th>
+                      <th>Customer</th>
+                      <th>Tanggal PO</th>
+                      <th>Total Item</th>
+                      <th>Total Qty</th>
+                      <th>Terkirim</th>
+                      <th>Sisa</th>
+                      <th>Progress</th>
+                      <th>Aksi</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+
+                    <tr>
+                      <td>PO-00123</td>
+                      <td>Toko Maju Jaya</td>
+                      <td>10 Jan 2026</td>
+                      <td>10</td>
+                      <td>500</td>
+                      <td>300</td>
+                      <td>200</td>
+                      <td>
+                        <div class="progress">
+                          <div class="progress-bar bg-success" style="width:60%">60%</div>
+                        </div>
+                      </td>
+                      <td>
+                        <a href="transaksi-tracking-order-detail.php<?=$q;?>" class="btn btn-sm btn-primary">Detail</a>
+                      </td>
+                    </tr>
+
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
 
           
 
@@ -151,8 +175,6 @@ if (file_exists($sidebar_file)) {
     </div>
   </div>
 </div>
-
-
 
 <!-- Modal Tambah Data -->
 <div class="modal fade" id="modalTambahData" tabindex="-1" aria-labelledby="modalTambahDataLabel" aria-hidden="true">
@@ -237,7 +259,6 @@ if (file_exists($sidebar_file)) {
     </div>
   </div>
 </div>
-
 
 <!-- Modal Impor -->
 <div class="modal fade" id="modalImpor" tabindex="-1">

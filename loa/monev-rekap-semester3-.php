@@ -127,6 +127,68 @@
   </div>
   <div class="card-body">
     <canvas id="chartIKG" width="100%" height="30"></canvas>
+    <h6 class="font-weight-bold">Daftar Indikator Kompetensi (IK)</h6>
+    <table class="table table-sm table-bordered table-striped table-hover  ">
+
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Kode IK</th>
+      <th>Deskripsi IK</th>
+      <th>Skor IK</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- CPL 1 -->
+    <tr><td>1</td><td>IK1.1</td><td>Memahami konsep dasar CPL 1</td><td>82</td></tr>
+    <tr><td>2</td><td>IK1.2</td><td>Menerapkan prinsip CPL 1 dalam tugas</td><td>75</td></tr>
+
+    <!-- CPL 2 -->
+    <tr><td>3</td><td>IK2.1</td><td>Analisis kasus CPL 2 secara kritis</td><td>70</td></tr>
+    <tr><td>4</td><td>IK2.2</td><td>Mampu menyelesaikan masalah CPL 2</td><td>78</td></tr>
+    <tr><td>5</td><td>IK2.3</td><td>Menguasai konsep CPL 2 dalam praktik</td><td>83</td></tr>
+
+    <!-- CPL 3 -->
+    <tr><td>6</td><td>IK3.1</td><td>Memahami teknik dasar CPL 3</td><td>72</td></tr>
+    <tr><td>7</td><td>IK3.2</td><td>Mampu menerapkan CPL 3 pada studi kasus</td><td>76</td></tr>
+
+    <!-- CPL 4 -->
+    <tr><td>8</td><td>IK4.1</td><td>Memahami proses CPL 4</td><td>74</td></tr>
+    <tr><td>9</td><td>IK4.2</td><td>Mampu mengaplikasikan CPL 4 secara efektif</td><td>79</td></tr>
+
+    <!-- CPL 5 -->
+    <tr><td>10</td><td>IK5.1</td><td>Menguasai prinsip CPL 5</td><td>73</td></tr>
+    <tr><td>11</td><td>IK5.2</td><td>Mampu menerapkan CPL 5 dalam proyek</td><td>77</td></tr>
+
+    <!-- CPL 6 -->
+    <tr><td>12</td><td>IK6.1</td><td>Memahami konsep CPL 6</td><td>85</td></tr>
+
+    <!-- CPL 7 -->
+    <tr><td>13</td><td>IK7.1</td><td>Menunjukkan kemampuan CPL 7</td><td>80</td></tr>
+    <tr><td>14</td><td>IK7.2</td><td>Mengaplikasikan CPL 7 dalam studi kasus</td><td>84</td></tr>
+
+    <!-- CPL 8 -->
+    <tr><td>15</td><td>IK8.1</td><td>Memahami prinsip CPL 8</td><td>78</td></tr>
+    <tr><td>16</td><td>IK8.2</td><td>Mengimplementasikan CPL 8</td><td>82</td></tr>
+
+    <!-- CPL 9 -->
+    <tr><td>17</td><td>IK9.1</td><td>Analisis CPL 9 secara kritis</td><td>75</td></tr>
+    <tr><td>18</td><td>IK9.2</td><td>Mampu memecahkan masalah CPL 9</td><td>79</td></tr>
+
+    <!-- CPL 10 -->
+    <tr><td>19</td><td>IK10.1</td><td>Memahami teknik CPL 10</td><td>76</td></tr>
+    <tr><td>20</td><td>IK10.2</td><td>Mampu mengaplikasikan CPL 10</td><td>80</td></tr>
+
+    <!-- CPL 11 -->
+    <tr><td>21</td><td>IK11.1</td><td>Menguasai CPL 11</td><td>82</td></tr>
+    <tr><td>22</td><td>IK11.2</td><td>Menerapkan CPL 11 pada proyek</td><td>85</td></tr>
+
+    <!-- CPL 12 -->
+    <tr><td>23</td><td>IK12.1</td><td>Menguasai CPL 12 secara menyeluruh</td><td>88</td></tr>
+    <tr><td>24</td><td>IK12.2</td><td>Mampu mengaplikasikan CPL 12</td><td>90</td></tr>
+  </tbody>
+
+</table>
   </div>
 </div>
 
@@ -310,6 +372,188 @@
             </div>
           </div>          
         </div> -->
+
+
+
+
+
+
+
+
+
+
+
+<!-- 1. CARD: Populis Voting Semua Kelas -->
+<div class="col-md-12">
+  <div class="card card-info">
+
+    <div class="card-header">
+      <h5 class="card-title mb-0">Populis Kelas</h5>
+      <small class="text-light">Agregasi seluruh kelas • Berdasarkan catatan dosen</small>
+    </div>
+
+    <div class="card-body">
+
+      <p>
+        Menampilkan isu dan kondisi yang paling sering muncul dari seluruh kelas dalam satu semester.
+      </p>
+
+      <hr>
+
+      <h6><strong>Isu Dominan</strong></h6>
+
+      <div class="mb-2">
+        <span class="badge badge-danger">Mahasiswa belum siap</span>
+        <span class="float-right">18 kelas</span>
+      </div>
+
+      <div class="mb-2">
+        <span class="badge badge-warning">Waktu tidak cukup</span>
+        <span class="float-right">15 kelas</span>
+      </div>
+
+      <div class="mb-2">
+        <span class="badge badge-info">Assessment perlu perbaikan</span>
+        <span class="float-right">12 kelas</span>
+      </div>
+
+      <div class="mb-2">
+        <span class="badge badge-success">Metode praktik efektif</span>
+        <span class="float-right">20 kelas</span>
+      </div>
+
+      <hr>
+
+      <small class="text-muted">
+        Data berasal dari tagging pada Catatan & Evaluasi Kelas
+      </small>
+
+    </div>
+
+    <div class="card-footer d-flex justify-content-between">
+      <button class="btn btn-info">Lihat Detail</button>
+      <button class="btn btn-outline-secondary">Filter Semester</button>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- 2. CARD: Populis Voting Semua Mata Kuliah -->
+<div class="col-md-12">
+  <div class="card card-purple">
+
+    <div class="card-header">
+      <h5 class="card-title mb-0">Populis Mata Kuliah</h5>
+      <small class="text-light">Agregasi per mata kuliah • Insight kurikulum</small>
+    </div>
+
+    <div class="card-body">
+
+      <p>
+        Menampilkan mata kuliah dengan isu terbanyak berdasarkan evaluasi dosen di berbagai kelas.
+      </p>
+
+      <hr>
+
+      <h6><strong>Mata Kuliah Perlu Perhatian</strong></h6>
+
+      <div class="mb-2">
+        <strong>Pemrograman Web Dasar</strong>
+        <span class="badge badge-danger float-right">12 isu</span>
+        <br>
+        <small class="text-muted">Masalah: CPMK lanjutan, kesiapan mahasiswa</small>
+      </div>
+
+      <div class="mb-2">
+        <strong>Struktur Data</strong>
+        <span class="badge badge-warning float-right">9 isu</span>
+        <br>
+        <small class="text-muted">Masalah: tingkat kesulitan tinggi</small>
+      </div>
+
+      <div class="mb-2">
+        <strong>Basis Data</strong>
+        <span class="badge badge-info float-right">7 isu</span>
+        <br>
+        <small class="text-muted">Masalah: assessment & praktikum</small>
+      </div>
+
+      <hr>
+
+      <small class="text-muted">
+        Berdasarkan agregasi evaluasi lintas kelas per mata kuliah
+      </small>
+
+    </div>
+
+    <div class="card-footer d-flex justify-content-between">
+      <button class="btn btn-purple">Lihat Analisis</button>
+      <button class="btn btn-outline-secondary">Bandingkan Semester</button>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- 3. CARD: Masukan & Insight untuk Program Studi (Strategic) -->
+<div class="col-md-12">
+  <div class="card card-danger">
+
+    <div class="card-header">
+      <h5 class="card-title mb-0">Masukan & Insight Prodi</h5>
+      <small class="text-light">Lanjutan dari kelas • Strategis</small>
+    </div>
+
+    <div class="card-body">
+
+      <p>
+        Rangkuman insight dan rekomendasi dosen untuk perbaikan pembelajaran dan kurikulum di tingkat program studi.
+      </p>
+
+      <hr>
+
+      <h6><strong>Insight Utama</strong></h6>
+
+      <ul>
+        <li>Mahasiswa belum memiliki dasar pemrograman yang cukup di semester awal</li>
+        <li>Perlu penambahan sesi praktikum pada mata kuliah inti</li>
+        <li>Metode pembelajaran berbasis proyek lebih efektif dibanding ceramah</li>
+      </ul>
+
+      <hr>
+
+      <h6><strong>Rekomendasi</strong></h6>
+
+      <ul>
+        <li>Tambahkan mata kuliah pengantar coding di semester 1</li>
+        <li>Standarisasi rubrik penilaian antar dosen</li>
+        <li>Perbaiki distribusi beban tugas mahasiswa</li>
+      </ul>
+
+      <hr>
+
+      <small class="text-muted">
+        Diambil dari masukan dosen pada seluruh mata kuliah dalam semester berjalan
+      </small>
+
+    </div>
+
+    <div class="card-footer d-flex justify-content-between">
+      <button class="btn btn-danger">Lihat Semua Insight</button>
+      <button class="btn btn-outline-secondary">Export Laporan</button>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+
+
+
+
 
 
 

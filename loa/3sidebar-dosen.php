@@ -595,8 +595,8 @@
         </li> -->
 
 <!-- KONFIGURASI -->
-<li class="nav-item <?php echo in_array($page, ['konfigurasi_loa','konfigurasi_notifikasi','konfigurasi_kuesioner']) ? 'menu-open' : ''; ?>">
-  <a href="#" class="nav-link <?php echo in_array($page, ['konfigurasi_loa','konfigurasi_notifikasi','konfigurasi_kuesioner']) ? 'active' : ''; ?>">
+<li class="nav-item <?php echo in_array($page, ['konfigurasi_loa','konfigurasi_notifikasi']) ? 'menu-open' : ''; ?>">
+  <a href="#" class="nav-link <?php echo in_array($page, ['konfigurasi_loa','konfigurasi_notifikasi']) ? 'active' : ''; ?>">
     <i class="nav-icon fas fa-sliders-h"></i>
     <p>
       Konfigurasi
@@ -611,7 +611,7 @@
       </a>
     </li>
     <li class="nav-item">
-      <a href="konfigurasi-Kuesioner.php" class="nav-link <?php echo $page == 'konfigurasi_kuesioner' ? 'active' : ''; ?>">
+      <a href="konfigurasi-Kuesioner.php" class="nav-link <?php echo $page == 'konfigurasi_Kuesioner' ? 'active' : ''; ?>">
         <i class="far fa-circle nav-icon"></i>
         <p>Template Refleksi</p>
       </a>
