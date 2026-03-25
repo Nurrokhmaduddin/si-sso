@@ -8,7 +8,7 @@
 
   <section class="content-header">
     <div class="container-fluid">
-      <h3 class="mb-0">Pemetaan CPL-IK-CPMK
+      <h3 class="mb-0">Struktur Pemetaan
         <button type="button" class="btn btn-tool" data-bs-toggle="modal" data-bs-target="#modalBantuan" title="Bantuan"><i class="fas fa-question-circle"></i>
         </button>
       </h3>
@@ -229,7 +229,12 @@ function toggleById(id, btn) {
     <!-- <button type="button" class="btn btn-sm btn-outline-danger">
       <i class="fas fa-ban"></i>
     </button> -->
-    CPL 2 | deskripsi CPLnya 
+    CPL 2 | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
   </div>
   <div class="card-body d-none" id="detailIK2" >
     <table class="table table1 table-bordered table-striped table-sm ">
@@ -313,6 +318,169 @@ function toggleById(id, btn) {
           <td>IK.1.2</td>
           <td>Menunjukkan perilaku Islami pada setiap peran yang dijalani</td>
         </tr>
+        <tr>
+          <td colspan="3"><button class="btn btn-outline-primary btn-sm w-100" data-bs-toggle="modal" data-bs-target="#modalTambahIK"> Tambah IK</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+<script>
+function toggleById(id, btn) {
+  const row = document.getElementById(id);
+  if (!row) return;
+
+  row.classList.toggle('d-none');
+
+  btn.innerText = row.classList.contains('d-none')
+    ? 'Open'
+    : 'Close';
+}
+</script>
+<!-- ========== CARD : pemetaan ========== -->
+<div class="card">
+  <div class="card-header text-justify">
+    <button class="btn btn-sm btn-outline-info" onclick="toggleById('detailIK3')"><i class="fas fa-expand"></i></button>
+    <!-- <button type="button" class="btn btn-sm btn-outline-danger">
+      <i class="fas fa-ban"></i>
+    </button> -->
+    <b>CPL 3 | </b>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </div>
+  <div class="card-body d-none" id="detailIK3" >
+    <table class="table table1 table-bordered table-striped table-sm ">
+      <thead >
+        <tr class="text-uppercase">
+          <th style="text-align: center;">Aksi</th>
+          <th>Kode IK</th>
+          <th>Deskripsi IK</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <button class="btn btn-sm btn-outline-info" onclick="toggleById('detailCPMK31')"><i class="fas fa-expand"></i></button>
+            <button type="button" class="btn btn-sm btn-outline-danger">
+              <i class="fas fa-trash"></i>
+            </button>
+          </td>
+          <td>IK.2.1</td>
+          <td>Memahami dinul Islam serta pemikiran dan peradaban umat Islam M </td>
+        </tr>
+        <!-- ROW TURUNAN (EXPANDABLE) -->
+        <tr id="detailCPMK31" class="d-none bg-light">
+          <td colspan="4">
+            <table class="table table-bordered table-sm mb-0">
+              <thead class="table-dark">
+                <tr class="text-uppercase">
+                  <th class="text-center">Aksi</th>
+                  <th>Nama MK</th>
+                  <th>Kode CPMK</th>
+                  <th>Deskripsi CPMK</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="text-center">
+                    <button type="button" class="btn btn-sm btn-outline-danger">
+                      <i class="fas fa-trash"></i>
+                    </button>
+                  </td>
+                  <td>MK Pengantar</td>
+                  <td>SKS230-1</td>
+                  <td>Memahami dinul Islam</td>
+                </tr>
+
+                <tr>
+                  <td class="text-center">
+                    <button type="button" class="btn btn-sm btn-outline-danger">
+                      <i class="fas fa-trash"></i>
+                    </button>
+                  </td>
+                  <td>MK Pengantar</td>
+                  <td>SKS230-2</td>
+                  <td>Menunjukkan perilaku Islami</td>
+                </tr>
+
+                <tr>
+                  <td colspan="4">
+                    <button class="btn btn-outline-primary btn-xs w-100" data-bs-toggle="modal" data-bs-target="#modalTambahMKCPMK1">
+                      Tambah CPMK
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+
+
+
+        <tr>
+          <td>
+            <button class="btn btn-sm btn-outline-info" onclick="toggleById('detailCPMK32')"><i class="fas fa-expand"></i></button>
+            <button type="button" class="btn btn-sm btn-outline-danger">
+              <i class="fas fa-trash"></i>
+            </button>
+          </td>
+          <td>IK.1.2</td>
+          <td>Menunjukkan perilaku Islami pada setiap peran yang dijalani</td>
+        </tr>
+        <!-- ROW TURUNAN (EXPANDABLE) -->
+        <tr id="detailCPMK32" class="d-none bg-light">
+          <td colspan="4">
+            <table class="table table-bordered table-sm mb-0">
+              <thead class="table-dark">
+                <tr class="text-uppercase">
+                  <th class="text-center">Aksi</th>
+                  <th>Nama MK</th>
+                  <th>Kode CPMK</th>
+                  <th>Deskripsi CPMK</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="text-center">
+                    <button type="button" class="btn btn-sm btn-outline-danger">
+                      <i class="fas fa-trash"></i>
+                    </button>
+                  </td>
+                  <td>MK Pengantar</td>
+                  <td>SKS230-1</td>
+                  <td>Memahami dinul Islam</td>
+                </tr>
+
+                <tr>
+                  <td class="text-center">
+                    <button type="button" class="btn btn-sm btn-outline-danger">
+                      <i class="fas fa-trash"></i>
+                    </button>
+                  </td>
+                  <td>MK Pengantar</td>
+                  <td>SKS230-2</td>
+                  <td>Menunjukkan perilaku Islami</td>
+                </tr>
+
+                <tr>
+                  <td colspan="4">
+                    <button class="btn btn-outline-primary btn-xs w-100" data-bs-toggle="modal" data-bs-target="#modalTambahMKCPMK1">
+                      Tambah CPMK
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+
+
+
         <tr>
           <td colspan="3"><button class="btn btn-outline-primary btn-sm w-100" data-bs-toggle="modal" data-bs-target="#modalTambahIK"> Tambah IK</button></td>
         </tr>

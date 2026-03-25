@@ -1,7 +1,9 @@
-<?php $page = 'beranda_mahasiswa'; ?>
-<?php include('1header.php'); ?>
-<?php include('2navbar.php'); ?>
-<?php include('3sidebar.php'); ?>
+<?php 
+$page = 'beranda_mahasiswa';  
+include('1header.php'); 
+include('2navbar.php'); 
+include('3sidebar-mahasiswa.php'); 
+?>
 <style>
   .chart-container {
       position: relative;
@@ -67,7 +69,7 @@
                 <h5>Mata Kuliah Tuntas</h5>
                 <h3>5 / 6 Mata Kuliah</h3>
                 <p class="mb-0">
-                  <i class="fas fa-user-graduate"></i>
+                  <i class="fas fa-tasks"></i>
                     dengan nilai akhir huruf ≥ C 
                 </p>
               </div>
@@ -96,16 +98,16 @@
 <div class="card">   
   <div class="card-header ">         
     <h5 class="card-title mb-0"><i class="fas fa-chart-bar me-2"></i>
-      Bar Chart
+      Mata Kuliah Ditempuh
     </h5>
     <div class="card-tools">
-      <small class="text-muted">matakuliah ditempuh</small>
+      <small class="text-muted">Semester Terpilih</small>
     </div>
   </div>
-  <div class="card-body p-0">
-  <div class="chart-container">
-    <canvas id="chartCPL1" width="100%" height="30"></canvas>
-  </div>     
+  <div class="card-body d-flex flex-column">
+  <!-- <div class="chart-container"> -->
+    <canvas id="chartCPL1" width="100%" height="40"></canvas>
+  <!-- </div>      -->
   </div> 
 </div>
             <!-- ========== CARD : Stacked Bar Chart ========== -->
@@ -149,7 +151,9 @@
                         <td align="center">A</td>
                         <td align="center"><b>27</b></td>                                         
                         <td class="text-center">
-                          <button type="button" onclick="window.location='perkuliahan-portofolio-kelas-detail.php'" class="btn btn-xs btn-outline-info"> <i class='fas fa-info-circle'> </i></button>
+                          <a href="data-rps.pdf" target="_blank"  class="btn btn-xs btn-outline-success">
+                            <i class="fas fa-download"></i> 
+                          </a>
                         </td>
                       </tr>
 
@@ -163,7 +167,8 @@
                         <td align="center">C</td>
                         <td align="center"><b>33</b></td>
                         <td class="text-center">
-                          <button type="button" onclick="window.location='perkuliahan-portofolio-kelas-detail.php'" class="btn btn-xs btn-outline-info"> <i class='fas fa-info-circle'> </i></button>
+                          <button type="button" onclick="window.location='data-rps.PDF'" class="btn btn-xs btn-success"> <i class='fas fa-download'> </i></button>
+                        </td>
                         </td>
                       </tr>
 
@@ -177,7 +182,8 @@
                         <td align="center">B</td>
                         <td align="center"><b>26</b></td>
                         <td class="text-center">
-                          <button type="button" onclick="window.location='perkuliahan-portofolio-kelas-detail.php'" class="btn btn-xs btn-outline-info"> <i class='fas fa-info-circle'> </i></button>
+                          <button type="button" onclick="window.location='data-rps.PDF'" class="btn btn-xs btn-success"> <i class='fas fa-download'> </i></button>
+                        </td>
                         </td>
                       </tr>
                       <tr>
@@ -190,7 +196,8 @@
                         <td align="center">D</td>
                         <td align="center"><b>23</b></td>
                         <td class="text-center">
-                          <button type="button" onclick="window.location='perkuliahan-portofolio-kelas-detail.php'" class="btn btn-xs btn-outline-info"> <i class='fas fa-info-circle'> </i></button>
+                          <button type="button" onclick="window.location='data-rps.PDF'" class="btn btn-xs btn-success"> <i class='fas fa-download'> </i></button>
+                        </td>
                         </td>
                       </tr>
                       <tr>
@@ -203,7 +210,8 @@
                         <td align="center">F</td>
                         <td align="center"><b>25</b></td>
                         <td class="text-center">
-                         <button type="button" onclick="window.location='perkuliahan-portofolio-kelas-detail.php'" class="btn btn-xs btn-outline-info"> <i class='fas fa-info-circle'> </i></button>
+                         <button type="button" onclick="window.location='data-rps.PDF'" class="btn btn-xs btn-success"> <i class='fas fa-download'> </i></button>
+                        </td>
                        </td>
                      </tr>
                      <tr>
@@ -216,7 +224,8 @@
                       <td align="center">E</td>
                       <td align="center"><b>22</b></td>
                       <td class="text-center">
-                        <button type="button" onclick="window.location='perkuliahan-portofolio-kelas-detail.php'" class="btn btn-xs btn-outline-info"> <i class='fas fa-info-circle'> </i></button>
+                        <button type="button" onclick="window.location='data-rps.PDF'" class="btn btn-xs btn-success"> <i class='fas fa-download'> </i></button>
+                        </td>
                       </td>
                     </tr>
                     </tbody>

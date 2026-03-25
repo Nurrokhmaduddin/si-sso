@@ -50,7 +50,11 @@
                       </tr>
                       <tr>
                         <td width="30%"><b> Dosen Pengampu</b></td>
-                        <td>Tri Nugroho Sulistyantoro, S.T., M.T. - (195110502)</td>
+                        <td>Tri Nugroho Sulistyantoro, S.T., M.T. - (195110502) <i class="fas fa-star"></i></td> 
+                      </tr>
+                      <tr>
+                        <td width="30%"><b></b></td>
+                        <td>Hasan, ST, MT. - (198888502)</td>
                       </tr>
                      
                       <!-- <tr>
@@ -119,36 +123,189 @@
             <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail.php'"><a class="nav-link ">Final</a></li>
             <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail4.php'"><a class="nav-link ">Remedial</a></li>
             <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail3.php'"><a class="nav-link active">Portofolio</a></li>
-            <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail2.php'"><a class="nav-link ">Mahasiswa</a></li>
-            <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail5.php'"><a class="nav-link ">Refleksi</a></li>
-            <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail6.php'"><a class="nav-link ">OBE</a></li>
+            <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail2.php'"><a class="nav-link ">Penilaian Mahasiswa</a></li>
+            <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail5.php'"><a class="nav-link ">Refleksi Kelas</a></li>
+            <!-- <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail6.php'"><a class="nav-link ">OBE</a></li> -->
           </ul>
 
         
-      <!-- ========== CARD 3: Tabel saja ========== -->
+          <!-- ========== CARD : tabel sebaran CPMK ========== -->
+<div class="card">
+  <div class="card-body">
+    <div class="table-responsive">
+      <table class="table table-bordered table-striped table-sm">
+        <thead class="table-dark text-center">
+          <!-- Baris 1: CPL -->
+          <tr>
+            <!-- <th rowspan="2">Kode MK</th> -->
+            <th rowspan="2" colspan="2">CPMK</th>
+            <th colspan="2" data-bs-toggle="tooltip" title="CPL 1: Bertakwa kepada Tuhan Yang Maha Esa dan berperilaku islami">CPL 1</th>
+            <th colspan="2">CPL 2</th>
+            <th colspan="3">CPL 3</th>
+            <th colspan="2">CPL 4</th>
+            <th colspan="2">CPL 5</th>
+            <th colspan="2">CPL 6</th>
+            <th colspan="2">CPL 7</th>
+            <th>CPL 8</th>
+            <th colspan="2">CPL 9</th>
+            <th>CPL 10</th>
+          </tr>
+          <!-- Baris 2: IK -->
+          <tr>
+            <th data-bs-toggle="tooltip" title="IK 1: Menunjukkan perilaku islami pada setiap peran yang dijalani (50%)">IK 1</th>
+            <th>IK 2</th>
+            <th>IK 3</th>
+            <th>IK 4</th>
+            <th>IK 5</th>
+            <th>IK 6</th>
+            <th>IK 7</th>
+            <th>IK 8</th>
+            <th>IK 9</th>
+            <th>IK 10</th>
+            <th>IK 11</th>
+            <th>IK 12</th>
+            <th>IK 13</th>
+            <th>IK 14</th>
+            <th>IK 15</th>
+            <th>IK 16</th>
+            <th>IK 17</th>
+            <th>IK 18</th>
+            <th>IK 19</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>STS704</td>
+            <td data-bs-toggle="tooltip" title="Deskripsi CPMK 1">1</td>
+            <td class="text-center">v</td><td></td>
+            <td></td><td></td>
+            <td></td><td></td><td></td>
+            <td></td><td></td>
+            <td></td><td></td>
+            <td></td><td></td>
+            <td></td><td></td>
+            <td></td>
+            <td></td><td></td><td></td>
+          </tr>
+          <tr>
+            <td>STS704</td>
+            <td>2</td>
+            <td></td><td class="text-center">v</td>
+            <td></td><td></td>
+            <td></td><td></td><td></td>
+            <td></td><td></td>
+            <td></td><td></td>
+            <td></td><td></td>
+            <td></td><td></td>
+            <td></td>
+            <td></td><td></td><td></td>
+          </tr>
+          <tr>
+            <td>STS704</td>
+            <td>3</td>
+            <td></td><td></td>
+            <td class="text-center">v</td><td></td>
+            <td></td><td></td><td></td>
+            <td></td><td></td>
+            <td></td><td></td>
+            <td></td><td></td>
+            <td class="text-center">v</td><td></td>
+            <td></td>
+            <td></td><td></td><td></td>
+          </tr>
+          <tr>
+            <td>STS704</td>
+            <td>4</td>
+            <td></td><td></td>
+            <td></td><td></td><td></td>
+            <td class="text-center">v</td><td></td>
+            <td></td><td></td>
+            <td></td><td></td>
+            <td class="text-center">v</td><td></td>
+            <td></td><td></td>
+            <td></td>
+            <td></td><td></td><td></td>
+          </tr>
+        </tbody>
+      </table>
+  <!-- KOMPETENSI -->
+<!-- <div class="card mb-3"> -->
+ 
+    <div class="card-body p-0">
+      <table class="table table-hover table-sm mb-0 table-secondary ">
+        <thead>
+          <tr class="text-uppercase">
+            <th width="120px" align="center">CPMK</th>
+            <th>Deskripsi </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>STS704-1:</td>
+            <td>
+              <span><small> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat.</small></span>
+            </td>
+          </tr>
+          <tr>
+            <td> STS704-2:</td>
+             <td>
+              <span><small>Duis aute irure dolor in reprehenderit in voluptate velit esse
+          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</small></span>
+            </td>
+          </tr>
+          <tr>
+            <td>STS704-3: </td>
+            <td>
+              <span><small>Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. </small></span>
+            </td>
+          </tr>
+          <tr>
+            <td>STS704-4: </td>
+            <td>
+              <span><small> Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</small></span>
+            </td>
+          </tr>
+          
+        </tbody>
+      </table>
+    </div>
+  
+<!-- </div> -->
+    </div>
+  </div>
+
+</div>
+
+          <!-- ========== CARD : Portfolio========== --> 
+
           <div class="card">
             <div class="card-body">
-              <div class="table-responsive">
-                <table id="tbl" name="tbl" class="table table-sm table-hover table-bordered table-striped deta">
+              <table  class="table table-sm table-hover table-bordered table-striped deta">
                   <tbody>
                     <tr>
-                      <td> 
+                      <td>
                         Dokumen RPS <span class="badge badge-success">Valid</span></td>
                         <td width="40%">
-                          <a href="data-rps.pdf" target="_blank" class="btn btn-xs btn-info">
-                            <i class="fas fa-link"></i>
-                          Download</button>
-                        </a> 
-                        <small class="text-muted"><i>update_at</i></small>
+                          <a href="#" target="_blank" title="Unduh RPS">
+                            <button type="button" class="btn btn-sm btn-outline-info" ><i class="fas fa-link"></i> </button>
+                          </a> <small><i>updated 11 jul 2025</i><smalli>
                         </td>
                       </tr>
                       <tr>
-                        <td> 
+                        <td>
                         Materi Pembelajaran (slides, modul, bahan ajar) </td>
                         <td width="40%">
                           <a href="#" target="_blank">
-                            <button type="button" class="btn btn-xs btn-info"><i class="fas fa-link"></i> Download</button>
-                          </a> <i>update_at</i>
+                            <button type="button" class="btn btn-sm btn-outline-info"><i class="fas fa-link"></i> </button>
+                          </a> <small><i>updated 11 sep 2025</i><smalli>
                         </td>
                       </tr>
                       <tr>
@@ -156,45 +313,111 @@
                           Dokumen Penugasan Mahasiswa <span class="badge badge-secondary">Proses</span></td>
                           <td width="40%">
                             <a href="https://drive.google.com/drive/folders/1Ba6yZ2KLWZC992tVO7wxpcfxaOYb8Eyi?usp=drive_link" target="_blank">
-                              <button type="button" class="btn btn-xs btn-info"><i class="fas fa-link"></i> Download</button>
-                            </a> <i>updated 19 sep 2025</i>
+                              <button type="button" class="btn btn-sm btn-outline-info"><i class="fas fa-link"></i> </button>
+                            </a> <small><i>updated 19 sep 2025</i><smalli>
                           </td>
                         </tr>
-                        <tr>
-                          <td>
-                            Soal Ujian UTS/UAS <span class="badge badge-danger">Rejected</span> (dengan validasi prodi)</td>
+                        <!-- <tr>
+                          <td><button type="button" class="btn btn-xs btn-primary" ><i class="fas fa-edit"></i></button>
+                            Soal Ujian UTS/UAS <span class="badge badge-danger">Rejected</span> </td>
                             <td width="40%">
-                              <a href="data-soalujian.pdf" target="_blank" class="btn btn-xs btn-info">
-                                <i class="fas fa-link"></i>
-                              Download</button>
-                            </a> 
-                            <small class="text-muted"><i>update_at</i></small>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                            Penilaian CPMK oleh Dosen</td>
-                            <td width="40%">
-                              <a href="monev-rekap-kelas-detail2.php">
+                              <a href="https://drive.google.com/drive/folders/1Ba6yZ2KLWZC992tVO7wxpcfxaOYb8Eyi?usp=drive_link" target="_blank">
                                 <button type="button" class="btn btn-xs btn-info"><i class="fas fa-link"></i> Download</button>
-                              </a> <i>update_at 21 Jan 2024</i>
+                              </a> <i>update_at</i>
                             </td>
-                          </tr>
+                          </tr> -->
                           <tr>
                             <td>
                             Evaluasi Dosen oleh Mahasiswa</td>
                             <td width="40%">
                               <a href="portfolio_cpmk_detail2.php" target="_blank">
-                                <button type="button" class="btn btn-xs btn-info"><i class="fas fa-link"></i> Download</button>
-                              </a> <i>update_at</i>
+                                <button type="button" class="btn btn-sm btn-outline-secondary"><i class="fas fa-link"></i> </button>
+                              </a> <small><i></i><smalli>
                             </td>
                           </tr>
                         </tbody>
                       </table>
-              </div>
-            </div>
-            <!-- /.card-body -->
-          </div>
+                    </div>
+                  </div>
+
+
+          <!-- ========== CARD : soal ujian========== --> 
+<div class="card">
+  <!-- <div class="card-header">
+    <h5 class="mb-0">Daftar Soal Ujian</h5>
+  </div> -->
+  <div class="card-body">
+
+    <div class="table-responsive">
+      <table class="table table-sm table-hover table-bordered table-striped deta">
+        <thead>
+          <tr class="text-uppercase">
+            <!-- <th >No</th> -->
+            <th >Tanggal Ujian</th>
+            <th>Keterangan soal ujian (dengan validasi prodi)</th>
+            <th class="text-center">Aksi</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr>
+            <!-- <td>1</td> -->
+            <td>10 Maret 2025</td>
+            <td>Ujian Tengah Semester - Mekanika Tanah. UTS Semester Genap 2024/2025<span class="badge badge-success">Approved</span> </td>
+            <td class="text-center"><button class="btn btn-sm btn-outline-success">
+                <i class="fas fa-download"></i>
+              </button> <small><i>updated 11 jul 2025</i><smalli>
+            </td>
+          </tr>
+
+          <tr>
+            <!-- <td>2</td> -->
+            <td>25 Juni 2025</td>
+            <td>Ujian Akhir Semester - Struktur Beton. UAS Semester Genap 2024/2025<span class="badge badge-success">Approved</span> </td>
+            <td class="text-center"><button class="btn btn-sm btn-outline-info">
+                <i class="fas fa-paperclip"></i>
+              </button> <small><i>updated 11 jul 2025</i><smalli>
+            </td>
+          </tr>
+
+          <tr>
+            <!-- <td>3</td> -->
+            <td>5 April 2025</td>
+            <td>Kuis 1 - Geoteknik. Evaluasi Bab 1 dan 2<span class="badge badge-danger">Rejected</span> </td>
+            <td class="text-center"><button class="btn btn-sm btn-outline-success">
+                <i class="fas fa-download"></i>
+              </button> <small><i>updated 11 jul 2025</i><smalli>
+            </td>
+          </tr>
+
+          <tr>
+            <!-- <td>4</td> -->
+            <td>20 April 2025</td>
+            <td>Kuis 2 - Analisis Struktur. Evaluasi Bab 3 dan 4<span class="badge badge-success">Approved</span> </td>
+            <td class="text-center"><button class="btn btn-sm btn-outline-success">
+                <i class="fas fa-download"></i>
+              </button> <small><i>updated 11 jul 2025</i><smalli>
+            </td>
+          </tr>
+
+          <tr>
+            <!-- <td>5</td> -->
+            <td>30 Maret 2025</td>
+            <td>Remedial UTS - Mekanika Tanah. Khusus mahasiswa yang belum tuntas<span class="badge badge-danger">Rejected</span> </td>
+            <td class="text-center"><button class="btn btn-sm btn-outline-success">
+                <i class="fas fa-download"></i>
+              </button> <small><i>updated 11 jul 2025</i><smalli>
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</div>
+
+   
 
 
 <!-- ========== CARD : Refleksi Personal Dosen (1 baris) ========== --> 
@@ -224,7 +447,7 @@
 <div class="card shadow-sm mb-3" >
   <div class="card-header">
     <h5 class="mb-0">
-      Refleksi Personal Dosen • 2024/2025 - Gasal
+      Jurnal CQI Pengajaran Mata Kuliah (Refleksi Personal Dosen) 
     </h5>
   </div>
   <div class="card-body" style="padding: 1rem 1.25rem;">

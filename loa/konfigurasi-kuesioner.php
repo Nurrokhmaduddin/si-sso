@@ -119,8 +119,8 @@
                   <td>catatan & evaluasi kelas</td>
                   <td>
                     <a href="konfigurasi-kuesioner-detail.php" 
-                    class="btn btn-sm btn-outline-info">
-                    <i class="fas fa-list"></i></a>
+                    class="btn btn-sm btn-outline-primary">
+                    <i class="fas fa-edit"></i></a>
                   </td>
                 </tr>
 <tr>
@@ -129,8 +129,8 @@
                   <td>catatan & evaluasi kelas</td>
                   <td>
                     <a href="konfigurasi-kuesioner-detail.php" 
-                    class="btn btn-sm btn-outline-info">
-                    <i class="fas fa-list"></i></a>
+                    class="btn btn-sm btn-outline-primary">
+                    <i class="fas fa-edit"></i></a>
                   </td>
                 </tr>
 
@@ -140,8 +140,8 @@
                   <td>rekomendasi untuk prodi</td>
                   <td>
                     <a href="konfigurasi-kuesioner-detail.php" 
-                    class="btn btn-sm btn-outline-info">
-                    <i class="fas fa-list"></i></a>
+                    class="btn btn-sm btn-outline-primary">
+                    <i class="fas fa-edit"></i></a>
                   </td>
                 </tr>
 <tr>
@@ -150,8 +150,8 @@
                   <td>rekomendasi untuk prodi</td>
                   <td>
                     <a href="konfigurasi-kuesioner-detail.php" 
-                    class="btn btn-sm btn-outline-info">
-                    <i class="fas fa-list"></i></a>
+                    class="btn btn-sm btn-outline-primary">
+                    <i class="fas fa-edit"></i></a>
                   </td>
                 </tr>
 
@@ -161,8 +161,8 @@
                   <td>catatan & evaluasi kelas</td>
                   <td>
                     <a href="konfigurasi-kuesioner-detail.php" 
-                    class="btn btn-sm btn-outline-info">
-                    <i class="fas fa-list"></i></a>
+                    class="btn btn-sm btn-outline-primary">
+                    <i class="fas fa-edit"></i></a>
                   </td>
                 </tr>
 <tr>
@@ -171,8 +171,8 @@
                   <td>catatan & evaluasi kelas</td>
                   <td>
                     <a href="konfigurasi-kuesioner-detail.php" 
-                    class="btn btn-sm btn-outline-info">
-                    <i class="fas fa-list"></i></a>
+                    class="btn btn-sm btn-outline-primary">
+                    <i class="fas fa-edit"></i></a>
                   </td>
                 </tr>
 
@@ -182,8 +182,8 @@
                   <td>rekomendasi untuk prodi</td>
                   <td>
                     <a href="konfigurasi-kuesioner-detail.php" 
-                    class="btn btn-sm btn-outline-info">
-                    <i class="fas fa-list"></i></a>
+                    class="btn btn-sm btn-outline-primary">
+                    <i class="fas fa-edit"></i></a>
                   </td>
                 </tr>
 <tr>
@@ -192,8 +192,8 @@
                   <td>rekomendasi untuk prodi</td>
                   <td>
                     <a href="konfigurasi-kuesioner-detail.php" 
-                    class="btn btn-sm btn-outline-info">
-                    <i class="fas fa-list"></i></a>
+                    class="btn btn-sm btn-outline-primary">
+                    <i class="fas fa-edit"></i></a>
                   </td>
                 </tr>
 

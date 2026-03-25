@@ -1,7 +1,9 @@
-<?php $page = 'beranda_admin'; ?>
-<?php include('1header.php'); ?>
-<?php include('2navbar.php'); ?>
-<?php include('3sidebar.php'); ?>
+<?php 
+$page = 'beranda_admin';  
+include('1header.php'); 
+include('2navbar.php'); 
+include('3sidebar.php'); 
+?>
 <style>
   .chart-container {
       position: relative;
@@ -51,11 +53,11 @@
           <div class="col-md-4">
             <div class="card bg-success text-white">
               <div class="card-body">
-                <h5>CPMK Memenuhi Standar</h5>
-                <h3>20 / 34 CPMK</h3>
+                <h5>Kelengkapan & Validitas Data</h5>
+                <h3>98% Data</h3>
                 <p class="mb-0">
-                  <i class="fas fa-chart-line"></i>
-                  yaitu mahasiswa tuntas ≥ 65%
+                  <i class="fas fa-database"></i>
+                  berdasarkan semua kelas
                 </p>
               </div>
             </div>
@@ -64,11 +66,11 @@
           <div class="col-md-4">
             <div class="card bg-warning text-white">
               <div class="card-body">
-                <h5>Ketuntasan Mata Kuliah</h5>
-                <h3>88% Mahasiswa</h3>
+                <h5>Ketepatan Waktu Input Data</h5>
+                <h3>95% Tepat Waktu</h3>
                 <p class="mb-0">
-                  <i class="fas fa-user-graduate"></i>
-                    dengan nilai ≥ C pada semester ini.
+                  <i class="fas fa-clock"></i>
+                  diinput sebelum deadline
                 </p>
               </div>
             </div>
@@ -81,7 +83,7 @@
         <div class="row mb-3">
 
           <div class="col-md-8">
-            <!-- <div class="card">
+            <div class="card">
               <div class="card-header">
                 <h5 class="card-title">
                   <i class="fas fa-chart-pie"></i>
@@ -91,10 +93,10 @@
               <div class="card-body">
                 <canvas id="chartLOA" style="min-height: 250px;"></canvas>
               </div>
-            </div> -->
+            </div>
 
             <!-- ========== CARD : Stacked Bar Chart ========== -->
-            <div class="card">
+            <!-- <div class="card">
               <div class="card-header">
                 <h5 class="card-title mb-0"><i class="fas fa-chart-bar me-2"></i> Stacked Bar Chart — Proporsi (%)</h5>
                 <div class="card-tools">
@@ -107,7 +109,7 @@
                   <canvas id="stackedChart" width="100%" height="22"></canvas>
                 </div>
               </div>
-            </div>
+            </div> -->
             <!-- ========== CARD : tabel granular kelas ========== -->
             <div class="card">
               <div class="card-body">
@@ -622,13 +624,13 @@
           beginAtZero: true,
           max: 100,
           title: {
-            display: true,
+            display: false,
             text: 'Persentase (%)'
           }
         },
         x: {
           title: {
-            display: true,
+            display: false,
             text: 'Capaian Pembelajaran Lulusan (CPL)'
           }
         }

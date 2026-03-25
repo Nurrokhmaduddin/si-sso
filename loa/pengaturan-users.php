@@ -131,8 +131,9 @@
               <td>2025-11-28 08:00:00</td>
               <td>2025-11-27 12:10:00</td>
               <td>
-                <button class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#modalEditAkun">✏️</button>
-                <button class="btn btn-sm btn-outline-danger" data-toggle="modal" data-target="#modalHapusAkun">🗑️</button>
+                <button type="button" class="btn btn-sm btn-outline-warning"><i class="fas fa-key"></i></button>
+                <button type="button" class="btn btn-sm btn-outline-primary"><i class="fas fa-edit"></i></button>
+                <button type="button" class="btn btn-sm btn-outline-danger"><i class="fas fa-trash"></i></button>
               </td>
             </tr>
 
@@ -146,8 +147,27 @@
               <td>2025-11-15 09:20:00</td>
               <td>2025-11-28 07:55:00</td>
               <td>
-                <button class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#modalEditAkun">✏️</button>
-                <button class="btn btn-sm btn-outline-danger" data-toggle="modal" data-target="#modalHapusAkun">🗑️</button>
+                <div class="btn-group">
+                  <!-- Tombol utama (View) -->
+                  <a href="portfolio_cpmk_detail2.php" target="_blank" class="btn btn-sm btn-outline-warning"><i class="fas fa-key"></i></a>
+
+                  <!-- Tombol dropdown -->
+                  <button type="button" class="btn btn-sm btn-outline-warning dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false"> <span class="visually-hidden">Toggle Dropdown</span> </button>
+
+                  <!-- Menu dropdown -->
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-item" href="#">
+                        <i class="fas fa-edit text-primary"></i> Edit Data
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">
+                        <i class="fas fa-trash-alt text-danger"></i> Hapus Data
+                      </a>
+                    </li>
+                  </ul>
+                </div>
               </td>
             </tr>
 

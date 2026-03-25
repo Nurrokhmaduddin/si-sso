@@ -120,7 +120,9 @@
                       </td>
                       <td>-</td>
                       <td align="center">
-                        <button type="button" class="btn btn-outline-primary btn-sm" ><i class="fas fa-check me-1"></i> Verifikasi</button>
+                        <button type="button" class="btn btn-outline-primary btn-sm" ><i class="fas fa-check me-1"></i> Verifikasi- diterima</button>
+                        <button type="button" class="btn btn-outline-primary btn-sm" ><i class="fas fa-check me-1"></i> Verifikasi- retur faktur total</button>
+                        <button type="button" class="btn btn-outline-primary btn-sm" ><i class="fas fa-check me-1"></i> Verifikasi- kembali ke antrian</button>
                       </td>
                     </tr>
                     <tr align="center">

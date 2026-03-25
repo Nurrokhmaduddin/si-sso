@@ -206,12 +206,13 @@
   </div>
 </div> -->
 <!-- ========== CARD :  Grafik Radar CPL & Progress ========== --> 
-<div class="card p-3">
+<div class="card">
+<div class="card-body ">
   <div class="row">
 
 
     <div class="col-lg-8">
-      <canvas id="chartCPL3" width="100%" height="50"></canvas>
+      <canvas id="chartCPL3" width="100%" height="50" class="mb-4"></canvas>
     </div>
 
 
@@ -221,12 +222,83 @@
           <canvas id="chartStatusAngkatan2"></canvas>
         </div>
       </div>
-     
-
-
     </div>
   </div>
+
+    <table class="table table-bordered table-striped table-sm ">
+    <thead>
+        <tr>
+            <th>Kode CPL</th>
+            <th>Deskripsi CPL</th>
+            <th>Skor CPL (avg)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>CPL 1</td>
+            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut l</td>
+            <td>90</td>
+        </tr>
+        <tr>
+            <td>CPL 2</td>
+            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut l</td>
+            <td>65</td>
+        </tr>
+        <tr>
+            <td>CPL 3</td>
+           <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut l</td>
+            <td style="color:black;">88</td>
+        </tr>
+        <tr>
+            <td>CPL 4</td>
+            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut l</td>
+            <td>91</td>
+        </tr>
+        <tr>
+            <td>CPL 5</td>
+            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut l</td>
+            <td>89</td>
+        </tr>
+        <tr>
+            <td>CPL 6</td>
+            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut l</td>
+            <td>93</td>
+        </tr>
+        <tr>
+            <td>CPL 7</td>
+            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut l</td>
+            <td>82</td>
+        </tr>
+        <tr>
+            <td>CPL 8</td>
+            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut l</td>
+            <td>87</td>
+        </tr>
+        <tr>
+            <td>CPL 9</td>
+            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut l</td>
+            <td>92</td>
+        </tr>
+        <tr>
+            <td>CPL 10</td>
+            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut l</td>
+            <td style="color:black;">94</td>
+        </tr>
+    </tbody>
+</table>
+  </div>
 </div>
+
         <!-- ========== CARD : Rekap per Angkatan ========== -->
           <!-- <div class="card mt-3">
             <div class="card-header">
@@ -365,7 +437,7 @@
         </tr>
         <tr>
           <td>sem2 [2024/2025 - Genap]</td>
-          <td>70</td><td>75</td><td>72</td><td>78</td><td>80</td><td>82</td><td>85</td><td>84</td><td>83</td><td>5</td>
+          <td><button  class="btn btn-sm btn-info"onclick="window.location.href='monev-rekap-tahunan-detail.php'">87</button></td><td>75</td><td>72</td><td>78</td><td>80</td><td>82</td><td>85</td><td>84</td><td>83</td><td>5</td>
         </tr>
         <tr>
           <td><a href="#detailallCPL" class="btn btn-sm btn-outline-info">sem3 [2025/2026 - Ganjil]</a></td>
@@ -412,7 +484,7 @@
   </div>
 </div>
                 <!-- ========== CARD : Tabel detail 30 IK ========== -->
-        <div class="card">
+        <!-- <div class="card">
           <div class="card-header">
             <h3 class="card-title">Tabel Data Kemajuan semua IK </h3>
             <div class="card-tools">
@@ -490,7 +562,10 @@
             </table>
           </div>
         </div>
-        </div>
+        </div> -->
+
+
+
 <!-- ========== CARD : tabel distribusi mahasiswa ========== -->  
 <!-- <table class="table table-hover table-bordered table-sm">
   <thead>

@@ -479,8 +479,8 @@
       
 
  <!-- PENGEMBANGAN OBE -->
-        <li class="nav-item <?php echo in_array($page, ['progress_kelas','progress_mk','progress_pemetaan','progress_cpl','evaluasi_rapat','evaluasi_pembelajaran','evaluasi_kemajuan','evaluasi_lulusan','evaluasi_kurikulum']) ? 'menu-open' : ''; ?>">
-          <a href="#" class="nav-link <?php echo in_array($page, ['progress_kelas','progress_mk','progress_pemetaan','progress_cpl','evaluasi_rapat','evaluasi_pembelajaran','evaluasi_kemajuan','evaluasi_lulusan','evaluasi_kurikulum']) ? 'active' : ''; ?>">
+        <li class="nav-item <?php echo in_array($page, ['progress_kelas','progress_mk','progress_pemetaan','progress_cpl','evaluasi_rapat','evaluasi_pembelajaran','evaluasi_kemajuan','evaluasi_lulusan','evaluasi_kurikulum','evaluasi_prodi']) ? 'menu-open' : ''; ?>">
+          <a href="#" class="nav-link <?php echo in_array($page, ['progress_kelas','progress_mk','progress_pemetaan','progress_cpl','evaluasi_rapat','evaluasi_pembelajaran','evaluasi_kemajuan','evaluasi_lulusan','evaluasi_kurikulum','evaluasi_prodi']) ? 'active' : ''; ?>">
             <i class="nav-icon fas fa-chart-line"></i>
             <p>
               Pengembangan OBE
@@ -514,9 +514,9 @@
               </a>
             </li> -->
             <li class="nav-item">
-              <a href="evaluasi-kurikulum.php" class="nav-link <?php echo $page == 'evaluasi_kurikulum' ? 'active' : ''; ?>">
+              <a href="evaluasi-prodi.php" class="nav-link <?php echo $page == 'evaluasi_prodi' ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
-                <p>Evaluasi Prodi</p>
+                <p>Evaluasi & Action Plan</p>
               </a>
             </li>
              <li class="nav-item">
@@ -625,8 +625,8 @@
   </ul>
 </li>
         <!-- PENGATURAN -->
-        <li class="nav-item <?php echo in_array($page, ['pengaturan_user','pengaturan_role','pengaturan_app','pengaturan_feedback']) ? 'menu-open' : ''; ?>">
-          <a href="#" class="nav-link <?php echo in_array($page, ['pengaturan_user','pengaturan_role','pengaturan_app','pengaturan_feedback']) ? 'active' : ''; ?>">
+        <li class="nav-item <?php echo in_array($page, ['pengaturan_user','pengaturan_role','pengaturan_app','pengaturan_feedback','pengaturan_log']) ? 'menu-open' : ''; ?>">
+          <a href="#" class="nav-link <?php echo in_array($page, ['pengaturan_user','pengaturan_role','pengaturan_app','pengaturan_feedback','pengaturan_log']) ? 'active' : ''; ?>">
             <i class="nav-icon fas fa-cog"></i>
             <p>
               Pengaturan
@@ -687,7 +687,7 @@
             </li> -->
             
             <li class="nav-item">
-              <a href="aktivitas-laporan.php" class="nav-link">
+              <a href="pengaturan-log.php" class="nav-link <?php echo $page == 'pengaturan_log' ? 'active' : ''; ?>">
                 <i class="fas fa-cog nav-icon"></i>
                 <p>Audit Log</p>
               </a>

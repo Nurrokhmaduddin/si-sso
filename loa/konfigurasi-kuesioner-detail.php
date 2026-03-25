@@ -62,6 +62,11 @@
                 <button class="btn btn-outline-info btn-sm " data-bs-toggle="modal" data-bs-target="#modalFilter">
                   <i class="fas fa-filter me-1"></i> Filter
                 </button>
+                <button type="button" 
+                class="btn btn-outline-info btn-sm"
+                onclick="window.location.href='konfigurasi-kuesioner-rekap.php'">
+                <span class="fas fa-chart-area me-1"></span> Rekap Preview
+              </button>
               </div>
             </div>
 
@@ -504,7 +509,7 @@
 
     <!-- HEADER -->
     <div class="card-header">
-      <h5 class="card-title mb-0">Builder Catatan Pengajaran Dosen</h5>
+      <h5 class="card-title mb-0">Builder Jurnal CQI Pengajaran Mata Kuliah</h5>
       <small class="text-light">
         Refleksi personal dosen • Untuk pengembangan berkelanjutan
       </small>
@@ -627,6 +632,10 @@
 </div>
 
 
+
+
+
+
 <!-- CARD : Tabel Jenis Input & Strategi Rekapitulasi -->
 <div class="card-body">
 <table class="table table-bordered table-striped">
@@ -644,7 +653,7 @@
   </thead>
   <tbody>
 
-    <!-- CLOSED - BASIC -->
+    <!-- CLOSED - SELECTION -->
     <tr>
       <td><strong>Closed</strong></td>
       <td><strong>Selection</strong></td>
@@ -655,12 +664,23 @@
       <td>
         - Count per option<br>
         - Persentase distribusi<br>
-        - Ranking pilihan
+        - Ranking pilihan<hr>
+        - Cross-tabulation (segmentasi)<br>
+        - By demografi (umur, lokasi, dll)<br>
+        - By waktu<br>
+        - By channel<br>
+        - Conversion / funnel analysis<br>
+        - Chi-square (significance test)<br>
+        - Entropy (diversity score)
       </td>
       <td>
         - Pie chart<br>
         - Bar chart<br>
-        - Top pilihan
+        - Top pilihan<hr>
+        - Pivot table<br>
+        - Stacked bar chart<br>
+        - Funnel chart<br>
+        - Segment comparison chart
       </td>
     </tr>
 
@@ -675,12 +695,24 @@
       <td>
         - Mean (rata-rata)<br>
         - Min / Max<br>
-        - Tren waktu
+        - Tren waktu<hr>
+        - Median<br>
+        - Standard deviation<br>
+        - Distribution analysis<br>
+        - NPS / Net score<br>
+        - Correlation analysis<br>
+        - Cohort analysis<br>
+        - Trend decomposition
       </td>
       <td>
         - KPI score<br>
         - Line chart tren<br>
-        - Distribusi nilai
+        - Distribusi nilai<hr>
+        - Box plot<br>
+        - Histogram<br>
+        - NPS gauge<br>
+        - Correlation heatmap<br>
+        - Cohort chart
       </td>
     </tr>
 
@@ -695,40 +727,56 @@
       <td>
         - Count per tag<br>
         - Persentase kemunculan<br>
-        - Top issue ranking
+        - Top issue ranking<hr>
+        - Co-occurrence analysis<br>
+        - Association rules (Apriori)<br>
+        - Issue clustering<br>
+        - Weighted severity score<br>
+        - Penetration rate<br>
+        - Trend per tag
       </td>
       <td>
         - Ranking isu<br>
         - Heatmap masalah<br>
-        - Distribusi kategori
+        - Distribusi kategori<hr>
+        - Network graph<br>
+        - Association matrix<br>
+        - Cluster visualization<br>
+        - Trend line per issue
       </td>
     </tr>
-
-
 
     <!-- OPEN - GUIDED -->
     <tr>
       <td><strong>Open</strong></td>
       <td><strong>Guided Text</strong></td>
       <td>Pertanyaan terarah</td>
-      <td>Text</td>
+      <td>Text<br> <i>with flagging theme</i></td>
       <td>Lebih konsisten & terstruktur</td>
       <td>Tetap perlu olah</td>
       <td>
         - Group by tema<br>
         - Mapping ke kategori<br>
-        - Ringkasan per pertanyaan<br>
+        - Ringkasan per pertanyaan<hr>
+        - Topic modeling (LDA / BERTopic)<br>
+        - Sentiment analysis<br>
+        - Keyword extraction (TF-IDF)<br>
+        - Embedding + clustering<br>
+        - Insight scoring (impact × frequency)<br>
         ⚙️ Cara olah:<br>
-Grouping per pertanyaan<br>
-Mapping ke kategori<br>
-Summarization per topik
+        Grouping → Mapping → Summarization → Scoring
       </td>
       <td>
         - Insight per kategori<br>
-        - Ringkasan per topik<br>
-        
+        - Ringkasan per topik<hr>
+        - Topic distribution chart<br>
+        - Sentiment bar / pie<br>
+        - Keyword cloud<br>
+        - Insight priority list
       </td>
     </tr>
+
+
 
    
 
@@ -1147,6 +1195,15 @@ $("#edit_type").on("change", function () {
           <select id="add_required" class="form-select">
             <option value="1">Wajib</option>
             <option value="0">Opsional</option>
+          </select>
+        </div>
+        <!-- REKAPITULASI -->
+        <div class="mb-3">
+          <label class="form-label">Satuan Rekapitulasi</label>
+          <select id="add_required" class="form-select">
+            <option value="1">per dosen</option>
+            <option value="0">per kelas</option>
+            <option value="0">per mata kuliah</option>
           </select>
         </div>
 

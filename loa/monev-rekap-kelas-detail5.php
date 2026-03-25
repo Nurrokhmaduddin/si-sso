@@ -50,7 +50,11 @@
                       </tr>
                       <tr>
                         <td width="30%"><b> Dosen Pengampu</b></td>
-                        <td>Tri Nugroho Sulistyantoro, S.T., M.T. - (195110502)</td>
+                        <td>Tri Nugroho Sulistyantoro, S.T., M.T. - (195110502) <i class="fas fa-star"></i></td> 
+                      </tr>
+                      <tr>
+                        <td width="30%"><b></b></td>
+                        <td>Hasan, ST, MT. - (198888502)</td>
                       </tr>
                      
                       <!-- <tr>
@@ -123,18 +127,99 @@
             <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail.php'"><a class="nav-link ">Final</a></li>
             <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail4.php'"><a class="nav-link ">Remedial</a></li>
             <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail3.php'"><a class="nav-link ">Portofolio</a></li>
-            <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail2.php'"><a class="nav-link ">Mahasiswa</a></li>
-            <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail5.php'"><a class="nav-link active">Refleksi</a></li>
-            <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail6.php'"><a class="nav-link ">OBE</a></li>
+            <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail2.php'"><a class="nav-link ">Penilaian Mahasiswa</a></li>
+            <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail5.php'"><a class="nav-link active">Refleksi Kelas</a></li>
+            <!-- <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail6.php'"><a class="nav-link ">OBE</a></li> -->
           </ul>
      
 
 
 
 
+<!-- CARD REKAP CATATAN & EVALUASI KELAS SESUAI PERTANYAAN -->
+<div class="col-md-12">
+  <div class="card card-primary">
+
+    <!-- HEADER -->
+    <div class="card-header bg-primary text-white">
+      <h5 class="card-title mb-0">Rekapan Catatan & Evaluasi Kelas</h5>
+      <small>Kolaboratif • Berdasarkan isian seluruh dosen</small>
+    </div>
+
+    <!-- BODY -->
+    <div class="card-body">
+
+      <!-- 1️⃣ Ringkasan Select: CPMK -->
+      <!-- 1️⃣ Capaian CPMK (Top Choice) -->
+      <h6><strong>1. Capaian CPMK</strong></h6>
+      <p>🏆 Tercapai Kuat (2 dosen)</p>
+
+      <!-- 2️⃣ Tingkat Partisipasi Mahasiswa (Top Choice) -->
+      <h6><strong>2. Tingkat Partisipasi Mahasiswa</strong></h6>
+      <p>🏆 Sangat Aktif (1 dosen)</p>
+
+      <hr>
+
+      <!-- 3️⃣ Ringkasan Scale: Efektivitas Metode -->
+      <h6><strong>3. Efektivitas Metode Pengajaran (skala 1–5)</strong></h6>
+      <ul>
+        <li>Rata-rata skor: 4.0</li>
+        <li>Skor terbanyak: 4 (2 dosen)</li>
+      </ul>
+
+      <!-- 4️⃣ Ringkasan Scale: Kesesuaian Penilaian -->
+      <h6><strong>4. Kesesuaian Penilaian dengan Kemampuan Mahasiswa (skala 1–5)</strong></h6>
+      <ul>
+        <li>Rata-rata skor: 3.7</li>
+        <li>Skor terbanyak: 4 (2 dosen)</li>
+      </ul>
+
+      <hr>
+
+      <!-- 5️⃣ Ringkasan Tagging: Kendala -->
+      <h6><strong>5. Kendala Utama</strong></h6>
+      <span class="badge badge-secondary">Koneksi Internet (1)</span>
+      <span class="badge badge-info">Partisipasi Rendah (2)</span>
+      <span class="badge badge-info">Materi Kompleks (2)</span>
+      <span class="badge badge-danger">Waktu Terbatas (3)</span>
+      <hr>
+      <!-- 6️⃣ Ringkasan Tagging: Metode Efektif -->
+      <h6><strong>6. Metode Pengajaran Paling Efektif</strong></h6>
+      <span class="badge badge-info">Diskusi (2)</span>
+      <span class="badge badge-danger">Praktikum (3)</span>
+      <span class="badge badge-info">Studi Kasus (2)</span>
+      <span class="badge badge-secondary">Project Based Learning (1)</span>
+
+      <hr>
+
+      <!-- 7️⃣ & 8️⃣ Ringkasan Open Text -->
+      <h6><strong>7. Catatan Dinamika Kelas</strong></h6>
+      <ul>
+        <li>Dosen 1: Partisipasi sedang, mahasiswa awal pasif tapi akhir aktif.</li>
+        <li>Dosen 2: Variatif, beberapa mahasiswa tertinggal materi awal.</li>
+        <li>Dosen 3: Interaksi meningkat saat praktikum, beberapa mahasiswa fokus terbatas.</li>
+      </ul>
+
+      <h6><strong>8. Rekomendasi Perbaikan</strong></h6>
+      <ul>
+        <li>Dosen 1: Tambah pre-test awal, diferensiasi tugas.</li>
+        <li>Dosen 2: Rubrik penilaian jelas, latihan praktikum tambahan.</li>
+        <li>Dosen 3: Lebih banyak diskusi interaktif, sediakan modul latihan mandiri.</li>
+      </ul>
+
+    </div>
+
+    <!-- FOOTER -->
+    <!-- <div class="card-footer d-flex justify-content-between">
+      <button class="btn btn-outline-secondary">Export Rekap</button>
+    </div> -->
+
+  </div>
+</div>
+
 
 <!-- CARD RINGKASAN CATATAN&EVALUASI SEMUA DOSEN KELAS INI -->
-<div class="col-md-12">
+<div class="col-md-12 collapse">
   <div class="card card-primary">
 
     <!-- HEADER -->
@@ -184,7 +269,7 @@
           <div class="card-header">
             <h6 class="mb-0">
               <a data-toggle="collapse" href="#dosen1">
-                Ahmad Fauzi
+                Tri Nugroho Sulistyantoro, S.T., M.T. - (195110502)
               </a>
             </h6>
           </div>
@@ -204,7 +289,7 @@
           <div class="card-header">
             <h6 class="mb-0">
               <a data-toggle="collapse" href="#dosen2">
-                Siti Rahma
+               Hasan, ST, MT. - (198888502)
               </a>
             </h6>
           </div>
@@ -220,11 +305,11 @@
         </div>
 
         <!-- DOSEN 3 -->
-        <div class="card">
+        <!-- <div class="card">
           <div class="card-header">
             <h6 class="mb-0">
               <a data-toggle="collapse" href="#dosen3">
-                Budi Santoso
+                Budi Santoso (198456502)
               </a>
             </h6>
           </div>
@@ -237,7 +322,7 @@
               <p><strong>Catatan:</strong> Perlu rubrik penilaian jelas</p>
             </div>
           </div>
-        </div>
+        </div> -->
 
       </div>
 
@@ -270,9 +355,6 @@
 
   </div>
 </div>
-
-
-
 
 
 

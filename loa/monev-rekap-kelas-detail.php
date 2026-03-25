@@ -50,7 +50,11 @@
                       </tr>
                       <tr>
                         <td width="30%"><b> Dosen Pengampu</b></td>
-                        <td>Tri Nugroho Sulistyantoro, S.T., M.T. - (195110502)</td>
+                        <td>Tri Nugroho Sulistyantoro, S.T., M.T. - (195110502) <i class="fas fa-star"></i></td> 
+                      </tr>
+                      <tr>
+                        <td width="30%"><b></b></td>
+                        <td>Hasan, ST, MT. - (198888502)</td>
                       </tr>
                      
                       <!-- <tr>
@@ -118,9 +122,9 @@
             <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail.php'"><a class="nav-link active">Final</a></li>
             <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail4.php'"><a class="nav-link ">Remedial</a></li>
             <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail3.php'"><a class="nav-link ">Portofolio</a></li>
-            <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail2.php'"><a class="nav-link ">Mahasiswa</a></li>
-            <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail5.php'"><a class="nav-link ">Refleksi</a></li>
-            <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail6.php'"><a class="nav-link ">OBE</a></li>
+            <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail2.php'"><a class="nav-link ">Penilaian Mahasiswa</a></li>
+            <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail5.php'"><a class="nav-link ">Refleksi Kelas</a></li>
+            <!-- <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail6.php'"><a class="nav-link ">OBE</a></li> -->
           </ul>
      
 
@@ -134,9 +138,9 @@
         <thead>
           <tr>
             <th colspan="2" rowspan="2" style="vertical-align: middle; text-align: center;">Daftar CPMK (Capaian)</th>
-            <th><center>Rerata</center></th>
-            <th><center>Tertinggi</center></th>
             <th><center>Terendah</center></th>
+            <th><center>Tertinggi</center></th>
+            <th><center>Rerata (avg)</center></th>
             <th><center>Ketuntasan (%)</center></th>
             <th><center>Jumlah Mahasiswa</center></th>
           </tr>
@@ -145,36 +149,36 @@
           <tr>
             <td style="width: 10px;">1</td>
             <td style="width: 40%;">Mahasiswa mengerti dan memahami dasar-dasar polimer, hubungan antara sifat dengan struktur dan perilaku prosesnya.</td>
-            <td align="center">72,14                      </td>
-            <td align="center">80,00                      </td>
             <td align="center">0,00                      </td>
+            <td align="center">80,00                      </td>
+            <td align="center">72,14                      </td>
             <td align="center">56,00                      </td>
             <td align="center">40</td>
           </tr>
           <tr>
             <td style="width: 10px;">2</td>
             <td style="width: 40%;">Mahasiswa mengerti dan memahami dasar-dasar komposit, hubungan antara sifat dengan struktur dan perilaku prosesnya.</td>
-            <td align="center">77,86                      </td>
-            <td align="center">85,00                      </td>
             <td align="center">0,00                      </td>
+            <td align="center">85,00                      </td>
+            <td align="center">77,86                      </td>
             <td align="center">67,00                      </td>
             <td align="center">40</td>
           </tr>
           <tr>
             <td style="width: 10px;">3</td>
             <td style="width: 40%;">Mahasiswa mampu mengembangkan aplikasi polimer</td>
-            <td align="center">76,14                      </td>
-            <td align="center">80,00                      </td>
             <td align="center">0,00                      </td>
+            <td align="center">80,00                      </td>
+            <td align="center">76,14                      </td>
             <td align="center">67,00                      </td>
             <td align="center">40</td>
           </tr>
           <tr>
             <td style="width: 10px;">4</td>
             <td style="width: 40%;">Mahasiswa mampu mengembangkan aplikasi komposit</td>
-            <td align="center">76,14                      </td>
             <td align="center">0,00                      </td>
             <td align="center">80,00                      </td>
+            <td align="center">76,14                      </td>
             <td align="center">78,00                      </td>
             <td align="center">40</td>
           </tr>
@@ -183,9 +187,22 @@
     </div>
   </div>
 </div>
+<!-- ========== CARD : tabel distribusi rentang ========== -->
+<div class="card shadow">
+  <div class="card-header">
+    <h5 class="mb-0">Distribusi Rentang Nilai CPMK (Total 40 Mahasiswa)</h5>
+  </div>
+
+  <div class="card-body">
+    <canvas id="stackedCPMKChart" height="120"></canvas>
+  </div>
+</div>
 
 <!-- ========== CARD : visualisasi grafis capaian CPMK ========== -->
 <div class="card">
+  <div class="card-header">
+    <h5 class="mb-0">Rerata Nilai atau %Mahasiswa Tuntas CPMK (Total 40 Mahasiswa) ???</h5>
+  </div>
   <div class="card-body">
     <canvas id="chartCpmk" width="400" height="100"></canvas>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -210,7 +227,7 @@
           plugins: {
             legend: { display: false },
             title: {
-              display: true,
+              display: false,
               text: 'Rerata Nilai CPMK pada Kelas Perkuliahan'
             }
           }
@@ -239,16 +256,6 @@
     <div class="chart-container" style="height:220px;">
       <canvas id="barChartCPMK2"></canvas>
     </div>
-  </div>
-</div>
-<!-- ========== CARD : tabel distribusi rentang ========== -->
-<div class="card shadow">
-  <div class="card-header bg-info text-white">
-    <h5 class="mb-0">Distribusi Rentang Nilai CPMK (Total 40 Mahasiswa)</h5>
-  </div>
-
-  <div class="card-body">
-    <canvas id="stackedCPMKChart" height="120"></canvas>
   </div>
 </div>
 

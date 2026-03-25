@@ -237,6 +237,7 @@
                       <td>CPL-10</td>
                       <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
                     </tr>
+
                   </tbody>
                 </table>
               </div>
@@ -1263,13 +1264,19 @@
           <td>7</td> <td>Kemampuan untuk berkomunikasi secara efektif secara lisan dan tulisan</td> <td>74.6</td> 
         </tr> 
         <tr> 
-          <td>8</td> <td>Kemampuan untuk merencanakan, menyelesaikan, dan mengevaluasi tugas dalam batasan yang telah ditentukan</td> <td>76.6</td> 
+          <td>8</td> <td>Kemampuan untuk merencanakan, menyelesaikan, dan mengevaluasi tugas dalam batasan yang telah ditentukan</td> <td>70.6</td> 
         </tr> 
         <tr> 
-          <td>9</td> <td>Kemampuan untuk bekerja dalam tim multidisiplin dan multikultural secara inklusif</td> <td>72.42</td> 
+          <td>9</td> <td>Kemampuan untuk bekerja dalam tim multidisiplin dan multikultural secara inklusif</td> <td>55.42</td> 
         </tr> 
         <tr> 
-          <td>10</td> <td>Kemampuan untuk akuntabel dan bertanggungjawab kepada masyarakat serta mengikuti etika profesional dalam menyelesaikan masalah keteknikan</td> <td>80.96</td> 
+          <td>10</td> <td>Kemampuan untuk akuntabel dan bertanggungjawab kepada masyarakat serta mengikuti etika profesional dalam menyelesaikan masalah keteknikan</td> <td>30.96</td> 
+        </tr> 
+         <tr> 
+          <td>11</td> <td>Kemampuan untuk akuntabel dan bertanggungjawab kepada masyarakat serta mengikuti etika profesional dalam menyelesaikan masalah keteknikan</td> <td>23.96</td> 
+        </tr> 
+         <tr> 
+          <td>12</td> <td>Kemampuan untuk akuntabel dan bertanggungjawab kepada masyarakat serta mengikuti etika profesional dalam menyelesaikan masalah keteknikan</td> <td>88.00</td> 
         </tr> 
       </tbody> 
     </table> 
@@ -1725,10 +1732,10 @@ generateHorizontalChart(
   const radarCPL = new Chart(radarCtx, {
     type: 'radar',
     data: {
-      labels: ['CPL 1', 'CPL 2', 'CPL 3', 'CPL 4', 'CPL 5', 'CPL 6', 'CPL 7', 'CPL 8', 'CPL 9', 'CPL 10', 'CPL 11'],
+      labels: ['CPL 1', 'CPL 2', 'CPL 3', 'CPL 4', 'CPL 5', 'CPL 6', 'CPL 7', 'CPL 8', 'CPL 9', 'CPL 10', 'CPL 11', 'CPL 12'],
       datasets: [{
         label: 'Capaian CPL',
-        data: [80, 90, 75, 85, 88,65, 67, 70, 55, 30, 23],
+        data: [80, 90, 75, 85, 88,65, 67, 70, 55, 30, 23,88],
             // Warna hijau lembut (lebih nyaman di mata)
         backgroundColor: 'rgba(80, 200, 120, 0.35)',
         borderColor: 'rgba(60, 160, 95, 0.9)',
@@ -1896,16 +1903,16 @@ generateHorizontalChart(
 
     const ikValuesG = {
       'IK1.1':82,'IK1.2':75,
-      'IK2.1':70,'IK2.2':78,'IK2.3':83,
+      'IK2.1':98,'IK2.2':78,'IK2.3':83,
       'IK3.1':72,'IK3.2':76,
-      'IK4.1':74,'IK4.2':79,
-      'IK5.1':73,'IK5.2':77,
-      'IK6.1':85,
-      'IK7.1':80,'IK7.2':84,
-      'IK8.1':78,'IK8.2':82,
-      'IK9.1':75,'IK9.2':79,
-      'IK10.1':76,'IK10.2':80,
-      'IK11.1':82,'IK11.2':85,
+      'IK4.1':85,'IK4.2':84,
+      'IK5.1':88,'IK5.2':92,
+      'IK6.1':65,
+      'IK7.1':67,'IK7.2':67,
+      'IK8.1':72,'IK8.2':68,
+      'IK9.1':55,'IK9.2':53,
+      'IK10.1':32,'IK10.2':28,
+      'IK11.1':20,'IK11.2':25,
       'IK12.1':88,'IK12.2':90
     };
 

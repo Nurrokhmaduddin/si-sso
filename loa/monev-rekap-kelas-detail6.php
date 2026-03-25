@@ -120,11 +120,11 @@
             <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail3.php'"><a class="nav-link ">Portofolio</a></li>
             <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail2.php'"><a class="nav-link ">Mahasiswa</a></li>
             <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail5.php'"><a class="nav-link ">Refleksi</a></li>
-            <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail6.php'"><a class="nav-link active">OBE</a></li>
+            <!-- <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail6.php'"><a class="nav-link active">OBE</a></li> -->
           </ul>
 
 
-<!-- ========== CARD : tabel visualisasi CPMK ========== -->
+<!-- ========== CARD : tabel sebaran CPMK ========== -->
 <div class="card">
   <div class="card-body">
     <div class="table-responsive">

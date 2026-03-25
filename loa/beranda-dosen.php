@@ -1,7 +1,9 @@
-<?php $page = 'beranda_dosen'; ?>
-<?php include('1header.php'); ?>
-<?php include('2navbar.php'); ?>
-<?php include('3sidebar.php'); ?>
+<?php 
+$page = 'beranda_dosen';  
+include('1header.php'); 
+include('2navbar.php'); 
+include('3sidebar-dosen.php'); 
+?>
 <style>
   .chart-container {
       position: relative;
@@ -68,7 +70,7 @@
                 <h3>88% Mahasiswa</h3>
                 <p class="mb-0">
                   <i class="fas fa-user-graduate"></i>
-                    dengan nilai ≥ C pada semester ini.
+                    dengan nilai ≥ C pada semester ini
                 </p>
               </div>
             </div>
@@ -96,16 +98,18 @@
             <!-- ========== CARD : Stacked Bar Chart ========== -->
             <div class="card">
               <div class="card-header">
-                <h5 class="card-title mb-0"><i class="fas fa-chart-bar me-2"></i> Stacked Bar Chart — Proporsi (%)</h5>
+                <h5 class="card-title mb-0"><i class="fas fa-chart-bar me-2"></i> 
+                  Proporsi Portofolio Kelas Diampu (%)
+                </h5>
                 <div class="card-tools">
-                  <small class="text-muted">kelas diampu dosen</small>
+                  <small class="text-muted">Semester Terpilih</small>
                 </div>
               </div>
 
-              <div class="card-body chart-container d-flex flex-column">
-                <div class="flex-grow-1">
-                  <canvas id="stackedChart" width="100%" height="22"></canvas>
-                </div>
+              <div class="card-body  d-flex flex-column">
+                <!-- <div class="flex-grow-1"> -->
+                  <canvas id="stackedChart" width="100%" height="40"></canvas>
+                <!-- </div> -->
               </div>
             </div>
             <!-- ========== CARD : tabel granular kelas ========== -->

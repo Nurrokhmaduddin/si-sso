@@ -135,7 +135,7 @@
       <th>#</th>
       <th>Kode IK</th>
       <th>Deskripsi IK</th>
-      <th>Skor IK</th>
+      <th>Skor IK (avg)</th>
     </tr>
   </thead>
   <tbody>
@@ -192,8 +192,118 @@
   </div>
 </div>
 
+
+
+
+
+<!-- CARD REKAP MASUKAN & INSIGHT PRODI (48 DOSEN) -->
+<div class="card">
+  <div class="card-header">
+    <h3 class="card-title">
+      <i class="fas fa-chart-line mr-1"></i>
+      Ringkasan Kualitatif
+    </h3>
+    <div class="card-tools">
+      <small class="text-muted">Semester Terpilih</small>
+    </div>
+  </div>
+  <div class="card-header bg-warning text-white">
+    <h5>Rekap Masukan & Insight untuk Prodi</h5>
+    <small>Ringkasan dari 48 dosen • Strategis</small>
+  </div>
+
+  <div class="card-body">
+
+    <!-- 1️⃣ Kesiapan Mahasiswa -->
+    <h6><strong>1. Kesiapan Mahasiswa</strong></h6>
+    <p>🏆 Cukup (30/48 dosen)</p>
+    <hr>
+
+    <!-- 2️⃣ CPMK Tercapai -->
+    <h6><strong>2. CPMK Tercapai</strong></h6>
+    <p>🏆 Tercapai Kuat (28/48 dosen)</p>
+    <hr>
+
+    <!-- 3️⃣ Skor Skala -->
+    <h6><strong>3. Skor Skala (Rerata Semua Dosen)</strong></h6>
+    <ul>
+      <li>Kesiapan Mahasiswa: 3.8/5</li>
+      <li>Efektivitas Metode Pembelajaran: 4.5/5</li>
+    </ul>
+    <hr>
+
+    <!-- 4️⃣ Kesesuaian Kurikulum (Tagging) -->
+    <h6><strong>4. Kesesuaian Kurikulum</strong></h6>
+    <span class="badge badge-danger">Gap Materi (25)</span>
+    <span class="badge badge-info">Tumpang Tindih Materi (15)</span>
+    <span class="badge badge-secondary">CPMK Ambisius (8)</span>
+    <p><small>Catatan tambahan: Penyusunan ulang materi agar urut & konsisten</small></p>
+    <hr>
+
+    <!-- 5️⃣ Efektivitas Metode Pembelajaran (Tagging) -->
+    <h6><strong>5. Metode Pembelajaran Paling Efektif</strong></h6>
+    <span class="badge badge-danger">Praktikum Menguatkan CPMK (30)</span>
+    <span class="badge badge-info">Diskusi Efektif (25)</span>
+    <span class="badge badge-secondary">Project Based Learning Efektif (15)</span>
+    <p><small>Catatan tambahan: Studi kasus perlu dipadukan untuk optimalisasi</small></p>
+    <hr>
+
+
+    <!-- 6️⃣ Insight Evaluasi -->
+    <h6><strong>6. Insight Evaluasi</strong></h6>
+    <small class="text-muted">48 responden</small>
+    <ul class="list-group mb-2">
+      <li class="list-group-item">Mahasiswa masih kurang siap secara konsep dasar. (Dosen 1)</li>
+      <li class="list-group-item">Praktikum & diskusi terbukti paling efektif. (Dosen 2)</li>
+      <li class="list-group-item">…dst hingga Dosen 48</li>
+    </ul>
+
+    <!-- Collapsible sisa jawaban -->
+    <div class="collapse" id="insightAll">
+      <ul class="list-group mb-3">
+        <li class="list-group-item">Rubrik penilaian perlu disesuaikan untuk CPMK kompleks. (Dosen 3)</li>
+        <li class="list-group-item">Beberapa mahasiswa kesulitan mengikuti materi lanjutan. (Dosen 4)</li>
+        <li class="list-group-item">Mahasiswa perlu lebih banyak latihan dasar. (Dosen 5)</li>
+        <li class="list-group-item">… (Dosen 48)</li>
+      </ul>
+    </div>
+    <button class="btn btn-link p-0" type="button" data-bs-toggle="collapse" data-bs-target="#insightAll" aria-expanded="false" aria-controls="insightAll">
+      Selengkapnya
+    </button>
+
+    <hr>
+
+    <!-- 7️⃣ Rekomendasi & Action Plan -->
+    <h6><strong>7. Rekomendasi & Action Plan</strong></h6>
+    <small class="text-muted">48 responden</small>
+    <ul class="list-group mb-2">
+      <li class="list-group-item">Tambahkan sesi praktikum awal & diskusi terstruktur. (Dosen 1)</li>
+      <li class="list-group-item">Pengadaan software simulasi & alat bantu praktikum. (Dosen 2)</li>
+    </ul>
+
+    <div class="collapse" id="recommendAll">
+      <ul class="list-group mb-3">
+      <li class="list-group-item">Standarisasi urutan materi dan CPMK antar mata kuliah. (Dosen 3)</li>
+        <li class="list-group-item">Rubrik jelas & evaluasi berjenjang untuk penilaian. (Dosen 4)</li>
+        <li class="list-group-item">… (Dosen 48)</li>
+      </ul>
+    </div>
+    <button class="btn btn-link p-0" type="button" data-bs-toggle="collapse" data-bs-target="#recommendAll" aria-expanded="false" aria-controls="recommendAll">
+      Selengkapnya
+    </button>
+
+  </div>
+
+  <div class="card-footer text-right">
+    <button class="btn btn-outline-success">Unduh Rekap</button>
+    <button class="btn btn-outline-info">Lihat Semua Masukan</button>
+  </div>
+
+</div>
+
+
 <!-- ========== CARD : Ringkasan Refleksi Kelas untuk Tim Kurikulum ========== -->
-<div class="card ">
+<div class="card  collapse">
 
   <div class="card-header">
     <h3 class="card-title">
@@ -385,7 +495,7 @@
 
 <!-- 1. CARD: Populis Voting Semua Kelas -->
 <div class="col-md-12">
-  <div class="card card-info">
+  <div class="card card-info collapse">
 
     <div class="card-header">
       <h5 class="card-title mb-0">Populis Kelas</h5>
@@ -441,7 +551,7 @@
 
 <!-- 2. CARD: Populis Voting Semua Mata Kuliah -->
 <div class="col-md-12">
-  <div class="card card-purple">
+  <div class="card card-purple collapse">
 
     <div class="card-header">
       <h5 class="card-title mb-0">Populis Mata Kuliah</h5>
@@ -497,8 +607,8 @@
 
 
 <!-- 3. CARD: Masukan & Insight untuk Program Studi (Strategic) -->
-<div class="col-md-12">
-  <div class="card card-danger">
+<div class="col-md-12 ">
+  <div class="card card-danger collapse">
 
     <div class="card-header">
       <h5 class="card-title mb-0">Masukan & Insight Prodi</h5>
@@ -970,7 +1080,7 @@ CPMK Bermasalah
     entriesG.sort((a,b)=>a.cpl - b.cpl);
 
     // Label X ringkas (IK saja)
-    const labelsXG = entriesG.map(e => e.ik);
+    const labelsXG = entriesG.map(e => ''+ e.ik);
 
     // Data dan warna
     const dataValuesG = entriesG.map(e => e.value);
@@ -1012,7 +1122,7 @@ CPMK Bermasalah
               label: function(context) {
                 const idx = context.dataIndex;
                 const e = entriesG[idx]; // referensi ke array entries
-                return e.ik + ' (CPL ' + e.cpl + '): ' + e.value;
+                return 'Rerata Nilai '+ e.ik + ' (CPL ' + e.cpl + '): ' + e.value;
               }
             }
           },

@@ -47,8 +47,8 @@
         <i class="fas fa-user"></i> <span class="d-none d-md-inline">DisplayName</span> <i class="fas fa-caret-down"></i>
       </a>
       <ul class="dropdown-menu dropdown-menu-end">
-        <li><a href="../Profile.html" class="dropdown-item"><i class="fas fa-user-circle me-2"></i>Profile</a></li>
-        <li><a href="../activity-log.html" class="dropdown-item"><i class="fas fa-cog me-2"></i>Activity Log</a></li>
+        <li><a href="../user-profile.html" class="dropdown-item"><i class="fas fa-user-circle me-2"></i>Profile</a></li>
+        <li><a href="../user-log.html" class="dropdown-item"><i class="fas fa-cog me-2"></i>Activity Log</a></li>
         <li><hr class="dropdown-divider"></li>
         <li>
           <a href="#" class="dropdown-item text-info" data-bs-toggle="modal" data-bs-target="#modalFeedback">

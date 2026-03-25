@@ -1,0 +1,141 @@
+Oke! Mari kita buat **gambaran detail modul BOM (Bill of Materials) untuk restoran/kitchen system** dengan alur ideal yang kamu sebutkan. Aku akan jelaskan secara **konsep + alur + fitur** supaya jelas bagi developer maupun manajer operasional.
+
+---
+
+## **1️⃣ Konsep Modul BOM**
+
+**BOM (Bill of Materials)** di konteks restoran/kitchen artinya:
+
+* Setiap menu atau resep punya daftar bahan baku beserta **jumlah yang dibutuhkan per porsi**.
+* Modul ini menghubungkan **menu / order** dengan **stok bahan**, sehingga setiap kali ada order dimasak, sistem bisa otomatis mengurangi stok dan menghitung **HPP (Harga Pokok Penjualan)**.
+
+---
+
+## **2️⃣ Struktur Data Utama**
+
+1. **Menu / Produk Masakan**
+
+   * ID Menu
+   * Nama Menu
+   * Harga Jual
+   * Kategori (makanan, minuman, paket)
+
+2. **Bahan / Ingredient**
+
+   * ID Bahan
+   * Nama Bahan
+   * Satuan (kg, liter, pcs)
+   * Stok tersedia
+   * Harga satuan
+
+3. **BOM (Recipe)**
+
+   * ID Menu
+   * ID Bahan
+   * Jumlah yang dibutuhkan per porsi
+   * Persentase loss (opsional, misal bahan terbuang saat masak)
+
+4. **Order**
+
+   * ID Order
+   * ID Menu
+   * Jumlah porsi
+   * Status (dipesan → dimasak → selesai → served)
+
+---
+
+## **3️⃣ Alur Ideal Modul BOM**
+
+### **Step 1: Order Masuk**
+
+* Kasir input order → sistem mencatat menu dan jumlah porsi.
+* Order dikirim ke **Kitchen Display System (KDS)**.
+
+### **Step 2: Kitchen Proses Masak**
+
+* Koki melihat di KDS, mulai memasak.
+* Status **“dimasak”** atau **“sedang dimasak”** dicatat.
+* Sistem masih **belum memotong stok** (opsional: bisa deduct partial saat bahan dipakai).
+
+### **Step 3: Masakan Selesai**
+
+* Status **“selesai”** di KDS.
+* Sistem otomatis melakukan:
+
+  1. **Potong stok bahan sesuai BOM × jumlah porsi**
+
+     * Contoh: Menu “Nasi Goreng” membutuhkan 100g beras, 1 butir telur.
+     * Jika dipesan 3 porsi → stok beras dikurangi 300g, stok telur 3 butir.
+  2. **Hitung HPP / Cost per Porsi**
+
+     * HPP = Σ(harga bahan × jumlah per porsi)
+     * Bisa langsung digunakan untuk laporan finance.
+
+### **Step 4: Laporan & Audit**
+
+* Modul BOM menyediakan:
+
+  * Laporan **stok bahan terkini**
+  * Laporan **HPP menu**
+  * Audit penggunaan bahan per hari / per shift
+  * Riwayat **penyesuaian stok** jika ada selisih (loss, kerusakan)
+
+---
+
+## **4️⃣ Fitur Tambahan / Optional**
+
+| Fitur                            | Fungsi                                         |
+| -------------------------------- | ---------------------------------------------- |
+| **Stok Bahan**                   | Lihat real-time stok semua bahan baku          |
+| **Stok Masuk / Pembelian Bahan** | Integrasi ke purchase, update stok otomatis    |
+| **Stok Keluar / Penyesuaian**    | Jika bahan rusak/terbuang, bisa update stok    |
+| **Kitchen Display Integration**  | Order langsung muncul di dapur                 |
+| **HPP Otomatis**                 | Menghitung cost setiap order selesai dimasak   |
+| **Loss Management**              | Bisa mencatat bahan terbuang atau selisih stok |
+| **Menu Analysis**                | HPP vs Harga Jual → profit per menu            |
+
+---
+
+## **5️⃣ Modul BOM di Sidebar Operation**
+
+Jika kita buat **sidebar menu untuk Operation**, modul BOM bisa masuk ke kategori **Stok / Kitchen**:
+
+```
+Operation
+ ├─ Stok Bahan
+ ├─ Stok Masuk
+ ├─ Stok Keluar / Penyesuaian
+ ├─ Stok Opname
+ ├─ Proses Masak / Kitchen Display
+ └─ BOM / Resep Menu
+```
+
+* **BOM / Resep Menu** bisa diakses untuk:
+
+  * Input atau update resep
+  * Lihat HPP
+  * Integrasi dengan KDS dan stok otomatis
+
+---
+
+Kalau mau, aku bisa buatkan **diagram alur visual** dari **Order → KDS → Potong Stok → HPP → Laporan** agar lebih gampang dipahami tim developer dan manajemen.
+
+Apakah mau aku buatkan diagram alurnya juga?
+
+
+----------------------------
+Alur Inti + Modul POS / Kitchen / Finance Modern
+
+Jika digabungkan, alur inti sistem modern berbasis dokumen dan event-driven akan seperti ini:
+
+Order dibuat (ORDER_CREATED) → Kasir / Online
+Order divalidasi (stok dicek, promo diterapkan)
+Order dikirim ke Kitchen Display (PROSES_MASAK)
+Masakan selesai → stok bahan otomatis dikurangi → HPP dihitung
+Pembayaran diverifikasi (PAYMENT_VERIFIED)
+Order dikirim / disajikan → Order Selesai
+Event dicatat untuk audit / reporting
+Dashboard KPI & laporan per role update real-time
+Jika ada selisih stok / loss → Penyesuaian stok dibuat (STOCK_ADJUSTED)
+
+Semua modul: POS, Inventory, Kitchen, Finance, Reporting → saling terhubung lewat event-driven architecture, tapi tetap modular.

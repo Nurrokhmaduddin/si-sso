@@ -127,7 +127,6 @@
             <td class="text-center"><img style="width:40px;" alt="Foto"></td>
             <td class="text-center"><span class="badge badge-info">Aktif</span></td>
             <td class="text-center">
-              <button type="button" class="btn btn-sm btn-outline-warning"><i class="fas fa-key"></i></button>
               <button type="button" class="btn btn-sm btn-outline-primary"><i class="fas fa-edit"></i></button>
               <button type="button" class="btn btn-sm btn-outline-danger"><i class="fas fa-trash"></i></button>
             </td>
@@ -143,9 +142,8 @@
             <td class="text-center"><img style="width:40px;" alt="Foto"></td>
             <td class="text-center"><span class="badge badge-warning">Cuti</span></td>
             <td class="text-center">
-              <button class="btn btn-sm btn-outline-info" onclick="window.location.href='monev-cpl-individual1.php' " ><i class="fas fa-info-circle"></i></button>
-              <button class="btn btn-sm btn-outline-primary"><i class="fas fa-upload"></i></button>
-              <button class="btn btn-sm btn-outline-success"><i class="fas fa-download"></i></button>
+              <button type="button" class="btn btn-sm btn-outline-primary"><i class="fas fa-edit"></i></button>
+              <button type="button" class="btn btn-sm btn-outline-danger"><i class="fas fa-trash"></i></button>
             </td>
           </tr>
 
@@ -159,17 +157,8 @@
             <td class="text-center"><img style="width:40px;" alt="Foto"></td>
             <td class="text-center"><span class="badge badge-danger">Skors</span></td>
             <td class="text-center">
-              <div class="btn-group">
-                <a href="portfolio_cpmk_detail2.php" target="_blank" class="btn btn-sm btn-outline-info">
-                  <i class="fas fa-external-link-alt"></i> View
-                </a>
-                <button type="button" class="btn btn-sm btn-outline-info dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown"></button>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#"><i class="fas fa-edit text-primary"></i> Edit</a></li>
-                  <li><a class="dropdown-item" href="#"><i class="fas fa-trash text-danger"></i> Hapus</a></li>
-                  <li><a class="dropdown-item" href="#"><i class="fas fa-key text-warning"></i> Ubah Password</a></li>
-                </ul>
-              </div>
+              <button type="button" class="btn btn-sm btn-outline-primary"><i class="fas fa-edit"></i></button>
+              <button type="button" class="btn btn-sm btn-outline-danger"><i class="fas fa-trash"></i></button>
             </td>
           </tr>
 
@@ -183,7 +172,8 @@
             <td class="text-center"><img style="width:40px;" alt="Foto"></td>
             <td class="text-center"><span class="badge badge-danger">Drop Out</span></td>
             <td class="text-center">
-              <button class="btn btn-sm btn-outline-warning">🔑</button>
+              <button type="button" class="btn btn-sm btn-outline-primary"><i class="fas fa-edit"></i></button>
+              <button type="button" class="btn btn-sm btn-outline-danger"><i class="fas fa-trash"></i></button>
             </td>
           </tr>
           <tr>
@@ -197,7 +187,8 @@
             <td class="text-center"><img style="width:40px;" alt="Foto"></td>
             <td class="text-center"><span class="badge badge-danger">Passed Out</span></td>
             <td class="text-center">
-              <button class="btn btn-sm btn-outline-warning">🔑</button>
+              <button type="button" class="btn btn-sm btn-outline-primary"><i class="fas fa-edit"></i></button>
+              <button type="button" class="btn btn-sm btn-outline-danger"><i class="fas fa-trash"></i></button>
             </td>
           </tr>
 
@@ -211,22 +202,8 @@
             <td class="text-center"><img style="width:40px;" alt="Foto"></td>
             <td class="text-center"><span class="badge badge-success">Lulus</span></td>
             <td class="text-center">
-              <div class="btn-group">
-                <button type="button" class="btn btn-sm btn-outline-info dropdown-toggle" 
-                data-bs-toggle="dropdown" aria-expanded="false">
-                <i class="fas fa-ellipsis-h"></i> Action
-              </button>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#"><i class="fas fa-edit text-primary"></i> Edit Link</a></li>
-                <li><a class="dropdown-item" href="#"><i class="fas fa-trash-alt text-danger"></i> Hapus Data</a></li>
-                <li><a class="dropdown-item" href="#"><i class="fas fa-key text-warning"></i> Ubah Password</a></li>
-                <li><a class="dropdown-item" href="#"><i class="fas fa-upload text-success"></i> Upload File</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="portfolio_cpmk_detail2.php" target="_blank">
-                  <i class="fas fa-external-link-alt text-info"></i> View Link</a></li>
-                  <li><a class="dropdown-item" href="#"><i class="fas fa-download text-success"></i> Download File</a></li>
-                </ul>
-              </div>
+              <button type="button" class="btn btn-sm btn-outline-primary"><i class="fas fa-edit"></i></button>
+              <button type="button" class="btn btn-sm btn-outline-danger"><i class="fas fa-trash"></i></button>
             </td>
           </tr>
 

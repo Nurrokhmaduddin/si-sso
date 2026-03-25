@@ -253,80 +253,7 @@ canvas {
         </div>
         <!-- Rangking Performa -->
         <div class="row collapse" id="daftarIKCPL41" >
-          <!-- Card Lowest -->
-          <div class="col-12 col-md-6">
-            <div class="card">
-              <div class="card-header">
-                <h5 class="card-title mb-0">🔽 Top 5 MK Performa Terendah</h5>
-              </div>
-              <div class="card-body">
-                <div class="table-responsive">
-                  <table id="tblCplStats" class="table table-hover table-bordered table-sm">
-                    <thead class="table-light">
-                      <tr>
-                        <th>Ranking</th>
-                        <th class="text-center" style="width: 140px">Rerata Nilai Akhir</th>
-                        <th>MK</th>
-                        <th>Deskripsi</th>
-                      </tr>
-                    </thead>
-                    <tbody>                
-                      <tr>
-                        <td>
-                          <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                            <div style="background:#f54242; width:10%; height:12px; border-radius:4px;"></div>
-                          </div>
-                        </td>
-                        <td class="text-center"><span class="clickable" data-MK="MK-01" data-type="min" data-value="57">20</span></td>
-                        <td>STK314</td>
-                        <td>Fisika Dasar 2</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                            <div style="background:#f54242; width:25%; height:12px; border-radius:4px;"></div>
-                          </div>
-                        </td>
-                        <td class="text-center"><span class="clickable" data-MK="MK-01" data-type="min" data-value="57">30</span></td>
-                        <td>STK114</td>
-                        <td>Azas Teknik Kimia 1</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                            <div style="background:#f54242; width:35%; height:12px; border-radius:4px;"></div>
-                          </div>
-                        </td>
-                        <td class="text-center"><span class="clickable" data-MK="MK-01" data-type="min" data-value="57">50</span></td>
-                        <td>STK115</td>
-                        <td>Aljabar Linear</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                            <div style="background:#f54242; width:50%; height:12px; border-radius:4px;"></div>
-                          </div>
-                        </td>
-                        <td class="text-center"><span class="clickable" data-MK="MK-01" data-type="min" data-value="57">51</span></td>
-                        <td>STK116</td>
-                        <td>Bahasa Inggris</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                            <div style="background:#f54242; width:70%; height:12px; border-radius:4px;"></div>
-                          </div>
-                        </td>
-                        <td class="text-center"><span class="clickable" data-MK="MK-01" data-type="min" data-value="57">57</span></td>
-                        <td>STK144</td>
-                        <td>Perancangan Alat Proses</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>               
-              </div>
-            </div>
-          </div>
+          
           <!-- Card Highest -->
           <div class="col-12 col-md-6">
             <div class="card">
@@ -339,7 +266,7 @@ canvas {
                     <thead class="table-light">
                       <tr>
                         <th>Ranking</th>
-                        <th class="text-center" style="width: 140px">Rerata Nilai Akhir</th>
+                        <th class="text-center" style="width: 140px"> Nilai Akhir</th>
                         <th>MK</th>
                         <th>Deskripsi</th>
                       </tr>
@@ -403,6 +330,80 @@ canvas {
               </div>
             </div>
           </div>
+          <!-- Card Lowest -->
+          <div class="col-12 col-md-6">
+            <div class="card">
+              <div class="card-header">
+                <h5 class="card-title mb-0">🔽 Top 5 MK Performa Terendah</h5>
+              </div>
+              <div class="card-body">
+                <div class="table-responsive">
+                  <table id="tblCplStats" class="table table-hover table-bordered table-sm">
+                    <thead class="table-light">
+                      <tr>
+                        <th>Ranking</th>
+                        <th class="text-center" style="width: 140px"> Nilai Akhir</th>
+                        <th>MK</th>
+                        <th>Deskripsi</th>
+                      </tr>
+                    </thead>
+                    <tbody>                
+                      <tr>
+                        <td>
+                          <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
+                            <div style="background:#f54242; width:10%; height:12px; border-radius:4px;"></div>
+                          </div>
+                        </td>
+                        <td class="text-center"><span class="clickable" data-MK="MK-01" data-type="min" data-value="57">20</span></td>
+                        <td>STK314</td>
+                        <td>Fisika Dasar 2</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
+                            <div style="background:#f54242; width:25%; height:12px; border-radius:4px;"></div>
+                          </div>
+                        </td>
+                        <td class="text-center"><span class="clickable" data-MK="MK-01" data-type="min" data-value="57">30</span></td>
+                        <td>STK114</td>
+                        <td>Azas Teknik Kimia 1</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
+                            <div style="background:#f54242; width:35%; height:12px; border-radius:4px;"></div>
+                          </div>
+                        </td>
+                        <td class="text-center"><span class="clickable" data-MK="MK-01" data-type="min" data-value="57">50</span></td>
+                        <td>STK115</td>
+                        <td>Aljabar Linear</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
+                            <div style="background:#f54242; width:50%; height:12px; border-radius:4px;"></div>
+                          </div>
+                        </td>
+                        <td class="text-center"><span class="clickable" data-MK="MK-01" data-type="min" data-value="57">51</span></td>
+                        <td>STK116</td>
+                        <td>Bahasa Inggris</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
+                            <div style="background:#f54242; width:70%; height:12px; border-radius:4px;"></div>
+                          </div>
+                        </td>
+                        <td class="text-center"><span class="clickable" data-MK="MK-01" data-type="min" data-value="57">57</span></td>
+                        <td>STK144</td>
+                        <td>Perancangan Alat Proses</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>               
+              </div>
+            </div>
+          </div>
         </div>
         <!-- daftar MK -->
         <div class="card " id="daftarIKCPL43" >
@@ -428,7 +429,7 @@ canvas {
                 <tbody>
 
                   <!-- Tahap Formatif -->
-                  <tr><td colspan="5" class="text-center fw-bold table-secondary">Tahap Formatif / Semester 1</td></tr>
+                  <tr><td colspan="5" class="text-center fw-bold table-secondary">Tahap Formatif / Semester Tempuh 1</td></tr>
 
                   <tr>
                     <td>1</td>
@@ -472,7 +473,7 @@ canvas {
 
 
                   <!-- Tahap Intermediate -->
-                  <tr><td colspan="5" class="text-center fw-bold table-secondary">Tahap Intermediate / Semester 5</td></tr>
+                  <tr><td colspan="5" class="text-center fw-bold table-secondary">Tahap Intermediate / Semester Tempuh 5</td></tr>
 
                   <tr>
                     <td>5</td>
@@ -506,7 +507,7 @@ canvas {
 
 
                   <!-- Tahap Profesional -->
-                  <tr><td colspan="5" class="text-center fw-bold table-secondary">Tahap Profesional / Semester 7</td></tr>
+                  <tr><td colspan="5" class="text-center fw-bold table-secondary">Tahap Profesional / Semester Tempuh 7</td></tr>
 
                   <tr>
                     <td>8</td>

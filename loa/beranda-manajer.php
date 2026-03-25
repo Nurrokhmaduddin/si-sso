@@ -1,7 +1,9 @@
-<?php $page = 'beranda_manajer'; ?>
-<?php include('1header.php'); ?>
-<?php include('2navbar.php'); ?>
-<?php include('3sidebar.php'); ?>
+<?php 
+$page = 'beranda_manajer';  
+include('1header.php'); 
+include('2navbar.php'); 
+include('3sidebar-manajer.php'); 
+?>
 <style>
   .chart-container {
       position: relative;
@@ -51,11 +53,11 @@
           <div class="col-md-4">
             <div class="card bg-success text-white">
               <div class="card-body">
-                <h5>CPMK Memenuhi Standar</h5>
-                <h3>20 / 34 CPMK</h3>
+                <h5>Capaian IK Semester</h5>
+                <h3>18 / 324 IK</h3>
                 <p class="mb-0">
                   <i class="fas fa-chart-line"></i>
-                  yaitu mahasiswa tuntas ≥ 65%
+                  yang ≥ target standar
                 </p>
               </div>
             </div>
@@ -64,11 +66,11 @@
           <div class="col-md-4">
             <div class="card bg-warning text-white">
               <div class="card-body">
-                <h5>Ketuntasan Mata Kuliah</h5>
-                <h3>88% Mahasiswa</h3>
+                <h5>Tindak Lanjut Evaluasi</h5>
+                <h3>90%</h3>
                 <p class="mb-0">
-                  <i class="fas fa-user-graduate"></i>
-                    dengan nilai ≥ C pada semester ini.
+                  <i class="fas fa-tasks"></i>
+                  yang sudah ditindaklanjuti
                 </p>
               </div>
             </div>
@@ -93,191 +95,25 @@
               </div>
             </div> -->
 
-            <!-- ========== CARD : Stacked Bar Chart ========== -->
+            <!-- ========== CARD 4: CHART 1 ========== -->    
             <div class="card">
               <div class="card-header">
-                <h5 class="card-title mb-0"><i class="fas fa-chart-bar me-2"></i> Stacked Bar Chart — Proporsi (%)</h5>
+                <h5 class="card-title mb-0"><i class="fas fa-chart-bar me-2"></i>
+                  Ringkasan Kuantitatif
+                </h5>
                 <div class="card-tools">
-                  <small class="text-muted">kelas diampu dosen</small>
+                  <small class="text-muted">Semester Terpilih</small>
                 </div>
               </div>
-
-              <div class="card-body chart-container d-flex flex-column">
-                <div class="flex-grow-1">
-                  <canvas id="stackedChart" width="100%" height="22"></canvas>
-                </div>
+              <div class="card-body d-flex flex-column">
+                <canvas id="chartIKG" width="100%" height="40"></canvas>
+                
               </div>
             </div>
-            <!-- ========== CARD : tabel granular kelas ========== -->
-            <div class="card">
-              <div class="card-body">
-                <div class="table-responsive">
-                  <table class="table table-bordered table-striped table-sm datatables1">
-                    <thead>
-                      <tr class="text-uppercase">
-                        <th width="5px">No.</th>
-                        <th>Mata Kuliah</th>
-                        <th style="text-align: center;">CPMK</th>
-                        <th style="text-align: center;">Kelas</th>
-                        <th style="text-align: center;">Mahasiswa</th>
-                        <th style="text-align: center;">Aksi</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-
-                      <tr>
-                        <td align="center">1</td>
-                        <td>Pengantar Teknologi Informasi<br>
-                          <!-- <small><b>(IF101)</b></small> -->
-                        </td>
-                        <td align="center">5</td>
-                        <td align="center">A</td>
-                        <td align="center"><b>27</b></td>                                         
-                        <td class="text-center">
-                          <button type="button" onclick="window.location='perkuliahan-portofolio-kelas-detail.php'" class="btn btn-xs btn-outline-info"> <i class='fas fa-info-circle'> </i></button>
-                        </td>
-                      </tr>
-
-                      <tr>
-                        <td align="center">2</td>
-                        <td>
-                          Algoritma dan Pemrograman <br>
-                          <!-- <small><b>(IF102)</b></small> -->
-                        </td>
-                        <td align="center">5</td>
-                        <td align="center">C</td>
-                        <td align="center"><b>33</b></td>
-                        <td class="text-center">
-                          <button type="button" onclick="window.location='perkuliahan-portofolio-kelas-detail.php'" class="btn btn-xs btn-outline-info"> <i class='fas fa-info-circle'> </i></button>
-                        </td>
-                      </tr>
-
-                      <tr>
-                        <td align="center">3</td>
-                        <td>
-                          Metode Pelaksanaan Bangunan<br>
-                          <!-- <small><b>(STS704)</b></small> -->
-                        </td>
-                        <td align="center">5</td>
-                        <td align="center">B</td>
-                        <td align="center"><b>26</b></td>
-                        <td class="text-center">
-                          <button type="button" onclick="window.location='perkuliahan-portofolio-kelas-detail.php'" class="btn btn-xs btn-outline-info"> <i class='fas fa-info-circle'> </i></button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td align="center">4</td>
-                        <td>
-                          Keamanan Informasi<br>
-                          <!-- <small><b>(IF401)</b></small> -->
-                        </td>
-                        <td align="center">5</td>
-                        <td align="center">D</td>
-                        <td align="center"><b>23</b></td>
-                        <td class="text-center">
-                          <button type="button" onclick="window.location='perkuliahan-portofolio-kelas-detail.php'" class="btn btn-xs btn-outline-info"> <i class='fas fa-info-circle'> </i></button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td align="center">5</td>
-                        <td>
-                          Rekayasa Perangkat Lunak<br>
-                          <!-- <small><b>(IF302)</b></small> -->
-                        </td>
-                        <td align="center">5</td>
-                        <td align="center">F</td>
-                        <td align="center"><b>25</b></td>
-                        <td class="text-center">
-                         <button type="button" onclick="window.location='perkuliahan-portofolio-kelas-detail.php'" class="btn btn-xs btn-outline-info"> <i class='fas fa-info-circle'> </i></button>
-                       </td>
-                     </tr>
-                     <tr>
-                      <td align="center">6</td>
-                      <td>
-                        Metode Pelaksanaan Bangunan<br>
-                        <!-- <small><b>(STS704)</b></small> -->
-                      </td>
-                      <td align="center">5</td>
-                      <td align="center">E</td>
-                      <td align="center"><b>22</b></td>
-                      <td class="text-center">
-                        <button type="button" onclick="window.location='perkuliahan-portofolio-kelas-detail.php'" class="btn btn-xs btn-outline-info"> <i class='fas fa-info-circle'> </i></button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td align="center">7</td>
-                      <td>
-                        Bahan Perkerasan Jalan (+Pr)<br>
-                        <!-- <small><b>(STS307)</b></small> -->
-                      </td>
-                      <td align="center">9</td>
-                      <td align="center">F</td>
-                      <td align="center"><b>24</b></td>
-                      <td class="text-center">
-                        <button type="button" onclick="window.location='perkuliahan-portofolio-kelas-detail.php'" class="btn btn-xs btn-outline-info"> <i class='fas fa-info-circle'> </i></button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td align="center">8</td>
-                      <td>
-                        Metodologi Penelitian<br>
-                        <!-- <small><b>(IF501)</b></small> -->
-                      </td>
-                      <td align="center">9</td>
-                      <td align="center">C</td>
-                      <td align="center"><b>20</b></td>
-                      <td class="text-center">
-                        <button type="button" onclick="window.location='perkuliahan-portofolio-kelas-detail.php'" class="btn btn-xs btn-outline-info"> <i class='fas fa-info-circle'> </i></button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td align="center">9</td>
-                      <td>
-                        Skripsi<br>
-                        <!-- <small><b>(IF601)</b></small> -->
-                      </td>
-                      <td align="center">9</td>
-                      <td align="center">G</td>
-                      <td align="center"><b>24</b></td>
-                      <td class="text-center">
-                        <button type="button" onclick="window.location='perkuliahan-portofolio-kelas-detail.php'" class="btn btn-xs btn-outline-info"> <i class='fas fa-info-circle'> </i></button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td align="center">10</td>
-                      <td>
-                        Bahan Perkerasan Jalan (+Pr)<br>
-                        <!-- <small><b>(STS307)</b></small> -->
-                      </td>
-                      <td align="center">9</td>
-                      <td align="center">E</td>
-                      <td align="center"><b>22</b></td>
-                      <td class="text-center">
-                        <button type="button" onclick="window.location='perkuliahan-portofolio-kelas-detail.php'" class="btn btn-xs btn-outline-info"> <i class='fas fa-info-circle'> </i></button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td align="center">11</td>
-                      <td>
-                        Bahan Perkerasan Jalan (+Pr)<br>
-                        <small><b>(STS307)</b></small>
-                      </td>
-                      <td align="center">9</td>
-                      <td align="center">D</td>
-                      <td align="center"><b>24</b></td>
-                      <td class="text-center">
-                        <button type="button" class="btn btn-xs btn-outline-info" onclick="window.location='progres-kelas-semester-detail.php'"><i class="fas fa-info-circle"></i></button>
-                        <a href="data-portofolio-cpmk.pdf" download class="btn btn-xs btn-outline-success"><i class="fas fa-download"></i></a>
-                      </td>
-                    </tr>
-
-                    </tbody>
-                  </table>
 
 
-                </div>
-              </div>
-            </div>
+          
+
 
 
 
@@ -637,50 +473,123 @@
 </script>
 
 <script>
-    // Data
-    // const labels = ["Perencanaan", "Pelaksanaan", "Penugasan", "Penilaian", "Capaian", "CQI"];
-    const labels = ["RPS", "Materi Ajar", "Penugasan", "Soal Ujian", "Nilai CPMK", "EDOM"];
-    const kosong = [23, 35, 28, 42, 18, 52];
-    const ada = [46, 34, 41, 27, 51, 17];
+  const ctxG = document.getElementById('chartIKG').getContext('2d');
 
-    const persentaseKosong = kosong.map((k, i) => (k / (k + ada[i]) * 100).toFixed(1));
-    const persentaseAda = ada.map((a, i) => (a / (kosong[i] + a) * 100).toFixed(1));
+  const ikLabelsG = [
+    'IK1.1','IK1.2','IK2.1','IK2.2','IK2.3','IK3.1','IK3.2',
+    'IK4.1','IK4.2','IK5.1','IK5.2','IK6.1','IK7.1','IK7.2',
+    'IK8.1','IK8.2','IK9.1','IK9.2','IK10.1','IK10.2',
+    'IK11.1','IK11.2','IK12.1','IK12.2'
+  ];
 
-    // ===============================
-    // HORIZONTAL STACKED BAR
-    // ===============================
-    new Chart(document.getElementById("stackedChart"), {
-        type: "bar",
-        data: {
-            labels: labels,
-            datasets: [
-                {
-                    label: "Ada (%)",
-                    data: persentaseAda,
-                    backgroundColor: "rgba(255, 99, 132, 0.7)",
-                    borderColor: "rgb(255, 99, 132)",
-                    borderWidth: 2
-                },
-                {
-                    label: "Kosong (%)",
-                    data: persentaseKosong,
-                    backgroundColor: "rgba(255, 255, 255, 1)",
-                    borderColor: "rgb(255, 99, 132)",
-                    borderWidth: 2
-                }
-            ]
-        },
-        options: {
-            responsive: true,
-            maintainAspectRatio: false,
-            indexAxis: 'y', // <= bikin horizontal
-            scales: {
-                x: { stacked: true, max: 100, beginAtZero: true },
-                y: { stacked: true }
-            }
-        }
+  const ikValuesG = {
+    'IK1.1':82,'IK1.2':75,
+    'IK2.1':70,'IK2.2':78,'IK2.3':83,
+    'IK3.1':72,'IK3.2':76,
+    'IK4.1':74,'IK4.2':79,
+    'IK5.1':73,'IK5.2':77,
+    'IK6.1':85,
+    'IK7.1':80,'IK7.2':84,
+    'IK8.1':78,'IK8.2':82,
+    'IK9.1':75,'IK9.2':79,
+    'IK10.1':76,'IK10.2':80,
+    'IK11.1':82,'IK11.2':85,
+    'IK12.1':88,'IK12.2':90
+  };
+
+  const ikToCPLG = {
+    'IK1.1':[1],'IK1.2':[1],
+    'IK2.1':[2],'IK2.2':[2],'IK2.3':[2],
+    'IK3.1':[3],'IK3.2':[3],
+    'IK4.1':[4],'IK4.2':[4],
+    'IK5.1':[5],'IK5.2':[5,1],
+    'IK6.1':[6],
+    'IK7.1':[7],'IK7.2':[7],
+    'IK8.1':[8],'IK8.2':[8],
+    'IK9.1':[9],'IK9.2':[9],
+    'IK10.1':[10],'IK10.2':[10],
+    'IK11.1':[11],'IK11.2':[11],
+    'IK12.1':[12],'IK12.2':[12]
+  };
+
+  const cplColorsG = {
+    1:'#FF9F40B3',2:'#FFFFFF',3:'#FF9F40B3',4:'#FFFFFF',
+    5:'#FF9F40B3',6:'#FFFFFF',7:'#FF9F40B3',8:'#FFFFFF',
+    9:'#FF9F40B3',10:'#FFFFFF',11:'#FF9F40B3',12:'#FFFFFF'
+  };
+  const bdrColorsG = {
+    1:'#FF9F40',2:'#FF9F40',3:'#FF9F40',4:'#FF9F40',
+    5:'#FF9F40',6:'#FF9F40',7:'#FF9F40',8:'#FF9F40',
+    9:'#FF9F40',10:'#FF9F40',11:'#FF9F40',12:'#FF9F40'
+  };
+
+    // Buat array entries "IK x CPL"
+  const entriesG = [];
+  ikLabelsG.forEach(ik => {
+    ikToCPLG[ik].forEach(cpl => {
+      entriesG.push({ ik, value: ikValuesG[ik], cpl });
     });
-</script>
+  });
+
+    // Urutkan berdasarkan CPL
+  entriesG.sort((a,b)=>a.cpl - b.cpl);
+
+    // Label X ringkas (IK saja)
+  const labelsXG = entriesG.map(e => ''+ e.ik);
+
+    // Data dan warna
+  const dataValuesG = entriesG.map(e => e.value);
+  const barColorsG = entriesG.map(e => cplColorsG[e.cpl]);
+  const borderColorsG = entriesG.map(e => bdrColorsG[e.cpl]);
+
+  new Chart(ctxG, {
+    type: 'bar',
+    data: {
+      labels: labelsXG,
+      datasets: [{
+        label: 'Nilai IK',
+        data: dataValuesG,
+        backgroundColor: barColorsG,
+        borderColor: borderColorsG,
+        borderWidth: 2
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: {
+          display: true,
+          labels: {
+            generateLabels: function(chart) {
+              const cpls = Object.keys(cplColorsG);
+              return cpls.map(cpl => ({
+                text: 'CPL ' + cpl,
+                fillStyle: cplColorsG[cpl],
+                strokeStyle: bdrColorsG[cpl],
+                hidden: false,
+                index: cpl - 1
+              }));
+            }
+          }
+        },
+        tooltip: {
+          callbacks: {
+            label: function(context) {
+              const idx = context.dataIndex;
+                const e = entriesG[idx]; // referensi ke array entries
+                return 'Rerata Nilai '+ e.ik + ' (CPL ' + e.cpl + '): ' + e.value;
+              }
+            }
+          },
+          title: { display: false, text: 'IK per CPL (IK bisa muncul di beberapa CPL) - G' }
+        },
+        scales: {
+          x: { title: { display: false, text: 'IK' } },
+          y: { beginAtZero:true, max:100, title: { display:false, text:'Nilai IK (%)' } }
+        }
+      }
+    });
+  </script>
 
   <!-- CTA Modal -->
   <button

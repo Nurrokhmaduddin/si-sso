@@ -61,7 +61,7 @@ $(document).ready(function() {
   $(".role-select").on("click", function() {
       let role = $(this).data("role");
 
-      alert("Anda memilih peran: " + role);
+      // alert("Anda memilih peran: " + role);
 
       // menutup modal setelah pilih
       let modal = bootstrap.Modal.getInstance(document.getElementById('modalPilihPeran'));
@@ -85,7 +85,7 @@ $(document).ready(function() {
     // Gunakan window.location.pathname agar tetap berada di halaman yang sama 
     // window.location.href = window.location.pathname + "?peran=" + role; 
     // Redirect langsung ke index.php dengan query ?peran=...
-     window.location.href = "index.php?peran=" + role; 
+     window.location.href = "beranda-"+role+".php?peran=" + role; 
   }); 
   }); 
   }); 
@@ -111,6 +111,14 @@ $(document).ready(function() {
           <div class="mb-3">
             <label class="form-label">Apa yang ingin Anda sampaikan?</label>
             <div class="form-check">
+              <input class="form-check-input" type="radio" name="feedbackType" id="feedbackSaran" value="saran">
+              <label class="form-check-label" for="feedbackSaran">Kesulitan Penggunaan</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="feedbackType" id="feedbackSaran" value="saran">
+              <label class="form-check-label" for="feedbackSaran">Perbaikan Tampilan</label>
+            </div>
+            <div class="form-check">
               <input class="form-check-input" type="radio" name="feedbackType" id="feedbackBug" value="bug">
               <label class="form-check-label" for="feedbackBug">Laporan Bug</label>
             </div>
@@ -118,9 +126,11 @@ $(document).ready(function() {
               <input class="form-check-input" type="radio" name="feedbackType" id="feedbackFitur" value="fitur">
               <label class="form-check-label" for="feedbackFitur">Usulan Fitur</label>
             </div>
+            
+            
             <div class="form-check">
               <input class="form-check-input" type="radio" name="feedbackType" id="feedbackSaran" value="saran">
-              <label class="form-check-label" for="feedbackSaran">Saran Perbaikan</label>
+              <label class="form-check-label" for="feedbackSaran">Lainnya</label>
             </div>
           </div>
 
