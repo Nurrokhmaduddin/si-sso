@@ -1,36 +1,90 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Riwayat Kitchen - Tabel</title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-<style>
-    body { background: #f8f9fa; font-family: Arial, sans-serif; }
-    .card { border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
-    .nav-tabs .nav-link.active { background-color: #0d6efd; color: #fff; border-radius: 8px; }
-    table { font-size: 0.9rem; }
-    th, td { vertical-align: middle; }
-    .badge-status { font-size: 0.75rem; padding: 4px 8px; border-radius: 6px; }
-</style>
-</head>
-<body>
-<div class="container py-4">
+<?php $page = 'operation-kitchen-op'; ?>
+<?php include('1header.php'); ?>
+<?php include('2navbar.php'); ?>
+<?php
+// Include sidebar sesuai peran
+$sidebar_file = "3sidebar-{$role}.php";
+if (file_exists($sidebar_file)) {
+    include($sidebar_file);
+} else {
+    include('3sidebar.php');
+}
+?>
 
-    <h3 class="mb-4">Riwayat Kitchen Operations</h3>
+  
+<div class="content-wrapper" style="min-height: 626.4px;">    
 
-    <ul class="nav nav-tabs mb-3" id="riwayatTab" role="tablist">
+  <section class="content-header">
+    <div class="container-fluid">
+      <h3 class="mb-0"> Riwayat Kitchen Operations
+        <button type="button" class="btn btn-tool" data-bs-toggle="modal" data-bs-target="#modalBantuan" title="Bantuan"><i class="fas fa-question-circle"></i>
+        </button>
+      </h3>
+        <p class="text-muted mb-0">Keterangan singkat cara baca informasi halaman ini. membeikan perspektif laporan performa tiap station, dan beban kerja, serta kinarja durasi</p>
+    </div>
+  </section>
+
+  <!-- Main content -->
+  <section class="content">
+    <div class="container-fluid">
+      <!-- Main row -->
+      <div class="row">
+        <div class="col-md-12">
+          <!-- ========== CARD : Filter & Export ========== -->
+          <div class="card">
+            <div class="card-body ">
+              <div class="row">
+
+               
+                <div class="col-md-6">
+                  <b>Rentang Waktu:</b> Semua
+                </div>
+
+
+
+              </div>
+            </div>
+
+             <div class="card-footer">
+              <div class="card-tools ms-auto">
+                <button class="btn btn-outline-info btn-sm " data-bs-toggle="modal" data-bs-target="#modalFilter">
+                  <i class="fas fa-filter me-1"></i> Filter
+                </button>
+                <button type="button" class="btn btn-outline-success btn-sm">
+                  <i class="fas fa-file-download me-1"></i> Export
+                </button><!-- 
+                <button type="button" class="btn btn-outline-primary btn-sm " data-bs-toggle="modal" data-bs-target="#modalTambahData">
+                  <i class="fas fa-plus me-1"></i> Add
+                </button> -->
+                <!-- <button type="button" class="btn btn-outline-primary btn-sm " data-bs-toggle="modal" data-bs-target="#modalImpor">
+                  <i class="fas fa-file-upload me-1"></i> Import
+                </button>                
+                
+                <button type="button" class="btn btn-outline-danger btn-sm">
+                  <i class="fas fa-ban me-1"></i> Reset
+                </button>     -->
+              </div>
+            </div>
+            
+          </div>
+
+
+
+<ul class="nav nav-tabs " id="riwayatTab" role="tablist">
       <li class="nav-item" role="presentation">
         <button class="nav-link active" id="per-order-tab" data-bs-toggle="tab" data-bs-target="#per-order" type="button">Per Order</button>
       </li>
       <li class="nav-item" role="presentation">
         <button class="nav-link" id="per-menu-tab" data-bs-toggle="tab" data-bs-target="#per-menu" type="button">Per Menu</button>
       </li>
-      <li class="nav-item" >
-        <button class="nav-link" onclick="window.location='operation-kitchen-op2.php'" type="button">Grafik</button>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="per-menu-tab" data-bs-toggle="tab" data-bs-target="#per-grafik" type="button">Per Grafik</button>
       </li>
+      <!-- <li class="nav-item" >
+        <button class="nav-link" onclick="window.location='operation-kitchen-op2.php'" type="button">Grafik</button>
+      </li> -->
     </ul>
-
+         <!-- ========== CARD : Tabel  Granular ========== -->
     <div class="tab-content">
       <!-- ===== Per Order ===== -->
       <div class="tab-pane fade show active" id="per-order">
@@ -48,7 +102,7 @@
                   <th>Finish</th>
                   <th>Durasi</th>
                   <th>Status</th>
-                  <th>Chef</th>
+                  <th>Kitchen Station</th>
                 </tr>
               </thead>
               <tbody>
@@ -152,10 +206,321 @@
         </div>
       </div>
 
+
+      <!-- ==== per grafik ==== -->
+       <div class="tab-pane fade" id="per-grafik">
+      <div class="row">
+              <div class="col-md-6">
+                  <div class="card p-3">
+                      <h5>Durasi Rata-rata per Menu</h5>
+                      <canvas id="chartMenu"></canvas>
+                  </div>
+              </div>
+              <div class="col-md-6">
+                  <div class="card p-3">
+                      <h5>Total Durasi per Order</h5>
+                      <canvas id="chartOrder"></canvas>
+                  </div>
+              </div>
+          </div>
+</div>
     </div>
 
+
+          
+
+
+
+
+        </div>
+      </div>
+    </div>
+  </section>
+  </div>
+  <!-- /.content-wrapper -->
+
+<?php include('4footer.php'); ?>
+
+<!-- Modal Filter -->
+<div class="modal fade" id="modalFilter" tabindex="-1" aria-labelledby="modalFilterLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content rounded-3 shadow">
+      <div class="modal-header bg-info text-white">
+        <h5 class="modal-title" id="modalFilterLabel">Filter Data</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form action="" method="GET">
+
+        <div class="modal-body">
+          <!-- Catatan penting -->
+          <div class="alert alert-warning mb-3" role="alert" style="font-size: 0.9rem;">
+            <b>Informasi:</b> Halaman ini otomatis menampilkan data angkatan terbaru saat pertama dibuka. Data awal yang tampil adalah angkatan [2025].
+          </div>
+          <div class="mb-3">
+            <label for="angkatan" class="form-label">Angkatan</label>
+            <select name="angkatan" id="angkatan" class="form-select">
+              <option value="">-- Pilih Angkatan --</option>
+              <option value="2025">2025</option>
+              <option value="2024">2024</option>
+              <option value="2023">2023</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="status" class="form-label">Status</label>
+            <select name="status" id="status" class="form-select">
+              <option value="">-- Pilih Status --</option>
+              <option value="Aktif">Aktif</option>
+              <option value="NonAktif">NonAktif</option>
+            </select>
+          </div>
+       
+       </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+          <button type="submit" class="btn btn-info">Terapkan Filter</button>
+        </div>
+
+      </form>
+    </div>
+  </div>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+
+
+<!-- Modal Tambah Data -->
+<div class="modal fade" id="modalTambahData" tabindex="-1" aria-labelledby="modalTambahDataLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content rounded-3 shadow">
+      <div class="modal-header bg-primary text-white">
+        <h5 class="modal-title" id="modalTambahDataLabel">Tambah Data</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form action="" method="POST" enctype="multipart/form-data">
+        <div class="modal-body">
+
+          <!-- Informasi -->
+          <div class="alert alert-warning mb-3 py-2" role="alert" style="font-size: 0.9rem;">
+            <i class="fas fa-info-circle me-1"></i>
+            <strong>Catatan:</strong> Semua field yang diberi tanda <span class="text-danger">*</span> wajib diisi.
+          </div>
+
+          <!-- Form Inputs -->
+          <div class="mb-3">
+            <label for="username" class="form-label">NIM <span class="text-danger">*</span></label>
+            <input type="text" class="form-control" id="username" name="username" placeholder="Masukkan Username" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="displayname" class="form-label">Nama Lengkap <span class="text-danger">*</span></label>
+            <input type="text" class="form-control" id="displayname" name="displayname" placeholder="Masukkan Nama Lengkap" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="email" class="form-label">Email <span class="text-danger">*</span></label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="Masukkan Email" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="hp" class="form-label">Nomor HP <span class="text-danger">*</span></label>
+            <input type="text" class="form-control" id="hp" name="hp" placeholder="Masukkan Nomor HP" required>
+          </div>
+          <div class="mb-3">
+            <label for="angkatan" class="form-label">Angkatan</label>
+            <select name="angkatan" id="angkatan" class="form-select">
+              <option value="">-- Pilih Angkatan --</option>
+              <option value="2025">2025</option>
+              <option value="2024">2024</option>
+              <option value="2023">2023</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="angkatan" class="form-label">Peminatan</label>
+            <select name="angkatan" id="angkatan" class="form-select">
+              <option value="">-- Pilih Peminatan --</option>
+              <option value="2025">A</option>
+              <option value="2024">B</option>
+              <option value="2023">C</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="status" class="form-label">Status <span class="text-danger">*</span></label>
+            <select class="form-select" id="status" name="status" required>
+              <option value="">-- Pilih Status --</option>
+              <option value="Aktif">Aktif</option>
+              <option value="NonAktif">NonAktif</option>
+              <option value="Cuti">Cuti</option>
+              <option value="Skors">Skors</option>
+              <option value="PassedOut">Passed Out</option>
+              <option value="DropOut">Drop Out</option>
+              <option value="Lulus">Lulus</option>
+            </select>
+          </div>
+
+          <div class="mb-3">
+            <label for="foto" class="form-label">Foto <span class="text-danger">*</span></label>
+            <input type="file" class="form-control" id="foto" name="foto" required>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+          <button type="submit" class="btn btn-primary">Simpan Data</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal Impor -->
+<div class="modal fade" id="modalImpor" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-header bg-primary text-white">
+        <h5 class="modal-title">Impor Data</h5>
+        <button class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">   
+        <div class="alert alert-warning mb-3 py-2" role="alert" style="font-size: 0.9rem;">
+          <i class="fas fa-exclamation-triangle me-1"></i>
+          <strong>Penting:</strong> Pastikan file yang akan diimpor menggunakan <strong>template resmi</strong> yang sudah disediakan. Menggunakan file lain atau format berbeda dapat menyebabkan <strong>kesalahan impor</strong>.
+        </div>     
+
+        <label class="form-label">Pilih File:</label>
+        <input type="file" class="form-control mb-3" accept=".xlsx,.xls">
+
+        <a href="template-impor-mahasiswa.xls" class="btn btn-sm btn-outline-success w-100">Download Template</a>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+        <button class="btn btn-primary">Impor</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Modal Bantuan -->
+<div class="modal fade" id="modalBantuan" tabindex="-1" aria-labelledby="modalBantuanLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header bg-primary text-white">
+        <h5 class="modal-title" id="modalBantuanLabel">Bantuan Tabel</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>
+          Ini adalah penjelasan panjang tentang tabel. Anda bisa menuliskan informasi detail,
+          petunjuk penggunaan tombol, cara membaca data, dan tips penting lainnya di sini.
+        </p>
+        <p>
+          Misalnya:  
+          - Tombol Filter digunakan untuk memfilter data berdasarkan kolom.  
+          - Tombol Impor digunakan untuk memasukkan data dari file Excel.  
+          - Tombol Reset akan menghapus semua data di tabel, gunakan dengan hati-hati.  
+        </p>
+        <p>
+          Anda bisa menambahkan banyak paragraf atau daftar sesuai kebutuhan.
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modalResetData" tabindex="-1" aria-labelledby="modalResetDataLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content rounded-3 shadow">
+
+      <div class="modal-header bg-danger text-white">
+        <h5 class="modal-title">Konfirmasi Reset Data</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+
+      <form action="proses_hapus_akun.php" method="POST">
+        <div class="modal-body text-center">
+
+          <!-- ID disimpan sebagai hidden input -->
+          <input type="hidden" name="id_akun" id="hapus_id_akun">
+
+          <p class="fs-5">Apakah Anda yakin ingin menghapus semua data ini?</p>
+
+          <!-- Tampilkan kode dan nama akun -->
+         <!--  <p class="text-muted mb-0 d-flex justify-content-center gap-2">
+            <span id="hapus_kode_akun"></span>
+            <span>|</span>
+            <strong id="hapus_nama_akun"></strong>
+          </p> -->
+
+        </div>
+
+        <div class="modal-footer justify-content-center">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+          <button type="submit" class="btn btn-danger">Hapus</button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>
+
+<script>
+    // ===== Chart Durasi per Menu =====
+    const ctxMenu = document.getElementById('chartMenu').getContext('2d');
+    const chartMenu = new Chart(ctxMenu, {
+        type: 'bar',
+        data: {
+            labels: ['Nasi Goreng','Mie Goreng','Ayam Bakar','Es Teh','Jus Mangga'],
+            datasets: [{
+                label: 'Rata-rata Durasi (menit)',
+                data: [5,4,7,3,4],
+                backgroundColor: '#0d6efd'
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: { display: false },
+                tooltip: { mode: 'index', intersect: false }
+            },
+            scales: {
+                y: { beginAtZero: true, title: { display: true, text: 'Menit' } }
+            }
+        }
+    });
+
+    // ===== Chart Durasi per Order =====
+    const ctxOrder = document.getElementById('chartOrder').getContext('2d');
+    const chartOrder = new Chart(ctxOrder, {
+        type: 'line',
+        data: {
+            labels: ['#101','#102','#103','#104','#105'],
+            datasets: [{
+                label: 'Total Durasi Order (menit)',
+                data: [7,4,8,6,5],
+                fill: true,
+                backgroundColor: 'rgba(13,110,253,0.2)',
+                borderColor: '#0d6efd',
+                tension: 0.3,
+                pointRadius: 5
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: { display: false },
+                tooltip: { mode: 'index', intersect: false }
+            },
+            scales: {
+                y: { beginAtZero: true, title: { display: true, text: 'Menit' } }
+            }
+        }
+    });
+</script>
+<?php include('5script.php'); ?>

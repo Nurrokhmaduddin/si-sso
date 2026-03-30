@@ -93,6 +93,22 @@ if (file_exists($sidebar_file)) {
           </thead>
           <tbody>
             <tr align="center">
+              <td>0</td>
+              <td>Purwokerto</td>
+              <td>08-Mar-2026</td>
+              <td>-</td>
+              <td align="left">DEPO PELITA SOKARAJA</td>
+              <td align="left">OFFICE</td>                        <td align="right">9.206.500,00</td>
+              <td align="center">
+                <span class="badge badge-warning" title="(oleh sales)">DRAF_SALES</span>
+              </td>
+              <td align="center">
+                <button type="button" class="btn btn-warning mrg-btn btn-sm btn-aksi3641 btn-disabled" ><i class="fas fa-list"></i> Draf</button>
+                <button type="button" class="btn btn-warning mrg-btn btn-sm btn-aksi3639 btn-disabled transaksi-button" title="verifikasi draf_sales menjadi open" ><i class="fas fa-exchange-alt"></i> Aprove</button>
+                <button type="button" class="btn btn-danger btn-sm " title="Cancel"><i class="fas fa-trash"></i></button>
+              </td>
+            </tr>
+            <tr align="center">
               <td>1</td>
               <td>Purwokerto</td>
               <td>09-Mar-2026</td>

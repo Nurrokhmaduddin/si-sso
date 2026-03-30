@@ -42,7 +42,7 @@ if (file_exists($sidebar_file)) {
                   <b>Toko:</b> Semua
                 </div>
                 <div class="col-md-6">
-                  <b>Sales:</b> Semua
+                  <b>Sales:</b> ANDRE
                 </div>
                 <div class="col-md-6">
                   <b>Status:</b> Semua
@@ -57,6 +57,9 @@ if (file_exists($sidebar_file)) {
                   <i class="fas fa-filter me-1"></i> Filter
                 </button>
                 <button type="button" class="btn btn-outline-primary btn-sm " data-bs-toggle="modal" data-bs-target="#modalTambahData">
+                  <i class="fas fa-plus me-1"></i> Add
+                </button>
+                <button type="button" class="btn btn-outline-primary btn-sm " onclick="window.location='transaksi-katalog.php'">
                   <i class="fas fa-plus me-1"></i> Add
                 </button>
                 <!-- <button type="button" class="btn btn-outline-primary btn-sm " data-bs-toggle="modal" data-bs-target="#modalImpor">
@@ -88,7 +91,7 @@ if (file_exists($sidebar_file)) {
             <tr align="center">
               <th style="min-width: 40px;">No.</th>
               <th>Lokasi Gudang</th>
-              <th style="min-width: 90px;">Tanggal</th>
+              <th style="min-width: 90px;">Tanggal PO</th>
               <th style="min-width: 80px;">Nomor PO</th>
               <th style="min-width: 180px;">Toko </th>
               <th > Sales</th>
@@ -103,10 +106,10 @@ if (file_exists($sidebar_file)) {
               <td>Purwokerto</td>
               <td>09-Mar-2026</td>
               <td>-</td>
-              <td align="left">DEPO PELITA SOKARAJA</td>
-              <td align="left">OFFICE</td>                        <td align="right">19.206.500,00</td>
+              <td align="left">-</td>
+              <td align="left">ANDRE</td>                        <td align="right">19.206.500,00</td>
               <td align="center">
-                <span class="badge badge-warning" title="(oleh sales)">DRAF</span>
+                <span class="badge badge-warning" title="(oleh sales)">BELUM DIKIRIM</span>
               </td>
               <td align="center">
                 <button type="button" class="btn btn-info btn-sm " title="Draf"><i class="fas fa-list"></i></button>
@@ -118,10 +121,10 @@ if (file_exists($sidebar_file)) {
               <td>Purwokerto</td>
               <td>09-Mar-2026</td>
               <td>-</td>
-              <td align="left">GARDENA MAGELANG</td>
+              <td align="left">-</td>
               <td align="left">ANDRE</td>                        <td align="right">5.436.400,00</td>
               <td align="center">
-                <span class="badge badge-warning" title="(oleh sales)">DRAF</span>
+                <span class="badge badge-warning" title="(oleh sales)">BELUM DIKIRIM</span>
               </td>
               <td align="center">
                 <button type="button" class="btn btn-info btn-sm " title="Draf"><i class="fas fa-list"></i></button>
@@ -134,13 +137,12 @@ if (file_exists($sidebar_file)) {
               <td>04-Mar-2026</td>
               <td>-</td>
               <td align="left">REMUJUNG</td>
-              <td align="left">OFFICE</td>                        <td align="right">0,00</td>
+              <td align="left">ANDRE</td>                        <td align="right">0,00</td>
               <td align="center">
                <span class="badge badge-warning" title="(oleh sales)">DRAF</span>
               </td>
               <td align="center">
                <button type="button" class="btn btn-info btn-sm " title="Draf"><i class="fas fa-list"></i></button>
-                <button type="button" class="btn btn-danger btn-sm " title="Cancel"><i class="fas fa-trash"></i></button>
               </td>
             </tr>
             <tr align="center">
@@ -149,13 +151,12 @@ if (file_exists($sidebar_file)) {
               <td>24-Feb-2026</td>
               <td>-</td>
               <td align="left">LARIS KLATEN</td>
-              <td align="left">OFFICE</td>                               <td align="right">106.086.402,50</td>
+              <td align="left">ANDRE</td>                               <td align="right">106.086.402,50</td>
               <td align="center">
                 <span class="badge badge-warning">DRAF</span>
               </td>
               <td align="center">
                <button type="button" class="btn btn-info btn-sm " title="Draf"><i class="fas fa-list"></i></button>
-                <button type="button" class="btn btn-danger btn-sm " title="Cancel"><i class="fas fa-trash"></i></button>
               </td>
             </tr>
             <tr align="center">
@@ -166,7 +167,7 @@ if (file_exists($sidebar_file)) {
               <td align="left">SURYA TOSERBA CILEDUG</td>
               <td align="left">ANDRE</td>                        <td align="right">2.831.092,50</td>
               <td align="center">
-                <span class="badge badge-primary" title="(jika sudah di verifikasi dan submit)">PROSES</span>
+                <span class="badge badge-success" title="(jika sudah di verifikasi dan submit)">OPEN</span>
               </td>
               <td align="center">
                <button  class="btn btn-success btn-sm " title="Print" ><i class="fas fa-print"></i></button>
@@ -181,7 +182,7 @@ if (file_exists($sidebar_file)) {
               <td align="left">SURYA TOSERBA JALAKSANA</td>
               <td align="left">ANDRE</td>                        <td align="right">396.000,00</td>
               <td align="center">
-                <span class="badge badge-primary" title="(jika sudah di verifikasi dan submit)">PROSES</span>
+                <span class="badge badge-success" title="(jika sudah di verifikasi dan submit)">OPEN</span>
               </td>
               <td align="center">
                 <button  class="btn btn-success btn-sm " title="Print" ><i class="fas fa-print"></i></button>
@@ -194,9 +195,9 @@ if (file_exists($sidebar_file)) {
               <td>09-Mar-2026</td>
               <td>PO-3532</td>
               <td align="left">TOKO BATES</td>
-              <td align="left">SUPRI</td>                        <td align="right">5.933.976,00</td>
+              <td align="left">ANDRE</td>                        <td align="right">5.933.976,00</td>
               <td align="center">
-                <span class="badge badge-success" title="(jika order sudah selesai pengiriman semua daftar produknya)">SELESAI</span>
+                <span class="badge badge-secondary" title="(jika order sudah selesai pengiriman semua daftar produknya)">CLOSED</span>
               </td>
               <td align="center">
                 <button  class="btn btn-success btn-sm " title="Print" ><i class="fas fa-print"></i></button>
@@ -209,9 +210,9 @@ if (file_exists($sidebar_file)) {
               <td>07-Mar-2026</td>
               <td>PO-3531</td>
               <td align="left">JODO SWALAYAN</td>
-              <td align="left">OFFICE</td>                        <td align="right">648.000,00</td>
+              <td align="left">ANDRE</td>                        <td align="right">648.000,00</td>
               <td align="center">
-                <span class="badge badge-success" title="(jika order sudah selesai pengiriman semua daftar produknya)">SELESAI</span>
+                <span class="badge badge-secondary" title="(jika order sudah selesai pengiriman semua daftar produknya)">CLOSED</span>
               </td>
               <td align="center">
                 <button  class="btn btn-success btn-sm " title="Print" ><i class="fas fa-print"></i></button>
@@ -223,10 +224,10 @@ if (file_exists($sidebar_file)) {
               <td>Purwokerto</td>
               <td>07-Mar-2026</td>
               <td>PO-3530</td>
-              <td align="left">SUPRI</td>
-              <td align="left">OFFICE</td>                        <td align="right">108.000,00</td>
+              <td align="left">AAA</td>
+              <td align="left">ANDRE</td>                        <td align="right">108.000,00</td>
               <td align="center">
-                <span class="badge badge-success" title="(jika order sudah selesai pengiriman semua daftar produknya)">SELESAI</span>
+                <span class="badge badge-secondary" title="(jika order sudah selesai pengiriman semua daftar produknya)">CLOSED</span>
               </td>
               <td align="center">
                 <button  class="btn btn-success btn-sm " title="Print" ><i class="fas fa-print"></i></button>
@@ -241,7 +242,7 @@ if (file_exists($sidebar_file)) {
               <td align="left">SURYA TOSERBA JATIBARANG</td>
               <td align="left">ANDRE</td>                        <td align="right">6.485.680,00</td>
               <td align="center">
-                <span class="badge badge-success" title="(jika order sudah selesai pengiriman semua daftar produknya)">SELESAI</span>
+                <span class="badge badge-secondary" title="(jika order sudah selesai pengiriman semua daftar produknya)">CLOSED</span>
               </td>
               <td align="center">
                 <button  class="btn btn-success btn-sm " title="Print" ><i class="fas fa-print"></i></button>

@@ -55,8 +55,8 @@
 
 
       <!-- SALES ORDER -->
-      <li class="nav-item <?php echo in_array($page, ['transaksi_preorder','master_toko','master_promo','transaksi_tracking','transaksi_salesorder']) ? 'menu-open' : ''; ?>">
-        <a href="#" class="nav-link <?php echo in_array($page, ['transaksi_preorder','master_toko','master_promo','transaksi_tracking','transaksi_salesorder']) ? 'active' : ''; ?>">
+      <li class="nav-item <?php echo in_array($page, ['transaksi_preorder','master_toko','master_promo','transaksi_tracking','transaksi_salesorder','transaksi_katalog']) ? 'menu-open' : ''; ?>">
+        <a href="#" class="nav-link <?php echo in_array($page, ['transaksi_preorder','master_toko','master_promo','transaksi_tracking','transaksi_salesorder','transaksi_katalog']) ? 'active' : ''; ?>">
           <i class="nav-icon fas fa-handshake"></i>
           <p>
              Pesanan
@@ -73,10 +73,10 @@
               </a>
             </li>
           <li class="nav-item">
-            <a href="transaksi-preorder.php<?php echo $q;?>" class="nav-link <?php echo $page == 'transaksi_preorder' ? 'active' : ''; ?>">
+            <a href="transaksi-katalog.php<?php echo $q;?>" class="nav-link <?php echo $page == 'transaksi_katalog' ? 'active' : ''; ?>">
               <i class="nav-icon far fa-circle"></i>
               <p>
-                Pre-Order
+                Katalog
               </p>
             </a>
           </li>
@@ -85,6 +85,14 @@
               <i class="nav-icon far fa-circle"></i>
               <p>
                 Sales Order
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="transaksi-preorder.php<?php echo $q;?>" class="nav-link <?php echo $page == 'transaksi_preorder' ? 'active' : ''; ?>">
+              <i class="nav-icon far fa-circle"></i>
+              <p>
+                Pre-Order
               </p>
             </a>
           </li>

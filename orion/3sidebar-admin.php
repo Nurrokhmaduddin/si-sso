@@ -702,8 +702,8 @@
           Dosen
         </button>
 
-        <button class="btn btn-outline-primary w-100 role-select" data-role="Mahasiswa">
-          Mahasiswa
+        <button class="btn btn-outline-primary w-100 role-select" data-role="sales">
+          Sales
         </button>
 
       </div>

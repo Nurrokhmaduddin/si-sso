@@ -13,7 +13,7 @@
         <button type="button" class="btn btn-tool" data-bs-toggle="modal" data-bs-target="#modalBantuan" title="Bantuan"><i class="fas fa-question-circle"></i>
         </button>
       </h3>
-        <p class="text-muted mb-0">Keterangan singkat cara baca informasi halaman ini</p>
+        <p class="text-muted mb-0">Keterangan singkat cara baca informasi halaman ini. buat fitur aksi dari tia head station kitchen, menentukan menu mana yang sudah habis bahan bakunya, sehinggan tidak bisa di order lagi menu tersebut</p>
     </div>
   </section>
 

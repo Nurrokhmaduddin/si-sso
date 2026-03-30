@@ -18,7 +18,7 @@
           <i class="fas fa-user text-black"></i>
         </span>
       </div>
-
+ 
       <div class="info ml-2">
         <a href="#" class="d-block">
           <span class="d-block text-white">su</span>
@@ -50,17 +50,20 @@
           </a>
           <ul class="nav nav-treeview">
 
+<li class="nav-item"><a href="master-menu.php" class="nav-link <?php echo $page == 'master-menu' ? 'active' : ''; ?>">
+              <i class="far fa-circle nav-icon"></i><p>Daftar Kitchen(tentukan menu yg digarap tiap kitchen)</p></a></li>
+
             <li class="nav-item"><a href="master-menu.php" class="nav-link <?php echo $page == 'master-menu' ? 'active' : ''; ?>">
               <i class="far fa-circle nav-icon"></i><p>Menu & Kategori</p></a></li>
 
-            <li class="nav-item"><a href="master-bahan.php" class="nav-link <?php echo $page == 'master-bahan' ? 'active' : ''; ?>">
+            <!-- <li class="nav-item"><a href="master-bahan.php" class="nav-link <?php echo $page == 'master-bahan' ? 'active' : ''; ?>">
               <i class="far fa-circle nav-icon"></i><p>Bahan Baku</p></a></li>
 
             <li class="nav-item"><a href="master-resep.php" class="nav-link <?php echo $page == 'master-resep' ? 'active' : ''; ?>">
               <i class="far fa-circle nav-icon"></i><p>Resep (BOM)</p></a></li>
 
             <li class="nav-item"><a href="master-supplier.php" class="nav-link <?php echo $page == 'master-supplier' ? 'active' : ''; ?>">
-              <i class="far fa-circle nav-icon"></i><p>Supplier</p></a></li>
+              <i class="far fa-circle nav-icon"></i><p>Supplier</p></a></li> -->
 
             <li class="nav-item"><a href="master-customer.php" class="nav-link <?php echo $page == 'master-customer' ? 'active' : ''; ?>">
               <i class="far fa-circle nav-icon"></i><p>Customer</p></a></li>
@@ -114,8 +117,8 @@
         </li>
 
         <!-- Operation (Kitchen, Gudang, SuperAdmin) -->
-        <li class="nav-item <?php echo in_array($page, ['operation-beli-bahan','operation-kitchen','operation-stok-bahan','operation-stok-opname']) ? 'menu-open' : ''; ?>">
-          <a href="#" class="nav-link <?php echo in_array($page, ['operation-beli-bahan','operation-kitchen','operation-stok-bahan','operation-stok-opname']) ? 'active' : ''; ?>">
+        <li class="nav-item <?php echo in_array($page, ['operation-beli-bahan','operation-kitchen','operation-stok-bahan','operation-stok-opname','operation-kitchen-op']) ? 'menu-open' : ''; ?>">
+          <a href="#" class="nav-link <?php echo in_array($page, ['operation-beli-bahan','operation-kitchen','operation-stok-bahan','operation-stok-opname','operation-kitchen-op']) ? 'active' : ''; ?>">
             <i class="nav-icon fas fa-utensils"></i>
             <p>Operation <i class="right fas fa-angle-left"></i></p>
           </a>
@@ -124,15 +127,20 @@
 
             <li class="nav-item"><a href="operation-kitchen.php" class="nav-link <?php echo $page == 'operation-kitchen' ? 'active' : ''; ?>">  
               <i class="far fa-circle nav-icon"></i><p>Kitchen Display</p></a></li>
+
               <li class="nav-item"><a href="operation-kitchen-op.php" class="nav-link <?php echo $page == 'operation-kitchen-op' ? 'active' : ''; ?>">  
-              <i class="far fa-circle nav-icon"></i><p>Riwayat OP Kitchen </p></a></li>
-            <li class="nav-item">
-  <a href="operation-beli-bahan.php" class="nav-link <?php echo $page == 'operation-beli-bahan' ? 'active' : ''; ?>">  <i class="far fa-circle nav-icon"></i><p>Pembelian Bahan</p></a>
-</li>
-            <li class="nav-item"><a href="operation-stok-bahan.php" class="nav-link <?php echo $page == 'operation-stok-bahan' ? 'active' : ''; ?>">
-              <i class="far fa-circle nav-icon"></i><p>Stok Bahan</p></a></li>
-            <li class="nav-item"><a href="operation-stok-opname.php" class="nav-link <?php echo $page == 'operation-stok-opname' ? 'active' : ''; ?>">
-              <i class="far fa-circle nav-icon"></i><p>Stok Opname</p></a></li>
+                <i class="far fa-circle nav-icon"></i><p>Riwayat OP Kitchen </p></a>
+              </li>
+
+                <!-- <li class="nav-item">
+                  <a href="operation-beli-bahan.php" class="nav-link <?php echo $page == 'operation-beli-bahan' ? 'active' : ''; ?>">  <i class="far fa-circle nav-icon"></i><p>Pembelian Bahan</p></a>
+                </li>
+
+                <li class="nav-item"><a href="operation-stok-bahan.php" class="nav-link <?php echo $page == 'operation-stok-bahan' ? 'active' : ''; ?>">
+                  <i class="far fa-circle nav-icon"></i><p>Stok Bahan</p></a></li>
+
+                  <li class="nav-item"><a href="operation-stok-opname.php" class="nav-link <?php echo $page == 'operation-stok-opname' ? 'active' : ''; ?>">
+                    <i class="far fa-circle nav-icon"></i><p>Stok Opname</p></a></li> -->
 
           </ul>
         </li>
@@ -145,9 +153,9 @@
           </a>
           <ul class="nav nav-treeview">
 
-            <li class="nav-item"><a href="#" class="nav-link <?php echo $page == 'operation-stok-opname' ? 'active' : ''; ?>"><i class="far fa-circle nav-icon"></i><p>Kas & Bank</p></a></li>
+            <!-- <li class="nav-item"><a href="#" class="nav-link <?php echo $page == 'operation-stok-opname' ? 'active' : ''; ?>"><i class="far fa-circle nav-icon"></i><p>Kas & Bank</p></a></li>
             <li class="nav-item"><a href="#" class="nav-link"><i class="far fa-circle nav-icon"></i><p>Pengeluaran</p></a></li>
-            <li class="nav-item"><a href="#" class="nav-link"><i class="far fa-circle nav-icon"></i><p>Pendapatan</p></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="far fa-circle nav-icon"></i><p>Pendapatan</p></a></li> -->
             <li class="nav-item"><a href="finance-akun.php" class="nav-link <?php echo $page == 'finance-akun' ? 'active' : ''; ?>"><i class="far fa-circle nav-icon"></i><p>CoA</p></a></li>
             <li class="nav-item"><a href="finance-jurnal.php" class="nav-link <?php echo $page == 'finance-jurnal' ? 'active' : ''; ?>"><i class="far fa-circle nav-icon"></i><p>Jurnal</p></a></li>
 
@@ -172,7 +180,7 @@
         </li>
 
         <!-- KONFIGURASI -->
-        <li class="nav-item has-treeview">
+        <!-- <li class="nav-item has-treeview">
           <a href="#" class="nav-link">
             <i class="nav-icon fas fa-sliders-h"></i>
             <p>Konfigurasi <i class="right fas fa-angle-left"></i></p>
@@ -202,7 +210,7 @@
             </li>
 
           </ul>
-        </li>
+        </li> -->
 
         <!-- PENGATURAN -->
         <li class="nav-item <?php echo in_array($page, ['pengaturan-roles']) ? 'menu-open' : ''; ?>">
