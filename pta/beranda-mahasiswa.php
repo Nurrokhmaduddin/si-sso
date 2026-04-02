@@ -276,7 +276,7 @@
             <h5 class="mb-0">
               <i class="fas fa-medal me-1"></i> nama aktivitas - Periode/Semester
             </h5>
-            <button class="btn btn-sm btn-primary"><i class="fas fa-forward"></i> Continue</button>
+            <button class="btn btn-sm btn-outline-primary"><i class="fas fa-forward"></i> Continue</button>
           </div>
           <style>
             .milestone-wrapper {
@@ -428,7 +428,7 @@
     <h5 class="mb-0">
       nama aktivitas - Periode/Semester
     </h5>
-    <button class="btn btn-sm btn-danger">Perpanjangan <i class="fas fa-heart"></i></button>
+    <button class="btn btn-sm btn-outline-danger">Perpanjangan <i class="fas fa-heart"></i></button>
   </div>
 
   <!-- Milestone Wrapper -->
@@ -508,16 +508,364 @@
   </div>
 </div>
 
+</div>
 
 
 
 
 
+<!-- IDENTITAS DOSEN -->
+        <div class="card p-3 ">
+          <div class="d-flex align-items-start">
+            <div class="me-3">
+              <div class="icon-circle">
+                <i class="fas fa-chalkboard-teacher"></i>
+              </div>
+            </div>
 
+            <div class="flex-grow-1">
+              <div class="d-flex justify-content-between">
+                <div>
+                  <div class="small text-muted">Mahasiswa</div>
+                  <h5 class="mb-0">Dicky Adrianto Putra</h5>
+                  <div class="small text-muted">NIM: 21311560</div>
+                </div>
+              </div>
+
+            </div> 
+          </div>
+        </div>
+
+
+<!-- SECTION TROPHY (SIMPLE) -->
+        <div class="row g-4 justify-content-center ">
+          <div class="col-md-2">
+            <a href="sso/" class="card menu-card text-center p-4 text-decoration-none text-dark shadow-sm">
+              <div class="card-body">
+                <i class="fas fa-road fa-2x mb-2"></i>
+                <h5 class="">Publikasi / Diseminasi</h5>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-2">
+            <a href="sso/" class="card menu-card text-center p-4 text-decoration-none text-dark shadow-sm">
+              <div class="card-body">
+                <i class="fas fa-road fa-2x mb-2"></i>
+                <h5 class="">Bimbingan TA</h5>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-2">
+            <a href="#" class="card menu-card text-center p-4 text-decoration-none text-dark shadow-sm">
+              <div class="card-body">
+                <i class="fas fa-lock fa-2x mb-2 text-secondary" ></i>
+                <h5 class="text-secondary " >Ujian TA</h5>
+              </div>
+            </a>
+          </div>
+        </div>
+        <!-- SUMMARY SITAMAN -->
+<div class="card p-3 ">
+  <div class="card-header d-flex align-items-center justify-content-between w-100">
+    <h5 class="mb-0">
+      <i class="fas fa-medal me-1"></i> Publikasi / Diseminasi | 2025 - Ganjil
+    </h5>
+    <button class="btn btn-sm btn-outline-primary ms-auto">
+      <i class="fas fa-forward"></i> Continue
+    </button>
+  </div>
+  <style>
+    .milestone-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      margin-top: 24px;
+    }
+
+    .milestone-wrapper::before {
+      content: "";
+      position: absolute;
+      top: 22px;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: #e9ecef;
+      z-index: 1;
+    }
+
+    .milestone-progresss {
+      position: absolute;
+      top: 22px;
+      left: 0;
+      height: 4px;
+      width: 39%; /* sampai tahap Bimbingan */
+      background: #0d6efd;
+      z-index: 2;
+      transition: width .4s ease;
+    }
+
+    .milestone-step {
+      position: relative;
+      z-index: 3;
+      text-align: center;
+      width: 100%;
+    }
+
+    .milestone-circle {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      margin: 0 auto 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      color: #fff;
+      background: #adb5bd;
+    }
+
+    .milestone-step.completed .milestone-circle {
+      background: #0d6efd;
+    }
+
+    .milestone-step.active .milestone-circle {
+      background: #0d6efd;
+      box-shadow: 0 0 0 6px rgba(13,110,253,0.15);
+    }
+
+    .milestone-label {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #495057;
+    }
+
+    .milestone-step.locked .milestone-circle {
+      background: #ced4da;
+      color: #6c757d;
+    }
+  </style>
+
+
+  <!--Progress Milestone Akademik -->
+  <div class="milestone-wrapper">
+    <div class="milestone-progresss"></div>
+
+    <div class="milestone-step completed">
+      <div class="milestone-circle"><i class="fas fa-check"></i></div>
+      <div class="milestone-label">Bimbingan Persiapan</div>
+    </div>
+
+    <div class="milestone-step active">
+      <div class="milestone-circle">2</div>
+      <div class="milestone-label">Publikasi/Diseminasi</div>
+    </div>
+
+    <div class="milestone-step ">
+      <div class="milestone-circle">3</div>
+      <div class="milestone-label">Konversi Nilai</div>
+    </div>
+
+    <div class="milestone-step ">
+      <div class="milestone-circle">4</div>
+      <div class="milestone-label">Selesai</div>
+    </div>
+
+
+  </div>
+  <hr>
+
+    <!-- Health Bar -->
+    <div class="health-bar-container  position-relative" style="height:24px; border-radius:12px; background:#eee; overflow:hidden;">
+
+      <?php 
+      $max = 180;
+      $sisa = 180;
+      $persen = ($sisa / $max) * 100;
+      ?>
+
+      <div class="health-bar-fill"
+      style="width:<?php echo $persen; ?>%;
+      height:100%;
+      background:#dc3545;
+      border-radius:12px;
+      position:absolute;
+      right: 0;"> 
+
+      <span class="health-bar-text"
+      style="position:absolute;
+      width:100%;
+      text-align:center;
+      font-size:0.85rem;
+      color:#fff;
+      font-weight:600;
+      line-height:24px;">
+      Sisa Waktu ~  Hari
+      </span>
 
     </div>
-  </section>
+  </div>
+</div>
 
+<!-- SUMMARY SITAMAN -->
+<div class="card p-3 mb-4">
+  <div class="card-header d-flex align-items-center justify-content-between w-100">
+    <h5 class="mb-0">
+      <i class="fas fa-medal me-1"></i> Bimbingan Tugas Akhir | 2025 - Ganjil
+    </h5>
+    <button class="btn btn-sm btn-outline-primary ms-auto">
+      <i class="fas fa-forward"></i> Continue
+    </button>
+  </div>
+  <style>
+    .milestone-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      margin-top: 24px;
+    }
+
+    .milestone-wrapper::before {
+      content: "";
+      position: absolute;
+      top: 22px;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: #e9ecef;
+      z-index: 1;
+    }
+
+    .milestone-progress {
+      position: absolute;
+      top: 22px;
+      left: 0;
+      height: 4px;
+      width: 50%; /* sampai tahap Bimbingan */
+      background: #0d6efd;
+      z-index: 2;
+      transition: width .4s ease;
+    }
+
+    .milestone-step {
+      position: relative;
+      z-index: 3;
+      text-align: center;
+      width: 100%;
+    }
+
+    .milestone-circle {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      margin: 0 auto 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      color: #fff;
+      background: #adb5bd;
+    }
+
+    .milestone-step.completed .milestone-circle {
+      background: #0d6efd;
+    }
+
+    .milestone-step.active .milestone-circle {
+      background: #0d6efd;
+      box-shadow: 0 0 0 6px rgba(13,110,253,0.15);
+    }
+
+    .milestone-label {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #495057;
+    }
+
+    .milestone-step.locked .milestone-circle {
+      background: #ced4da;
+      color: #6c757d;
+    }
+  </style>
+
+
+  <!--Progress Milestone Akademik -->
+  <div class="milestone-wrapper">
+    <div class="milestone-progress"></div>
+
+    <div class="milestone-step completed">
+      <div class="milestone-circle"><i class="fas fa-check"></i></div>
+      <div class="milestone-label">Registrasi</div>
+    </div>
+
+    <div class="milestone-step completed">
+      <div class="milestone-circle"><i class="fas fa-check"></i></div>
+      <div class="milestone-label">Pembayaran</div>
+    </div>
+
+    <div class="milestone-step active">
+            <div class="milestone-circle">3</div>
+      <div class="milestone-label">Bimbingan</div>
+    </div>
+
+    <div class="milestone-step ">
+      <div class="milestone-circle">4</div>
+      <div class="milestone-label">Penilaian</div>
+    </div>
+
+    <div class="milestone-step locked">
+      <div class="milestone-circle">5</div>
+      <div class="milestone-label">Selesai</div>
+    </div>
+
+  </div>
+  <hr>
+  <!-- <h6><i class="fas fa-medal me-1"></i> Challenge</h6> -->
+  <div class="d-flex flex-wrap gap-2">
+    <div class="badge-chip"><i class="fa fa-fire"></i> Streak 5 Hari </div>
+    <div class="badge-chip"><i class="fa fa-check-circle"></i> Lulus Tanpa Revisi</div>
+    <div class="badge-chip"><i class="fa fa-stopwatch"></i> Durasi <180 Hari</div>
+      <div class="badge-chip text-danger">Perpanjangan <i class="fa fa-heart"></i> × 1</div>
+    </div> 
+    <!-- Health Bar -->
+    <div class="health-bar-container mt-3 position-relative" style="height:24px; border-radius:12px; background:#eee; overflow:hidden;">
+
+      <?php 
+      $max = 180;
+      $sisa = 69;
+      $persen = ($sisa / $max) * 100;
+      ?>
+
+      <div class="health-bar-fill"
+      style="width:<?php echo $persen; ?>%;
+      height:100%;
+      background:#dc3545;
+      border-radius:12px;
+      position:absolute;
+      right: 0;"> 
+
+      <span class="health-bar-text"
+      style="position:absolute;
+      width:100%;
+      text-align:center;
+      font-size:0.85rem;
+      color:#fff;
+      font-weight:600;
+      line-height:24px;">
+      Sisa Waktu <?php echo $sisa; ?>  Hari
+    </span>
+
+  </div>
+</div>
+</div>
+</div>
+
+
+
+
+  </section>
+</div>
 <?php include "4footer.php"; ?>
 
 <!-- Tooltip Init -->

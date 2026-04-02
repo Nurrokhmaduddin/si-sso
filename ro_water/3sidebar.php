@@ -3,7 +3,7 @@
 
   <!-- Brand Logo -->
   <a href="index.php" class="brand-link text-center">
-    <span class="brand-text font-weight-light">RESTOMAN</span>
+    <span class="brand-text font-weight-light">GALOMAN</span>
   </a>
 
   <div class="sidebar">
@@ -34,54 +34,11 @@
       <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview">
 
         <!-- BERANDA -->
-        <li class="nav-item <?php echo in_array($page, ['beranda_admin','beranda_kasir','beranda_walimurid','beranda_murid','beranda_administrator','beranda_dapur','beranda_customer','beranda_waiter']) ? 'menu-open' : ''; ?>">
-          <a href="#" class="nav-link <?php echo in_array($page, ['beranda_admin','beranda_kasir','beranda_walimurid','beranda_murid','beranda_administrator','beranda_dapur','beranda_customer','beranda_waiter']) ? 'active' : ''; ?>">
+        <li class="nav-item">
+          <a href="index.php" class="nav-link <?php echo $page == 'beranda' ? 'active' : ''; ?>">
             <i class="nav-icon fas fa-home"></i>
-            <p>
-              Beranda
-              <i class="right fas fa-angle-left"></i>
-            </p>
+            <p>Beranda</p>
           </a>
-
-          <ul class="nav nav-treeview"> 
-            <li class="nav-item">
-              <a href="index.php" class="nav-link <?php echo $page == 'beranda_administrator' ? 'active' : ''; ?>">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Super Admin</p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="beranda-admin.php" class="nav-link <?php echo $page == 'beranda_admin' ? 'active' : ''; ?>">
-                <i class="far fa-circle nav-icon"></i>
-                <p>ADMIN / MANAGER</p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="beranda-kasir.php" class="nav-link <?php echo $page == 'beranda_kasir' ? 'active' : ''; ?>">
-                <i class="far fa-circle nav-icon"></i>
-                <p>KASIR</p>
-              </a>
-            </li> 
-            <li class="nav-item">
-              <a href="beranda-dapur.php" class="nav-link <?php echo $page == 'beranda_dapur' ? 'active' : ''; ?>">
-                <i class="far fa-circle nav-icon"></i>
-                <p>DAPUR</p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="beranda-waiter.php" class="nav-link <?php echo $page == 'beranda_waiter' ? 'active' : ''; ?>">
-                <i class="far fa-circle nav-icon"></i>
-                <p>WAITER</p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="beranda-customer.php" class="nav-link <?php echo $page == 'beranda_customer' ? 'active' : ''; ?>">
-                <i class="far fa-circle nav-icon"></i>
-                <p>CUSTOMER</p>
-              </a>
-            </li>
-            
-          </ul>
         </li>
 
 
@@ -93,11 +50,11 @@
           </a>
           <ul class="nav nav-treeview">
 
-<li class="nav-item"><a href="master-menu.php" class="nav-link <?php echo $page == 'master-menu' ? 'active' : ''; ?>">
+<!-- <li class="nav-item"><a href="master-menu.php" class="nav-link <?php echo $page == 'master-menu' ? 'active' : ''; ?>">
               <i class="far fa-circle nav-icon"></i><p>Daftar Kitchen(tentukan menu yg digarap tiap kitchen)</p></a></li>
 
             <li class="nav-item"><a href="master-menu.php" class="nav-link <?php echo $page == 'master-menu' ? 'active' : ''; ?>">
-              <i class="far fa-circle nav-icon"></i><p>Menu & Kategori</p></a></li>
+              <i class="far fa-circle nav-icon"></i><p>Menu & Kategori</p></a></li> -->
 
             <!-- <li class="nav-item"><a href="master-bahan.php" class="nav-link <?php echo $page == 'master-bahan' ? 'active' : ''; ?>">
               <i class="far fa-circle nav-icon"></i><p>Bahan Baku</p></a></li>
@@ -112,7 +69,7 @@
               <i class="far fa-circle nav-icon"></i><p>Customer</p></a></li>
 
             <li class="nav-item"><a href="master-meja.php" class="nav-link <?php echo $page == 'master-meja' ? 'active' : ''; ?>">
-              <i class="far fa-circle nav-icon"></i><p>Meja / Area</p></a></li>
+              <i class="far fa-circle nav-icon"></i><p>Pekerja Shift</p></a></li>
 
           </ul>
         </li>
@@ -140,8 +97,7 @@
           </a>
           <ul class="nav nav-treeview">
 
-<li class="nav-item"><a href="sales-qr.php" class="nav-link <?php echo $page == 'sales-qr' ? 'active' : ''; ?>">  
-              <i class="far fa-circle nav-icon"></i><p>Self Order (QR Table)</p></a></li>
+<!-- <li class="nav-item"><a href="sales-qr.php" class="nav-link <?php echo $page == 'sales-qr' ? 'active' : ''; ?>"><i class="far fa-circle nav-icon"></i><p>Self Order (QR Table)</p></a></li> -->
 
 <li class="nav-item"><a href="sales-order.php" class="nav-link <?php echo $page == 'sales-order' ? 'active' : ''; ?>">  
               <i class="far fa-circle nav-icon"></i><p>Monitor Orders</p></a></li>
@@ -149,8 +105,8 @@
 
             <!-- <li class="nav-item"><a href="sales-kasir.php" class="nav-link <?php echo $page == 'sales-kasir' ? 'active' : ''; ?>">  
               <i class="far fa-circle nav-icon"></i><p>POS / Kasir</p></a></li> -->
-              <li class="nav-item"><a href="sales-kasir2.php" class="nav-link <?php echo $page == 'sales-kasir' ? 'active' : ''; ?>">  
-              <i class="far fa-circle nav-icon"></i><p>POS / Kasir</p></a></li>
+              <!-- <li class="nav-item"><a href="sales-kasir2.php" class="nav-link <?php echo $page == 'sales-kasir' ? 'active' : ''; ?>">  
+              <i class="far fa-circle nav-icon"></i><p>POS / Kasir</p></a></li> -->
 
             
             <li class="nav-item"><a href="#" class="nav-link <?php echo $page == 'sales-ooo' ? 'active' : ''; ?>">  
@@ -206,17 +162,17 @@
         </li>
 
         <!-- LAPORAN -->
-        <li class="nav-item has-treeview">
-          <a href="#" class="nav-link">
+        <li class="nav-item <?php echo in_array($page, ['laporan-omset','laporan-kirim','laporan-utang']) ? 'menu-open' : ''; ?>">
+          <a href="#" class="nav-link <?php echo in_array($page, ['laporan-omset','laporan-kirim','laporan-utang']) ? 'active' : ''; ?>">
             <i class="nav-icon fas fa-chart-pie"></i>
             <p>Laporan <i class="right fas fa-angle-left"></i></p>
           </a>
           <ul class="nav nav-treeview">
 
             <li class="nav-item"><a href="#" class="nav-link"><i class="far fa-circle nav-icon"></i><p>Penjualan</p></a></li>
-            <li class="nav-item"><a href="#" class="nav-link"><i class="far fa-circle nav-icon"></i><p>Omset</p></a></li>
-            <li class="nav-item"><a href="#" class="nav-link"><i class="far fa-circle nav-icon"></i><p>Stok</p></a></li>
-            <li class="nav-item"><a href="#" class="nav-link"><i class="far fa-circle nav-icon"></i><p>Pembelian</p></a></li>
+            <li class="nav-item"><a href="laporan-omset.php" class="nav-link <?php echo $page == 'laporan-omset' ? 'active' : ''; ?>"><i class="far fa-circle nav-icon"></i><p>Omset</p></a></li>
+            <li class="nav-item"><a href="laporan-kirim.php" class="nav-link <?php echo $page == 'laporan-kirim' ? 'active' : ''; ?>"><i class="far fa-circle nav-icon"></i><p>Kirim</p></a></li>
+            <li class="nav-item"><a href="laporan-utang.php" class="nav-link <?php echo $page == 'laporan-utang' ? 'active' : ''; ?>"><i class="far fa-circle nav-icon"></i><p>Utang</p></a></li>
             <li class="nav-item"><a href="#" class="nav-link"><i class="far fa-circle nav-icon"></i><p>Laba Rugi</p></a></li>
 
           </ul>

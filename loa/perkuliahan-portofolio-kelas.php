@@ -130,11 +130,9 @@
                			<td align="center">
                			27                            </td>
                			<td align="center">
-
                				<button type="button" onclick="window.location='perkuliahan-portofolio-kelas-detail.php'" class="btn btn-sm btn-outline-info"> <i class='fas fa-info-circle'> </i></button>
-               				
-                          <a href="data-portofolio-cpmk.pdf" download class="btn btn-sm btn-outline-success"> <i class='fas fa-download'> </i></a>
-               			</td>
+                      <a href="data-portofolio-cpmk.pdf" download class="btn btn-sm btn-outline-success"> <i class='fas fa-download'> </i></a>
+                    </td>
                		</tr>
                		<tr>
                			<td align="center">2</td>
@@ -155,12 +153,9 @@
                			<td align="center">
                			33                            </td>
                			<td align="center">
-               				<a href="https://tsipil-master.tmidev.my.id/kelas_mata_kuliah/mahasiswa/VmxwdU5FODBGazNHMVRURktPV2t6bkwwMDAwOA">
-               					<button type="button" class="btn btn-sm btn-info"><i class="fas fa-users"></i> Mahasiswa</button>
-               				</a>
-
-               				<button type="button" class="btn btn-danger mrg-btn btn-sm" onclick="load_modal('kelas_mata_kuliah/modal_hapus/4419')"><i class="fas fa-trash"></i></button>
-               			</td>
+                      <button type="button" onclick="window.location='perkuliahan-portofolio-kelas-detail.php'" class="btn btn-sm btn-outline-info"> <i class='fas fa-info-circle'> </i></button>
+                      <a href="data-portofolio-cpmk.pdf" download class="btn btn-sm btn-outline-success"> <i class='fas fa-download'> </i></a>
+                    </td>
                		</tr>
                		<tr>
                			<td align="center">3</td>
@@ -181,12 +176,9 @@
                			<td align="center">
                			26                            </td>
                			<td align="center">
-               				<a href="https://tsipil-master.tmidev.my.id/kelas_mata_kuliah/mahasiswa/U1Zadk5FMDBzYjVSOU9ESk5PRFF6R3cwMDAwOA">
-               					<button type="button" class="btn btn-sm btn-info"><i class="fas fa-users"></i> Mahasiswa</button>
-               				</a>
-
-               				<button type="button" class="btn btn-danger mrg-btn btn-sm" onclick="load_modal('kelas_mata_kuliah/modal_hapus/4428')"><i class="fas fa-trash"></i></button>
-               			</td>
+                      <button type="button" onclick="window.location='perkuliahan-portofolio-kelas-detail.php'" class="btn btn-sm btn-outline-info"> <i class='fas fa-info-circle'> </i></button>
+                      <a href="data-portofolio-cpmk.pdf" download class="btn btn-sm btn-outline-success"> <i class='fas fa-download'> </i></a>
+                    </td>
                		</tr>
                		<tr>
                			<td align="center">4</td>
@@ -207,12 +199,9 @@
                			<td align="center">
                			23                            </td>
                			<td align="center">
-               				<a href="https://tsipil-master.tmidev.my.id/kelas_mata_kuliah/mahasiswa/ZGpNMGR6UXpORkJKTW9NeU16SWQzYzBtTkUwMDAxMA">
-               					<button type="button" class="btn btn-sm btn-info"><i class="fas fa-users"></i> Mahasiswa</button>
-               				</a>
-
-               				<button type="button" class="btn btn-danger mrg-btn btn-sm" onclick="load_modal('kelas_mata_kuliah/modal_hapus/4442')"><i class="fas fa-trash"></i></button>
-               			</td>
+                      <button type="button" onclick="window.location='perkuliahan-portofolio-kelas-detail.php'" class="btn btn-sm btn-outline-info"> <i class='fas fa-info-circle'> </i></button>
+                      <a href="data-portofolio-cpmk.pdf" download class="btn btn-sm btn-outline-success"> <i class='fas fa-download'> </i></a>
+                    </td>
                		</tr>
                		<tr>
                			<td align="center">5</td>
@@ -233,12 +222,9 @@
                			<td align="center">
                			25                            </td>
                			<td align="center">
-               				<a href="https://tsipil-master.tmidev.my.id/kelas_mata_kuliah/mahasiswa/WVVnMFVEUnpOVWdxd25jeWNUSWQzYzBtczgwMDAxMA">
-               					<button type="button" class="btn btn-sm btn-info"><i class="fas fa-users"></i> Mahasiswa</button>
-               				</a>
-
-               				<button type="button" class="btn btn-danger mrg-btn btn-sm" onclick="load_modal('kelas_mata_kuliah/modal_hapus/4452')"><i class="fas fa-trash"></i></button>
-               			</td>
+                      <button type="button" onclick="window.location='perkuliahan-portofolio-kelas-detail.php'" class="btn btn-sm btn-outline-info"> <i class='fas fa-info-circle'> </i></button>
+                      <a href="data-portofolio-cpmk.pdf" download class="btn btn-sm btn-outline-success"> <i class='fas fa-download'> </i></a>
+                    </td>
                		</tr>
                		<tr>
                			<td align="center">6</td>
@@ -259,12 +245,9 @@
                			<td align="center">
                			22                            </td>
                			<td align="center">
-               				<a href="https://tsipil-master.tmidev.my.id/kelas_mata_kuliah/mahasiswa/ZGxZMGF6VnJNSDF4bkxBeFlUSWQzYzBtZkowMDAxMA">
-               					<button type="button" class="btn btn-sm btn-info"><i class="fas fa-users"></i> Mahasiswa</button>
-               				</a>
-
-               				<button type="button" class="btn btn-danger mrg-btn btn-sm" onclick="load_modal('kelas_mata_kuliah/modal_hapus/4501')"><i class="fas fa-trash"></i></button>
-               			</td>
+                      <button type="button" onclick="window.location='perkuliahan-portofolio-kelas-detail.php'" class="btn btn-sm btn-outline-info"> <i class='fas fa-info-circle'> </i></button>
+                      <a href="data-portofolio-cpmk.pdf" download class="btn btn-sm btn-outline-success"> <i class='fas fa-download'> </i></a>
+                    </td>
                		</tr>
                		<tr>
                			<td align="center">7</td>
@@ -285,12 +268,9 @@
                			<td align="center">
                			24                            </td>
                			<td align="center">
-               				<a href="https://tsipil-master.tmidev.my.id/kelas_mata_kuliah/mahasiswa/WjBWYU5Fc3ozV1d3Rk56QmtORlV6aXkwMDAwOA">
-               					<button type="button" class="btn btn-sm btn-info"><i class="fas fa-users"></i> Mahasiswa</button>
-               				</a>
-
-               				<button type="button" class="btn btn-danger mrg-btn btn-sm" onclick="load_modal('kelas_mata_kuliah/modal_hapus/4304')"><i class="fas fa-trash"></i></button>
-               			</td>
+                      <button type="button" onclick="window.location='perkuliahan-portofolio-kelas-detail.php'" class="btn btn-sm btn-outline-info"> <i class='fas fa-info-circle'> </i></button>
+                      <a href="data-portofolio-cpmk.pdf" download class="btn btn-sm btn-outline-success"> <i class='fas fa-download'> </i></a>
+                    </td>
                		</tr>
                		<tr>
                			<td align="center">8</td>
@@ -311,12 +291,9 @@
                			<td align="center">
                			20                            </td>
                			<td align="center">
-               				<a href="https://tsipil-master.tmidev.my.id/kelas_mata_kuliah/mahasiswa/TWtsTE5HZ3oyemR5RWFUUkpPRk16TWkwMDAwOA">
-               					<button type="button" class="btn btn-sm btn-info"><i class="fas fa-users"></i> Mahasiswa</button>
-               				</a>
-
-               				<button type="button" class="btn btn-danger mrg-btn btn-sm" onclick="load_modal('kelas_mata_kuliah/modal_hapus/4348')"><i class="fas fa-trash"></i></button>
-               			</td>
+                      <button type="button" onclick="window.location='perkuliahan-portofolio-kelas-detail.php'" class="btn btn-sm btn-outline-info"> <i class='fas fa-info-circle'> </i></button>
+                      <a href="data-portofolio-cpmk.pdf" download class="btn btn-sm btn-outline-success"> <i class='fas fa-download'> </i></a>
+                    </td>
                		</tr>
                		<tr>
                			<td align="center">9</td>
@@ -337,12 +314,9 @@
                			<td align="center">
                			24                            </td>
                			<td align="center">
-               				<a href="https://tsipil-master.tmidev.my.id/kelas_mata_kuliah/mahasiswa/WjNOQk5IQTBVaTFpZFJERldNell6WlcwMDAwOA">
-               					<button type="button" class="btn btn-sm btn-info"><i class="fas fa-users"></i> Mahasiswa</button>
-               				</a>
-
-               				<button type="button" class="btn btn-danger mrg-btn btn-sm" onclick="load_modal('kelas_mata_kuliah/modal_hapus/4413')"><i class="fas fa-trash"></i></button>
-               			</td>
+                      <button type="button" onclick="window.location='perkuliahan-portofolio-kelas-detail.php'" class="btn btn-sm btn-outline-info"> <i class='fas fa-info-circle'> </i></button>
+                      <a href="data-portofolio-cpmk.pdf" download class="btn btn-sm btn-outline-success"> <i class='fas fa-download'> </i></a>
+                    </td>
                		</tr>
                		<tr>
                			<td align="center">10</td>
@@ -363,12 +337,9 @@
                			<td align="center">
                			22                            </td>
                			<td align="center">
-               				<a href="https://tsipil-master.tmidev.my.id/kelas_mata_kuliah/mahasiswa/WVVNMFV6UkVORmc3UFFNNE1qSWQzYzBtZGQwMDAxMA">
-               					<button type="button" class="btn btn-sm btn-info"><i class="fas fa-users"></i> Mahasiswa</button>
-               				</a>
-
-               				<button type="button" class="btn btn-danger mrg-btn btn-sm" onclick="load_modal('kelas_mata_kuliah/modal_hapus/4448')"><i class="fas fa-trash"></i></button>
-               			</td>
+                      <button type="button" onclick="window.location='perkuliahan-portofolio-kelas-detail.php'" class="btn btn-sm btn-outline-info"> <i class='fas fa-info-circle'> </i></button>
+                      <a href="data-portofolio-cpmk.pdf" download class="btn btn-sm btn-outline-success"> <i class='fas fa-download'> </i></a>
+                    </td>
                		</tr>
                		<tr>
                			<td align="center">11</td>
@@ -389,12 +360,9 @@
                			<td align="center">
                			24                            </td>
                			<td align="center">
-               				<a href="https://tsipil-master.tmidev.my.id/kelas_mata_kuliah/mahasiswa/V0cxS05HWTBlSm5Xek56YzFNVEl6N2MwMDAwOA">
-               					<button type="button" class="btn btn-sm btn-info"><i class="fas fa-users"></i> Mahasiswa</button>
-               				</a>
-
-               				<button type="button" class="btn btn-danger mrg-btn btn-sm" onclick="load_modal('kelas_mata_kuliah/modal_hapus/4471')"><i class="fas fa-trash"></i></button>
-               			</td>
+                      <button type="button" onclick="window.location='perkuliahan-portofolio-kelas-detail.php'" class="btn btn-sm btn-outline-info"> <i class='fas fa-info-circle'> </i></button>
+                      <a href="data-portofolio-cpmk.pdf" download class="btn btn-sm btn-outline-success"> <i class='fas fa-download'> </i></a>
+                    </td>
                		</tr>
                		<tr>
                			<td align="center">12</td>
@@ -415,12 +383,9 @@
                			<td align="center">
                			24                            </td>
                			<td align="center">
-               				<a href="https://tsipil-master.tmidev.my.id/kelas_mata_kuliah/mahasiswa/TTBOQk5IUTF6TzhlY1pEZElNMEl6dHgwMDAwOA">
-               					<button type="button" class="btn btn-sm btn-info"><i class="fas fa-users"></i> Mahasiswa</button>
-               				</a>
-
-               				<button type="button" class="btn btn-danger mrg-btn btn-sm" onclick="load_modal('kelas_mata_kuliah/modal_hapus/4573')"><i class="fas fa-trash"></i></button>
-               			</td>
+                      <button type="button" onclick="window.location='perkuliahan-portofolio-kelas-detail.php'" class="btn btn-sm btn-outline-info"> <i class='fas fa-info-circle'> </i></button>
+                      <a href="data-portofolio-cpmk.pdf" download class="btn btn-sm btn-outline-success"> <i class='fas fa-download'> </i></a>
+                    </td>
                		</tr>
                		<tr>
                			<td align="center">13</td>
@@ -441,12 +406,9 @@
                			<td align="center">
                			21                            </td>
                			<td align="center">
-               				<a href="https://tsipil-master.tmidev.my.id/kelas_mata_kuliah/mahasiswa/UW5Ka05GSTFCZTBZaGNEZHpPVGd6OXQwMDAwOA">
-               					<button type="button" class="btn btn-sm btn-info"><i class="fas fa-users"></i> Mahasiswa</button>
-               				</a>
-
-               				<button type="button" class="btn btn-danger mrg-btn btn-sm" onclick="load_modal('kelas_mata_kuliah/modal_hapus/4579')"><i class="fas fa-trash"></i></button>
-               			</td>
+                      <button type="button" onclick="window.location='perkuliahan-portofolio-kelas-detail.php'" class="btn btn-sm btn-outline-info"> <i class='fas fa-info-circle'> </i></button>
+                      <a href="data-portofolio-cpmk.pdf" download class="btn btn-sm btn-outline-success"> <i class='fas fa-download'> </i></a>
+                    </td>
                		</tr>
                		<tr>
                			<td align="center">14</td>
@@ -467,12 +429,9 @@
                			<td align="center">
                			24                            </td>
                			<td align="center">
-               				<a href="https://tsipil-master.tmidev.my.id/kelas_mata_kuliah/mahasiswa/V0VnMFRUVlRPRXJYOFR3eGVESWQzYzBtemwwMDAxMA">
-               					<button type="button" class="btn btn-sm btn-info"><i class="fas fa-users"></i> Mahasiswa</button>
-               				</a>
-
-               				<button type="button" class="btn btn-danger mrg-btn btn-sm" onclick="load_modal('kelas_mata_kuliah/modal_hapus/4581')"><i class="fas fa-trash"></i></button>
-               			</td>
+                      <button type="button" onclick="window.location='perkuliahan-portofolio-kelas-detail.php'" class="btn btn-sm btn-outline-info"> <i class='fas fa-info-circle'> </i></button>
+                      <a href="data-portofolio-cpmk.pdf" download class="btn btn-sm btn-outline-success"> <i class='fas fa-download'> </i></a>
+                    </td>
                		</tr>
                		<tr>
                			<td align="center">15</td>
@@ -493,12 +452,9 @@
                			<td align="center">
                			16                            </td>
                			<td align="center">
-               				<a href="https://tsipil-master.tmidev.my.id/kelas_mata_kuliah/mahasiswa/U0RVME56Tk5NM3hNT3ZNeVR6SWQzYzBtZm0wMDAxMA">
-               					<button type="button" class="btn btn-sm btn-info"><i class="fas fa-users"></i> Mahasiswa</button>
-               				</a>
-
-               				<button type="button" class="btn btn-danger mrg-btn btn-sm" onclick="load_modal('kelas_mata_kuliah/modal_hapus/4332')"><i class="fas fa-trash"></i></button>
-               			</td>
+                      <button type="button" onclick="window.location='perkuliahan-portofolio-kelas-detail.php'" class="btn btn-sm btn-outline-info"> <i class='fas fa-info-circle'> </i></button>
+                      <a href="data-portofolio-cpmk.pdf" download class="btn btn-sm btn-outline-success"> <i class='fas fa-download'> </i></a>
+                    </td>
                		</tr>
                		<tr>
                			<td align="center">16</td>
@@ -519,12 +475,9 @@
                			<td align="center">
                			35                            </td>
                			<td align="center">
-               				<a href="https://tsipil-master.tmidev.my.id/kelas_mata_kuliah/mahasiswa/WVZoak5IZzBBRzlObVRUTjNOa016aVQwMDAwOA">
-               					<button type="button" class="btn btn-sm btn-info"><i class="fas fa-users"></i> Mahasiswa</button>
-               				</a>
-
-               				<button type="button" class="btn btn-danger mrg-btn btn-sm" onclick="load_modal('kelas_mata_kuliah/modal_hapus/4436')"><i class="fas fa-trash"></i></button>
-               			</td>
+                      <button type="button" onclick="window.location='perkuliahan-portofolio-kelas-detail.php'" class="btn btn-sm btn-outline-info"> <i class='fas fa-info-circle'> </i></button>
+                      <a href="data-portofolio-cpmk.pdf" download class="btn btn-sm btn-outline-success"> <i class='fas fa-download'> </i></a>
+                    </td>
                		</tr>
                		<tr>
                			<td align="center">17</td>
@@ -545,12 +498,9 @@
                			<td align="center">
                			28                            </td>
                			<td align="center">
-               				<a href="https://tsipil-master.tmidev.my.id/kelas_mata_kuliah/mahasiswa/ZUVrMFFUUm5ObXpNcm93elJUSWQzYzBtb0IwMDAxMA">
-               					<button type="button" class="btn btn-sm btn-info"><i class="fas fa-users"></i> Mahasiswa</button>
-               				</a>
-
-               				<button type="button" class="btn btn-danger mrg-btn btn-sm" onclick="load_modal('kelas_mata_kuliah/modal_hapus/4463')"><i class="fas fa-trash"></i></button>
-               			</td>
+                      <button type="button" onclick="window.location='perkuliahan-portofolio-kelas-detail.php'" class="btn btn-sm btn-outline-info"> <i class='fas fa-info-circle'> </i></button>
+                      <a href="data-portofolio-cpmk.pdf" download class="btn btn-sm btn-outline-success"> <i class='fas fa-download'> </i></a>
+                    </td>
                		</tr>
                		<tr>
                			<td align="center">18</td>
@@ -571,12 +521,9 @@
                			<td align="center">
                			27                            </td>
                			<td align="center">
-               				<a href="https://tsipil-master.tmidev.my.id/kelas_mata_kuliah/mahasiswa/VVRJeE5FUTFmb2FTclJETkNNVE16ek8wMDAwOA">
-               					<button type="button" class="btn btn-sm btn-info"><i class="fas fa-users"></i> Mahasiswa</button>
-               				</a>
-
-               				<button type="button" class="btn btn-danger mrg-btn btn-sm" onclick="load_modal('kelas_mata_kuliah/modal_hapus/4531')"><i class="fas fa-trash"></i></button>
-               			</td>
+                      <button type="button" onclick="window.location='perkuliahan-portofolio-kelas-detail.php'" class="btn btn-sm btn-outline-info"> <i class='fas fa-info-circle'> </i></button>
+                      <a href="data-portofolio-cpmk.pdf" download class="btn btn-sm btn-outline-success"> <i class='fas fa-download'> </i></a>
+                    </td>
                		</tr>
                		<tr>
                			<td align="center">19</td>
@@ -597,12 +544,9 @@
                			<td align="center">
                			20                            </td>
                			<td align="center">
-               				<a href="https://tsipil-master.tmidev.my.id/kelas_mata_kuliah/mahasiswa/UVRFMFVqUnJNMEFaY3ZReVV6SWQzYzBtUUIwMDAxMA">
-               					<button type="button" class="btn btn-sm btn-info"><i class="fas fa-users"></i> Mahasiswa</button>
-               				</a>
-
-               				<button type="button" class="btn btn-danger mrg-btn btn-sm" onclick="load_modal('kelas_mata_kuliah/modal_hapus/4432')"><i class="fas fa-trash"></i></button>
-               			</td>
+                      <button type="button" onclick="window.location='perkuliahan-portofolio-kelas-detail.php'" class="btn btn-sm btn-outline-info"> <i class='fas fa-info-circle'> </i></button>
+                      <a href="data-portofolio-cpmk.pdf" download class="btn btn-sm btn-outline-success"> <i class='fas fa-download'> </i></a>
+                    </td>
                		</tr>
                		<tr>
                			<td align="center">20</td>
@@ -623,12 +567,9 @@
                			<td align="center">
                			24                            </td>
                			<td align="center">
-               				<a href="https://tsipil-master.tmidev.my.id/kelas_mata_kuliah/mahasiswa/ZFhkNE5ESXlOUXhCRGFEZHRORkV6bDIwMDAwOA">
-               					<button type="button" class="btn btn-sm btn-info"><i class="fas fa-users"></i> Mahasiswa</button>
-               				</a>
-
-               				<button type="button" class="btn btn-danger mrg-btn btn-sm" onclick="load_modal('kelas_mata_kuliah/modal_hapus/4274')"><i class="fas fa-trash"></i></button>
-               			</td>
+                      <button type="button" onclick="window.location='perkuliahan-portofolio-kelas-detail.php'" class="btn btn-sm btn-outline-info"> <i class='fas fa-info-circle'> </i></button>
+                      <a href="data-portofolio-cpmk.pdf" download class="btn btn-sm btn-outline-success"> <i class='fas fa-download'> </i></a>
+                    </td>
                		</tr>
                		<tr>
                			<td align="center">21</td>
@@ -649,12 +590,9 @@
                			<td align="center">
                			25                            </td>
                			<td align="center">
-               				<a href="https://tsipil-master.tmidev.my.id/kelas_mata_kuliah/mahasiswa/ZG1JMFZUTldNbXhhalU4M1ZUSWQzYzBtWEowMDAxMA">
-               					<button type="button" class="btn btn-sm btn-info"><i class="fas fa-users"></i> Mahasiswa</button>
-               				</a>
-
-               				<button type="button" class="btn btn-danger mrg-btn btn-sm" onclick="load_modal('kelas_mata_kuliah/modal_hapus/4327')"><i class="fas fa-trash"></i></button>
-               			</td>
+                      <button type="button" onclick="window.location='perkuliahan-portofolio-kelas-detail.php'" class="btn btn-sm btn-outline-info"> <i class='fas fa-info-circle'> </i></button>
+                      <a href="data-portofolio-cpmk.pdf" download class="btn btn-sm btn-outline-success"> <i class='fas fa-download'> </i></a>
+                    </td>
                		</tr>
                		<tr>
                			<td align="center">22</td>
@@ -675,12 +613,9 @@
                			<td align="center">
                			25                            </td>
                			<td align="center">
-               				<a href="https://tsipil-master.tmidev.my.id/kelas_mata_kuliah/mahasiswa/UlU0ME1ETkNNem03eTlJNFNqSWQzYzBtMDQwMDAxMA">
-               					<button type="button" class="btn btn-sm btn-info"><i class="fas fa-users"></i> Mahasiswa</button>
-               				</a>
-
-               				<button type="button" class="btn btn-danger mrg-btn btn-sm" onclick="load_modal('kelas_mata_kuliah/modal_hapus/4338')"><i class="fas fa-trash"></i></button>
-               			</td>
+                      <button type="button" onclick="window.location='perkuliahan-portofolio-kelas-detail.php'" class="btn btn-sm btn-outline-info"> <i class='fas fa-info-circle'> </i></button>
+                      <a href="data-portofolio-cpmk.pdf" download class="btn btn-sm btn-outline-success"> <i class='fas fa-download'> </i></a>
+                    </td>
                		</tr>
                		<tr>
                			<td align="center">23</td>
@@ -701,12 +636,9 @@
                			<td align="center">
                			25                            </td>
                			<td align="center">
-               				<a href="https://tsipil-master.tmidev.my.id/kelas_mata_kuliah/mahasiswa/Tm5BMFNUTnROR0VoSUJnNWJqSWQzYzBtemkwMDAxMA">
-               					<button type="button" class="btn btn-sm btn-info"><i class="fas fa-users"></i> Mahasiswa</button>
-               				</a>
-
-               				<button type="button" class="btn btn-danger mrg-btn btn-sm" onclick="load_modal('kelas_mata_kuliah/modal_hapus/4349')"><i class="fas fa-trash"></i></button>
-               			</td>
+                      <button type="button" onclick="window.location='perkuliahan-portofolio-kelas-detail.php'" class="btn btn-sm btn-outline-info"> <i class='fas fa-info-circle'> </i></button>
+                      <a href="data-portofolio-cpmk.pdf" download class="btn btn-sm btn-outline-success"> <i class='fas fa-download'> </i></a>
+                    </td>
                		</tr>
                	</tbody>
               </table>
