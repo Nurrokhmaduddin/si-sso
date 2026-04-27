@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Daily Plan — SikolahKu</title>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --forest:#1b4332;--forest-mid:#2d6a4f;--forest-light:#52b788;--sage:#95d5b2;--sage-soft:#d8f3dc;
+  --earth:#6b4226;--earth-mid:#a0522d;--earth-light:#f4ede4;
+  --amber:#d4a017;--amber-light:#fef9e7;
+  --sky:#1e6091;--sky-light:#d6eaf8;
+  --cream:#faf8f4;--paper:#ffffff;--border:#e4ddd3;--border-dark:#c9bfb3;
+  --text:#1a1512;--text2:#4a3f35;--text3:#8a7968;--text4:#b5a898;
+  --red:#c0392b;--red-light:#fdf0ee;
+  --radius:14px;--radius-sm:9px;--shadow:0 2px 12px rgba(27,67,50,.08);--shadow-md:0 4px 24px rgba(27,67,50,.12);
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--text);min-height:100vh;}
+
+/* ── TOP BAR ── */
+.topbar{background:var(--forest);padding:0 32px;height:56px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;}
+.tb-brand{font-family:'Lora',serif;font-size:18px;font-weight:700;color:#fff;letter-spacing:-.3px;}
+.tb-brand span{color:var(--sage);}
+.tb-info{font-size:13px;color:rgba(255,255,255,.6);display:flex;align-items:center;gap:16px;}
+.tb-badge{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18);border-radius:20px;padding:4px 12px;font-size:12px;color:#fff;font-weight:500;}
+
+/* ── PROGRESS STEPS ── */
+.steps-wrap{background:var(--paper);border-bottom:1px solid var(--border);padding:0 32px;}
+.steps{display:flex;gap:0;max-width:900px;margin:0 auto;}
+.step{display:flex;align-items:center;gap:10px;padding:16px 20px 16px 0;flex:1;position:relative;cursor:pointer;}
+.step:not(:last-child)::after{content:'›';position:absolute;right:8px;top:50%;transform:translateY(-50%);color:var(--text4);font-size:16px;}
+.step-num{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;background:#f1ece5;color:var(--text3);transition:all .2s;flex-shrink:0;}
+.step.active .step-num{background:var(--forest);color:#fff;}
+.step.done .step-num{background:var(--forest-light);color:#fff;}
+.step-label{font-size:12px;font-weight:600;color:var(--text3);}
+.step.active .step-label{color:var(--forest);font-weight:700;}
+.step.done .step-label{color:var(--forest-mid);}
+
+/* ── MAIN LAYOUT ── */
+.main{max-width:1100px;margin:0 auto;padding:28px 32px;}
+
+/* ── PAGE HEADER ── */
+.page-hd{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:28px;}
+.page-hd-left h1{font-family:'Lora',serif;font-size:28px;font-weight:700;color:var(--forest);letter-spacing:-.5px;}
+.page-hd-left p{font-size:13px;color:var(--text3);margin-top:4px;}
+.page-actions{display:flex;gap:10px;}
+
+/* ── BUTTONS ── */
+.btn{font-size:13px;font-weight:600;padding:9px 20px;border-radius:var(--radius-sm);cursor:pointer;border:1.5px solid var(--border-dark);background:var(--paper);color:var(--text2);font-family:inherit;transition:all .15s;display:inline-flex;align-items:center;gap:7px;}
+.btn:hover{background:#f5f0ea;border-color:var(--text3);}
+.btn-forest{background:var(--forest);color:#fff;border-color:var(--forest);}
+.btn-forest:hover{background:var(--forest-mid);}
+.btn-outline-forest{background:transparent;border-color:var(--forest);color:var(--forest);}
+.btn-outline-forest:hover{background:var(--sage-soft);}
+.btn-red{background:var(--red-light);color:var(--red);border-color:#e8bbb7;}
+.btn-red:hover{background:#fae0dd;}
+.btn-sm{font-size:12px;padding:6px 14px;}
+.btn-icon{width:34px;height:34px;padding:0;display:inline-flex;align-items:center;justify-content:center;}
+
+/* ── SECTION PANELS ── */
+.section{display:none;animation:fadeUp .2s ease;}
+.section.active{display:block;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:translateY(0);}}
+
+/* ── CARD ── */
+.card{background:var(--paper);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);margin-bottom:20px;overflow:hidden;}
+.card-hd{padding:18px 22px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;background:linear-gradient(to right,#faf8f4,var(--paper));}
+.card-hd-left{display:flex;align-items:center;gap:12px;}
+.card-icon{width:36px;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0;}
+.card-title{font-size:15px;font-weight:700;color:var(--forest);font-family:'Lora',serif;}
+.card-sub{font-size:12px;color:var(--text3);margin-top:1px;}
+.card-body{padding:22px;}
+
+/* ── FORM ── */
+.form-grid{display:grid;gap:16px;}
+.fg-2{grid-template-columns:1fr 1fr;}
+.fg-3{grid-template-columns:1fr 1fr 1fr;}
+.fg-4{grid-template-columns:1fr 1fr 1fr 1fr;}
+.form-full{grid-column:1/-1;}
+.fg{display:flex;flex-direction:column;gap:6px;}
+.fl{font-size:12px;font-weight:700;color:var(--text2);display:flex;align-items:center;gap:5px;letter-spacing:.1px;}
+.fl .req{color:var(--red);font-size:10px;}
+.fi{font-size:13px;padding:9px 13px;border:1.5px solid var(--border-dark);border-radius:var(--radius-sm);background:var(--paper);color:var(--text);font-family:inherit;transition:border-color .15s;outline:none;width:100%;}
+.fi:focus{border-color:var(--forest-mid);box-shadow:0 0 0 3px rgba(45,106,79,.1);}
+textarea.fi{resize:vertical;min-height:90px;line-height:1.6;}
+.fi-hint{font-size:11px;color:var(--text4);margin-top:2px;}
+
+/* ── SELECT STYLED ── */
+select.fi{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M2 4l4 4 4-4' stroke='%238a7968' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;padding-right:32px;}
+
+/* ── MASTER DATA SELECTOR ── */
+.master-selector{position:relative;}
+.ms-input-wrap{position:relative;}
+.ms-input{cursor:pointer;background:var(--paper);}
+.ms-clear{position:absolute;right:10px;top:50%;transform:translateY(-50%);background:none;border:none;cursor:pointer;color:var(--text3);font-size:16px;line-height:1;padding:2px;}
+.ms-dropdown{position:absolute;top:calc(100% + 4px);left:0;right:0;background:var(--paper);border:1.5px solid var(--forest-mid);border-radius:var(--radius-sm);box-shadow:var(--shadow-md);z-index:200;max-height:280px;display:none;flex-direction:column;}
+.ms-dropdown.open{display:flex;}
+.ms-search-wrap{padding:10px 12px;border-bottom:1px solid var(--border);}
+.ms-search{width:100%;border:1.5px solid var(--border-dark);border-radius:7px;padding:7px 11px;font-size:13px;font-family:inherit;outline:none;}
+.ms-search:focus{border-color:var(--forest-mid);}
+.ms-list{overflow-y:auto;max-height:200px;}
+.ms-item{padding:10px 14px;cursor:pointer;display:flex;flex-direction:column;gap:2px;border-bottom:1px solid #f5f0ea;transition:background .1s;}
+.ms-item:hover,.ms-item:focus{background:var(--sage-soft);outline:none;}
+.ms-item:last-child{border-bottom:none;}
+.ms-item-main{font-size:13px;font-weight:600;color:var(--text);}
+.ms-item-sub{font-size:11px;color:var(--text3);line-height:1.4;}
+.ms-empty{padding:16px;text-align:center;font-size:13px;color:var(--text3);}
+.ms-selected-tag{display:inline-flex;align-items:center;gap:6px;background:var(--sage-soft);border:1px solid var(--sage);border-radius:20px;padding:4px 10px;font-size:12px;font-weight:600;color:var(--forest);margin:3px;}
+.ms-selected-tag .rm{cursor:pointer;opacity:.6;font-size:14px;line-height:1;}
+.ms-selected-tag .rm:hover{opacity:1;}
+.ms-tags-wrap{display:flex;flex-wrap:wrap;gap:0;min-height:36px;padding:4px 8px;border:1.5px solid var(--border-dark);border-radius:var(--radius-sm);background:var(--paper);cursor:pointer;align-items:flex-start;}
+.ms-tags-wrap:focus-within,.ms-tags-wrap.focused{border-color:var(--forest-mid);box-shadow:0 0 0 3px rgba(45,106,79,.1);}
+.ms-tags-placeholder{font-size:13px;color:var(--text4);padding:4px 4px;align-self:center;}
+
+/* ── AKTIVITAS TABLE ── */
+.akt-table{width:100%;border-collapse:collapse;font-size:13px;}
+.akt-table th{font-size:11px;font-weight:700;color:var(--text3);text-transform:uppercase;letter-spacing:.6px;padding:10px 12px;text-align:left;background:#f8f4ef;border-bottom:1px solid var(--border);}
+.akt-table td{padding:10px 8px;border-bottom:1px solid #f0ebe3;vertical-align:top;}
+.akt-table tr:last-child td{border-bottom:none;}
+.akt-table tr:hover td{background:#fdf9f5;}
+.akt-row-num{width:32px;text-align:center;color:var(--text3);font-weight:700;font-size:12px;padding-top:12px!important;}
+.akt-drag{cursor:grab;color:var(--text4);font-size:16px;padding-top:10px!important;width:24px;text-align:center;}
+.akt-drag:active{cursor:grabbing;}
+.akt-actions{width:60px;text-align:right;}
+.add-row-btn{width:100%;padding:10px;border:1.5px dashed var(--border-dark);border-radius:var(--radius-sm);background:transparent;color:var(--text3);font-size:13px;font-weight:600;cursor:pointer;font-family:inherit;transition:all .15s;display:flex;align-items:center;justify-content:center;gap:6px;margin-top:8px;}
+.add-row-btn:hover{border-color:var(--forest-mid);color:var(--forest);background:var(--sage-soft);}
+
+/* ── MATERIAL TABLE ── */
+.mat-section{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px;}
+.mat-hd{font-size:12px;font-weight:700;color:var(--text2);margin-bottom:8px;text-transform:uppercase;letter-spacing:.5px;display:flex;align-items:center;gap:6px;}
+.mat-hd span{width:8px;height:8px;border-radius:50%;display:inline-block;}
+.mat-row{display:flex;gap:8px;align-items:center;margin-bottom:6px;}
+.mat-row .fi{flex:1;}
+.mat-row-qty{width:60px!important;}
+.mat-row-price{width:110px!important;}
+
+/* ── SUMMARY/PREVIEW ── */
+.preview-card{background:linear-gradient(135deg,var(--forest) 0%,var(--forest-mid) 100%);border-radius:var(--radius);padding:24px;color:#fff;margin-bottom:20px;position:relative;overflow:hidden;}
+.preview-card::before{content:'🌿';position:absolute;right:20px;top:50%;transform:translateY(-50%);font-size:80px;opacity:.1;}
+.preview-title{font-family:'Lora',serif;font-size:22px;font-weight:700;margin-bottom:6px;}
+.preview-sub{font-size:13px;opacity:.75;}
+.preview-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;}
+.preview-chip{background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.25);border-radius:20px;padding:4px 12px;font-size:12px;font-weight:500;}
+
+.summary-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.summary-block{background:var(--paper);border:1px solid var(--border);border-radius:var(--radius);padding:18px;}
+.sb-title{font-size:11px;font-weight:700;color:var(--text3);text-transform:uppercase;letter-spacing:.7px;margin-bottom:12px;display:flex;align-items:center;gap:6px;}
+.sb-row{display:flex;justify-content:space-between;align-items:flex-start;padding:6px 0;border-bottom:1px solid #f5f0ea;font-size:13px;}
+.sb-row:last-child{border-bottom:none;}
+.sb-row-key{color:var(--text3);font-weight:500;}
+.sb-row-val{color:var(--text);font-weight:600;text-align:right;max-width:200px;}
+.komp-tag{display:inline-flex;align-items:center;gap:5px;background:var(--sage-soft);border:1px solid var(--sage);border-radius:6px;padding:3px 9px;margin:2px;font-size:11px;font-weight:600;color:var(--forest);}
+.quran-preview{background:var(--amber-light);border:1px solid #e9d06a;border-radius:var(--radius-sm);padding:14px;font-style:italic;font-size:13px;color:#6b4c0a;line-height:1.7;margin-top:8px;}
+.akhlaq-preview{background:var(--sage-soft);border:1px solid var(--sage);border-radius:var(--radius-sm);padding:12px;margin-top:8px;}
+.akhlaq-item{font-size:13px;color:var(--forest);padding:3px 0;display:flex;align-items:center;gap:6px;}
+.akhlaq-item::before{content:'•';color:var(--forest-light);}
+
+/* ── TABS inside card ── */
+.tab-bar{display:flex;border-bottom:1px solid var(--border);background:#faf8f4;}
+.tab-btn{font-size:13px;font-weight:600;padding:12px 18px;cursor:pointer;color:var(--text3);border-bottom:2px solid transparent;background:none;border-top:none;border-left:none;border-right:none;font-family:inherit;transition:all .15s;}
+.tab-btn.active{color:var(--forest);border-bottom-color:var(--forest);background:var(--paper);}
+.tab-panel{display:none;padding:20px;}
+.tab-panel.active{display:block;}
+
+/* ── SCROLLBAR ── */
+::-webkit-scrollbar{width:5px;height:5px;}
+::-webkit-scrollbar-track{background:transparent;}
+::-webkit-scrollbar-thumb{background:#c9bfb3;border-radius:3px;}
+
+/* ── TOAST ── */
+.toast{position:fixed;bottom:28px;right:28px;background:var(--forest);color:#fff;padding:12px 20px;border-radius:var(--radius-sm);font-size:13px;font-weight:600;box-shadow:var(--shadow-md);display:none;align-items:center;gap:10px;z-index:999;animation:slideUp .25s ease;}
+.toast.show{display:flex;}
+@keyframes slideUp{from{transform:translateY(16px);opacity:0;}to{transform:translateY(0);opacity:1;}}
+
+/* ── BADGE ── */
+.badge{display:inline-flex;align-items:center;font-size:11px;font-weight:600;padding:3px 9px;border-radius:20px;}
+.badge-green{background:var(--sage-soft);color:var(--forest);}
+.badge-amber{background:var(--amber-light);color:#7a5c00;}
+.badge-red{background:var(--red-light);color:var(--red);}
+.badge-sky{background:var(--sky-light);color:var(--sky);}
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="tb-brand" style="display:flex;align-items:center;gap:14px">
+    <a href="sikolahku.html" target="_blank" style="display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;color:rgba(255,255,255,.6);text-decoration:none;padding:5px 10px;border-radius:6px;border:1px solid rgba(255,255,255,.15);transition:all .15s" onmouseover="this.style.color='#fff';this.style.borderColor='rgba(255,255,255,.4)'" onmouseout="this.style.color='rgba(255,255,255,.6)';this.style.borderColor='rgba(255,255,255,.15)'">
+      <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M10 3L5 8l5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      SikolahKu
+    </a>
+    <span style="color:rgba(255,255,255,.2)">|</span>
+    Sikolah<span>Ku</span>
+  </div>
+  <div class="tb-info">
+    <span>Bu Sari Utami</span>
+    <span class="tb-badge">Kelas 3A · Wali Kelas</span>
+    <span style="opacity:.5">|</span>
+    <span id="tb-date"></span>
+  </div>
+</div>
+
+<!-- STEPS -->
+<div class="steps-wrap">
+  <div class="steps">
+    <div class="step active" id="step-1" onclick="goStep(1)">
+      <div class="step-num">1</div><div class="step-label">Info Dasar</div>
+    </div>
+    <div class="step" id="step-2" onclick="goStep(2)">
+      <div class="step-num">2</div><div class="step-label">Akhlaq & Al-Qur'an</div>
+    </div>
+    <div class="step" id="step-3" onclick="goStep(3)">
+      <div class="step-num">3</div><div class="step-label">Aktivitas & Kegiatan</div>
+    </div>
+    <div class="step" id="step-4" onclick="goStep(4)">
+      <div class="step-num">4</div><div class="step-label">Kompetensi & Mapel</div>
+    </div>
+    <div class="step" id="step-5" onclick="goStep(5)">
+      <div class="step-num">5</div><div class="step-label">Material & Biaya</div>
+    </div>
+    <div class="step" id="step-6" onclick="goStep(6)">
+      <div class="step-num">6</div><div class="step-label">Evaluasi & Preview</div>
+    </div>
+  </div>
+</div>
+
+<div class="main">
+  <div class="page-hd">
+    <div class="page-hd-left">
+      <h1 id="pg-title">Buat Daily Plan</h1>
+      <p id="pg-sub">Langkah 1 dari 6 — Informasi Dasar</p>
+    </div>
+    <div class="page-actions">
+      <button class="btn" onclick="saveDraft()">💾 Simpan Draft</button>
+      <button class="btn btn-forest" id="btn-next" onclick="nextStep()">Lanjut →</button>
+    </div>
+  </div>
+
+  <!-- ══════ STEP 1: INFO DASAR ══════ -->
+  <div class="section active" id="sec-1">
+    <div class="card">
+      <div class="card-hd">
+        <div class="card-hd-left">
+          <div class="card-icon" style="background:#e8f5ee;">📋</div>
+          <div><div class="card-title">Informasi Dasar Kelas</div><div class="card-sub">Data umum rencana pembelajaran hari ini</div></div>
+        </div>
+        <span class="badge badge-green">Otomatis terisi</span>
+      </div>
+      <div class="card-body">
+        <div class="form-grid fg-3">
+          <div class="fg">
+            <label class="fl">Wali Kelas <span class="req">*</span></label>
+            <input class="fi" value="Iftah Bahrol 'Ulum, S.Pd" readonly style="background:#f8f4ef;color:var(--text3)"/>
+            <div class="fi-hint">Otomatis dari akun Anda</div>
+          </div>
+          <div class="fg">
+            <label class="fl">Kelas <span class="req">*</span></label>
+            <select class="fi" id="f-kelas">
+              <option value="">Pilih Kelas</option>
+              <option value="SD1-Merkurius" selected>SD 1 – Merkurius</option>
+              <option value="SD2-Venus">SD 2 – Venus</option>
+              <option value="SD3-Bumi">SD 3 – Bumi</option>
+              <option value="SD4-Saturnus">SD 4 – Saturnus</option>
+              <option value="SD5-Jupiter">SD 5 – Jupiter</option>
+              <option value="SD6-Uranus">SD 6 – Uranus</option>
+            </select>
+          </div>
+          <div class="fg">
+            <label class="fl">Tanggal <span class="req">*</span></label>
+            <input type="date" class="fi" id="f-tanggal"/>
+          </div>
+          <div class="fg">
+            <label class="fl">Semester <span class="req">*</span></label>
+            <select class="fi" id="f-semester">
+              <option>1 (Ganjil)</option><option>2 (Genap)</option>
+            </select>
+          </div>
+          <div class="fg">
+            <label class="fl">Minggu ke-</label>
+            <input type="number" class="fi" id="f-week" min="1" max="20" placeholder="cth: 2"/>
+          </div>
+          <div class="fg">
+            <label class="fl">Hari</label>
+            <select class="fi" id="f-hari">
+              <option>Senin</option><option>Selasa</option><option>Rabu</option><option>Kamis</option><option>Jumat</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-hd">
+        <div class="card-hd-left">
+          <div class="card-icon" style="background:#fef9e7;">🎯</div>
+          <div><div class="card-title">Tema Pembelajaran</div><div class="card-sub">Tema besar dan sub-tema hari ini</div></div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="form-grid fg-2">
+          <div class="fg">
+            <label class="fl">Tema Besar <span class="req">*</span></label>
+            <input class="fi" id="f-tema" placeholder="cth: LIFE AND ENERGY"/>
+          </div>
+          <div class="fg">
+            <label class="fl">Sub-Tema</label>
+            <input class="fi" id="f-subtema" placeholder="cth: Nature Around"/>
+          </div>
+          <div class="fg form-full">
+            <label class="fl">Deskripsi Singkat Hari Ini</label>
+            <textarea class="fi" id="f-desc" rows="3" placeholder="Gambaran umum pembelajaran hari ini..."></textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-hd">
+        <div class="card-hd-left">
+          <div class="card-icon" style="background:#fdf0ee;">💰</div>
+          <div><div class="card-title">Budget Harian</div><div class="card-sub">Rencana anggaran kegiatan</div></div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="form-grid fg-2">
+          <div class="fg">
+            <label class="fl">Daily Budget (Rp)</label>
+            <input type="number" class="fi" id="f-budget" placeholder="cth: 150000" style="font-size:15px;font-weight:700;color:var(--red);"/>
+            <div class="fi-hint">Jumlah anggaran yang disetujui pengelola</div>
+          </div>
+          <div class="fg">
+            <label class="fl">Sumber Dana</label>
+            <select class="fi"><option>Dana Operasional Sekolah</option><option>Dana Kegiatan</option><option>Kas Kelas</option><option>Sumbangan Orang Tua</option></select>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════ STEP 2: AKHLAQ & AL-QURAN ══════ -->
+  <div class="section" id="sec-2">
+    <div class="card">
+      <div class="card-hd">
+        <div class="card-hd-left">
+          <div class="card-icon" style="background:#e8f5ee;">🌿</div>
+          <div><div class="card-title">Target Akhlaq</div><div class="card-sub">Pilih dari master data kurikulum akhlaq</div></div>
+        </div>
+        <button class="btn btn-sm btn-outline-forest" onclick="addAkhlaqRow()">+ Tambah</button>
+      </div>
+      <div class="card-body">
+        <div class="fi-hint" style="margin-bottom:14px">Pilih nilai-nilai akhlaq yang menjadi target hari ini dari kurikulum Sekolah Alam.</div>
+        <div id="akhlaq-rows"></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-hd">
+        <div class="card-hd-left">
+          <div class="card-icon" style="background:#fef9e7;">📖</div>
+          <div><div class="card-title">Referensi Ayat Al-Qur'an</div><div class="card-sub">Ayat yang relevan dengan tema pembelajaran</div></div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="form-grid fg-3">
+          <div class="fg">
+            <label class="fl">Surat</label>
+            <input class="fi" id="f-surat" placeholder="cth: Al-An'am"/>
+          </div>
+          <div class="fg">
+            <label class="fl">Ayat ke-</label>
+            <input class="fi" id="f-ayat" placeholder="cth: 38"/>
+          </div>
+          <div class="fg">
+            <label class="fl">Juz</label>
+            <input type="number" class="fi" id="f-juz" placeholder="7" min="1" max="30"/>
+          </div>
+          <div class="fg form-full">
+            <label class="fl">Terjemahan / Isi Ayat</label>
+            <textarea class="fi" id="f-quran" rows="4" placeholder="Tulis terjemahan ayat yang digunakan sebagai referensi pembelajaran..."></textarea>
+          </div>
+          <div class="fg form-full">
+            <label class="fl">Relevansi dengan Tema</label>
+            <textarea class="fi" id="f-quran-rel" rows="2" placeholder="Bagaimana ayat ini berkaitan dengan tema hari ini..."></textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════ STEP 3: AKTIVITAS ══════ -->
+  <div class="section" id="sec-3">
+    <div class="card">
+      <div class="card-hd">
+        <div class="card-hd-left">
+          <div class="card-icon" style="background:#d6eaf8;">🗓️</div>
+          <div><div class="card-title">Timeline Aktivitas Harian</div><div class="card-sub">Pilih kegiatan dari master data, tambahkan deskripsi & waktu</div></div>
+        </div>
+        <button class="btn btn-sm btn-forest" onclick="addAktRow()">+ Tambah Aktivitas</button>
+      </div>
+      <div class="card-body" style="padding:0;">
+        <table class="akt-table" id="akt-table">
+          <thead>
+            <tr>
+              <th style="width:24px;"></th>
+              <th style="width:32px;">No.</th>
+              <th style="width:90px;">Waktu Mulai</th>
+              <th style="width:80px;">Durasi</th>
+              <th style="width:180px;">Kegiatan <span style="color:var(--red)">*</span></th>
+              <th>Deskripsi & Detail</th>
+              <th style="width:70px;"></th>
+            </tr>
+          </thead>
+          <tbody id="akt-tbody"></tbody>
+        </table>
+        <div style="padding:12px 16px;">
+          <button class="add-row-btn" onclick="addAktRow()">
+            <span style="font-size:18px">+</span> Tambah Baris Aktivitas
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════ STEP 4: KOMPETENSI ══════ -->
+  <div class="section" id="sec-4">
+    <div class="card">
+      <div class="card-hd">
+        <div class="card-hd-left">
+          <div class="card-icon" style="background:#e8f5ee;">⭐</div>
+          <div><div class="card-title">Kompetensi Dasar & Mata Pelajaran</div><div class="card-sub">Pilih dari master data Mapel Sekolah Alam — bisa pilih lebih dari satu</div></div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="fg">
+          <label class="fl">Cari & Pilih Kompetensi <span class="req">*</span></label>
+          <div class="ms-tags-wrap" id="komp-tags-wrap" onclick="toggleKompDropdown()" tabindex="0">
+            <span class="ms-tags-placeholder" id="komp-placeholder">Klik untuk memilih kompetensi...</span>
+          </div>
+          <div class="ms-dropdown" id="komp-dropdown">
+            <div class="ms-search-wrap">
+              <input class="ms-search" placeholder="Cari kode atau nama kompetensi..." oninput="filterKomp(this.value)" id="komp-search"/>
+            </div>
+            <div class="ms-list" id="komp-list"></div>
+          </div>
+          <div class="fi-hint">Kompetensi yang dipilih akan muncul sebagai tag di atas</div>
+        </div>
+
+        <div style="margin-top:20px;" id="kurikulum-preview-wrap">
+          <div class="mat-hd"><span style="background:var(--forest-light)"></span>Kurikulum Sekolah Alam yang Terlibat</div>
+          <div id="kurikulum-tags" style="display:flex;flex-wrap:wrap;gap:8px;"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-hd">
+        <div class="card-hd-left">
+          <div class="card-icon" style="background:#fef9e7;">📚</div>
+          <div><div class="card-title">Sumber Belajar & Referensi</div><div class="card-sub">Bahan dan alat yang digunakan</div></div>
+        </div>
+        <button class="btn btn-sm btn-outline-forest" onclick="addSumberRow()">+ Tambah</button>
+      </div>
+      <div class="card-body">
+        <div id="sumber-rows">
+          <div class="mat-row"><input class="fi" placeholder="cth: Lembar observasi, Buku panduan, Al-Qur'an..."/><button class="btn btn-icon btn-red btn-sm" onclick="this.parentNode.remove()">×</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════ STEP 5: MATERIAL ══════ -->
+  <div class="section" id="sec-5">
+    <div class="card">
+      <div class="card-hd">
+        <div class="card-hd-left">
+          <div class="card-icon" style="background:#e8f5ee;">📦</div>
+          <div><div class="card-title">Material & Perlengkapan</div><div class="card-sub">Daftar barang yang digunakan dan yang akan dikembalikan</div></div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="mat-section">
+          <div>
+            <div class="mat-hd"><span style="background:var(--forest-light)"></span>Continue Material <span class="badge badge-green" style="font-size:10px;margin-left:4px">Disimpan</span></div>
+            <div style="display:grid;grid-template-columns:1fr 60px;gap:6px;font-size:11px;font-weight:700;color:var(--text3);margin-bottom:6px;padding:0 4px"><span>Nama Material</span><span style="text-align:center">Jml</span></div>
+            <div id="mat-continue-rows">
+              <div class="mat-row"><input class="fi" placeholder="cth: Alat permainan"/><input type="number" class="fi mat-row-qty" placeholder="1" min="0"/><button class="btn btn-icon btn-red btn-sm" onclick="this.parentNode.remove()">×</button></div>
+            </div>
+            <button class="add-row-btn" style="margin-top:6px" onclick="addMatRow('continue')">+ Material</button>
+          </div>
+          <div>
+            <div class="mat-hd"><span style="background:var(--red)"></span>Uncontinue Material <span class="badge badge-red" style="font-size:10px;margin-left:4px">Habis/Keluar</span></div>
+            <div style="display:grid;grid-template-columns:1fr 60px 110px;gap:6px;font-size:11px;font-weight:700;color:var(--text3);margin-bottom:6px;padding:0 4px"><span>Nama Material</span><span style="text-align:center">Jml</span><span>Biaya (Rp)</span></div>
+            <div id="mat-uncon-rows">
+              <div class="mat-row"><input class="fi" placeholder="cth: Konsumsi ringan"/><input type="number" class="fi mat-row-qty" placeholder="2" min="0"/><input type="number" class="fi mat-row-price" placeholder="75000"/><button class="btn btn-icon btn-red btn-sm" onclick="this.parentNode.remove()">×</button></div>
+            </div>
+            <button class="add-row-btn" style="margin-top:6px" onclick="addMatRow('uncon')">+ Material</button>
+          </div>
+        </div>
+
+        <div style="margin-top:20px;padding:14px;background:#faf8f4;border-radius:var(--radius-sm);border:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;">
+          <span style="font-size:13px;font-weight:600;color:var(--text2)">Total Perkiraan Biaya Material</span>
+          <span style="font-size:18px;font-weight:800;color:var(--red);font-family:'Lora',serif" id="total-biaya">Rp 0</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════ STEP 6: EVALUASI & PREVIEW ══════ -->
+  <div class="section" id="sec-6">
+    <div class="card">
+      <div class="card-hd">
+        <div class="card-hd-left">
+          <div class="card-icon" style="background:#d6eaf8;">📝</div>
+          <div><div class="card-title">Evaluasi & Catatan</div><div class="card-sub">Diisi setelah kegiatan berlangsung (opsional saat pembuatan)</div></div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="form-grid fg-2">
+          <div class="fg">
+            <label class="fl">Evaluasi Harian KBM</label>
+            <textarea class="fi" id="f-eval-kbm" rows="4" placeholder="Refleksi jalannya kegiatan belajar hari ini..."></textarea>
+          </div>
+          <div class="fg">
+            <label class="fl">Catatan Harian Siswa</label>
+            <textarea class="fi" id="f-eval-siswa" rows="4" placeholder="Catatan perilaku, prestasi, atau kejadian khusus siswa hari ini..."></textarea>
+          </div>
+          <div class="fg form-full">
+            <label class="fl">Rencana Tindak Lanjut</label>
+            <textarea class="fi" id="f-rtl" rows="3" placeholder="Apa yang perlu ditindaklanjuti besok atau minggu depan..."></textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PREVIEW -->
+    <div class="preview-card" id="preview-hero">
+      <div class="preview-title" id="prev-title">—</div>
+      <div class="preview-sub" id="prev-sub">—</div>
+      <div class="preview-chips" id="prev-chips"></div>
+    </div>
+
+    <div class="summary-grid">
+      <div class="summary-block">
+        <div class="sb-title">🌿 Akhlaq & Al-Qur'an</div>
+        <div id="prev-akhlaq"><div class="akhlaq-preview" id="prev-akhlaq-list" style="color:var(--text3);font-style:normal">Belum diisi</div></div>
+        <div class="quran-preview" id="prev-quran" style="display:none"></div>
+      </div>
+      <div class="summary-block">
+        <div class="sb-title">⭐ Kompetensi Terpilih</div>
+        <div id="prev-komp-tags"></div>
+      </div>
+      <div class="summary-block">
+        <div class="sb-title">🗓️ Aktivitas Hari Ini</div>
+        <div id="prev-akt"></div>
+      </div>
+      <div class="summary-block">
+        <div class="sb-title">💰 Anggaran</div>
+        <div id="prev-budget"></div>
+      </div>
+    </div>
+
+    <div style="text-align:center;margin-top:24px;display:flex;gap:12px;justify-content:center;">
+      <button class="btn" style="padding:12px 28px" onclick="saveDraft()">💾 Simpan Draft</button>
+      <button class="btn btn-forest" style="padding:12px 36px;font-size:15px;" onclick="submitPlan()">✅ Submit Daily Plan</button>
+    </div>
+  </div>
+
+  <!-- NAV BOTTOM -->
+  <div style="display:flex;justify-content:space-between;margin-top:8px;padding-top:16px;border-top:1px solid var(--border);">
+    <button class="btn" id="btn-prev" onclick="prevStep()" style="display:none">← Sebelumnya</button>
+    <div></div>
+    <button class="btn btn-forest" id="btn-next2" onclick="nextStep()">Lanjut →</button>
+  </div>
+</div>
+
+<div class="toast" id="toast">✅ <span id="toast-msg">Tersimpan</span></div>
+
+<script>
+// ══ MASTER DATA ══
+const MASTER_AKHLAQ = [
+  'Mu\'izz (Mulia)','Taubah (Bertobat)','Istiqomah (Konsisten)','Amanah (Dapat dipercaya)',
+  'Sabar (Sabar)','Syukur (Bersyukur)','Ikhlas (Tulus)','Tawakkal (Berserah diri)',
+  'Jujur (Sidiq)','Dermawan (Sakhiyy)','Rendah Hati (Tawadhu)','Tanggung Jawab',
+  'Disiplin','Peduli Lingkungan','Kerja Sama','Berani',
+];
+
+const MASTER_KEGIATAN = [
+  {id:'welcoming', name:'Welcoming', desc:'Memulai hari dengan semangat dan doa pagi'},
+  {id:'sholat-dhuha', name:'Sholat Dhuha', desc:'Membiasakan sholat dhuha berjamaah'},
+  {id:'farming', name:'Farming Activity', desc:'Kegiatan berkebun, bertani, dan merawat tanaman'},
+  {id:'cooking', name:'Cooking Class', desc:'Memasak bersama sebagai kegiatan life-skill'},
+  {id:'outdoor-math', name:'Math Outdoor', desc:'Belajar matematika di alam terbuka'},
+  {id:'reading', name:'Reading Time', desc:'Sesi membaca mandiri atau bersama'},
+  {id:'diskusi', name:'Diskusi Kelas', desc:'Diskusi kelompok tentang topik tertentu'},
+  {id:'observasi', name:'Observasi Alam', desc:'Pengamatan lingkungan sekitar sekolah'},
+  {id:'tahfidz', name:'Tahfidz', desc:'Setoran hafalan Al-Qur\'an individu'},
+  {id:'mengaji', name:'Mengaji', desc:'Murojaah dan metode UMI'},
+  {id:'sholat-dhuhur', name:'Sholat Dhuhur & Makan', desc:'Sholat berjamaah dan makan siang bersama'},
+  {id:'outbound', name:'Outbound / Permainan', desc:'Kegiatan fisik dan permainan kelompok'},
+  {id:'proyek', name:'Proyek Kelompok', desc:'Mengerjakan proyek kolaboratif'},
+  {id:'presentasi', name:'Presentasi Siswa', desc:'Siswa mempresentasikan hasil karyanya'},
+  {id:'closing', name:'Closing & Refleksi', desc:'Penutup hari, refleksi, doa penutup'},
+  {id:'lainnya', name:'Kegiatan Lainnya', desc:'Kegiatan yang tidak tercantum di daftar'},
+];
+
+const MASTER_MAPEL = [
+  {kode:'BI4',mapel:'Bahasa Indonesia',capaian:[
+    {kode:'BI4.C1',uraian:'Memahami ide pokok (gagasan) suatu pesan lisan, informasi dari media audio, teks aural'},
+    {kode:'BI4.C2',uraian:'Menyampaikan pendapat dan instruksi secara lisan dengan bahasa yang santun dan jelas'},
+    {kode:'BI4.C3',uraian:'Membaca teks narasi 2–3 paragraf dengan pemahaman yang baik'},
+  ]},
+  {kode:'MT4',mapel:'Matematika',capaian:[
+    {kode:'MT4.B2',uraian:'Memahami dan menyelesaikan masalah operasi hitung bilangan bulat dan pecahan'},
+    {kode:'MT4.B3',uraian:'Menggunakan pengukuran (berat, volume, panjang) dalam konteks sehari-hari'},
+    {kode:'MT4.B4',uraian:'Mengenal dan menggunakan konsep geometri dasar'},
+  ]},
+  {kode:'IPA4',mapel:'IPA',capaian:[
+    {kode:'IPA4.A1',uraian:'Mengidentifikasi hubungan antara makhluk hidup dengan lingkungannya'},
+    {kode:'IPA4.A2',uraian:'Menjelaskan siklus hidup berbagai makhluk hidup'},
+    {kode:'IPA4.B1',uraian:'Memahami perubahan wujud benda dan faktor-faktornya'},
+  ]},
+  {kode:'SA4',mapel:'Tematik Alam',capaian:[
+    {kode:'SA4.L1',uraian:'Mengenal ekosistem alam sekitar melalui observasi langsung'},
+    {kode:'SA4.K2',uraian:'Menunjukkan sikap tanggung jawab, kerja sama, dan kepemimpinan'},
+    {kode:'SA4.H3',uraian:'Menerapkan keterampilan hidup dasar (kemandirian, pemecahan masalah)'},
+  ]},
+  {kode:'PKN4',mapel:'PPKN',capaian:[
+    {kode:'PKN4.A1',uraian:'Memahami nilai-nilai Pancasila dalam kehidupan sehari-hari'},
+    {kode:'PKN4.B1',uraian:'Menunjukkan sikap toleransi dan menghargai keberagaman'},
+  ]},
+  {kode:'AG4',mapel:'Pendidikan Agama',capaian:[
+    {kode:'AG4.Q1',uraian:'Hafalan surat-surat pendek Al-Qur\'an dengan tartil'},
+    {kode:'AG4.A1',uraian:'Memahami dan menerapkan akhlak mulia dalam kehidupan'},
+  ]},
+];
+
+const MASTER_KURIKULUM = [
+  {code:'Akhlak', label:'Akhlak (70%)', color:'#2d6a4f'},
+  {code:'Logika', label:'Logika', color:'#1e6091'},
+  {code:'Leadership', label:'Leadership', color:'#7b3f00'},
+  {code:'Bisnis', label:'Bisnis / Kemandirian', color:'#d4a017'},
+  {code:'Alam', label:'Tematik Alam', color:'#0f766e'},
+];
+
+// ── STATE ──
+let currentStep = 1;
+let selectedKomp = []; // [{kode, mapel, uraian}]
+let akhlaqRows = [];
+let aktRows = [];
+
+// ── DATE ──
+const now = new Date();
+document.getElementById('f-tanggal').value = now.toISOString().split('T')[0];
+const days = ['Minggu','Senin','Selasa','Rabu','Kamis','Jumat','Sabtu'];
+document.getElementById('f-hari').value = days[now.getDay()];
+const months=['Jan','Feb','Mar','Apr','Mei','Jun','Jul','Agu','Sep','Okt','Nov','Des'];
+document.getElementById('tb-date').textContent = `${days[now.getDay()]}, ${now.getDate()} ${months[now.getMonth()]} ${now.getFullYear()}`;
+
+// ── STEPS ──
+const stepTitles = [
+  '','Informasi Dasar','Akhlaq & Al-Qur\'an','Aktivitas & Kegiatan',
+  'Kompetensi & Mapel','Material & Biaya','Evaluasi & Preview',
+];
+
+function goStep(n) {
+  if(n < 1 || n > 6) return;
+  document.getElementById(`sec-${currentStep}`).classList.remove('active');
+  currentStep = n;
+  document.getElementById(`sec-${n}`).classList.add('active');
+  // update step UI
+  for(let i=1;i<=6;i++){
+    const s = document.getElementById(`step-${i}`);
+    s.classList.remove('active','done');
+    if(i===n) s.classList.add('active');
+    else if(i<n) s.classList.add('done');
+    const num = s.querySelector('.step-num');
+    num.textContent = i<n ? '✓' : i;
+  }
+  document.getElementById('pg-sub').textContent = `Langkah ${n} dari 6 — ${stepTitles[n]}`;
+  document.getElementById('btn-prev').style.display = n>1?'':'none';
+  document.getElementById('btn-next2').style.display = n<6?'':'none';
+  if(n===6) buildPreview();
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function nextStep(){ if(currentStep<6) goStep(currentStep+1); }
+function prevStep(){ if(currentStep>1) goStep(currentStep-1); }
+
+// ── AKHLAQ ROWS ──
+function renderAkhlaqRows(){
+  const c = document.getElementById('akhlaq-rows');
+  c.innerHTML = '';
+  if(akhlaqRows.length===0){
+    c.innerHTML = '<div style="text-align:center;padding:24px;color:var(--text3);font-size:13px">Belum ada target akhlaq. Klik "+ Tambah" untuk menambahkan.</div>';
+    return;
+  }
+  akhlaqRows.forEach((row,i)=>{
+    const d = document.createElement('div');
+    d.className = 'mat-row';
+    d.style.marginBottom='8px';
+    d.innerHTML = `
+      <select class="fi" onchange="akhlaqRows[${i}]={...akhlaqRows[${i}],val:this.value}">
+        <option value="">-- Pilih Target Akhlaq --</option>
+        ${MASTER_AKHLAQ.map(a=>`<option value="${a}" ${row.val===a?'selected':''}>${a}</option>`).join('')}
+      </select>
+      <input class="fi" placeholder="Catatan implementasi (opsional)" value="${row.note||''}" oninput="akhlaqRows[${i}].note=this.value"/>
+      <button class="btn btn-icon btn-red btn-sm" onclick="akhlaqRows.splice(${i},1);renderAkhlaqRows()">×</button>`;
+    c.appendChild(d);
+  });
+}
+function addAkhlaqRow(){ akhlaqRows.push({val:'',note:''}); renderAkhlaqRows(); }
+renderAkhlaqRows();
+
+// ── AKTIVITAS ROWS ──
+function addAktRow(){
+  const id = Date.now();
+  aktRows.push({id, waktu:'', durasi:'60', kegiatan:'', desc:''});
+  renderAktTable();
+}
+function removeAktRow(id){ aktRows = aktRows.filter(r=>r.id!==id); renderAktTable(); }
+
+function renderAktTable(){
+  const tbody = document.getElementById('akt-tbody');
+  tbody.innerHTML = '';
+  if(aktRows.length===0){
+    tbody.innerHTML = `<tr><td colspan="7" style="text-align:center;padding:32px;color:var(--text3);font-size:13px">Belum ada aktivitas. Klik "+ Tambah Aktivitas" untuk menambahkan.</td></tr>`;
+    return;
+  }
+  aktRows.forEach((row, i) => {
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+      <td class="akt-drag" title="Drag untuk urutkan">⠿</td>
+      <td class="akt-row-num">${i+1}</td>
+      <td><input type="time" class="fi" value="${row.waktu}" style="font-size:13px" oninput="aktRows[${i}].waktu=this.value"/></td>
+      <td>
+        <select class="fi" style="font-size:12px" onchange="aktRows[${i}].durasi=this.value">
+          ${['15','30','45','60','90','120'].map(d=>`<option ${row.durasi==d?'selected':''}>${d} min</option>`).join('')}
+        </select>
+      </td>
+      <td>
+        <select class="fi" style="font-size:12px" onchange="aktRows[${i}].kegiatan=this.value">
+          <option value="">-- Pilih --</option>
+          ${MASTER_KEGIATAN.map(k=>`<option value="${k.name}" ${row.kegiatan===k.name?'selected':''}>${k.name}</option>`).join('')}
+        </select>
+      </td>
+      <td>
+        <textarea class="fi" rows="2" placeholder="Uraikan detail aktivitas, bahan, metode..." style="font-size:12px;min-height:60px" oninput="aktRows[${i}].desc=this.value">${row.desc}</textarea>
+      </td>
+      <td class="akt-actions">
+        <button class="btn btn-icon btn-red btn-sm" onclick="removeAktRow(${row.id})">×</button>
+      </td>`;
+    tbody.appendChild(tr);
+  });
+}
+
+// seed default rows
+[
+  {waktu:'07:30',durasi:'15',kegiatan:'Welcoming',desc:'Memberi semangat dan memulai petualangan belajar'},
+  {waktu:'07:45',durasi:'15',kegiatan:'Sholat Dhuha',desc:'Membiasakan sholat dhuha berjamaah'},
+  {waktu:'08:00',durasi:'90',kegiatan:'Farming Activity',desc:'Apersepsi: membaca doa buka kelas\nEksplorasi: Membuat pot dari galon, menyebar kapur ke raised bed'},
+  {waktu:'11:30',durasi:'60',kegiatan:'Sholat Dhuhur & Makan',desc:'Sholat berjamaah dan makan bersama'},
+  {waktu:'12:30',durasi:'30',kegiatan:'Tahfidz',desc:'Setoran hafalan individu (Al-Bayyinah)'},
+  {waktu:'14:15',durasi:'15',kegiatan:'Closing & Refleksi',desc:'Refleksi dan penutup hari'},
+].forEach((r,i)=>{ aktRows.push({id:Date.now()+i, ...r}); });
+renderAktTable();
+
+// ── KOMPETENSI MULTI-SELECT ──
+function renderKompList(filter=''){
+  const list = document.getElementById('komp-list');
+  let html = '';
+  let count = 0;
+  MASTER_MAPEL.forEach(mapel=>{
+    mapel.capaian.forEach(c=>{
+      if(filter && !c.kode.toLowerCase().includes(filter.toLowerCase()) && !c.uraian.toLowerCase().includes(filter.toLowerCase()) && !mapel.mapel.toLowerCase().includes(filter.toLowerCase())) return;
+      const selected = selectedKomp.some(s=>s.kode===c.kode);
+      html += `<div class="ms-item ${selected?'selected':''}" onclick="toggleKomp('${c.kode}','${mapel.mapel}','${c.uraian.replace(/'/g,"\\'")}')">
+        <div class="ms-item-main"><span class="komp-tag" style="margin:0 6px 0 0">${c.kode}</span>${mapel.mapel}</div>
+        <div class="ms-item-sub">${c.uraian}</div>
+      </div>`;
+      count++;
+    });
+  });
+  list.innerHTML = count ? html : '<div class="ms-empty">Tidak ditemukan</div>';
+}
+
+function toggleKomp(kode, mapel, uraian){
+  const idx = selectedKomp.findIndex(s=>s.kode===kode);
+  if(idx>=0) selectedKomp.splice(idx,1);
+  else selectedKomp.push({kode,mapel,uraian});
+  renderKompTags();
+  renderKompList(document.getElementById('komp-search').value);
+}
+
+function renderKompTags(){
+  const wrap = document.getElementById('komp-tags-wrap');
+  const ph = document.getElementById('komp-placeholder');
+  // remove existing tags
+  wrap.querySelectorAll('.ms-selected-tag').forEach(t=>t.remove());
+  if(selectedKomp.length===0){
+    ph.style.display='';
+  } else {
+    ph.style.display='none';
+    selectedKomp.forEach(s=>{
+      const tag = document.createElement('span');
+      tag.className='ms-selected-tag';
+      tag.innerHTML=`<span class="komp-tag" style="margin:0;padding:1px 6px;font-size:10px">${s.kode}</span>${s.mapel} <span class="rm" onclick="event.stopPropagation();toggleKomp('${s.kode}','','')">×</span>`;
+      wrap.insertBefore(tag, ph);
+    });
+  }
+  renderKurikulumPreview();
+}
+
+function filterKomp(v){ renderKompList(v); }
+
+function toggleKompDropdown(){
+  const d = document.getElementById('komp-dropdown');
+  if(d.classList.toggle('open')){
+    renderKompList();
+    document.getElementById('komp-search').focus();
+    document.addEventListener('click', closeKompDropdown, {once:true});
+  }
+}
+
+function closeKompDropdown(e){
+  const d = document.getElementById('komp-dropdown');
+  const w = document.getElementById('komp-tags-wrap');
+  if(!d.contains(e.target) && !w.contains(e.target)){
+    d.classList.remove('open');
+  } else {
+    document.addEventListener('click', closeKompDropdown, {once:true});
+  }
+}
+
+function renderKurikulumPreview(){
+  // derive which kurikulum categories are touched
+  const c = document.getElementById('kurikulum-tags');
+  const involved = new Set();
+  selectedKomp.forEach(s=>{
+    if(s.kode.startsWith('AG')||s.kode.startsWith('AK')) involved.add('Akhlak');
+    if(s.kode.startsWith('MT')||s.kode.startsWith('IPA')||s.kode.startsWith('BI')) involved.add('Logika');
+    if(s.kode.startsWith('SA')) involved.add('Alam');
+    if(s.kode.startsWith('PKN')) involved.add('Leadership');
+  });
+  c.innerHTML = [...involved].map(k=>{
+    const mk = MASTER_KURIKULUM.find(m=>m.code===k);
+    return `<span class="badge" style="background:${mk?mk.color+'22':'#eee'};color:${mk?mk.color:'#666'};border:1px solid ${mk?mk.color+'44':'#ccc'};margin:2px;font-size:12px">${mk?mk.label:k}</span>`;
+  }).join('') || '<span style="font-size:13px;color:var(--text3)">Akan terisi setelah kompetensi dipilih</span>';
+}
+
+// ── SUMBER BELAJAR ──
+function addSumberRow(){
+  const d=document.createElement('div');d.className='mat-row';d.style.marginBottom='8px';
+  d.innerHTML=`<input class="fi" placeholder="cth: Buku panduan, Al-Qur'an, lembar kerja..."/><button class="btn btn-icon btn-red btn-sm" onclick="this.parentNode.remove()">×</button>`;
+  document.getElementById('sumber-rows').appendChild(d);
+}
+
+// ── MATERIAL ──
+function addMatRow(type){
+  const d=document.createElement('div');d.className='mat-row';d.style.marginBottom='6px';
+  if(type==='continue'){
+    d.innerHTML=`<input class="fi" placeholder="Nama material"/><input type="number" class="fi mat-row-qty" placeholder="1" min="0"/><button class="btn btn-icon btn-red btn-sm" onclick="this.parentNode.remove()">×</button>`;
+    document.getElementById('mat-continue-rows').appendChild(d);
+  } else {
+    d.innerHTML=`<input class="fi" placeholder="Nama material"/><input type="number" class="fi mat-row-qty" placeholder="1" min="0"/><input type="number" class="fi mat-row-price" placeholder="50000" oninput="calcTotal()"/><button class="btn btn-icon btn-red btn-sm" onclick="this.parentNode.remove();calcTotal()">×</button>`;
+    document.getElementById('mat-uncon-rows').appendChild(d);
+  }
+}
+
+function calcTotal(){
+  let total=0;
+  document.querySelectorAll('#mat-uncon-rows .mat-row-price').forEach(i=>{
+    const qty = parseInt(i.previousElementSibling?.value)||1;
+    total += (parseInt(i.value)||0) * qty;
+  });
+  document.getElementById('total-biaya').textContent='Rp '+total.toLocaleString('id-ID');
+}
+document.addEventListener('input', e=>{ if(e.target.classList.contains('mat-row-price')) calcTotal(); });
+
+// ── PREVIEW ──
+function buildPreview(){
+  const tema = document.getElementById('f-tema').value || '—';
+  const subtema = document.getElementById('f-subtema').value;
+  const kelas = document.getElementById('f-kelas').value || '—';
+  const tgl = document.getElementById('f-tanggal').value;
+  const hari = document.getElementById('f-hari').value;
+
+  document.getElementById('prev-title').textContent = tema + (subtema ? ` — ${subtema}` : '');
+  document.getElementById('prev-sub').textContent = `${kelas} · ${hari}, ${tgl}`;
+
+  const chips = document.getElementById('prev-chips');
+  chips.innerHTML = '';
+  [kelas, hari, `Semester ${document.getElementById('f-semester').value}`, `Minggu ke-${document.getElementById('f-week').value||'?'}`]
+    .forEach(t=>{ chips.innerHTML += `<span class="preview-chip">${t}</span>`; });
+
+  // akhlaq
+  const akhlaqList = document.getElementById('prev-akhlaq-list');
+  const validAkhlaq = akhlaqRows.filter(r=>r.val);
+  if(validAkhlaq.length){
+    akhlaqList.innerHTML = validAkhlaq.map(r=>`<div class="akhlaq-item">${r.val}${r.note?` <span style="color:var(--text3);font-size:11px">— ${r.note}</span>`:''}</div>`).join('');
+    akhlaqList.className='akhlaq-preview';
+  } else {
+    akhlaqList.textContent='Belum ada target akhlaq';
+    akhlaqList.className='';
+    akhlaqList.style.color='var(--text3)';
+    akhlaqList.style.fontStyle='normal';
+    akhlaqList.style.fontSize='13px';
+  }
+  const quranEl = document.getElementById('prev-quran');
+  const quranText = document.getElementById('f-quran').value;
+  if(quranText){
+    quranEl.style.display='';
+    quranEl.textContent = `QS. ${document.getElementById('f-surat').value||'?'}: ${document.getElementById('f-ayat').value||'?'} — "${quranText}"`;
+  } else quranEl.style.display='none';
+
+  // kompetensi
+  const kt = document.getElementById('prev-komp-tags');
+  kt.innerHTML = selectedKomp.length
+    ? selectedKomp.map(s=>`<span class="komp-tag" style="margin:3px">${s.kode} <span style="font-weight:400;opacity:.7">${s.mapel}</span></span>`).join('')
+    : '<span style="font-size:13px;color:var(--text3)">Belum dipilih</span>';
+
+  // aktivitas
+  const pa = document.getElementById('prev-akt');
+  const validAkt = aktRows.filter(r=>r.kegiatan);
+  pa.innerHTML = validAkt.length
+    ? validAkt.map(r=>`<div class="sb-row"><div class="sb-row-key">${r.waktu||'—'}</div><div class="sb-row-val">${r.kegiatan}</div></div>`).join('')
+    : '<span style="font-size:13px;color:var(--text3)">Belum ada aktivitas</span>';
+
+  // budget
+  const pb = document.getElementById('prev-budget');
+  const budget = document.getElementById('f-budget').value;
+  pb.innerHTML = `<div class="sb-row"><div class="sb-row-key">Budget Disetujui</div><div class="sb-row-val" style="color:var(--red);font-size:16px;font-family:'Lora',serif">Rp ${budget?parseInt(budget).toLocaleString('id-ID'):'—'}</div></div>
+  <div class="sb-row"><div class="sb-row-key">Est. Biaya Material</div><div class="sb-row-val">${document.getElementById('total-biaya').textContent}</div></div>`;
+}
+
+// ── SAVE / SUBMIT ──
+function saveDraft(){
+  showToast('Draft disimpan! 💾');
+}
+function submitPlan(){
+  showToast('Daily Plan berhasil disubmit! ✅ Notifikasi dikirim ke pengelola.');
+  setTimeout(()=>{ document.getElementById('btn-next2').textContent='✅ Submitted'; document.getElementById('btn-next2').disabled=true; },200);
+}
+function showToast(msg){
+  const t=document.getElementById('toast');
+  document.getElementById('toast-msg').textContent=msg;
+  t.classList.add('show');
+  setTimeout(()=>t.classList.remove('show'),3000);
+}
+
+// seed akhlaq
+[{val:"Mu'izz (Mulia)"},{val:"Taubah (Bertobat)"},{val:"Istiqomah (Konsisten)"}].forEach(r=>{ akhlaqRows.push(r); });
+renderAkhlaqRows();
+
+// seed kompetensi
+['BI4.C1','MT4.B2','IPA4.A1','SA4.L1','SA4.K2','SA4.H3'].forEach(kode=>{
+  MASTER_MAPEL.forEach(m=>{ m.capaian.forEach(c=>{ if(c.kode===kode) selectedKomp.push({kode,mapel:m.mapel,uraian:c.uraian}); }); });
+});
+renderKompTags();
+</script>
+</body>
+</html>

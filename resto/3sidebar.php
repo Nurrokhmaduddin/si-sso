@@ -99,14 +99,14 @@
             <li class="nav-item"><a href="master-menu.php" class="nav-link <?php echo $page == 'master-menu' ? 'active' : ''; ?>">
               <i class="far fa-circle nav-icon"></i><p>Menu & Kategori</p></a></li>
 
-            <!-- <li class="nav-item"><a href="master-bahan.php" class="nav-link <?php echo $page == 'master-bahan' ? 'active' : ''; ?>">
+            <li class="nav-item"><a href="master-bahan.php" class="nav-link <?php echo $page == 'master-bahan' ? 'active' : ''; ?>">
               <i class="far fa-circle nav-icon"></i><p>Bahan Baku</p></a></li>
 
             <li class="nav-item"><a href="master-resep.php" class="nav-link <?php echo $page == 'master-resep' ? 'active' : ''; ?>">
               <i class="far fa-circle nav-icon"></i><p>Resep (BOM)</p></a></li>
 
             <li class="nav-item"><a href="master-supplier.php" class="nav-link <?php echo $page == 'master-supplier' ? 'active' : ''; ?>">
-              <i class="far fa-circle nav-icon"></i><p>Supplier</p></a></li> -->
+              <i class="far fa-circle nav-icon"></i><p>Supplier</p></a></li>
 
             <li class="nav-item"><a href="master-customer.php" class="nav-link <?php echo $page == 'master-customer' ? 'active' : ''; ?>">
               <i class="far fa-circle nav-icon"></i><p>Customer</p></a></li>
@@ -147,8 +147,8 @@
               <i class="far fa-circle nav-icon"></i><p>Monitor Orders</p></a></li>
 
 
-            <!-- <li class="nav-item"><a href="sales-kasir.php" class="nav-link <?php echo $page == 'sales-kasir' ? 'active' : ''; ?>">  
-              <i class="far fa-circle nav-icon"></i><p>POS / Kasir</p></a></li> -->
+            <li class="nav-item"><a href="sales-kasir.php" class="nav-link <?php echo $page == 'sales-kasir' ? 'active' : ''; ?>">  
+              <i class="far fa-circle nav-icon"></i><p>POS / Kasir</p></a></li>
               <li class="nav-item"><a href="sales-kasir2.php" class="nav-link <?php echo $page == 'sales-kasir' ? 'active' : ''; ?>">  
               <i class="far fa-circle nav-icon"></i><p>POS / Kasir</p></a></li>
 
@@ -175,7 +175,7 @@
                 <i class="far fa-circle nav-icon"></i><p>Riwayat OP Kitchen </p></a>
               </li>
 
-                <!-- <li class="nav-item">
+                <li class="nav-item">
                   <a href="operation-beli-bahan.php" class="nav-link <?php echo $page == 'operation-beli-bahan' ? 'active' : ''; ?>">  <i class="far fa-circle nav-icon"></i><p>Pembelian Bahan</p></a>
                 </li>
 
@@ -183,7 +183,7 @@
                   <i class="far fa-circle nav-icon"></i><p>Stok Bahan</p></a></li>
 
                   <li class="nav-item"><a href="operation-stok-opname.php" class="nav-link <?php echo $page == 'operation-stok-opname' ? 'active' : ''; ?>">
-                    <i class="far fa-circle nav-icon"></i><p>Stok Opname</p></a></li> -->
+                    <i class="far fa-circle nav-icon"></i><p>Stok Opname</p></a></li>
 
           </ul>
         </li>
@@ -196,9 +196,9 @@
           </a>
           <ul class="nav nav-treeview">
 
-            <!-- <li class="nav-item"><a href="#" class="nav-link <?php echo $page == 'operation-stok-opname' ? 'active' : ''; ?>"><i class="far fa-circle nav-icon"></i><p>Kas & Bank</p></a></li>
+            <li class="nav-item"><a href="#" class="nav-link <?php echo $page == 'operation-stok-opname' ? 'active' : ''; ?>"><i class="far fa-circle nav-icon"></i><p>Kas & Bank</p></a></li>
             <li class="nav-item"><a href="#" class="nav-link"><i class="far fa-circle nav-icon"></i><p>Pengeluaran</p></a></li>
-            <li class="nav-item"><a href="#" class="nav-link"><i class="far fa-circle nav-icon"></i><p>Pendapatan</p></a></li> -->
+            <li class="nav-item"><a href="#" class="nav-link"><i class="far fa-circle nav-icon"></i><p>Pendapatan</p></a></li>
             <li class="nav-item"><a href="finance-akun.php" class="nav-link <?php echo $page == 'finance-akun' ? 'active' : ''; ?>"><i class="far fa-circle nav-icon"></i><p>CoA</p></a></li>
             <li class="nav-item"><a href="finance-jurnal.php" class="nav-link <?php echo $page == 'finance-jurnal' ? 'active' : ''; ?>"><i class="far fa-circle nav-icon"></i><p>Jurnal</p></a></li>
 

@@ -130,106 +130,120 @@ include "3sidebar.php";
   </div>
 
 
-  <!-- Card Metric Laporan -->
-  <div class="card">
-    <div class="card-header">
-      <h3 class="card-title">
-        <i class="fas fa-clipboard-list mr-2"></i>
-        Peran – Nama Sistem
-      </h3>
-    </div>
 
-    <div class="card-body p-0">
-      <table class="table table-bordered table-striped table-sm mb-0">
-        <thead class="table-dark">
-          <tr class="text-uppercase text-center">
-            <th>No</th>
-            <th style="width:25%;">Business Goal</th>
-            <th style="width:25%;">Metric</th>
-            <th style="width:20%;">Level of Detail</th>
-            <th style="width:30%;">Visual Type</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td></td>
-            <td>Mengetahui Persentasi Plan dalam satu semester</td>
-            <td></td>
-            <td></td>
-            <td>Tabel</td>
-          </tr>
-          <tr>
-            <td></td>
-            <td>Mengetahui Perkembangan Pembelajaran Murid di kelasnya</td>
-            <td></td>
-            <td></td>
-            <td>KPI Card</td>
-          </tr>
-          <tr>
-            <td></td>
-            <td>Upload Plan Daily</td>
-            <td></td>
-            <td>Ringkasan harian</td>
-            <td>KPI Card</td>
-          </tr>                
-          <tr>
-            <td></td>
-            <td>Upload Report Daily</td>
-            <td></td>
-            <td>Per shift</td>
-            <td>Status Label</td>
-          </tr>
-          <tr>
-            <td class="text-center">1</td>
-            <td>Memantau kehadiran siswa</td>
-            <td>Persentase kehadiran harian per kelas</td>
-            <td>Harian</td>
-            <td>KPI Card / Donut Chart</td>
-          </tr>
-          <tr>
-            <td class="text-center">2</td>
-            <td>Membuat rencana pembelajaran harian</td>
-            <td>Jumlah rencana pembelajaran yang sudah dibuat</td>
-            <td>Harian</td>
-            <td>KPI Card / Badge</td>
-          </tr>
-          <tr>
-            <td class="text-center">3</td>
-            <td>Memastikan eviden kegiatan lengkap</td>
-            <td>Jumlah kegiatan yang sudah tercatat vs total kegiatan</td>
-            <td>Harian</td>
-            <td>Small Bar Chart / Table</td>
-          </tr>
-          <tr>
-            <td class="text-center">4</td>
-            <td>Memantau perilaku siswa</td>
-            <td>Jumlah catatan disiplin dan prestasi siswa</td>
-            <td>Harian / Mingguan</td>
-            <td>Badge / KPI Card</td>
-          </tr>
-          <tr>
-            <td class="text-center">5</td>
-            <td>Memastikan komunikasi dengan orang tua</td>
-            <td>Persentase pesan / notifikasi yang terkirim dan dibaca orang tua</td>
-            <td>Harian</td>
-            <td>Table / KPI Card</td>
-          </tr>
-          <tr>
-            <td class="text-center">6</td>
-            <td>Memantau partisipasi siswa di kegiatan kelas</td>
-            <td>Jumlah siswa aktif dalam kegiatan</td>
-            <td>Harian</td>
-            <td>Horizontal Bar Chart / Progress Bar</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
 
-    <div class="card-footer small text-muted">
-      <strong>Notes:</strong>
-      Tabel ini menyajikan gambaran mengenai laporan-laporan yang diperlukan oleh pengelola sekolah dari sistem.
-    </div>
+<!-- Card Metric Laporan -->
+<div class="card">
+  <div class="card-header">
+    <h3 class="card-title">
+      <i class="fas fa-clipboard-list mr-2"></i>
+      Wali Kelas – Dashboard Wali Kelas (Sistem Monitoring)
+    </h3>
   </div>
+
+  <div class="card-body p-0">
+    <table class="table table-bordered table-striped table-sm mb-0">
+      <thead class="table-dark">
+        <tr class="text-uppercase text-center">
+          <th>No</th>
+          <th style="width:25%;">Business Goal</th>
+          <th style="width:25%;">Metric</th>
+          <th style="width:20%;">Level of Detail</th>
+          <th style="width:30%;">Visual Type</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td></td>
+          <td>Mengetahui persentase plan dalam satu semester</td>
+          <td>Persentase keterlaksanaan rencana pembelajaran</td>
+          <td>Semester</td>
+          <td>Tabel / Progress Chart</td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td>Mengetahui perkembangan pembelajaran murid di kelasnya</td>
+          <td>Rata-rata capaian kompetensi dan nilai siswa</td>
+          <td>Mingguan / Bulanan</td>
+          <td>KPI Card</td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td>Upload Plan Daily</td>
+          <td>Jumlah daily plan yang dibuat per hari</td>
+          <td>Ringkasan harian</td>
+          <td>KPI Card</td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td>Upload Report Daily</td>
+          <td>Status laporan harian (terkirim / pending / revisi)</td>
+          <td>Per sesi / harian</td>
+          <td>Status Label</td>
+        </tr>
+
+        <tr>
+          <td class="text-center">1</td>
+          <td>Memantau kehadiran siswa</td>
+          <td>Persentase kehadiran harian per kelas</td>
+          <td>Harian</td>
+          <td>KPI Card / Donut Chart</td>
+        </tr>
+
+        <tr>
+          <td class="text-center">2</td>
+          <td>Membuat rencana pembelajaran harian</td>
+          <td>Jumlah rencana pembelajaran yang dibuat</td>
+          <td>Harian</td>
+          <td>KPI Card / Badge</td>
+        </tr>
+
+        <tr>
+          <td class="text-center">3</td>
+          <td>Memastikan eviden kegiatan lengkap</td>
+          <td>Jumlah kegiatan terdokumentasi vs total kegiatan</td>
+          <td>Harian</td>
+          <td>Progress Bar / Tabel</td>
+        </tr>
+
+        <tr>
+          <td class="text-center">4</td>
+          <td>Memantau perilaku siswa</td>
+          <td>Jumlah catatan disiplin dan prestasi siswa</td>
+          <td>Harian / Mingguan</td>
+          <td>Badge / KPI Card</td>
+        </tr>
+
+        <tr>
+          <td class="text-center">5</td>
+          <td>Memastikan komunikasi dengan orang tua</td>
+          <td>Persentase pesan/notifikasi yang terkirim dan terbaca</td>
+          <td>Harian</td>
+          <td>Tabel / KPI Card</td>
+        </tr>
+
+        <tr>
+          <td class="text-center">6</td>
+          <td>Memantau partisipasi siswa di kegiatan kelas</td>
+          <td>Jumlah siswa aktif dalam kegiatan pembelajaran</td>
+          <td>Harian</td>
+          <td>Horizontal Bar Chart / Progress Bar</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="card-footer small text-muted">
+    <strong>Notes:</strong>
+    Tabel ini menyajikan kebutuhan monitoring dan dashboard Wali Kelas dalam Sistem Informasi Sekolah,
+    sebagai dasar visualisasi KPI, laporan harian, serta evaluasi pembelajaran.
+  </div>
+</div>
+
 
 </div>
 </section>

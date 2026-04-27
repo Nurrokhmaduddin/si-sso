@@ -88,7 +88,7 @@ $q = $q ? "?$q" : "";
   <div id="cartList"></div>
   <div>Total: <strong id="total">Rp 0</strong></div>
   <button class="btn btn-success w-100 mt-2" onclick="submitOrder()">Pesan Sekarang</button>
-  <button class="btn btn-warning w-100 mt-2" onclick="payQRIS()">Bayar QRIS</button>
+  <button class="btn btn-warning w-100 mt-2" onclick="payQRIS()">Panggil Waiter</button>
 </div>
 
 </div>
