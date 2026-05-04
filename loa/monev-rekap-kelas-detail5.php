@@ -114,6 +114,10 @@
                 onclick="window.location.href='perkuliahan-portofolio-kelas-detail5.php'">
                 <span class="fas fa-edit me-1"></span> Pengisian Refleksi
               </button>
+              <a href="data-refleksi-dosen-kelasIII.xlsx" 
+              class="btn btn-outline-success btn-sm" download>
+              <i class="fas fa-file-download me-1"></i> Export Rekap Refleksi
+            </a>
                 <!-- <button type="button" class="btn btn-outline-danger btn-sm">
                   <i class="fas fa-ban me-1"></i> Reset
                 </button> -->    
@@ -128,92 +132,195 @@
             <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail4.php'"><a class="nav-link ">Remedial</a></li>
             <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail3.php'"><a class="nav-link ">Portofolio</a></li>
             <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail2.php'"><a class="nav-link ">Penilaian Mahasiswa</a></li>
-            <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail5.php'"><a class="nav-link active">Refleksi Kelas</a></li>
+            <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail5.php'"><a class="nav-link active">Refleksi Dosen</a></li>
             <!-- <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail6.php'"><a class="nav-link ">OBE</a></li> -->
           </ul>
-     
+     <!-- ========== CARD : Progres Penilaian CPMK ========== -->
+     <?php 
+$total_dosen = 5;
+$sudah_isi = 2;
 
+$persen = ($total_dosen > 0) ? round(($sudah_isi / $total_dosen) * 100) : 0;
+
+if ($persen == 100) {
+  $warna = "#198754"; // hijau
+} else {
+  $warna = "#212529"; // gelap
+}
+?>
+
+<div class="card border-0 shadow-sm mb-3">
+  <div class="card-body">
+
+    <!-- Header -->
+    <div class="d-flex justify-content-between align-items-center mb-2">
+      <small class="text-muted text-uppercase">
+        Progres Pengisian Refleksi
+      </small>
+      <small class="text-muted">
+        <?php echo $sudah_isi . " / " . $total_dosen; ?> Dosen
+      </small>
+    </div>
+
+    <!-- Progress Bar -->
+    <div class="position-relative" style="height: 8px; background:#e9ecef; border-radius:4px;">
+
+      <div style="
+      width: <?php echo $persen; ?>%;
+      height: 100%;
+      background: <?php echo $warna; ?>;
+      border-radius: 4px;
+      position: relative;">
+
+      <!-- Text Persen -->
+      <span style="
+      position: absolute;
+      right: 6px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 0.65rem;
+      color: #fff;
+      font-weight: 600;">
+      <?php echo $persen; ?>%
+    </span>
+
+  </div>
+</div>
+
+<!-- Info bawah -->
+<div class="mt-2 d-flex justify-content-between">
+  <small class="text-muted">
+    <?php echo ($total_dosen - $sudah_isi); ?> dosen belum mengisi
+  </small>
+  <small class="text-muted">
+    Update terakhir: 12 Jan 2024
+  </small>
+</div>
+
+</div>
+</div>
 
 
 
 <!-- CARD REKAP CATATAN & EVALUASI KELAS SESUAI PERTANYAAN -->
-<div class="col-md-12">
-  <div class="card card-primary">
-
-    <!-- HEADER -->
+  <div class="card card-primary ">
     <div class="card-header bg-primary text-white">
-      <h5 class="card-title mb-0">Rekapan Catatan & Evaluasi Kelas</h5>
+      <h5 class="card-title mb-0">Rekapan Catatan & Evaluasi Kelas ini</h5>
       <small>Kolaboratif • Berdasarkan isian seluruh dosen</small>
     </div>
-
-    <!-- BODY -->
     <div class="card-body">
-
-      <!-- 1️⃣ Ringkasan Select: CPMK -->
-      <!-- 1️⃣ Capaian CPMK (Top Choice) -->
       <h6><strong>1. Capaian CPMK</strong></h6>
       <p>🏆 Tercapai Kuat (2 dosen)</p>
-
-      <!-- 2️⃣ Tingkat Partisipasi Mahasiswa (Top Choice) -->
       <h6><strong>2. Tingkat Partisipasi Mahasiswa</strong></h6>
       <p>🏆 Sangat Aktif (1 dosen)</p>
-
       <hr>
-
-      <!-- 3️⃣ Ringkasan Scale: Efektivitas Metode -->
       <h6><strong>3. Efektivitas Metode Pengajaran (skala 1–5)</strong></h6>
       <ul>
         <li>Rata-rata skor: 4.0</li>
         <li>Skor terbanyak: 4 (2 dosen)</li>
       </ul>
-
-      <!-- 4️⃣ Ringkasan Scale: Kesesuaian Penilaian -->
       <h6><strong>4. Kesesuaian Penilaian dengan Kemampuan Mahasiswa (skala 1–5)</strong></h6>
       <ul>
         <li>Rata-rata skor: 3.7</li>
         <li>Skor terbanyak: 4 (2 dosen)</li>
       </ul>
-
       <hr>
-
-      <!-- 5️⃣ Ringkasan Tagging: Kendala -->
       <h6><strong>5. Kendala Utama</strong></h6>
       <span class="badge badge-secondary">Koneksi Internet (1)</span>
       <span class="badge badge-info">Partisipasi Rendah (2)</span>
       <span class="badge badge-info">Materi Kompleks (2)</span>
       <span class="badge badge-danger">Waktu Terbatas (3)</span>
       <hr>
-      <!-- 6️⃣ Ringkasan Tagging: Metode Efektif -->
       <h6><strong>6. Metode Pengajaran Paling Efektif</strong></h6>
       <span class="badge badge-info">Diskusi (2)</span>
       <span class="badge badge-danger">Praktikum (3)</span>
       <span class="badge badge-info">Studi Kasus (2)</span>
       <span class="badge badge-secondary">Project Based Learning (1)</span>
-
       <hr>
-
-      <!-- 7️⃣ & 8️⃣ Ringkasan Open Text -->
       <h6><strong>7. Catatan Dinamika Kelas</strong></h6>
       <ul>
         <li>Dosen 1: Partisipasi sedang, mahasiswa awal pasif tapi akhir aktif.</li>
         <li>Dosen 2: Variatif, beberapa mahasiswa tertinggal materi awal.</li>
         <li>Dosen 3: Interaksi meningkat saat praktikum, beberapa mahasiswa fokus terbatas.</li>
       </ul>
-
       <h6><strong>8. Rekomendasi Perbaikan</strong></h6>
       <ul>
         <li>Dosen 1: Tambah pre-test awal, diferensiasi tugas.</li>
         <li>Dosen 2: Rubrik penilaian jelas, latihan praktikum tambahan.</li>
         <li>Dosen 3: Lebih banyak diskusi interaktif, sediakan modul latihan mandiri.</li>
       </ul>
-
     </div>
-
     <!-- FOOTER -->
     <!-- <div class="card-footer d-flex justify-content-between">
       <button class="btn btn-outline-secondary">Export Rekap</button>
     </div> -->
+  </div>
 
+
+<!-- ========== CARD MODERN: Refleksi Personal Dosen ========== -->
+<div class="card shadow-sm mb-3 collapse" >
+  <div class="card-header bg-secondary">
+    <h5 class="mb-0">
+      Jurnal CQI Pengajaran Mata Kuliah ini (Refleksi Personal Dosen A) 
+    </h5>
+  </div>
+  <div class="card-body" style="padding: 1rem 1.25rem;">
+    <div class="d-flex flex-column flex-md-row gap-3">
+      <!-- Refleksi Dosen -->
+      <div class="flex-fill p-3" style="background-color: #f8f9fc; border-radius: 0.5rem;">
+        <h6 class="text-muted" style="font-weight: 500; font-size: 0.875rem;">Refleksi Dosen</h6>
+        <p style="margin: 0.5rem 0 0; font-size: 0.9rem; color: #3a3b45;">
+          Praktikum berjalan lancar dan metode diskusi kelompok efektif untuk meningkatkan partisipasi mahasiswa.
+        </p>
+      </div>
+      <!-- Analisis Kendala -->
+      <div class="flex-fill p-3" style="background-color: #f8f9fc; border-radius: 0.5rem;">
+        <h6 class="text-muted" style="font-weight: 500; font-size: 0.875rem;">Analisis Kendala</h6>
+        <p style="margin: 0.5rem 0 0; font-size: 0.9rem; color: #3a3b45;">
+          Beberapa mahasiswa kesulitan memahami teori yang dijelaskan terlalu cepat. Waktu diskusi terbatas sehingga beberapa topik kurang mendalam.
+        </p>
+      </div>
+      <!-- Rencana Perbaikan -->
+      <div class="flex-fill p-3" style="background-color: #f8f9fc; border-radius: 0.5rem;">
+        <h6 class="text-muted" style="font-weight: 500; font-size: 0.875rem;">Rencana Perbaikan</h6>
+        <p style="margin: 0.5rem 0 0; font-size: 0.9rem; color: #3a3b45;">
+          Mengurangi penjelasan teori panjang, menambah sesi praktik awal, serta memperpanjang waktu diskusi kelompok.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ========== CARD MODERN: Refleksi Personal Dosen ========== -->
+<div class="card shadow-sm mb-3 collapse" >
+  <div class="card-header bg-secondary">
+    <h5 class="mb-0">
+      Jurnal CQI Pengajaran Mata Kuliah ini (Refleksi Personal Dosen B) 
+    </h5>
+  </div>
+  <div class="card-body" style="padding: 1rem 1.25rem;">
+    <div class="d-flex flex-column flex-md-row gap-3">
+      <!-- Refleksi Dosen -->
+      <div class="flex-fill p-3" style="background-color: #f8f9fc; border-radius: 0.5rem;">
+        <h6 class="text-muted" style="font-weight: 500; font-size: 0.875rem;">Refleksi Dosen</h6>
+        <p style="margin: 0.5rem 0 0; font-size: 0.9rem; color: #3a3b45;">
+          Praktikum berjalan lancar dan metode diskusi kelompok efektif untuk meningkatkan partisipasi mahasiswa.
+        </p>
+      </div>
+      <!-- Analisis Kendala -->
+      <div class="flex-fill p-3" style="background-color: #f8f9fc; border-radius: 0.5rem;">
+        <h6 class="text-muted" style="font-weight: 500; font-size: 0.875rem;">Analisis Kendala</h6>
+        <p style="margin: 0.5rem 0 0; font-size: 0.9rem; color: #3a3b45;">
+          Beberapa mahasiswa kesulitan memahami teori yang dijelaskan terlalu cepat. Waktu diskusi terbatas sehingga beberapa topik kurang mendalam.
+        </p>
+      </div>
+      <!-- Rencana Perbaikan -->
+      <div class="flex-fill p-3" style="background-color: #f8f9fc; border-radius: 0.5rem;">
+        <h6 class="text-muted" style="font-weight: 500; font-size: 0.875rem;">Rencana Perbaikan</h6>
+        <p style="margin: 0.5rem 0 0; font-size: 0.9rem; color: #3a3b45;">
+          Mengurangi penjelasan teori panjang, menambah sesi praktik awal, serta memperpanjang waktu diskusi kelompok.
+        </p>
+      </div>
+    </div>
   </div>
 </div>
 

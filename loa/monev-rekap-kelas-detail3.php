@@ -124,7 +124,7 @@
             <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail4.php'"><a class="nav-link ">Remedial</a></li>
             <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail3.php'"><a class="nav-link active">Portofolio</a></li>
             <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail2.php'"><a class="nav-link ">Penilaian Mahasiswa</a></li>
-            <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail5.php'"><a class="nav-link ">Refleksi Kelas</a></li>
+            <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail5.php'"><a class="nav-link ">Refleksi Dosen</a></li>
             <!-- <li class="nav-item" onclick="window.location='monev-rekap-kelas-detail6.php'"><a class="nav-link ">OBE</a></li> -->
           </ul>
 
@@ -418,117 +418,11 @@
 </div>
 
    
-
-
-<!-- ========== CARD : Refleksi Personal Dosen (1 baris) ========== --> 
-<!-- <div class="card mb-3">
-  <div class="card-header">
-    <h5 class="mb-0">
-      Refleksi Personal Dosen • 2024/2025 - Gasal
-    </h5>
-  </div>
-  <div class="card-body">
-    <div class="mb-3">
-      <h6 class="card-subtitle text-muted">Refleksi Dosen</h6>
-      <p>Praktikum berjalan lancar dan metode diskusi kelompok efektif untuk meningkatkan partisipasi mahasiswa.</p>
-    </div>
-    <div class="mb-3">
-      <h6 class="card-subtitle text-muted">Analisis Kendala</h6>
-      <p>Beberapa mahasiswa kesulitan memahami teori yang dijelaskan terlalu cepat. Waktu diskusi terbatas sehingga beberapa topik kurang mendalam.</p>
-    </div>
-    <div class="mb-3">
-      <h6 class="card-subtitle text-muted">Rencana Perbaikan</h6>
-      <p>Mengurangi penjelasan teori panjang, menambah sesi praktik awal, serta memperpanjang waktu diskusi kelompok.</p>
-    </div>
-  </div>
-</div> -->
-
-<!-- CARD REKAP CATATAN & EVALUASI KELAS SESUAI PERTANYAAN -->
-<!-- <div class="col-md-12"> -->
-  <div class="card card-primary">
-
-    <!-- HEADER -->
-    <div class="card-header bg-primary text-white">
-      <h5 class="card-title mb-0">Rekapan Catatan & Evaluasi MataKuliah</h5>
-      <small> Kolaboratif • Berdasarkan isian seluruh dosen unutk mata kliah ini</small>
-    </div>
-
-    <!-- BODY -->
-    <div class="card-body">
-
-      <!-- 1️⃣ Ringkasan Select: CPMK -->
-      <!-- 1️⃣ Capaian CPMK (Top Choice) -->
-      <h6><strong>1. Capaian CPMK</strong></h6>
-      <p>🏆 Tercapai Kuat (2 dosen)</p>
-
-      <!-- 2️⃣ Tingkat Partisipasi Mahasiswa (Top Choice) -->
-      <h6><strong>2. Tingkat Partisipasi Mahasiswa</strong></h6>
-      <p>🏆 Sangat Aktif (1 dosen)</p>
-
-      <hr>
-
-      <!-- 3️⃣ Ringkasan Scale: Efektivitas Metode -->
-      <h6><strong>3. Efektivitas Metode Pengajaran (skala 1–5)</strong></h6>
-      <ul>
-        <li>Rata-rata skor: 4.0</li>
-        <li>Skor terbanyak: 4 (2 dosen)</li>
-      </ul>
-
-      <!-- 4️⃣ Ringkasan Scale: Kesesuaian Penilaian -->
-      <h6><strong>4. Kesesuaian Penilaian dengan Kemampuan Mahasiswa (skala 1–5)</strong></h6>
-      <ul>
-        <li>Rata-rata skor: 3.7</li>
-        <li>Skor terbanyak: 4 (2 dosen)</li>
-      </ul>
-
-      <hr>
-
-      <!-- 5️⃣ Ringkasan Tagging: Kendala -->
-      <h6><strong>5. Kendala Utama</strong></h6>
-      <span class="badge badge-secondary">Koneksi Internet (1)</span>
-      <span class="badge badge-info">Partisipasi Rendah (2)</span>
-      <span class="badge badge-info">Materi Kompleks (2)</span>
-      <span class="badge badge-danger">Waktu Terbatas (3)</span>
-      <hr>
-      <!-- 6️⃣ Ringkasan Tagging: Metode Efektif -->
-      <h6><strong>6. Metode Pengajaran Paling Efektif</strong></h6>
-      <span class="badge badge-info">Diskusi (2)</span>
-      <span class="badge badge-danger">Praktikum (3)</span>
-      <span class="badge badge-info">Studi Kasus (2)</span>
-      <span class="badge badge-secondary">Project Based Learning (1)</span>
-
-      <hr>
-
-      <!-- 7️⃣ & 8️⃣ Ringkasan Open Text -->
-      <h6><strong>7. Catatan Dinamika Kelas</strong></h6>
-      <ul>
-        <li>Dosen 1: Partisipasi sedang, mahasiswa awal pasif tapi akhir aktif.</li>
-        <li>Dosen 2: Variatif, beberapa mahasiswa tertinggal materi awal.</li>
-        <li>Dosen 3: Interaksi meningkat saat praktikum, beberapa mahasiswa fokus terbatas.</li>
-      </ul>
-
-      <h6><strong>8. Rekomendasi Perbaikan</strong></h6>
-      <ul>
-        <li>Dosen 1: Tambah pre-test awal, diferensiasi tugas.</li>
-        <li>Dosen 2: Rubrik penilaian jelas, latihan praktikum tambahan.</li>
-        <li>Dosen 3: Lebih banyak diskusi interaktif, sediakan modul latihan mandiri.</li>
-      </ul>
-
-    </div>
-
-    <!-- FOOTER -->
-    <!-- <div class="card-footer d-flex justify-content-between">
-      <button class="btn btn-outline-secondary">Export Rekap</button>
-    </div> -->
-
-  </div>
-<!-- </div> -->
-
 <!-- ========== CARD MODERN: Refleksi Personal Dosen ========== -->
-<div class="card shadow-sm mb-3" >
+<div class="card shadow-sm mb-3 " >
   <div class="card-header bg-secondary">
     <h5 class="mb-0">
-      Jurnal CQI Pengajaran Mata Kuliah (Refleksi Personal Dosen) 
+      Jurnal CQI Pengajaran Mata Kuliah ini (Refleksi Personal Saya) 
     </h5>
   </div>
   <div class="card-body" style="padding: 1rem 1.25rem;">
@@ -557,6 +451,86 @@
     </div>
   </div>
 </div>
+
+<!-- ========== CARD : Refleksi Personal Dosen (1 baris) ========== --> 
+<!-- <div class="card mb-3">
+  <div class="card-header">
+    <h5 class="mb-0">
+      Refleksi Personal Dosen • 2024/2025 - Gasal
+    </h5>
+  </div>
+  <div class="card-body">
+    <div class="mb-3">
+      <h6 class="card-subtitle text-muted">Refleksi Dosen</h6>
+      <p>Praktikum berjalan lancar dan metode diskusi kelompok efektif untuk meningkatkan partisipasi mahasiswa.</p>
+    </div>
+    <div class="mb-3">
+      <h6 class="card-subtitle text-muted">Analisis Kendala</h6>
+      <p>Beberapa mahasiswa kesulitan memahami teori yang dijelaskan terlalu cepat. Waktu diskusi terbatas sehingga beberapa topik kurang mendalam.</p>
+    </div>
+    <div class="mb-3">
+      <h6 class="card-subtitle text-muted">Rencana Perbaikan</h6>
+      <p>Mengurangi penjelasan teori panjang, menambah sesi praktik awal, serta memperpanjang waktu diskusi kelompok.</p>
+    </div>
+  </div>
+</div> -->
+
+<!-- CARD REKAP CATATAN & EVALUASI KELAS SESUAI PERTANYAAN -->
+<!-- <div class="col-md-12"> -->
+  <!-- <div class="card card-primary">
+
+     <div class="card-header bg-primary text-white">
+      <h5 class="card-title mb-0">Rekapan Catatan & Evaluasi MataKuliah</h5>
+      <small> Kolaboratif • Berdasarkan isian seluruh dosen untuk mata kuliah ini</small>
+    </div>
+
+    <div class="card-body">
+      <h6><strong>1. Capaian CPMK</strong></h6>
+      <p>🏆 Tercapai Kuat (2 dosen)</p>
+      <h6><strong>2. Tingkat Partisipasi Mahasiswa</strong></h6>
+      <p>🏆 Sangat Aktif (1 dosen)</p>
+      <hr>
+
+      <h6><strong>3. Efektivitas Metode Pengajaran (skala 1–5)</strong></h6>
+      <ul>
+        <li>Rata-rata skor: 4.0</li>
+        <li>Skor terbanyak: 4 (2 dosen)</li>
+      </ul>
+      <h6><strong>4. Kesesuaian Penilaian dengan Kemampuan Mahasiswa (skala 1–5)</strong></h6>
+      <ul>
+        <li>Rata-rata skor: 3.7</li>
+        <li>Skor terbanyak: 4 (2 dosen)</li>
+      </ul>
+      <hr>
+      <h6><strong>5. Kendala Utama</strong></h6>
+      <span class="badge badge-secondary">Koneksi Internet (1)</span>
+      <span class="badge badge-info">Partisipasi Rendah (2)</span>
+      <span class="badge badge-info">Materi Kompleks (2)</span>
+      <span class="badge badge-danger">Waktu Terbatas (3)</span>
+      <hr>
+      <h6><strong>6. Metode Pengajaran Paling Efektif</strong></h6>
+      <span class="badge badge-info">Diskusi (2)</span>
+      <span class="badge badge-danger">Praktikum (3)</span>
+      <span class="badge badge-info">Studi Kasus (2)</span>
+      <span class="badge badge-secondary">Project Based Learning (1)</span>
+      <hr>
+      <h6><strong>7. Catatan Dinamika Kelas</strong></h6>
+      <ul>
+        <li>Dosen 1: Partisipasi sedang, mahasiswa awal pasif tapi akhir aktif.</li>
+        <li>Dosen 2: Variatif, beberapa mahasiswa tertinggal materi awal.</li>
+        <li>Dosen 3: Interaksi meningkat saat praktikum, beberapa mahasiswa fokus terbatas.</li>
+      </ul>
+      <h6><strong>8. Rekomendasi Perbaikan</strong></h6>
+      <ul>
+        <li>Dosen 1: Tambah pre-test awal, diferensiasi tugas.</li>
+        <li>Dosen 2: Rubrik penilaian jelas, latihan praktikum tambahan.</li>
+        <li>Dosen 3: Lebih banyak diskusi interaktif, sediakan modul latihan mandiri.</li>
+      </ul>
+    </div>
+  </div> -->
+<!-- </div> -->
+
+
 <!-- ================= Card  : Catatan evaluasi dan pengembangan ================= -->
 <!-- 
 <div class="row">

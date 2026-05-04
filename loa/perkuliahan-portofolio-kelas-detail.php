@@ -125,7 +125,7 @@
             <!-- <li class="nav-item" onclick="window.location='perkuliahan-portofolio-kelas-detail4.php'"><a class="nav-link ">Soal Ujian</a></li> -->
             <li class="nav-item" onclick="window.location='perkuliahan-portofolio-kelas-detail2.php'"><a class="nav-link ">Penilaian Mahasiswa</a></li>
             <!-- <li class="nav-item" onclick="window.location='perkuliahan-portofolio-kelas-detail3.php'"><a class="nav-link ">Laporan(Grafik/Tabel)</a></li> -->
-            <li class="nav-item" onclick="window.location='perkuliahan-portofolio-kelas-detail5.php'"><a class="nav-link ">Refleksi Kelas</a></li>
+            <li class="nav-item" onclick="window.location='perkuliahan-portofolio-kelas-detail5.php'"><a class="nav-link ">Refleksi Dosen</a></li>
           </ul>
 
 
@@ -444,7 +444,7 @@
       <!-- <button class="btn btn-sm btn-outline-info" data-bs-toggle="collapse" data-bs-target="#daftarIKCPL2">
         <i class="fas fa-expand"></i>
       </button> -->
-      Jurnal CQI Pengajaran Mata Kuliah (Refleksi Personal Dosen)
+      Jurnal CQI Pengajaran Mata Kuliah ini (Refleksi Personal Saya)
     </h5>
   </div>
   <div class="card-body collapse show" id="daftarIKCPL2" >
