@@ -136,25 +136,54 @@
         <li class="nav-item <?php echo in_array($page, ['sales-kasir','sales-order','sales-qr']) ? 'menu-open' : ''; ?>">
           <a href="#" class="nav-link <?php echo in_array($page, ['sales-kasir','sales-order','sales-qr']) ? 'active' : ''; ?>">
             <i class="nav-icon fas fa-cash-register"></i>
-            <p>Sales <i class="right fas fa-angle-left"></i></p>
+            <p>Sales Orders<i class="right fas fa-angle-left"></i></p>
           </a>
           <ul class="nav nav-treeview">
-
-<li class="nav-item"><a href="sales-qr.php" class="nav-link <?php echo $page == 'sales-qr' ? 'active' : ''; ?>">  
-              <i class="far fa-circle nav-icon"></i><p>Self Order (QR Table)</p></a></li>
-
-<li class="nav-item"><a href="sales-order.php" class="nav-link <?php echo $page == 'sales-order' ? 'active' : ''; ?>">  
-              <i class="far fa-circle nav-icon"></i><p>Monitor Orders</p></a></li>
-
-
-            <li class="nav-item"><a href="sales-kasir.php" class="nav-link <?php echo $page == 'sales-kasir' ? 'active' : ''; ?>">  
-              <i class="far fa-circle nav-icon"></i><p>POS / Kasir</p></a></li>
-              <li class="nav-item"><a href="sales-kasir2.php" class="nav-link <?php echo $page == 'sales-kasir' ? 'active' : ''; ?>">  
-              <i class="far fa-circle nav-icon"></i><p>POS / Kasir</p></a></li>
+            <li class="nav-item">
+              <a href="sales-qr.php" class="nav-link <?php echo $page == 'sales-qr' ? 'active' : ''; ?>">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Self Order (QR Table)</p>
+              </a>
+            </li>
 
             
-            <li class="nav-item"><a href="#" class="nav-link <?php echo $page == 'sales-ooo' ? 'active' : ''; ?>">  
-              <i class="far fa-circle nav-icon"></i><p>Riwayat Penjualan</p></a></li>
+
+            <li class="nav-item">
+              <a href="sales-kasir.php" class="nav-link <?php echo $page == 'sales-kasir' ? 'active' : ''; ?>">
+                <i class="far fa-circle nav-icon"></i>
+                <p>POS / Kasir</p>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a href="sales-kasir2.php" class="nav-link <?php echo $page == 'sales-kasir2' ? 'active' : ''; ?>">
+                <i class="far fa-circle nav-icon"></i>
+                <p>POS / Kasir (Alternative)</p>
+              </a>
+            </li>
+
+
+            <li class="nav-item">
+              <a href="sales-order.php" class="nav-link <?php echo $page == 'sales-order' ? 'active' : ''; ?>">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Lap.Monitor Orders</p>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a href="#" class="nav-link <?php echo $page == 'sales-report' ? 'active' : ''; ?>">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Lap.Rekapitulasi Orders</p>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a href="#" class="nav-link <?php echo $page == 'sales-history' ? 'active' : ''; ?>">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Lap.Riwayat Orders</p>
+              </a>
+            </li>
+            <li class="nav-item"><a href="#" class="nav-link <?php echo $page == 'sales-ooo' ? 'active' : ''; ?>"> <i class="far fa-circle nav-icon"></i><p>Riwayat Penjualan</p></a></li>
 
           </ul>
         </li>
@@ -178,12 +207,38 @@
                 <li class="nav-item">
                   <a href="operation-beli-bahan.php" class="nav-link <?php echo $page == 'operation-beli-bahan' ? 'active' : ''; ?>">  <i class="far fa-circle nav-icon"></i><p>Pembelian Bahan</p></a>
                 </li>
+                <li class="nav-item">
+                  <a href="operation-beli-bahan2.php" class="nav-link <?php echo $page == 'operation-beli-bahan' ? 'active' : ''; ?>">  <i class="far fa-circle nav-icon"></i><p>Pembelian Bahan 2</p></a>
+                </li>
 
                 <li class="nav-item"><a href="operation-stok-bahan.php" class="nav-link <?php echo $page == 'operation-stok-bahan' ? 'active' : ''; ?>">
                   <i class="far fa-circle nav-icon"></i><p>Stok Bahan</p></a></li>
 
                   <li class="nav-item"><a href="operation-stok-opname.php" class="nav-link <?php echo $page == 'operation-stok-opname' ? 'active' : ''; ?>">
                     <i class="far fa-circle nav-icon"></i><p>Stok Opname</p></a></li>
+
+
+                    <li class="nav-item">
+                      <a href="sales-order.php" class="nav-link <?php echo $page == 'sales-order' ? 'active' : ''; ?>">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>Lap.Monitor </p>
+                      </a>
+                    </li>
+
+                    <li class="nav-item">
+                      <a href="#" class="nav-link <?php echo $page == 'sales-report' ? 'active' : ''; ?>">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>Lap.Rekapitulasi </p>
+                      </a>
+                    </li>
+
+                    <li class="nav-item">
+                      <a href="#" class="nav-link <?php echo $page == 'sales-history' ? 'active' : ''; ?>">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>Lap.Riwayat </p>
+                      </a>
+                    </li>
+                    <li class="nav-item"><a href="#" class="nav-link <?php echo $page == 'sales-ooo' ? 'active' : ''; ?>"> <i class="far fa-circle nav-icon"></i><p>Riwayat Penjualan</p></a></li>
 
           </ul>
         </li>
@@ -213,6 +268,7 @@
           </a>
           <ul class="nav nav-treeview">
 
+
             <li class="nav-item"><a href="#" class="nav-link"><i class="far fa-circle nav-icon"></i><p>Penjualan</p></a></li>
             <li class="nav-item"><a href="#" class="nav-link"><i class="far fa-circle nav-icon"></i><p>Omset</p></a></li>
             <li class="nav-item"><a href="#" class="nav-link"><i class="far fa-circle nav-icon"></i><p>Stok</p></a></li>
@@ -222,6 +278,89 @@
           </ul>
         </li>
 
+<ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu">
+
+  <!-- ===================== -->
+  <!-- SALES MODULE -->
+  <!-- ===================== -->
+  <li class="nav-header">SALES</li>
+
+  <li class="nav-item">
+    <a href="sales-monitor.php" class="nav-link">
+      <i class="nav-icon fas fa-bolt"></i>
+      <p>Monitor Sales</p>
+    </a>
+  </li>
+
+  <li class="nav-item">
+    <a href="sales-rekap.php" class="nav-link">
+      <i class="nav-icon fas fa-chart-bar"></i>
+      <p>Rekap Sales</p>
+    </a>
+  </li>
+
+  <li class="nav-item">
+    <a href="sales-riwayat.php" class="nav-link">
+      <i class="nav-icon fas fa-history"></i>
+      <p>Riwayat Sales</p>
+    </a>
+  </li>
+
+
+  <!-- ===================== -->
+  <!-- OPERATION MODULE -->
+  <!-- ===================== -->
+  <li class="nav-header">OPERATION</li>
+
+  <li class="nav-item">
+    <a href="operation-monitor.php" class="nav-link">
+      <i class="nav-icon fas fa-fire"></i>
+      <p>Monitor Kitchen</p>
+    </a>
+  </li>
+
+  <li class="nav-item">
+    <a href="operation-rekap.php" class="nav-link">
+      <i class="nav-icon fas fa-boxes"></i>
+      <p>Rekap Operasional</p>
+    </a>
+  </li>
+
+  <li class="nav-item">
+    <a href="operation-riwayat.php" class="nav-link">
+      <i class="nav-icon fas fa-clipboard-list"></i>
+      <p>Riwayat Produksi</p>
+    </a>
+  </li>
+
+
+  <!-- ===================== -->
+  <!-- FINANCE MODULE -->
+  <!-- ===================== -->
+  <li class="nav-header">FINANCE</li>
+
+  <li class="nav-item">
+    <a href="finance-monitor.php" class="nav-link">
+      <i class="nav-icon fas fa-wallet"></i>
+      <p>Monitor Cashflow</p>
+    </a>
+  </li>
+
+  <li class="nav-item">
+    <a href="finance-rekap.php" class="nav-link">
+      <i class="nav-icon fas fa-file-invoice-dollar"></i>
+      <p>Rekap Keuangan</p>
+    </a>
+  </li>
+
+  <li class="nav-item">
+    <a href="finance-riwayat.php" class="nav-link">
+      <i class="nav-icon fas fa-book"></i>
+      <p>Riwayat Jurnal</p>
+    </a>
+  </li>
+
+</ul>
         <!-- KONFIGURASI -->
         <!-- <li class="nav-item has-treeview">
           <a href="#" class="nav-link">

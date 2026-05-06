@@ -1,6 +1,6 @@
 
 
-<?php $page = 'master-resep';   ?>
+<?php $page = 'operation-beli-bahan2';   ?>
 <?php include('1header.php'); ?>
 <?php include('2navbar.php'); ?>
 <?php include('3sidebar.php'); ?>
@@ -10,7 +10,7 @@
 
   <section class="content-header">
     <div class="container-fluid">
-      <h3 class="mb-0">Daftar Resep
+      <h3 class="mb-0">Daftar Pembelian Bahan (source harga)
         <button type="button" class="btn btn-tool" data-bs-toggle="modal" data-bs-target="#modalBantuan" title="Bantuan"><i class="fas fa-question-circle"></i>
         </button>
       </h3>
@@ -77,59 +77,86 @@
     <div class="table-responsive">
       <table class="table table-bordered table-striped table-sm datatables1">
 
+
   <thead >
     <tr>
-      <th>Kode</th>
-      <th>Nama Menu</th>
-      <th>Kategori</th>
-      <th>Harga Jual(tentukan dari md katalog)</th>
-      <th>HPP Operasional(last buying)</th>
-      <th>HPP Analisa(Moving Average Cost last 3 month)</th>
-      <th>Status</th>
-      <th>Aksi</th>
+      <th title="Nomor urut pembelian">No</th>
+      <th title="Tanggal pembelian bahan">Tanggal</th>
+      <th title="Nama supplier atau pemasok">Supplier</th>
+      <th title="Kode unik untuk setiap bahan">Kode Bahan</th>
+      <th title="Nama bahan yang dibeli">Nama Bahan</th>
+      <th title="Jumlah bahan yang dibeli">Qty</th>
+      <th title="Satuan bahan, misal kg, liter">Satuan</th>
+      <th title="Harga beli per satuan bahan (Rp)">Harga Satuan (Rp)</th>
+      <th title="Total harga pembelian (Qty x Harga Satuan)">Total Harga (Rp)</th>
+      <th title="Stok bahan sebelum pembelian">Stok Awal</th>
+      <th title="Stok bahan setelah pembelian">Stok Akhir</th>
+      <th title="HPP terbaru bahan, dihitung dari moving average cost">HPP Terbaru</th>
+      <th title="Catatan tambahan / nomor faktur / invoice">Catatan / Invoice</th>
+      <th title="Aksi untuk edit atau hapus data">Aksi</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>R001</td>
-      <td>Nasi Goreng Spesial</td>
-      <td>Makanan</td>
-      <td>25000</td>
-      <td>12000</td><td>12000</td>
-      <td><span class="badge badge-success">Aktif</span></td>
+      <td>1</td>
+      <td>2026-03-01</td>
+      <td>PT. FreshFood</td>
+      <td>B001</td>
+      <td>Tomat</td>
+      <td>10</td>
+      <td>kg</td>
+      <td>20,000</td>
+      <td>200,000</td>
+      <td>5</td>
+      <td>15</td>
+      <td>20,000</td>
+      <td>Faktur #001</td>
       <td>
-        <button class="btn btn-sm btn-outline-info" onclick="window.location='master-resep-detail.php'">Detail</button>
         <button class="btn btn-sm btn-outline-primary">✏️</button>
         <button class="btn btn-sm btn-outline-danger">🗑️</button>
       </td>
     </tr>
     <tr>
-      <td>R002</td>
-      <td>Mie Goreng</td>
-      <td>Makanan</td>
-      <td>20000</td>
-      <td>10000</td><td>10000</td>
-      <td><span class="badge badge-success">Aktif</span></td>
+      <td>2</td>
+      <td>2026-03-02</td>
+      <td>CV. BahanSegar</td>
+      <td>B002</td>
+      <td>Ayam Fillet</td>
+      <td>5</td>
+      <td>kg</td>
+      <td>50,000</td>
+      <td>250,000</td>
+      <td>3</td>
+      <td>8</td>
+      <td>50,000</td>
+      <td>Faktur #002</td>
       <td>
-        <button class="btn btn-sm btn-info">Detail</button>
         <button class="btn btn-sm btn-outline-primary">✏️</button>
         <button class="btn btn-sm btn-outline-danger">🗑️</button>
       </td>
     </tr>
     <tr>
-      <td>R003</td>
-      <td>Es Teh Manis</td>
-      <td>Minuman</td>
-      <td>8000</td>
-      <td>3000</td><td>3000</td>
-      <td><span class="badge badge-secondary">Nonaktif</span></td>
+      <td>3</td>
+      <td>2026-03-05</td>
+      <td>PT. FreshFood</td>
+      <td>B001</td>
+      <td>Tomat</td>
+      <td>15</td>
+      <td>kg</td>
+      <td>22,000</td>
+      <td>330,000</td>
+      <td>15</td>
+      <td>30</td>
+      <td>21,333</td>
+      <td>Faktur #003</td>
       <td>
-        <button class="btn btn-sm btn-info">Detail</button>
         <button class="btn btn-sm btn-outline-primary">✏️</button>
         <button class="btn btn-sm btn-outline-danger">🗑️</button>
       </td>
     </tr>
+    <!-- Baris berikut bisa ditambahkan sesuai kebutuhan -->
   </tbody>
+
 
     </table>
     </div>
@@ -196,238 +223,235 @@
 
 
 
-<!-- Modal Tambah Produk -->
+<!-- Modal Tambah Data -->
 <div class="modal fade" id="modalTambahData" tabindex="-1" aria-labelledby="modalTambahDataLabel" aria-hidden="true">
   <div class="modal-dialog modal-xl">
     <div class="modal-content rounded-3 shadow">
 
       <!-- HEADER -->
       <div class="modal-header bg-primary text-white">
-        <h5 class="modal-title" id="modalTambahProdukLabel">Tambah Daftar Menu Recipe (BOM)</h5>
+        <h5 class="modal-title">Tambah Pembelian Bahan Baku</h5>
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
       </div>
 
-      <form action="" method="POST" enctype="multipart/form-data">
+      <form method="POST">
 
         <div class="modal-body">
 
           <!-- INFO -->
-          <div class="alert alert-warning py-2 mb-3" style="font-size: 0.9rem;">
-            <i class="fas fa-info-circle me-1"></i>
-            <strong>Catatan:</strong> Isi data produk, bahan baku (BOM), dan akun akuntansi dengan benar.
+          <div class="alert alert-warning py-2 mb-3">
+            <strong>Catatan:</strong> 1 transaksi dapat berisi banyak bahan baku dari 1 supplier.
           </div>
 
-          <!-- ===================== -->
-          <!-- 1. IDENTITAS PRODUK -->
-          <!-- ===================== -->
-          <h6 class="text-primary mb-3">1. Informasi Produk</h6>
-
+          <!-- ================= HEADER TRANSAKSI ================= -->
           <div class="row">
 
-            <div class="col-md-6 mb-3">
-              <label class="form-label">Nama Produk <span class="text-danger">*</span></label>
-              <input type="text" class="form-control" name="nama_produk" required>
+            <div class="col-md-3 mb-3">
+              <label>Tanggal <span class="text-danger">*</span></label>
+              <input type="date" class="form-control" name="tanggal" required>
             </div>
 
             <div class="col-md-3 mb-3">
-              <label class="form-label">Kategori</label>
-              <select class="form-select" name="kategori">
-                <option value="">-- Pilih --</option>
-                <option>Makanan</option>
-                <option>Minuman</option>
-                <option>Dessert</option>
+              <label>Supplier <span class="text-danger">*</span></label>
+              <select class="form-select" name="supplier" required>
+                <option value="">-- Pilih Supplier --</option>
+                <option>PT FreshFood</option>
+                <option>CV BahanSegar</option>
+                <option>UD Makmur Jaya</option>
               </select>
             </div>
 
             <div class="col-md-3 mb-3">
-              <label class="form-label">Satuan</label>
-              <select class="form-select" name="satuan">
-                <option value="">-- Pilih --</option>
-                <option>pcs</option>
-                <option>cup</option>
-                <option>porsi</option>
+              <label>Metode Pembayaran</label>
+              <select class="form-select" name="metode_bayar">
+                <option value="cash">Cash</option>
+                <option value="hutang">Hutang</option>
               </select>
             </div>
+            <div class="col-md-3 mb-3">
+            	<label class="form-label">COA (atas metode pembayaran)</label>
 
-            <div class="col-md-4 mb-3">
-              <label class="form-label">Harga Jual</label>
-              <input type="number" class="form-control" name="harga_jual">
-            </div>
+            	<select class="form-select" name="coa_kas" required>
+            		<option value="">-- Pilih Akun  --</option>
 
-            <div class="col-md-4 mb-3">
-              <label class="form-label">Status</label>
-              <select class="form-select" name="status">
-                <option value="1">Tersedia</option>
-                <option value="0">Tidak Tersedia</option>
-              </select>
-            </div>
+            		<option value="kas">Kas</option>
+            		<option value="petty_cash">Petty Cash</option>
+            		<option value="bank_bca">Bank BCA</option>
+            		<option value="bank_mandiri">Bank Mandiri</option>
+            		<option value="bank_bni">Bank BNI</option>
+            		<option value="gopay">E-Wallet - GoPay</option>
+            		<option value="ovo">E-Wallet - OVO</option>
+            		<option value="dana">E-Wallet - DANA</option>
+            	</select>
 
-            <div class="col-md-4 mb-3">
-              <label class="form-label">Foto Produk</label>
-              <input type="file" class="form-control" name="foto">
-            </div>
-
-            <div class="col-12 mb-3">
-              <label class="form-label">Deskripsi</label>
-              <textarea class="form-control" name="deskripsi"></textarea>
+            	<small class="text-muted">
+            		menentukan akun kredit dalam jurnal otomatis
+            	</small>
             </div>
 
           </div>
 
           <hr>
 
-          <!-- ===================== -->
-          <!-- 2. BOM / RECIPE -->
-          <!-- ===================== -->
-          <h6 class="text-primary mb-3">2. Recipe / BOM (Bahan Baku)</h6>
+          <!-- ================= DETAIL ITEM ================= -->
+          <h6 class="mb-2">Detail Bahan Baku</h6>
 
-          <table class="table table-bordered text-center" id="bomTable">
+          <table class="table table-bordered" id="tableItem">
 
-            <thead class="table-light">
-              <tr>
-                <th>Bahan Baku</th>
-                <th>Kuantitas</th>
-                <th>Satuan</th>
-                <th>Aksi</th>
-              </tr>
-            </thead>
+  <thead class="table-light text-center">
+    <tr>
+      <th>Bahan Baku</th>
+      <th width="120">Qty</th>
+      <th width="140">Satuan</th>
+      <th width="160">Harga</th>
+      <th width="160">Subtotal</th>
+      <th width="80">Aksi</th>
+    </tr>
+  </thead>
 
-            <tbody id="bomBody">
-  <tr>
-    <td>
-      <select class="form-select" name="bahan[]">
-        <option value="">-- Pilih Bahan Baku --</option>
-        <option value="kopi">Bahan Baku A (Kopi)</option>
-        <option value="susu">Bahan Baku B (Susu)</option>
-        <option value="gula">Bahan Baku C (Gula)</option>
-      </select>
-    </td>
-
-    <td>
-      <input type="number" class="form-control" name="qty[]" placeholder="0">
-    </td>
-
-    <td>
-      <select class="form-select" name="satuan_bom[]">
-        <option value="gr">gr</option>
-        <option value="ml">ml</option>
-        <option value="pcs">pcs</option>
-      </select>
-    </td>
-
-    <td>
-      <button type="button" class="btn btn-sm btn-danger remove-row">
-        🗑️
-      </button>
-    </td>
-  </tr>
-</tbody>
-
-          </table>
-
-          <button type="button" class="btn btn-success w-100 mb-3" id="addBahanBtn">
-  ➕ Tambah Bahan Baku
-</button>
-
-          <!-- COGS -->
-          <div class="mb-3">
-            <label class="form-label">Estimasi COGS / Porsi</label>
-            <input type="text" class="form-control" name="cogs" readonly placeholder="Auto calculate">
-          </div>
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-
-    const bomBody = document.getElementById("bomBody");
-    const addBtn = document.getElementById("addBahanBtn");
-
-  // TEMPLATE ROW
-    function createRow() {
-      const tr = document.createElement("tr");
-
-      tr.innerHTML = `
+  <tbody id="itemBody">
+    <!-- row pertama -->
+    <tr>
       <td>
         <select class="form-select" name="bahan[]">
-          <option value="">-- Pilih Bahan Baku --</option>
-          <option value="kopi">Bahan Baku A (Kopi)</option>
-          <option value="susu">Bahan Baku B (Susu)</option>
-          <option value="gula">Bahan Baku C (Gula)</option>
+          <option value="">-- Pilih Bahan --</option>
+          <option>Roti Burger</option>
+          <option>Chicken Fillet</option>
+          <option>Keju</option>
         </select>
       </td>
 
       <td>
-        <input type="number" class="form-control" name="qty[]" placeholder="0">
+        <input type="number" class="form-control qty" name="qty[]" value="1">
       </td>
 
       <td>
-        <select class="form-select" name="satuan_bom[]">
-          <option value="gr">gr</option>
-          <option value="ml">ml</option>
-          <option value="pcs">pcs</option>
+        <select class="form-select" name="satuan[]">
+          <option>pcs</option>
+          <option>kg</option>
+          <option>gram</option>
         </select>
       </td>
 
       <td>
-        <button type="button" class="btn btn-sm btn-danger remove-row">
-          🗑️
-        </button>
+        <input type="number" class="form-control harga" name="harga[]" value="0">
       </td>
-      `;
 
-      return tr;
-    }
+      <td class="text-end subtotal">0</td>
 
-  // ADD ROW
-    addBtn.addEventListener("click", function () {
-      bomBody.appendChild(createRow());
-    });
+      <td class="text-center">
+        <button type="button" class="btn btn-danger btn-sm btn-remove">🗑</button>
+      </td>
+    </tr>
+  </tbody>
 
-  // REMOVE ROW (event delegation)
-    bomBody.addEventListener("click", function (e) {
-      if (e.target.classList.contains("remove-row")) {
-        const row = e.target.closest("tr");
-        if (bomBody.rows.length > 1) {
-          row.remove();
-        }
-      }
-    });
+</table>
 
-  });
+<!-- BUTTON -->
+<button type="button" class="btn btn-success w-100 mt-2" id="btnAddRow">
+  + Tambah Baris Bahan Baku
+</button>
+
+          <script>
+document.getElementById('btnAddRow').addEventListener('click', function () {
+
+    let row = `
+    <tr>
+      <td>
+        <select class="form-select" name="bahan[]">
+          <option value="">-- Pilih Bahan --</option>
+          <option>Roti Burger</option>
+          <option>Chicken Fillet</option>
+          <option>Keju</option>
+        </select>
+      </td>
+
+      <td>
+        <input type="number" class="form-control qty" name="qty[]" value="1">
+      </td>
+
+      <td>
+        <select class="form-select" name="satuan[]">
+          <option>pcs</option>
+          <option>kg</option>
+          <option>gram</option>
+        </select>
+      </td>
+
+      <td>
+        <input type="number" class="form-control harga" name="harga[]" value="0">
+      </td>
+
+      <td class="text-end subtotal">0</td>
+
+      <td class="text-center">
+        <button type="button" class="btn btn-danger btn-sm btn-remove">🗑</button>
+      </td>
+    </tr>
+    `;
+
+    document.getElementById('itemBody').insertAdjacentHTML('beforeend', row);
+});
 </script>
-          <hr>
+<script>
+document.addEventListener('click', function(e) {
+    if (e.target.classList.contains('btn-remove')) {
+        e.target.closest('tr').remove();
+    }
+});
+</script>
+          <!-- ================= TOTAL ================= -->
+          <div class="row mt-3">
 
-          <!-- ===================== -->
-          <!-- 3. COA -->
-          <!-- ===================== -->
-          <h6 class="text-primary mb-3">3. Akun Akuntansi (COA Mapping)</h6>
+            <div class="col-md-8"></div>
 
-          <div class="row">
-
-            <div class="col-md-6 mb-3">
-              <label class="form-label">Akun Penjualan</label>
-              <select class="form-select" name="akun_penjualan">
-                <option>-- Pilih Akun --</option>
-                <option>Penjualan Makanan</option>
-                <option>Penjualan Minuman</option>
-              </select>
-            </div>
-
-            <div class="col-md-6 mb-3">
-              <label class="form-label">Akun COGS</label>
-              <select class="form-select" name="akun_cogs">
-                <option>-- Pilih Akun --</option>
-                <option>HPP Makanan</option>
-                <option>HPP Minuman</option>
-              </select>
+            <div class="col-md-4">
+              <div class="border p-3 rounded bg-light">
+                <div class="d-flex justify-content-between">
+                  <strong>Total</strong>
+                  <strong>Rp 0</strong>
+                </div>
+              </div>
             </div>
 
           </div>
+
+          <!-- ================= COA AUTO PREVIEW ================= -->
+<div class="mt-3 border rounded p-3 bg-light">
+
+  <h6 class="mb-3">📊 Auto Journal (COA Preview)</h6>
+
+  <div class="row">
+
+    <div class="col-md-4">
+      <label class="form-label">Debit (Akun)</label>
+      <input type="text" class="form-control" value="Inventory Bahan Baku" readonly>
+    </div>
+
+    <div class="col-md-4">
+      <label class="form-label">Kredit (Cash / Hutang)</label>
+      <input type="text" class="form-control" value="Kas / Hutang Supplier" readonly>
+    </div>
+
+    <div class="col-md-4">
+      <label class="form-label">Sumber Transaksi</label>
+      <input type="text" class="form-control" value="Pembelian Bahan Baku" readonly>
+    </div>
+
+  </div>
+
+  <small class="text-muted d-block mt-2">
+    COA ini di-generate otomatis berdasarkan metode pembayaran dan jenis transaksi.
+  </small>
+
+</div>
 
         </div>
 
         <!-- FOOTER -->
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
-          <button type="submit" class="btn btn-primary">Simpan </button>
+          <button class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+          <button class="btn btn-primary">Simpan Transaksi</button>
         </div>
 
       </form>
@@ -435,7 +459,6 @@
     </div>
   </div>
 </div>
-
 
 <!-- Modal Impor -->
 <div class="modal fade" id="modalImpor" tabindex="-1">

@@ -299,10 +299,24 @@ body {
       <h6>SQA</h6>
     </a>
   </div>
+       <!-- ORION -->
+  <div class="col-md-3 col-6">
+    <a href="ro_water/" class="menu-card d-block">
+      <i class="fas fa-tint"></i>
+      <h6>RO Water</h6>
+    </a>
+  </div>
+  <!-- ORION -->
+  <div class="col-md-3 col-6">
+    <a href="orion/" class="menu-card d-block">
+      <i class="fas fa-headset"></i>
+      <h6>PENA PERSADA</h6>
+    </a>
+  </div>
    <!-- ORION -->
   <div class="col-md-3 col-6">
     <a href="orion/" class="menu-card d-block">
-      <i class="fas fa-vial"></i>
+      <i class="fas fa-shopping-cart"></i>
       <h6>ORION</h6>
     </a>
   </div>
@@ -310,18 +324,18 @@ body {
    <!-- ORION -->
   <div class="col-md-3 col-6">
     <a href="resto/" class="menu-card d-block">
-      <i class="fas fa-vial"></i>
+      <i class="fas fa-shopping-cart"></i>
       <h6>RESTOMAN</h6>
     </a>
   </div>
-     <!-- ORION -->
+
+<!-- ORION -->
   <div class="col-md-3 col-6">
-    <a href="ro_water/" class="menu-card d-block">
-      <i class="fas fa-tint"></i>
-      <h6>RO Water</h6>
+    <a href="toko/" class="menu-card d-block">
+      <i class="fas fa-shopping-cart"></i>
+      <h6>Toko Berlian</h6>
     </a>
   </div>
-
 
 </div>
   </div>
