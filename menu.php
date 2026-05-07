@@ -247,7 +247,7 @@ body {
 
   <!-- Marketing -->
   <div class="col-md-3 col-6">
-    <a href="#" class="menu-card d-block">
+    <a href="meta-smarketing/" class="menu-card d-block">
       <i class="fas fa-bullhorn"></i>
       <h6>Marketing</h6>
     </a>
@@ -255,7 +255,7 @@ body {
 
   <!-- Sales -->
   <div class="col-md-3 col-6">
-    <a href="#" class="menu-card d-block">
+    <a href="meta-sales/" class="menu-card d-block">
       <i class="fas fa-chart-line"></i>
       <h6>Sales</h6>
     </a>
@@ -263,14 +263,14 @@ body {
 
   <!-- Proses B -->
   <div class="col-md-3 col-6">
-    <a href="#" class="menu-card d-block">
+    <a href="meta-operation/" class="menu-card d-block">
       <i class="fas fa-cogs"></i>
       <h6>Operation</h6>
     </a>
   </div>
   <!-- Finance -->
   <div class="col-md-3 col-6">
-    <a href="#" class="menu-card d-block">
+    <a href="meta-finance/" class="menu-card d-block">
       <i class="fas fa-wallet"></i>
       <h6>Finance</h6>
     </a>

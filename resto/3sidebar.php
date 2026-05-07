@@ -93,10 +93,10 @@
           </a>
           <ul class="nav nav-treeview">
 
-<li class="nav-item"><a href="master-menu.php" class="nav-link <?php echo $page == 'master-menu' ? 'active' : ''; ?>">
+            <li class="nav-item"><a href="master-menu.php" class="nav-link <?php echo $page == 'master-menu' ? 'active' : ''; ?>">
               <i class="far fa-circle nav-icon"></i><p>Daftar Kitchen(tentukan menu yg digarap tiap kitchen)</p></a></li>
 
-            <li class="nav-item"><a href="master-menu.php" class="nav-link <?php echo $page == 'master-menu' ? 'active' : ''; ?>">
+              <li class="nav-item"><a href="master-menu.php" class="nav-link <?php echo $page == 'master-menu' ? 'active' : ''; ?>">
               <i class="far fa-circle nav-icon"></i><p>Menu & Kategori</p></a></li>
 
             <li class="nav-item"><a href="master-bahan.php" class="nav-link <?php echo $page == 'master-bahan' ? 'active' : ''; ?>">
@@ -104,7 +104,12 @@
 
             <li class="nav-item"><a href="master-resep.php" class="nav-link <?php echo $page == 'master-resep' ? 'active' : ''; ?>">
               <i class="far fa-circle nav-icon"></i><p>Resep (BOM)</p></a></li>
-
+<li class="nav-item">
+              <a href="sales-kasir2.php" class="nav-link <?php echo $page == 'sales-kasir2' ? 'active' : ''; ?>">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Paket Menu Resep</p>
+              </a>
+            </li>
             <li class="nav-item"><a href="master-supplier.php" class="nav-link <?php echo $page == 'master-supplier' ? 'active' : ''; ?>">
               <i class="far fa-circle nav-icon"></i><p>Supplier</p></a></li>
 
@@ -145,52 +150,68 @@
                 <p>Self Order (QR Table)</p>
               </a>
             </li>
-
-            
-
             <li class="nav-item">
               <a href="sales-kasir.php" class="nav-link <?php echo $page == 'sales-kasir' ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
                 <p>POS / Kasir</p>
               </a>
             </li>
-
             <li class="nav-item">
               <a href="sales-kasir2.php" class="nav-link <?php echo $page == 'sales-kasir2' ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
                 <p>POS / Kasir (Alternative)</p>
               </a>
             </li>
-
-
-            <li class="nav-item">
-              <a href="sales-order.php" class="nav-link <?php echo $page == 'sales-order' ? 'active' : ''; ?>">
+             <li class="nav-item">
+              <a href="sales-kasir2.php" class="nav-link <?php echo $page == 'sales-kasir2' ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
-                <p>Lap.Monitor Orders</p>
+                <p>Diskon Global</p>
               </a>
             </li>
-
-            <li class="nav-item">
-              <a href="#" class="nav-link <?php echo $page == 'sales-report' ? 'active' : ''; ?>">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Lap.Rekapitulasi Orders</p>
-              </a>
-            </li>
-
-            <li class="nav-item">
-              <a href="#" class="nav-link <?php echo $page == 'sales-history' ? 'active' : ''; ?>">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Lap.Riwayat Orders</p>
-              </a>
-            </li>
-            <li class="nav-item"><a href="#" class="nav-link <?php echo $page == 'sales-ooo' ? 'active' : ''; ?>"> <i class="far fa-circle nav-icon"></i><p>Riwayat Penjualan</p></a></li>
+          
 
           </ul>
         </li>
 
+        <!-- LAPORAN -->
+        <li class="nav-item has-treeview">
+          <a href="#" class="nav-link">
+            <i class="nav-icon fas fa-chart-pie"></i>
+            <p>Laporan Sales<i class="right fas fa-angle-left"></i></p>
+          </a>
+          <ul class="nav nav-treeview">
+            <li class="nav-item"><a href="#" class="nav-link"><i class="far fa-circle nav-icon"></i><p>Monitor Orders</p></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="far fa-circle nav-icon"></i><p>Rekapitulasi Orders</p></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="far fa-circle nav-icon"></i><p>Riwayat Orders</p></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="far fa-circle nav-icon"></i><p>Riwayat Penjualan</p></a></li>
+            <li class="nav-item">
+              <a href="sales-monitor.php" class="nav-link">
+                <i class="nav-icon fas fa-bolt"></i>
+                <p>Monitor Sales</p>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a href="sales-rekap.php" class="nav-link">
+                <i class="nav-icon fas fa-chart-bar"></i>
+                <p>Rekap Sales</p>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a href="sales-riwayat.php" class="nav-link">
+                <i class="nav-icon fas fa-history"></i>
+                <p>Riwayat Sales</p>
+              </a>
+            </li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="far fa-circle nav-icon"></i><p>Penjualan</p></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="far fa-circle nav-icon"></i><p>Omset</p></a></li>
+          </ul>
+        </li>
+
         <!-- Operation (Kitchen, Gudang, SuperAdmin) -->
-        <li class="nav-item <?php echo in_array($page, ['operation-beli-bahan','operation-kitchen','operation-stok-bahan','operation-stok-opname','operation-kitchen-op']) ? 'menu-open' : ''; ?>">
-          <a href="#" class="nav-link <?php echo in_array($page, ['operation-beli-bahan','operation-kitchen','operation-stok-bahan','operation-stok-opname','operation-kitchen-op']) ? 'active' : ''; ?>">
+        <li class="nav-item <?php echo in_array($page, ['operation-beli-bahan','operation-kitchen','operation-stok-bahan','operation-stok-opname']) ? 'menu-open' : ''; ?>">
+          <a href="#" class="nav-link <?php echo in_array($page, ['operation-beli-bahan','operation-kitchen','operation-stok-bahan','operation-stok-opname']) ? 'active' : ''; ?>">
             <i class="nav-icon fas fa-utensils"></i>
             <p>Operation <i class="right fas fa-angle-left"></i></p>
           </a>
@@ -200,46 +221,38 @@
             <li class="nav-item"><a href="operation-kitchen.php" class="nav-link <?php echo $page == 'operation-kitchen' ? 'active' : ''; ?>">  
               <i class="far fa-circle nav-icon"></i><p>Kitchen Display</p></a></li>
 
-              <li class="nav-item"><a href="operation-kitchen-op.php" class="nav-link <?php echo $page == 'operation-kitchen-op' ? 'active' : ''; ?>">  
-                <i class="far fa-circle nav-icon"></i><p>Riwayat OP Kitchen </p></a>
-              </li>
+             
 
                 <li class="nav-item">
-                  <a href="operation-beli-bahan.php" class="nav-link <?php echo $page == 'operation-beli-bahan' ? 'active' : ''; ?>">  <i class="far fa-circle nav-icon"></i><p>Pembelian Bahan</p></a>
+                  <a href="operation-beli-bahan.php" class="nav-link <?php echo $page == 'operation-beli-bahan' ? 'active' : ''; ?>">  <i class="far fa-circle nav-icon"></i><p>Pembelian Bahan 1</p></a>
                 </li>
                 <li class="nav-item">
                   <a href="operation-beli-bahan2.php" class="nav-link <?php echo $page == 'operation-beli-bahan' ? 'active' : ''; ?>">  <i class="far fa-circle nav-icon"></i><p>Pembelian Bahan 2</p></a>
                 </li>
 
-                <li class="nav-item"><a href="operation-stok-bahan.php" class="nav-link <?php echo $page == 'operation-stok-bahan' ? 'active' : ''; ?>">
-                  <i class="far fa-circle nav-icon"></i><p>Stok Bahan</p></a></li>
-
                   <li class="nav-item"><a href="operation-stok-opname.php" class="nav-link <?php echo $page == 'operation-stok-opname' ? 'active' : ''; ?>">
                     <i class="far fa-circle nav-icon"></i><p>Stok Opname</p></a></li>
 
+          </ul>
+        </li>
 
-                    <li class="nav-item">
-                      <a href="sales-order.php" class="nav-link <?php echo $page == 'sales-order' ? 'active' : ''; ?>">
-                        <i class="far fa-circle nav-icon"></i>
-                        <p>Lap.Monitor </p>
-                      </a>
-                    </li>
+        <!-- LAPORAN -->
+        <li class="nav-item <?php echo in_array($page, ['operation-stok-bahan','operation-kitchen-op']) ? 'menu-open' : ''; ?>">
+           <a href="#" class="nav-link <?php echo in_array($page, ['operation-stok-bahan','operation-kitchen-op']) ? 'active' : ''; ?>">
+            <i class="nav-icon fas fa-chart-pie"></i>
+            <p>Laporan Operation<i class="right fas fa-angle-left"></i></p>
+          </a>
+          <ul class="nav nav-treeview">
 
-                    <li class="nav-item">
-                      <a href="#" class="nav-link <?php echo $page == 'sales-report' ? 'active' : ''; ?>">
-                        <i class="far fa-circle nav-icon"></i>
-                        <p>Lap.Rekapitulasi </p>
-                      </a>
-                    </li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="far fa-circle nav-icon"></i><p>Monitor Persediaan</p></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="far fa-circle nav-icon"></i><p>Monitor Kekurangan Persediaan</p></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="far fa-circle nav-icon"></i><p>Monitor Kitchen</p></a></li>
+            <li class="nav-item"><a href="operation-kitchen-op.php" class="nav-link <?php echo $page == 'operation-kitchen-op' ? 'active' : ''; ?>"><i class="far fa-circle nav-icon"></i><p>Rekap Operasional Kitchen</p></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="far fa-circle nav-icon"></i><p>Laporan Supplier</p></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="far fa-circle nav-icon"></i><p>Riwayat produksi</p></a></li>
 
-                    <li class="nav-item">
-                      <a href="#" class="nav-link <?php echo $page == 'sales-history' ? 'active' : ''; ?>">
-                        <i class="far fa-circle nav-icon"></i>
-                        <p>Lap.Riwayat </p>
-                      </a>
-                    </li>
-                    <li class="nav-item"><a href="#" class="nav-link <?php echo $page == 'sales-ooo' ? 'active' : ''; ?>"> <i class="far fa-circle nav-icon"></i><p>Riwayat Penjualan</p></a></li>
-
+            <li class="nav-item"><a href="#" class="nav-link"><i class="far fa-circle nav-icon"></i><p>Riwayat Persediaan</p></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="far fa-circle nav-icon"></i><p>Pembelian</p></a></li>
           </ul>
         </li>
 
@@ -250,13 +263,17 @@
             <p>Finance <i class="right fas fa-angle-left"></i></p>
           </a>
           <ul class="nav nav-treeview">
+            <li class="nav-item"><a href="#" class="nav-link"><i class="far fa-circle nav-icon"></i><p>Budgeting</p></a></li>
 
-            <li class="nav-item"><a href="#" class="nav-link <?php echo $page == 'operation-stok-opname' ? 'active' : ''; ?>"><i class="far fa-circle nav-icon"></i><p>Kas & Bank</p></a></li>
-            <li class="nav-item"><a href="#" class="nav-link"><i class="far fa-circle nav-icon"></i><p>Pengeluaran</p></a></li>
-            <li class="nav-item"><a href="#" class="nav-link"><i class="far fa-circle nav-icon"></i><p>Pendapatan</p></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="far fa-circle nav-icon"></i><p>Catat Pemasukan</p></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="far fa-circle nav-icon"></i><p>Catat Pengeluaran</p></a></li>
+            
             <li class="nav-item"><a href="finance-akun.php" class="nav-link <?php echo $page == 'finance-akun' ? 'active' : ''; ?>"><i class="far fa-circle nav-icon"></i><p>CoA</p></a></li>
             <li class="nav-item"><a href="finance-jurnal.php" class="nav-link <?php echo $page == 'finance-jurnal' ? 'active' : ''; ?>"><i class="far fa-circle nav-icon"></i><p>Jurnal</p></a></li>
-
+            <li class="nav-item"><a href="finance-jurnal.php" class="nav-link <?php echo $page == 'finance-jurnal' ? 'active' : ''; ?>"><i class="far fa-circle nav-icon"></i><p>Jurnal Umum</p></a></li>
+            <li class="nav-item"><a href="finance-jurnal.php" class="nav-link <?php echo $page == 'finance-jurnal' ? 'active' : ''; ?>"><i class="far fa-circle nav-icon"></i><p>Jurnal Khusus</p></a></li>
+            <li class="nav-item"><a href="finance-jurnal.php" class="nav-link <?php echo $page == 'finance-jurnal' ? 'active' : ''; ?>"><i class="far fa-circle nav-icon"></i><p>Jurnal Penyesuaian</p></a></li>
+            <li class="nav-item"><a href="finance-jurnal.php" class="nav-link <?php echo $page == 'finance-jurnal' ? 'active' : ''; ?>"><i class="far fa-circle nav-icon"></i><p>Jurnal Pembalik</p></a></li>
           </ul>
         </li>
 
@@ -264,103 +281,26 @@
         <li class="nav-item has-treeview">
           <a href="#" class="nav-link">
             <i class="nav-icon fas fa-chart-pie"></i>
-            <p>Laporan <i class="right fas fa-angle-left"></i></p>
+            <p>Laporan Finance<i class="right fas fa-angle-left"></i></p>
           </a>
           <ul class="nav nav-treeview">
+            <li class="nav-item"><a href="#" class="nav-link"><i class="far fa-circle nav-icon"></i><p>Monitor Aset</p></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="far fa-circle nav-icon"></i><p>Monitor Piutang</p></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="far fa-circle nav-icon"></i><p>Monitor Utang</p></a></li>
+            
 
-
-            <li class="nav-item"><a href="#" class="nav-link"><i class="far fa-circle nav-icon"></i><p>Penjualan</p></a></li>
-            <li class="nav-item"><a href="#" class="nav-link"><i class="far fa-circle nav-icon"></i><p>Omset</p></a></li>
-            <li class="nav-item"><a href="#" class="nav-link"><i class="far fa-circle nav-icon"></i><p>Stok</p></a></li>
-            <li class="nav-item"><a href="#" class="nav-link"><i class="far fa-circle nav-icon"></i><p>Pembelian</p></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="far fa-circle nav-icon"></i><p>Buku Besar</p></a></li>
             <li class="nav-item"><a href="#" class="nav-link"><i class="far fa-circle nav-icon"></i><p>Laba Rugi</p></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="far fa-circle nav-icon"></i><p>Perubahan Modal</p></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="far fa-circle nav-icon"></i><p>Neraca</p></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="far fa-circle nav-icon"></i><p>Arus Kas</p></a></li>
+
+
+            <li class="nav-item"><a href="#" class="nav-link"><i class="far fa-circle nav-icon"></i><p>Riwayat Jurnal</p></a></li>
 
           </ul>
         </li>
 
-<ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu">
-
-  <!-- ===================== -->
-  <!-- SALES MODULE -->
-  <!-- ===================== -->
-  <li class="nav-header">SALES</li>
-
-  <li class="nav-item">
-    <a href="sales-monitor.php" class="nav-link">
-      <i class="nav-icon fas fa-bolt"></i>
-      <p>Monitor Sales</p>
-    </a>
-  </li>
-
-  <li class="nav-item">
-    <a href="sales-rekap.php" class="nav-link">
-      <i class="nav-icon fas fa-chart-bar"></i>
-      <p>Rekap Sales</p>
-    </a>
-  </li>
-
-  <li class="nav-item">
-    <a href="sales-riwayat.php" class="nav-link">
-      <i class="nav-icon fas fa-history"></i>
-      <p>Riwayat Sales</p>
-    </a>
-  </li>
-
-
-  <!-- ===================== -->
-  <!-- OPERATION MODULE -->
-  <!-- ===================== -->
-  <li class="nav-header">OPERATION</li>
-
-  <li class="nav-item">
-    <a href="operation-monitor.php" class="nav-link">
-      <i class="nav-icon fas fa-fire"></i>
-      <p>Monitor Kitchen</p>
-    </a>
-  </li>
-
-  <li class="nav-item">
-    <a href="operation-rekap.php" class="nav-link">
-      <i class="nav-icon fas fa-boxes"></i>
-      <p>Rekap Operasional</p>
-    </a>
-  </li>
-
-  <li class="nav-item">
-    <a href="operation-riwayat.php" class="nav-link">
-      <i class="nav-icon fas fa-clipboard-list"></i>
-      <p>Riwayat Produksi</p>
-    </a>
-  </li>
-
-
-  <!-- ===================== -->
-  <!-- FINANCE MODULE -->
-  <!-- ===================== -->
-  <li class="nav-header">FINANCE</li>
-
-  <li class="nav-item">
-    <a href="finance-monitor.php" class="nav-link">
-      <i class="nav-icon fas fa-wallet"></i>
-      <p>Monitor Cashflow</p>
-    </a>
-  </li>
-
-  <li class="nav-item">
-    <a href="finance-rekap.php" class="nav-link">
-      <i class="nav-icon fas fa-file-invoice-dollar"></i>
-      <p>Rekap Keuangan</p>
-    </a>
-  </li>
-
-  <li class="nav-item">
-    <a href="finance-riwayat.php" class="nav-link">
-      <i class="nav-icon fas fa-book"></i>
-      <p>Riwayat Jurnal</p>
-    </a>
-  </li>
-
-</ul>
         <!-- KONFIGURASI -->
         <!-- <li class="nav-item has-treeview">
           <a href="#" class="nav-link">
