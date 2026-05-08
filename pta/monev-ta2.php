@@ -760,23 +760,11 @@ Distribusi topik TA
             <td>Civil Engineering Regular</td>
             <td class="text-center"><img style="width:40px;" alt="Foto"></td>
             <td class="text-center"><span class="badge badge-success">Lulus</span></td>
-            <td class="text-center">
-              <div class="btn-group">
-                <button type="button" class="btn btn-sm btn-outline-info dropdown-toggle" 
-                data-bs-toggle="dropdown" aria-expanded="false">
-                <i class="fas fa-ellipsis-h"></i> Action
-              </button>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#"><i class="fas fa-edit text-primary"></i> Edit Link</a></li>
-                <li><a class="dropdown-item" href="#"><i class="fas fa-trash-alt text-danger"></i> Hapus Data</a></li>
-                <li><a class="dropdown-item" href="#"><i class="fas fa-key text-warning"></i> Ubah Password</a></li>
-                <li><a class="dropdown-item" href="#"><i class="fas fa-upload text-success"></i> Upload File</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="portfolio_cpmk_detail2.php" target="_blank">
-                  <i class="fas fa-external-link-alt text-info"></i> View Link</a></li>
-                  <li><a class="dropdown-item" href="#"><i class="fas fa-download text-success"></i> Download File</a></li>
-                </ul>
-              </div>
+            <td class="text-center">             
+              <a href="monev-ta2-riwayat.php" class="btn btn-sm btn-info">
+                <i class="fas fa-history me-1"></i>
+                Riwayat
+              </a>
             </td>
           </tr>
           <tr>

@@ -103,14 +103,12 @@
               <i class="far fa-circle nav-icon"></i><p>Bahan Baku</p></a></li>
 
             <li class="nav-item"><a href="master-resep.php" class="nav-link <?php echo $page == 'master-resep' ? 'active' : ''; ?>">
-              <i class="far fa-circle nav-icon"></i><p>Resep (BOM)</p></a></li>
-<li class="nav-item">
-              <a href="sales-kasir2.php" class="nav-link <?php echo $page == 'sales-kasir2' ? 'active' : ''; ?>">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Paket Menu Resep</p>
-              </a>
-            </li>
-            <li class="nav-item"><a href="master-supplier.php" class="nav-link <?php echo $page == 'master-supplier' ? 'active' : ''; ?>">
+              <i class="far fa-circle nav-icon"></i><p>Resep Menu(BOM)</p></a></li>
+
+              <li class="nav-item"><a href="master-paket-menu.php" class="nav-link <?php echo $page == 'master-paket-menu' ? 'active' : ''; ?>">
+                <i class="far fa-circle nav-icon"></i><p>Paket Menu</p></a></li>
+
+                <li class="nav-item"><a href="master-supplier.php" class="nav-link <?php echo $page == 'master-supplier' ? 'active' : ''; ?>">
               <i class="far fa-circle nav-icon"></i><p>Supplier</p></a></li>
 
             <li class="nav-item"><a href="master-customer.php" class="nav-link <?php echo $page == 'master-customer' ? 'active' : ''; ?>">
@@ -237,12 +235,19 @@
         </li>
 
         <!-- LAPORAN -->
-        <li class="nav-item <?php echo in_array($page, ['operation-stok-bahan','operation-kitchen-op']) ? 'menu-open' : ''; ?>">
-           <a href="#" class="nav-link <?php echo in_array($page, ['operation-stok-bahan','operation-kitchen-op']) ? 'active' : ''; ?>">
+        <li class="nav-item <?php echo in_array($page, ['operation-stok-bahan','operation-kitchen-op','operation-lap-stok','operation-riwayat-stok','operation-monitor-stok','operation-monitor-menu']) ? 'menu-open' : ''; ?>">
+           <a href="#" class="nav-link <?php echo in_array($page, ['operation-stok-bahan','operation-kitchen-op','operation-lap-stok','operation-riwayat-stok','operation-monitor-stok','operation-monitor-menu']) ? 'active' : ''; ?>">
             <i class="nav-icon fas fa-chart-pie"></i>
             <p>Laporan Operation<i class="right fas fa-angle-left"></i></p>
           </a>
           <ul class="nav nav-treeview">
+            <li class="nav-item"><a href="operation-monitor-stok.php" class="nav-link <?php echo $page == 'operation-monitor-stok' ? 'active' : ''; ?>"><i class="far fa-circle nav-icon"></i><p>Monitor Bahan Baku</p></a></li>
+             <li class="nav-item"><a href="operation-monitor-menu.php" class="nav-link <?php echo $page == 'operation-monitor-menu' ? 'active' : ''; ?>"><i class="far fa-circle nav-icon"></i><p>Monitor Resep Menu</p></a></li>
+ <li class="nav-item"><a href="operation-riwayat-stok.php" class="nav-link <?php echo $page == 'operation-riwayat-stok' ? 'active' : ''; ?>"><i class="far fa-circle nav-icon"></i><p>Riwayat Stok</p></a></li>
+
+
+ <li class="nav-item"><a href="operation-lap-stok.php" class="nav-link <?php echo $page == 'operation-lap-stok' ? 'active' : ''; ?>"><i class="far fa-circle nav-icon"></i><p>Laporan Stok</p></a></li>
+ 
 
             <li class="nav-item"><a href="#" class="nav-link"><i class="far fa-circle nav-icon"></i><p>Monitor Persediaan</p></a></li>
             <li class="nav-item"><a href="#" class="nav-link"><i class="far fa-circle nav-icon"></i><p>Monitor Kekurangan Persediaan</p></a></li>
@@ -271,7 +276,7 @@
             <li class="nav-item"><a href="finance-akun.php" class="nav-link <?php echo $page == 'finance-akun' ? 'active' : ''; ?>"><i class="far fa-circle nav-icon"></i><p>CoA</p></a></li>
             <li class="nav-item"><a href="finance-jurnal.php" class="nav-link <?php echo $page == 'finance-jurnal' ? 'active' : ''; ?>"><i class="far fa-circle nav-icon"></i><p>Jurnal</p></a></li>
             <li class="nav-item"><a href="finance-jurnal.php" class="nav-link <?php echo $page == 'finance-jurnal' ? 'active' : ''; ?>"><i class="far fa-circle nav-icon"></i><p>Jurnal Umum</p></a></li>
-            <li class="nav-item"><a href="finance-jurnal.php" class="nav-link <?php echo $page == 'finance-jurnal' ? 'active' : ''; ?>"><i class="far fa-circle nav-icon"></i><p>Jurnal Khusus</p></a></li>
+            <li class="nav-item"><a href="finance-jurnal-khusus.php" class="nav-link <?php echo $page == 'finance-jurnal-khusus' ? 'active' : ''; ?>"><i class="far fa-circle nav-icon"></i><p>Jurnal Khusus</p></a></li>
             <li class="nav-item"><a href="finance-jurnal.php" class="nav-link <?php echo $page == 'finance-jurnal' ? 'active' : ''; ?>"><i class="far fa-circle nav-icon"></i><p>Jurnal Penyesuaian</p></a></li>
             <li class="nav-item"><a href="finance-jurnal.php" class="nav-link <?php echo $page == 'finance-jurnal' ? 'active' : ''; ?>"><i class="far fa-circle nav-icon"></i><p>Jurnal Pembalik</p></a></li>
           </ul>

@@ -429,7 +429,7 @@
           <a href="#" class="nav-link <?php echo in_array($page, ['monev_ta','monev_penilaian_pembimbing','monev_pustaka_publikasi','monev_pustaka_ta','monev_kinerja_mahasiswa','monev_kinerja_pembimbing','monev_nilai_ujian','monev_nilai_responsi','monev_magang','monev_rbb','monev_ta_publikasi']) ? 'active' : ''; ?>">
             <i class="nav-icon fas fa-chart-pie"></i>
             <p>
-               Monitoring
+               Laporan Aktivitas
               <i class="right fas fa-angle-left"></i>
             </p>
           </a>

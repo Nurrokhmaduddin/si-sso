@@ -54,12 +54,13 @@ $menu = [
     'title' => 'Master Data',
     'icon' => 'fas fa-database',
     'pages' => [
-      'master-item','master-supplier','master-customer',
+      'master-produk','master-item','master-supplier','master-customer',
       'master-lokasi','master-kategori','master-coa'
     ],
     'children' => [
 
-      ['label' => 'Item / Berlian', 'url' => 'master-item.php', 'page' => 'master-item'],
+       ['label' => 'Produk / Barang', 'url' => 'master-produk.php', 'page' => 'master-produk'],
+       ['label' => 'Item / Berlian', 'url' => 'master-item.php', 'page' => 'master-item'],
       ['label' => 'Kategori Barang', 'url' => 'master-kategori.php', 'page' => 'master-kategori'],
       ['label' => 'Lokasi / Vault', 'url' => 'master-lokasi.php', 'page' => 'master-lokasi'],
 
@@ -98,6 +99,146 @@ $menu = [
     ]
   ],
     
+/*
+=========================================================
+🟢 OPERATION (DAGANG - TRANSACTION / CRUD)
+=========================================================
+Fokus:
+- pergerakan barang dagang
+- kontrol stok & gudang
+- proses pembelian & pengiriman
+- transaksi inventory
+=========================================================
+*/
+
+[
+  'title' => 'Operation (Dagang)',
+  'icon' => 'fas fa-boxes',
+
+  'pages' => [
+
+    // DASHBOARD OPERATION
+    'operation-dashboard',
+
+    // PROCUREMENT (PEMBELIAN)
+    'operation-po',
+    'operation-grn',
+    'operation-supplier-return',
+
+    // INVENTORY / GUDANG
+    'operation-stock-in',
+    'operation-stock-out',
+    'operation-stock-adjustment',
+    'operation-stock-opname',
+    'operation-stock-transfer',
+
+    // SALES DELIVERY
+    'operation-sales-order',
+    'operation-picking',
+    'operation-packing',
+    'operation-delivery-order',
+    'operation-shipment-tracking',
+    'operation-customer-return',
+
+    // APPROVAL FLOW (OPSIONAL CONTROL)
+    'operation-po-approval',
+    'operation-do-approval',
+  ],
+
+  'children' => [
+
+    // =========================
+    // DASHBOARD
+    // =========================
+    [
+      'label' => 'Dashboard Operation',
+      'url'   => 'operation-dashboard.php',
+      'page'  => 'operation-dashboard'
+    ],
+
+    // =========================
+    // PROCUREMENT
+    // =========================
+    [
+      'label' => 'Purchase Order (PO)',
+      'url'   => 'operation-po.php',
+      'page'  => 'operation-po'
+    ],
+    [
+      'label' => 'Goods Receipt (Penerimaan)',
+      'url'   => 'operation-grn.php',
+      'page'  => 'operation-grn'
+    ],
+    [
+      'label' => 'Supplier Return',
+      'url'   => 'operation-supplier-return.php',
+      'page'  => 'operation-supplier-return'
+    ],
+
+    // =========================
+    // INVENTORY / WAREHOUSE
+    // =========================
+    [
+      'label' => 'Stock In',
+      'url'   => 'operation-stock-in.php',
+      'page'  => 'operation-stock-in'
+    ],
+    [
+      'label' => 'Stock Out',
+      'url'   => 'operation-stock-out.php',
+      'page'  => 'operation-stock-out'
+    ],
+    [
+      'label' => 'Stock Adjustment',
+      'url'   => 'operation-stock-adjustment.php',
+      'page'  => 'operation-stock-adjustment'
+    ],
+    [
+      'label' => 'Stock Opname',
+      'url'   => 'operation-stock-opname.php',
+      'page'  => 'operation-stock-opname'
+    ],
+    [
+      'label' => 'Stock Transfer',
+      'url'   => 'operation-stock-transfer.php',
+      'page'  => 'operation-stock-transfer'
+    ],
+
+    // =========================
+    // SALES DELIVERY
+    // =========================
+    [
+      'label' => 'Sales Order',
+      'url'   => 'operation-sales-order.php',
+      'page'  => 'operation-sales-order'
+    ],
+    [
+      'label' => 'Picking',
+      'url'   => 'operation-picking.php',
+      'page'  => 'operation-picking'
+    ],
+    [
+      'label' => 'Packing',
+      'url'   => 'operation-packing.php',
+      'page'  => 'operation-packing'
+    ],
+    [
+      'label' => 'Delivery Order (DO)',
+      'url'   => 'operation-delivery-order.php',
+      'page'  => 'operation-delivery-order'
+    ],
+    [
+      'label' => 'Shipment Tracking',
+      'url'   => 'operation-shipment-tracking.php',
+      'page'  => 'operation-shipment-tracking'
+    ],
+    [
+      'label' => 'Customer Return',
+      'url'   => 'operation-customer-return.php',
+      'page'  => 'operation-customer-return'
+    ],
+  ]
+],
 
   /*
 =========================================================
@@ -416,8 +557,419 @@ Tujuan:
   ]
 ],
 
+/*
+=========================================================
+📑 LAPORAN OPERATION (DAGANG - REPORT / VIEW ONLY)
+=========================================================
+Fokus:
+- konsolidasi pergerakan barang
+- analisa stok & distribusi
+- laporan pembelian & penjualan barang
+- evaluasi gudang & supply chain
+=========================================================
+*/
 
+// [
+//   'title' => 'Laporan Operation (Dagang)',
+//   'icon' => 'fas fa-chart-bar',
 
+//   'pages' => [
+
+//     // SUMMARY
+//     'operation-laporan-dashboard',
+
+//     // PROCUREMENT REPORT
+//     'operation-laporan-pembelian',
+//     'operation-laporan-supplier-performance',
+
+//     // INVENTORY REPORT
+//     'operation-laporan-stok-gudang',
+//     'operation-laporan-mutasi-barang',
+//     'operation-laporan-stock-opname',
+//     'operation-laporan-stock-aging',
+//     'operation-laporan-stock-valuation',
+
+//     // DELIVERY REPORT
+//     'operation-laporan-sales-delivery',
+//     'operation-laporan-delivery-performance',
+//     'operation-laporan-shipment-delay',
+
+//     // RETURN REPORT
+//     'operation-laporan-return-barang',
+
+//     // OVERALL ANALYTICS
+//     'operation-laporan-fast-moving',
+//     'operation-laporan-slow-moving',
+//     'operation-laporan-dead-stock',
+//   ],
+
+//   'children' => [
+
+//     // =========================
+//     // DASHBOARD REPORT
+//     // =========================
+//     [
+//       'label' => 'Dashboard Operation Report',
+//       'url'   => 'operation-laporan-dashboard.php',
+//       'page'  => 'operation-laporan-dashboard'
+//     ],
+
+//     // =========================
+//     // PROCUREMENT REPORT
+//     // =========================
+//     [
+//       'label' => 'Laporan Pembelian Barang',
+//       'url'   => 'operation-laporan-pembelian.php',
+//       'page'  => 'operation-laporan-pembelian'
+//     ],
+//     [
+//       'label' => 'Supplier Performance',
+//       'url'   => 'operation-laporan-supplier-performance.php',
+//       'page'  => 'operation-laporan-supplier-performance'
+//     ],
+
+//     // =========================
+//     // INVENTORY REPORT
+//     // =========================
+//     [
+//       'label' => 'Stok Gudang',
+//       'url'   => 'operation-laporan-stok-gudang.php',
+//       'page'  => 'operation-laporan-stok-gudang'
+//     ],
+//     [
+//       'label' => 'Mutasi Barang',
+//       'url'   => 'operation-laporan-mutasi-barang.php',
+//       'page'  => 'operation-laporan-mutasi-barang'
+//     ],
+//     [
+//       'label' => 'Stock Opname',
+//       'url'   => 'operation-laporan-stock-opname.php',
+//       'page'  => 'operation-laporan-stock-opname'
+//     ],
+//     [
+//       'label' => 'Stock Aging',
+//       'url'   => 'operation-laporan-stock-aging.php',
+//       'page'  => 'operation-laporan-stock-aging'
+//     ],
+//     [
+//       'label' => 'Stock Valuation',
+//       'url'   => 'operation-laporan-stock-valuation.php',
+//       'page'  => 'operation-laporan-stock-valuation'
+//     ],
+
+//     // =========================
+//     // DELIVERY REPORT
+//     // =========================
+//     [
+//       'label' => 'Laporan Delivery Sales',
+//       'url'   => 'operation-laporan-sales-delivery.php',
+//       'page'  => 'operation-laporan-sales-delivery'
+//     ],
+//     [
+//       'label' => 'Delivery Performance',
+//       'url'   => 'operation-laporan-delivery-performance.php',
+//       'page'  => 'operation-laporan-delivery-performance'
+//     ],
+//     [
+//       'label' => 'Shipment Delay',
+//       'url'   => 'operation-laporan-shipment-delay.php',
+//       'page'  => 'operation-laporan-shipment-delay'
+//     ],
+
+//     // =========================
+//     // RETURN
+//     // =========================
+//     [
+//       'label' => 'Laporan Retur Barang',
+//       'url'   => 'operation-laporan-return-barang.php',
+//       'page'  => 'operation-laporan-return-barang'
+//     ],
+
+//     // =========================
+//     // ANALYTICS SIMPLE (REPORT STYLE)
+//     // =========================
+//     [
+//       'label' => 'Fast Moving Items',
+//       'url'   => 'operation-laporan-fast-moving.php',
+//       'page'  => 'operation-laporan-fast-moving'
+//     ],
+//     [
+//       'label' => 'Slow Moving Items',
+//       'url'   => 'operation-laporan-slow-moving.php',
+//       'page'  => 'operation-laporan-slow-moving'
+//     ],
+//     [
+//       'label' => 'Dead Stock',
+//       'url'   => 'operation-laporan-dead-stock.php',
+//       'page'  => 'operation-laporan-dead-stock'
+//     ],
+//   ]
+// ],
+
+/*
+=========================================================
+📑 LAPORAN OPERATION (DAGANG - REPORT / VIEW ONLY)
+=========================================================
+Fokus:
+- konsolidasi pergerakan barang
+- analisa stok & distribusi
+- laporan pembelian & penjualan barang
+- evaluasi gudang & supply chain
+=========================================================
+
+KLASIFIKASI MENU:
+- Dashboard  : kondisi bisnis cepat & KPI ringkas
+- Monitoring : kontrol operasional realtime / actionable
+- Rekap      : laporan formal & periodik
+- Analisa    : insight & evaluasi strategis
+- Riwayat    : audit trail & histori aktivitas
+=========================================================
+*/
+
+[
+  'title' => 'Laporan Operation (Dagang)',
+  'icon' => 'fas fa-chart-bar',
+
+  'pages' => [
+
+    // =====================================================
+    // 📊 DASHBOARD
+    // Fokus:
+    // - high level summary
+    // - KPI operasional
+    // - cepat dibaca management
+    // =====================================================
+    'operation-laporan-dashboard',
+
+    // =====================================================
+    // 📡 MONITORING
+    // Fokus:
+    // - kontrol operasional berjalan
+    // - status aktif
+    // - pending / warning / SLA
+    // - realtime & actionable
+    // =====================================================
+    'operation-monitor-stock-alert',
+    'operation-monitor-delivery',
+    'operation-monitor-pending-receiving',
+    'operation-monitor-overstock',
+    'operation-monitor-understock',
+
+    // =====================================================
+    // 📑 REKAP / LAPORAN
+    // Fokus:
+    // - laporan formal periodik
+    // - summary transaksi
+    // - export & dokumentasi
+    // =====================================================
+    'operation-laporan-pembelian',
+    'operation-laporan-supplier-performance',
+
+    'operation-laporan-stok-gudang',
+    'operation-laporan-mutasi-barang',
+    'operation-laporan-stock-opname',
+    'operation-laporan-stock-aging',
+    'operation-laporan-stock-valuation',
+
+    'operation-laporan-sales-delivery',
+    'operation-laporan-delivery-performance',
+    'operation-laporan-shipment-delay',
+
+    'operation-laporan-return-barang',
+
+    // =====================================================
+    // 📈 ANALISA
+    // Fokus:
+    // - insight bisnis
+    // - trend & evaluasi
+    // - decision support
+    // =====================================================
+    'operation-laporan-fast-moving',
+    'operation-laporan-slow-moving',
+    'operation-laporan-dead-stock',
+
+    // =====================================================
+    // 🕓 RIWAYAT / AUDIT TRAIL
+    // Fokus:
+    // - histori aktivitas detail
+    // - tracking perubahan data
+    // - investigasi & audit
+    // =====================================================
+    'operation-riwayat-stock-adjustment',
+    'operation-riwayat-mutasi-barang',
+    'operation-riwayat-delivery',
+    'operation-riwayat-retur',
+    'operation-riwayat-approval',
+  ],
+
+  'children' => [
+
+    // =====================================================
+    // 📊 DASHBOARD
+    // =====================================================
+    [
+      'label' => 'Dashboard Operation Report',
+      'url'   => 'operation-laporan-dashboard.php',
+      'page'  => 'operation-laporan-dashboard'
+    ],
+
+    // =====================================================
+    // 📡 MONITORING
+    // =====================================================
+    [
+      'label' => 'Monitor Stock Alert',
+      'url'   => 'operation-monitor-stock-alert.php',
+      'page'  => 'operation-monitor-stock-alert'
+    ],
+
+    [
+      'label' => 'Monitor Delivery',
+      'url'   => 'operation-monitor-delivery.php',
+      'page'  => 'operation-monitor-delivery'
+    ],
+
+    [
+      'label' => 'Pending Receiving',
+      'url'   => 'operation-monitor-pending-receiving.php',
+      'page'  => 'operation-monitor-pending-receiving'
+    ],
+
+    [
+      'label' => 'Monitor Overstock',
+      'url'   => 'operation-monitor-overstock.php',
+      'page'  => 'operation-monitor-overstock'
+    ],
+
+    [
+      'label' => 'Monitor Understock',
+      'url'   => 'operation-monitor-understock.php',
+      'page'  => 'operation-monitor-understock'
+    ],
+
+    // =====================================================
+    // 📑 REKAP / LAPORAN
+    // =====================================================
+    [
+      'label' => 'Laporan Pembelian Barang',
+      'url'   => 'operation-laporan-pembelian.php',
+      'page'  => 'operation-laporan-pembelian'
+    ],
+
+    [
+      'label' => 'Supplier Performance',
+      'url'   => 'operation-laporan-supplier-performance.php',
+      'page'  => 'operation-laporan-supplier-performance'
+    ],
+
+    [
+      'label' => 'Stok Gudang',
+      'url'   => 'operation-laporan-stok-gudang.php',
+      'page'  => 'operation-laporan-stok-gudang'
+    ],
+
+    [
+      'label' => 'Mutasi Barang',
+      'url'   => 'operation-laporan-mutasi-barang.php',
+      'page'  => 'operation-laporan-mutasi-barang'
+    ],
+
+    [
+      'label' => 'Stock Opname',
+      'url'   => 'operation-laporan-stock-opname.php',
+      'page'  => 'operation-laporan-stock-opname'
+    ],
+
+    [
+      'label' => 'Stock Aging',
+      'url'   => 'operation-laporan-stock-aging.php',
+      'page'  => 'operation-laporan-stock-aging'
+    ],
+
+    [
+      'label' => 'Stock Valuation',
+      'url'   => 'operation-laporan-stock-valuation.php',
+      'page'  => 'operation-laporan-stock-valuation'
+    ],
+
+    [
+      'label' => 'Laporan Delivery Sales',
+      'url'   => 'operation-laporan-sales-delivery.php',
+      'page'  => 'operation-laporan-sales-delivery'
+    ],
+
+    [
+      'label' => 'Delivery Performance',
+      'url'   => 'operation-laporan-delivery-performance.php',
+      'page'  => 'operation-laporan-delivery-performance'
+    ],
+
+    [
+      'label' => 'Shipment Delay',
+      'url'   => 'operation-laporan-shipment-delay.php',
+      'page'  => 'operation-laporan-shipment-delay'
+    ],
+
+    [
+      'label' => 'Laporan Retur Barang',
+      'url'   => 'operation-laporan-return-barang.php',
+      'page'  => 'operation-laporan-return-barang'
+    ],
+
+    // =====================================================
+    // 📈 ANALISA
+    // =====================================================
+    [
+      'label' => 'Fast Moving Items',
+      'url'   => 'operation-laporan-fast-moving.php',
+      'page'  => 'operation-laporan-fast-moving'
+    ],
+
+    [
+      'label' => 'Slow Moving Items',
+      'url'   => 'operation-laporan-slow-moving.php',
+      'page'  => 'operation-laporan-slow-moving'
+    ],
+
+    [
+      'label' => 'Dead Stock',
+      'url'   => 'operation-laporan-dead-stock.php',
+      'page'  => 'operation-laporan-dead-stock'
+    ],
+
+    // =====================================================
+    // 🕓 RIWAYAT / AUDIT TRAIL
+    // =====================================================
+    [
+      'label' => 'Riwayat Stock Adjustment',
+      'url'   => 'operation-riwayat-stock-adjustment.php',
+      'page'  => 'operation-riwayat-stock-adjustment'
+    ],
+
+    [
+      'label' => 'Riwayat Mutasi Barang',
+      'url'   => 'operation-riwayat-mutasi-barang.php',
+      'page'  => 'operation-riwayat-mutasi-barang'
+    ],
+
+    [
+      'label' => 'Riwayat Delivery',
+      'url'   => 'operation-riwayat-delivery.php',
+      'page'  => 'operation-riwayat-delivery'
+    ],
+
+    [
+      'label' => 'Riwayat Retur Barang',
+      'url'   => 'operation-riwayat-retur.php',
+      'page'  => 'operation-riwayat-retur'
+    ],
+
+    [
+      'label' => 'Riwayat Approval',
+      'url'   => 'operation-riwayat-approval.php',
+      'page'  => 'operation-riwayat-approval'
+    ],
+  ]
+],
 
 
   /*

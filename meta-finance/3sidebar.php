@@ -80,19 +80,24 @@ $menu = [
     'title' => 'Finance ',
     'icon' => 'fas fa-tasks',
     'pages' => [
-      'Marketing-inden','Marketing-order','Marketing-repair','Marketing-retur',
-      'Marketing-monitor','Marketing-riwayat'
+      'f-mata-anggaran',
+      'f-budgeting',
+      'f-coa',
+      'f-jurnal-umum',
+      'f-jurnal-khusus',
+      'f-jurnal-penyesuaian',
+      'f-jurnal-pembalik'
     ],
     'children' => [
-      ['label' => 'Mata Anggaran', 'url' => 'Marketing-repair.php', 'page' => 'Marketing-repair'],
-      ['label' => 'Budgeting', 'url' => 'Marketing-repair.php', 'page' => 'Marketing-repair'],
+      ['label' => 'Mata Anggaran', 'url' => 'f-mata-anggaran.php', 'page' => 'f-mata-anggaran'],
+      ['label' => 'Budgeting', 'url' => 'f-budgeting.php', 'page' => 'f-budgeting'],
 
 
-      ['label' => 'COA Master', 'url' => 'Marketing-inden.php', 'page' => 'Marketing-inden'],
-      ['label' => 'Jurnal Umum', 'url' => 'Marketing-monitor.php', 'page' => 'Marketing-monitor'],
-      ['label' => 'Jurnal Khusus', 'url' => 'Marketing-laporan.php', 'page' => 'Marketing-laporan'],
-      ['label' => 'Jurnal Penyesuaian', 'url' => 'monitor-Marketing.php', 'page' => 'monitor-Marketing'],
-      ['label' => 'Jurnal Pembalik', 'url' => 'Marketing-riwayat.php', 'page' => 'Marketing-riwayat'],
+      ['label' => 'COA Master', 'url' => 'f-coa.php', 'page' => 'f-coa'],
+      ['label' => 'Jurnal Umum', 'url' => 'f-jurnal-umum.php', 'page' => 'f-jurnal-umum'],
+      ['label' => 'Jurnal Khusus', 'url' => 'f-jurnal-khusus.php', 'page' => 'f-jurnal-khusus'],
+      ['label' => 'Jurnal Penyesuaian', 'url' => 'f-jurnal-penyesuaian.php', 'page' => 'f-jurnal-penyesuaian'],
+      ['label' => 'Jurnal Pembalik', 'url' => 'f-jurnal-pembalik.php', 'page' => 'f-jurnal-pembalik'],
     ]
   ],
     
@@ -442,6 +447,21 @@ Tujuan:
   ]
 ],
 
+/*
+  =========================================================
+  ⚙️ KONFIGURASI
+  =========================================================
+  */
+  [
+    'title' => 'Konfigurasi',
+    'icon' => 'fas fa-sliders-h',
+    'pages' => ['config-jurnal-khusus','setting-system'],
+    'children' => [
+
+      ['label' => 'Jurnal Khusus', 'url' => 'config-jurnal-khusus.php', 'page' => 'config-jurnal-khusus'],
+      
+    ]
+  ],
 
 
   /*
@@ -461,6 +481,9 @@ Tujuan:
   ],
 
 ];
+
+
+
 
 ?>
     <nav class="mt-2">
@@ -497,6 +520,285 @@ Tujuan:
           </li>
 
         <?php endforeach; ?>
+        <!-- ========================================================= -->
+<!-- 💰 KEUANGAN -->
+<!-- ========================================================= -->
+<li class="nav-item has-treeview">
+
+  <a href="#" class="nav-link">
+    <i class="nav-icon fas fa-wallet"></i>
+    <p>
+      Keuangan
+      <i class="right fas fa-angle-left"></i>
+    </p>
+  </a>
+
+  <ul class="nav nav-treeview">
+
+        <!-- ========================================================= -->
+        <!-- 📑 Dashboard KEUANGAN -->
+        <!-- ========================================================= -->
+        <li class="nav-item has-treeview">
+
+          <a href="keuangan-dashboard.php" class="nav-link">
+            <i class="far fa-circle nav-icon"></i>
+            <p>
+              Dashboard Keuangan
+              <i class="right fas fa-angle-left"></i>
+            </p>
+          </a>
+
+          <ul class="nav nav-treeview">
+<!-- DASHBOARD -->
+        <li class="nav-item">
+          <a href="akuntansi-dashboard.php" class="nav-link">
+            <i class="far fa-circle nav-icon"></i>
+            <p>Dashboard Akuntansi</p>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a href="akuntansi-dashboard-cashflow.php" class="nav-link">
+            <i class="far fa-circle nav-icon"></i>
+            <p>Dashboard Cashflow</p>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a href="akuntansi-dashboard-profit.php" class="nav-link">
+            <i class="far fa-circle nav-icon"></i>
+            <p>Dashboard Profit</p>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a href="akuntansi-dashboard-neraca.php" class="nav-link">
+            <i class="far fa-circle nav-icon"></i>
+            <p>Dashboard Neraca</p>
+          </a>
+        </li>
+
+
+
+            
+
+          </ul>
+        </li>
+
+
+       
+        <!-- ========================================================= -->
+        <!-- 📑 Monitoring KEUANGAN -->
+        <!-- ========================================================= -->
+        <li class="nav-item has-treeview">
+
+          <a href="keuangan-monitoring.php" class="nav-link">
+            <i class="far fa-circle nav-icon"></i>
+            <p>
+              Monitoring Keuangan
+              <i class="right fas fa-angle-left"></i>
+            </p>
+          </a>
+
+          <ul class="nav nav-treeview">
+
+
+            <!-- MONITORING -->
+            <li class="nav-item">
+              <a href="akuntansi-monitor-jurnal.php" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Monitor Jurnal Tidak Balance</p>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a href="akuntansi-monitor-balance.php" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Monitor Saldo Tidak Balance</p>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a href="akuntansi-monitor-overbudget.php" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Monitor Over Budget</p>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a href="akuntansi-monitor-piutang.php" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Monitor Piutang Jatuh Tempo</p>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a href="akuntansi-monitor-hutang.php" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Monitor Hutang Jatuh Tempo</p>
+              </a>
+            </li>
+
+
+
+
+          </ul>
+        </li>
+             <li class="nav-item">
+          <a href="jurnal.php" class="nav-link">
+            <i class="far fa-circle nav-icon"></i>
+            <p>Jurnal</p>
+          </a>
+        </li>
+    <li class="nav-item">
+      <a href="saldo-buku-besar.php" class="nav-link">
+        <i class="far fa-circle nav-icon"></i>
+        <p>Buku Besar Saldo</p>
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a href="akuntansi-neraca-saldo.php" class="nav-link">
+        <i class="far fa-circle nav-icon"></i>
+        <p>Neraca Saldo</p>
+      </a>
+    </li>
+    <!-- ========================================================= -->
+    <!-- 📑 LAPORAN KEUANGAN -->
+    <!-- ========================================================= -->
+    <li class="nav-item has-treeview">
+
+      <a href="#" class="nav-link">
+        <i class="nav-icon fas fa-file-invoice-dollar"></i>
+        <p>
+          Laporan Keuangan
+          <i class="right fas fa-angle-left"></i>
+        </p>
+      </a>
+
+      <ul class="nav nav-treeview">
+        <!-- LAPORAN -->
+        <li class="nav-item">
+          <a href="akuntansi-laporan-laba-rugi.php" class="nav-link">
+            <i class="far fa-circle nav-icon"></i>
+            <p>Laporan Laba Rugi</p>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a href="akuntansi-laporan-perubahan-modal.php" class="nav-link">
+            <i class="far fa-circle nav-icon"></i>
+            <p>Laporan Perubahan Modal</p>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a href="akuntansi-laporan-neraca.php" class="nav-link">
+            <i class="far fa-circle nav-icon"></i>
+            <p>Laporan Neraca</p>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a href="akuntansi-laporan-arus-kas.php" class="nav-link">
+            <i class="far fa-circle nav-icon"></i>
+            <p>Laporan Arus Kas</p>
+          </a>
+        </li>
+
+      </ul>
+    </li>
+
+
+    <!-- ========================================================= -->
+    <!-- 📈 ANALISA KEUANGAN -->
+    <!-- ========================================================= -->
+    <li class="nav-item has-treeview">
+
+      <a href="#" class="nav-link">
+        <i class="nav-icon fas fa-chart-line"></i>
+        <p>
+          Analisa Keuangan
+          <i class="right fas fa-angle-left"></i>
+        </p>
+      </a>
+
+      <ul class="nav nav-treeview">
+        <li class="nav-item">
+          <a href="akuntansi-analisa-rasio-keuangan.php" class="nav-link">
+            <i class="far fa-circle nav-icon"></i>
+            <p>Analisa Rasio Keuangan</p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="akuntansi-analisa-trend.php" class="nav-link">
+            <i class="far fa-circle nav-icon"></i>
+            <p>Analisa Growth</p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="akuntansi-analisa-cashflow.php" class="nav-link">
+            <i class="far fa-circle nav-icon"></i>
+            <p>Analisa Cashflow Trend</p>
+          </a>
+        </li>
+<li class="nav-item">
+          <a href="akuntansi-analisa-profit.php" class="nav-link">
+            <i class="far fa-circle nav-icon"></i>
+            <p>Analisa Profitabilitas</p>
+          </a>
+        </li>
+      </ul>
+    </li>
+
+
+    <!-- ========================================================= -->
+    <!-- 🕓 RIWAYAT / AUDIT TRAIL -->
+    <!-- ========================================================= -->
+    <li class="nav-item has-treeview">
+
+      <a href="#" class="nav-link">
+        <i class="nav-icon fas fa-history"></i>
+        <p>
+          Riwayat / Audit Trail
+          <i class="right fas fa-angle-left"></i>
+        </p>
+      </a>
+
+      <ul class="nav nav-treeview">
+
+        <li class="nav-item">
+          <a href="akuntansi-riwayat-jurnal.php" class="nav-link">
+            <i class="far fa-circle nav-icon"></i>
+            <p>Audit Jurnal</p>
+          </a>
+        </li>
+ <li class="nav-item">
+          <a href="akuntansi-audit-log.php" class="nav-link">
+            <i class="far fa-circle nav-icon"></i>
+            <p>Audit Log Posting</p>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a href="akuntansi-riwayat-koreksi.php" class="nav-link">
+            <i class="far fa-circle nav-icon"></i>
+            <p>Riwayat koreksi</p>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a href="riwayat-buku-besar.php" class="nav-link">
+            <i class="far fa-circle nav-icon"></i>
+            <p>Buku Besar Detail</p>
+          </a>
+        </li>
+       
+      </ul>
+    </li>
+
+  </ul>
+</li>
         <!-- KEMBALI MENU UTAMA -->
         <li class="nav-item mt-3">
           <a href="../menu.php" class="nav-link">
