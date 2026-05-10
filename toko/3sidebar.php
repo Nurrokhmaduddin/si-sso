@@ -34,165 +34,740 @@
 
 $menu = [
 
-  [
-    'title' => 'Beranda',
-    'icon' => 'fas fa-home',
-    'pages' => ['beranda_admin','beranda_manajer','beranda_kasir'],
-    'children' => [
-      ['label' => 'Admin', 'url' => 'beranda-admin.php', 'page' => 'beranda_admin'],
-      ['label' => 'Manager', 'url' => 'beranda-manajer.php', 'page' => 'beranda_manajer'],
-      ['label' => 'Fungsional', 'url' => 'beranda-kasir.php', 'page' => 'beranda_kasir'],
-    ]
+/*
+=========================================================
+DASHBOARD
+=========================================================
+*/
+[
+  'title' => 'Dashboard',
+  'icon'  => 'fas fa-home',
+  'pages' => [
+    'dashboard-admin',
+    'dashboard-manager',
+    'dashboard-fungsional'
   ],
 
-  /*
-  =========================================================
-  🟢 MASTER DATA (Foundation ERP)
-  =========================================================
-  */
-  [
-    'title' => 'Master Data',
-    'icon' => 'fas fa-database',
-    'pages' => [
-      'master-item','master-supplier','master-customer',
-      'master-lokasi','master-kategori','master-coa'
+  'children' => [
+
+    [
+      'label' => 'Admin',
+      'url'   => 'dashboard-admin.php',
+      'page'  => 'dashboard-admin'
     ],
-    'children' => [
 
-      ['label' => 'Item / Berlian', 'url' => 'master-item.php', 'page' => 'master-item'],
-      ['label' => 'Kategori Barang', 'url' => 'master-kategori.php', 'page' => 'master-kategori'],
-      ['label' => 'Lokasi / Vault', 'url' => 'master-lokasi.php', 'page' => 'master-lokasi'],
-
-      ['label' => 'Supplier / Pabrik', 'url' => 'master-supplier.php', 'page' => 'master-supplier'],
-      ['label' => 'Customer / Buyer', 'url' => 'master-customer.php', 'page' => 'master-customer'],
-['label' => 'Sales / Reseller', 'url' => 'master-sales.php', 'page' => 'master-sales'],
-
-      ['label' => 'COA (Chart of Account)', 'url' => 'master-coa.php', 'page' => 'master-coa'],
-    ]
-  ],
-
-  /*
-  =========================================================
-  🟡 SALES (Turn Lead into Client)
-  =========================================================
-  */
-  [
-    'title' => 'Sales Order',
-    'icon' => 'fas fa-cash-register',
-    'pages' => [
-      'sales-inden','sales-order','sales-repair','sales-retur',
-      'sales-monitor','sales-riwayat'
+    [
+      'label' => 'Manager',
+      'url'   => 'dashboard-manager.php',
+      'page'  => 'dashboard-manager'
     ],
-    'children' => [
 
-      ['label' => 'Order Penjualan', 'url' => 'sales-order.php', 'page' => 'sales-order'],
-      ['label' => 'Order Inden (Pre-Order)', 'url' => 'sales-inden.php', 'page' => 'sales-inden'],
-
-      ['label' => 'Order Reparasi', 'url' => 'sales-repair.php', 'page' => 'sales-repair'],
-
-     
-      ['label' => 'Monitor Sales', 'url' => 'sales-monitor.php', 'page' => 'sales-monitor'],
-      ['label' => 'laporan Sales', 'url' => 'sales-laporan.php', 'page' => 'sales-laporan'],
-      ['label' => 'Analisa Sales', 'url' => 'monitor-sales.php', 'page' => 'monitor-sales'],
-      ['label' => 'Riwayat Sales', 'url' => 'sales-riwayat.php', 'page' => 'sales-riwayat'],
-    ]
-  ],
-
-  /*
-  =========================================================
-  🍽️ OPERATION (Inventory Movement & Delivery)
-  =========================================================
-  */
-  [
-    'title' => 'Operation',
-    'icon' => 'fas fa-boxes',
-    'pages' => [
-      'op-pembelian','op-retur-beli','op-retur-jual',
-      'op-mutasi','op-konsinyasi','op-stockopname','op-monitor','monitor-stock','monitor-sales','monitor-location',
-      'monitor-supplier','monitor-consignment'
+    [
+      'label' => 'Fungsional',
+      'url'   => 'dashboard-fungsional.php',
+      'page'  => 'dashboard-fungsional'
     ],
-    'children' => [
 
-      ['label' => 'Pembelian Barang', 'url' => 'op-pembelian.php', 'page' => 'op-pembelian'],
+  ]
+],
 
-      ['label' => 'Retur Pembelian', 'url' => 'op-retur-beli.php', 'page' => 'op-retur-beli'],
-      ['label' => 'Retur Penjualan', 'url' => 'op-retur-jual.php', 'page' => 'op-retur-jual'],
+/*
+=========================================================
+MASTER DATA
+=========================================================
+*/
+[
+  'title' => 'Master Data',
+  'icon'  => 'fas fa-database',
 
-
-      ['label' => 'Konsinyasi', 'url' => 'op-konsinyasi.php', 'page' => 'op-konsinyasi'],
-
-      ['label' => 'Mutasi / Pindah Barang', 'url' => 'op-mutasi.php', 'page' => 'op-mutasi'],
-      ['label' => 'Stock Opname / Update', 'url' => 'op-stockopname.php', 'page' => 'op-stockopname'],
-
-      ['label' => 'Monitor Inventory', 'url' => 'op-monitor.php', 'page' => 'op-monitor'],
-      ['label' => 'Status Stock Global', 'url' => 'monitor-stock.php', 'page' => 'monitor-stock'],
-
-      ['label' => 'Monitor operation', 'url' => 'operation-monitor.php', 'page' => 'operation-monitor'],
-      ['label' => 'Konsinyasi Status', 'url' => 'monitor-consignment.php', 'page' => 'monitor-consignment'],
-      ['label' => 'Supplier Inventory', 'url' => 'monitor-supplier.php', 'page' => 'monitor-supplier'],
-      ['label' => 'laporan operation', 'url' => 'operation-laporan.php', 'page' => 'operation-laporan'],
-      ['label' => 'Riwayat operation', 'url' => 'operation-riwayat.php', 'page' => 'operation-riwayat'],
-
-       ['label' => 'Tracking Lokasi Barang', 'url' => 'monitor-location.php', 'page' => 'monitor-location'],
-    ]
+  'pages' => [
+    'master-customer',
+    'master-supplier',
+    'master-persediaan',
+    'master-kategori',
+    'master-gudang',
+    'master-coa',
+    'master-users'
   ],
 
-  /*
-  =========================================================
-  💰 FINANCE (PSAK Accounting Layer)
-  =========================================================
-  */
-  [
-    'title' => 'Finance',
-    'icon' => 'fas fa-money-bill-wave',
-    'pages' => [
-      'finance-jurnal-umum','finance-jurnal-khusus',
-      'finance-penyesuaian','finance-pembalik',
-      'finance-cashbank','finance-report'
+  'children' => [
+
+    [
+      'label' => 'Customer',
+      'url'   => 'master-customer.php',
+      'page'  => 'master-customer'
     ],
-    'children' => [
 
-      ['label' => 'COA Master', 'url' => 'finance-coa.php', 'page' => 'master-coa'],
-      ['label' => 'Jurnal Umum', 'url' => 'finance-jurnal-umum.php', 'page' => 'finance-jurnal-umum'],
-      ['label' => 'Jurnal Khusus', 'url' => 'finance-jurnal-khusus.php', 'page' => 'finance-jurnal-khusus'],
-      ['label' => 'Jurnal Penyesuaian', 'url' => 'finance-penyesuaian.php', 'page' => 'finance-penyesuaian'],
-      ['label' => 'Jurnal Pembalik', 'url' => 'finance-pembalik.php', 'page' => 'finance-pembalik'],
-      
-      ['label' => 'Laporan Keuangan', 'url' => 'finance-report.php', 'page' => 'finance-report'],
-    ]
+    [
+      'label' => 'Supplier',
+      'url'   => 'master-supplier.php',
+      'page'  => 'master-supplier'
+    ],
+
+    [
+      'label' => 'Persediaan Barang',
+      'url'   => 'master-persediaan.php',
+      'page'  => 'master-persediaan'
+    ],
+
+    [
+      'label' => 'Kategori Barang',
+      'url'   => 'master-kategori.php',
+      'page'  => 'master-kategori'
+    ],
+
+    [
+      'label' => 'Gudang',
+      'url'   => 'master-gudang.php',
+      'page'  => 'master-gudang'
+    ],
+
+    [
+      'label' => 'COA',
+      'url'   => 'master-coa.php',
+      'page'  => 'master-coa'
+    ],
+
+    [
+      'label' => 'User & Hak Akses',
+      'url'   => 'master-users.php',
+      'page'  => 'master-users'
+    ],
+
+  ]
+],
+
+/*
+=========================================================
+SALES
+=========================================================
+*/
+[
+  'title' => 'Sales',
+  'icon'  => 'fas fa-cash-register',
+
+  'pages' => [
+    'sales-pos',
+    'sales-order',
+    'sales-kredit',
+    'sales-retur',
+    'sales-dp',
+
+    'sales-monitor',
+    'sales-piutang',
+
+    'sales-laporan',
+
+    'sales-riwayat'
   ],
 
-  /*
-  =========================================================
-  ⚙️ PENGATURAN SISTEM
-  =========================================================
-  */
-  [
-    'title' => 'Pengaturan',
-    'icon' => 'fas fa-cog',
-    'pages' => ['setting-user','setting-system'],
-    'children' => [
+  'children' => [
 
-      ['label' => 'User Management', 'url' => 'setting-user.php', 'page' => 'setting-user'],
-      ['label' => 'System Config', 'url' => 'setting-system.php', 'page' => 'setting-system'],
-    ]
+    /*
+    =========================================
+    LEVEL 2 TANPA TURUNAN
+    =========================================
+    */
+    [
+      'label' => 'Dashboard Sales',
+      'url'   => 'sales-dashboard.php',
+      'page'  => 'sales-dashboard'
+    ],
+
+    /*
+    =========================================
+    TRANSAKSI
+    =========================================
+    */
+    [
+      'title' => 'Transaksi',
+      'icon'  => 'far fa-folder',
+
+      'children' => [
+
+        [
+          'label' => 'Penjualan',
+          'url'   => 'sales-order.php',
+          'page'  => 'sales-order'
+        ],
+
+        [
+          'label' => 'POS / Kasir',
+          'url'   => 'sales-pos.php',
+          'page'  => 'sales-pos'
+        ],
+
+        [
+          'label' => 'Penjualan Kredit',
+          'url'   => 'sales-kredit.php',
+          'page'  => 'sales-kredit'
+        ],
+
+        [
+          'label' => 'Retur Penjualan',
+          'url'   => 'sales-retur.php',
+          'page'  => 'sales-retur'
+        ],
+
+        [
+          'label' => 'DP Penjualan',
+          'url'   => 'sales-dp.php',
+          'page'  => 'sales-dp'
+        ],
+
+      ]
+    ],
+
+    /*
+    =========================================
+    MONITORING
+    =========================================
+    */
+    [
+      'title' => 'Monitoring',
+      'icon'  => 'far fa-folder',
+
+      'children' => [
+
+        [
+          'label' => 'Monitoring Sales',
+          'url'   => 'sales-monitor.php',
+          'page'  => 'sales-monitor'
+        ],
+
+        [
+          'label' => 'Piutang Customer',
+          'url'   => 'sales-piutang.php',
+          'page'  => 'sales-piutang'
+        ],
+
+      ]
+    ],
+
+    /*
+    =========================================
+    LAPORAN
+    =========================================
+    */
+    [
+      'title' => 'Laporan',
+      'icon'  => 'far fa-folder',
+
+      'children' => [
+
+        [
+          'label' => 'Rekap Penjualan',
+          'url'   => 'sales-laporan.php',
+          'page'  => 'sales-laporan'
+        ],
+
+      ]
+    ],
+
+    /*
+    =========================================
+    RIWAYAT
+    =========================================
+    */
+    [
+      'title' => 'Riwayat',
+      'icon'  => 'far fa-folder',
+
+      'children' => [
+
+        [
+          'label' => 'Riwayat Sales',
+          'url'   => 'sales-riwayat.php',
+          'page'  => 'sales-riwayat'
+        ],
+
+      ]
+    ],
+
+  ]
+],
+
+/*
+=========================================================
+OPERATION
+=========================================================
+*/
+[
+  'title' => 'Operation',
+  'icon'  => 'fas fa-boxes',
+
+  'pages' => [
+
+    'op-pembelian',
+    'op-pembelian-tunai',
+    'op-pembelian-kredit',
+    'op-retur-beli',
+    'op-pembayaran-hutang',
+
+    'op-mutasi',
+    'op-bahanbaku',
+    'op-produksi',
+    'op-adjustment',
+    'op-stockopname',
+
+    'monitor-stock',
+    'monitor-minimum',
+    'monitor-fastmoving',
+    'monitor-slowmoving',
+    'monitor-nilai',
+    'monitor-menu',
+    'monitor-bahan',
+    'monitor-produksi',
+
+    'laporan-pembelian',
+    'laporan-hpp',
+    'laporan-stock',
+
+    'riwayat-stock',
+    'riwayat-kartustock'
+
   ],
+
+  'children' => [
+
+    /*
+    =========================================
+    LEVEL 2 TANPA TURUNAN
+    =========================================
+    */
+    [
+      'label' => 'Dashboard Operation',
+      'url'   => 'operation-dashboard.php',
+      'page'  => 'operation-dashboard'
+    ],
+
+    /*
+    =========================================
+    TRANSAKSI
+    =========================================
+    */
+    [
+      'title' => 'Transaksi',
+      'icon'  => 'far fa-folder',
+
+      'children' => [
+
+        [
+          'label' => 'Pembelian',
+          'url'   => 'op-pembelian.php',
+          'page'  => 'op-pembelian'
+        ],
+
+        [
+          'label' => 'Pembelian Tunai',
+          'url'   => 'op-pembelian-tunai.php',
+          'page'  => 'op-pembelian-tunai'
+        ],
+
+        [
+          'label' => 'Pembelian Kredit',
+          'url'   => 'op-pembelian-kredit.php',
+          'page'  => 'op-pembelian-kredit'
+        ],
+
+        [
+          'label' => 'Retur Pembelian',
+          'url'   => 'op-retur-beli.php',
+          'page'  => 'op-retur-beli'
+        ],
+
+        [
+          'label' => 'Pembayaran Hutang',
+          'url'   => 'op-pembayaran-hutang.php',
+          'page'  => 'op-pembayaran-hutang'
+        ],
+
+        [
+          'label' => 'Mutasi Stok',
+          'url'   => 'op-mutasi.php',
+          'page'  => 'op-mutasi'
+        ],
+
+        [
+          'label' => 'Pemakaian Bahan Baku',
+          'url'   => 'op-bahanbaku.php',
+          'page'  => 'op-bahanbaku'
+        ],
+
+        [
+          'label' => 'Produksi Menu',
+          'url'   => 'op-produksi.php',
+          'page'  => 'op-produksi'
+        ],
+
+        [
+          'label' => 'Adjustment Stok',
+          'url'   => 'op-adjustment.php',
+          'page'  => 'op-adjustment'
+        ],
+
+        [
+          'label' => 'Stock Opname',
+          'url'   => 'op-stockopname.php',
+          'page'  => 'op-stockopname'
+        ],
+
+      ]
+    ],
+
+    /*
+    =========================================
+    MONITORING
+    =========================================
+    */
+    [
+      'title' => 'Monitoring',
+      'icon'  => 'far fa-folder',
+
+      'children' => [
+
+        [
+          'label' => 'Monitoring Stok',
+          'url'   => 'monitor-stock.php',
+          'page'  => 'monitor-stock'
+        ],
+
+        [
+          'label' => 'Stok Minimum',
+          'url'   => 'monitor-minimum.php',
+          'page'  => 'monitor-minimum'
+        ],
+
+        [
+          'label' => 'Fast Moving',
+          'url'   => 'monitor-fastmoving.php',
+          'page'  => 'monitor-fastmoving'
+        ],
+
+        [
+          'label' => 'Slow Moving',
+          'url'   => 'monitor-slowmoving.php',
+          'page'  => 'monitor-slowmoving'
+        ],
+
+        [
+          'label' => 'Nilai Persediaan',
+          'url'   => 'monitor-nilai.php',
+          'page'  => 'monitor-nilai'
+        ],
+
+        [
+          'label' => 'Monitoring Menu',
+          'url'   => 'monitor-menu.php',
+          'page'  => 'monitor-menu'
+        ],
+
+        [
+          'label' => 'Kekurangan Bahan',
+          'url'   => 'monitor-bahan.php',
+          'page'  => 'monitor-bahan'
+        ],
+
+        [
+          'label' => 'Estimasi Produksi',
+          'url'   => 'monitor-produksi.php',
+          'page'  => 'monitor-produksi'
+        ],
+
+      ]
+    ],
+
+    /*
+    =========================================
+    LAPORAN
+    =========================================
+    */
+    [
+      'title' => 'Laporan',
+      'icon'  => 'far fa-folder',
+
+      'children' => [
+
+        [
+          'label' => 'Rekap Pembelian',
+          'url'   => 'laporan-pembelian.php',
+          'page'  => 'laporan-pembelian'
+        ],
+
+        [
+          'label' => 'Rekap HPP',
+          'url'   => 'laporan-hpp.php',
+          'page'  => 'laporan-hpp'
+        ],
+
+        [
+          'label' => 'Rekap Stok',
+          'url'   => 'laporan-stock.php',
+          'page'  => 'laporan-stock'
+        ],
+
+      ]
+    ],
+
+    /*
+    =========================================
+    RIWAYAT
+    =========================================
+    */
+    [
+      'title' => 'Riwayat',
+      'icon'  => 'far fa-folder',
+
+      'children' => [
+
+        [
+          'label' => 'Riwayat Stok',
+          'url'   => 'riwayat-stock.php',
+          'page'  => 'riwayat-stock'
+        ],
+
+        [
+          'label' => 'Kartu Stok',
+          'url'   => 'riwayat-kartustock.php',
+          'page'  => 'riwayat-kartustock'
+        ],
+
+      ]
+    ],
+
+  ]
+],
+
+/*
+=========================================================
+FINANCE
+=========================================================
+*/
+[
+  'title' => 'Finance',
+  'icon'  => 'fas fa-money-bill-wave',
+
+  'pages' => [
+
+    'finance-kasmasuk',
+    'finance-kaskeluar',
+    'finance-jurnalumum',
+    'finance-piutang',
+    'finance-hutang',
+
+    'monitor-cashflow',
+    'monitor-hutangtempo',
+    'monitor-piutangtempo',
+
+    'laporan-bukubesar',
+    'laporan-labarugi',
+    'laporan-modal',
+    'laporan-neraca',
+    'laporan-aruskas',
+
+    'ledger-kas',
+    'ledger-hutang',
+    'ledger-piutang'
+  ],
+
+  'children' => [
+
+    /*
+    =========================================
+    LEVEL 2 TANPA TURUNAN
+    =========================================
+    */
+    [
+      'label' => 'Dashboard Finance',
+      'url'   => 'finance-dashboard.php',
+      'page'  => 'finance-dashboard'
+    ],
+
+    /*
+    =========================================
+    TRANSAKSI
+    =========================================
+    */
+    [
+      'title' => 'Transaksi',
+      'icon'  => 'far fa-folder',
+
+      'children' => [
+
+        [
+          'label' => 'Kas Masuk',
+          'url'   => 'finance-kasmasuk.php',
+          'page'  => 'finance-kasmasuk'
+        ],
+
+        [
+          'label' => 'Kas Keluar',
+          'url'   => 'finance-kaskeluar.php',
+          'page'  => 'finance-kaskeluar'
+        ],
+
+        [
+          'label' => 'Jurnal Umum',
+          'url'   => 'finance-jurnalumum.php',
+          'page'  => 'finance-jurnalumum'
+        ],
+
+        [
+          'label' => 'Pelunasan Piutang',
+          'url'   => 'finance-piutang.php',
+          'page'  => 'finance-piutang'
+        ],
+
+        [
+          'label' => 'Pelunasan Hutang',
+          'url'   => 'finance-hutang.php',
+          'page'  => 'finance-hutang'
+        ],
+
+      ]
+    ],
+
+    /*
+    =========================================
+    MONITORING
+    =========================================
+    */
+    [
+      'title' => 'Monitoring',
+      'icon'  => 'far fa-folder',
+
+      'children' => [
+
+        [
+          'label' => 'Cashflow',
+          'url'   => 'monitor-cashflow.php',
+          'page'  => 'monitor-cashflow'
+        ],
+
+        [
+          'label' => 'Hutang Jatuh Tempo',
+          'url'   => 'monitor-hutangtempo.php',
+          'page'  => 'monitor-hutangtempo'
+        ],
+
+        [
+          'label' => 'Piutang Jatuh Tempo',
+          'url'   => 'monitor-piutangtempo.php',
+          'page'  => 'monitor-piutangtempo'
+        ],
+
+      ]
+    ],
+
+    /*
+    =========================================
+    LAPORAN
+    =========================================
+    */
+    [
+      'title' => 'Laporan',
+      'icon'  => 'far fa-folder',
+
+      'children' => [
+
+        [
+          'label' => 'Buku Besar',
+          'url'   => 'laporan-bukubesar.php',
+          'page'  => 'laporan-bukubesar'
+        ],
+
+        [
+          'label' => 'Laba Rugi',
+          'url'   => 'laporan-labarugi.php',
+          'page'  => 'laporan-labarugi'
+        ],
+
+        [
+          'label' => 'Perubahan Modal',
+          'url'   => 'laporan-modal.php',
+          'page'  => 'laporan-modal'
+        ],
+
+        [
+          'label' => 'Neraca',
+          'url'   => 'laporan-neraca.php',
+          'page'  => 'laporan-neraca'
+        ],
+
+        [
+          'label' => 'Arus Kas',
+          'url'   => 'laporan-aruskas.php',
+          'page'  => 'laporan-aruskas'
+        ],
+
+      ]
+    ],
+
+    /*
+    =========================================
+    RIWAYAT
+    =========================================
+    */
+    [
+      'title' => 'Riwayat',
+      'icon'  => 'far fa-folder',
+
+      'children' => [
+
+        [
+          'label' => 'Ledger Kas',
+          'url'   => 'ledger-kas.php',
+          'page'  => 'ledger-kas'
+        ],
+
+        [
+          'label' => 'Ledger Hutang',
+          'url'   => 'ledger-hutang.php',
+          'page'  => 'ledger-hutang'
+        ],
+
+        [
+          'label' => 'Ledger Piutang',
+          'url'   => 'ledger-piutang.php',
+          'page'  => 'ledger-piutang'
+        ],
+
+      ]
+    ],
+
+  ]
+],
 
 ];
-
 ?>
+    <!-- =========================================================
+    SIDEBAR MENU LOOPING 3 LEVEL - ADMIN LTE
+    Support:
+    LEVEL 1 = MODULE
+    LEVEL 2 = GROUP / SINGLE MENU
+    LEVEL 3 = CHILD MENU
+    ========================================================= -->
+
     <nav class="mt-2">
-      <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview">
+      <ul class="nav nav-pills nav-sidebar flex-column"
+          data-widget="treeview"
+          role="menu"
+          data-accordion="false">
 
-        <?php foreach ($menu as $m): 
+        <?php foreach ($menu as $m): ?>
 
-          $isOpen = in_array($page, $m['pages']);
+          <?php
+          $isOpenLevel1 = in_array($page, $m['pages'] ?? []);
           ?>
 
-          <li class="nav-item <?= $isOpen ? 'menu-open' : '' ?>">
+          <!-- =====================================================
+          LEVEL 1
+          ====================================================== -->
+          <li class="nav-item <?= $isOpenLevel1 ? 'menu-open' : '' ?>">
 
-            <a href="#" class="nav-link <?= $isOpen ? 'active' : '' ?>">
+            <a href="#" class="nav-link <?= $isOpenLevel1 ? 'active' : '' ?>">
               <i class="nav-icon <?= $m['icon'] ?>"></i>
+
               <p>
                 <?= $m['title'] ?>
                 <i class="right fas fa-angle-left"></i>
@@ -202,26 +777,115 @@ $menu = [
             <ul class="nav nav-treeview">
 
               <?php foreach ($m['children'] as $c): ?>
-                <li class="nav-item">
-                  <a href="<?= $c['url'] ?>" class="nav-link <?= $page == $c['page'] ? 'active' : '' ?>">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p><?= $c['label'] ?></p>
-                  </a>
-                </li>
+
+                <?php
+                /*
+                =====================================================
+                CEK:
+                apakah menu level 2 punya children?
+                =====================================================
+                */
+                $hasChildren = isset($c['children']);
+
+                /*
+                =====================================================
+                LEVEL 2 OPEN
+                =====================================================
+                */
+                $isOpenLevel2 = false;
+
+                if ($hasChildren) {
+
+                  foreach ($c['children'] as $sub) {
+                    if ($page == $sub['page']) {
+                      $isOpenLevel2 = true;
+                    }
+                  }
+
+                }
+                ?>
+
+                <!-- =================================================
+                LEVEL 2 DENGAN TURUNAN
+                ================================================== -->
+                <?php if ($hasChildren): ?>
+
+                  <li class="nav-item <?= $isOpenLevel2 ? 'menu-open' : '' ?>">
+
+                    <a href="#"
+                       class="nav-link <?= $isOpenLevel2 ? 'active' : '' ?>">
+
+                      <i class="nav-icon <?= $c['icon'] ?>"></i>
+
+                      <p>
+                        <?= $c['title'] ?>
+                        <i class="right fas fa-angle-left"></i>
+                      </p>
+                    </a>
+
+                    <!-- =============================================
+                    LEVEL 3
+                    ============================================== -->
+                    <ul class="nav nav-treeview">
+
+                      <?php foreach ($c['children'] as $sub): ?>
+
+                        <li class="nav-item">
+
+                          <a href="<?= $sub['url'] ?>"
+                             class="nav-link <?= ($page == $sub['page']) ? 'active' : '' ?>">
+
+                            <i class="far fa-circle nav-icon"></i>
+
+                            <p><?= $sub['label'] ?></p>
+
+                          </a>
+
+                        </li>
+
+                      <?php endforeach; ?>
+
+                    </ul>
+
+                  </li>
+
+                <!-- =================================================
+                LEVEL 2 TANPA TURUNAN
+                ================================================== -->
+                <?php else: ?>
+
+                  <li class="nav-item">
+
+                    <a href="<?= $c['url'] ?>"
+                       class="nav-link <?= ($page == $c['page']) ? 'active' : '' ?>">
+
+                      <i class="far fa-circle nav-icon"></i>
+
+                      <p><?= $c['label'] ?></p>
+
+                    </a>
+
+                  </li>
+
+                <?php endif; ?>
+
               <?php endforeach; ?>
 
             </ul>
-
           </li>
 
         <?php endforeach; ?>
-        <!-- KEMBALI MENU UTAMA -->
+
+        <!-- =====================================================
+        KEMBALI MENU UTAMA
+        ====================================================== -->
         <li class="nav-item mt-3">
           <a href="../menu.php" class="nav-link">
             <i class="nav-icon fas fa-arrow-left"></i>
             <p>Kembali Menu Utama</p>
           </a>
         </li>
+
       </ul>
     </nav>
 

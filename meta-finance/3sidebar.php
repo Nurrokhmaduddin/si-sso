@@ -68,6 +68,7 @@ $menu = [
 ['label' => 'Marketing / Reseller', 'url' => 'master-Marketing.php', 'page' => 'master-Marketing'],
 
       ['label' => 'COA (Chart of Account)', 'url' => 'master-coa.php', 'page' => 'master-coa'],
+      ['label' => 'Budget Mapping', 'url' => 'master-budget.php', 'page' => 'master-budget'],
     ]
   ],
 
@@ -521,284 +522,767 @@ Tujuan:
 
         <?php endforeach; ?>
         <!-- ========================================================= -->
-<!-- 💰 KEUANGAN -->
+        <!-- 💰 KEUANGAN -->
+        <!-- ========================================================= -->
+        <li class="nav-item has-treeview">
+
+          <a href="#" class="nav-link">
+            <i class="nav-icon fas fa-wallet"></i>
+            <p>
+              Keuangan
+              <i class="right fas fa-angle-left"></i>
+            </p>
+          </a>
+
+          <ul class="nav nav-treeview">
+
+            <!-- ========================================================= -->
+            <!-- 📑 DASHBOARD KEUANGAN -->
+            <!-- ========================================================= -->
+            <li class="nav-item has-treeview">
+
+              <a href="keuangan-dashboard.php" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>
+                  Dashboard Keuangan
+                  <i class="right fas fa-angle-left"></i>
+                </p>
+              </a>
+
+              <ul class="nav nav-treeview">
+
+                <li class="nav-item">
+                  <a href="akuntansi-dashboard.php" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Dashboard Akuntansi</p>
+                  </a>
+                </li>
+
+                <li class="nav-item">
+                  <a href="akuntansi-dashboard-cashflow.php" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Dashboard Cashflow</p>
+                  </a>
+                </li>
+
+                <li class="nav-item">
+                  <a href="akuntansi-dashboard-profit.php" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Dashboard Profit</p>
+                  </a>
+                </li>
+
+                <li class="nav-item">
+                  <a href="akuntansi-dashboard-neraca.php" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Dashboard Neraca</p>
+                  </a>
+                </li>
+
+              </ul>
+            </li>
+
+            <!-- ========================================================= -->
+<!-- 📑 FINANCIAL TRANSACTIONS -->
 <!-- ========================================================= -->
 <li class="nav-item has-treeview">
 
-  <a href="#" class="nav-link">
-    <i class="nav-icon fas fa-wallet"></i>
+  <a href="finance-transactions.php" class="nav-link">
+    <i class="fas fa-exchange-alt nav-icon"></i>
     <p>
-      Keuangan
+      Transaksi Keuangan
       <i class="right fas fa-angle-left"></i>
     </p>
   </a>
 
   <ul class="nav nav-treeview">
 
-        <!-- ========================================================= -->
-        <!-- 📑 Dashboard KEUANGAN -->
-        <!-- ========================================================= -->
-        <li class="nav-item has-treeview">
-
-          <a href="keuangan-dashboard.php" class="nav-link">
-            <i class="far fa-circle nav-icon"></i>
-            <p>
-              Dashboard Keuangan
-              <i class="right fas fa-angle-left"></i>
-            </p>
-          </a>
-
-          <ul class="nav nav-treeview">
-<!-- DASHBOARD -->
-        <li class="nav-item">
-          <a href="akuntansi-dashboard.php" class="nav-link">
-            <i class="far fa-circle nav-icon"></i>
-            <p>Dashboard Akuntansi</p>
-          </a>
-        </li>
-
-        <li class="nav-item">
-          <a href="akuntansi-dashboard-cashflow.php" class="nav-link">
-            <i class="far fa-circle nav-icon"></i>
-            <p>Dashboard Cashflow</p>
-          </a>
-        </li>
-
-        <li class="nav-item">
-          <a href="akuntansi-dashboard-profit.php" class="nav-link">
-            <i class="far fa-circle nav-icon"></i>
-            <p>Dashboard Profit</p>
-          </a>
-        </li>
-
-        <li class="nav-item">
-          <a href="akuntansi-dashboard-neraca.php" class="nav-link">
-            <i class="far fa-circle nav-icon"></i>
-            <p>Dashboard Neraca</p>
-          </a>
-        </li>
-
-
-
-            
-
-          </ul>
-        </li>
-
-
-       
-        <!-- ========================================================= -->
-        <!-- 📑 Monitoring KEUANGAN -->
-        <!-- ========================================================= -->
-        <li class="nav-item has-treeview">
-
-          <a href="keuangan-monitoring.php" class="nav-link">
-            <i class="far fa-circle nav-icon"></i>
-            <p>
-              Monitoring Keuangan
-              <i class="right fas fa-angle-left"></i>
-            </p>
-          </a>
-
-          <ul class="nav nav-treeview">
-
-
-            <!-- MONITORING -->
-            <li class="nav-item">
-              <a href="akuntansi-monitor-jurnal.php" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Monitor Jurnal Tidak Balance</p>
-              </a>
-            </li>
-
-            <li class="nav-item">
-              <a href="akuntansi-monitor-balance.php" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Monitor Saldo Tidak Balance</p>
-              </a>
-            </li>
-
-            <li class="nav-item">
-              <a href="akuntansi-monitor-overbudget.php" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Monitor Over Budget</p>
-              </a>
-            </li>
-
-            <li class="nav-item">
-              <a href="akuntansi-monitor-piutang.php" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Monitor Piutang Jatuh Tempo</p>
-              </a>
-            </li>
-
-            <li class="nav-item">
-              <a href="akuntansi-monitor-hutang.php" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Monitor Hutang Jatuh Tempo</p>
-              </a>
-            </li>
-
-
-
-
-          </ul>
-        </li>
-             <li class="nav-item">
-          <a href="jurnal.php" class="nav-link">
-            <i class="far fa-circle nav-icon"></i>
-            <p>Jurnal</p>
-          </a>
-        </li>
+    <!-- BUDGET STRUCTURE -->
     <li class="nav-item">
-      <a href="saldo-buku-besar.php" class="nav-link">
+      <a href="budget-structure.php"
+         class="nav-link"
+         title="Struktur mata anggaran / budget account structure">
         <i class="far fa-circle nav-icon"></i>
-        <p>Buku Besar Saldo</p>
+        <p>Budget Structure</p>
       </a>
     </li>
 
+    <!-- PLAN BUDGETING -->
     <li class="nav-item">
-      <a href="akuntansi-neraca-saldo.php" class="nav-link">
+      <a href="plan-budgeting.php"
+         class="nav-link"
+         title="Budget revenue target and budget expense limit">
         <i class="far fa-circle nav-icon"></i>
-        <p>Neraca Saldo</p>
+        <p>Plan Budgeting</p>
       </a>
     </li>
-    <!-- ========================================================= -->
-    <!-- 📑 LAPORAN KEUANGAN -->
-    <!-- ========================================================= -->
-    <li class="nav-item has-treeview">
 
-      <a href="#" class="nav-link">
-        <i class="nav-icon fas fa-file-invoice-dollar"></i>
-        <p>
-          Laporan Keuangan
-          <i class="right fas fa-angle-left"></i>
-        </p>
+    <!-- INVOICE MANAGEMENT -->
+    <li class="nav-item">
+      <a href="invoice-management.php"
+         class="nav-link"
+         title="Billing schedule, invoice, due date, collection, and payment management. Commonly used for SaaS, project milestones, subscriptions, maintenance, rentals, and infrastructure services.">
+        <i class="far fa-circle nav-icon"></i>
+        <p>Invoice Management</p>
       </a>
-
-      <ul class="nav nav-treeview">
-        <!-- LAPORAN -->
-        <li class="nav-item">
-          <a href="akuntansi-laporan-laba-rugi.php" class="nav-link">
-            <i class="far fa-circle nav-icon"></i>
-            <p>Laporan Laba Rugi</p>
-          </a>
-        </li>
-
-        <li class="nav-item">
-          <a href="akuntansi-laporan-perubahan-modal.php" class="nav-link">
-            <i class="far fa-circle nav-icon"></i>
-            <p>Laporan Perubahan Modal</p>
-          </a>
-        </li>
-
-        <li class="nav-item">
-          <a href="akuntansi-laporan-neraca.php" class="nav-link">
-            <i class="far fa-circle nav-icon"></i>
-            <p>Laporan Neraca</p>
-          </a>
-        </li>
-
-        <li class="nav-item">
-          <a href="akuntansi-laporan-arus-kas.php" class="nav-link">
-            <i class="far fa-circle nav-icon"></i>
-            <p>Laporan Arus Kas</p>
-          </a>
-        </li>
-
-      </ul>
     </li>
 
-
-    <!-- ========================================================= -->
-    <!-- 📈 ANALISA KEUANGAN -->
-    <!-- ========================================================= -->
-    <li class="nav-item has-treeview">
-
-      <a href="#" class="nav-link">
-        <i class="nav-icon fas fa-chart-line"></i>
-        <p>
-          Analisa Keuangan
-          <i class="right fas fa-angle-left"></i>
-        </p>
+    <!-- EXPENSE MANAGEMENT -->
+    <li class="nav-item">
+      <a href="expense-management.php"
+         class="nav-link"
+         title="Expense category, expense request, approval, disbursement, and reimbursement management">
+        <i class="far fa-circle nav-icon"></i>
+        <p>Expense Management</p>
       </a>
-
-      <ul class="nav nav-treeview">
-        <li class="nav-item">
-          <a href="akuntansi-analisa-rasio-keuangan.php" class="nav-link">
-            <i class="far fa-circle nav-icon"></i>
-            <p>Analisa Rasio Keuangan</p>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a href="akuntansi-analisa-trend.php" class="nav-link">
-            <i class="far fa-circle nav-icon"></i>
-            <p>Analisa Growth</p>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a href="akuntansi-analisa-cashflow.php" class="nav-link">
-            <i class="far fa-circle nav-icon"></i>
-            <p>Analisa Cashflow Trend</p>
-          </a>
-        </li>
-<li class="nav-item">
-          <a href="akuntansi-analisa-profit.php" class="nav-link">
-            <i class="far fa-circle nav-icon"></i>
-            <p>Analisa Profitabilitas</p>
-          </a>
-        </li>
-      </ul>
     </li>
 
-
-    <!-- ========================================================= -->
-    <!-- 🕓 RIWAYAT / AUDIT TRAIL -->
-    <!-- ========================================================= -->
-    <li class="nav-item has-treeview">
-
-      <a href="#" class="nav-link">
-        <i class="nav-icon fas fa-history"></i>
-        <p>
-          Riwayat / Audit Trail
-          <i class="right fas fa-angle-left"></i>
-        </p>
+    <!-- APPROVAL CENTER -->
+    <li class="nav-item">
+      <a href="approval-center.php"
+         class="nav-link"
+         title="Budget approval, expense approval, payment approval, and reimbursement approval">
+        <i class="far fa-circle nav-icon"></i>
+        <p>Approval Center</p>
       </a>
+    </li>
 
-      <ul class="nav nav-treeview">
+    <!-- CASH IN -->
+    <li class="nav-item">
+      <a href="cash-in.php"
+         class="nav-link"
+         title="Record incoming cash transactions">
+        <i class="far fa-circle nav-icon"></i>
+        <p>Cash In</p>
+      </a>
+    </li>
 
-        <li class="nav-item">
-          <a href="akuntansi-riwayat-jurnal.php" class="nav-link">
-            <i class="far fa-circle nav-icon"></i>
-            <p>Audit Jurnal</p>
-          </a>
-        </li>
- <li class="nav-item">
-          <a href="akuntansi-audit-log.php" class="nav-link">
-            <i class="far fa-circle nav-icon"></i>
-            <p>Audit Log Posting</p>
-          </a>
-        </li>
+    <!-- CASH OUT -->
+    <li class="nav-item">
+      <a href="cash-out.php"
+         class="nav-link"
+         title="Record outgoing cash transactions">
+        <i class="far fa-circle nav-icon"></i>
+        <p>Cash Out</p>
+      </a>
+    </li>
 
-        <li class="nav-item">
-          <a href="akuntansi-riwayat-koreksi.php" class="nav-link">
-            <i class="far fa-circle nav-icon"></i>
-            <p>Riwayat koreksi</p>
-          </a>
-        </li>
+    <!-- PETTY CASH -->
+    <li class="nav-item">
+      <a href="petty-cash.php"
+         class="nav-link"
+         title="Used for small operational expenses that are inefficient to process through bank transfer">
+        <i class="far fa-circle nav-icon"></i>
+        <p>Petty Cash</p>
+      </a>
+    </li>
 
-        <li class="nav-item">
-          <a href="riwayat-buku-besar.php" class="nav-link">
-            <i class="far fa-circle nav-icon"></i>
-            <p>Buku Besar Detail</p>
-          </a>
-        </li>
-       
-      </ul>
+    <!-- BANK MANAGEMENT -->
+    <li class="nav-item">
+      <a href="bank-management.php"
+         class="nav-link"
+         title="Bank accounts, balances, bank statements, interbank transfers, and bank reconciliation">
+        <i class="far fa-circle nav-icon"></i>
+        <p>Bank Management</p>
+      </a>
+    </li>
+
+    <!-- ACCOUNTS RECEIVABLE -->
+    <li class="nav-item">
+      <a href="accounts-receivable.php"
+         class="nav-link"
+         title="Create invoice, receive payment, write-off, and receivable adjustment">
+        <i class="far fa-circle nav-icon"></i>
+        <p>Accounts Receivable (AR)</p>
+      </a>
+    </li>
+
+    <!-- ACCOUNTS PAYABLE -->
+    <li class="nav-item">
+      <a href="accounts-payable.php"
+         class="nav-link"
+         title="Receive bill, supplier payment, and payable adjustment">
+        <i class="far fa-circle nav-icon"></i>
+        <p>Accounts Payable (AP)</p>
+      </a>
+    </li>
+
+    <!-- PREPAID EXPENSE -->
+    <li class="nav-item">
+      <a href="prepaid-expense.php"
+         class="nav-link"
+         title="Register prepaid expenses and amortization posting. Cash has been paid but benefits are not fully used yet. Examples: annual rent, insurance, software licenses.">
+        <i class="far fa-circle nav-icon"></i>
+        <p>Prepaid Expense</p>
+      </a>
+    </li>
+
+    <!-- DEFERRED REVENUE -->
+    <li class="nav-item">
+      <a href="deferred-revenue.php"
+         class="nav-link"
+         title="Register deferred revenue and revenue recognition. Cash has been received but services have not been fully delivered yet. Examples: annual subscriptions, project down payments, maintenance contracts.">
+        <i class="far fa-circle nav-icon"></i>
+        <p>Deferred Revenue</p>
+      </a>
+    </li>
+
+    <!-- FIXED ASSET -->
+    <li class="nav-item">
+      <a href="fixed-assets.php"
+         class="nav-link"
+         title="Asset registration, acquisition cost, useful life, depreciation, accumulated depreciation, and asset disposal">
+        <i class="far fa-circle nav-icon"></i>
+        <p>Fixed Assets</p>
+      </a>
+    </li>
+
+    <!-- COA MASTER -->
+    <li class="nav-item">
+      <a href="chart-of-accounts.php"
+         class="nav-link"
+         title="Chart of Accounts (COA) master data management">
+        <i class="far fa-circle nav-icon"></i>
+        <p>Chart of Accounts</p>
+      </a>
+    </li>
+
+    <!-- GENERAL JOURNAL -->
+    <li class="nav-item">
+      <a href="general-journal.php"
+         class="nav-link"
+         title="Manual accounting journal entries">
+        <i class="far fa-circle nav-icon"></i>
+        <p>General Journal</p>
+      </a>
+    </li>
+
+    <!-- SPECIAL JOURNAL -->
+    <li class="nav-item">
+      <a href="special-journal.php"
+         class="nav-link"
+         title="Special journals for recurring transaction categories such as sales, purchases, cash receipts, and cash disbursements">
+        <i class="far fa-circle nav-icon"></i>
+        <p>Special Journal</p>
+      </a>
+    </li>
+
+    <!-- ADJUSTMENT JOURNAL -->
+    <li class="nav-item">
+      <a href="adjustment-journal.php"
+         class="nav-link"
+         title="Adjustment entries for accruals, depreciation, prepaid expense amortization, and corrections">
+        <i class="far fa-circle nav-icon"></i>
+        <p>Adjustment Journal</p>
+      </a>
+    </li>
+
+    <!-- REVERSING JOURNAL -->
+    <li class="nav-item">
+      <a href="reversing-journal.php"
+         class="nav-link"
+         title="Reverse previous adjustment journal entries in the next accounting period">
+        <i class="far fa-circle nav-icon"></i>
+        <p>Reversing Journal</p>
+      </a>
     </li>
 
   </ul>
 </li>
+
+      <!-- ========================================================= -->
+      <!-- 📑 MONITORING KEUANGAN -->
+      <!-- ========================================================= -->
+      <li class="nav-item has-treeview">
+
+        <a href="keuangan-monitoring.php" class="nav-link">
+          <i class="fas fa-desktop nav-icon"></i>
+          <p>
+            Monitor Keuangan
+            <i class="right fas fa-angle-left"></i>
+          </p>
+        </a>
+
+        <ul class="nav nav-treeview">
+
+          <!-- MONITORING -->
+                     <li class="nav-item">
+            <a href="akuntansi-monitor-hutang.php" class="nav-link">
+              <i class="far fa-circle nav-icon"></i>
+              <p>cash position</p>
+            </a>
+          </li>
+
+
+          
+<li class="nav-item">
+            <a href="akuntansi-monitor-overbudget.php" class="nav-link">
+              <i class="far fa-circle nav-icon"></i>
+              <p>Monitor Outstanding Expense</p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="akuntansi-monitor-overbudget.php" class="nav-link">
+              <i class="far fa-circle nav-icon"></i>
+              <p>Monitor Over Budget</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="akuntansi-monitor-overbudget.php" class="nav-link">
+              <i class="far fa-circle nav-icon"></i>
+              <p>Monitor Pending Approval</p>
+            </a>
+          </li>
+                  <li class="nav-item">
+            <a href="akuntansi-monitor-overbudget.php" class="nav-link">
+              <i class="far fa-circle nav-icon"></i>
+              <p>Monitor Expense Realization</p>
+            </a>
+          </li>  
+
+          <li class="nav-item">
+            <a href="akuntansi-monitor-piutang.php" class="nav-link">
+              <i class="far fa-circle nav-icon"></i>
+              <p>Monitor Piutang Jatuh Tempo</p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="akuntansi-monitor-hutang.php" class="nav-link">
+              <i class="far fa-circle nav-icon"></i>
+              <p>Monitor Hutang Jatuh Tempo</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="akuntansi-monitor-hutang.php" class="nav-link" title="Piutang customer overdue">
+              <i class="far fa-circle nav-icon"></i>
+              <p>Accounts Receivable (AR) overdue</p>
+            </a>
+          </li>
+           <li class="nav-item">
+            <a href="akuntansi-monitor-hutang.php" class="nav-link" title="Hutang supplier/vendor. due">
+              <i class="far fa-circle nav-icon"></i>
+              <p>Accounts Payable (AP) due</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="akuntansi-monitor-hutang.php" class="nav-link">
+              <i class="far fa-circle nav-icon"></i>
+              <p>Monitor Collection</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="akuntansi-monitor-hutang.php" class="nav-link">
+              <i class="far fa-circle nav-icon"></i>
+              <p>Monitor Outstanding Invoice</p>
+            </a>
+          </li>
+          
+
+           <li class="nav-item">
+            <a href="akuntansi-monitor-hutang.php" class="nav-link">
+              <i class="far fa-circle nav-icon"></i>
+              <p>Aliquidity warning</p>
+            </a>
+          </li>
+          
+          
+          
+<li class="nav-item">
+            <a href="akuntansi-monitor-balance.php" class="nav-link">
+              <i class="far fa-circle nav-icon"></i>
+              <p>Monitor Saldo Tidak Balance</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="akuntansi-monitor-jurnal.php" class="nav-link">
+              <i class="far fa-circle nav-icon"></i>
+              <p>Monitor Jurnal Tidak Balance</p>
+            </a>
+          </li>
+
+
+          <li class="nav-item">
+            <a href="akuntansi-neraca-saldo.php" class="nav-link">
+              <i class="far fa-circle nav-icon"></i>
+              <p>Neraca Saldo</p>
+            </a>
+          </li>
+
+          <!-- FIXED ASSET -->
+          <li class="nav-item">
+            <a href="finance-monitor-asset-position.php" class="nav-link" title="Isi:
+
+            nilai buku,
+            umur manfaat,
+            akumulasi depresiasi,
+            nilai sisa.">
+            <i class="far fa-circle nav-icon"></i>
+            <p>Asset Position Monitoring</p>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a href="finance-monitor-asset-reconciliation.php" class="nav-link">
+            <i class="far fa-circle nav-icon"></i>
+            <p>Asset Reconciliation Monitoring</p>
+          </a>
+        </li>
+
+        <!-- PREPAID -->
+        <li class="nav-item">
+          <a href="finance-monitor-prepaid.php" class="nav-link" title="Isi:
+
+          saldo tersisa,
+          periode aktif,
+          outstanding amortization.">
+          <i class="far fa-circle nav-icon"></i>
+          <p>Prepaid Expense Monitoring</p>
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a href="finance-monitor-prepaid-reconciliation.php" class="nav-link">
+          <i class="far fa-circle nav-icon"></i>
+          <p>Prepaid Reconciliation Monitoring</p>
+        </a>
+      </li>
+
+      <!-- DEFERRED -->
+      <li class="nav-item">
+        <a href="finance-monitor-deferred-revenue.php" class="nav-link">
+          <i class="far fa-circle nav-icon"></i>
+          <p>Deferred Revenue Monitoring</p>
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a href="finance-monitor-deferred-reconciliation.php" class="nav-link" title="Isi:
+
+        saldo liability tersisa,
+        pending recognition.">
+        <i class="far fa-circle nav-icon"></i>
+        <p>Deferred Revenue Reconciliation Monitoring</p>
+      </a>
+    </li>
+
+  </ul>
+</li>
+
+<!-- ========================================================= -->
+<!-- 📑 LAPORAN KEUANGAN -->
+<!-- ========================================================= -->
+<li class="nav-item has-treeview">
+
+  <a href="#" class="nav-link">
+    <i class="nav-icon fas fa-folder-open"></i>
+    <p>
+      Laporan Keuangan
+      <i class="right fas fa-angle-left"></i>
+    </p>
+  </a>
+
+  <ul class="nav nav-treeview">
+
+    <!-- LAPORAN -->
+    <li class="nav-item">
+      <a href="saldo-buku-besar.php" class="nav-link">
+        <i class="far fa-circle nav-icon"></i>
+        <p>Buku Besar Saldo/Rekap</p>
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a href="akuntansi-laporan-laba-rugi.php" class="nav-link">
+        <i class="far fa-circle nav-icon"></i>
+        <p>Laba Rugi</p>
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a href="akuntansi-laporan-perubahan-modal.php" class="nav-link">
+        <i class="far fa-circle nav-icon"></i>
+        <p>Perubahan Modal</p>
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a href="akuntansi-laporan-neraca.php" class="nav-link">
+        <i class="far fa-circle nav-icon"></i>
+        <p>Neraca</p>
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a href="akuntansi-laporan-arus-kas.php" class="nav-link">
+        <i class="far fa-circle nav-icon"></i>
+        <p>Arus Kas</p>
+      </a>
+    </li>
+
+    <!-- FIXED ASSET -->
+    <li class="nav-item">
+      <a href="finance-report-fixed-asset.php" class="nav-link" title="Isi:
+
+      daftar aset,
+      nilai perolehan,
+      akumulasi,
+      nilai buku.">
+      <i class="far fa-circle nav-icon"></i>
+      <p>Fixed Asset Report</p>
+    </a>
+  </li>
+
+  <li class="nav-item">
+    <a href="finance-report-depreciation.php" class="nav-link" title="Isi:
+
+    penyusutan per periode,
+    per akun,
+    per aset.">
+    <i class="far fa-circle nav-icon"></i>
+    <p>Depreciation Report</p>
+  </a>
+</li>
+
+<!-- PREPAID -->
+<li class="nav-item">
+  <a href="finance-report-prepaid.php" class="nav-link">
+    <i class="far fa-circle nav-icon"></i>
+    <p>Prepaid Expense Report</p>
+  </a>
+</li>
+
+<li class="nav-item">
+  <a href="finance-report-prepaid-amortization.php" class="nav-link">
+    <i class="far fa-circle nav-icon"></i>
+    <p>Prepaid Amortization Report</p>
+  </a>
+</li>
+
+<!-- DEFERRED -->
+<li class="nav-item">
+  <a href="finance-report-deferred-revenue.php" class="nav-link">
+    <i class="far fa-circle nav-icon"></i>
+    <p>Deferred Revenue Report</p>
+  </a>
+</li>
+
+<li class="nav-item">
+  <a href="finance-report-revenue-recognition.php" class="nav-link">
+    <i class="far fa-circle nav-icon"></i>
+    <p>Revenue Recognition Report</p>
+  </a>
+</li>
+
+
+ <!-- Expense Report -->
+
+ <li class="nav-item">
+  <a href="finance-report-revenue-recognition.php" class="nav-link" title="Expense Report
+Expense by Department
+Expense by Project
+Expense vs Budget
+Reimbursement Report">
+    <i class="far fa-circle nav-icon"></i>
+    <p>Expense Report</p>
+  </a>
+</li>
+
+
+ <li class="nav-item">
+  <a href="finance-report-revenue-recognition.php" class="nav-link" title="Expense Report
+Expense by Department
+Expense by Project
+Expense vs Budget
+Reimbursement Report">
+    <i class="far fa-circle nav-icon"></i>
+    <p>Reimbursement Report</p>
+  </a>
+</li>
+
+</ul>
+</li>
+
+<!-- ========================================================= -->
+<!-- 📈 ANALISA KEUANGAN -->
+<!-- ========================================================= -->
+<li class="nav-item has-treeview">
+
+  <a href="#" class="nav-link">
+    <i class="nav-icon fas fa-chart-bar"></i>
+    <p>
+      Analisa Keuangan
+      <i class="right fas fa-angle-left"></i>
+    </p>
+  </a>
+
+  <ul class="nav nav-treeview">
+
+    <li class="nav-item">
+      <a href="akuntansi-analisa-rasio-keuangan.php" class="nav-link">
+        <i class="far fa-circle nav-icon"></i>
+        <p>Analisa Rasio Keuangan</p>
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a href="akuntansi-analisa-trend.php" class="nav-link">
+        <i class="far fa-circle nav-icon"></i>
+        <p>Analisa Growth</p>
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a href="akuntansi-analisa-cashflow.php" class="nav-link">
+        <i class="far fa-circle nav-icon"></i>
+        <p>Analisa Cashflow Trend</p>
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a href="akuntansi-analisa-profit.php" class="nav-link">
+        <i class="far fa-circle nav-icon"></i>
+        <p>Analisa Profitabilitas</p>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="akuntansi-analisa-profit.php" class="nav-link">
+        <i class="far fa-circle nav-icon"></i>
+        <p>Expense Trend</p>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="akuntansi-analisa-profit.php" class="nav-link">
+        <i class="far fa-circle nav-icon"></i>
+        <p>Expense Growth</p>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="akuntansi-analisa-profit.php" class="nav-link">
+        <i class="far fa-circle nav-icon"></i>
+        <p>Cost Structure Analysis</p>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="akuntansi-analisa-profit.php" class="nav-link">
+        <i class="far fa-circle nav-icon"></i>
+        <p>Department Spending Analysis</p>
+      </a>
+    </li>
+
+
+  </ul>
+</li>
+
+<!-- ========================================================= -->
+<!-- 🕓 RIWAYAT / AUDIT TRAIL -->
+<!-- ========================================================= -->
+<li class="nav-item has-treeview">
+
+  <a href="#" class="nav-link">
+    <i class="nav-icon fas fa-history"></i>
+    <p>
+      Riwayat / Audit Trail
+      <i class="right fas fa-angle-left"></i>
+    </p>
+  </a>
+
+  <ul class="nav nav-treeview">
+
+    <li class="nav-item">
+      <a href="akuntansi-riwayat-jurnal.php" class="nav-link">
+        <i class="far fa-circle nav-icon"></i>
+        <p>Audit Jurnal</p>
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a href="akuntansi-audit-log.php" class="nav-link">
+        <i class="far fa-circle nav-icon"></i>
+        <p>Audit Log Posting</p>
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a href="akuntansi-riwayat-koreksi.php" class="nav-link">
+        <i class="far fa-circle nav-icon"></i>
+        <p>Riwayat Koreksi</p>
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a href="riwayat-buku-besar.php" class="nav-link">
+        <i class="far fa-circle nav-icon"></i>
+        <p>Buku Besar Detail</p>
+      </a>
+    </li>
+
+    <!-- FIXED ASSET -->
+    <li class="nav-item">
+      <a href="finance-history-asset-ledger.php" class="nav-link" title="Histori: acquisition,adjustment,depreciation,disposal.">
+        <i class="far fa-circle nav-icon"></i>
+        <p>Asset Ledger</p>
+      </a>
+    </li>
+
+    <!-- PREPAID -->
+    <li class="nav-item">
+      <a href="finance-history-prepaid-ledger.php" class="nav-link">
+        <i class="far fa-circle nav-icon"></i>
+        <p>Prepaid Expense Ledger</p>
+      </a>
+    </li>
+
+    <!-- DEFERRED -->
+    <li class="nav-item">
+      <a href="finance-history-deferred-ledger.php" class="nav-link">
+        <i class="far fa-circle nav-icon"></i>
+        <p>Deferred Revenue Ledger</p>
+      </a>
+    </li>
+
+ 
+ <!-- EXPENSE -->
+     <li class="nav-item">
+      <a href="finance-history-deferred-ledger.php" class="nav-link">
+        <i class="far fa-circle nav-icon"></i>
+        <p>Expense Ledger</p>
+      </a>
+    </li>
+
+
+     <li class="nav-item">
+      <a href="finance-history-deferred-ledger.php" class="nav-link">
+        <i class="far fa-circle nav-icon"></i>
+        <p>Approval History</p>
+      </a>
+    </li>
+
+
+     <li class="nav-item">
+      <a href="finance-history-deferred-ledger.php" class="nav-link">
+        <i class="far fa-circle nav-icon"></i>
+        <p>Reimbursement History</p>
+      </a>
+    </li>
+
+
+     <li class="nav-item">
+      <a href="finance-history-deferred-ledger.php" class="nav-link">
+        <i class="far fa-circle nav-icon"></i>
+        <p>Expense Audit Trail</p>
+      </a>
+    </li>
+
+  </ul>
+</li>
+
+</ul>
+</li>
+
+
+
         <!-- KEMBALI MENU UTAMA -->
         <li class="nav-item mt-3">
           <a href="../menu.php" class="nav-link">

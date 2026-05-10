@@ -142,6 +142,104 @@
           </li>
 
         <?php endforeach; ?>
+            <!-- 1. MASTER DATA -->
+    <div class="menu-section">
+      <div class="menu-title">1. Master Data</div>
+      <ul class="menu">
+        <li><a href="#">Customer</a></li>
+        <li><a href="#">Supplier</a></li>
+        <li><a href="#">Persediaan</a></li>
+        <li><a href="#">-Produk</a></li>
+        <li><a href="#">-Bahan Baku</a></li>
+        <li><a href="#">-Resep / BOM</a></li>
+        <li><a href="#">Gudang</a></li>
+        <li><a href="#">Kas / Bank</a></li>
+        <li><a href="#">COA Akuntansi</a></li>
+        <li><a href="#">User & Hak Akses</a></li>
+      </ul>
+    </div>
+
+    <!-- 2. TRANSAKSI -->
+    <div class="menu-section">
+      <div class="menu-title">2. Transaksi Operasional</div>
+
+      <ul class="menu">
+        <li><a href="#">Penjualan</a></li>
+        <li><a href="#">POS / Kasir</a></li>
+        <li><a href="#">Penjualan Kredit</a></li>
+        <li><a href="#">Retur Penjualan</a></li>
+        <li><a href="#">DP Penjualan</a></li>
+
+        <li><a href="#">Pembelian</a></li>
+        <li><a href="#">Pembelian Tunai</a></li>
+        <li><a href="#">Pembelian Kredit</a></li>
+        <li><a href="#">Retur Pembelian</a></li>
+        <li><a href="#">Pembayaran Hutang</a></li>
+
+        <li><a href="#">Inventory</a></li>
+        <li><a href="#">Mutasi Stok</a></li>
+        <li><a href="#">Pemakaian Bahan Baku</a></li>
+        <li><a href="#">Produksi Menu</a></li>
+        <li><a href="#">Adjustment Stok</a></li>
+        <li><a href="#">Stock Opname</a></li>
+
+        <li><a href="#">Kas Masuk</a></li>
+        <li><a href="#">Kas Keluar</a></li>
+        <li><a href="#">Jurnal Umum</a></li>
+        <li><a href="#">Pelunasan Piutang</a></li>
+        <li><a href="#">Pelunasan Hutang</a></li>
+      </ul>
+    </div>
+
+    <!-- 3. MONITORING -->
+    <div class="menu-section">
+      <div class="menu-title">3. Monitoring</div>
+
+      <ul class="menu">
+        <li><a href="#">Monitoring Stok</a></li>
+        <li><a href="#">Stok Minimum</a></li>
+        <li><a href="#">Fast Moving</a></li>
+        <li><a href="#">Slow Moving</a></li>
+        <li><a href="#">Nilai Persediaan</a></li>
+
+        <li><a href="#">Monitoring Menu</a></li>
+        <li><a href="#">Menu Bisa Diproduksi</a></li>
+        <li><a href="#">Kekurangan Bahan</a></li>
+        <li><a href="#">Estimasi Produksi</a></li>
+
+        <li><a href="#">Cashflow</a></li>
+        <li><a href="#">Hutang Jatuh Tempo</a></li>
+        <li><a href="#">Piutang Jatuh Tempo</a></li>
+      </ul>
+    </div>
+
+    <!-- 4. RIWAYAT -->
+    <div class="menu-section">
+      <div class="menu-title">4. Riwayat & Ledger</div>
+
+      <ul class="menu">
+        <li><a href="#">Riwayat Stok</a></li>
+        <li><a href="#">Kartu Stok</a></li>
+        <li><a href="#">Ledger Kas</a></li>
+        <li><a href="#">Ledger Hutang</a></li>
+        <li><a href="#">Ledger Piutang</a></li>
+      </ul>
+    </div>
+
+    <!-- 5. LAPORAN -->
+    <div class="menu-section">
+      <div class="menu-title">5. Laporan</div>
+
+      <ul class="menu">
+        <li><a href="#">Laba Rugi</a></li>
+        <li><a href="#">Neraca</a></li>
+        <li><a href="#">Arus Kas</a></li>
+        <li><a href="#">Rekap Penjualan</a></li>
+        <li><a href="#">Rekap Pembelian</a></li>
+        <li><a href="#">Rekap HPP</a></li>
+        <li><a href="#">Rekap Stok</a></li>
+      </ul>
+    </div>
         <!-- KEMBALI MENU UTAMA -->
         <li class="nav-item mt-3">
           <a href="../menu.php" class="nav-link">
