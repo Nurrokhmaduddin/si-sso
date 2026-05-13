@@ -170,7 +170,7 @@ $menu = [
 
       [
         'title' => 'Data Management',
-        'icon'  => 'far fa-folder-open',
+        'icon'  => 'fas fa-folder-open',
 
         'children' => [
  [
@@ -195,6 +195,27 @@ $menu = [
             'page'  => 'master-recipe',
              'title'  => 'terdapat Bill of material dari tiap menu recipe'
           ],
+
+
+
+
+          // [
+          //   'label' => 'Raw Materials',
+          //   'url'   => 'master-raw-material.php',
+          //   'page'  => 'master-raw-material'
+          // ],
+
+
+
+
+          // [
+          //   'label' => 'Menu Category',
+          //   'url'   => 'master-category.php',
+          //   'page'  => 'master-category'
+          // ],
+
+
+
           [
             'label' => 'Package Menu',
             'url'   => 'master-package-menu.php',
@@ -234,11 +255,11 @@ $menu = [
             'page'  => 'master-Discount-Promo'
           ],
 
-          [
-            'label' => 'COA / Chart of Account',
-            'url'   => 'master-coa.php',
-            'page'  => 'master-coa'
-          ],
+          // [
+          //   'label' => 'COA / Chart of Account',
+          //   'url'   => 'master-coa.php',
+          //   'page'  => 'master-coa'
+          // ],
 
 
 
@@ -347,7 +368,7 @@ $menu = [
 
           [
             'label' => 'Sales Orders',
-            'url'   => 'sales-order.php',
+            'url'   => 'sales-order-list.php',
             'page'  => 'sales-order'
           ],
 
@@ -357,18 +378,28 @@ $menu = [
             'url'   => 'sales-kasir2.php',
             'page'  => 'sales-pos'
           ],
- // [
- //            'label' => 'Reservation',
- //            'url'   => 'sales-reservation.php',
- //            'page'  => 'sales-reservation'
- //          ],
+ [
+            'label' => 'Reservation',
+            'url'   => 'sales-reservation.php',
+            'page'  => 'sales-reservation'
+          ],
           // [
           //   'label' => 'Self Order QR',
           //   'url'   => 'sales-self-order.php',
           //   'page'  => 'sales-self-order'
           // ],
 
+          // [
+          //   'label' => 'Payment Transaction',
+          //   'url'   => 'sales-payment.php',
+          //   'page'  => 'sales-payment'
+          // ],
 
+          // [
+          //   'label' => 'Discount & Promo',
+          //   'url'   => 'sales-discount.php',
+          //   'page'  => 'sales-discount'
+          // ],
 
         ]
       ],
@@ -447,6 +478,26 @@ discount usage realtime'
 
         ]
       ],
+
+      /*
+      =====================================================
+      ANALYSIS
+      =====================================================
+      */
+      // [
+      //   'title' => 'Analysis',
+      //   'icon'  => 'fas fa-chart-bar',
+
+      //   'children' => [
+
+      //     [
+      //       'label' => 'Sales Analysis',
+      //       'url'   => 'sales-analysis.php',
+      //       'page'  => 'sales-analysis'
+      //     ],
+
+      //   ]
+      // ],
 
       /*
       =====================================================
@@ -529,10 +580,13 @@ discount usage realtime'
 
       [
         'title' => 'Transaction',
-        'icon'  => 'far fa-folder-open',
+        'icon'  => 'fas fa-exchange-alt',
 
         'children' => [
-
+// Purchase Request
+// Purchase Order
+// Receiving
+// Supplier Invoice
           [
             'label' => 'Purchase Order',
             'url'   => 'inventory-purchase.php',
@@ -552,7 +606,11 @@ discount usage realtime'
             'page'  => 'inventory-stock-out',
             'title' => 'manual catat untuk stok keluar selain dari production dan penjualan'
           ],
-
+// Stock In
+// Stock Out
+// Transfer Stock
+// Stock Adjustment
+// Stock Opname
           [
             'label' => 'Stock Opname',
             'url'   => 'inventory-stock-opname.php',
@@ -563,7 +621,10 @@ discount usage realtime'
           //   'url'   => 'kitchen-order-board.php',
           //   'page'  => 'kitchen-order-board'
           // ],
-
+// Production Order
+// Material Usage
+// Production Result
+// Production Completion
  [
             'label' => 'Work in Process',
             'url'   => 'kitchen-production.php',
@@ -575,24 +636,36 @@ discount usage realtime'
             'page'  => 'operation-kitchen'
           ],
 
+          // [
+          //   'label' => 'Ready To Serve',
+          //   'url'   => 'kitchen-ready-serve.php',
+          //   'page'  => 'kitchen-ready-serve'
+          // ],
+
         ]
       ],
 
       [
         'title' => 'Monitoring',
-        'icon'  => 'far fa-folder-open',
+        'icon'  => 'fas fa-desktop',
 
         'children' => [
 
+          //  [
+          //   'label' => 'Inventory Monitoring',
+          //   'url'   => 'inventory-monitor.php',
+          //   'page'  => 'inventory-monitor',
+          //   'title' => 'tampilan seperti monitoring realtime stok'
+          // ],
  [
             'label' => 'Stock Monitoring',
-            'url'   => 'operation-stock-monitor.php',
+            'url'   => 'stock-monitor.php',
             'page'  => 'stock-monitor',
             'title' => 'tampilan seperti monitoring realtime stok'
           ],
           [
             'label' => 'Kitchen Monitoring',
-            'url'   => 'operation-kitchen-monitor.php',
+            'url'   => 'kitchen-monitor.php',
             'page'  => 'kitchen-monitor',
             'title' => 'tampilan seperti Kitchen Display System'
           ],
@@ -602,7 +675,7 @@ discount usage realtime'
 
       [
         'title' => 'Report',
-        'icon'  => 'far fa-folder-open',
+        'icon'  => 'fas fa-folder-open',
 
         'children' => [
 // REPORT
@@ -650,10 +723,29 @@ discount usage realtime'
         ]
       ],
 
+//       [
+//         'title' => 'Analysis',
+//         'icon'  => 'fas fa-chart-bar',
+
+//         'children' => [
+// [
+//             'label' => 'Inventory Analysis',
+//             'url'   => 'inventory-analysis.php',
+//             'page'  => 'inventory-analysis'
+//           ],
+
+//           [
+//             'label' => 'Kitchen Analysis',
+//             'url'   => 'kitchen-analysis.php',
+//             'page'  => 'kitchen-analysis'
+//           ],
+
+//         ]
+//       ],
 
       [
         'title' => 'History',
-        'icon'  => 'far fa-folder-open',
+        'icon'  => 'fas fa-history',
 
         'children' => [
           // HISTORY
@@ -692,6 +784,12 @@ discount usage realtime'
             'page'  => 'inventory-opname-history',
           ],
 
+          // [
+          //   'label' => 'Kitchen History',
+          //   'url'   => 'kitchen-history.php',
+          //   'page'  => 'kitchen-history'
+          // ],
+
         ]
       ],
 
@@ -722,8 +820,8 @@ FINANCE
     'finance-profit-monitor',
 
     /* REPORT */
-    'finance-profit-loss',
     'finance-equity-report',
+    'finance-profit-loss',
     'finance-balance-sheet',
     'finance-cashflow-report',
 
@@ -736,8 +834,6 @@ FINANCE
     'finance-ledger',
     'finance-journal-history',
     'finance-budget-history',
-    'finance-ar-history',
-    'finance-ap-history'
 
   ],
 
@@ -751,7 +847,7 @@ FINANCE
     */
     [
   'title' => 'Transaction',
-  'icon'  => 'far fa-folder-open',
+  'icon'  => 'fas fa-exchange-alt',
 
   'children' => [
 
@@ -783,19 +879,19 @@ FINANCE
       'title' => 'Receive bill, supplier payment, and payable adjustment, JURNAL PEMBAYARAN HUTANG by supplier, by nota'
     ],
 
-    // [
-    //   'label' => 'Prepaid Expense',
-    //   'url'   => 'prepaid-expense.php',
-    //   'page'  => 'prepaid-expense',
-    //   'title' => 'Cash paid in advance for future benefits such as rent, insurance, or software licenses'
-    // ],
+    [
+      'label' => 'Prepaid Expense',
+      'url'   => 'prepaid-expense.php',
+      'page'  => 'prepaid-expense',
+      'title' => 'Cash paid in advance for future benefits such as rent, insurance, or software licenses'
+    ],
 
-    // [
-    //   'label' => 'Deferred Revenue',
-    //   'url'   => 'deferred-revenue.php',
-    //   'page'  => 'deferred-revenue',
-    //   'title' => 'Cash received before services are fully delivered such as subscriptions or project advances'
-    // ],
+    [
+      'label' => 'Deferred Revenue',
+      'url'   => 'deferred-revenue.php',
+      'page'  => 'deferred-revenue',
+      'title' => 'Cash received before services are fully delivered such as subscriptions or project advances'
+    ],
 
     [
       'label' => 'Fixed Assets',
@@ -817,6 +913,27 @@ FINANCE
       'page'  => 'general-journal',
       'title' => 'Manual journal entry recording'
     ],
+
+    // [
+    //   'label' => 'Special Journal',
+    //   'url'   => 'special-journal.php',
+    //   'page'  => 'special-journal',
+    //   'title' => 'Recurring transaction journals such as sales, purchases, cash receipts, and cash payments'
+    // ],
+
+    // [
+    //   'label' => 'Adjustment Journal',
+    //   'url'   => 'adjustment-journal.php',
+    //   'page'  => 'adjustment-journal',
+    //   'title' => 'Accruals, depreciation, prepaid amortization, and corrections'
+    // ],
+
+    // [
+    //   'label' => 'Reversing Journal',
+    //   'url'   => 'reversing-journal.php',
+    //   'page'  => 'reversing-journal',
+    //   'title' => 'Reversal of previous adjustment journal entries'
+    // ],
   ]
 ],
 
@@ -827,53 +944,47 @@ FINANCE
     */
     [
       'title' => 'Monitoring',
-      'icon'  => 'far fa-folder-open',
+      'icon'  => 'fas fa-desktop',
 
       'children' => [
 
         [
-          'label' => 'Finance Monitoring',
+          'label' => 'Cashflow Monitoring',
           'url'   => 'finance-monitor.php',
-          'page'  => 'finance-monitor',
-          'title' => 'Realtime financial operational monitoring'
+          'page'  => 'finance-monitor'
         ],
-        //  [
-        //   'label' => 'Cashflow Monitoring',
-        //   'url'   => 'finance-cashflow-monitor.php',
-        //   'page'  => 'finance-cashflow-monitor'
-        // ],
 
-        // [
-        //   'label' => 'Expense Monitoring',
-        //   'url'   => 'finance-expense-monitor.php',
-        //   'page'  => 'finance-expense-monitor'
-        // ],
+        [
+          'label' => 'Expense Monitoring',
+          'url'   => 'finance-expense-monitor.php',
+          'page'  => 'finance-expense-monitor'
+        ],
 
-        // [
-        //   'label' => 'Profit Monitoring',
-        //   'url'   => 'finance-profit-monitor.php',
-        //   'page'  => 'finance-profit-monitor'
-        // ],
+        [
+          'label' => 'Profit Monitoring',
+          'url'   => 'finance-profit-monitor.php',
+          'page'  => 'finance-profit-monitor'
+        ],
 
-        // [
-        //   'label' => ' Over Budget',
-        //   'url'   => 'finance-overbudget-monitor.php',
-        //   'page'  => 'finance-overbudget-monitor'
-        // ],
+        [
+          'label' => ' Over Budget',
+          'url'   => 'finance-overbudget-monitor.php',
+          'page'  => 'finance-overbudget-monitor'
+        ],
 
-        // [
-        //   'label' => ' Piutang Jatuh Tempo',
-        //   'url'   => 'finance-ar-due-monitor.php',
-        //   'page'  => 'finance-ar-due-monitor',
-        //   'title' => 'menampilkan saldo piutang by customer'
-        // ],
+        [
+          'label' => ' Piutang Jatuh Tempo',
+          'url'   => 'finance-ar-due-monitor.php',
+          'page'  => 'finance-ar-due-monitor',
+          'title' => 'menampilkan saldo piutang by customer'
+        ],
 
-        // [
-        //   'label' => ' Hutang Jatuh Tempo',
-        //   'url'   => 'finance-ap-due-monitor.php',
-        //   'page'  => 'finance-ap-due-monitor',
-        //   'title' => 'menampilkan saldo hutang by supplier'
-        // ],
+        [
+          'label' => ' Hutang Jatuh Tempo',
+          'url'   => 'finance-ap-due-monitor.php',
+          'page'  => 'finance-ap-due-monitor',
+          'title' => 'menampilkan saldo hutang by supplier'
+        ],
 
       ]
     ],
@@ -884,7 +995,7 @@ FINANCE
     */
     [
       'title' => 'Report',
-      'icon'  => 'far fa-folder-open',
+      'icon'  => 'fas fa-folder-open',
 
       'children' => [
 
@@ -894,7 +1005,7 @@ FINANCE
           'page'  => 'finance-profit-loss'
         ],
         [
-          'label' => 'Equity Report',
+          'label' => 'Changes in Equity',
           'url'   => 'finance-equity-report.php',
           'page'  => 'finance-equity-report'
         ],
@@ -905,7 +1016,7 @@ FINANCE
         ],
 
         [
-          'label' => 'Cash Flow Report',
+          'label' => 'Cashflow Report',
           'url'   => 'finance-cashflow-report.php',
           'page'  => 'finance-cashflow-report'
         ],
@@ -913,7 +1024,37 @@ FINANCE
       ]
     ],
 
+    /*
+    =====================================================
+    ANALYSIS
+    =====================================================
+    */
+    // [
+    //   'title' => 'Analysis',
+    //   'icon'  => 'fas fa-chart-bar',
 
+    //   'children' => [
+
+    //     [
+    //       'label' => 'Financial Analysis',
+    //       'url'   => 'finance-analysis.php',
+    //       'page'  => 'finance-analysis'
+    //     ],
+
+    //     [
+    //       'label' => 'Expense Analysis',
+    //       'url'   => 'finance-expense-analysis.php',
+    //       'page'  => 'finance-expense-analysis'
+    //     ],
+
+    //     [
+    //       'label' => 'Profitability Analysis',
+    //       'url'   => 'finance-profit-analysis.php',
+    //       'page'  => 'finance-profit-analysis'
+    //     ],
+
+    //   ]
+    // ],
 
     /*
     =====================================================
@@ -922,41 +1063,27 @@ FINANCE
     */
     [
       'title' => 'History',
-      'icon'  => 'far fa-folder-open',
+      'icon'  => 'fas fa-history',
 
       'children' => [
+
         [
-        'label' => 'General Ledger',
-        'url'   => 'finance-ledger.php',
-        'page'  => 'finance-ledger'
-      ],
-       [
-        'label' => 'AR Ledger',
-        'url'   => 'finance-ar-history.php',
-        'page'  => 'finance-ar-history'
-      ],
+          'label' => 'General Ledger',
+          'url'   => 'finance-ledger.php',
+          'page'  => 'finance-ledger'
+        ],
 
-      [
-        'label' => 'AP Ledger',
-        'url'   => 'finance-ap-history.php',
-        'page'  => 'finance-ap-history'
-      ],
+        [
+          'label' => 'Journal History',
+          'url'   => 'finance-journal-history.php',
+          'page'  => 'finance-journal-history'
+        ],
 
-      
-
-      [
-        'label' => 'Journal Entry History',
-        'url'   => 'finance-journal-history.php',
-        'page'  => 'finance-journal-history'
-      ],
-
-        // [
-        //   'label' => 'Budget History',
-        //   'url'   => 'finance-budget-history.php',
-        //   'page'  => 'finance-budget-history'
-        // ],
-
-          
+        [
+          'label' => 'Budget History',
+          'url'   => 'finance-budget-history.php',
+          'page'  => 'finance-budget-history'
+        ],
 
       ]
     ],

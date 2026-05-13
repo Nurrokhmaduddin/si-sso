@@ -126,6 +126,358 @@ $menu = [
     ]
   ],
 
+/*
+=========================================================
+MASTER DATA
+GENERIC ENTERPRISE ERP ARCHITECTURE
+=========================================================
+
+FOUNDATION:
+- Product & Service
+- Business Partner
+- Operational Structure
+- Financial Structure
+- Metadata Reference
+
+=========================================================
+*/
+
+[
+  'title' => 'Master Data',
+  'icon'  => 'fas fa-database',
+
+  'pages' => [
+
+    /*
+    =====================================================
+    PRODUCT & SERVICE
+    =====================================================
+    */
+    'master-product',
+    'master-service',
+    'master-package',
+    'master-material',
+    'master-unit',
+    'master-bom',
+
+    /*
+    =====================================================
+    BUSINESS PARTNER
+    =====================================================
+    */
+    'master-customer',
+    'master-supplier',
+    'master-vendor',
+    'master-member',
+    'master-employee',
+
+    /*
+    =====================================================
+    OPERATIONAL STRUCTURE
+    =====================================================
+    */
+    'master-branch',
+    'master-warehouse',
+    'master-room',
+    'master-kitchen',
+    'master-table',
+    'master-shift',
+    'master-department',
+
+    /*
+    =====================================================
+    FINANCIAL STRUCTURE
+    =====================================================
+    */
+    'master-coa',
+    'master-payment-method',
+    'master-tax-rule',
+    'master-discount-rule',
+    'master-currency',
+    'master-price-category',
+
+    /*
+    =====================================================
+    METADATA REFERENCE
+    =====================================================
+    */
+    'metadata-category',
+    'metadata-status',
+    'metadata-priority',
+    'metadata-tag',
+    'metadata-type',
+    'metadata-brand',
+    'metadata-condition',
+    'master-metadata-reference',
+  ],
+
+  'children' => [
+
+    /*
+    =====================================================
+    PRODUCT & SERVICE
+    =====================================================
+    */
+    [
+      'title' => 'Product & Service',
+      'icon'  => 'fas fa-box',
+
+      'children' => [
+
+        [
+          'label' => 'Product / Item',
+          'url'   => 'master-product.php',
+          'page'  => 'master-product'
+        ],
+
+        [
+          'label' => 'Service',
+          'url'   => 'master-service.php',
+          'page'  => 'master-service'
+        ],
+
+        [
+          'label' => 'Package / Bundle',
+          'url'   => 'master-package.php',
+          'page'  => 'master-package'
+        ],
+
+        [
+          'label' => 'Material',
+          'url'   => 'master-material.php',
+          'page'  => 'master-material'
+        ],
+
+        [
+          'label' => 'Unit',
+          'url'   => 'master-unit.php',
+          'page'  => 'master-unit'
+        ],
+
+        [
+          'label' => 'Recipe / BOM',
+          'url'   => 'master-bom.php',
+          'page'  => 'master-bom'
+        ],
+
+      ]
+    ],
+
+    /*
+    =====================================================
+    BUSINESS PARTNER
+    =====================================================
+    */
+    [
+      'title' => 'Business Partner',
+      'icon'  => 'fas fa-users',
+
+      'children' => [
+
+        [
+          'label' => 'Customer',
+          'url'   => 'master-customer.php',
+          'page'  => 'master-customer'
+        ],
+
+        [
+          'label' => 'Supplier',
+          'url'   => 'master-supplier.php',
+          'page'  => 'master-supplier'
+        ],
+
+        [
+          'label' => 'Vendor',
+          'url'   => 'master-vendor.php',
+          'page'  => 'master-vendor'
+        ],
+
+        [
+          'label' => 'Member',
+          'url'   => 'master-member.php',
+          'page'  => 'master-member'
+        ],
+
+        [
+          'label' => 'Employee',
+          'url'   => 'master-employee.php',
+          'page'  => 'master-employee'
+        ],
+
+      ]
+    ],
+
+    /*
+    =====================================================
+    OPERATIONAL STRUCTURE
+    =====================================================
+    */
+    [
+      'title' => 'Operational Structure',
+      'icon'  => 'fas fa-sitemap',
+
+      'children' => [
+
+        [
+          'label' => 'Branch',
+          'url'   => 'master-branch.php',
+          'page'  => 'master-branch'
+        ],
+
+        [
+          'label' => 'Warehouse',
+          'url'   => 'master-warehouse.php',
+          'page'  => 'master-warehouse'
+        ],
+
+        [
+          'label' => 'Room / Area',
+          'url'   => 'master-room.php',
+          'page'  => 'master-room'
+        ],
+
+        [
+          'label' => 'Kitchen',
+          'url'   => 'master-kitchen.php',
+          'page'  => 'master-kitchen'
+        ],
+
+        [
+          'label' => 'Table',
+          'url'   => 'master-table.php',
+          'page'  => 'master-table'
+        ],
+
+        [
+          'label' => 'Shift',
+          'url'   => 'master-shift.php',
+          'page'  => 'master-shift'
+        ],
+
+        [
+          'label' => 'Department',
+          'url'   => 'master-department.php',
+          'page'  => 'master-department'
+        ],
+
+      ]
+    ],
+
+    /*
+    =====================================================
+    FINANCIAL STRUCTURE
+    =====================================================
+    */
+    [
+      'title' => 'Financial Structure',
+      'icon'  => 'fas fa-wallet',
+
+      'children' => [
+
+        [
+          'label' => 'Chart of Account',
+          'url'   => 'master-coa.php',
+          'page'  => 'master-coa'
+        ],
+
+        [
+          'label' => 'Payment Method',
+          'url'   => 'master-payment-method.php',
+          'page'  => 'master-payment-method'
+        ],
+
+        [
+          'label' => 'Tax Rule',
+          'url'   => 'master-tax-rule.php',
+          'page'  => 'master-tax-rule'
+        ],
+
+        [
+          'label' => 'Discount Rule',
+          'url'   => 'master-discount-rule.php',
+          'page'  => 'master-discount-rule'
+        ],
+
+        [
+          'label' => 'Currency',
+          'url'   => 'master-currency.php',
+          'page'  => 'master-currency'
+        ],
+
+        [
+          'label' => 'Price Category',
+          'url'   => 'master-price-category.php',
+          'page'  => 'master-price-category'
+        ],
+
+      ]
+    ],
+
+    /*
+    =====================================================
+    METADATA REFERENCE
+    =====================================================
+    */
+    [
+      'title' => 'Metadata Reference',
+      'icon'  => 'fas fa-tags',
+
+      'children' => [
+
+         [
+          'label' => 'Metadata Sample',
+          'url'   => 'master-metadata-reference.php',
+          'page'  => 'master-metadata-reference'
+        ],
+
+        [
+          'label' => 'Category',
+          'url'   => 'metadata-category.php',
+          'page'  => 'metadata-category'
+        ],
+
+        [
+          'label' => 'Status',
+          'url'   => 'metadata-status.php',
+          'page'  => 'metadata-status'
+        ],
+
+        [
+          'label' => 'Priority',
+          'url'   => 'metadata-priority.php',
+          'page'  => 'metadata-priority'
+        ],
+
+        [
+          'label' => 'Tag / Label',
+          'url'   => 'metadata-tag.php',
+          'page'  => 'metadata-tag'
+        ],
+
+        [
+          'label' => 'Type / Group',
+          'url'   => 'metadata-type.php',
+          'page'  => 'metadata-type'
+        ],
+
+        [
+          'label' => 'Brand',
+          'url'   => 'metadata-brand.php',
+          'page'  => 'metadata-brand'
+        ],
+
+        [
+          'label' => 'Condition',
+          'url'   => 'metadata-condition.php',
+          'page'  => 'metadata-condition'
+        ],
+
+      ]
+    ],
+
+  ]
+],
+
   /*
   =========================================================
   SALES

@@ -9,7 +9,7 @@
 
   <section class="content-header">
     <div class="container-fluid">
-      <h3 class="mb-0">Dashboard ORDER MASUK (Monitoring / Waiter View)
+      <h3 class="mb-0">SALES ORDER
         <button type="button" class="btn btn-tool" data-bs-toggle="modal" data-bs-target="#modalBantuan" title="Bantuan"><i class="fas fa-question-circle"></i>
         </button>
       </h3>
@@ -29,10 +29,10 @@
               <div class="row">
                 
                 <div class="col-md-6">
-                  <b>Kategori:</b> Semua
+                  <b>Tanggal:</b> Today
                 </div>
                 <div class="col-md-6">
-                  <b>Rentang Harga Acuan:</b> Semua
+                  <b>Status:</b> Semua
                 </div>
 
               </div>
@@ -52,39 +52,145 @@
           </div>
 
 
-          <!-- ========== CARD : grid  order on kitchen ========== -->
-          <style>
+         <!-- ========== CARD : LIST SALES ORDER ========== -->
+
+<style>
 .status-badge {
-  padding: 5px 10px;
-  border-radius: 8px;
+  padding: 6px 12px;
+  border-radius: 20px;
   font-size: 12px;
-  font-weight: 500;
+  font-weight: 600;
 }
 
-.status-baru {
+.status-draft {
   background: #fff3cd;
   color: #856404;
 }
 
-.status-dimasak {
+.status-open {
   background: #cce5ff;
   color: #004085;
 }
 
-.status-selesai {
+.status-paid {
   background: #d4edda;
   color: #155724;
 }
 
+.status-cancel {
+  background: #f8d7da;
+  color: #721c24;
+}
 
+.table-item td {
+  vertical-align: middle;
+}
 </style>
 
 <div class="card">
-  <!-- <div class="card-header d-flex justify-content-between align-items-center">
+
+  <div class="card-body">
+    <table class="table table-bordered table-hover datatables1">
+      <thead class="table-light">
+        <tr>
+          <th>No Nota</th>
+          <th>Tanggal</th>
+          <th>Meja</th>
+          <th>Total Item</th>
+          <th>Total Qty</th>
+          <th>Grand Total</th>
+          <th>Status</th>
+          <th width="140">Aksi</th>
+        </tr>
+      </thead>
+
+      <tbody>
+
+        <tr>
+          <td>SO-20260512-001</td>
+          <td>12/05/2026</td>
+          <td>Meja 3</td>
+          <td>2 Item</td>
+          <td>4</td>
+          <td>Rp 85.000</td>
+          <td>
+            <span class="status-badge status-draft">
+              Draft
+            </span>
+          </td>
+          <td>
+            <button class="btn btn-sm btn-outline-primary">
+              Detail
+            </button>
+          </td>
+        </tr>
+
+        <tr>
+          <td>SO-20260512-002</td>
+          <td>12/05/2026</td>
+          <td>Meja 1</td>
+          <td>1 Item</td>
+          <td>2</td>
+          <td>Rp 40.000</td>
+          <td>
+            <span class="status-badge status-open">
+              Open
+            </span>
+          </td>
+          <td>
+            <button class="btn btn-sm btn-outline-primary">
+              Detail
+            </button>
+          </td>
+        </tr>
+
+        <tr>
+          <td>SO-20260512-003</td>
+          <td>12/05/2026</td>
+          <td>Meja 5</td>
+          <td>3 Item</td>
+          <td>6</td>
+          <td>Rp 120.000</td>
+          <td>
+            <span class="status-badge status-paid">
+              Paid
+            </span>
+          </td>
+          <td>
+            <button class="btn btn-sm btn-outline-success">
+              Print
+            </button>
+          </td>
+        </tr>
+<tr>
+          <td>SO-20260512-004</td>
+          <td>11/05/2026</td>
+          <td>Meja 7</td>
+          <td>2 Item</td>
+          <td>4</td>
+          <td>Rp 85.000</td>
+          <td>
+            <span class="status-badge status-cancel">
+              Cancel
+            </span>
+          </td>
+          <td>
+            <button class="btn btn-sm btn-outline-primary">
+              Detail
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- <div class="card">
+  <div class="card-header d-flex justify-content-between align-items-center">
     <h5 class="mb-0">📥 Order Masuk</h5>
 
     <input type="text" class="form-control form-control-sm w-25" placeholder="Cari order...">
-  </div> -->
+  </div>
 
   <div class="card-body ">
     <table class="table table-sm table-hover datatables1">
@@ -170,14 +276,14 @@
     </table>
   </div>
 
-  <!-- <div class="card-footer text-end">
+  <div class="card-footer text-end">
     <button class="btn btn-sm btn-outline-secondary">Refresh</button>
-  </div> -->
+  </div>
 </div>
 
 
 
-------------------
+------------------ -->
         </div>
       </div>
     </div>
@@ -235,93 +341,478 @@
 
 
 <!-- Modal Tambah Data -->
-<div class="modal fade" id="modalTambahData" tabindex="-1" aria-labelledby="modalTambahDataLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content rounded-3 shadow">
-      
+<div class="modal fade" id="modalTambahData" tabindex="-1">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+
       <div class="modal-header bg-primary text-white">
-        <h5 class="modal-title" id="modalTambahMenuLabel">Tambah Menu / Katalog</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        <h5 class="modal-title">
+          Tambah Sales Order
+        </h5>
+
+        <button type="button"
+                class="btn-close btn-close-white"
+                data-bs-dismiss="modal"></button>
       </div>
-      
-      <form action="" method="POST" enctype="multipart/form-data">
+
+      <form action="" method="POST">
+
         <div class="modal-body">
 
-          <!-- Informasi -->
-          <div class="alert alert-info mb-3 py-2" role="alert" style="font-size: 0.9rem;">
-            <i class="fas fa-info-circle me-1"></i>
-            <strong>Catatan:</strong> Semua field dengan <span class="text-danger">*</span> wajib diisi.
+          <!-- IDENTITAS NOTA -->
+          <div class="card mb-3">
+            <div class="card-header">
+              <b>Identitas Nota</b>
+            </div>
+
+            <div class="card-body">
+              <div class="row g-3">
+
+                <div class="col-md-4">
+                  <label>No Nota</label>
+                  <input type="text"
+                  class="form-control"
+                  value="AUTO"
+                  readonly>
+                </div>
+
+                <div class="col-md-2">
+                  <label>Tanggal Order</label>
+                  <input type="date"
+                  class="form-control"
+                  value="<?= date('Y-m-d') ?>">
+                </div>
+                <div class="col-md-2">
+                  <label>Waktu Order</label>
+                  <input type="time"
+                  class="form-control"
+                  value="<?= date('HH:mm') ?>">
+                </div>
+
+                <div class="col-md-2">
+                  <label>Meja</label>
+                  <select class="form-select">
+                    <option>Meja 1</option>
+                    <option>Meja 2</option>
+                    <option>Meja 3</option>
+                    <option>Meja 4</option>
+                  </select>
+                </div>
+
+                <div class="col-md-2">
+                  <label>Status</label>
+                  <select class="form-select">
+                    <option>Draft</option>
+                    <option>Open</option>
+                    <option selected>Paid</option>
+                    <option>Cancel</option>
+                  </select>
+                </div>
+
+                
+                <div class="col-md-4">
+                  <label>Kasir</label>
+                  <input type="text"
+                  class="form-control"
+                  value="Admin"
+                  readonly>
+                </div>
+                <div class="col-md-4">
+                  <label>Customer</label>
+                  <input type="text"
+                  class="form-control"
+                  placeholder="Nama Customer">
+                </div>
+
+
+                <div class="col-md-4">
+                  <label>Metode Bayar</label>
+                  <select class="form-select">
+                    <option>Cash</option>
+                    <option>QRIS</option>
+                    <option>Transfer</option>
+                  </select>
+                </div>
+                
+
+              </div>
+            </div>
           </div>
 
-          <!-- Form Inputs -->
-          <div class="row g-3">
+          <!-- DAFTAR ITEM -->
+          <div class="card mb-3">
+            <div class="card-header d-flex justify-content-between">
+              <b>Daftar Item</b>
 
-            <div class="col-md-6">
-              <label for="menuName" class="form-label">Nama Menu <span class="text-danger">*</span></label>
-              <input type="text" class="form-control" id="menuName" name="menuName" placeholder="Masukkan Nama Menu" required>
+             
             </div>
 
-            <div class="col-md-6">
-              <label for="menuCategory" class="form-label">Kategori <span class="text-danger">*</span></label>
-              <select id="menuCategory" name="menuCategory" class="form-select" required>
-                <option value="">-- Pilih Kategori --</option>
-                <option value="Makanan">Makanan</option>
-                <option value="Minuman">Minuman</option>
-                <option value="Dessert">Dessert</option>
-                <option value="Snack">Snack</option>
-              </select>
-            </div>
+            <div class="card-body p-0">
+              <table class="table table-bordered table-hover mb-0 table-item">
 
-            <div class="col-md-6">
-              <label for="menuImage" class="form-label">Gambar Menu <span class="text-danger">*</span></label>
-              <input type="file" class="form-control" id="menuImage" name="menuImage" required>
-            </div>
+                <thead class="table-light">
+                  <tr>
+                    <th width="25%">Menu</th>
+                    <th width="10%">Qty</th>
+                    <th width="15%">Harga</th>
+                    <th width="15%">Subtotal</th>
+                    <th>Catatan</th>
+                    <th width="10%">Aksi</th>
+                  </tr>
+                </thead>
 
-            <div class="col-md-6">
-              <label for="menuPrice" class="form-label" title="Harga acuan per menu, bisa disesuaikan di daftar harga">Harga Acuan <span class="text-danger">*</span></label>
-              <input type="number" class="form-control" id="menuPrice" name="menuPrice" placeholder="Masukkan Harga Acuan" required>
-            </div>
+                <tbody>
 
-            <div class="col-md-6">
-              <label for="menuBOM" class="form-label" title="Resep / BOM, diambil dari daftar resep">Resep (BOM)</label>
-              <select id="menuBOM" name="menuBOM" class="form-select">
-                <option value="">-- Pilih Resep --</option>
-                <option value="R001">Nasi Goreng</option>
-                <option value="R002">Mie Goreng</option>
-                <option value="R003">Martabak Manis</option>
-              </select>
-            </div>
+                  <tr>
+                    <td>Nasi Goreng</td>
+                    <td>2</td>
+                    <td>25.000</td>
+                    <td>50.000</td>
+                    <td>Pedas</td>
+                    <td>
+                      <button class="btn btn-sm btn-danger">
+                        Hapus
+                      </button>
+                    </td>
+                  </tr>
 
-            <div class="col-md-6">
-              <label for="menuStatus" class="form-label">Status Menu</label>
-              <select id="menuStatus" name="menuStatus" class="form-select">
-                <option value="Aktif">Aktif</option>
-                <option value="NonAktif">Non Aktif</option>
-              </select>
-            </div>
+                  <tr>
+                    <td>Es Teh</td>
+                    <td>2</td>
+                    <td>5.000</td>
+                    <td>10.000</td>
+                    <td>Less Ice</td>
+                    <td>
+                      <button class="btn btn-sm btn-danger">
+                        Hapus
+                      </button>
+                    </td>
+                  </tr>
 
-            <div class="col-md-12">
-              <label for="menuDesc" class="form-label">Deskripsi Menu</label>
-              <textarea id="menuDesc" name="menuDesc" class="form-control" rows="3" placeholder="Deskripsi singkat menu"></textarea>
-            </div>
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <td colspan="6"><button type="button"
+                      class="btn btn-sm btn-primary btn-block"
+                      data-bs-toggle="modal"
+                      data-bs-target="#modalTambahItem">
 
-            <div class="col-md-6">
-              <label for="menuID" class="form-label">ID Menu (Otomatis)</label>
-              <input type="text" class="form-control" id="menuID" name="menuID" placeholder="Diisi sistem" disabled>
+                <i class="fas fa-plus"></i>
+                Tambah Item
+              </button></td>
+                  </tr>
+                   
+                </tfoot>
+              </table>
             </div>
-
-            <div class="col-md-6">
-              <label for="menuCreated" class="form-label">Tanggal Ditambahkan</label>
-              <input type="text" class="form-control" id="menuCreated" name="menuCreated" value="<?= date('Y-m-d') ?>" disabled>
-            </div>
-
           </div>
+
+          <!-- REKAP -->
+          <div class="card">
+            <div class="card-header">
+              <b>Rekap Transaksi</b>
+            </div>
+
+            <div class="card-body">
+
+              <div class="row justify-content-end">
+
+                <div class="col-md-4">
+
+                  <table class="table table-sm">
+
+                    <tr>
+                      <th>Total Qty</th>
+                      <td class="text-end">4</td>
+                    </tr>
+
+                    <tr>
+                      <th>Subtotal</th>
+                      <td class="text-end">
+                        Rp 60.000
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <th>Pajak</th>
+                      <td class="text-end">
+                        Rp 6.000
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <th>Diskon</th>
+                      <td class="text-end">
+                        Rp 0
+                      </td>
+                    </tr>
+
+                    <tr class="table-primary">
+                      <th>Grand Total</th>
+                      <th class="text-end">
+                        Rp 66.000
+                      </th>
+                    </tr>
+
+                  </table>
+
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+     
+          <!-- JURNAL TRANSAKSI -->
+          <div class="card mt-3">
+
+            <div class="card-header d-flex justify-content-between align-items-center">
+              <b>Jurnal Transaksi</b>
+
+              <span class="badge bg-info">
+                Auto Generate
+              </span>
+            </div>
+
+            <div class="card-body">
+
+              <!-- Informasi -->
+              <div class="alert alert-light border mb-3">
+                <i class="fas fa-info-circle text-primary me-1"></i>
+                Jurnal transaksi akan terbentuk otomatis berdasarkan transaksi penjualan yang dibuat.
+                Nilai jurnal mengikuti grand total transaksi dan metode pembayaran.
+              </div>
+
+              <!-- HEADER JURNAL -->
+              <div class="row g-3 mb-3">
+                <div class="col-md-2">
+                  <label class="form-label">User Input</label>
+
+                  <input type="text"
+                  class="form-control"
+                         value="Admin"
+                         readonly>
+                </div>
+                <div class="col-md-2">
+                  <label class="form-label">No Referensi</label>
+                  <input type="text"
+                         class="form-control"
+                         value="SO-20260424-001"
+                         readonly>
+                </div>
+
+                <div class="col-md-2">
+                  <label class="form-label">Tanggal Posting</label>
+                  <input type="date"
+                         class="form-control"
+                         value="<?= date('Y-m-d') ?>"
+                         readonly>
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label">Keterangan</label>
+                  <input type="text"
+                         class="form-control"
+                         value="Penjualan Sales Order Meja 3"
+                         readonly>
+                </div>
+
+              </div>
+
+              <!-- DETAIL JURNAL -->
+              <div class="table-responsive">
+                <table class="table table-bordered table-sm align-middle">
+
+                  <thead class="table-light">
+                    <tr>
+                      <th width="5%">#</th>
+                      <th>Akun</th>
+                      <th width="20%">Debit</th>
+                      <th width="20%">Kredit</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+
+                    <!-- Kas -->
+                    <tr>
+                      <td>1</td>
+                      <td>
+                        <b>Kas</b>
+                        <div class="small text-muted">
+                          Pembayaran diterima
+                        </div>
+                      </td>
+
+                      <td class="text-end">
+                        Rp 66.000
+                      </td>
+
+                      <td class="text-end">
+                        -
+                      </td>
+                    </tr>
+
+                    <!-- Penjualan -->
+                    <tr>
+                      <td>2</td>
+                      <td>
+                        <b>Pendapatan Penjualan</b>
+                        <div class="small text-muted">
+                          Pendapatan transaksi
+                        </div>
+                      </td>
+
+                      <td class="text-end">
+                        -
+                      </td>
+
+                      <td class="text-end">
+                        Rp 60.000
+                      </td>
+                    </tr>
+
+                    <!-- Pajak -->
+                    <tr>
+                      <td>3</td>
+                      <td>
+                        <b>Pajak Keluaran</b>
+                        <div class="small text-muted">
+                          Pajak transaksi
+                        </div>
+                      </td>
+
+                      <td class="text-end">
+                        -
+                      </td>
+
+                      <td class="text-end">
+                        Rp 6.000
+                      </td>
+                    </tr>
+
+                  </tbody>
+
+                  <tfoot class="table-light">
+
+                    <tr>
+                      <th colspan="2" class="text-end">
+                        Total
+                      </th>
+
+                      <th class="text-end">
+                        Rp 66.000
+                      </th>
+
+                      <th class="text-end">
+                        Rp 66.000
+                      </th>
+                    </tr>
+
+                  </tfoot>
+
+                </table>
+              </div>
+
+            </div>
+          </div>
+
         </div>
 
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
-          <button type="submit" class="btn btn-primary">Simpan Menu</button>
+          <button class="btn btn-secondary"
+                  data-bs-dismiss="modal">
+            Batal
+          </button>
+
+          <button type="submit"
+                  class="btn btn-primary">
+            Simpan Transaksi
+          </button>
         </div>
+
+      </form>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal Tambah Item -->
+<div class="modal fade" id="modalTambahItem" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-header bg-primary text-white">
+        <h5 class="modal-title">
+          Tambah Item
+        </h5>
+
+        <button type="button"
+                class="btn-close btn-close-white"
+                data-bs-dismiss="modal"></button>
+      </div>
+
+      <form>
+
+        <div class="modal-body">
+
+          <div class="mb-3">
+            <label>Menu</label>
+
+            <select class="form-select">
+              <option value="">-- Pilih Menu --</option>
+              <option>Nasi Goreng</option>
+              <option>Mie Ayam</option>
+              <option>Ayam Bakar</option>
+              <option>Es Teh</option>
+              <option>Jus Mangga</option>
+            </select>
+          </div>
+
+          <div class="row">
+
+            <div class="col-md-6 mb-3">
+              <label>Qty</label>
+
+              <input type="number"
+                     class="form-control"
+                     value="1">
+            </div>
+
+            <div class="col-md-6 mb-3">
+              <label>Harga</label>
+
+              <input type="number"
+                     class="form-control"
+                     placeholder="Harga">
+            </div>
+
+          </div>
+
+          <div class="mb-3">
+            <label>Catatan</label>
+
+            <textarea class="form-control"
+                      rows="3"
+                      placeholder="Contoh: pedas, tanpa bawang, less ice"></textarea>
+          </div>
+
+        </div>
+
+        <div class="modal-footer">
+          <button type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal">
+            Batal
+          </button>
+
+          <button type="submit"
+                  class="btn btn-primary">
+            Tambahkan
+          </button>
+        </div>
+
       </form>
 
     </div>

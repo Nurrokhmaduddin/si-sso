@@ -1,6 +1,5 @@
 
-
-<?php $page = 'sales-pos';   ?>
+<?php $page = 'general-journal';   ?>
 <?php include('1header.php'); ?>
 <?php include('2navbar.php'); ?>
 <?php include('3sidebar.php'); ?>
@@ -10,11 +9,11 @@
 
   <section class="content-header">
     <div class="container-fluid">
-      <h3 class="mb-0">Daftar Order Meja
+      <h3 class="mb-0">Jurnal Entries
         <button type="button" class="btn btn-tool" data-bs-toggle="modal" data-bs-target="#modalBantuan" title="Bantuan"><i class="fas fa-question-circle"></i>
         </button>
       </h3>
-        <p class="text-muted mb-0">Keterangan singkat cara baca informasi halaman ini</p>
+        <p class="text-muted mb-0">Daftar transaki yang di masukkan pada jurnal, journal entries. pemanfaat journal type bisa di ulik lebih lanjut untuk penanndaan atau pengelompokan jurnal</p>
     </div>
   </section>
 
@@ -71,259 +70,197 @@
           </div>
 
 
-         <!-- ========== CARD : Tabel  Granular ========== -->
-         <style>
+          <!-- ========== CARD : Tabel  Granular ========== -->
+          <div class="card">
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table table-bordered table-striped table-sm datatables1">
+                  <thead>
+                    <tr>
+                      <th>No</th>
+                      <th>Posting Date</th>
+                      <th>Ref</th>
+                      <th>Description</th>
+                      <th>Journal Type</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
 
+                  <tbody>
 
+                    <tr>
+                      <td>1</td>
+                      <td>2026-01-01</td>
+                      <td>SLS-001</td>
+                      <td>Penjualan tunai produk retail</td>
+                      <td>sales</td>
+                      <td>
+                        <button class="btn btn-sm btn-outline-info">
+                          <i class="fas fa-eye"></i>
+                        </button>
+                        <button class="btn btn-sm btn-outline-primary">
+                          <i class="fas fa-edit"></i>
+                        </button>
+                      </td>
+                    </tr>
 
+                    <tr>
+                      <td>2</td>
+                      <td>2026-01-02</td>
+                      <td>PUR-001</td>
+                      <td>Pembelian stok barang supplier PT Maju</td>
+                      <td>purchase</td>
+                      <td>
+                        <button class="btn btn-sm btn-outline-primary">✏️</button>
+                      </td>
+                    </tr>
 
-  .status {
-    font-weight: bold;
-    padding: 0.2rem 0.5rem;
-    border-radius: 4px;
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    display: inline-block;
-  }
+                    <tr>
+                      <td>3</td>
+                      <td>2026-01-03</td>
+                      <td>CSH-001</td>
+                      <td>Penerimaan pembayaran piutang customer</td>
+                      <td>cash_receipt</td>
+                      <td>
+                        <button class="btn btn-sm btn-outline-primary">✏️</button>
+                      </td>
+                    </tr>
 
-  .pending { background-color: #FFC107; color: white; }
-  .proses { background-color: #03A9F4; color: white; }
-  .siap { background-color: #4CAF50; color: white; }
-  .paid { background-color: #9E9E9E; color: white; }
+                    <tr>
+                      <td>4</td>
+                      <td>2026-01-03</td>
+                      <td>CSH-002</td>
+                      <td>Pembayaran biaya operasional kantor</td>
+                      <td>cash_disbursement</td>
+                      <td>
+                        <button class="btn btn-sm btn-outline-primary">✏️</button>
+                      </td>
+                    </tr>
 
-  button {
-    padding: 5px 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: all 0.2s ease;
-    font-size: 0.85rem;
-  }
+                    <tr>
+                      <td>5</td>
+                      <td>2026-01-04</td>
+                      <td>ADJ-001</td>
+                      <td>Jurnal penyesuaian beban listrik akhir bulan</td>
+                      <td>adjustment</td>
+                      <td>
+                        <button class="btn btn-sm btn-outline-info">✏️</button>
+                        <button class="btn btn-sm btn-outline-primary">✏️</button>
+                      </td>
+                    </tr>
 
-  .btn-detail { background-color: #03A9F4; color: white; }
-  .btn-detail:hover { background-color: #0288D1; }
+                    <tr>
+                      <td>6</td>
+                      <td>2026-01-04</td>
+                      <td>REV-001</td>
+                      <td>Jurnal pembalik accrual bulan sebelumnya</td>
+                      <td>reversal</td>
+                      <td>
+                        <button class="btn btn-sm btn-outline-primary">✏️</button>
+                      </td>
+                    </tr>
 
-  .btn-bayar { background-color: #4CAF50; color: white; }
-  .btn-bayar:hover { background-color: #388E3C; }
+                    <tr>
+                      <td>7</td>
+                      <td>2026-01-05</td>
+                      <td>PAY-001</td>
+                      <td>Pembayaran hutang vendor melalui bank</td>
+                      <td>payment</td>
+                      <td>
+                        <button class="btn btn-sm btn-outline-primary">✏️</button>
+                      </td>
+                    </tr>
 
-</style>
-<div class="card">
-  <div class="card-body">
-    <div class="table-responsive">
-      <table class="table table-bordered table-striped table-sm datatables1">
-  <thead>
-    <tr>
-      <th>No</th>
-      <th>Kode Meja</th>
-      <th>Nama Meja</th>
-      <th>Area</th>
-      <th>Kapasitas</th>
-      <th>Nama Pemesan</th>
-      <th>Waktu Pesan</th>
-      <th>Status</th>
-      <th>Total</th>
-      <th>Aksi</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>1</td>
-      <td>T01</td>
-      <td>Meja Depan</td>
-      <td>Indoor</td>
-      <td>4</td>
-      <td>Andi</td>
-      <td>14:30</td>
-      <td><span class="status pending">Pending</span></td>
-      <td>Rp 50.000</td>
-      <td>
-        <button class="btn-detail" onclick="window.location='sales-kasir2-detail.php'">Detail</button>
-        <button class="btn-bayar">Bayar</button>
-      </td>
-    </tr>
-    <tr>
-      <td>2</td>
-      <td>T02</td>
-      <td>Meja Kasir</td>
-      <td>Indoor</td>
-      <td>2</td>
-      <td>Budi</td>
-      <td>14:45</td>
-      <td><span class="status proses">Proses</span></td>
-      <td>Rp 35.000</td>
-      <td>
-        <button class="btn-detail">Detail</button>
-        <button class="btn-bayar">Bayar</button>
-      </td>
-    </tr>
-    <tr>
-      <td>3</td>
-      <td>T03</td>
-      <td>Meja Tengah 1</td>
-      <td>Indoor</td>
-      <td>4</td>
-      <td>Citra</td>
-      <td>14:50</td>
-      <td><span class="status siap">Siap</span></td>
-      <td>Rp 70.000</td>
-      <td>
-        <button class="btn-detail">Detail</button>
-        <button class="btn-bayar">Bayar</button>
-      </td>
-    </tr>
-  </tbody>
+                    <tr>
+                      <td>8</td>
+                      <td>2026-01-05</td>
+                      <td>PAY-002</td>
+                      <td>Pembayaran gaji karyawan bulan Januari</td>
+                      <td>payroll</td>
+                      <td>
+                        <button class="btn btn-sm btn-outline-primary">✏️</button>
+                      </td>
+                    </tr>
 
-    </table>
-    </div>
-  </div>
-</div>
-----------------
-<table class="table table-bordered table-striped">
-  <thead class="table-dark text-center">
-    <tr>
-      <th>No</th>
-      <th>Meja</th>
-      <th>Order ID</th>
-      <th>Status Bill</th>
-      <th>Total</th>
-      <th>Waktu</th>
-      <th>Aksi</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>1</td>
-      <td>MEJA01</td>
-      <td>ORD-001</td>
-      <td><span class="badge bg-warning">OPEN</span></td>
-      <td>Rp 85.000</td>
-      <td>12:01</td>
-      <td>
-        <button class="btn btn-sm btn-info" onclick="window.location='sales-kasir2-detail.php'">Detail</button>
-        <button class="btn btn-sm btn-success">Bayar</button>
-      </td>
-    </tr>
-    <tr>
-      <td>2</td>
-      <td>MEJA02</td>
-      <td>ORD-002</td>
-      <td><span class="badge bg-warning">OPEN</span></td>
-      <td>Rp 120.000</td>
-      <td>12:05</td>
-      <td>
-        <button class="btn btn-sm btn-info" onclick="window.location='sales-kasir2-detail.php'">Detail</button>
-        <button class="btn btn-sm btn-success">Bayar</button>
-      </td>
-    </tr>
-    <tr>
-      <td>3</td>
-      <td>MEJA03</td>
-      <td>ORD-003</td>
-      <td><span class="badge bg-success">READY</span></td>
-      <td>Rp 95.000</td>
-      <td>11:50</td>
-      <td>
-        <button class="btn btn-sm btn-info" onclick="window.location='sales-kasir2-detail.php'">Detail</button>
-        <button class="btn btn-sm btn-success">Bayar</button>
-      </td>
-    </tr>
-    <tr>
-      <td>4</td>
-      <td>MEJA04</td>
-      <td>ORD-004</td>
-      <td><span class="badge bg-danger">CLOSED</span></td>
-      <td>Rp 150.000</td>
-      <td>11:30</td>
-      <td>
-        <button class="btn btn-sm btn-secondary" disabled>Selesai</button>
-      </td>
-    </tr>
-    <tr>
-      <td>5</td>
-      <td>MEJA05</td>
-      <td>ORD-005</td>
-      <td><span class="badge bg-warning">OPEN</span></td>
-      <td>Rp 60.000</td>
-      <td>12:10</td>
-      <td>
-        <button class="btn btn-sm btn-info" onclick="window.location='sales-kasir2-detail.php'">Detail</button>
-        <button class="btn btn-sm btn-success">Bayar</button>
-      </td>
-    </tr>
-    <tr>
-      <td>6</td>
-      <td>MEJA06</td>
-      <td>ORD-006</td>
-      <td><span class="badge bg-primary">PARTIAL</span></td>
-      <td>Rp 110.000</td>
-      <td>12:00</td>
-      <td>
-        <button class="btn btn-sm btn-info" onclick="window.location='sales-kasir2-detail.php'">Detail</button>
-        <button class="btn btn-sm btn-success">Bayar</button>
-      </td>
-    </tr>
-    <tr>
-      <td>7</td>
-      <td>MEJA07</td>
-      <td>ORD-007</td>
-      <td><span class="badge bg-success">READY</span></td>
-      <td>Rp 200.000</td>
-      <td>11:40</td>
-      <td>
-        <button class="btn btn-sm btn-info" onclick="window.location='sales-kasir2-detail.php'">Detail</button>
-        <button class="btn btn-sm btn-success">Bayar</button>
-      </td>
-    </tr>
-    <tr>
-      <td>8</td>
-      <td>MEJA08</td>
-      <td>ORD-008</td>
-      <td><span class="badge bg-danger">CLOSED</span></td>
-      <td>Rp 175.000</td>
-      <td>11:20</td>
-      <td>
-        <button class="btn btn-sm btn-secondary" disabled>Selesai</button>
-      </td>
-    </tr>
-    <tr>
-      <td>9</td>
-      <td>MEJA09</td>
-      <td>ORD-009</td>
-      <td><span class="badge bg-warning">OPEN</span></td>
-      <td>Rp 45.000</td>
-      <td>12:15</td>
-      <td>
-        <button class="btn btn-sm btn-info" onclick="window.location='sales-kasir2-detail.php'">Detail</button>
-        <button class="btn btn-sm btn-success">Bayar</button>
-      </td>
-    </tr>
-  </tbody>
-<tfoot>
-  <tr>
-    <th>Status</th>
-    <th>Arti</th>
-  </tr>
-  <tr>
-    <td>🟡 OPEN</td>
-    <td>Masih aktif (bisa tambah order)</td>
-  </tr>
-  <tr>
-    <td>🔵 PARTIAL SERVED</td>
-    <td>Sebagian item sudah selesai</td>
-  </tr>
-  <tr>
-    <td>🟢 READY TO PAY</td>
-    <td>Semua item sudah selesai</td>
-  </tr>
-  <tr>
-    <td>🔴 CLOSED</td>
-    <td>Sudah dibayar</td>
-  </tr>
-</tfoot>
-</table>
-----------------
-          
+                    <tr>
+                      <td>9</td>
+                      <td>2026-01-06</td>
+                      <td>AST-001</td>
+                      <td>Pembelian kendaraan operasional perusahaan</td>
+                      <td>fixed_asset</td>
+                      <td>
+                        <button class="btn btn-sm btn-outline-primary">✏️</button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>10</td>
+                      <td>2026-01-06</td>
+                      <td>LON-001</td>
+                      <td>Penerimaan pinjaman bank jangka panjang</td>
+                      <td>financing</td>
+                      <td>
+                        <button class="btn btn-sm btn-outline-primary">✏️</button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>11</td>
+                      <td>2026-01-07</td>
+                      <td>EMP-001</td>
+                      <td>Pinjaman dana talangan karyawan</td>
+                      <td>employee_loan</td>
+                      <td>
+                        <button class="btn btn-sm btn-outline-primary">✏️</button>
+                      </td>
+                    </tr>
+
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- | Journal Type      | Fungsi                |
+          | ----------------- | --------------------- |
+          | sales             | penjualan             |
+          | purchase          | pembelian             |
+          | cash_receipt      | kas masuk             |
+          | cash_disbursement | kas keluar            |
+          | payment           | pembayaran hutang     |
+          | receipt           | penerimaan pembayaran |
+ -->
+          <table border="1" cellpadding="8" cellspacing="0" style="margin-top:20px;">
+            <caption><b>Journal Transaction Lines (Detail / COA)</b></caption>
+            <thead>
+              <tr>
+                <th>Journal ID</th>
+                <th>COA</th>
+                <th>Debit</th>
+                <th>Credit</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Kas (1101)</td>
+                <td>1.100.000</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>Penjualan (4101)</td>
+                <td>0</td>
+                <td>1.000.000</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>PPN (2101)</td>
+                <td>0</td>
+                <td>100.000</td>
+              </tr>
+            </tbody>
+          </table>
 
 
 
@@ -332,7 +269,7 @@
       </div>
     </div>
   </section>
-  </div>
+</div>
   <!-- /.content-wrapper -->
 
 <?php include('4footer.php'); ?>

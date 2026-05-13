@@ -68,7 +68,8 @@ $menu = [
 ['label' => 'Marketing / Reseller', 'url' => 'master-Marketing.php', 'page' => 'master-Marketing'],
 
       ['label' => 'COA (Chart of Account)', 'url' => 'master-coa.php', 'page' => 'master-coa'],
-      ['label' => 'Budget Mapping', 'url' => 'master-budget.php', 'page' => 'master-budget'],
+      ['label' => 'POS Anggaran', 'url' => 'master-pos.php', 'page' => 'master-pos'],
+      ['label' => 'POS-COA Mapping', 'url' => 'master-map.php', 'page' => 'master-map'],
     ]
   ],
 
@@ -557,6 +558,22 @@ Tujuan:
                     <p>Dashboard Akuntansi</p>
                   </a>
                 </li>
+                <li class="nav-item">
+                  <a href="dashboard-finance.php" class="nav-link" title="Isi:
+
+cash position
+current ratio
+quick ratio
+gross margin
+net margin
+ROI
+DER
+operating margin
+expense ratio">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Dashboard Keuangan</p>
+                  </a>
+                </li>
 
                 <li class="nav-item">
                   <a href="akuntansi-dashboard-cashflow.php" class="nav-link">
@@ -601,9 +618,9 @@ Tujuan:
     <li class="nav-item">
       <a href="budget-structure.php"
          class="nav-link"
-         title="Struktur mata anggaran / budget account structure">
+         title="Struktur mata anggaran / budget account structure, serta mapping POS many to one COA">
         <i class="far fa-circle nav-icon"></i>
-        <p>Budget Structure</p>
+        <p>Mata Anggaran</p>
       </a>
     </li>
 
@@ -613,7 +630,15 @@ Tujuan:
          class="nav-link"
          title="Budget revenue target and budget expense limit">
         <i class="far fa-circle nav-icon"></i>
-        <p>Plan Budgeting</p>
+        <p>Penyusunan Budgeting</p>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="plan-budgeting.php"
+         class="nav-link"
+         title="Budget revenue target and budget expense limit">
+        <i class="far fa-circle nav-icon"></i>
+        <p>Revisi Budgeting</p>
       </a>
     </li>
 
@@ -747,9 +772,19 @@ Tujuan:
       </a>
     </li>
 
+     <!-- ENTRIES JOURNAL -->
+    <li class="nav-item">
+      <a href="fi-entries-journal.php"
+         class="nav-link"
+         title="Manual accounting journal entries">
+        <i class="far fa-circle nav-icon"></i>
+        <p>Journal Entries</p>
+      </a>
+    </li>
+
     <!-- GENERAL JOURNAL -->
     <li class="nav-item">
-      <a href="general-journal.php"
+      <a href="fi-general-journal.php"
          class="nav-link"
          title="Manual accounting journal entries">
         <i class="far fa-circle nav-icon"></i>
@@ -1101,6 +1136,41 @@ Reimbursement Report">
   </a>
 </li>
 
+<!-- [
+  'label' => 'AR Aging Report',
+  'url'   => 'finance-report-ar-aging.php',
+  'page'  => 'finance-report-ar-aging'
+],
+
+[
+  'label' => 'AP Aging Report',
+  'url'   => 'finance-report-ap-aging.php',
+  'page'  => 'finance-report-ap-aging'
+],
+ -->
+ <li class="nav-item">
+  <a href="finance-report-ar-aging.php" class="nav-link" title="Karena:
+
+grouped
+summarized
+periodical
+printable">
+    <i class="far fa-circle nav-icon"></i>
+    <p>AR Aging Report</p>
+  </a>
+</li>
+ <li class="nav-item">
+  <a href="finance-report-ap-aging.php" class="nav-link" title="Karena:
+
+grouped
+summarized
+periodical
+printable">
+    <i class="far fa-circle nav-icon"></i>
+    <p>AP Aging Report</p>
+  </a>
+</li>
+
 </ul>
 </li>
 
@@ -1119,6 +1189,38 @@ Reimbursement Report">
 
   <ul class="nav nav-treeview">
 
+<!-- [
+  'label' => 'Budget vs Actual Analysis',
+  'url'   => 'finance-analysis-budget-vs-actual.php',
+  'page'  => 'finance-analysis-budget-vs-actual'
+], -->
+<li class="nav-item">
+      <a href="finance-analysis-budget-vs-actual.php" class="nav-link">
+        <i class="far fa-circle nav-icon"></i>
+        <p>Budget vs Actual Analysis</p>
+      </a>
+    </li>
+   <!--  [
+  'label' => 'Break Even Point Analysis',
+  'url'   => 'finance-analysis-bep.php',
+  'page'  => 'finance-analysis-bep'
+], -->
+<li class="nav-item">
+      <a href="finance-analysis-bep.php" class="nav-link" title="BEP simulation sangat powerful.
+
+Contoh:
+
+kalau gaji naik
+sewa naik
+COGS naik
+target margin berubah
+
+langsung hitung:
+minimal omzet baru.">
+        <i class="far fa-circle nav-icon"></i>
+        <p>Break Even Point Analysis</p>
+      </a>
+    </li>
     <li class="nav-item">
       <a href="akuntansi-analisa-rasio-keuangan.php" class="nav-link">
         <i class="far fa-circle nav-icon"></i>
@@ -1141,7 +1243,26 @@ Reimbursement Report">
     </li>
 
     <li class="nav-item">
-      <a href="akuntansi-analisa-profit.php" class="nav-link">
+      <a href="akuntansi-analisa-profit.php" class="nav-link" title="masih terlalu umum:Yang Sebaiknya Ada
+A. Product Profitability
+margin per menu
+margin per category
+food cost ratio
+B. Customer Profitability
+customer paling untung
+customer paling rugi
+C. Branch Profitability
+laba per outlet
+D. Channel Profitability
+dine in
+online delivery
+takeaway<br>
+Profitability Analysis
+ ├── Product Profitability
+ ├── Customer Profitability
+ ├── Branch Profitability
+ ├── Channel Profitability
+">
         <i class="far fa-circle nav-icon"></i>
         <p>Analisa Profitabilitas</p>
       </a>
@@ -1226,6 +1347,44 @@ Reimbursement Report">
       </a>
     </li>
 
+
+    <li class="nav-item">
+      <a href="finance-history-prepaid-ledger.php" class="nav-link" title="Kartu Piutang.Fungsi:
+
+histori mutasi piutang per customer
+invoice
+pembayaran
+retur
+write off
+saldo berjalan">
+        <i class="far fa-circle nav-icon"></i>
+        <p>Accounts Receivable Ledger</p>
+      </a>
+    </li>
+
+
+    <li class="nav-item">
+      <a href="finance-history-deferred-ledger.php" class="nav-link" title="Kartu Hutang.Sama:
+
+bill
+pembayaran
+adjustment
+saldo hutang berjalan">
+        <i class="far fa-circle nav-icon"></i>
+        <p>Accounts Payable Ledger</p>
+      </a>
+    </li>
+<!-- [
+  'label' => 'Accounts Receivable Ledger',
+  'url'   => 'finance-history-ar-ledger.php',
+  'page'  => 'finance-history-ar-ledger'
+],
+
+[
+  'label' => 'Accounts Payable Ledger',
+  'url'   => 'finance-history-ap-ledger.php',
+  'page'  => 'finance-history-ap-ledger'
+], -->
     <!-- PREPAID -->
     <li class="nav-item">
       <a href="finance-history-prepaid-ledger.php" class="nav-link">

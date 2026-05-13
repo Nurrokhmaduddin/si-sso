@@ -1,6 +1,5 @@
 
-
-<?php $page = 'sales-pos';   ?>
+<?php $page = 'inventory-stock-opname';   ?>
 <?php include('1header.php'); ?>
 <?php include('2navbar.php'); ?>
 <?php include('3sidebar.php'); ?>
@@ -10,7 +9,7 @@
 
   <section class="content-header">
     <div class="container-fluid">
-      <h3 class="mb-0">Daftar Order Meja
+      <h3 class="mb-0">Daftar Supplier
         <button type="button" class="btn btn-tool" data-bs-toggle="modal" data-bs-target="#modalBantuan" title="Bantuan"><i class="fas fa-question-circle"></i>
         </button>
       </h3>
@@ -72,257 +71,297 @@
 
 
          <!-- ========== CARD : Tabel  Granular ========== -->
-         <style>
+<!-- ===================================================== -->
+<!-- CARD IDENTITAS STOCK OPNAME -->
+<!-- ===================================================== -->
+<div class="card mb-3">
 
-
-
-
-  .status {
-    font-weight: bold;
-    padding: 0.2rem 0.5rem;
-    border-radius: 4px;
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    display: inline-block;
-  }
-
-  .pending { background-color: #FFC107; color: white; }
-  .proses { background-color: #03A9F4; color: white; }
-  .siap { background-color: #4CAF50; color: white; }
-  .paid { background-color: #9E9E9E; color: white; }
-
-  button {
-    padding: 5px 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: all 0.2s ease;
-    font-size: 0.85rem;
-  }
-
-  .btn-detail { background-color: #03A9F4; color: white; }
-  .btn-detail:hover { background-color: #0288D1; }
-
-  .btn-bayar { background-color: #4CAF50; color: white; }
-  .btn-bayar:hover { background-color: #388E3C; }
-
-</style>
-<div class="card">
-  <div class="card-body">
-    <div class="table-responsive">
-      <table class="table table-bordered table-striped table-sm datatables1">
-  <thead>
-    <tr>
-      <th>No</th>
-      <th>Kode Meja</th>
-      <th>Nama Meja</th>
-      <th>Area</th>
-      <th>Kapasitas</th>
-      <th>Nama Pemesan</th>
-      <th>Waktu Pesan</th>
-      <th>Status</th>
-      <th>Total</th>
-      <th>Aksi</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>1</td>
-      <td>T01</td>
-      <td>Meja Depan</td>
-      <td>Indoor</td>
-      <td>4</td>
-      <td>Andi</td>
-      <td>14:30</td>
-      <td><span class="status pending">Pending</span></td>
-      <td>Rp 50.000</td>
-      <td>
-        <button class="btn-detail" onclick="window.location='sales-kasir2-detail.php'">Detail</button>
-        <button class="btn-bayar">Bayar</button>
-      </td>
-    </tr>
-    <tr>
-      <td>2</td>
-      <td>T02</td>
-      <td>Meja Kasir</td>
-      <td>Indoor</td>
-      <td>2</td>
-      <td>Budi</td>
-      <td>14:45</td>
-      <td><span class="status proses">Proses</span></td>
-      <td>Rp 35.000</td>
-      <td>
-        <button class="btn-detail">Detail</button>
-        <button class="btn-bayar">Bayar</button>
-      </td>
-    </tr>
-    <tr>
-      <td>3</td>
-      <td>T03</td>
-      <td>Meja Tengah 1</td>
-      <td>Indoor</td>
-      <td>4</td>
-      <td>Citra</td>
-      <td>14:50</td>
-      <td><span class="status siap">Siap</span></td>
-      <td>Rp 70.000</td>
-      <td>
-        <button class="btn-detail">Detail</button>
-        <button class="btn-bayar">Bayar</button>
-      </td>
-    </tr>
-  </tbody>
-
-    </table>
-    </div>
+  <div class="card-header bg-dark text-white">
+    <h5 class="mb-0">
+      Detail Stock Opname
+    </h5>
   </div>
+
+  <div class="card-body">
+
+    <div class="row">
+
+      <div class="col-md-3 mb-2">
+        <small class="text-muted">No. SO</small>
+        <div><b>SO-2026-00021</b></div>
+      </div>
+
+      <div class="col-md-3 mb-2">
+        <small class="text-muted">Gudang / Lokasi</small>
+        <div><b>Gudang Purwokerto</b></div>
+      </div>
+
+      <div class="col-md-3 mb-2">
+        <small class="text-muted">Tanggal</small>
+        <div><b>05-May-2026 21:14</b></div>
+      </div>
+
+      <div class="col-md-3 mb-2">
+        <small class="text-muted">Status</small>
+        <div>
+          <span class="badge bg-warning text-dark">
+            Draft
+          </span>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-2">
+        <small class="text-muted">Penanggung Jawab</small>
+        <div><b>AMRI</b></div>
+      </div>
+
+      <div class="col-md-4 mb-2">
+        <small class="text-muted">Jumlah Item Dicek</small>
+        <div><b>128 Item</b></div>
+      </div>
+
+      <div class="col-md-4 mb-2">
+        <small class="text-muted">Catatan</small>
+        <div>
+          Pemeriksaan stok bulanan area gudang utama.
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="card-footer">
+
+    <button class="btn btn-sm btn-outline-primary">
+      <i class="fas fa-edit"></i>
+      Edit
+    </button>
+
+    <button class="btn btn-sm btn-outline-warning">
+      <i class="fas fa-sync"></i>
+      Proses Adjustment
+    </button>
+
+    <button class="btn btn-sm btn-outline-success">
+      <i class="fas fa-check"></i>
+      Finalisasi
+    </button>
+
+    <button class="btn btn-sm btn-outline-secondary">
+      <i class="fas fa-print"></i>
+      Print
+    </button>
+
+  </div>
+
 </div>
-----------------
-<table class="table table-bordered table-striped">
-  <thead class="table-dark text-center">
-    <tr>
-      <th>No</th>
-      <th>Meja</th>
-      <th>Order ID</th>
-      <th>Status Bill</th>
-      <th>Total</th>
-      <th>Waktu</th>
-      <th>Aksi</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>1</td>
-      <td>MEJA01</td>
-      <td>ORD-001</td>
-      <td><span class="badge bg-warning">OPEN</span></td>
-      <td>Rp 85.000</td>
-      <td>12:01</td>
-      <td>
-        <button class="btn btn-sm btn-info" onclick="window.location='sales-kasir2-detail.php'">Detail</button>
-        <button class="btn btn-sm btn-success">Bayar</button>
-      </td>
-    </tr>
-    <tr>
-      <td>2</td>
-      <td>MEJA02</td>
-      <td>ORD-002</td>
-      <td><span class="badge bg-warning">OPEN</span></td>
-      <td>Rp 120.000</td>
-      <td>12:05</td>
-      <td>
-        <button class="btn btn-sm btn-info" onclick="window.location='sales-kasir2-detail.php'">Detail</button>
-        <button class="btn btn-sm btn-success">Bayar</button>
-      </td>
-    </tr>
-    <tr>
-      <td>3</td>
-      <td>MEJA03</td>
-      <td>ORD-003</td>
-      <td><span class="badge bg-success">READY</span></td>
-      <td>Rp 95.000</td>
-      <td>11:50</td>
-      <td>
-        <button class="btn btn-sm btn-info" onclick="window.location='sales-kasir2-detail.php'">Detail</button>
-        <button class="btn btn-sm btn-success">Bayar</button>
-      </td>
-    </tr>
-    <tr>
-      <td>4</td>
-      <td>MEJA04</td>
-      <td>ORD-004</td>
-      <td><span class="badge bg-danger">CLOSED</span></td>
-      <td>Rp 150.000</td>
-      <td>11:30</td>
-      <td>
-        <button class="btn btn-sm btn-secondary" disabled>Selesai</button>
-      </td>
-    </tr>
-    <tr>
-      <td>5</td>
-      <td>MEJA05</td>
-      <td>ORD-005</td>
-      <td><span class="badge bg-warning">OPEN</span></td>
-      <td>Rp 60.000</td>
-      <td>12:10</td>
-      <td>
-        <button class="btn btn-sm btn-info" onclick="window.location='sales-kasir2-detail.php'">Detail</button>
-        <button class="btn btn-sm btn-success">Bayar</button>
-      </td>
-    </tr>
-    <tr>
-      <td>6</td>
-      <td>MEJA06</td>
-      <td>ORD-006</td>
-      <td><span class="badge bg-primary">PARTIAL</span></td>
-      <td>Rp 110.000</td>
-      <td>12:00</td>
-      <td>
-        <button class="btn btn-sm btn-info" onclick="window.location='sales-kasir2-detail.php'">Detail</button>
-        <button class="btn btn-sm btn-success">Bayar</button>
-      </td>
-    </tr>
-    <tr>
-      <td>7</td>
-      <td>MEJA07</td>
-      <td>ORD-007</td>
-      <td><span class="badge bg-success">READY</span></td>
-      <td>Rp 200.000</td>
-      <td>11:40</td>
-      <td>
-        <button class="btn btn-sm btn-info" onclick="window.location='sales-kasir2-detail.php'">Detail</button>
-        <button class="btn btn-sm btn-success">Bayar</button>
-      </td>
-    </tr>
-    <tr>
-      <td>8</td>
-      <td>MEJA08</td>
-      <td>ORD-008</td>
-      <td><span class="badge bg-danger">CLOSED</span></td>
-      <td>Rp 175.000</td>
-      <td>11:20</td>
-      <td>
-        <button class="btn btn-sm btn-secondary" disabled>Selesai</button>
-      </td>
-    </tr>
-    <tr>
-      <td>9</td>
-      <td>MEJA09</td>
-      <td>ORD-009</td>
-      <td><span class="badge bg-warning">OPEN</span></td>
-      <td>Rp 45.000</td>
-      <td>12:15</td>
-      <td>
-        <button class="btn btn-sm btn-info" onclick="window.location='sales-kasir2-detail.php'">Detail</button>
-        <button class="btn btn-sm btn-success">Bayar</button>
-      </td>
-    </tr>
-  </tbody>
-<tfoot>
-  <tr>
-    <th>Status</th>
-    <th>Arti</th>
-  </tr>
-  <tr>
-    <td>🟡 OPEN</td>
-    <td>Masih aktif (bisa tambah order)</td>
-  </tr>
-  <tr>
-    <td>🔵 PARTIAL SERVED</td>
-    <td>Sebagian item sudah selesai</td>
-  </tr>
-  <tr>
-    <td>🟢 READY TO PAY</td>
-    <td>Semua item sudah selesai</td>
-  </tr>
-  <tr>
-    <td>🔴 CLOSED</td>
-    <td>Sudah dibayar</td>
-  </tr>
-</tfoot>
-</table>
-----------------
+
+
+
+<!-- ===================================================== -->
+<!-- TABEL DETAIL ITEM STOCK OPNAME -->
+<!-- ===================================================== -->
+<div class="card">
+
+  <div class="card-header bg-primary text-white">
+
+    <h5 class="mb-0">
+      Daftar Item Stock Opname
+    </h5>
+
+  </div>
+
+  <div class="card-body">
+
+    <div class="table-responsive">
+
+      <table class="table table-bordered table-striped table-hover table-sm">
+
+        <thead class="table-dark text-center">
+
+          <tr>
+
+            <th>No</th>
+
+            <th>Kode Item</th>
+
+            <th>Nama Item</th>
+
+            <th>Kategori</th>
+
+            <th>Satuan</th>
+
+            <th>Stok Sistem</th>
+
+            <th>Stok Fisik</th>
+
+            <th>Selisih</th>
+
+            <th>Nilai Selisih</th>
+
+            <th>Keterangan</th>
+
+            <th>Status</th>
+
+            <th>Aksi</th>
+
+          </tr>
+
+        </thead>
+
+        <tbody>
+
+          <tr>
+
+            <td class="text-center">1</td>
+
+            <td>RM001</td>
+
+            <td>Biji Kopi Arabica</td>
+
+            <td>Raw Material</td>
+
+            <td>Kg</td>
+
+            <td class="text-end">25</td>
+
+            <td class="text-end">23</td>
+
+            <td class="text-end text-danger">
+              -2
+            </td>
+
+            <td class="text-end text-danger">
+              Rp 370.000
+            </td>
+
+            <td>
+              Susut saat penyimpanan
+            </td>
+
+            <td class="text-center">
+              <span class="badge bg-warning text-dark">
+                Selisih
+              </span>
+            </td>
+
+            <td class="text-center">
+
+              <button class="btn btn-sm btn-outline-info">
+                <i class="fas fa-eye"></i>
+              </button>
+
+              <button class="btn btn-sm btn-outline-primary">
+                <i class="fas fa-edit"></i>
+              </button>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td class="text-center">2</td>
+
+            <td>FG002</td>
+
+            <td>Croissant Butter</td>
+
+            <td>Finished Good</td>
+
+            <td>Pcs</td>
+
+            <td class="text-end">48</td>
+
+            <td class="text-end">48</td>
+
+            <td class="text-end text-success">
+              0
+            </td>
+
+            <td class="text-end text-success">
+              Rp 0
+            </td>
+
+            <td>
+              Sesuai sistem
+            </td>
+
+            <td class="text-center">
+              <span class="badge bg-success">
+                Sesuai
+              </span>
+            </td>
+
+            <td class="text-center">
+
+              <button class="btn btn-sm btn-outline-info">
+                <i class="fas fa-eye"></i>
+              </button>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td class="text-center">3</td>
+
+            <td>SF003</td>
+
+            <td>Sauce Signature</td>
+
+            <td>Semi Finished</td>
+
+            <td>Bottle</td>
+
+            <td class="text-end">12</td>
+
+            <td class="text-end">15</td>
+
+            <td class="text-end text-primary">
+              +3
+            </td>
+
+            <td class="text-end text-primary">
+              Rp 28.500
+            </td>
+
+            <td>
+              Ada batch produksi belum tercatat
+            </td>
+
+            <td class="text-center">
+              <span class="badge bg-info">
+                Lebih
+              </span>
+            </td>
+
+            <td class="text-center">
+
+              <button class="btn btn-sm btn-outline-info">
+                <i class="fas fa-eye"></i>
+              </button>
+
+              <button class="btn btn-sm btn-outline-warning">
+                <i class="fas fa-sync"></i>
+              </button>
+
+            </td>
+
+          </tr>
+
+        </tbody>
+
+      </table>
+
+    </div>
+
+  </div>
+
+</div>
+
           
 
 

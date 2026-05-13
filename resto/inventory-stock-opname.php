@@ -1,6 +1,5 @@
 
-
-<?php $page = 'sales-pos';   ?>
+<?php $page = 'inventory-stock-opname';   ?>
 <?php include('1header.php'); ?>
 <?php include('2navbar.php'); ?>
 <?php include('3sidebar.php'); ?>
@@ -10,7 +9,7 @@
 
   <section class="content-header">
     <div class="container-fluid">
-      <h3 class="mb-0">Daftar Order Meja
+      <h3 class="mb-0">Daftar Supplier
         <button type="button" class="btn btn-tool" data-bs-toggle="modal" data-bs-target="#modalBantuan" title="Bantuan"><i class="fas fa-question-circle"></i>
         </button>
       </h3>
@@ -72,257 +71,262 @@
 
 
          <!-- ========== CARD : Tabel  Granular ========== -->
-         <style>
-
-
-
-
-  .status {
-    font-weight: bold;
-    padding: 0.2rem 0.5rem;
-    border-radius: 4px;
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    display: inline-block;
-  }
-
-  .pending { background-color: #FFC107; color: white; }
-  .proses { background-color: #03A9F4; color: white; }
-  .siap { background-color: #4CAF50; color: white; }
-  .paid { background-color: #9E9E9E; color: white; }
-
-  button {
-    padding: 5px 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: all 0.2s ease;
-    font-size: 0.85rem;
-  }
-
-  .btn-detail { background-color: #03A9F4; color: white; }
-  .btn-detail:hover { background-color: #0288D1; }
-
-  .btn-bayar { background-color: #4CAF50; color: white; }
-  .btn-bayar:hover { background-color: #388E3C; }
-
-</style>
 <div class="card">
   <div class="card-body">
     <div class="table-responsive">
-      <table class="table table-bordered table-striped table-sm datatables1">
-  <thead>
-    <tr>
-      <th>No</th>
-      <th>Kode Meja</th>
-      <th>Nama Meja</th>
-      <th>Area</th>
-      <th>Kapasitas</th>
-      <th>Nama Pemesan</th>
-      <th>Waktu Pesan</th>
-      <th>Status</th>
-      <th>Total</th>
-      <th>Aksi</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>1</td>
-      <td>T01</td>
-      <td>Meja Depan</td>
-      <td>Indoor</td>
-      <td>4</td>
-      <td>Andi</td>
-      <td>14:30</td>
-      <td><span class="status pending">Pending</span></td>
-      <td>Rp 50.000</td>
-      <td>
-        <button class="btn-detail" onclick="window.location='sales-kasir2-detail.php'">Detail</button>
-        <button class="btn-bayar">Bayar</button>
-      </td>
-    </tr>
-    <tr>
-      <td>2</td>
-      <td>T02</td>
-      <td>Meja Kasir</td>
-      <td>Indoor</td>
-      <td>2</td>
-      <td>Budi</td>
-      <td>14:45</td>
-      <td><span class="status proses">Proses</span></td>
-      <td>Rp 35.000</td>
-      <td>
-        <button class="btn-detail">Detail</button>
-        <button class="btn-bayar">Bayar</button>
-      </td>
-    </tr>
-    <tr>
-      <td>3</td>
-      <td>T03</td>
-      <td>Meja Tengah 1</td>
-      <td>Indoor</td>
-      <td>4</td>
-      <td>Citra</td>
-      <td>14:50</td>
-      <td><span class="status siap">Siap</span></td>
-      <td>Rp 70.000</td>
-      <td>
-        <button class="btn-detail">Detail</button>
-        <button class="btn-bayar">Bayar</button>
-      </td>
-    </tr>
-  </tbody>
+      <table class="table table-bordered table-striped table-hover table-sm datatables1">
+
+      <thead class="table-dark text-center">
+        <tr>
+          <th width="60">No.</th>
+          <th>Gudang</th>
+          <th>Tanggal</th>
+          <th>Penanggung Jawab</th>
+          <th>Total Item </th>
+          <th>Catatan</th>
+          <th width="160">Aksi</th>
+        </tr>
+      </thead>
+
+      <tbody>
+
+        <tr>
+          <td class="text-center">1</td>
+          <td>Purwokerto</td>
+          <td>05-May-2026 21:10</td>
+          <td>AMRI</td>
+          <td>3
+          </td>
+          <td>-</td>
+          <td class="text-center">
+            <a href="inventory-stock-opname-detail.php" class="btn btn-sm btn-outline-info">
+  <i class="fas fa-eye"></i>
+</a>
+
+            <button class="btn btn-sm btn-primary">
+              <i class="fas fa-edit"></i>
+            </button>
+
+            <button class="btn btn-sm btn-success">
+              <i class="fas fa-check"></i>
+            </button>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="text-center">2</td>
+          <td>Purwokerto</td>
+          <td>29-Apr-2026 19:45</td>
+          <td>AMRI</td>
+          <td>7
+          </td>
+          <td>CAMPUR</td>
+          <td class="text-center">
+            <button class="btn btn-sm btn-info">
+              <i class="fas fa-eye"></i>
+            </button>
+
+            <button class="btn btn-sm btn-primary">
+              <i class="fas fa-edit"></i>
+            </button>
+
+            <button class="btn btn-sm btn-success">
+              <i class="fas fa-check"></i>
+            </button>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="text-center">3</td>
+          <td>Purwokerto</td>
+          <td>25-Apr-2026 16:22</td>
+          <td>AMRI</td>
+          <td>9
+          </td>
+          <td>SUBRON</td>
+          <td class="text-center">
+            <button class="btn btn-sm btn-info">
+              <i class="fas fa-eye"></i>
+            </button>
+
+            <button class="btn btn-sm btn-primary">
+              <i class="fas fa-edit"></i>
+            </button>
+
+            <button class="btn btn-sm btn-success">
+              <i class="fas fa-check"></i>
+            </button>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="text-center">4</td>
+          <td>Purwokerto</td>
+          <td>17-Apr-2026 14:50</td>
+          <td>AMRI</td>
+          <td>23
+          </td>
+          <td>CAMPUR</td>
+          <td class="text-center">
+            <button class="btn btn-sm btn-info">
+              <i class="fas fa-eye"></i>
+            </button>
+
+            <button class="btn btn-sm btn-primary">
+              <i class="fas fa-edit"></i>
+            </button>
+
+            <button class="btn btn-sm btn-success">
+              <i class="fas fa-check"></i>
+            </button>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="text-center">5</td>
+          <td>Purwokerto</td>
+          <td>16-Apr-2026 20:30</td>
+          <td>AMRI</td>
+          <td>4
+          </td>
+          <td>CAMPUR</td>
+          <td class="text-center">
+            <button class="btn btn-sm btn-info">
+              <i class="fas fa-eye"></i>
+            </button>
+
+            <button class="btn btn-sm btn-primary">
+              <i class="fas fa-edit"></i>
+            </button>
+
+            <button class="btn btn-sm btn-success">
+              <i class="fas fa-check"></i>
+            </button>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="text-center">6</td>
+          <td>Purwokerto</td>
+          <td>14-Apr-2026 11:15</td>
+          <td>AMRI</td>
+          <td>78
+          </td>
+          <td>CAMPUR</td>
+          <td class="text-center">
+            <button class="btn btn-sm btn-info">
+              <i class="fas fa-eye"></i>
+            </button>
+
+            <button class="btn btn-sm btn-primary">
+              <i class="fas fa-edit"></i>
+            </button>
+
+            <button class="btn btn-sm btn-success">
+              <i class="fas fa-check"></i>
+            </button>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="text-center">7</td>
+          <td>Purwokerto</td>
+          <td>10-Apr-2026 10:05</td>
+          <td>AMRI</td>
+          <td>6
+          </td>
+          <td>CAMPUR</td>
+          <td class="text-center">
+            <button class="btn btn-sm btn-info" href=inventory-stock-opname-detail.php>
+              <i class="fas fa-eye"></i>
+            </button>
+
+            <button class="btn btn-sm btn-primary">
+              <i class="fas fa-edit"></i>
+            </button>
+
+            <button class="btn btn-sm btn-success">
+              <i class="fas fa-check"></i>
+            </button>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="text-center">8</td>
+          <td>Purwokerto</td>
+          <td>31-Mar-2026 22:11</td>
+          <td>SOLY, IMAM, MAIL</td>
+          <td>7
+          </td>
+          <td>CAMPUR</td>
+          <td class="text-center">
+            <button class="btn btn-sm btn-info">
+              <i class="fas fa-eye"></i>
+            </button>
+
+            <button class="btn btn-sm btn-primary">
+              <i class="fas fa-edit"></i>
+            </button>
+
+            <button class="btn btn-sm btn-success">
+              <i class="fas fa-check"></i>
+            </button>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="text-center">9</td>
+          <td>Purwokerto</td>
+          <td>30-Mar-2026 08:45</td>
+          <td>PAK YONO</td>
+          <td>3
+          </td>
+          <td>MAKAPAL DLL</td>
+          <td class="text-center">
+            <button class="btn btn-sm btn-info">
+              <i class="fas fa-eye"></i>
+            </button>
+
+            <button class="btn btn-sm btn-primary">
+              <i class="fas fa-edit"></i>
+            </button>
+
+            <button class="btn btn-sm btn-success">
+              <i class="fas fa-check"></i>
+            </button>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="text-center">10</td>
+          <td>Purwokerto</td>
+          <td>28-Mar-2026 13:20</td>
+          <td>KODIR, RIVAL DLL</td>
+          <td>3
+          </td>
+          <td>STL</td>
+          <td class="text-center">
+            <button class="btn btn-sm btn-info">
+              <i class="fas fa-eye"></i>
+            </button>
+
+            <button class="btn btn-sm btn-primary">
+              <i class="fas fa-edit"></i>
+            </button>
+
+            <button class="btn btn-sm btn-success">
+              <i class="fas fa-check"></i>
+            </button>
+          </td>
+        </tr>
+
+      </tbody>
 
     </table>
     </div>
   </div>
 </div>
-----------------
-<table class="table table-bordered table-striped">
-  <thead class="table-dark text-center">
-    <tr>
-      <th>No</th>
-      <th>Meja</th>
-      <th>Order ID</th>
-      <th>Status Bill</th>
-      <th>Total</th>
-      <th>Waktu</th>
-      <th>Aksi</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>1</td>
-      <td>MEJA01</td>
-      <td>ORD-001</td>
-      <td><span class="badge bg-warning">OPEN</span></td>
-      <td>Rp 85.000</td>
-      <td>12:01</td>
-      <td>
-        <button class="btn btn-sm btn-info" onclick="window.location='sales-kasir2-detail.php'">Detail</button>
-        <button class="btn btn-sm btn-success">Bayar</button>
-      </td>
-    </tr>
-    <tr>
-      <td>2</td>
-      <td>MEJA02</td>
-      <td>ORD-002</td>
-      <td><span class="badge bg-warning">OPEN</span></td>
-      <td>Rp 120.000</td>
-      <td>12:05</td>
-      <td>
-        <button class="btn btn-sm btn-info" onclick="window.location='sales-kasir2-detail.php'">Detail</button>
-        <button class="btn btn-sm btn-success">Bayar</button>
-      </td>
-    </tr>
-    <tr>
-      <td>3</td>
-      <td>MEJA03</td>
-      <td>ORD-003</td>
-      <td><span class="badge bg-success">READY</span></td>
-      <td>Rp 95.000</td>
-      <td>11:50</td>
-      <td>
-        <button class="btn btn-sm btn-info" onclick="window.location='sales-kasir2-detail.php'">Detail</button>
-        <button class="btn btn-sm btn-success">Bayar</button>
-      </td>
-    </tr>
-    <tr>
-      <td>4</td>
-      <td>MEJA04</td>
-      <td>ORD-004</td>
-      <td><span class="badge bg-danger">CLOSED</span></td>
-      <td>Rp 150.000</td>
-      <td>11:30</td>
-      <td>
-        <button class="btn btn-sm btn-secondary" disabled>Selesai</button>
-      </td>
-    </tr>
-    <tr>
-      <td>5</td>
-      <td>MEJA05</td>
-      <td>ORD-005</td>
-      <td><span class="badge bg-warning">OPEN</span></td>
-      <td>Rp 60.000</td>
-      <td>12:10</td>
-      <td>
-        <button class="btn btn-sm btn-info" onclick="window.location='sales-kasir2-detail.php'">Detail</button>
-        <button class="btn btn-sm btn-success">Bayar</button>
-      </td>
-    </tr>
-    <tr>
-      <td>6</td>
-      <td>MEJA06</td>
-      <td>ORD-006</td>
-      <td><span class="badge bg-primary">PARTIAL</span></td>
-      <td>Rp 110.000</td>
-      <td>12:00</td>
-      <td>
-        <button class="btn btn-sm btn-info" onclick="window.location='sales-kasir2-detail.php'">Detail</button>
-        <button class="btn btn-sm btn-success">Bayar</button>
-      </td>
-    </tr>
-    <tr>
-      <td>7</td>
-      <td>MEJA07</td>
-      <td>ORD-007</td>
-      <td><span class="badge bg-success">READY</span></td>
-      <td>Rp 200.000</td>
-      <td>11:40</td>
-      <td>
-        <button class="btn btn-sm btn-info" onclick="window.location='sales-kasir2-detail.php'">Detail</button>
-        <button class="btn btn-sm btn-success">Bayar</button>
-      </td>
-    </tr>
-    <tr>
-      <td>8</td>
-      <td>MEJA08</td>
-      <td>ORD-008</td>
-      <td><span class="badge bg-danger">CLOSED</span></td>
-      <td>Rp 175.000</td>
-      <td>11:20</td>
-      <td>
-        <button class="btn btn-sm btn-secondary" disabled>Selesai</button>
-      </td>
-    </tr>
-    <tr>
-      <td>9</td>
-      <td>MEJA09</td>
-      <td>ORD-009</td>
-      <td><span class="badge bg-warning">OPEN</span></td>
-      <td>Rp 45.000</td>
-      <td>12:15</td>
-      <td>
-        <button class="btn btn-sm btn-info" onclick="window.location='sales-kasir2-detail.php'">Detail</button>
-        <button class="btn btn-sm btn-success">Bayar</button>
-      </td>
-    </tr>
-  </tbody>
-<tfoot>
-  <tr>
-    <th>Status</th>
-    <th>Arti</th>
-  </tr>
-  <tr>
-    <td>🟡 OPEN</td>
-    <td>Masih aktif (bisa tambah order)</td>
-  </tr>
-  <tr>
-    <td>🔵 PARTIAL SERVED</td>
-    <td>Sebagian item sudah selesai</td>
-  </tr>
-  <tr>
-    <td>🟢 READY TO PAY</td>
-    <td>Semua item sudah selesai</td>
-  </tr>
-  <tr>
-    <td>🔴 CLOSED</td>
-    <td>Sudah dibayar</td>
-  </tr>
-</tfoot>
-</table>
-----------------
+
           
 
 
