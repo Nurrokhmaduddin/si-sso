@@ -9,7 +9,7 @@
 -->
 <!-- ========================================================= -->
 
-<?php $page = 'finance-monitoring'; ?>
+<?php $page = 'finance-cashflow-report'; ?>
 <?php include('1header.php'); ?>
 <?php include('2navbar.php'); ?>
 <?php include('3sidebar.php'); ?>
@@ -67,16 +67,12 @@
               <div class="row">
 
                 <div class="col-md-6">
-                  <h4 class="mb-0">
-                    <b>Lembaga :</b> Semua Lembaga
-                  </h4>
+                  <b>Periode:</b> 1 Mei 2026 - 31 Mei 2026
                 </div>
 
-                <div class="col-md-6 text-md-end mt-3 mt-md-0">
-                  <h4 class="mb-0">
-                    <b>Periode :</b> 1 Mei 2026 - 31 Mei 2026
-                  </h4>
-                </div>
+                <!-- <div class="col-md-6 text-md-end">
+                  <b>Status Data:</b> Final Posting
+                </div> -->
 
               </div>
 
@@ -114,6 +110,406 @@
         </div>
 
       </div>
+      <!-- ================================================= -->
+      <!-- KPI -->
+      <!-- ================================================= -->
+
+      <div class="row">
+
+        <div class="col-lg-4 col-md-6">
+
+          <div class="small-box bg-success">
+
+            <div class="inner">
+
+              <h3>Rp 120.000.000</h3>
+
+              <p>Opening </p>
+
+            </div>
+
+            <div class="icon">
+              <i class="fas fa-chart-line"></i>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+
+          <div class="small-box bg-danger">
+
+            <div class="inner">
+
+              <h3>Rp 64.500.000</h3>
+
+              <p>Total Perubahan</p>
+
+            </div>
+
+            <div class="icon">
+              <i class="fas fa-file-invoice-dollar"></i>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="col-lg-4 col-md-12">
+
+          <div class="small-box bg-primary">
+
+            <div class="inner">
+
+              <h3>Rp 184.500.000</h3>
+
+              <p>Closing</p>
+
+            </div>
+
+            <div class="icon">
+              <i class="fas fa-wallet"></i>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+<!-- ================================================= -->
+<!-- LAPORAN ARUS KAS (COA BASED) -->
+<!-- ================================================= -->
+
+<div class="card">
+
+  <div class="card-body p-0">
+
+    <!-- ============================================= -->
+    <!-- KAS AWAL -->
+    <!-- ============================================= -->
+
+    <div style="background:#d86a1d;
+                color:white;
+                padding:22px 28px;
+                font-size:22px;
+                font-weight:bold;
+                text-align:right;">
+
+      KAS AWAL :
+      Rp 120.000.000
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- ================================================= -->
+<!-- KENAIKAN / PENURUNAN KAS -->
+<!-- ================================================= -->
+
+<div class="card">
+
+  <div class="card-body p-0">
+
+    <div style="background:#eb7d2d;
+                color:white;
+                padding:18px 24px;
+                font-size:20px;
+                font-weight:600;">
+
+      KENAIKAN / PENURUNAN KAS
+
+    </div>
+
+    <div class="table-responsive">
+
+      <table class="table table-bordered mb-0">
+
+        <thead style="background:#f4f6f9;">
+
+          <tr>
+            <th width="15%">Kode Akun</th>
+            <th>Nama Akun</th>
+            <th width="20%" class="text-end">Nominal (Rp)</th>
+          </tr>
+
+        </thead>
+
+        <tbody>
+
+          <!-- ============================================= -->
+          <!-- OPERASI (COA 4 & 6) -->
+          <!-- ============================================= -->
+
+          <tr style="background:#eef7ff;font-weight:bold;">
+            <td colspan="3">ARUS KAS OPERASI</td>
+          </tr>
+
+          <tr>
+            <td>411-100</td>
+            <td>Penerimaan Kas dari Penjualan</td>
+            <td class="text-end">85.000.000</td>
+          </tr>
+
+          <tr>
+            <td>611-100</td>
+            <td>Pembayaran Gaji Karyawan</td>
+            <td class="text-end">-25.000.000</td>
+          </tr>
+
+          <tr>
+            <td>611-200</td>
+            <td>Beban Operasional (Listrik, Air, dll)</td>
+            <td class="text-end">-12.500.000</td>
+          </tr>
+
+          <tr style="font-weight:bold;background:#f8f9fa;">
+            <td colspan="2" class="text-center">TOTAL OPERASI</td>
+            <td class="text-end">47.500.000</td>
+          </tr>
+
+
+          <!-- ============================================= -->
+          <!-- INVESTASI (COA 1) -->
+          <!-- ============================================= -->
+
+          <tr style="background:#eef7ff;font-weight:bold;">
+            <td colspan="3">ARUS KAS INVESTASI</td>
+          </tr>
+
+          <tr>
+            <td>121-100</td>
+            <td>Pembelian Peralatan</td>
+            <td class="text-end">-20.000.000</td>
+          </tr>
+
+          <tr>
+            <td>121-200</td>
+            <td>Penjualan Aset Tetap</td>
+            <td class="text-end">5.000.000</td>
+          </tr>
+
+          <tr style="font-weight:bold;background:#f8f9fa;">
+            <td colspan="2" class="text-center">TOTAL INVESTASI</td>
+            <td class="text-end">-15.000.000</td>
+          </tr>
+
+
+          <!-- ============================================= -->
+          <!-- PENDANAAN (COA 3 & 2) -->
+          <!-- ============================================= -->
+
+          <tr style="background:#eef7ff;font-weight:bold;">
+            <td colspan="3">ARUS KAS PENDANAAN</td>
+          </tr>
+
+          <tr>
+            <td>331-100</td>
+            <td>Tambahan Modal Pemilik</td>
+            <td class="text-end">30.000.000</td>
+          </tr>
+
+          <tr>
+            <td>211-100</td>
+            <td>Penerimaan Pinjaman Bank</td>
+            <td class="text-end">10.000.000</td>
+          </tr>
+
+          <tr>
+            <td>211-200</td>
+            <td>Pembayaran Utang Bank</td>
+            <td class="text-end">-8.000.000</td>
+          </tr>
+
+          <tr style="font-weight:bold;background:#f8f9fa;">
+            <td colspan="2" class="text-center">TOTAL PENDANAAN</td>
+            <td class="text-end">32.000.000</td>
+          </tr>
+
+
+          <!-- ============================================= -->
+          <!-- TOTAL KAS BERSIH -->
+          <!-- ============================================= -->
+
+          <tr style="font-weight:bold;background:#ffe8d6;">
+            <td colspan="2" class="text-center">
+              TOTAL KENAIKAN / PENURUNAN KAS
+            </td>
+
+            <td class="text-end">
+              64.500.000
+            </td>
+          </tr>
+
+        </tbody>
+
+      </table>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- ================================================= -->
+<!-- KAS AKHIR -->
+<!-- ================================================= -->
+
+<div class="card">
+
+  <div class="card-body p-0">
+
+    <div style="background:#d86a1d;
+                color:white;
+                padding:22px 28px;
+                font-size:22px;
+                font-weight:bold;
+                text-align:right;">
+
+      KAS AKHIR :
+      Rp 184.500.000
+
+    </div>
+
+  </div>
+
+</div>
+-----
+      <!-- ================================================= -->
+      <!-- LAPORAN ARUS KAS -->
+      <!-- ================================================= -->
+
+      <div class="card">
+
+        <div class="card-body p-0">
+<!-- ============================================= -->
+          <!-- KAS AWAL -->
+          <!-- ============================================= -->
+
+          <div style="background:#d86a1d;
+                      color:white;
+                      padding:22px 28px;
+                      font-size:22px;
+                      font-weight:bold;
+                      text-align:right;">
+
+            KAS AWAL :
+            Rp 190.980.000
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="card">
+
+        <div class="card-body p-0">
+
+          <!-- ============================================= -->
+          <!-- PENAMBAHAN KAS -->
+          <!-- ============================================= -->
+
+          <div style="background:#eb7d2d;
+                      color:white;
+                      padding:18px 24px;
+                      font-size:20px;
+                      font-weight:600;">
+
+            KENAIKAN / PENURUNAN KAS
+
+          </div>
+
+          <div class="table-responsive">
+
+            <table class="table table-bordered mb-0">
+
+              <thead style="background:#f4f6f9;">
+
+                <tr>
+
+                  <th width="15%">Kode Akun</th>
+                  <th>Nama Akun</th>
+                  <th width="20%" class="text-end">
+                    Nominal (Rp)
+                  </th>
+
+                </tr>
+
+              </thead>
+
+              <tbody>
+  
+   
+   
+                <tr>
+                  <td>331-100</td>
+                  <td>Modal Disetor / Modal Pemilik</td>
+                  <td class="text-end">25.000.000</td>
+                </tr>
+
+                <tr>
+                  <td>331-120</td>
+                  <td>Tambahan Investasi Pemilik</td>
+                  <td class="text-end">10.000.000</td>
+                </tr>
+
+                <tr>
+                  <td>331-130</td>
+                  <td>Laba Ditahan (Retained Earnings)</td>
+                  <td class="text-end">18.500.000</td>
+                </tr>
+
+                <tr style="font-weight:bold;
+                           background:#f8f9fa;">
+
+                  <td colspan="2" class="text-center">
+                    TOTAL KENAIKAN / PENURUNAN KAS
+                  </td>
+
+                  <td class="text-end">
+                    53.500.000
+                  </td>
+
+                </tr>
+
+              </tbody>
+
+            </table>
+
+          </div>
+</div>
+</div>
+<div class="card">
+<div class="card-body p-0">
+          <!-- ============================================= -->
+          <!-- KAS AKHIR -->
+          <!-- ============================================= -->
+
+          <div style="background:#d86a1d;
+                      color:white;
+                      padding:22px 28px;
+                      font-size:22px;
+                      font-weight:bold;
+                      text-align:right;">
+
+            KAS AKHIR :
+            Rp 239.480.000
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+         
+-----
 
       <!-- ========================================================= -->
       <!-- TABLE LAPORAN -->

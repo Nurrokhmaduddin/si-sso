@@ -165,6 +165,7 @@ FOUNDATION:
     BUSINESS PARTNER
     =====================================================
     */
+    'master-actor',
     'master-customer',
     'master-supplier',
     'master-vendor',
@@ -274,6 +275,11 @@ FOUNDATION:
 
       'children' => [
 
+        [
+          'label' => 'MASTER ACTOR*',
+          'url'   => 'master-actor.php',
+          'page'  => 'master-actor'
+        ],
         [
           'label' => 'Customer',
           'url'   => 'master-customer.php',
@@ -973,6 +979,337 @@ FOUNDATION:
 
     ]
   ],
+
+
+  /*
+  =========================================================
+  SYSTEM ACCESS
+  =========================================================
+  */
+  [
+    'title' => 'System Access',
+    'icon'  => 'fas fa-user-shield',
+
+    'pages' => [
+
+      /*
+      =====================================================
+      DASHBOARD
+      =====================================================
+      */
+      'access-dashboard',
+
+      /*
+      =====================================================
+      MANAGEMENT
+      =====================================================
+      */
+      'access-users',
+      'access-roles',
+      'access-permissions',
+      'access-user-role-mapping',
+      'access-user-actor-mapping',
+      'access-role-permission-mapping',
+      'access-role-scope-mapping',
+      'access-context-management',
+      'access-authentication-settings',
+      'access-security-policy',
+
+      /*
+      =====================================================
+      MONITORING
+      =====================================================
+      */
+      'access-active-sessions',
+      'access-online-users',
+      'access-failed-login-monitor',
+      'access-concurrent-login-monitor',
+      'access-access-violation-monitor',
+      'access-suspicious-activity-monitor',
+
+      /*
+      =====================================================
+      REPORT
+      =====================================================
+      */
+      'access-login-report',
+      'access-user-activity-report',
+      'access-permission-usage-report',
+      'access-session-report',
+      'access-access-summary-report',
+      'access-role-assignment-report',
+
+      /*
+      =====================================================
+      AUDIT / HISTORY
+      =====================================================
+      */
+      'access-audit-trail',
+      'access-login-history',
+      'access-permission-change-history',
+      'access-role-assignment-history',
+      'access-user-status-history',
+      'access-session-history',
+      'access-access-log',
+
+    ],
+
+    'children' => [
+
+      /*
+      =====================================================
+      DASHBOARD
+      =====================================================
+      */
+      [
+        'title' => 'Dashboard',
+        'icon'  => 'fas fa-chart-pie',
+
+        'children' => [
+
+          [
+            'label' => 'Access Overview',
+            'url'   => 'access-dashboard.php',
+            'page'  => 'access-dashboard'
+          ],
+
+        ]
+      ],
+
+      /*
+      =====================================================
+      MANAGEMENT
+      =====================================================
+      */
+      [
+        'title' => 'Management',
+        'icon'  => 'fas fa-users-cog',
+
+        'children' => [
+
+          [
+            'label' => 'Users*',
+            'url'   => 'access-users.php',
+            'page'  => 'access-users'
+          ],
+
+          [
+            'label' => 'Roles',
+            'url'   => 'access-roles.php',
+            'page'  => 'access-roles'
+          ],
+
+          [
+            'label' => 'Permissions',
+            'url'   => 'access-permissions.php',
+            'page'  => 'access-permissions'
+          ],
+
+          [
+            'label' => 'User Role Mapping',
+            'url'   => 'access-user-role-mapping.php',
+            'page'  => 'access-user-role-mapping'
+          ],
+
+          [
+            'label' => 'User Actor Mapping*',
+            'url'   => 'access-user-actor-mapping.php',
+            'page'  => 'access-user-actor-mapping'
+          ],
+
+          [
+            'label' => 'Role Permission Mapping',
+            'url'   => 'access-role-permission-mapping.php',
+            'page'  => 'access-role-permission-mapping'
+          ],
+
+          [
+            'label' => 'Role Scope Mapping',
+            'url'   => 'access-role-scope-mapping.php',
+            'page'  => 'access-role-scope-mapping'
+          ],
+
+          [
+            'label' => 'Context Management',
+            'url'   => 'access-context-management.php',
+            'page'  => 'access-context-management'
+          ],
+
+          [
+            'label' => 'Authentication Settings',
+            'url'   => 'access-authentication-settings.php',
+            'page'  => 'access-authentication-settings'
+          ],
+
+          [
+            'label' => 'Security Policy',
+            'url'   => 'access-security-policy.php',
+            'page'  => 'access-security-policy'
+          ],
+
+        ]
+      ],
+
+      /*
+      =====================================================
+      MONITORING
+      =====================================================
+      */
+      [
+        'title' => 'Monitoring',
+        'icon'  => 'fas fa-desktop',
+
+        'children' => [
+
+          [
+            'label' => 'Active Sessions',
+            'url'   => 'access-active-sessions.php',
+            'page'  => 'access-active-sessions'
+          ],
+
+          [
+            'label' => 'Online Users',
+            'url'   => 'access-online-users.php',
+            'page'  => 'access-online-users'
+          ],
+
+          [
+            'label' => 'Failed Login Monitor',
+            'url'   => 'access-failed-login-monitor.php',
+            'page'  => 'access-failed-login-monitor'
+          ],
+
+          [
+            'label' => 'Concurrent Login Monitor',
+            'url'   => 'access-concurrent-login-monitor.php',
+            'page'  => 'access-concurrent-login-monitor'
+          ],
+
+          [
+            'label' => 'Access Violation Monitor',
+            'url'   => 'access-access-violation-monitor.php',
+            'page'  => 'access-access-violation-monitor'
+          ],
+
+          [
+            'label' => 'Suspicious Activity Monitor',
+            'url'   => 'access-suspicious-activity-monitor.php',
+            'page'  => 'access-suspicious-activity-monitor'
+          ],
+
+        ]
+      ],
+
+      /*
+      =====================================================
+      REPORT
+      =====================================================
+      */
+      [
+        'title' => 'Report',
+        'icon'  => 'fas fa-folder-open',
+
+        'children' => [
+
+          [
+            'label' => 'Login Report',
+            'url'   => 'access-login-report.php',
+            'page'  => 'access-login-report'
+          ],
+
+          [
+            'label' => 'User Activity Report',
+            'url'   => 'access-user-activity-report.php',
+            'page'  => 'access-user-activity-report'
+          ],
+
+          [
+            'label' => 'Permission Usage Report',
+            'url'   => 'access-permission-usage-report.php',
+            'page'  => 'access-permission-usage-report'
+          ],
+
+          [
+            'label' => 'Session Report',
+            'url'   => 'access-session-report.php',
+            'page'  => 'access-session-report'
+          ],
+
+          [
+            'label' => 'Access Summary Report',
+            'url'   => 'access-access-summary-report.php',
+            'page'  => 'access-access-summary-report'
+          ],
+
+          [
+            'label' => 'Role Assignment Report',
+            'url'   => 'access-role-assignment-report.php',
+            'page'  => 'access-role-assignment-report'
+          ],
+
+        ]
+      ],
+
+      /*
+      =====================================================
+      AUDIT / HISTORY
+      =====================================================
+      */
+      [
+        'title' => 'Audit / History',
+        'icon'  => 'fas fa-history',
+
+        'children' => [
+
+          [
+            'label' => 'Audit Trail',
+            'url'   => 'access-audit-trail.php',
+            'page'  => 'access-audit-trail'
+          ],
+
+          [
+            'label' => 'Login History',
+            'url'   => 'access-login-history.php',
+            'page'  => 'access-login-history'
+          ],
+
+          [
+            'label' => 'Permission Change History',
+            'url'   => 'access-permission-change-history.php',
+            'page'  => 'access-permission-change-history'
+          ],
+
+          [
+            'label' => 'Role Assignment History',
+            'url'   => 'access-role-assignment-history.php',
+            'page'  => 'access-role-assignment-history'
+          ],
+
+          [
+            'label' => 'User Status History',
+            'url'   => 'access-user-status-history.php',
+            'page'  => 'access-user-status-history'
+          ],
+
+          [
+            'label' => 'Session History',
+            'url'   => 'access-session-history.php',
+            'page'  => 'access-session-history'
+          ],
+
+          [
+            'label' => 'Access Log',
+            'url'   => 'access-access-log.php',
+            'page'  => 'access-access-log'
+          ],
+
+        ]
+      ],
+
+    ]
+  ],
+
+
 
 ];
 

@@ -65,7 +65,7 @@
           <div class="row">
 
             <div class="col-md-6">
-              <b>Periode :</b> 1 Mei 2026 - 31 Mei 2026
+              <b>Periode:</b> hingga - 31 Mei 2026
             </div>
 
           </div>
@@ -100,13 +100,337 @@
         </div>
 
       </div>
+<!-- ================================================= -->
+          <!-- KPI -->
+          <!-- ================================================= -->
+
+          <div class="row">
+
+            <div class="col-lg-4 col-md-6">
+
+              <div class="small-box bg-success">
+
+                <div class="inner">
+
+                  <h3>Rp 277.300.000</h3>
+
+                  <p>Total Aset </p>
+
+                </div>
+
+                <div class="icon">
+                  <i class="fas fa-chart-line"></i>
+                </div>
+
+              </div>
+
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+
+              <div class="small-box bg-danger">
+
+                <div class="inner">
+
+                  <h3>Rp 29.400.000</h3>
+
+                  <p>Total Liabilitas</p>
+
+                </div>
+
+                <div class="icon">
+                  <i class="fas fa-file-invoice-dollar"></i>
+                </div>
+
+              </div>
+
+            </div>
+
+            <div class="col-lg-4 col-md-12">
+
+              <div class="small-box bg-primary">
+
+                <div class="inner">
+
+                  <h3>Rp 247.900.000</h3>
+
+                  <p>Total Ekuitas</p>
+
+                </div>
+
+                <div class="icon">
+                  <i class="fas fa-wallet"></i>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- ================================================= -->
+      <!-- LAPORAN NERACA -->
+      <!-- ================================================= -->
+
+      <div class="card">
+
+        <div class="card-body p-0">
+
+          <!-- ============================================= -->
+          <!-- ASET -->
+          <!-- ============================================= -->
+
+          <div style="background:#eb7d2d;
+                      color:white;
+                      padding:18px 24px;
+                      font-size:20px;
+                      font-weight:600;">
+
+            ASET
+
+          </div>
+
+          <div class="table-responsive">
+
+            <table class="table table-bordered mb-0">
+
+              <thead style="background:#f4f6f9;">
+
+                <tr>
+
+                  <th width="15%">Kode Akun</th>
+                  <th>Nama Akun</th>
+                  <th width="20%" class="text-end">
+                    Nominal (Rp)
+                  </th>
+
+                </tr>
+
+              </thead>
+
+              <tbody>
+  
+   <tr>
+                      <td>111-100</td>
+                      <td>Kas Besar</td>
+                      <td class="text-end">125.000.000</td>
+                    </tr>
+
+                    <tr>
+                      <td>111-200</td>
+                      <td>Kas Kecil</td>
+                      <td class="text-end">5.000.000</td>
+                    </tr>
+
+                    <tr>
+                      <td>112-100</td>
+                      <td>Bank BCA</td>
+                      <td class="text-end">68.500.000</td>
+                    </tr>
+
+                    <tr>
+                      <td>113-100</td>
+                      <td>Piutang Usaha</td>
+                      <td class="text-end">14.750.000</td>
+                    </tr>
+
+                    <tr>
+                      <td>114-100</td>
+                      <td>Persediaan Barang</td>
+                      <td class="text-end">27.300.000</td>
+                    </tr>
+
+                    <tr>
+                      <td>121-100</td>
+                      <td>Peralatan Café</td>
+                      <td class="text-end">45.000.000</td>
+                    </tr>
+
+                    <tr>
+                      <td>121-200</td>
+                      <td>Akumulasi Penyusutan</td>
+                      <td class="text-end">(8.250.000)</td>
+                    </tr>
+
+                    
+
+                <tr style="font-weight:bold;
+                           background:#f8f9fa;">
+
+                  <td colspan="2" class="text-center">
+                    TOTAL ASET
+                  </td>
+
+                  <td class="text-end">
+                    277.300.000
+                  </td>
+
+                </tr>
+
+              </tbody>
+
+            </table>
+
+          </div>
+</div>
+</div>
+<div class="card">
+<div class="card-body p-0">
+          <!-- ============================================= -->
+          <!-- LIABILITAS -->
+          <!-- ============================================= -->
+
+          <div style="background:#eb7d2d;
+                      color:white;
+                      padding:18px 24px;
+                      font-size:20px;
+                      font-weight:600;">
+
+            LIABILITAS
+
+          </div>
+
+          <div class="table-responsive">
+
+            <table class="table table-bordered mb-0">
+
+              <thead style="background:#f4f6f9;">
+
+                <tr>
+
+                  <th width="15%">Kode Akun</th>
+                  <th>Nama Akun</th>
+                  <th width="20%" class="text-end">
+                    Nominal (Rp)
+                  </th>
+
+                </tr>
+
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>211-100</td>
+                  <td>Hutang Supplier</td>
+                  <td class="text-end">18.700.000</td>
+                </tr>
+
+                <tr>
+                  <td>212-100</td>
+                  <td>Hutang Operasional</td>
+                  <td class="text-end">7.500.000</td>
+                </tr>
+
+                <tr>
+                  <td>213-100</td>
+                  <td>Hutang Pajak</td>
+                  <td class="text-end">3.200.000</td>
+                </tr>
+                
+                <tr style="font-weight:bold;
+                           background:#f8f9fa;">
+
+                  <td colspan="2" class="text-center">
+                    TOTAL LIABILITAS
+                  </td>
+
+                  <td class="text-end">
+                    29.400.000
+                  </td>
+
+                </tr>
+
+              </tbody>
+
+            </table>
+
+          </div>
+</div>
+</div>
+<div class="card">
+<div class="card-body p-0">
+          <!-- ============================================= -->
+          <!-- EKUITAS -->
+          <!-- ============================================= -->
+
+          <div style="background:#eb7d2d;
+                      color:white;
+                      padding:18px 24px;
+                      font-size:20px;
+                      font-weight:600;">
+
+            EKUITAS
+
+          </div>
+
+          <div class="table-responsive">
+
+            <table class="table table-bordered mb-0">
+
+              <thead style="background:#f4f6f9;">
+
+                <tr>
+
+                  <th width="15%">Kode Akun</th>
+                  <th>Nama Akun</th>
+                  <th width="20%" class="text-end">
+                    Nominal (Rp)
+                  </th>
+
+                </tr>
+
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>331-100</td>
+                  <td>Modal Disetor / Modal Pemilik</td>
+                  <td class="text-end">220.000.000</td>
+                </tr>
+
+                <tr>
+                  <td>331-130</td>
+                  <td>Laba Ditahan</td>
+                  <td class="text-end">12.500.000</td>
+                </tr>
+
+                <tr>
+                  <td>331-140</td>
+                  <td>Laba Berjalan</td>
+                  <td class="text-end">15.400.000</td>
+                </tr>
+
+                <tr style="font-weight:bold;
+                           background:#f8f9fa;">
+
+                  <td colspan="2" class="text-center">
+                    TOTAL EKUITAS
+                  </td>
+
+                  <td class="text-end">
+                    247.900.000
+                  </td>
+
+                </tr>
+
+              </tbody>
+
+            </table>
+
+          </div>
+</div>
+</div>
+
+
+         
+-----
 
       <!-- ========================================================= -->
       <!-- LAPORAN NERACA -->
       <!-- ========================================================= -->
-      <div class="card">
+      <!-- <div class="card">
 
-        <div class="card-body">
+        <div class="card-body"> -->
 
           <div class="row">
 
@@ -120,20 +444,21 @@
                 <table class="table table-bordered align-middle">
 
                   <thead>
+                    <div style="background:#eb7d2d;
+                    color:white;
+                    padding:18px 24px;
+                    font-size:20px;
+                    font-weight:600;">
 
-                    <tr style="background:#ea7c2b;color:white;">
+                      ASET
 
-                      <th colspan="3" class="p-3 fs-4">
-                        ASET
-                      </th>
-
-                    </tr>
-
-                    <tr class="table-light text-center">
+                    </div>
+                  
+                    <tr class=" text-center">
 
                       <th width="25%">Kode Akun</th>
                       <th>Nama Akun</th>
-                      <th width="25%">Nominal (Rp)</th>
+                      <th width="30%">Nominal (Rp)</th>
 
                     </tr>
 
@@ -216,20 +541,22 @@
                 <table class="table table-bordered align-middle">
 
                   <thead>
+                    <div style="background:#eb7d2d;
+                    color:white;
+                    padding:18px 24px;
+                    font-size:20px;
+                    font-weight:600;">
 
-                    <tr style="background:#ea7c2b;color:white;">
+                      LIABILITAS
 
-                      <th colspan="3" class="p-3 fs-4">
-                        LIABILITAS
-                      </th>
+                    </div>
+                    
 
-                    </tr>
-
-                    <tr class="table-light text-center">
+                    <tr class=" text-center">
 
                       <th width="25%">Kode Akun</th>
                       <th>Nama Akun</th>
-                      <th width="25%">Nominal (Rp)</th>
+                      <th width="30%">Nominal (Rp)</th>
 
                     </tr>
 
@@ -281,20 +608,22 @@
                 <table class="table table-bordered align-middle">
 
                   <thead>
+                    <div style="background:#eb7d2d;
+                    color:white;
+                    padding:18px 24px;
+                    font-size:20px;
+                    font-weight:600;">
 
-                    <tr style="background:#ea7c2b;color:white;">
+                      EKUITAS
 
-                      <th colspan="3" class="p-3 fs-4">
-                        EKUITAS
-                      </th>
+                    </div>
+                   
 
-                    </tr>
-
-                    <tr class="table-light text-center">
+                    <tr class=" text-center">
 
                       <th width="25%">Kode Akun</th>
                       <th>Nama Akun</th>
-                      <th width="25%">Nominal (Rp)</th>
+                      <th width="30%">Nominal (Rp)</th>
 
                     </tr>
 
@@ -367,9 +696,9 @@
 
           </div>
 
-        </div>
+       <!--  </div>
 
-      </div>
+      </div> -->
 
     </div>
 

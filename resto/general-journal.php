@@ -1,4 +1,5 @@
-<?php $page = 'pengaturan_role'; ?>
+
+<?php $page = 'general-journal';   ?>
 <?php include('1header.php'); ?>
 <?php include('2navbar.php'); ?>
 <?php include('3sidebar.php'); ?>
@@ -8,11 +9,11 @@
 
   <section class="content-header">
     <div class="container-fluid">
-      <h3 class="mb-0">Roles
+      <h3 class="mb-0">Jurnal Entries
         <button type="button" class="btn btn-tool" data-bs-toggle="modal" data-bs-target="#modalBantuan" title="Bantuan"><i class="fas fa-question-circle"></i>
         </button>
       </h3>
-        <p class="text-muted mb-0">Keterangan singkat cara baca informasi halaman ini</p>
+        <p class="text-muted mb-0">Daftar transaki yang di masukkan pada jurnal, journal entries. pemanfaat journal type bisa di ulik lebih lanjut untuk penanndaan atau pengelompokan jurnal</p>
     </div>
   </section>
 
@@ -24,29 +25,6 @@
         <div class="col-md-12">
           <!-- ========== CARD : Filter & Export ========== -->
           <div class="card">
-            <!-- <div class="card-header">
-              <h5 class="card-title mb-0"><i class="fas fa-filter "></i> Judul Tabel yang terdampak tombol aksi ini<button type="button" class="btn btn-tool" data-bs-toggle="modal" data-bs-target="#modalBantuan" title="Bantuan">
-                <i class="fas fa-question-circle"></i>
-              </button> </h5>
-              <div class="card-tools ms-auto">
-                <button class="btn btn-outline-info btn-sm " data-bs-toggle="modal" data-bs-target="#modalFilter">
-                  <i class="fas fa-filter me-1"></i> Filter
-                </button>
-                <button type="button" class="btn btn-outline-primary btn-sm " data-bs-toggle="modal" data-bs-target="#modalTambahData">
-                  <i class="fas fa-plus me-1"></i> Add
-                </button>
-                <button type="button" class="btn btn-outline-primary btn-sm " data-bs-toggle="modal" data-bs-target="#modalImpor">
-                  <i class="fas fa-file-upload me-1"></i> Import
-                </button>                
-                <button type="button" class="btn btn-outline-success btn-sm">
-                  <i class="fas fa-file-download me-1"></i> Export
-                </button>
-                 <button type="button" class="btn btn-outline-danger btn-sm" data-bs-toggle="modal" data-bs-target="#modalResetData">
-                  <i class="fas fa-ban me-1"></i> Reset
-                </button>
-                
-              </div>
-            </div> -->
             <div class="card-body ">
               <div class="row">
 
@@ -80,147 +58,218 @@
                 <button type="button" class="btn btn-outline-success btn-sm">
                   <i class="fas fa-file-download me-1"></i> Export
                 </button>
-                <!-- <button type="button" class="btn btn-outline-danger btn-sm">
+                <button type="button" class="btn btn-outline-danger btn-sm">
                   <i class="fas fa-ban me-1"></i> Reset
-                </button> -->    
+                </button>    
+                <button type="button" class="btn btn-outline-danger btn-sm" data-bs-toggle="modal" data-bs-target="#modalGagal">
+                  <i class="fas fa-exclamation-triangle me-1"></i> ErrorHandler
+                </button>
               </div>
             </div>
             
           </div>
 
 
-        <!-- ========== CARD : Tabel  ========== -->
+          <!-- ========== CARD : Tabel  Granular ========== -->
           <div class="card">
-            <!-- <div class="card-header d-flex align-items-center">
-              <h5 class="card-title mb-0">Judul tabel ini</h5>    
-              <div class="ms-auto">                
-                <button type="button" class="btn btn-outline-primary btn-sm " data-toggle="modal" data-target="#modalTambahData">
-                  <i class="fas fa-plus me-1"></i> Add
-                </button>
-                <button type="button" class="btn btn-outline-primary btn-sm ">
-                  <i class="fas fa-file-upload me-1"></i> Import
-                </button>
-                <button type="button" class="btn btn-outline-success btn-sm">
-                  <i class="fas fa-file-download me-1"></i> Export
-                </button>
-              </div>
-            </div> -->
-
             <div class="card-body">
               <div class="table-responsive">
-               <table class="table table-bordered table-striped table-sm datatables1">
-                <thead>
-                  <tr class="text-uppercase">
-                   <th title="INT • Primary key">id</th>
-                   <th title="VARCHAR(100) • Role code/name">name</th>
-                   <th title="VARCHAR(150) • Label">display_name (hapus)</th>
-                   <th title="TEXT • Penjelasan">description</th>
-                   <th style="width: 80px;">aksi</th>
-                 </tr>
-               </thead>
-               <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>superadmin</td>
-                  <td>Superadmin</td>
-                  <td>Pengguna dengan akses penuh ke seluruh sistem dan manajemen user/role/permission.</td>
-                  <td>
-                    <a href="pengaturan-roles-detail.php" class="btn btn-sm btn-outline-primary" title="Pengaturan Hak Akses Peran">
-                      🔐
-                    </a>
-                    <button class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#modalEditAkun">✏️</button>
-                    <button class="btn btn-sm btn-outline-danger" data-toggle="modal" data-target="#modalHapusAkun">🗑️</button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>2</td>
-                  <td>admin</td>
-                  <td>Admin</td>
-                  <td>Pengguna dengan akses luas ke sistem informasi, bisa menambah user dan assign role di sistem tertentu. contoh:adminprodi</td>
-                  <td>
-                    <a href="pengaturan-roles-detail.php" class="btn btn-sm btn-outline-primary" title="Pengaturan Hak Akses Peran">
-                      🔐
-                    </a>
-                    <button class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#modalEditAkun">✏️</button>
-                    <button class="btn btn-sm btn-outline-danger" data-toggle="modal" data-target="#modalHapusAkun">🗑️</button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>3</td>
-                  <td>manajerial</td>
-                  <td>Manajerial</td>
-                  <td>Pengguna dengan akses laporan dan monitoring, dapat approve/reject/verifikasi data sesuai proses bisnis. contoh:kaprodi</td>
-                  <td>
-                    <a href="pengaturan-roles-detail.php" class="btn btn-sm btn-outline-primary" title="Pengaturan Hak Akses Peran">
-                      🔐
-                    </a>
-                    <button class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#modalEditAkun">✏️</button>
-                    <button class="btn btn-sm btn-outline-danger" data-toggle="modal" data-target="#modalHapusAkun">🗑️</button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>4</td>
-                  <td>fungsional</td>
-                  <td>Fungsional</td>
-                  <td>Pengguna operasional yang bisa mengakses seluruh sistem namun otoritas terbatas pada proses bisnis tertentu. contoh:dosen,mahasiswa</td>
-                  <td>
-                    <button class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#modalEditAkun">✏️</button>
-                    <button class="btn btn-sm btn-outline-danger" data-toggle="modal" data-target="#modalHapusAkun">🗑️</button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>5</td>
-                  <td>stakeholder</td>
-                  <td>Stakeholder</td>
-                  <td>Pengguna eksternal dengan hak read-only, hanya dapat melihat laporan atau informasi tertentu.</td>
-                  <td>
-                    <button class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#modalEditAkun">✏️</button>
-                    <button class="btn btn-sm btn-outline-danger" data-toggle="modal" data-target="#modalHapusAkun">🗑️</button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>6</td>
-                  <td>auditor</td>
-                  <td>Auditor</td>
-                  <td>Pengguna yang dapat mengakses audit trail dan log sistem untuk pemeriksaan kepatuhan, read-only.</td>
-                  <td>
-                    <button class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#modalEditAkun">✏️</button>
-                    <button class="btn btn-sm btn-outline-danger" data-toggle="modal" data-target="#modalHapusAkun">🗑️</button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>7</td>
-                  <td>integrator</td>
-                  <td>Integrator</td>
-                  <td>Pengguna untuk proses otomatisasi atau integrasi antar sistem, biasanya tidak memiliki akses login biasa.</td>
-                  <td>
-                    <button class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#modalEditAkun">✏️</button>
-                    <button class="btn btn-sm btn-outline-danger" data-toggle="modal" data-target="#modalHapusAkun">🗑️</button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>8</td>
-                  <td>guest</td>
-                  <td>Guest</td>
-                  <td>Pengguna terbatas dengan akses minimal, misal hanya untuk demo atau validasi tertentu.</td>
-                  <td>
-                    <button class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#modalEditAkun">✏️</button>
-                    <button class="btn btn-sm btn-outline-danger" data-toggle="modal" data-target="#modalHapusAkun">🗑️</button>
-                  </td>
-                </tr>
-              </tbody>
-              </table>
+                <table class="table table-bordered table-striped table-sm datatables1">
+                  <thead>
+                    <tr>
+                      <th>No</th>
+                      <th>Posting Date</th>
+                      <th>Ref</th>
+                      <th>Description</th>
+                      <th>Journal Type</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
 
+                  <tbody>
 
+                    <tr>
+                      <td>1</td>
+                      <td>2026-01-01</td>
+                      <td>SLS-001</td>
+                      <td>Penjualan tunai produk retail</td>
+                      <td>sales</td>
+                      <td>
+                        <button class="btn btn-sm btn-outline-info">
+                          <i class="fas fa-eye"></i>
+                        </button>
+                        <button class="btn btn-sm btn-outline-primary">
+                          <i class="fas fa-edit"></i>
+                        </button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>2</td>
+                      <td>2026-01-02</td>
+                      <td>PUR-001</td>
+                      <td>Pembelian stok barang supplier PT Maju</td>
+                      <td>purchase</td>
+                      <td>
+                        <button class="btn btn-sm btn-outline-primary">✏️</button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>3</td>
+                      <td>2026-01-03</td>
+                      <td>CSH-001</td>
+                      <td>Penerimaan pembayaran piutang customer</td>
+                      <td>cash_receipt</td>
+                      <td>
+                        <button class="btn btn-sm btn-outline-primary">✏️</button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>4</td>
+                      <td>2026-01-03</td>
+                      <td>CSH-002</td>
+                      <td>Pembayaran biaya operasional kantor</td>
+                      <td>cash_disbursement</td>
+                      <td>
+                        <button class="btn btn-sm btn-outline-primary">✏️</button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>5</td>
+                      <td>2026-01-04</td>
+                      <td>ADJ-001</td>
+                      <td>Jurnal penyesuaian beban listrik akhir bulan</td>
+                      <td>adjustment</td>
+                      <td>
+                        <button class="btn btn-sm btn-outline-info">✏️</button>
+                        <button class="btn btn-sm btn-outline-primary">✏️</button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>6</td>
+                      <td>2026-01-04</td>
+                      <td>REV-001</td>
+                      <td>Jurnal pembalik accrual bulan sebelumnya</td>
+                      <td>reversal</td>
+                      <td>
+                        <button class="btn btn-sm btn-outline-primary">✏️</button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>7</td>
+                      <td>2026-01-05</td>
+                      <td>PAY-001</td>
+                      <td>Pembayaran hutang vendor melalui bank</td>
+                      <td>payment</td>
+                      <td>
+                        <button class="btn btn-sm btn-outline-primary">✏️</button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>8</td>
+                      <td>2026-01-05</td>
+                      <td>PAY-002</td>
+                      <td>Pembayaran gaji karyawan bulan Januari</td>
+                      <td>payroll</td>
+                      <td>
+                        <button class="btn btn-sm btn-outline-primary">✏️</button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>9</td>
+                      <td>2026-01-06</td>
+                      <td>AST-001</td>
+                      <td>Pembelian kendaraan operasional perusahaan</td>
+                      <td>fixed_asset</td>
+                      <td>
+                        <button class="btn btn-sm btn-outline-primary">✏️</button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>10</td>
+                      <td>2026-01-06</td>
+                      <td>LON-001</td>
+                      <td>Penerimaan pinjaman bank jangka panjang</td>
+                      <td>financing</td>
+                      <td>
+                        <button class="btn btn-sm btn-outline-primary">✏️</button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>11</td>
+                      <td>2026-01-07</td>
+                      <td>EMP-001</td>
+                      <td>Pinjaman dana talangan karyawan</td>
+                      <td>employee_loan</td>
+                      <td>
+                        <button class="btn btn-sm btn-outline-primary">✏️</button>
+                      </td>
+                    </tr>
+
+                  </tbody>
+                </table>
               </div>
             </div>
-            <!-- /.card-body -->
           </div>
+
+          <!-- | Journal Type      | Fungsi                |
+          | ----------------- | --------------------- |
+          | sales             | penjualan             |
+          | purchase          | pembelian             |
+          | cash_receipt      | kas masuk             |
+          | cash_disbursement | kas keluar            |
+          | payment           | pembayaran hutang     |
+          | receipt           | penerimaan pembayaran |
+ -->
+          <table border="1" cellpadding="8" cellspacing="0" style="margin-top:20px;">
+            <caption><b>Journal Transaction Lines (Detail / COA)</b></caption>
+            <thead>
+              <tr>
+                <th>Journal ID</th>
+                <th>COA</th>
+                <th>Debit</th>
+                <th>Credit</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Kas (1101)</td>
+                <td>1.100.000</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>Penjualan (4101)</td>
+                <td>0</td>
+                <td>1.000.000</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>PPN (2101)</td>
+                <td>0</td>
+                <td>100.000</td>
+              </tr>
+            </tbody>
+          </table>
+
+
+
+
         </div>
       </div>
     </div>
   </section>
-  </div>
+</div>
   <!-- /.content-wrapper -->
 
 <?php include('4footer.php'); ?>
@@ -398,9 +447,17 @@
       </div>
       <div class="modal-body">
         <p>
-          Modul Pengaturan digunakan untuk mengelola preferensi dan konfigurasi umum sistem yang bersifat teknis maupun administratif. Pengaturan pada modul ini tidak secara langsung memengaruhi proses bisnis inti dari sistem informasi, melainkan mendukung aspek operasional dan tata kelola aplikasi secara keseluruhan.
-
-Perubahan pada modul ini umumnya berkaitan dengan pengaturan lingkungan aplikasi, preferensi penggunaan, atau parameter sistem yang menunjang jalannya aplikasi. Penyesuaian tersebut bertujuan untuk memastikan aplikasi berjalan sesuai kebutuhan organisasi tanpa mengubah alur utama proses bisnis yang telah ditetapkan.
+          Ini adalah penjelasan panjang tentang tabel. Anda bisa menuliskan informasi detail,
+          petunjuk penggunaan tombol, cara membaca data, dan tips penting lainnya di sini.
+        </p>
+        <p>
+          Misalnya:  
+          - Tombol Filter digunakan untuk memfilter data berdasarkan kolom.  
+          - Tombol Impor digunakan untuk memasukkan data dari file Excel.  
+          - Tombol Reset akan menghapus semua data di tabel, gunakan dengan hati-hati.  
+        </p>
+        <p>
+          Anda bisa menambahkan banyak paragraf atau daftar sesuai kebutuhan.
         </p>
       </div>
       <div class="modal-footer">
@@ -446,5 +503,33 @@ Perubahan pada modul ini umumnya berkaitan dengan pengaturan lingkungan aplikasi
   </div>
 </div>
 
+<div class="modal fade" id="modalGagal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalGagalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content border-danger border-2 shadow">
+      <div class="modal-header bg-danger text-white">
+        <h5 class="modal-title" id="modalGagalLabel"><i class="fas fa-times-circle me-2"></i>Oops! Terjadi Kesalahan</h5>
+      </div>
+      <div class="modal-body">
+        <p><strong>❌ Masalah:</strong><br> 
+          <span id="errorAction">Upload file gagal.</span></p>
 
+        <p><strong>⚠️ Penyebab:</strong><br> 
+          <span id="errorReason">Format file tidak sesuai (.pdf/.docx) atau ukuran melebihi 5MB.</span></p>
+
+        <p><strong>💡 Solusi:</strong><br> 
+          <span id="errorSolution">Pastikan file sesuai format, ukuran < 5MB, lalu coba unggah lagi.</span></p>
+
+        <p><i>Jika masih gagal, hubungi admin untuk bantuan atau tips lebih lanjut.</i></p>
+
+        <!-- Optional: reward tip gamified -->
+        <div class="alert alert-warning mt-3" role="alert">
+          🔹 Tip: Setiap percobaan upload berhasil akan menambah EXP +20! Jangan menyerah! 🚀
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-dark" id="closeGagal" data-bs-dismiss="modal"><i class="fas fa-check me-1"></i> Tutup</button>
+      </div>
+    </div>
+  </div>
+</div>
 <?php include('5script.php'); ?>

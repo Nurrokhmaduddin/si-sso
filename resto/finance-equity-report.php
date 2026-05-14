@@ -69,9 +69,9 @@
                   <b>Periode:</b> 1 Mei 2026 - 31 Mei 2026
                 </div>
 
-                <div class="col-md-6 text-md-end">
+                <!-- <div class="col-md-6 text-md-end">
                   <b>Status Data:</b> Final Posting
-                </div>
+                </div> -->
 
               </div>
 
@@ -105,163 +105,433 @@
             </div>
 
           </div>
+          <!-- ================================================= -->
+          <!-- KPI -->
+          <!-- ================================================= -->
 
-          <!-- ========================================================= -->
-          <!-- LAPORAN PERUBAHAN MODAL -->
-          <!-- ========================================================= -->
+          <div class="row">
 
-          <div class="card shadow-sm border-0">
+            <div class="col-lg-4 col-md-6">
 
-            <div class="card-body p-4 bg-light">
+              <div class="small-box bg-success">
 
-              <div class="table-responsive">
+                <div class="inner">
 
-                <table class="table table-bordered align-middle mb-0">
+                  <h3>Rp 190.980.000</h3>
 
-                  <!-- HEADER MODAL AWAL -->
-                  <tr style="background:#eb7d2c; color:white; font-weight:bold;">
+                  <p>Opening </p>
 
-                    <td colspan="3" class="text-end py-3 fs-4">
+                </div>
 
-                      MODAL AWAL PERIODE :
-                      Rp 190.980.000
+                <div class="icon">
+                  <i class="fas fa-chart-line"></i>
+                </div>
 
-                    </td>
+              </div>
 
-                  </tr>
+            </div>
 
-                  <!-- HEADER TABLE -->
-                  <thead>
+            <div class="col-lg-4 col-md-6">
 
-                    <tr class="table-secondary text-center">
+              <div class="small-box bg-danger">
 
-                      <th width="15%" class="py-3 fs-4">
-                        Kode Akun
-                      </th>
+                <div class="inner">
 
-                      <th width="65%" class="py-3 fs-4">
-                        Nama Akun
-                      </th>
+                  <h3>Rp 48.500.000</h3>
 
-                      <th width="20%" class="py-3 fs-4">
-                        Nominal (Rp)
-                      </th>
+                  <p>Total Perubahan</p>
 
-                    </tr>
+                </div>
 
-                  </thead>
+                <div class="icon">
+                  <i class="fas fa-file-invoice-dollar"></i>
+                </div>
 
-                  <!-- BODY -->
-                  <tbody>
+              </div>
 
-                    <tr>
+            </div>
 
-                      <td class="fs-4">
-                        331-100
-                      </td>
+            <div class="col-lg-4 col-md-12">
 
-                      <td class="fs-4">
-                        Modal Disetor / Modal Pemilik
-                      </td>
+              <div class="small-box bg-primary">
 
-                      <td class="text-end fs-4">
-                        25.000.000
-                      </td>
+                <div class="inner">
 
-                    </tr>
+                  <h3>Rp 239.480.000</h3>
 
-                    <tr>
+                  <p>Closing</p>
 
-                      <td class="fs-4">
-                        331-120
-                      </td>
+                </div>
 
-                      <td class="fs-4">
-                        Tambahan Investasi Pemilik
-                      </td>
-
-                      <td class="text-end fs-4">
-                        10.000.000
-                      </td>
-
-                    </tr>
-
-                    <tr>
-
-                      <td class="fs-4">
-                        331-130
-                      </td>
-
-                      <td class="fs-4">
-                        Laba Ditahan (Retained Earnings)
-                      </td>
-
-                      <td class="text-end fs-4">
-                        18.500.000
-                      </td>
-
-                    </tr>
-
-                    <tr>
-
-                      <td class="fs-4">
-                        331-140
-                      </td>
-
-                      <td class="fs-4">
-                        Prive Pemilik
-                      </td>
-
-                      <td class="text-end fs-4 text-danger">
-                        (5.000.000)
-                      </td>
-
-                    </tr>
-
-                  </tbody>
-
-                  <!-- TOTAL -->
-                  <tfoot>
-
-                    <tr class="table-light">
-
-                      <td colspan="2"
-                          class="text-center fw-bold fs-3 py-3">
-
-                        TOTAL PERUBAHAN
-
-                      </td>
-
-                      <td class="text-end fw-bold fs-3">
-
-                        48.500.000
-
-                      </td>
-
-                    </tr>
-
-                    <!-- MODAL AKHIR -->
-                    <tr style="background:#d96a1d; color:white; font-weight:bold;">
-
-                      <td colspan="3"
-                          class="text-end py-3 fs-4">
-
-                        MODAL AKHIR PERIODE :
-                        Rp 239.480.000
-
-                      </td>
-
-                    </tr>
-
-                  </tfoot>
-
-                </table>
+                <div class="icon">
+                  <i class="fas fa-wallet"></i>
+                </div>
 
               </div>
 
             </div>
 
           </div>
+
+<!-- ================================================= -->
+<!-- LAPORAN PERUBAHAN MODAL  (COA BASED) -->
+<!-- ================================================= -->
+
+<div class="card">
+
+  <div class="card-body p-0">
+
+    <!-- ============================================= -->
+    <!-- MODAL AWAL -->
+    <!-- ============================================= -->
+
+    <div style="background:#d86a1d;
+                color:white;
+                padding:22px 28px;
+                font-size:22px;
+                font-weight:bold;
+                text-align:right;">
+
+      MODAL AWAL :
+      Rp 190.980.000
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- ================================================= -->
+<!-- KENAIKAN / PENURUNAN KAS -->
+<!-- ================================================= -->
+
+<div class="card">
+
+  <div class="card-body p-0">
+
+    <div style="background:#eb7d2d;
+                color:white;
+                padding:18px 24px;
+                font-size:20px;
+                font-weight:600;">
+
+      KENAIKAN / PENURUNAN MODAL
+
+    </div>
+
+    <div class="table-responsive">
+
+      <table class="table table-bordered mb-0">
+
+        <thead style="background:#f4f6f9;">
+
+          <tr>
+            <th width="15%">Kode Akun</th>
+            <th>Nama Akun</th>
+            <th width="20%" class="text-end">Nominal (Rp)</th>
+          </tr>
+
+        </thead>
+
+        <tbody>
+
+          <!-- ============================================= -->
+          <!-- OPERASI (COA 4 & 6) -->
+          <!-- ============================================= -->
+
+          <tr style="background:#eef7ff;font-weight:bold;">
+            <td colspan="3">PENAMBAHAN MODAL</td>
+          </tr>
+
+<tr>
+                  <td>331-100</td>
+                  <td>Modal Disetor / Modal Pemilik</td>
+                  <td class="text-end">25.000.000</td>
+                </tr>
+
+                <tr>
+                  <td>331-120</td>
+                  <td>Tambahan Investasi Pemilik</td>
+                  <td class="text-end">10.000.000</td>
+                </tr>
+
+                <tr>
+                  <td>331-130</td>
+                  <td>Laba Ditahan (Retained Earnings)</td>
+                  <td class="text-end">18.500.000</td>
+                </tr>
+
+
+
+          <tr style="font-weight:bold;background:#f8f9fa;">
+            <td colspan="2" class="text-center">TOTAL PENAMBAHAN MODAL</td>
+            <td class="text-end"> 53.500.000</td>
+          </tr>
+
+
+          <!-- ============================================= -->
+          <!-- INVESTASI (COA 1) -->
+          <!-- ============================================= -->
+
+          <tr style="background:#eef7ff;font-weight:bold;">
+            <td colspan="3">PENGURANGAN MODAL</td>
+          </tr>
+
+          <tr>
+            <td>331-140</td>
+            <td>Prive Pemilik</td>
+            <td class="text-end">-5.000.000</td>
+          </tr>
+
+          <tr style="font-weight:bold;background:#f8f9fa;">
+            <td colspan="2" class="text-center">TOTAL PENGURANGAN MODAL</td>
+            <td class="text-end">-5.000.000</td>
+          </tr>
+
+
+
+          <!-- ============================================= -->
+          <!-- TOTAL KAS BERSIH -->
+          <!-- ============================================= -->
+
+          <tr style="font-weight:bold;background:#ffe8d6;">
+            <td colspan="2" class="text-center">
+              TOTAL KENAIKAN / PENURUNAN MODAL
+            </td>
+
+            <td class="text-end">
+              48.500.000
+            </td>
+          </tr>
+
+        </tbody>
+
+      </table>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- ================================================= -->
+<!-- KAS AKHIR -->
+<!-- ================================================= -->
+
+<div class="card">
+
+  <div class="card-body p-0">
+
+    <div style="background:#d86a1d;
+                color:white;
+                padding:22px 28px;
+                font-size:22px;
+                font-weight:bold;
+                text-align:right;">
+
+      MODAL AKHIR :
+      Rp 239.480.000
+
+    </div>
+
+  </div>
+
+</div>
+
+
+-----
+          <!-- ================================================= -->
+      <!-- LAPORAN PERUBAHAN MODAL -->
+      <!-- ================================================= -->
+
+      <div class="card">
+
+        <div class="card-body p-0">
+<!-- ============================================= -->
+          <!-- MODAL AWAL -->
+          <!-- ============================================= -->
+
+          <div style="background:#d86a1d;
+                      color:white;
+                      padding:22px 28px;
+                      font-size:22px;
+                      font-weight:bold;
+                      text-align:right;">
+
+            MODAL AWAL :
+            Rp 190.980.000
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="card">
+
+        <div class="card-body p-0">
+
+          <!-- ============================================= -->
+          <!-- PENAMBAHAN MODAL -->
+          <!-- ============================================= -->
+
+          <div style="background:#eb7d2d;
+                      color:white;
+                      padding:18px 24px;
+                      font-size:20px;
+                      font-weight:600;">
+
+            PENAMBAHAN MODAL
+
+          </div>
+
+          <div class="table-responsive">
+
+            <table class="table table-bordered mb-0">
+
+              <thead style="background:#f4f6f9;">
+
+                <tr>
+
+                  <th width="15%">Kode Akun</th>
+                  <th>Nama Akun</th>
+                  <th width="20%" class="text-end">
+                    Nominal (Rp)
+                  </th>
+
+                </tr>
+
+              </thead>
+
+              <tbody>
+  
+   
+   
+                <tr>
+                  <td>331-100</td>
+                  <td>Modal Disetor / Modal Pemilik</td>
+                  <td class="text-end">25.000.000</td>
+                </tr>
+
+                <tr>
+                  <td>331-120</td>
+                  <td>Tambahan Investasi Pemilik</td>
+                  <td class="text-end">10.000.000</td>
+                </tr>
+
+                <tr>
+                  <td>331-130</td>
+                  <td>Laba Ditahan (Retained Earnings)</td>
+                  <td class="text-end">18.500.000</td>
+                </tr>
+
+                <tr style="font-weight:bold;
+                           background:#f8f9fa;">
+
+                  <td colspan="2" class="text-center">
+                    TOTAL PENAMBAHAN MODAL
+                  </td>
+
+                  <td class="text-end">
+                    53.500.000
+                  </td>
+
+                </tr>
+
+              </tbody>
+
+            </table>
+
+          </div>
+</div>
+</div>
+<div class="card">
+<div class="card-body p-0">
+          <!-- ============================================= -->
+          <!-- PENGURANGAN MODAL -->
+          <!-- ============================================= -->
+
+          <div style="background:#eb7d2d;
+                      color:white;
+                      padding:18px 24px;
+                      font-size:20px;
+                      font-weight:600;">
+
+            PENGURANGAN MODAL
+
+          </div>
+
+          <div class="table-responsive">
+
+            <table class="table table-bordered mb-0">
+
+              <thead style="background:#f4f6f9;">
+
+                <tr>
+
+                  <th width="15%">Kode Akun</th>
+                  <th>Nama Akun</th>
+                  <th width="20%" class="text-end">
+                    Nominal (Rp)
+                  </th>
+
+                </tr>
+
+              </thead>
+
+              <tbody>
+
+                <tr>
+                  <td>331-140</td>
+                  <td>Prive Pemilik</td>
+                  <td class="text-end">5.000.000</td>
+                </tr>
+                <tr style="font-weight:bold;
+                           background:#f8f9fa;">
+
+                  <td colspan="2" class="text-center">
+                    TOTAL PENGURANGAN MODAL
+                  </td>
+
+                  <td class="text-end">
+                    5.000.000
+                  </td>
+
+                </tr>
+
+              </tbody>
+
+            </table>
+
+          </div>
+</div>
+</div>
+<div class="card">
+<div class="card-body p-0">
+          <!-- ============================================= -->
+          <!-- MODAL AKHIR -->
+          <!-- ============================================= -->
+
+          <div style="background:#d86a1d;
+                      color:white;
+                      padding:22px 28px;
+                      font-size:22px;
+                      font-weight:bold;
+                      text-align:right;">
+
+            MODAL AKHIR :
+            Rp 239.480.000
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+         
 
         </div>
 

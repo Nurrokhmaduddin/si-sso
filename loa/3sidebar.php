@@ -117,7 +117,12 @@
           <ul class="nav nav-treeview">
 
             
-
+ <li class="nav-item">
+              <a href="master-actor.php" class="nav-link <?php echo $page == 'master_actor' ? 'active' : ''; ?>">
+                <i class="far fa-circle nav-icon"></i>
+                <p>MASTER ACTOR TABLE</p>
+              </a>
+            </li>
            <!--  <li class="nav-item">
               <a href="master-prodi.php" class="nav-link <?php echo $page == 'master_prodi' ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
@@ -648,14 +653,14 @@
                 <li class="nav-item">
                   <a href="pengaturan-users.php" class="nav-link <?php echo $page == 'pengaturan_user' ? 'active' : ''; ?>">
                     <i class="far fa-circle nav-icon"></i>
-                    <p>Data Pengguna</p>
+                    <p>Users</p>
                   </a>
                 </li>
 
                 <li class="nav-item">
                   <a href="pengaturan-roles.php" class="nav-link <?php echo $page == 'pengaturan_role' ? 'active' : ''; ?>">
                     <i class="far fa-circle nav-icon"></i>
-                    <p>Peran & Hak Akses</p>
+                    <p>Roles </p>
                   </a>
                 </li>
                 <li class="nav-item">
@@ -664,10 +669,23 @@
                     <p>Reset Password</p>
                   </a>
                 </li>
+                <li class="nav-item">
+                  <a href="pengaturan-user-actor-map.php" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>USER ↔ ACTOR MAPPING</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="pengaturan-user-role-map.php" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>USER ↔ ROLE MAPPING</p>
+                  </a>
+                </li>
+                
                 <!-- <li class="nav-item">
-                  <a href="reset-password.php" class="nav-link">
+                  <a href="pengaturan-user-actor-map.php" class="nav-link">
                     <i class="far fa-dot-circle nav-icon"></i>
-                    <p>Reset Password</p>
+                    <p>USER ↔ ACTOR MAPPING</p>
                   </a>
                 </li> -->
               </ul>

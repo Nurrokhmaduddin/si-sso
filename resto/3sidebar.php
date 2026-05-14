@@ -140,113 +140,291 @@ $menu = [
     ]
   ],
 
+//   /*
+//   =========================================================
+//   MASTER DATA
+//   =========================================================
+//   */
+//   [
+//     'title' => 'Master Data',
+//     'icon'  => 'fas fa-database',
+
+//     'pages' => [
+//       'master-item',
+//       'master-kitchen',
+//       'master-menu',
+//       'master-category',
+//       'master-recipe',
+//       'master-raw-material',
+//       'master-package-menu',
+//       'master-supplier',
+//       'master-customer',
+//       'master-table',
+//       'master-payment-method',
+
+//       'master-coa',
+
+//     ],
+
+//     'children' => [
+
+//       [
+//         'title' => 'Data Management',
+//         'icon'  => 'far fa-folder-open',
+
+//         'children' => [
+//  [
+//             'label' => ' Item',
+//             'url'   => 'master-item.php',
+//             'page'  => 'master-item'
+//           ],
+//            [
+//             'label' => ' Satuan',
+//             'url'   => 'master-satuan.php',
+//             'page'  => 'master-satuan'
+//           ],
+//            [
+//             'label' => ' Kategori',
+//             'url'   => 'master-kategori.php',
+//             'page'  => 'master-kategori',
+//             'title'  => 'kategori stok dan kategori menu'
+//           ],
+// [
+//             'label' => ' Recipe/BOM',
+//             'url'   => 'master-recipe.php',
+//             'page'  => 'master-recipe',
+//              'title'  => 'terdapat Bill of material dari tiap menu recipe'
+//           ],
+//           [
+//             'label' => 'Package Menu',
+//             'url'   => 'master-package-menu.php',
+//             'page'  => 'master-package-menu'
+//           ],
+         
+//           [
+//             'label' => 'Supplier',
+//             'url'   => 'master-supplier.php',
+//             'page'  => 'master-supplier'
+//           ],
+
+//           [
+//             'label' => 'Customer',
+//             'url'   => 'master-customer.php',
+//             'page'  => 'master-customer'
+//           ],
+//  [
+//             'label' => 'Kitchen Area',
+//             'url'   => 'master-kitchen.php',
+//             'page'  => 'master-kitchen'
+//           ],
+//           [
+//             'label' => 'Table & Area',
+//             'url'   => 'master-table.php',
+//             'page'  => 'master-table'
+//           ],
+
+//           [
+//             'label' => 'Payment Method',
+//             'url'   => 'master-payment-method.php',
+//             'page'  => 'master-payment-method'
+//           ],
+//           [
+//             'label' => 'Discount & Promo',
+//             'url'   => 'master-Discount-Promo.php',
+//             'page'  => 'master-Discount-Promo'
+//           ],
+
+//           [
+//             'label' => 'COA / Chart of Account',
+//             'url'   => 'master-coa.php',
+//             'page'  => 'master-coa'
+//           ],
+
+
+
+//         ]
+//       ],
+
+//     ]
+//   ],
+
+  /*
+/*
+=========================================================
+MASTER DATA - ERP 3 LEVEL SEMANTIC ARCHITECTURE (FIXED)
+=========================================================
+LEVEL 1 : Master Data
+LEVEL 2 : Business Domain Cluster
+LEVEL 3 : Entity Master Menu
+=========================================================
+*/
+
+[
+  'title' => 'Master Data',
+  'icon'  => 'fas fa-database',
+
   /*
   =========================================================
-  MASTER DATA
+  LEVEL 2 - BUSINESS DOMAIN CLUSTER
   =========================================================
   */
-  [
-    'title' => 'Master Data',
-    'icon'  => 'fas fa-database',
+  'children' => [
 
-    'pages' => [
-      'master-item',
-      'master-kitchen',
-      'master-menu',
-      'master-category',
-      'master-recipe',
-      'master-raw-material',
-      'master-package-menu',
-      'master-supplier',
-      'master-customer',
-      'master-table',
-      'master-payment-method',
+    /*
+    =========================================================
+    1. PRODUCT & SERVICE
+    =========================================================
+    */
+    [
+      'title' => 'Product & Service',
+      'icon'  => 'fas fa-box',
 
-      'master-coa',
+      'children' => [
 
+        [
+          'label' => 'Item',
+          'url'   => 'master-item.php',
+          'page'  => 'master-item'
+        ],
+        [
+          'label' => 'Satuan',
+          'url'   => 'master-satuan.php',
+          'page'  => 'master-satuan'
+        ],
+        [
+          'label' => 'Kategori',
+          'url'   => 'master-kategori.php',
+          'page'  => 'master-kategori'
+        ],
+        [
+          'label' => 'Recipe / BOM',
+          'url'   => 'master-recipe.php',
+          'page'  => 'master-recipe'
+        ],
+        [
+          'label' => 'Package Menu',
+          'url'   => 'master-package-menu.php',
+          'page'  => 'master-package-menu'
+        ],
+        [
+          'label' => 'Menu',
+          'url'   => 'master-menu.php',
+          'page'  => 'master-menu'
+        ],
+        [
+          'label' => 'Raw Material',
+          'url'   => 'master-raw-material.php',
+          'page'  => 'master-raw-material'
+        ],
+
+      ]
     ],
 
-    'children' => [
+    /*
+    =========================================================
+    2. BUSINESS PARTNER
+    =========================================================
+    */
+    [
+      'title' => 'Business Partner',
+      'icon'  => 'fas fa-users',
 
-      [
-        'title' => 'Data Management',
-        'icon'  => 'far fa-folder-open',
+      'children' => [
 
-        'children' => [
- [
-            'label' => ' Item',
-            'url'   => 'master-item.php',
-            'page'  => 'master-item'
-          ],
-           [
-            'label' => ' Satuan',
-            'url'   => 'master-satuan.php',
-            'page'  => 'master-satuan'
-          ],
-           [
-            'label' => ' Kategori',
-            'url'   => 'master-kategori.php',
-            'page'  => 'master-kategori',
-            'title'  => 'kategori stok dan kategori menu'
-          ],
-[
-            'label' => ' Recipe/BOM',
-            'url'   => 'master-recipe.php',
-            'page'  => 'master-recipe',
-             'title'  => 'terdapat Bill of material dari tiap menu recipe'
-          ],
-          [
-            'label' => 'Package Menu',
-            'url'   => 'master-package-menu.php',
-            'page'  => 'master-package-menu'
-          ],
-         
-          [
-            'label' => 'Supplier',
-            'url'   => 'master-supplier.php',
-            'page'  => 'master-supplier'
-          ],
+        [
+          'label' => 'Supplier',
+          'url'   => 'master-supplier.php',
+          'page'  => 'master-supplier'
+        ],
+        [
+          'label' => 'Customer',
+          'url'   => 'master-customer.php',
+          'page'  => 'master-customer'
+        ],
 
-          [
-            'label' => 'Customer',
-            'url'   => 'master-customer.php',
-            'page'  => 'master-customer'
-          ],
- [
-            'label' => 'Kitchen Area',
-            'url'   => 'master-kitchen.php',
-            'page'  => 'master-kitchen'
-          ],
-          [
-            'label' => 'Table & Area',
-            'url'   => 'master-table.php',
-            'page'  => 'master-table'
-          ],
+      ]
+    ],
 
-          [
-            'label' => 'Payment Method',
-            'url'   => 'master-payment-method.php',
-            'page'  => 'master-payment-method'
-          ],
-          [
-            'label' => 'Discount & Promo',
-            'url'   => 'master-Discount-Promo.php',
-            'page'  => 'master-Discount-Promo'
-          ],
+    /*
+    =========================================================
+    3. OPERATIONAL STRUCTURE
+    =========================================================
+    */
+    [
+      'title' => 'Operational Structure',
+      'icon'  => 'fas fa-building',
 
-          [
-            'label' => 'COA / Chart of Account',
-            'url'   => 'master-coa.php',
-            'page'  => 'master-coa'
-          ],
+      'children' => [
 
+        [
+          'label' => 'Kitchen Area',
+          'url'   => 'master-kitchen.php',
+          'page'  => 'master-kitchen'
+        ],
+        [
+          'label' => 'Table & Area',
+          'url'   => 'master-table.php',
+          'page'  => 'master-table'
+        ],
 
+      ]
+    ],
 
-        ]
-      ],
+    /*
+    =========================================================
+    4. FINANCIAL STRUCTURE
+    =========================================================
+    */
+    [
+      'title' => 'Financial Structure',
+      'icon'  => 'fas fa-wallet',
 
-    ]
+      'children' => [
+
+        [
+          'label' => 'Payment Method',
+          'url'   => 'master-payment-method.php',
+          'page'  => 'master-payment-method'
+        ],
+        [
+          'label' => 'Discount & Promo',
+          'url'   => 'master-discount-promo.php',
+          'page'  => 'master-discount-promo'
+        ],
+        [
+          'label' => 'COA / Chart of Account',
+          'url'   => 'master-coa.php',
+          'page'  => 'master-coa'
+        ],
+
+      ]
+    ],
+
   ],
+
+  /*
+  =========================================================
+  LEVEL 3 ROUTING (SAFE FLAT MAP)
+  =========================================================
+  */
+  'pages' => [
+    'master-item',
+    'master-satuan',
+    'master-kategori',
+    'master-recipe',
+    'master-package-menu',
+    'master-menu',
+    'master-raw-material',
+    'master-supplier',
+    'master-customer',
+    'master-kitchen',
+    'master-table',
+    'master-payment-method',
+    'master-discount-promo',
+    'master-coa'
+  ]
+
+],
 // MASTER DATA
 // │
 // ├── Produk & Persediaan
@@ -715,6 +893,11 @@ FINANCE
     'finance-cash-out',
     'finance-journal',
     'finance-adjustment-journal',
+    'general-journal',
+    'cash-in',
+    'cash-out',
+    'accounts-receivable',
+    'accounts-payable',
 
     /* MONITORING */
     'finance-monitor',
@@ -797,19 +980,19 @@ FINANCE
     //   'title' => 'Cash received before services are fully delivered such as subscriptions or project advances'
     // ],
 
-    [
-      'label' => 'Fixed Assets',
-      'url'   => 'fixed-assets.php',
-      'page'  => 'fixed-assets',
-      'title' => 'Asset registration, acquisition cost, depreciation, and disposal management'
-    ],
+    // [
+    //   'label' => 'Fixed Assets',
+    //   'url'   => 'fixed-assets.php',
+    //   'page'  => 'fixed-assets',
+    //   'title' => 'Asset registration, acquisition cost, depreciation, and disposal management'
+    // ],
 
-    [
-      'label' => 'Chart of Accounts',
-      'url'   => 'chart-of-accounts.php',
-      'page'  => 'chart-of-accounts',
-      'title' => 'Master data of all accounting accounts'
-    ],
+    // [
+    //   'label' => 'Chart of Accounts',
+    //   'url'   => 'chart-of-accounts.php',
+    //   'page'  => 'chart-of-accounts',
+    //   'title' => 'Master data of all accounting accounts'
+    // ],
 
     [
       'label' => 'General Journal',
@@ -990,9 +1173,10 @@ FINANCE
         'children' => [
 
           [
-            'label' => 'Data User',
+            'label' => 'User Management',
             'url'   => 'setting-user.php',
-            'page'  => 'setting-user'
+            'page'  => 'setting-user',
+            'title' => '(Identity / Authentication), hanya untuk login.'
           ],
 
           [
@@ -1006,7 +1190,16 @@ FINANCE
             'url'   => 'setting-audit.php',
             'page'  => 'setting-audit'
           ],
-
+// MASTER DATA
+// ├── Actor Data
+// │
+// SYSTEM ACCESS
+// ├── User Management
+// ├── Role Management
+// ├── Permission Management
+// ├── Actor Mapping
+// ├── Context Switching
+// └── Session & Audit
         ]
       ],
 

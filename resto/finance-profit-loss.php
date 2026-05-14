@@ -78,13 +78,13 @@
               <b>Periode:</b> 01 Mei 2026 - 31 Mei 2026
             </div>
 
-            <div class="col-md-4">
+            <!-- <div class="col-md-4">
               <b>Cabang:</b> Semua Cabang
             </div>
 
             <div class="col-md-4">
               <b>Mata Uang:</b> Rupiah (IDR)
-            </div>
+            </div> -->
 
           </div>
 
@@ -281,7 +281,10 @@
             </table>
 
           </div>
-
+</div>
+</div>
+<div class="card">
+<div class="card-body p-0">
           <!-- ============================================= -->
           <!-- BEBAN -->
           <!-- ============================================= -->
@@ -290,8 +293,7 @@
                       color:white;
                       padding:18px 24px;
                       font-size:20px;
-                      font-weight:600;
-                      margin-top:24px;">
+                      font-weight:600;">
 
             BEBAN
 
@@ -377,7 +379,10 @@
             </table>
 
           </div>
-
+</div>
+</div>
+<div class="card">
+<div class="card-body p-0">
           <!-- ============================================= -->
           <!-- TOTAL LABA RUGI -->
           <!-- ============================================= -->
