@@ -898,11 +898,18 @@ FINANCE
     'cash-out',
     'accounts-receivable',
     'accounts-payable',
+    'finance-accounts-receivable',
+    'finance-accounts-payable',
+    'finance-cash-in',
+    'finance-cash-out',
+    'finance-fixed-asset',
 
     /* MONITORING */
     'finance-monitor',
     'finance-expense-monitor',
     'finance-profit-monitor',
+    'finance-ar-aging-monitor',
+    'finance-ar-customer-monitor',
 
     /* REPORT */
     'finance-profit-loss',
@@ -938,31 +945,55 @@ FINANCE
 
   'children' => [
 
-    [
+    // [
+    //   'label' => 'Cash In',
+    //   'url'   => 'cash-in.php',
+    //   'page'  => 'cash-in',
+    //   'title' => 'Record incoming cash transactions'
+    // ],
+     [
       'label' => 'Cash In',
-      'url'   => 'cash-in.php',
-      'page'  => 'cash-in',
+      'url'   => 'finance-cash-in.php',
+      'page'  => 'finance-cash-in',
       'title' => 'Record incoming cash transactions'
     ],
 
-    [
+    // [
+    //   'label' => 'Cash Out',
+    //   'url'   => 'cash-out.php',
+    //   'page'  => 'cash-out',
+    //   'title' => 'Record outgoing cash transactions'
+    // ],
+     [
       'label' => 'Cash Out',
-      'url'   => 'cash-out.php',
-      'page'  => 'cash-out',
+      'url'   => 'finance-cash-out.php',
+      'page'  => 'finance-cash-out',
       'title' => 'Record outgoing cash transactions'
     ],
 
-    [
+    // [
+    //   'label' => 'Accounts Receivable (AR)',
+    //   'url'   => 'accounts-receivable.php',
+    //   'page'  => 'accounts-receivable',
+    //   'title' => 'Create invoice, receive payment, write-off, and receivable adjustment, JURNAL PELUNASAN PIUTANG by customer, by nota'
+    // ],
+     [
       'label' => 'Accounts Receivable (AR)',
-      'url'   => 'accounts-receivable.php',
-      'page'  => 'accounts-receivable',
-      'title' => 'Create invoice, receive payment, write-off, and receivable adjustment, JURNAL PELUNASAN PIUTANG by customer, by nota'
+      'url'   => 'finance-accounts-receivable.php',
+      'page'  => 'finance-accounts-receivable',
+      'title' => 'Create ar document, receive payment, write-off, and receivable adjustment, JURNAL PELUNASAN PIUTANG by customer, by nota'
     ],
 
-    [
+    // [
+    //   'label' => 'Accounts Payable (AP)',
+    //   'url'   => 'accounts-payable.php',
+    //   'page'  => 'accounts-payable',
+    //   'title' => 'Receive bill, supplier payment, and payable adjustment, JURNAL PEMBAYARAN HUTANG by supplier, by nota'
+    // ],
+        [
       'label' => 'Accounts Payable (AP)',
-      'url'   => 'accounts-payable.php',
-      'page'  => 'accounts-payable',
+      'url'   => 'finance-accounts-payable.php',
+      'page'  => 'finance-accounts-payable',
       'title' => 'Receive bill, supplier payment, and payable adjustment, JURNAL PEMBAYARAN HUTANG by supplier, by nota'
     ],
 
@@ -973,19 +1004,39 @@ FINANCE
     //   'title' => 'Cash paid in advance for future benefits such as rent, insurance, or software licenses'
     // ],
 
-    // [
-    //   'label' => 'Deferred Revenue',
-    //   'url'   => 'deferred-revenue.php',
-    //   'page'  => 'deferred-revenue',
-    //   'title' => 'Cash received before services are fully delivered such as subscriptions or project advances'
-    // ],
-
+  
+ 
+        [
+      'label' => 'Prepaid Management',
+      'url'   => 'prepaid-management.php',
+      'page'  => 'prepaid-management',
+      'title' => 'Cash paid in advance for future benefits such as rent, insurance, or software licenses'
+    ],   
+      [
+      'label' => 'Deferred Revenue',
+      'url'   => 'deferred-revenue.php',
+      'page'  => 'deferred-revenue',
+      'title' => 'Cash received before services are fully delivered such as subscriptions or project advances'
+    ],
+    [
+      'label' => 'Inventory Subledger',
+      'url'   => 'inventory-subledger.php',
+      'page'  => 'inventory-subledger',
+      'title' => ''
+    ],
     // [
     //   'label' => 'Fixed Assets',
     //   'url'   => 'fixed-assets.php',
     //   'page'  => 'fixed-assets',
     //   'title' => 'Asset registration, acquisition cost, depreciation, and disposal management'
     // ],
+
+       [
+      'label' => 'Fixed Assets',
+      'url'   => 'finance-fixed-asset.php',
+      'page'  => 'finance-fixed-asset',
+      'title' => 'Asset registration, acquisition cost, depreciation, and disposal management'
+   ],
 
     // [
     //   'label' => 'Chart of Accounts',
@@ -999,6 +1050,12 @@ FINANCE
       'url'   => 'general-journal.php',
       'page'  => 'general-journal',
       'title' => 'Manual journal entry recording'
+    ],
+        [
+      'label' => 'Journal',
+      'url'   => 'finance-journal.php',
+      'page'  => 'finance-journal',
+      'title' => 'all journal entry recording'
     ],
   ]
 ],
@@ -1043,6 +1100,16 @@ FINANCE
         //   'url'   => 'finance-overbudget-monitor.php',
         //   'page'  => 'finance-overbudget-monitor'
         // ],
+        // [
+        //   'label' => 'AR Aging',
+        //   'url'   => 'finance-ar-aging-monitor.php',
+        //   'page'  => 'finance-ar-aging-monitor',
+        // ],
+        [
+          'label' => 'AR Monitor',
+          'url'   => 'finance-ar-customer-monitor.php',
+          'page'  => 'finance-ar-customer-monitor',
+        ],
 
         // [
         //   'label' => ' Piutang Jatuh Tempo',

@@ -53,6 +53,19 @@
                 <button type="button" class="btn btn-outline-primary btn-sm " data-bs-toggle="modal" data-bs-target="#modalTambahData">
                   <i class="fas fa-plus me-1"></i> Add
                 </button>
+                <a href="sales-kasir2-form.php" class="btn btn-outline-primary btn-sm">
+                  <i class="fas fa-plus me-1"></i> Add
+                </a>
+                <a href="sales-kasir2-form1.php" class="btn btn-outline-primary btn-sm">
+                  <i class="fas fa-plus me-1"></i> Add
+                </a>
+                <button type="button" class="btn btn-outline-primary btn-sm " data-bs-toggle="modal" data-bs-target="#modalTambahDocType">
+                  <i class="fas fa-plus me-1"></i> Add Document
+                </button>
+                <button type="button" class="btn btn-outline-primary btn-sm " data-bs-toggle="modal" data-bs-target="#modalTambah">
+                  <i class="fas fa-plus me-1"></i> Add 
+                </button>
+               
                 <button type="button" class="btn btn-outline-primary btn-sm " data-bs-toggle="modal" data-bs-target="#modalImpor">
                   <i class="fas fa-file-upload me-1"></i> Import
                 </button>                
@@ -70,7 +83,310 @@
             
           </div>
 
+         <!-- ========== CARD : Tabel  Granular ========== -->
+<div class="card">
+  <div class="card-body">
+<div class="table-responsive mt-4">
+<table class="table table-bordered table-striped table-sm datatables1">
 
+  <thead class="table-dark text-center">
+    <tr>
+      <th>Document No</th>
+      <th>Document Type</th>
+      <th>AR Type</th>
+      <th>Counterparty</th>
+      <th>Module</th>
+      <th>Amount</th>
+      <th>Aksi</th>
+    </tr>
+  </thead>
+
+  <tbody>
+
+    <tr>
+      <td>INV-2026-001</td>
+      <td>Sales Invoice</td>
+      <td>Trade</td>
+      <td>PT Maju Bersama</td>
+      <td>Sales Module</td>
+      <td>Rp 25.000.000</td>
+      <td><button class="btn btn-sm btn-primary">View</button></td>
+    </tr>
+
+    <tr>
+      <td>INV-2026-002</td>
+      <td>Service Invoice</td>
+      <td>Trade</td>
+      <td>PT Sentosa Abadi</td>
+      <td>Sales Module</td>
+      <td>Rp 18.000.000</td>
+      <td><button class="btn btn-sm btn-primary">View</button></td>
+    </tr>
+
+    <tr>
+      <td>EMP-LOAN-001</td>
+      <td>Employee Loan</td>
+      <td>Employee</td>
+      <td>Rina Finance</td>
+      <td>HR Module</td>
+      <td>Rp 5.000.000</td>
+      <td><button class="btn btn-sm btn-primary">View</button></td>
+    </tr>
+
+    <tr>
+      <td>INV-2026-004</td>
+      <td>Sales Invoice</td>
+      <td>Trade</td>
+      <td>CV Cahaya Utama</td>
+      <td>Sales Module</td>
+      <td>Rp 42.500.000</td>
+      <td><button class="btn btn-sm btn-primary">View</button></td>
+    </tr>
+
+    <tr>
+      <td>TAX-REF-001</td>
+      <td>Tax Claim</td>
+      <td>Tax</td>
+      <td>DJP Indonesia</td>
+      <td>Tax Module</td>
+      <td>Rp 12.000.000</td>
+      <td><button class="btn btn-sm btn-primary">View</button></td>
+    </tr>
+
+    <tr>
+      <td>LOAN-001</td>
+      <td>Loan Agreement</td>
+      <td>Non-Trade</td>
+      <td>PT Sinar Logistik</td>
+      <td>Finance Module</td>
+      <td>Rp 65.000.000</td>
+      <td><button class="btn btn-sm btn-primary">View</button></td>
+    </tr>
+
+    <tr>
+      <td>INV-2026-007</td>
+      <td>Sales Invoice</td>
+      <td>Trade</td>
+      <td>PT Nusantara Retail</td>
+      <td>Sales Module</td>
+      <td>Rp 22.000.000</td>
+      <td><button class="btn btn-sm btn-primary">View</button></td>
+    </tr>
+
+    <tr>
+      <td>ADV-001</td>
+      <td>Advance Payment</td>
+      <td>Other</td>
+      <td>PT Mega Industri</td>
+      <td>Finance Module</td>
+      <td>Rp 15.000.000</td>
+      <td><button class="btn btn-sm btn-primary">View</button></td>
+    </tr>
+
+    <tr>
+      <td>INV-2026-009</td>
+      <td>Sales Invoice</td>
+      <td>Trade</td>
+      <td>PT Global Tekno</td>
+      <td>Sales Module</td>
+      <td>Rp 95.000.000</td>
+      <td><button class="btn btn-sm btn-primary">View</button></td>
+    </tr>
+
+    <tr>
+      <td>EMP-LOAN-002</td>
+      <td>Employee Loan</td>
+      <td>Employee</td>
+      <td>Dimas HR</td>
+      <td>HR Module</td>
+      <td>Rp 8.000.000</td>
+      <td><button class="btn btn-sm btn-primary">View</button></td>
+    </tr>
+
+    <tr>
+      <td>INV-2026-011</td>
+      <td>Sales Invoice</td>
+      <td>Trade</td>
+      <td>PT Arta Supply</td>
+      <td>Sales Module</td>
+      <td>Rp 11.300.000</td>
+      <td><button class="btn btn-sm btn-primary">View</button></td>
+    </tr>
+
+  </tbody>
+
+</table>
+
+
+</div>
+</div>
+</div>
+<!-- ========================================================= -->
+<!-- TABLE: RECEIVABLE DOCUMENT TYPE MASTER -->
+<!-- ========================================================= -->
+<div class="card">
+  <div class="card-body">
+<div class="table-responsive mt-4">
+
+  <table class="table table-bordered table-striped table-sm datatables1">
+
+    <thead class="table-dark">
+
+      <tr>
+        <th>Code</th>
+        <th>Name</th>
+        <th>Category</th>
+        <th>Module</th>
+        <th>Generates AR</th>
+        <th>Generates Journal</th>
+        <th>Aging Basis</th>
+        <th>Approval</th>
+        <th>Active</th>
+      </tr>
+
+    </thead>
+
+    <tbody>
+
+      <tr>
+        <td>TRADE_INV</td>
+        <td>Trade Invoice</td>
+        <td>Trade Receivable</td>
+        <td>Sales</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>Invoice Date</td>
+        <td>No</td>
+        <td>Yes</td>
+      </tr>
+
+      <tr>
+        <td>NONTRADE_INV</td>
+        <td>Service Invoice</td>
+        <td>Non-Trade Receivable</td>
+        <td>Finance</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>Posting Date</td>
+        <td>Yes</td>
+        <td>Yes</td>
+      </tr>
+
+      <tr>
+        <td>EMP_LOAN</td>
+        <td>Employee Loan</td>
+        <td>Employee Receivable</td>
+        <td>HR</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>Posting Date</td>
+        <td>Yes</td>
+        <td>Yes</td>
+      </tr>
+
+      <tr>
+        <td>SHH_LOAN</td>
+        <td>Shareholder Loan</td>
+        <td>Shareholder Receivable</td>
+        <td>Finance</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>Posting Date</td>
+        <td>Yes</td>
+        <td>Yes</td>
+      </tr>
+
+      <tr>
+        <td>LOAN_AR</td>
+        <td>Loan Receivable</td>
+        <td>Loan Receivable</td>
+        <td>Treasury</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>Posting Date</td>
+        <td>Yes</td>
+        <td>Yes</td>
+      </tr>
+
+      <tr>
+        <td>ADV_PAY</td>
+        <td>Advance Receivable</td>
+        <td>Advance Receivable</td>
+        <td>Finance</td>
+        <td>Yes</td>
+        <td>No</td>
+        <td>Invoice Date</td>
+        <td>No</td>
+        <td>Yes</td>
+      </tr>
+
+      <tr>
+        <td>INT_AR</td>
+        <td>Interest Receivable</td>
+        <td>Interest Receivable</td>
+        <td>Finance</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>Posting Date</td>
+        <td>No</td>
+        <td>Yes</td>
+      </tr>
+
+      <tr>
+        <td>TAX_REF</td>
+        <td>Tax Receivable</td>
+        <td>Tax Receivable</td>
+        <td>Tax</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>Posting Date</td>
+        <td>Yes</td>
+        <td>Yes</td>
+      </tr>
+
+      <tr>
+        <td>OTH_AR</td>
+        <td>Other Receivable</td>
+        <td>Other Receivable</td>
+        <td>Finance</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>Posting Date</td>
+        <td>No</td>
+        <td>Yes</td>
+      </tr>
+
+      <tr>
+        <td>CUST_ADV</td>
+        <td>Customer Advance</td>
+        <td>Advance Receivable</td>
+        <td>Sales</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>Invoice Date</td>
+        <td>No</td>
+        <td>Yes</td>
+      </tr>
+
+      <tr>
+        <td>CLAIM_AR</td>
+        <td>Claim Receivable</td>
+        <td>Non-Trade Receivable</td>
+        <td>Finance</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>Posting Date</td>
+        <td>Yes</td>
+        <td>Yes</td>
+      </tr>
+
+    </tbody>
+
+  </table>
+
+</div>
+</div>
+</div>
          <!-- ========== CARD : Tabel  Granular ========== -->
          <style>
 
@@ -323,7 +639,7 @@
 </tfoot>
 </table>
 ----------------
-          
+
 
 
 
@@ -594,5 +910,440 @@
       </div>
     </div>
   </div>
+</div>
+
+<!-- ========================================================= -->
+<!-- MODAL: TAMBAH RECEIVABLE DOCUMENT TYPE -->
+<!-- ========================================================= -->
+
+<div class="modal fade" id="modalTambahDocType" tabindex="-1">
+
+  <div class="modal-dialog modal-xl">
+
+    <div class="modal-content">
+
+      <div class="modal-header bg-primary text-white">
+
+        <h5 class="modal-title">
+          Tambah Master Receivable Document Type
+        </h5>
+
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+
+      </div>
+
+      <form>
+
+        <div class="modal-body">
+
+          <div class="row g-3">
+
+            <!-- ================================================= -->
+            <!-- KOLOM 1 - IDENTITAS DOKUMEN -->
+            <!-- ================================================= -->
+            <div class="col-md-4">
+
+              <div class="border rounded p-3 h-100">
+
+                <h6 class="text-primary mb-3">1. Identitas Dokumen</h6>
+
+                <div class="mb-3">
+                  <label class="form-label">Code</label>
+                  <input type="text" class="form-control" placeholder="INV / LOAN / ADV">
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label">Name</label>
+                  <input type="text" class="form-control" placeholder="Trade Invoice / Employee Loan">
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label">Description</label>
+                  <textarea class="form-control" rows="3"></textarea>
+                </div>
+
+              </div>
+
+            </div>
+
+            <!-- ================================================= -->
+            <!-- KOLOM 2 - KLASIFIKASI AKUNTANSI -->
+            <!-- ================================================= -->
+            <div class="col-md-4">
+
+              <div class="border rounded p-3 h-100">
+
+                <h6 class="text-primary mb-3">2. Klasifikasi Akuntansi</h6>
+
+                <div class="mb-3">
+                  <label class="form-label">Receivable Category</label>
+                  <select class="form-select">
+                    <option>Trade Receivable</option>
+                    <option>Non-Trade Receivable</option>
+                    <option>Employee Receivable</option>
+                    <option>Shareholder Receivable</option>
+                    <option>Loan Receivable</option>
+                    <option>Advance Receivable</option>
+                    <option>Tax Receivable</option>
+                    <option>Other Receivable</option>
+                  </select>
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label">Receivable Nature</label>
+                  <select class="form-select">
+                    <option>Short Term</option>
+                    <option>Long Term</option>
+                  </select>
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label">Is Revenue Related</label>
+                  <select class="form-select">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                  </select>
+                </div>
+
+              </div>
+
+            </div>
+
+            <!-- ================================================= -->
+            <!-- KOLOM 3 - SOURCE SYSTEM -->
+            <!-- ================================================= -->
+            <div class="col-md-4">
+
+              <div class="border rounded p-3 h-100">
+
+                <h6 class="text-primary mb-3">3. Source System</h6>
+
+                <div class="mb-3">
+                  <label class="form-label">Business Module</label>
+                  <select class="form-select">
+                    <option>Sales</option>
+                    <option>HR</option>
+                    <option>Finance</option>
+                    <option>Tax</option>
+                    <option>Treasury</option>
+                  </select>
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label">Source System</label>
+                  <input type="text" class="form-control" value="ERP_CORE">
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label">Generates Receivable</label>
+                  <select class="form-select">
+                    <option>Yes</option>
+                    <option>No</option>
+                  </select>
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label">Generates Journal</label>
+                  <select class="form-select">
+                    <option>Yes</option>
+                    <option>No</option>
+                  </select>
+                </div>
+
+              </div>
+
+            </div>
+
+            <!-- ================================================= -->
+            <!-- KOLOM 4 - ACCOUNTING RULE -->
+            <!-- ================================================= -->
+            <div class="col-md-4">
+
+              <div class="border rounded p-3 h-100">
+
+                <h6 class="text-primary mb-3">4. Accounting Rule</h6>
+
+                <div class="mb-3">
+                  <label class="form-label">Default Debit COA</label>
+                  <input type="text" class="form-control" value="AR-1100">
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label">Default Credit COA</label>
+                  <input type="text" class="form-control" placeholder="Revenue / Loan / Liability">
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label">Auto Posting Rule</label>
+                  <input type="text" class="form-control" placeholder="AUTO_POST_AR_STANDARD">
+                </div>
+
+              </div>
+
+            </div>
+
+            <!-- ================================================= -->
+            <!-- KOLOM 5 - BUSINESS BEHAVIOR -->
+            <!-- ================================================= -->
+            <div class="col-md-4">
+
+              <div class="border rounded p-3 h-100">
+
+                <h6 class="text-primary mb-3">5. Business Behavior</h6>
+
+                <div class="mb-3">
+                  <label class="form-label">Requires Approval</label>
+                  <select class="form-select">
+                    <option>Yes</option>
+                    <option>No</option>
+                  </select>
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label">Allow Partial Payment</label>
+                  <select class="form-select">
+                    <option>Yes</option>
+                    <option>No</option>
+                  </select>
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label">Allow Write Off</label>
+                  <select class="form-select">
+                    <option>Yes</option>
+                    <option>No</option>
+                  </select>
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label">Requires Due Date</label>
+                  <select class="form-select">
+                    <option>Yes</option>
+                    <option>No</option>
+                  </select>
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label">Aging Basis</label>
+                  <select class="form-select">
+                    <option>Invoice Date</option>
+                    <option>Posting Date</option>
+                  </select>
+                </div>
+
+              </div>
+
+            </div>
+
+            <!-- ================================================= -->
+            <!-- KOLOM 6 - AUDIT CONTROL -->
+            <!-- ================================================= -->
+            <div class="col-md-4">
+
+              <div class="border rounded p-3 h-100">
+
+                <h6 class="text-primary mb-3">6. Audit Control</h6>
+
+                <div class="mb-3">
+                  <label class="form-label">Is Active</label>
+                  <select class="form-select">
+                    <option>Yes</option>
+                    <option>No</option>
+                  </select>
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label">Created By</label>
+                  <input type="text" class="form-control" value="SYSTEM" readonly>
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label">Created At</label>
+                  <input type="text" class="form-control" value="AUTO TIMESTAMP" readonly>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="modal-footer">
+
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+            Close
+          </button>
+
+          <button type="submit" class="btn btn-primary">
+            Save Document Type
+          </button>
+
+        </div>
+
+      </form>
+
+    </div>
+
+  </div>
+
+</div>
+
+<!-- ========================================================= -->
+<!-- MODAL TAMBAH AR SOURCE DOCUMENT -->
+<!-- ========================================================= -->
+
+<div class="modal fade" id="modalTambah" tabindex="-1">
+
+  <div class="modal-dialog modal-lg">
+
+    <div class="modal-content">
+
+      <div class="modal-header bg-primary text-white">
+        <h5 class="modal-title">Tambah AR Source Document</h5>
+        <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+
+      <form>
+
+        <div class="modal-body">
+
+          <!-- ========================= -->
+          <!-- SECTION 1: IDENTITAS -->
+          <!-- ========================= -->
+          <h6 class="text-primary mb-2">1. Identitas Dokumen</h6>
+
+          <div class="row">
+
+             <div class="col-md-6 mb-3">
+              <label>Document Type => journal_header.reference_type</label>
+              <select class="form-select">
+                <option>Sales Invoice</option>
+                <option>Service Invoice</option>
+                <option>Loan Agreement</option>
+                <option>Employee Loan</option>
+                <option>Tax Claim</option>
+              </select>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label>Document No => journal_header.reference_no</label>
+              <input type="text" class="form-control" placeholder="AUTO GENERATE: INV-2026-XXXX" readonly>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Description =>journal_header.description</label>
+              <textarea class="form-control" rows="3"></textarea>
+            </div>
+
+          </div>
+
+          <!-- ========================= -->
+          <!-- SECTION 2: COUNTERPARTY -->
+          <!-- ========================= -->
+          <h6 class="text-primary mb-2 mt-2">2. Counterparty</h6>
+
+          <div class="row">
+
+            <div class="col-md-6 mb-3">
+              <label>Customer / Entity => journal_detail.subledger_id</label>
+              <input type="text" class="form-control">
+            </div>
+
+            <div class="col-md-6 mb-3">
+              <label>Source Module => journal_header.source_module</label>
+              <select class="form-select">
+                <option>Sales Module</option>
+                <option>Finance Module</option>
+                <option>HR Module</option>
+                <option>Tax Module</option>
+              </select>
+            </div>
+
+          </div>
+
+          <!-- ========================= -->
+          <!-- SECTION 3: FINANCIAL -->
+          <!-- ========================= -->
+          <h6 class="text-primary mb-2 mt-2">3. Nilai Piutang</h6>
+
+          <div class="row">
+
+            <div class="col-md-6 mb-3">
+              <label>Amount</label>
+              <input type="number" class="form-control">
+            </div>
+
+            <div class="col-md-6 mb-3">
+              <label>AR Impact Type (AUTO . document_type selected)</label>
+              <select class="form-select" disabled>
+                <option>Trade Receivable</option>
+                <option>Non-Trade Receivable</option>
+                <option>Employee Receivable</option>
+                <option>Tax Receivable</option>
+                <option>Other Receivable</option>
+              </select>
+            </div>
+<div class="col-md-6 mb-3">
+              <label class="form-label">Default Debit COA (based on doocument_type selected). nominal COA based on amount</label>
+              <input type="text" class="form-control" value="AR-1100">
+            </div>
+
+            <div class="col-md-6 mb-3">
+              <label class="form-label">Default Credit COA (based on doocument_type selected).nominal COA based on amount</label>
+              <input type="text" class="form-control" placeholder="Revenue / Loan / Liability">
+            </div>
+          </div>
+          <!-- ========================= -->
+          <!-- SECTION 4: SYSTEM (READONLY) -->
+          <!-- ========================= -->
+          <h6 class="text-muted mb-2 mt-2">4. System (Auto Generated)</h6>
+
+          <div class="row">
+
+            <div class="col-md-6 mb-3">
+              <label>Journal No</label>
+              <input type="text" class="form-control" value="AUTO FROM journal_header" readonly>
+            </div>
+
+            <div class="col-md-6 mb-3">
+              <label>Reference No</label>
+              <input type="text" class="form-control" value="AUTO FROM source_document" readonly>
+            </div>
+            
+          </div>
+
+          <!-- ========================= -->
+          <!-- SECTION 5: AUDIT -->
+          <!-- ========================= -->
+          <h6 class="text-muted mb-2 mt-2">5. Audit Trail</h6>
+
+          <div class="row">
+
+            <div class="col-md-6 mb-3">
+              <label>Created By</label>
+              <input type="text" class="form-control" value="current_user" readonly>
+            </div>
+
+            <div class="col-md-6 mb-3">
+              <label>Created At</label>
+              <input type="text" class="form-control" value="auto timestamp" readonly>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-primary">Save Document</button>
+        </div>
+
+      </form>
+
+    </div>
+
+  </div>
+
 </div>
 <?php include('5script.php'); ?>

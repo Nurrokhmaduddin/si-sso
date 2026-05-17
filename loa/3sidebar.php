@@ -657,7 +657,7 @@
                   </a>
                 </li>
 
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                   <a href="pengaturan-roles.php" class="nav-link <?php echo $page == 'pengaturan_role' ? 'active' : ''; ?>">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Roles </p>
@@ -668,19 +668,19 @@
                     <i class="far fa-circle nav-icon"></i>
                     <p>Reset Password</p>
                   </a>
-                </li>
+                </li> -->
                 <li class="nav-item">
                   <a href="pengaturan-user-actor-map.php" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
                     <p>USER ↔ ACTOR MAPPING</p>
                   </a>
                 </li>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                   <a href="pengaturan-user-role-map.php" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
                     <p>USER ↔ ROLE MAPPING</p>
                   </a>
-                </li>
+                </li> -->
                 
                 <!-- <li class="nav-item">
                   <a href="pengaturan-user-actor-map.php" class="nav-link">

@@ -13,7 +13,7 @@
         <button type="button" class="btn btn-tool" data-bs-toggle="modal" data-bs-target="#modalBantuan" title="Bantuan"><i class="fas fa-question-circle"></i>
         </button>
       </h3>
-        <p class="text-muted mb-0">Keterangan singkat cara baca informasi halaman ini</p>
+        <p class="text-muted mb-0">Daftar dokumen sales_Invoice atas sales order</p>
     </div>
   </section>
 
@@ -99,8 +99,9 @@
           <th>Total Item</th>
           <th>Total Qty</th>
           <th>Grand Total</th>
-          <th>Status</th>
-          <th width="140">Aksi</th>
+          <th>Status Payment</th>
+          <!-- <th>Status Monitor</th> -->
+          <th >Aksi</th>
         </tr>
       </thead>
 
@@ -114,10 +115,15 @@
           <td>4</td>
           <td>Rp 85.000</td>
           <td>
+            <span class="status-badge status-open">
+              Kredit
+            </span>
+          </td>
+          <!-- <td>
             <span class="status-badge status-draft">
               Draft
             </span>
-          </td>
+          </td> -->
           <td>
             <button class="btn btn-sm btn-outline-primary">
               Detail
@@ -134,9 +140,14 @@
           <td>Rp 40.000</td>
           <td>
             <span class="status-badge status-open">
-              Open
+              Tunai
             </span>
           </td>
+         <!--  <td>
+            <span class="status-badge status-open">
+              Open
+            </span>
+          </td> -->
           <td>
             <button class="btn btn-sm btn-outline-primary">
               Detail
@@ -152,10 +163,15 @@
           <td>6</td>
           <td>Rp 120.000</td>
           <td>
+            <span class="status-badge status-open">
+              Tunai
+            </span>
+          </td>
+          <!-- <td>
             <span class="status-badge status-paid">
               Paid
             </span>
-          </td>
+          </td> -->
           <td>
             <button class="btn btn-sm btn-outline-success">
               Print
@@ -170,10 +186,15 @@
           <td>4</td>
           <td>Rp 85.000</td>
           <td>
+            <span class="status-badge status-open">
+              Kredit
+            </span>
+          </td>
+          <!-- <td>
             <span class="status-badge status-cancel">
               Cancel
             </span>
-          </td>
+          </td> -->
           <td>
             <button class="btn btn-sm btn-outline-primary">
               Detail
@@ -185,6 +206,234 @@
   </div>
 </div>
 
+          <!-- CARD TABLE -->
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">
+                Daftar Penjualan Kredit (Piutang Dagang)
+              </h3>
+            </div>
+
+            <div class="card-body">
+              <div class="table-responsive">
+
+                <table class="table table-bordered table-striped table-sm datatables1">
+                  <thead class="table-light">
+                    <tr class="text-center">
+                      <th>No</th>
+                      <th>Tanggal Invoice</th>
+                      <th>No Invoice</th>
+                      <th>Customer</th>
+                      <th>Jatuh Tempo</th>
+                      <th>Total Tagihan</th>
+                      <th>Terbayar</th>
+                      <th>Sisa Piutang</th>
+                      <th>Status</th>
+                      <th width="150">Aksi</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+
+                    <tr>
+                      <td>1</td>
+                      <td>2026-01-01</td>
+                      <td>INV-AR-001</td>
+                      <td>PT Sumber Makmur</td>
+                      <td>2026-01-30</td>
+                      <td>Rp 12.500.000</td>
+                      <td>Rp 5.000.000</td>
+                      <td>Rp 7.500.000</td>
+                      <td><span class="badge bg-warning">Partial</span></td>
+                      <td class="text-center">
+                        <button class="btn btn-sm btn-outline-info" data-bs-toggle="modal" data-bs-target="#modalView">
+                          <i class="fas fa-eye"></i>
+                        </button>
+                        <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalEdit">
+                          <i class="fas fa-edit"></i>
+                        </button>
+                        <button class="btn btn-sm btn-outline-dark" data-bs-toggle="modal" data-bs-target="#modalAksi">
+                          <i class="fas fa-cogs"></i>
+                        </button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>2</td>
+                      <td>2026-01-02</td>
+                      <td>INV-AR-002</td>
+                      <td>CV Mitra Jaya</td>
+                      <td>2026-02-01</td>
+                      <td>Rp 8.750.000</td>
+                      <td>Rp 0</td>
+                      <td>Rp 8.750.000</td>
+                      <td><span class="badge bg-danger">Outstanding</span></td>
+                      <td class="text-center">
+                        <button class="btn btn-sm btn-outline-info"><i class="fas fa-eye"></i></button>
+                        <button class="btn btn-sm btn-outline-primary"><i class="fas fa-edit"></i></button>
+                        <button class="btn btn-sm btn-outline-dark"><i class="fas fa-cogs"></i></button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>3</td>
+                      <td>2026-01-03</td>
+                      <td>INV-AR-003</td>
+                      <td>PT Nusantara Abadi</td>
+                      <td>2026-02-02</td>
+                      <td>Rp 4.200.000</td>
+                      <td>Rp 4.200.000</td>
+                      <td>Rp 0</td>
+                      <td><span class="badge bg-success">Paid</span></td>
+                      <td class="text-center">
+                        <button class="btn btn-sm btn-outline-info"><i class="fas fa-eye"></i></button>
+                        <button class="btn btn-sm btn-outline-primary"><i class="fas fa-edit"></i></button>
+                        <button class="btn btn-sm btn-outline-dark"><i class="fas fa-cogs"></i></button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>4</td>
+                      <td>2026-01-04</td>
+                      <td>INV-AR-004</td>
+                      <td>PT Sentosa Prima</td>
+                      <td>2026-02-03</td>
+                      <td>Rp 16.900.000</td>
+                      <td>Rp 6.900.000</td>
+                      <td>Rp 10.000.000</td>
+                      <td><span class="badge bg-warning">Partial</span></td>
+                      <td class="text-center">
+                        <button class="btn btn-sm btn-outline-info"><i class="fas fa-eye"></i></button>
+                        <button class="btn btn-sm btn-outline-primary"><i class="fas fa-edit"></i></button>
+                        <button class="btn btn-sm btn-outline-dark"><i class="fas fa-cogs"></i></button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>5</td>
+                      <td>2026-01-05</td>
+                      <td>INV-AR-005</td>
+                      <td>CV Cipta Karya</td>
+                      <td>2026-02-05</td>
+                      <td>Rp 3.500.000</td>
+                      <td>Rp 0</td>
+                      <td>Rp 3.500.000</td>
+                      <td><span class="badge bg-danger">Outstanding</span></td>
+                      <td class="text-center">
+                        <button class="btn btn-sm btn-outline-info"><i class="fas fa-eye"></i></button>
+                        <button class="btn btn-sm btn-outline-primary"><i class="fas fa-edit"></i></button>
+                        <button class="btn btn-sm btn-outline-dark"><i class="fas fa-cogs"></i></button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>6</td>
+                      <td>2026-01-06</td>
+                      <td>INV-AR-006</td>
+                      <td>PT Digital Solusi</td>
+                      <td>2026-02-06</td>
+                      <td>Rp 22.400.000</td>
+                      <td>Rp 10.000.000</td>
+                      <td>Rp 12.400.000</td>
+                      <td><span class="badge bg-warning">Partial</span></td>
+                      <td class="text-center">
+                        <button class="btn btn-sm btn-outline-info"><i class="fas fa-eye"></i></button>
+                        <button class="btn btn-sm btn-outline-primary"><i class="fas fa-edit"></i></button>
+                        <button class="btn btn-sm btn-outline-dark"><i class="fas fa-cogs"></i></button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>7</td>
+                      <td>2026-01-07</td>
+                      <td>INV-AR-007</td>
+                      <td>PT Global Teknik</td>
+                      <td>2026-02-08</td>
+                      <td>Rp 7.250.000</td>
+                      <td>Rp 7.250.000</td>
+                      <td>Rp 0</td>
+                      <td><span class="badge bg-success">Paid</span></td>
+                      <td class="text-center">
+                        <button class="btn btn-sm btn-outline-info"><i class="fas fa-eye"></i></button>
+                        <button class="btn btn-sm btn-outline-primary"><i class="fas fa-edit"></i></button>
+                        <button class="btn btn-sm btn-outline-dark"><i class="fas fa-cogs"></i></button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>8</td>
+                      <td>2026-01-08</td>
+                      <td>INV-AR-008</td>
+                      <td>CV Karya Bersama</td>
+                      <td>2026-02-09</td>
+                      <td>Rp 14.300.000</td>
+                      <td>Rp 4.000.000</td>
+                      <td>Rp 10.300.000</td>
+                      <td><span class="badge bg-warning">Partial</span></td>
+                      <td class="text-center">
+                        <button class="btn btn-sm btn-outline-info"><i class="fas fa-eye"></i></button>
+                        <button class="btn btn-sm btn-outline-primary"><i class="fas fa-edit"></i></button>
+                        <button class="btn btn-sm btn-outline-dark"><i class="fas fa-cogs"></i></button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>9</td>
+                      <td>2026-01-09</td>
+                      <td>INV-AR-009</td>
+                      <td>PT Indo Pangan</td>
+                      <td>2026-02-10</td>
+                      <td>Rp 5.800.000</td>
+                      <td>Rp 0</td>
+                      <td>Rp 5.800.000</td>
+                      <td><span class="badge bg-danger">Outstanding</span></td>
+                      <td class="text-center">
+                        <button class="btn btn-sm btn-outline-info"><i class="fas fa-eye"></i></button>
+                        <button class="btn btn-sm btn-outline-primary"><i class="fas fa-edit"></i></button>
+                        <button class="btn btn-sm btn-outline-dark"><i class="fas fa-cogs"></i></button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>10</td>
+                      <td>2026-01-10</td>
+                      <td>INV-AR-010</td>
+                      <td>PT Prima Elektrik</td>
+                      <td>2026-02-12</td>
+                      <td>Rp 11.000.000</td>
+                      <td>Rp 11.000.000</td>
+                      <td>Rp 0</td>
+                      <td><span class="badge bg-success">Paid</span></td>
+                      <td class="text-center">
+                        <button class="btn btn-sm btn-outline-info"><i class="fas fa-eye"></i></button>
+                        <button class="btn btn-sm btn-outline-primary"><i class="fas fa-edit"></i></button>
+                        <button class="btn btn-sm btn-outline-dark"><i class="fas fa-cogs"></i></button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>11</td>
+                      <td>2026-01-11</td>
+                      <td>INV-AR-011</td>
+                      <td>CV Mandiri Sejahtera</td>
+                      <td>2026-02-15</td>
+                      <td>Rp 18.750.000</td>
+                      <td>Rp 8.000.000</td>
+                      <td>Rp 10.750.000</td>
+                      <td><span class="badge bg-warning">Partial</span></td>
+                      <td class="text-center">
+                        <button class="btn btn-sm btn-outline-info"><i class="fas fa-eye"></i></button>
+                        <button class="btn btn-sm btn-outline-primary"><i class="fas fa-edit"></i></button>
+                        <button class="btn btn-sm btn-outline-dark"><i class="fas fa-cogs"></i></button>
+                      </td>
+                    </tr>
+
+                  </tbody>
+                </table>
+
+              </div>
+            </div>
+          </div>
 <!-- <div class="card">
   <div class="card-header d-flex justify-content-between align-items-center">
     <h5 class="mb-0">📥 Order Masuk</h5>
