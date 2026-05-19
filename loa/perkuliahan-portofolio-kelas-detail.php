@@ -357,6 +357,7 @@
             <th width="50">No</th>
             <th width="150">Tanggal Ujian</th>
             <th>Keterangan soal ujian</th>
+            <th>Status</th>
             <th width="100" class="text-center">Aksi</th>
           </tr>
         </thead>
@@ -366,6 +367,7 @@
             <td>1</td>
             <td>10 Maret 2025</td>
             <td>Ujian Tengah Semester - Mekanika Tanah. UTS Semester Genap 2024/2025</td>
+            <td><span class="badge badge-warning">Penugasan Validator</span> </td>
             <td class="text-center"><button class="btn btn-sm btn-outline-success">
                 <i class="fas fa-download"></i>
               </button>
@@ -379,6 +381,7 @@
             <td>2</td>
             <td>25 Juni 2025</td>
             <td>Ujian Akhir Semester - Struktur Beton. UAS Semester Genap 2024/2025</td>
+            <td><span class="badge badge-info">Proses Verifikasi</span> </td>
             <td class="text-center"><button class="btn btn-sm btn-outline-info">
                 <i class="fas fa-paperclip"></i>
               </button>
@@ -392,6 +395,7 @@
             <td>3</td>
             <td>5 April 2025</td>
             <td>Kuis 1 - Geoteknik. Evaluasi Bab 1 dan 2</td>
+            <td><span class="badge badge-primary">Proses Revisi</span> </td>
             <td class="text-center"><button class="btn btn-sm btn-outline-success">
                 <i class="fas fa-download"></i>
               </button>
@@ -405,6 +409,7 @@
             <td>4</td>
             <td>20 April 2025</td>
             <td>Kuis 2 - Analisis Struktur. Evaluasi Bab 3 dan 4</td>
+            <td><span class="badge badge-success">Approved</span> </td>
             <td class="text-center"><button class="btn btn-sm btn-outline-success">
                 <i class="fas fa-download"></i>
               </button>
@@ -418,6 +423,7 @@
             <td>5</td>
             <td>30 Maret 2025</td>
             <td>Remedial UTS - Mekanika Tanah. Khusus mahasiswa yang belum tuntas</td>
+            <td><span class="badge badge-danger">Rejected</span> </td>
             <td class="text-center"><button class="btn btn-sm btn-outline-success">
                 <i class="fas fa-download"></i>
               </button>
@@ -429,7 +435,7 @@
 
         </tbody>
         <tfoot>
-          <tr><td colspan="4"><button type="button" class="btn btn-outline-primary btn-sm btn-block" data-bs-toggle="modal" data-bs-target="#modalTambahData"><i class="fas fa-plus me-1"></i> Add</button></td></tr>
+          <tr><td colspan="5"><button type="button" class="btn btn-outline-primary btn-sm btn-block" data-bs-toggle="modal" data-bs-target="#modalTambahData"><i class="fas fa-plus me-1"></i> Add</button></td></tr>
         </tfoot>
       </table>
     </div>

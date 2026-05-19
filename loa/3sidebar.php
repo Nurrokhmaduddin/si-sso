@@ -264,8 +264,8 @@
         </li>
 
         <!-- PERKULIAHAN OBE -->
-        <li class="nav-item <?php echo in_array($page, ['kelas_perkuliahan','kelas_konversi','portofolio_kelas','nilai_cpmk','master_periode','pengumuman','yudisium','soal_ujian','rps']) ? 'menu-open' : ''; ?>">
-          <a href="#" class="nav-link <?php echo in_array($page, ['kelas_perkuliahan','kelas_konversi','portofolio_kelas','nilai_cpmk','master_periode','pengumuman','yudisium','soal_ujian','rps']) ? 'active' : ''; ?>">
+        <li class="nav-item <?php echo in_array($page, ['kelas_perkuliahan','kelas_konversi','portofolio_kelas','nilai_cpmk','master_periode','pengumuman','yudisium','soal_ujian','rps','monitor_verifikasi_soal']) ? 'menu-open' : ''; ?>">
+          <a href="#" class="nav-link <?php echo in_array($page, ['kelas_perkuliahan','kelas_konversi','portofolio_kelas','nilai_cpmk','master_periode','pengumuman','yudisium','soal_ujian','rps','monitor_verifikasi_soal']) ? 'active' : ''; ?>">
             <i class="nav-icon fas fa-chalkboard-teacher"></i>
             <p>
               Perkuliahan OBE
@@ -328,6 +328,12 @@
               </a>
             </li> -->
 
+<li class="nav-item">
+              <a href="monitor_verifikasi_soal.php" class="nav-link <?php echo $page == 'monitor_verifikasi_soal' ? 'active' : ''; ?>">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Verifikasi Soal Ujian</p>
+              </a>
+            </li>
             <li class="nav-item">
               <a href="perkuliahan-portofolio-kelas.php" class="nav-link <?php echo $page == 'portofolio_kelas' ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>

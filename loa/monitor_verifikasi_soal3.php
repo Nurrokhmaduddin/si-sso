@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monitor Verifikasi Soal Ujian</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+
+  <style>
+
+    body{
+      background:#f4f6f9;
+      font-size:14px;
+    }
+
+    .page-title{
+      font-size:28px;
+      font-weight:700;
+    }
+
+    .subtitle{
+      color:#6c757d;
+    }
+
+    .card{
+      border:none;
+      border-radius:14px;
+      box-shadow:0 2px 10px rgba(0,0,0,0.04);
+    }
+
+    .card-header{
+      background:white;
+      border-bottom:1px solid #eee;
+      font-weight:600;
+    }
+
+    .table thead th{
+      vertical-align:middle;
+      text-align:center;
+      white-space:nowrap;
+      font-size:13px;
+    }
+
+    .table tbody td{
+      vertical-align:top;
+      font-size:13px;
+    }
+
+    .filter-label{
+      font-size:12px;
+      font-weight:600;
+      margin-bottom:4px;
+    }
+
+    .badge-status{
+      font-size:11px;
+      padding:6px 10px;
+      border-radius:20px;
+    }
+
+    .info-label{
+      font-size:11px;
+      color:#6c757d;
+      margin-bottom:2px;
+    }
+
+    .info-value{
+      font-weight:600;
+      line-height:1.3;
+    }
+
+    .table-responsive{
+      min-height:500px;
+    }
+
+    .sticky-topbar{
+      position:sticky;
+      top:0;
+      z-index:100;
+      background:#f4f6f9;
+      padding-top:10px;
+    }
+
+  </style>
+</head>
+
+<body>
+
+<div class="container-fluid p-4">
+
+  <!-- ===================================================== -->
+  <!-- PAGE TITLE -->
+  <!-- ===================================================== -->
+
+  <div class="sticky-topbar">
+
+    <div class="d-flex justify-content-between align-items-start mb-3">
+
+      <div>
+        <div class="page-title">
+          Monitor Verifikasi Soal Ujian
+        </div>
+
+        <div class="subtitle">
+          Monitoring upload, proses verifikasi, revisi, dan approval soal ujian per kelas perkuliahan.
+        </div>
+      </div>
+
+      <div>
+        <button class="btn btn-outline-secondary"
+                data-bs-toggle="modal"
+                data-bs-target="#modalBantuan">
+          <i class="fas fa-circle-question"></i>
+          Bantuan
+        </button>
+      </div>
+
+    </div>
+
+    <!-- ===================================================== -->
+    <!-- CARD SUMMARY -->
+    <!-- ===================================================== -->
+
+    <div class="row g-3 mb-3">
+
+      <div class="col-md">
+        <div class="card">
+          <div class="card-body">
+            <div class="text-muted small">Total Data</div>
+            <h4 class="mb-0">148</h4>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md">
+        <div class="card border-start border-4 border-secondary">
+          <div class="card-body">
+            <div class="text-muted small">Belum Upload</div>
+            <h4 class="mb-0">24</h4>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md">
+        <div class="card border-start border-4 border-primary">
+          <div class="card-body">
+            <div class="text-muted small">Sudah Upload</div>
+            <h4 class="mb-0">124</h4>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md">
+        <div class="card border-start border-4 border-warning">
+          <div class="card-body">
+            <div class="text-muted small">Menunggu Verifikasi</div>
+            <h4 class="mb-0">39</h4>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md">
+        <div class="card border-start border-4 border-danger">
+          <div class="card-body">
+            <div class="text-muted small">Revisi</div>
+            <h4 class="mb-0">18</h4>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md">
+        <div class="card border-start border-4 border-success">
+          <div class="card-body">
+            <div class="text-muted small">Approved</div>
+            <h4 class="mb-0">67</h4>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- ===================================================== -->
+  <!-- FILTER -->
+  <!-- ===================================================== -->
+
+  <div class="card mb-3">
+
+    <div class="card-header d-flex justify-content-between align-items-center">
+
+      <div>
+        <i class="fas fa-filter"></i>
+        Filter Monitoring
+      </div>
+
+      <div>
+        <button class="btn btn-sm btn-outline-secondary">
+          Reset Filter
+        </button>
+
+        <button class="btn btn-sm btn-primary">
+          Terapkan Filter
+        </button>
+      </div>
+
+    </div>
+
+    <div class="card-body">
+
+      <!-- FILTER AKADEMIK -->
+
+      <div class="mb-3">
+
+        <div class="fw-bold mb-2 text-primary">
+          Filter Akademik
+        </div>
+
+        <div class="row g-3">
+
+          <div class="col-md-2">
+            <div class="filter-label">Tahun Akademik</div>
+            <select class="form-select">
+              <option>2024/2025</option>
+            </select>
+          </div>
+
+          <div class="col-md-2">
+            <div class="filter-label">Semester</div>
+            <select class="form-select">
+              <option>Gasal</option>
+            </select>
+          </div>
+
+          <div class="col-md-3">
+            <div class="filter-label">Mata Kuliah</div>
+            <select class="form-select">
+              <option>Semua Mata Kuliah</option>
+            </select>
+          </div>
+
+          <div class="col-md-3">
+            <div class="filter-label">Dosen</div>
+            <select class="form-select">
+              <option>Semua Dosen</option>
+            </select>
+          </div>
+
+          <div class="col-md-2">
+            <div class="filter-label">Kelas</div>
+            <select class="form-select">
+              <option>Semua Kelas</option>
+            </select>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- FILTER WORKFLOW -->
+
+      <div class="mb-3">
+
+        <div class="fw-bold mb-2 text-success">
+          Filter Workflow
+        </div>
+
+        <div class="row g-3">
+
+          <div class="col-md-3">
+            <div class="filter-label">Status</div>
+            <select class="form-select">
+              <option>Semua Status</option>
+              <option>Belum Upload</option>
+              <option>Sudah Upload</option>
+              <option>Menunggu Verifikasi</option>
+              <option>Revisi</option>
+              <option>Approved</option>
+            </select>
+          </div>
+
+          <div class="col-md-3">
+            <div class="filter-label">Validator</div>
+            <select class="form-select">
+              <option>Semua Validator</option>
+            </select>
+          </div>
+
+          <div class="col-md-3">
+            <div class="filter-label">Tahap Saat Ini</div>
+            <select class="form-select">
+              <option>Semua Tahap</option>
+              <option>Upload Dosen</option>
+              <option>Menunggu Validator</option>
+              <option>Revisi Dosen</option>
+              <option>Disetujui</option>
+            </select>
+          </div>
+
+          <div class="col-md-3">
+            <div class="filter-label">Upload Status</div>
+            <select class="form-select">
+              <option>Semua</option>
+              <option>Sudah Upload</option>
+              <option>Belum Upload</option>
+            </select>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- FILTER WAKTU -->
+
+      <div>
+
+        <div class="fw-bold mb-2 text-danger">
+          Filter Waktu
+        </div>
+
+        <div class="row g-3">
+
+          <div class="col-md-3">
+            <div class="filter-label">Tanggal Upload Dari</div>
+            <input type="date" class="form-control">
+          </div>
+
+          <div class="col-md-3">
+            <div class="filter-label">Tanggal Upload Sampai</div>
+            <input type="date" class="form-control">
+          </div>
+
+          <div class="col-md-3">
+            <div class="filter-label">Tanggal Revisi Dari</div>
+            <input type="date" class="form-control">
+          </div>
+
+          <div class="col-md-3">
+            <div class="filter-label">Tanggal Revisi Sampai</div>
+            <input type="date" class="form-control">
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- ===================================================== -->
+  <!-- TABLE -->
+  <!-- ===================================================== -->
+
+  <div class="card">
+
+    <div class="card-header d-flex justify-content-between align-items-center">
+
+      <div>
+        <i class="fas fa-table"></i>
+        Data Monitor Verifikasi Soal Ujian
+      </div>
+
+      <div class="d-flex gap-2">
+
+        <input type="text"
+               class="form-control form-control-sm"
+               placeholder="Cari cepat..."
+               style="width:220px;">
+
+        <button class="btn btn-sm btn-outline-success">
+          <i class="fas fa-file-excel"></i>
+          Export
+        </button>
+
+      </div>
+
+    </div>
+
+    <div class="card-body">
+
+      <div class="table-responsive">
+
+        <table class="table table-bordered table-hover align-middle">
+
+          <thead class="table-light">
+
+          <tr>
+
+            <th width="40">No</th>
+
+            <th width="260">Identitas Kelas Perkuliahan</th>
+
+            <th width="200">Identitas Soal Ujian</th>
+
+            <th width="260">Verifikasi Soal</th>
+
+            <th width="120">Last Update</th>
+
+            <th width="170">Aksi</th>
+
+          </tr>
+
+          </thead>
+
+          <tbody>
+
+          <!-- ROW 1 -->
+
+          <tr>
+
+            <td class="text-center">1</td>
+
+            <td>
+
+              <div class="mb-2">
+                <div class="info-label">Kurikulum</div>
+                <div class="info-value">2023</div>
+              </div>
+
+              <div class="mb-2">
+                <div class="info-label">Periode Akademik</div>
+                <div class="info-value">2024/2025 - Gasal</div>
+              </div>
+
+              <div class="mb-2">
+                <div class="info-label">Dosen Pengampu</div>
+                <div class="info-value">
+                  Tri Nugroho Sulistyantoro, S.T., M.T.<br>
+                  Hasan, ST, MT.
+                </div>
+              </div>
+
+              <div class="mb-2">
+                <div class="info-label">Jalur Kelas</div>
+                <div class="info-value">
+                  Civil Engineering Regular - (511)
+                </div>
+              </div>
+
+              <div class="mb-2">
+                <div class="info-label">Mata Kuliah</div>
+                <div class="info-value">
+                  Metode Pelaksanaan Bangunan - (STS704)
+                </div>
+              </div>
+
+              <div>
+                <div class="info-label">Kelas</div>
+                <div class="info-value">
+                  A
+                </div>
+              </div>
+
+            </td>
+
+            <td>
+
+              <div class="mb-2">
+                <div class="info-label">Tanggal Ujian</div>
+                <div class="info-value">
+                  12 November 2025
+                </div>
+              </div>
+
+              <div>
+                <div class="info-label">Keterangan Soal Ujian</div>
+                <div>
+                  Soal UTS terdiri dari essay dan studi kasus proyek gedung bertingkat.
+                </div>
+              </div>
+
+            </td>
+
+            <td>
+
+              <div class="mb-2">
+                <div class="info-label">Validator Saat Ini</div>
+                <div class="info-value">
+                  Dr. Ahmad Fauzi, ST., MT.
+                </div>
+              </div>
+
+              <div class="mb-2">
+                <div class="info-label">Komentar Verifikasi</div>
+                <div>
+                  Tambahkan kisi-kisi CPMK pada soal nomor 4 dan perjelas bobot penilaian.
+                </div>
+              </div>
+
+              <div>
+                <span class="badge bg-warning badge-status">
+                  Revisi
+                </span>
+              </div>
+
+            </td>
+
+            <td class="text-center">
+
+              <div>
+                10 Mei 2026
+              </div>
+
+              <small class="text-muted">
+                14:30 WIB
+              </small>
+
+            </td>
+
+            <td class="text-center">
+
+              <div class="d-flex flex-wrap gap-1 justify-content-center">
+
+                <button class="btn btn-sm btn-outline-info"
+                        data-bs-toggle="modal"
+                        data-bs-target="#modalDetail">
+
+                  <i class="fas fa-eye"></i>
+                </button>
+
+                <button class="btn btn-sm btn-outline-primary">
+                  <i class="fas fa-upload"></i>
+                </button>
+
+                <button class="btn btn-sm btn-outline-success">
+                  <i class="fas fa-check"></i>
+                </button>
+
+                <button class="btn btn-sm btn-outline-warning">
+                  <i class="fas fa-user-check"></i>
+                </button>
+
+              </div>
+
+            </td>
+
+          </tr>
+
+          <!-- ROW 2 -->
+
+          <tr>
+
+            <td class="text-center">2</td>
+
+            <td>
+
+              <div class="mb-2">
+                <div class="info-label">Kurikulum</div>
+                <div class="info-value">2023</div>
+              </div>
+
+              <div class="mb-2">
+                <div class="info-label">Periode Akademik</div>
+                <div class="info-value">2024/2025 - Gasal</div>
+              </div>
+
+              <div class="mb-2">
+                <div class="info-label">Dosen Pengampu</div>
+                <div class="info-value">
+                  Rizki Andriansyah, ST., MT.
+                </div>
+              </div>
+
+              <div class="mb-2">
+                <div class="info-label">Jalur Kelas</div>
+                <div class="info-value">
+                  Teknik Sipil Ekstensi - (522)
+                </div>
+              </div>
+
+              <div class="mb-2">
+                <div class="info-label">Mata Kuliah</div>
+                <div class="info-value">
+                  Manajemen Konstruksi - (MKS701)
+                </div>
+              </div>
+
+              <div>
+                <div class="info-label">Kelas</div>
+                <div class="info-value">
+                  B
+                </div>
+              </div>
+
+            </td>
+
+            <td>
+
+              <div class="mb-2">
+                <div class="info-label">Tanggal Ujian</div>
+                <div class="info-value">
+                  15 November 2025
+                </div>
+              </div>
+
+              <div>
+                <div class="info-label">Keterangan Soal Ujian</div>
+                <div>
+                  Soal UAS berbasis studi kasus proyek pembangunan jalan.
+                </div>
+              </div>
+
+            </td>
+
+            <td>
+
+              <div class="mb-2">
+                <div class="info-label">Validator Saat Ini</div>
+                <div class="info-value">
+                  Admin Prodi Teknik Sipil
+                </div>
+              </div>
+
+              <div class="mb-2">
+                <div class="info-label">Komentar Verifikasi</div>
+                <div>
+                  Menunggu proses verifikasi validator.
+                </div>
+              </div>
+
+              <div>
+                <span class="badge bg-primary badge-status">
+                  Menunggu Verifikasi
+                </span>
+              </div>
+
+            </td>
+
+            <td class="text-center">
+
+              <div>
+                11 Mei 2026
+              </div>
+
+              <small class="text-muted">
+                09:10 WIB
+              </small>
+
+            </td>
+
+            <td class="text-center">
+
+              <div class="d-flex flex-wrap gap-1 justify-content-center">
+
+                <button class="btn btn-sm btn-outline-info">
+                  <i class="fas fa-eye"></i>
+                </button>
+
+                <button class="btn btn-sm btn-outline-success">
+                  <i class="fas fa-check"></i>
+                </button>
+
+                <button class="btn btn-sm btn-outline-danger">
+                  <i class="fas fa-rotate-left"></i>
+                </button>
+
+              </div>
+
+            </td>
+
+          </tr>
+
+          </tbody>
+
+        </table>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<!-- ===================================================== -->
+<!-- MODAL BANTUAN -->
+<!-- ===================================================== -->
+
+<div class="modal fade" id="modalBantuan">
+
+  <div class="modal-dialog modal-lg">
+
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title">
+          Bantuan Monitor Verifikasi Soal Ujian
+        </h5>
+
+        <button class="btn-close"
+                data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+
+        <div class="mb-3">
+
+          <h6>Alur Proses</h6>
+
+          <ol>
+            <li>Dosen upload soal ujian.</li>
+            <li>Admin Prodi menentukan validator.</li>
+            <li>Validator melakukan verifikasi.</li>
+            <li>Validator dapat memberi revisi atau approval.</li>
+            <li>Dosen melakukan upload revisi jika diperlukan.</li>
+          </ol>
+
+        </div>
+
+        <div>
+
+          <h6>Status Workflow</h6>
+
+          <ul>
+            <li><b>Belum Upload</b> → soal belum diupload.</li>
+            <li><b>Sudah Upload</b> → file soal sudah tersedia.</li>
+            <li><b>Menunggu Verifikasi</b> → menunggu validasi.</li>
+            <li><b>Revisi</b> → perlu perbaikan dari dosen.</li>
+            <li><b>Approved</b> → soal telah disetujui.</li>
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<!-- ===================================================== -->
+<!-- MODAL DETAIL -->
+<!-- ===================================================== -->
+
+<div class="modal fade" id="modalDetail">
+
+  <div class="modal-dialog modal-xl modal-dialog-scrollable">
+
+    <div class="modal-content">
+
+      <div class="modal-header">
+
+        <h5 class="modal-title">
+          Detail Verifikasi Soal Ujian
+        </h5>
+
+        <button class="btn-close"
+                data-bs-dismiss="modal"></button>
+
+      </div>
+
+      <div class="modal-body">
+
+        <div class="row g-4">
+
+          <div class="col-md-6">
+
+            <div class="card">
+
+              <div class="card-header">
+                Informasi Kelas Perkuliahan
+              </div>
+
+              <div class="card-body">
+
+                <table class="table table-sm">
+
+                  <tr>
+                    <th width="180">Kurikulum</th>
+                    <td>2023</td>
+                  </tr>
+
+                  <tr>
+                    <th>Periode Akademik</th>
+                    <td>2024/2025 - Gasal</td>
+                  </tr>
+
+                  <tr>
+                    <th>Mata Kuliah</th>
+                    <td>Metode Pelaksanaan Bangunan</td>
+                  </tr>
+
+                  <tr>
+                    <th>Kelas</th>
+                    <td>A</td>
+                  </tr>
+
+                  <tr>
+                    <th>Dosen Pengampu</th>
+                    <td>
+                      Tri Nugroho Sulistyantoro, ST., MT.
+                    </td>
+                  </tr>
+
+                </table>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="col-md-6">
+
+            <div class="card">
+
+              <div class="card-header">
+                Informasi Verifikasi
+              </div>
+
+              <div class="card-body">
+
+                <table class="table table-sm">
+
+                  <tr>
+                    <th width="180">Validator</th>
+                    <td>Dr. Ahmad Fauzi</td>
+                  </tr>
+
+                  <tr>
+                    <th>Status</th>
+                    <td>
+                      <span class="badge bg-warning">
+                        Revisi
+                      </span>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <th>Last Update</th>
+                    <td>10 Mei 2026 14:30 WIB</td>
+                  </tr>
+
+                </table>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="col-12">
+
+            <div class="card">
+
+              <div class="card-header">
+                Riwayat Komentar Verifikasi
+              </div>
+
+              <div class="card-body">
+
+                <div class="border rounded p-3 mb-3">
+
+                  <div class="fw-bold">
+                    Validator
+                  </div>
+
+                  <div class="text-muted small mb-2">
+                    10 Mei 2026 14:30 WIB
+                  </div>
+
+                  <div>
+                    Tambahkan kisi-kisi CPMK dan revisi bobot penilaian pada soal nomor 4.
+                  </div>
+
+                </div>
+
+                <div class="border rounded p-3">
+
+                  <div class="fw-bold">
+                    Dosen Pengampu
+                  </div>
+
+                  <div class="text-muted small mb-2">
+                    11 Mei 2026 08:15 WIB
+                  </div>
+
+                  <div>
+                    File soal telah direvisi dan diupload ulang.
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
