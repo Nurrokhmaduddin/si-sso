@@ -27,6 +27,9 @@
               <div class="row">
                 <div class="col-md-6">
                   <b>Kurikulum:</b> Merdeka Belajar &nbsp;
+                </div> 
+                <div class="col-md-6">
+                  <b>Jalur Kelas:</b> Reguler &nbsp;
                 </div>                
                 <div class="col-md-6">
                   <b>Set Pemetaan:</b> Peta B

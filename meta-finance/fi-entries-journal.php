@@ -52,6 +52,11 @@
                 <button type="button" class="btn btn-outline-primary btn-sm " data-bs-toggle="modal" data-bs-target="#modalTambahData">
                   <i class="fas fa-plus me-1"></i> Add
                 </button>
+                <button type="button"
+                class="btn btn-outline-primary btn-sm"
+                onclick="window.location.href='fi-entries-journal-form.php'">
+                <i class="fas fa-plus me-1"></i> Add
+              </button>
                 <button type="button" class="btn btn-outline-primary btn-sm " data-bs-toggle="modal" data-bs-target="#modalImpor">
                   <i class="fas fa-file-upload me-1"></i> Import
                 </button>                

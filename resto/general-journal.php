@@ -93,10 +93,10 @@
                   <thead>
                     <tr>
                       <th>No</th>
-                      <th>Posting Date</th>
-                      <th>Ref</th>
+                      <th>Transaction Date</th>
+                      <th>Jurnal No</th>
                       <th>Description</th>
-                      <th>Journal Type</th>
+                      <th>Transaction Type</th>
                       <th>Action</th>
                     </tr>
                   </thead>
@@ -370,55 +370,8 @@
             <div class="card-body">
 
               <div class="row g-3">
-
-                <!-- Journal Date -->
-                <div class="col-md-3">
-                  <label class="form-label">
-                    Journal Date<span class="text-danger">*</span>
-                  </label>
-
-                  <input type="date"
-                         class="form-control"
-                         name="journal_date"
-                         required>
-                </div>
-
-                <!-- Journal Type -->
-                <div class="col-md-3">
-                  <label class="form-label">
-                    Journal Type<span class="text-danger">*</span>
-                  </label>
-
-                  <select class="form-select"
-                          name="journal_type"
-                          required>
-
-                    <option value="">-- Select --</option>
-
-                    <option value="GENERAL_JOURNAL">
-                      General Journal
-                    </option>
-
-                    <option value="ADJUSTMENT_JOURNAL">
-                      Adjustment Journal
-                    </option>
-
-                    <option value="ACCRUAL_JOURNAL">
-                      Accrual Journal
-                    </option>
-
-                    <option value="REVERSING_JOURNAL">
-                      Reversing Journal
-                    </option>
-
-                    <option value="CLOSING_JOURNAL">
-                      Closing Journal
-                    </option>
-
-                  </select>
-                </div>
 <!-- Journal Number -->
-                <div class="col-md-3">
+                <div class="col-md-12">
                   <label class="form-label">
                     Journal No
                   </label>
@@ -429,14 +382,253 @@
                          value="AUTO"
                          readonly>
                 </div>
-                <!-- Status -->
+ <!-- Source Module -->
+                <div class="col-md-12">
+                  <label class="form-label">
+                    Source Module
+                  </label>
+
+                  <select class="form-select"
+                          name="source_module" disabled>
+
+                    <option value="MANUAL">
+                      MANUAL
+                    </option>
+
+                    <option value="SALES">
+                      SALES
+                    </option>
+
+                    <option value="PURCHASE">
+                      PURCHASE
+                    </option>
+
+                    <option value="INVENTORY">
+                      INVENTORY
+                    </option>
+
+                    <option value="FINANCE">
+                      FINANCE
+                    </option>
+
+                  </select>
+                </div>
+                <!-- Journal Date -->
                 <div class="col-md-3">
+                  <label class="form-label" title="kapan transaksi itu sebenarnya terjadi">
+                    Transaction Date<span class="text-danger">*</span>
+                  </label>
+
+                  <input type="date"
+                         class="form-control"
+                         name="journal_date"
+                         required>
+                </div>
+
+                <!-- Journal Type -->
+<div class="col-md-3">
+  <label class="form-label">
+    Transaction Type<span class="text-danger">*</span>
+  </label>
+
+  <select class="form-select"
+          name="journal_type"
+          required>
+
+    <option value="">-- Select --</option>
+
+    <!-- ===================================================== -->
+    <!-- GENERAL ACCOUNTING -->
+    <!-- ===================================================== -->
+
+    <option value="GENERAL_JOURNAL">
+      General Journal
+    </option>
+
+    <option value="ADJUSTMENT_JOURNAL">
+      Adjustment Journal
+    </option>
+
+    <option value="ACCRUAL_JOURNAL">
+      Accrual Journal
+    </option>
+
+    <option value="REVERSING_JOURNAL">
+      Reversing Journal
+    </option>
+
+    <option value="CLOSING_JOURNAL">
+      Closing Journal
+    </option>
+
+    <option value="OPENING_BALANCE">
+      Opening Balance
+    </option>
+
+    <!-- ===================================================== -->
+    <!-- CASH & BANK -->
+    <!-- ===================================================== -->
+
+    <option value="CASH_IN">
+      Cash In
+    </option>
+
+    <option value="CASH_OUT">
+      Cash Out
+    </option>
+
+    <option value="BANK_TRANSFER">
+      Bank Transfer
+    </option>
+
+    <option value="PETTY_CASH">
+      Petty Cash
+    </option>
+
+    <!-- ===================================================== -->
+    <!-- SALES -->
+    <!-- ===================================================== -->
+
+    <option value="SALES_INVOICE">
+      Sales Invoice
+    </option>
+
+    <option value="SALES_RETURN">
+      Sales Return
+    </option>
+
+    <option value="SALES_PAYMENT">
+      Sales Payment
+    </option>
+
+    <option value="CUSTOMER_RECEIPT">
+      Customer Receipt
+    </option>
+
+    <!-- ===================================================== -->
+    <!-- PURCHASE -->
+    <!-- ===================================================== -->
+
+    <option value="PURCHASE_INVOICE">
+      Purchase Invoice
+    </option>
+
+    <option value="PURCHASE_RETURN">
+      Purchase Return
+    </option>
+
+    <option value="PURCHASE_PAYMENT">
+      Purchase Payment
+    </option>
+
+    <option value="VENDOR_PAYMENT">
+      Vendor Payment
+    </option>
+
+    <!-- ===================================================== -->
+    <!-- INVENTORY -->
+    <!-- ===================================================== -->
+
+    <option value="INVENTORY_IN">
+      Inventory In
+    </option>
+
+    <option value="INVENTORY_OUT">
+      Inventory Out
+    </option>
+
+    <option value="STOCK_ADJUSTMENT">
+      Stock Adjustment
+    </option>
+
+    <option value="STOCK_OPNAME">
+      Stock Opname
+    </option>
+
+    <option value="STOCK_TRANSFER">
+      Stock Transfer
+    </option>
+
+    <!-- ===================================================== -->
+    <!-- FIXED ASSET -->
+    <!-- ===================================================== -->
+
+    <option value="ASSET_PURCHASE">
+      Asset Purchase
+    </option>
+
+    <option value="ASSET_DEPRECIATION">
+      Asset Depreciation
+    </option>
+
+    <option value="ASSET_DISPOSAL">
+      Asset Disposal
+    </option>
+
+    <!-- ===================================================== -->
+    <!-- PAYROLL -->
+    <!-- ===================================================== -->
+
+    <option value="PAYROLL">
+      Payroll
+    </option>
+
+    <option value="SALARY_PAYMENT">
+      Salary Payment
+    </option>
+
+    <option value="EMPLOYEE_REIMBURSEMENT">
+      Employee Reimbursement
+    </option>
+
+    <!-- ===================================================== -->
+    <!-- TAX -->
+    <!-- ===================================================== -->
+
+    <option value="TAX_PAYMENT">
+      Tax Payment
+    </option>
+
+    <option value="TAX_ADJUSTMENT">
+      Tax Adjustment
+    </option>
+
+    <!-- ===================================================== -->
+    <!-- LOAN & FINANCING -->
+    <!-- ===================================================== -->
+
+    <option value="LOAN_RECEIPT">
+      Loan Receipt
+    </option>
+
+    <option value="LOAN_PAYMENT">
+      Loan Payment
+    </option>
+
+    <!-- ===================================================== -->
+    <!-- OWNER / INVESTOR -->
+    <!-- ===================================================== -->
+
+    <option value="CAPITAL_INJECTION">
+      Capital Injection
+    </option>
+
+    <option value="OWNER_DRAWING">
+      Owner Drawing
+    </option>
+
+  </select>
+</div>
+               
+
+                <!-- Status -->
+                <!-- <div class="col-md-3">
                   <label class="form-label">
                     Status
                   </label>
 
                   <select class="form-select"
-                          name="status">
+                          name="status" disabled>
 
                     <option value="DRAFT">
                       Draft
@@ -447,19 +639,19 @@
                     </option>
 
                   </select>
-                </div>
+                </div> -->
 
                 <!-- Posting Date -->
-                <div class="col-md-3">
-                  <label class="form-label">
+                <!-- <div class="col-md-3">
+                  <label class="form-label" title="tanggal jurnal resmi masuk buku besar" >
                     Posting Date
                   </label>
 
                   <input type="date"
                   class="form-control"
                   name="posting_date"
-                  required>
-                </div>
+                   disabled>
+                </div> -->
                 
 
                 
@@ -486,37 +678,6 @@
                          name="reference_no"
                          placeholder="INV-001 / ADJ-001">
                 </div>
-                <!-- Source Module -->
-                <div class="col-md-3">
-                  <label class="form-label">
-                    Source Module
-                  </label>
-
-                  <select class="form-select"
-                          name="source_module">
-
-                    <option value="MANUAL">
-                      MANUAL
-                    </option>
-
-                    <option value="SALES">
-                      SALES
-                    </option>
-
-                    <option value="PURCHASE">
-                      PURCHASE
-                    </option>
-
-                    <option value="INVENTORY">
-                      INVENTORY
-                    </option>
-
-                    <option value="FINANCE">
-                      FINANCE
-                    </option>
-
-                  </select>
-                </div>
 
                 <!-- Description -->
                 <div class="col-md-12">
@@ -531,9 +692,93 @@
                 </div>
 
               </div>
-
             </div>
           </div>
+
+                <!-- ========================= -->
+                <!-- Dimension & Analysis -->
+                <!-- ========================= -->
+<div class="card mb-3">
+            <div class="card-header bg-light fw-bold">
+             Dimension & Analysis
+            </div>
+                 
+
+                    <div class="card-body">
+                      <div class="row g-3">
+                        <div class="col-md-6">
+                          <label class="form-label">Branch</label>
+                          <select class="form-select">
+                            <option>PUSAT</option>
+                            <option>MEDAN</option>
+                            <option>JAKARTA</option>
+                            <option>BANDUNG</option>
+                          </select>
+                        </div>
+                        <div class="col-md-6">
+                          <label class="form-label">Business Unit</label>
+                          <select class="form-select">
+                            <option>HQ</option>
+                            <option>SOFTWARE HOUSE</option>
+                            <option>TRAINING CENTER</option>
+                          </select>
+                        </div>
+                      
+                      <div class="col-md-4">
+                        <label class="form-label">Division</label>
+                        <select class="form-select">
+                          <option>HQ</option>
+                          <option>Marketing</option>
+                          <option>Finance</option>
+                          <option>Operational</option>
+                        </select>
+                      </div>
+
+                      <div class="col-md-4">
+                        <label class="form-label">Sub Division</label>
+                        <select class="form-select">
+                          <option>-</option>
+                          <option>HQ</option>
+                          <option>Digital Ads</option>
+                          <option>Sales</option>
+                          <option>Collection</option>
+                        </select>
+                      </div>
+
+                      <div class="col-md-4">
+                        <label class="form-label">Project</label>
+                        <select class="form-select">
+                          <option>-</option>
+                          <option>Promo Ramadhan</option>
+                          <option>ERP Development</option>
+                        </select>
+                      </div>
+
+                      <!-- <div class="col-md-6">
+                        <label class="form-label">Customer</label>
+                        <select class="form-select">
+                          <option>-</option>
+                          <option>PT ABC</option>
+                          <option>PT XYZ</option>
+                        </select>
+                      </div>
+
+                      <div class="col-md-6">
+                        <label class="form-label">Vendor</label>
+                        <select class="form-select">
+                          <option>-</option>
+                          <option>CV Supplier Utama</option>
+                        </select>
+                      </div> -->
+</div>
+                    </div>
+                  </div>
+
+
+
+
+
+
 
           <!-- ========================= -->
           <!-- JOURNAL DETAIL -->
@@ -556,224 +801,247 @@
               <div class="table-responsive">
 
                 <table class="table table-bordered table-hover align-middle mb-0"
-                       id="journalDetailTable">
+                id="journalDetailTable">
 
-                  <thead class="table-light text-center">
+                <thead class="table-light text-center">
 
-                    <tr>
+                  <tr>
 
-                      <th width="22%">
-                        Account
-                      </th>
+                    <th width="22%">
+                      Account
+                    </th>
 
-                      <th width="18%">
-                        Memo
-                      </th>
+                    <th width="18%">
+                      Memo
+                    </th>
 
-                      <th width="12%">
-                        Debit
-                      </th>
+                    <th width="12%">
+                      Debit
+                    </th>
 
-                      <th width="12%">
-                        Credit
-                      </th>
+                    <th width="12%">
+                      Credit
+                    </th>
 
-                      <th width="10%">
-                        Branch
-                      </th>
+                    <th width="10%">
+                      Branch
+                    </th>
+                    <th width="10%">
+                      Project
+                    </th>
+                    <th width="12%">
+                      Entity_Type
+                    </th>
+                     <th width="12%">
+                      Entity_ID
+                    </th>
 
-                      <th width="12%">
-                        Entity
-                      </th>
+                    
 
-                      <th width="10%">
-                        Project
-                      </th>
+                    <th width="4%">
+                      #
+                    </th>
 
-                      <th width="4%">
-                        #
-                      </th>
+                  </tr>
 
-                    </tr>
+                </thead>
 
-                  </thead>
+                <tbody id="journalTableBody">
 
-                  <tbody id="journalTableBody">
+                  <tr>
 
-                    <tr>
+                    <!-- ACCOUNT -->
+                    <td>
 
-                      <!-- ACCOUNT -->
-                      <td>
+                      <select class="form-select"
+                      name="coa_id[]"
+                      required>
 
-                        <select class="form-select"
-                                name="coa_id[]"
-                                required>
+                      <option value="">
+                        -- Select Account --
+                      </option>
 
-                          <option value="">
-                            -- Select Account --
-                          </option>
+                      <option value="1">
+                        1-1001 - Cash
+                      </option>
 
-                          <option value="1">
-                            1-1001 - Cash
-                          </option>
+                      <option value="2">
+                        1-1101 - Bank BCA
+                      </option>
 
-                          <option value="2">
-                            1-1101 - Bank BCA
-                          </option>
+                      <option value="3">
+                        1-1201 - Accounts Receivable
+                      </option>
 
-                          <option value="3">
-                            1-1201 - Accounts Receivable
-                          </option>
+                      <option value="4">
+                        2-1101 - Accounts Payable
+                      </option>
 
-                          <option value="4">
-                            2-1101 - Accounts Payable
-                          </option>
+                      <option value="5">
+                        4-1001 - Sales Revenue
+                      </option>
 
-                          <option value="5">
-                            4-1001 - Sales Revenue
-                          </option>
+                      <option value="6">
+                        5-1001 - Salary Expense
+                      </option>
 
-                          <option value="6">
-                            5-1001 - Salary Expense
-                          </option>
+                    </select>
 
-                        </select>
+                  </td>
 
-                      </td>
+                  <!-- MEMO -->
+                  <td>
 
-                      <!-- MEMO -->
-                      <td>
+                    <input type="text"
+                    class="form-control"
+                    name="line_memo[]"
+                    placeholder="Line memo">
 
-                        <input type="text"
-                               class="form-control"
-                               name="line_memo[]"
-                               placeholder="Line memo">
+                  </td>
 
-                      </td>
+                  <!-- DEBIT -->
+                  <td>
 
-                      <!-- DEBIT -->
-                      <td>
+                    <input type="number"
+                    class="form-control debit text-end"
+                    name="debit[]"
+                    min="0"
+                    step="0.01"
+                    value="0">
 
-                        <input type="number"
-                               class="form-control debit text-end"
-                               name="debit[]"
-                               min="0"
-                               step="0.01"
-                               value="0">
+                  </td>
 
-                      </td>
+                  <!-- CREDIT -->
+                  <td>
 
-                      <!-- CREDIT -->
-                      <td>
+                    <input type="number"
+                    class="form-control credit text-end"
+                    name="credit[]"
+                    min="0"
+                    step="0.01"
+                    value="0">
 
-                        <input type="number"
-                               class="form-control credit text-end"
-                               name="credit[]"
-                               min="0"
-                               step="0.01"
-                               value="0">
+                  </td>
 
-                      </td>
+                  <!-- BRANCH -->
+                  <td>
 
-                      <!-- BRANCH -->
-                      <td>
+                    <select class="form-select"
+                    name="branch_id[]">
 
-                        <select class="form-select"
-                                name="branch_id[]">
+                    <option value="">
+                      -
+                    </option>
 
-                          <option value="">
-                            -
-                          </option>
+                    <option value="1">
+                      Head Office
+                    </option>
 
-                          <option value="1">
-                            Head Office
-                          </option>
+                    <option value="2">
+                      Bandung
+                    </option>
 
-                          <option value="2">
-                            Bandung
-                          </option>
+                  </select>
 
-                        </select>
+                </td>
 
-                      </td>
+                
 
-                      <!-- ENTITY -->
-                      <td>
+              <!-- PROJECT -->
+              <td>
 
-                        <select class="form-select"
-                                name="entity_id[]">
+                <select class="form-select"
+                name="project_id[]">
 
-                          <option value="">
-                            -
-                          </option>
+                <option value="">
+                  -
+                </option>
 
-                          <option value="1">
-                            Customer A
-                          </option>
+                <option value="1">
+                  Project Alpha
+                </option>
 
-                          <option value="2">
-                            Vendor B
-                          </option>
+                <option value="2">
+                  Project Beta
+                </option>
 
-                        </select>
+              </select>
 
-                      </td>
+            </td>
+<!-- ENTITY -->
+                <td>
 
-                      <!-- PROJECT -->
-                      <td>
+                  <select class="form-select"
+                  name="entity_id[]">
 
-                        <select class="form-select"
-                                name="project_id[]">
+                  <option value="">
+                    -
+                  </option>
 
-                          <option value="">
-                            -
-                          </option>
+                  <option value="1">
+                    Customer A
+                  </option>
 
-                          <option value="1">
-                            Project Alpha
-                          </option>
+                  <option value="2">
+                    Vendor B
+                  </option>
 
-                          <option value="2">
-                            Project Beta
-                          </option>
+                </select>
 
-                        </select>
+              </td>
+              <td>
 
-                      </td>
+                  <select class="form-select"
+                  name="entity_id[]">
 
-                      <!-- DELETE -->
-                      <td class="text-center">
+                  <option value="">
+                    -
+                  </option>
 
-                        <button type="button"
-                                class="btn btn-outline-danger btn-sm btn-remove-row">
+                  <option value="1">
+                    1
+                  </option>
 
-                          <i class="fas fa-trash"></i>
+                  <option value="2">
+                   14
+                  </option>
 
-                        </button>
+                </select>
 
-                      </td>
+              </td>
+            <!-- DELETE -->
+            <td class="text-center">
 
-                    </tr>
+              <button type="button"
+              class="btn btn-outline-danger btn-sm btn-remove-row">
 
-                  </tbody>
-<tfoot>
-  <tr>
-    <td colspan="8"><button type="button"
-                      class="btn btn-outline-primary btn-sm btn-block"
-                      onclick="addJournalRow()">
+              <i class="fas fa-trash"></i>
 
-                + Add Row
+            </button>
 
-              </button></td>
-  </tr>
-</tfoot>
-                </table>
+          </td>
 
-              </div>
+        </tr>
 
-            </div>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="9"><button type="button"
+            class="btn btn-outline-primary btn-sm btn-block"
+            onclick="addJournalRow()">
 
-          </div>
+            + Add Row
+
+          </button></td>
+        </tr>
+      </tfoot>
+    </table>
+
+  </div>
+
+</div>
+
+</div>
 
           <!-- ========================= -->
           <!-- TOTAL -->

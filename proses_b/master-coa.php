@@ -1,15 +1,123 @@
-<?php $page = 'master-coa'; ?>
-<?php include('1header.php'); ?>
-<?php include('2navbar.php'); ?>
-<?php include('3sidebar.php'); ?>
+<?php
+$page = 'master-coa';
 
+include('koneksi.php');
+
+include('1header.php');
+include('2navbar.php');
+include('3sidebar.php');
+?>
+<?php
+
+// ======================================================
+// PROSES SIMPAN DATA COA
+// ======================================================
+
+if (isset($_POST['simpan_coa'])) {
+
+    $kode_akun    = mysqli_real_escape_string($conn, $_POST['kode_akun']);
+    $nama_akun    = mysqli_real_escape_string($conn, $_POST['nama_akun']);
+    $tipe_akun    = strtoupper(mysqli_real_escape_string($conn, $_POST['tipe_akun']));
+    $saldo_normal = strtoupper(mysqli_real_escape_string($conn, $_POST['saldo_normal']));
+    $deskripsi    = mysqli_real_escape_string($conn, $_POST['deskripsi']);
+
+    $status = 'ACTIVE';
+
+    // VALIDASI
+    if (
+        empty($kode_akun) ||
+        empty($nama_akun) ||
+        empty($tipe_akun) ||
+        empty($saldo_normal)
+    ) {
+
+        echo "
+        <script>
+            alert('Semua field wajib diisi!');
+            window.location='master-coa.php';
+        </script>
+        ";
+
+    } else {
+
+        // CEK DUPLIKAT KODE AKUN
+        $cek = mysqli_query($conn, "
+            SELECT id
+            FROM coa
+            WHERE kode_akun = '$kode_akun'
+        ");
+
+        if (mysqli_num_rows($cek) > 0) {
+
+            echo "
+            <script>
+                alert('Kode akun sudah digunakan!');
+                window.location='master-coa.php';
+            </script>
+            ";
+
+        } else {
+
+            // INSERT DATA
+            $insert = mysqli_query($conn, "
+                INSERT INTO coa
+                (
+                    kode_akun,
+                    nama_akun,
+                    tipe_akun,
+                    saldo_normal,
+                    deskripsi,
+                    status,
+                    created_at,
+                    updated_at
+                )
+                VALUES
+                (
+                    '$kode_akun',
+                    '$nama_akun',
+                    '$tipe_akun',
+                    '$saldo_normal',
+                    '$deskripsi',
+                    '$status',
+                    NOW(),
+                    NOW()
+                )
+            ");
+
+            if ($insert) {
+
+                echo "
+                <script>
+                    alert('Data COA berhasil disimpan!');
+                    window.location='master-coa.php';
+                </script>
+                ";
+
+            } else {
+
+                echo "
+                <script>
+                    alert('Gagal menyimpan data!');
+                    window.location='master-coa.php';
+                </script>
+                ";
+
+            }
+
+        }
+
+    }
+
+}
+
+?>
 <div class="content-wrapper" style="min-height: 626.4px;">
 
   <!-- Content Header -->
   <section class="content-header">
     <div class="container-fluid">
       <h3 class="mb-0">
-        Master COA (Chart Of Accounts)
+        Master COA2 (Chart Of Accounts)
         <button type="button" class="btn btn-tool" data-bs-toggle="modal" data-bs-target="#modalBantuan" title="Bantuan">
           <i class="fas fa-question-circle"></i>
         </button>
@@ -47,7 +155,9 @@
                   <b>Status:</b> Aktif
                 </div>
 
-              
+                <div class="col-md-3">
+                  <b>Mata Uang:</b> IDR
+                </div>
 
               </div>
             </div>
@@ -96,354 +206,95 @@
             <div class="card-body">
 
               <div class="table-responsive">
+          <?php
 
+          $query = mysqli_query($conn, "
+
+            SELECT *
+            FROM coa
+            ORDER BY kode_akun ASC
+
+            ");
+
+            ?>
                 <table class="table table-bordered table-striped table-sm datatables1">
 
                   <thead class="table-light">
-                    <tr class="text-center">
-                      <th>No</th>
-                      <th>Kode Akun</th>
-                      <th>Nama Akun</th>
-                      <th>Tipe Akun</th>
-                      <th>Saldo Normal</th>
-                      <th width="170">Aksi</th>
-                    </tr>
-                  </thead>
-
-                  <tbody>
-
-
-
-  <tr>
-    <td>1</td>
-    <td>1101</td>
-    <td>Kas Kecil</td>
-    <td>ASET</td>
-    <td>Debit</td>
-    <td class="text-center">
-      <button class="btn btn-sm btn-outline-info" data-bs-toggle="modal" data-bs-target="#modalView">
-        <i class="fas fa-eye"></i>
-      </button>
-
-      <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalEdit">
-        <i class="fas fa-edit"></i>
-      </button>
-
-      <button class="btn btn-sm btn-outline-dark" data-bs-toggle="modal" data-bs-target="#modalAksi">
-        <i class="fas fa-cogs"></i>
-      </button>
-    </td>
+  <tr class="text-center">
+    <th>No</th>
+    <th>Kode Akun</th>
+    <th>Nama Akun</th>
+    <th>Tipe Akun</th>
+    <th>Saldo Normal</th>
+    <th>Subledger Type</th>
+    <th width="170">Aksi</th>
   </tr>
+</thead>
 
-  <tr>
-    <td>2</td>
-    <td>1102</td>
-    <td>Bank BCA Operasional</td>
-    <td>ASET</td>
-    <td>Debit</td>
+<tbody>
+
+<?php
+$no = 1;
+
+while($data = mysqli_fetch_assoc($query)) :
+?>
+
+<tr>
+
     <td class="text-center">
-      <button class="btn btn-sm btn-outline-info"><i class="fas fa-eye"></i></button>
-      <button class="btn btn-sm btn-outline-primary"><i class="fas fa-edit"></i></button>
-      <button class="btn btn-sm btn-outline-dark"><i class="fas fa-cogs"></i></button>
+        <?= $no++; ?>
     </td>
-  </tr>
 
-  <tr>
-    <td>3</td>
-    <td>1201</td>
-    <td>Piutang Usaha</td>
-    <td>ASET</td>
-    <td>Debit</td>
+    <td>
+        <?= $data['kode_akun']; ?>
+    </td>
+
+    <td>
+        <?= $data['nama_akun']; ?>
+    </td>
+
+    <td>
+        <?= $data['tipe_akun']; ?>
+    </td>
+
+    <td>
+        <?= $data['saldo_normal']; ?>
+    </td>
+
+    <td>
+        <?= $data['subledger_type']; ?>
+    </td>
+
     <td class="text-center">
-      <button class="btn btn-sm btn-outline-info"><i class="fas fa-eye"></i></button>
-      <button class="btn btn-sm btn-outline-primary"><i class="fas fa-edit"></i></button>
-      <button class="btn btn-sm btn-outline-dark"><i class="fas fa-cogs"></i></button>
+
+        <button
+            class="btn btn-sm btn-outline-info">
+
+            <i class="fas fa-eye"></i>
+
+        </button>
+
+        <button
+            class="btn btn-sm btn-outline-primary">
+
+            <i class="fas fa-edit"></i>
+
+        </button>
+
+        <button
+            class="btn btn-sm btn-outline-dark">
+
+            <i class="fas fa-cogs"></i>
+
+        </button>
+
     </td>
-  </tr>
 
-  <tr>
-    <td>4</td>
-    <td>1301</td>
-    <td>Persediaan Barang Dagang</td>
-    <td>ASET</td>
-    <td>Debit</td>
-    <td class="text-center">
-      <button class="btn btn-sm btn-outline-info"><i class="fas fa-eye"></i></button>
-      <button class="btn btn-sm btn-outline-primary"><i class="fas fa-edit"></i></button>
-      <button class="btn btn-sm btn-outline-dark"><i class="fas fa-cogs"></i></button>
-    </td>
-  </tr>
+</tr>
 
-  <tr>
-    <td>5</td>
-    <td>1401</td>
-    <td>Kendaraan Operasional</td>
-    <td>ASET</td>
-    <td>Debit</td>
-    <td class="text-center">
-      <button class="btn btn-sm btn-outline-info"><i class="fas fa-eye"></i></button>
-      <button class="btn btn-sm btn-outline-primary"><i class="fas fa-edit"></i></button>
-      <button class="btn btn-sm btn-outline-dark"><i class="fas fa-cogs"></i></button>
-    </td>
-  </tr>
+<?php endwhile; ?>
 
-  <tr>
-    <td>6</td>
-    <td>2101</td>
-    <td>Hutang Usaha</td>
-    <td>UTANG</td>
-    <td>Kredit</td>
-    <td class="text-center">
-      <button class="btn btn-sm btn-outline-info"><i class="fas fa-eye"></i></button>
-      <button class="btn btn-sm btn-outline-primary"><i class="fas fa-edit"></i></button>
-      <button class="btn btn-sm btn-outline-dark"><i class="fas fa-cogs"></i></button>
-    </td>
-  </tr>
-
-  <tr>
-    <td>7</td>
-    <td>2201</td>
-    <td>Hutang Bank</td>
-    <td>UTANG</td>
-    <td>Kredit</td>
-    <td class="text-center">
-      <button class="btn btn-sm btn-outline-info"><i class="fas fa-eye"></i></button>
-      <button class="btn btn-sm btn-outline-primary"><i class="fas fa-edit"></i></button>
-      <button class="btn btn-sm btn-outline-dark"><i class="fas fa-cogs"></i></button>
-    </td>
-  </tr>
-
-  <tr>
-    <td>8</td>
-    <td>3101</td>
-    <td>Modal Pemilik</td>
-    <td>MODAL</td>
-    <td>Kredit</td>
-    <td class="text-center">
-      <button class="btn btn-sm btn-outline-info"><i class="fas fa-eye"></i></button>
-      <button class="btn btn-sm btn-outline-primary"><i class="fas fa-edit"></i></button>
-      <button class="btn btn-sm btn-outline-dark"><i class="fas fa-cogs"></i></button>
-    </td>
-  </tr>
-
-  <tr>
-    <td>9</td>
-    <td>4101</td>
-    <td>Pendapatan Penjualan</td>
-    <td>PENDAPATAN</td>
-    <td>Kredit</td>
-    <td class="text-center">
-      <button class="btn btn-sm btn-outline-info"><i class="fas fa-eye"></i></button>
-      <button class="btn btn-sm btn-outline-primary"><i class="fas fa-edit"></i></button>
-      <button class="btn btn-sm btn-outline-dark"><i class="fas fa-cogs"></i></button>
-    </td>
-  </tr>
-
-  <tr>
-    <td>10</td>
-    <td>5101</td>
-    <td>Beban Gaji</td>
-    <td>BEBAN</td>
-    <td>Debit</td>
-    <td class="text-center">
-      <button class="btn btn-sm btn-outline-info"><i class="fas fa-eye"></i></button>
-      <button class="btn btn-sm btn-outline-primary"><i class="fas fa-edit"></i></button>
-      <button class="btn btn-sm btn-outline-dark"><i class="fas fa-cogs"></i></button>
-    </td>
-  </tr>
-
-  <tr>
-    <td>11</td>
-    <td>5201</td>
-    <td>Beban Operasional Kantor</td>
-    <td>BEBAN</td>
-    <td>Debit</td>
-    <td class="text-center">
-      <button class="btn btn-sm btn-outline-info"><i class="fas fa-eye"></i></button>
-      <button class="btn btn-sm btn-outline-primary"><i class="fas fa-edit"></i></button>
-      <button class="btn btn-sm btn-outline-dark"><i class="fas fa-cogs"></i></button>
-    </td>
-  </tr>
-
-
-  <tr>
-    <td>12</td>
-    <td>1103</td>
-    <td>Bank Mandiri</td>
-    <td>Asset</td>
-    <td>Debit</td>
-    <td>Rekening bank operasional perusahaan</td>
-    <td>bank</td>
-    <td><span class="badge bg-success">Aktif</span></td>
-    <td class="text-center">
-      <button class="btn btn-sm btn-outline-info"><i class="fas fa-eye"></i></button>
-      <button class="btn btn-sm btn-outline-primary"><i class="fas fa-edit"></i></button>
-      <button class="btn btn-sm btn-outline-dark"><i class="fas fa-cogs"></i></button>
-    </td>
-  </tr>
-
-  <tr>
-    <td>13</td>
-    <td>1202</td>
-    <td>Piutang Karyawan</td>
-    <td>Asset</td>
-    <td>Debit</td>
-    <td>Pinjaman atau talangan kepada karyawan</td>
-    <td>employee</td>
-    <td><span class="badge bg-success">Aktif</span></td>
-    <td class="text-center">
-      <button class="btn btn-sm btn-outline-info"><i class="fas fa-eye"></i></button>
-      <button class="btn btn-sm btn-outline-primary"><i class="fas fa-edit"></i></button>
-      <button class="btn btn-sm btn-outline-dark"><i class="fas fa-cogs"></i></button>
-    </td>
-  </tr>
-
-  <tr>
-    <td>14</td>
-    <td>1302</td>
-    <td>Persediaan Barang Retail</td>
-    <td>Asset</td>
-    <td>Debit</td>
-    <td>Stok barang retail untuk dijual</td>
-    <td>inventory</td>
-    <td><span class="badge bg-success">Aktif</span></td>
-    <td class="text-center">
-      <button class="btn btn-sm btn-outline-info"><i class="fas fa-eye"></i></button>
-      <button class="btn btn-sm btn-outline-primary"><i class="fas fa-edit"></i></button>
-      <button class="btn btn-sm btn-outline-dark"><i class="fas fa-cogs"></i></button>
-    </td>
-  </tr>
-
-  <tr>
-    <td>15</td>
-    <td>1303</td>
-    <td>Persediaan Barang Gudang Pusat</td>
-    <td>Asset</td>
-    <td>Debit</td>
-    <td>Stok barang di gudang pusat</td>
-    <td>warehouse</td>
-    <td><span class="badge bg-success">Aktif</span></td>
-    <td class="text-center">
-      <button class="btn btn-sm btn-outline-info"><i class="fas fa-eye"></i></button>
-      <button class="btn btn-sm btn-outline-primary"><i class="fas fa-edit"></i></button>
-      <button class="btn btn-sm btn-outline-dark"><i class="fas fa-cogs"></i></button>
-    </td>
-  </tr>
-
-  <tr>
-    <td>16</td>
-    <td>2102</td>
-    <td>Hutang Bank</td>
-    <td>Liability</td>
-    <td>Credit</td>
-    <td>Kewajiban pinjaman bank</td>
-    <td>bank</td>
-    <td><span class="badge bg-success">Aktif</span></td>
-    <td class="text-center">
-      <button class="btn btn-sm btn-outline-info"><i class="fas fa-eye"></i></button>
-      <button class="btn btn-sm btn-outline-primary"><i class="fas fa-edit"></i></button>
-      <button class="btn btn-sm btn-outline-dark"><i class="fas fa-cogs"></i></button>
-    </td>
-  </tr>
-
-  <tr>
-    <td>17</td>
-    <td>2202</td>
-    <td>Hutang Pajak</td>
-    <td>Liability</td>
-    <td>Credit</td>
-    <td>Kewajiban pajak perusahaan</td>
-    <td>tax</td>
-    <td><span class="badge bg-success">Aktif</span></td>
-    <td class="text-center">
-      <button class="btn btn-sm btn-outline-info"><i class="fas fa-eye"></i></button>
-      <button class="btn btn-sm btn-outline-primary"><i class="fas fa-edit"></i></button>
-      <button class="btn btn-sm btn-outline-dark"><i class="fas fa-cogs"></i></button>
-    </td>
-  </tr>
-
-  <tr>
-    <td>18</td>
-    <td>4102</td>
-    <td>Pendapatan Jasa</td>
-    <td>Revenue</td>
-    <td>Credit</td>
-    <td>Pendapatan dari jasa layanan</td>
-    <td>customer</td>
-    <td><span class="badge bg-success">Aktif</span></td>
-    <td class="text-center">
-      <button class="btn btn-sm btn-outline-info"><i class="fas fa-eye"></i></button>
-      <button class="btn btn-sm btn-outline-primary"><i class="fas fa-edit"></i></button>
-      <button class="btn btn-sm btn-outline-dark"><i class="fas fa-cogs"></i></button>
-    </td>
-  </tr>
-
-  <tr>
-    <td>19</td>
-    <td>5102</td>
-    <td>Beban Listrik</td>
-    <td>Expense</td>
-    <td>Debit</td>
-    <td>Beban utilitas listrik operasional</td>
-    <td>branch</td>
-    <td><span class="badge bg-success">Aktif</span></td>
-    <td class="text-center">
-      <button class="btn btn-sm btn-outline-info"><i class="fas fa-eye"></i></button>
-      <button class="btn btn-sm btn-outline-primary"><i class="fas fa-edit"></i></button>
-      <button class="btn btn-sm btn-outline-dark"><i class="fas fa-cogs"></i></button>
-    </td>
-  </tr>
-
-  <tr>
-    <td>20</td>
-    <td>5103</td>
-    <td>Beban Marketing</td>
-    <td>Expense</td>
-    <td>Debit</td>
-    <td>Beban promosi dan iklan</td>
-    <td>project</td>
-    <td><span class="badge bg-success">Aktif</span></td>
-    <td class="text-center">
-      <button class="btn btn-sm btn-outline-info"><i class="fas fa-eye"></i></button>
-      <button class="btn btn-sm btn-outline-primary"><i class="fas fa-edit"></i></button>
-      <button class="btn btn-sm btn-outline-dark"><i class="fas fa-cogs"></i></button>
-    </td>
-  </tr>
-
-  <tr>
-    <td>21</td>
-    <td>6102</td>
-    <td>Beban Maintenance Kendaraan</td>
-    <td>Expense</td>
-    <td>Debit</td>
-    <td>Servis dan maintenance kendaraan</td>
-    <td>vehicle</td>
-    <td><span class="badge bg-success">Aktif</span></td>
-    <td class="text-center">
-      <button class="btn btn-sm btn-outline-info"><i class="fas fa-eye"></i></button>
-      <button class="btn btn-sm btn-outline-primary"><i class="fas fa-edit"></i></button>
-      <button class="btn btn-sm btn-outline-dark"><i class="fas fa-cogs"></i></button>
-    </td>
-  </tr>
-
-  <tr>
-    <td>22</td>
-    <td>3102</td>
-    <td>Prive Pemilik</td>
-    <td>Equity</td>
-    <td>Debit</td>
-    <td>Pengambilan dana oleh pemilik</td>
-    <td>investor</td>
-    <td><span class="badge bg-success">Aktif</span></td>
-    <td class="text-center">
-      <button class="btn btn-sm btn-outline-info"><i class="fas fa-eye"></i></button>
-      <button class="btn btn-sm btn-outline-primary"><i class="fas fa-edit"></i></button>
-      <button class="btn btn-sm btn-outline-dark"><i class="fas fa-cogs"></i></button>
-    </td>
-  </tr>
-
-
-                  </tbody>
+</tbody>
 
                 </table>
 
@@ -521,69 +372,167 @@
         <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
       </div>
 
-      <form>
+      <form method="POST">
 
-        <div class="modal-body">
+    <div class="modal-body">
 
-          <div class="row">
+        <div class="row">
 
+            <!-- KODE AKUN -->
             <div class="col-md-6 mb-3">
-              <label class="form-label">Kode Akun</label>
-              <input type="text" class="form-control" placeholder="Contoh : 1101">
+
+                <label class="form-label">
+                    Kode Akun
+                </label>
+
+                <input
+                    type="text"
+                    name="kode_akun"
+                    class="form-control"
+                    placeholder="Contoh : 1101"
+                    required>
+
             </div>
 
+            <!-- NAMA AKUN -->
             <div class="col-md-6 mb-3">
-              <label class="form-label">Nama Akun</label>
-              <input type="text" class="form-control">
+
+                <label class="form-label">
+                    Nama Akun
+                </label>
+
+                <input
+                    type="text"
+                    name="nama_akun"
+                    class="form-control"
+                    required>
+
             </div>
 
+            <!-- TIPE AKUN -->
             <div class="col-md-6 mb-3">
-              <label class="form-label">Kategori</label>
-              <select class="form-select">
-                <option>Asset</option>
-                <option>Liability</option>
-                <option>Equity</option>
-                <option>Revenue</option>
-                <option>Expense</option>
-              </select>
+
+                <label class="form-label">
+                    Tipe Akun
+                </label>
+
+                <select
+                    name="tipe_akun"
+                    class="form-select"
+                    required>
+
+                    <option value="">
+                        -- Pilih --
+                    </option>
+
+                    <option value="ASSET">
+                        Asset
+                    </option>
+
+                    <option value="LIABILITY">
+                        Liability
+                    </option>
+
+                    <option value="EQUITY">
+                        Equity
+                    </option>
+
+                    <option value="REVENUE">
+                        Revenue
+                    </option>
+
+                    <option value="EXPENSE">
+                        Expense
+                    </option>
+
+                </select>
+
             </div>
 
+            <!-- NORMAL BALANCE -->
             <div class="col-md-6 mb-3">
-              <label class="form-label">Sub Kategori</label>
-              <input type="text" class="form-control">
+
+                <label class="form-label">
+                    Normal Balance
+                </label>
+
+                <select
+                    name="saldo_normal"
+                    class="form-select"
+                    required>
+
+                    <option value="">
+                        -- Pilih --
+                    </option>
+
+                    <option value="DEBIT">
+                        Debit
+                    </option>
+
+                    <option value="CREDIT">
+                        Credit
+                    </option>
+
+                </select>
+
             </div>
 
-            <div class="col-md-6 mb-3">
-              <label class="form-label">Normal Balance</label>
-              <select class="form-select">
-                <option>Debit</option>
-                <option>Credit</option>
-              </select>
-            </div>
-
-            <div class="col-md-6 mb-3">
-              <label class="form-label">Status</label>
-              <select class="form-select">
-                <option>Aktif</option>
-                <option>Nonaktif</option>
-              </select>
-            </div>
-
+            <!-- STATUS -->
             <div class="col-md-12 mb-3">
-              <label class="form-label">Keterangan</label>
-              <textarea class="form-control" rows="3"></textarea>
+
+                <label class="form-label">
+                    Status
+                </label>
+
+                <input
+                    type="text"
+                    class="form-control"
+                    value="ACTIVE"
+                    readonly>
+
             </div>
 
-          </div>
+            <!-- DESKRIPSI -->
+            <div class="col-md-12 mb-3">
+
+                <label class="form-label">
+                    Keterangan
+                </label>
+
+                <textarea
+                    name="deskripsi"
+                    class="form-control"
+                    rows="3"></textarea>
+
+            </div>
 
         </div>
 
-        <div class="modal-footer">
-          <button class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
-          <button class="btn btn-primary">Simpan Data</button>
-        </div>
+    </div>
 
-      </form>
+    <div class="modal-footer">
+
+        <button
+            type="button"
+            class="btn btn-secondary"
+            data-bs-dismiss="modal">
+
+            Batal
+
+        </button>
+
+        <button
+            type="submit"
+            name="simpan_coa"
+            class="btn btn-primary">
+
+            Simpan Data
+
+        </button>
+
+    </div>
+
+</form>
 
     </div>
   </div>

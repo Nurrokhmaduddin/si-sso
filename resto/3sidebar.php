@@ -341,6 +341,16 @@ LEVEL 3 : Entity Master Menu
           'url'   => 'master-customer.php',
           'page'  => 'master-customer'
         ],
+          [
+          'label' => 'Investor',
+          'url'   => 'master-customer.php',
+          'page'  => 'master-customer'
+        ],
+        [
+          'label' => 'Employee',
+          'url'   => 'master-employee.php',
+          'page'  => 'master-employee'
+        ],
 
       ]
     ],
@@ -356,6 +366,26 @@ LEVEL 3 : Entity Master Menu
 
       'children' => [
 
+         [
+          'label' => 'Branch',
+          'url'   => 'master-kitchen.php',
+          'page'  => 'master-kitchen'
+        ],
+        [
+          'label' => 'Division',
+          'url'   => 'master-kitchen.php',
+          'page'  => 'master-kitchen'
+        ],
+        [
+          'label' => 'Sub Division',
+          'url'   => 'master-kitchen.php',
+          'page'  => 'master-kitchen'
+        ],
+        [
+          'label' => 'Project',
+          'url'   => 'master-kitchen.php',
+          'page'  => 'master-kitchen'
+        ],
         [
           'label' => 'Kitchen Area',
           'url'   => 'master-kitchen.php',
@@ -363,6 +393,11 @@ LEVEL 3 : Entity Master Menu
         ],
         [
           'label' => 'Table & Area',
+          'url'   => 'master-table.php',
+          'page'  => 'master-table'
+        ],
+        [
+          'label' => 'Warehouse Location',
           'url'   => 'master-table.php',
           'page'  => 'master-table'
         ],
@@ -395,6 +430,21 @@ LEVEL 3 : Entity Master Menu
           'label' => 'COA / Chart of Account',
           'url'   => 'master-coa.php',
           'page'  => 'master-coa'
+        ],
+        [
+          'label' => 'COA2 / Chart of Account2',
+          'url'   => 'master-coa2.php',
+          'page'  => 'master-coa2'
+        ],
+         [
+          'label' => 'master subledger',
+          'url'   => 'maste-coa2-mastersubledger.php',
+          'page'  => 'master_subledger_rules'
+        ],
+        [
+          'label' => 'subledger',
+          'url'   => 'maste-coa2-subledger.php',
+          'page'  => 'coa_subledger_rules'
         ],
 
       ]

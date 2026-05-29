@@ -196,7 +196,7 @@ body {
     </div>
   <!-- Proses A -->
   <div class="col-md-3 col-6">
-    <a href="#" class="menu-card d-block">
+    <a href="proses_a/" class="menu-card d-block">
       <i class="fas fa-cogs"></i>
       <h6>Proses A</h6>
     </a>

@@ -1346,10 +1346,8 @@ Profitability Analysis
         <p>Asset Ledger</p>
       </a>
     </li>
-
-
     <li class="nav-item">
-      <a href="finance-history-prepaid-ledger.php" class="nav-link" title="Kartu Piutang.Fungsi:
+      <a href="finance-ar-subledger-report.php" class="nav-link" title="Kartu Piutang.Fungsi:
 
 histori mutasi piutang per customer
 invoice
@@ -1364,7 +1362,7 @@ saldo berjalan">
 
 
     <li class="nav-item">
-      <a href="finance-history-deferred-ledger.php" class="nav-link" title="Kartu Hutang.Sama:
+      <a href="finance-ap-subledger-report.php" class="nav-link" title="Kartu Hutang.Sama:
 
 bill
 pembayaran

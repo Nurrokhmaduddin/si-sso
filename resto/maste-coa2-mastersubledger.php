@@ -1,4 +1,4 @@
-<?php $page = 'master-coa'; ?>
+<?php $page = 'master_subledger_rules'; ?>
 <?php include('1header.php'); ?>
 <?php include('2navbar.php'); ?>
 <?php include('3sidebar.php'); ?>
@@ -9,7 +9,7 @@
   <section class="content-header">
     <div class="container-fluid">
       <h3 class="mb-0">
-        Master COA (Chart Of Accounts)
+        master_subledger_rules
         <button type="button" class="btn btn-tool" data-bs-toggle="modal" data-bs-target="#modalBantuan" title="Bantuan">
           <i class="fas fa-question-circle"></i>
         </button>
@@ -47,7 +47,9 @@
                   <b>Status:</b> Aktif
                 </div>
 
-              
+                <div class="col-md-3">
+                  <b>Mata Uang:</b> IDR
+                </div>
 
               </div>
             </div>
@@ -89,364 +91,170 @@
 
             <div class="card-header">
               <h3 class="card-title">
-                Daftar Master COA
+                Daftar Master Subledger
               </h3>
             </div>
 
             <div class="card-body">
 
               <div class="table-responsive">
+                <table class="table table-bordered table-striped table-hover align-middle">
 
-                <table class="table table-bordered table-striped table-sm datatables1">
-
-                  <thead class="table-light">
-                    <tr class="text-center">
-                      <th>No</th>
-                      <th>Kode Akun</th>
-                      <th>Nama Akun</th>
-                      <th>Tipe Akun</th>
-                      <th>Saldo Normal</th>
-                      <th width="170">Aksi</th>
+                  <thead class="table-light text-center">
+                    <tr>
+                      <th width="25%">Subledger Type</th>
+                      <th width="35%">Fungsi</th>
+                      <th width="40%">Contoh Dipakai Pada Akun</th>
                     </tr>
                   </thead>
 
                   <tbody>
 
+                    <tr>
+                      <td><code>customer</code></td>
+                      <td>Pelanggan / piutang customer</td>
+                      <td>Piutang Usaha, Pendapatan Penjualan</td>
+                    </tr>
+
+                    <tr>
+                      <td><code>vendor</code></td>
+                      <td>Supplier / pemasok</td>
+                      <td>Hutang Usaha, Pembelian</td>
+                    </tr>
+
+                    <tr>
+                      <td><code>employee</code></td>
+                      <td>Karyawan</td>
+                      <td>Piutang Karyawan, Hutang Gaji</td>
+                    </tr>
+
+                    <tr>
+                      <td><code>bank</code></td>
+                      <td>Rekening bank</td>
+                      <td>Kas Bank, Hutang Bank</td>
+                    </tr>
+
+                    <tr>
+                      <td><code>cash</code></td>
+                      <td>Kas kecil / kas fisik</td>
+                      <td>Kas</td>
+                    </tr>
+
+                    <tr>
+                      <td><code>inventory</code></td>
+                      <td>Barang persediaan</td>
+                      <td>Persediaan Barang</td>
+                    </tr>
+
+                    <tr>
+                      <td><code>warehouse</code></td>
+                      <td>Gudang penyimpanan</td>
+                      <td>Persediaan Gudang</td>
+                    </tr>
+
+                    <tr>
+                      <td><code>asset</code></td>
+                      <td>Aset tetap</td>
+                      <td>Aset Tetap</td>
+                    </tr>
+
+                    <tr>
+                      <td><code>vehicle</code></td>
+                      <td>Kendaraan</td>
+                      <td>Kendaraan Operasional</td>
+                    </tr>
+
+                    <tr>
+                      <td><code>investor</code></td>
+                      <td>Pemilik modal / investor</td>
+                      <td>Modal Pemilik</td>
+                    </tr>
+
+                    <tr>
+                      <td><code>project</code></td>
+                      <td>Proyek tertentu</td>
+                      <td>Beban Project, Pendapatan Project</td>
+                    </tr>
+
+                    <tr>
+                      <td><code>branch</code></td>
+                      <td>Cabang perusahaan</td>
+                      <td>Beban Cabang</td>
+                    </tr>
+
+                    <tr>
+                      <td><code>division</code></td>
+                      <td>Divisi/departemen</td>
+                      <td>Beban Marketing</td>
+                    </tr>
+
+                    <tr>
+                      <td><code>tax</code></td>
+                      <td>Pajak</td>
+                      <td>Hutang Pajak</td>
+                    </tr>
+
+                    <tr>
+                      <td><code>loan</code></td>
+                      <td>Pinjaman</td>
+                      <td>Hutang Pinjaman</td>
+                    </tr>
+
+                    <tr>
+                      <td><code>insurance</code></td>
+                      <td>Asuransi</td>
+                      <td>Beban Asuransi</td>
+                    </tr>
+
+                    <tr>
+                      <td><code>expense_claim</code></td>
+                      <td>Klaim biaya karyawan</td>
+                      <td>Beban Reimburse</td>
+                    </tr>
+
+                    <tr>
+                      <td><code>fixed_asset</code></td>
+                      <td>Detail aset tetap</td>
+                      <td>Akumulasi Penyusutan</td>
+                    </tr>
+
+                    <tr>
+                      <td><code>depreciation</code></td>
+                      <td>Penyusutan aset</td>
+                      <td>Beban Penyusutan</td>
+                    </tr>
+
+                    <tr>
+                      <td><code>fund</code></td>
+                      <td>Dana tertentu</td>
+                      <td>Dana Operasional</td>
+                    </tr>
+
+                    <tr>
+                      <td><code>partner</code></td>
+                      <td>Mitra bisnis</td>
+                      <td>Bagi Hasil</td>
+                    </tr>
+
+                    <tr>
+                      <td><code>student</code></td>
+                      <td>Mahasiswa</td>
+                      <td>Piutang Mahasiswa</td>
+                    </tr>
 
 
-  <tr>
-    <td>1</td>
-    <td>1101</td>
-    <td>Kas Kecil</td>
-    <td>ASET</td>
-    <td>Debit</td>
-    <td class="text-center">
-      <button class="btn btn-sm btn-outline-info" data-bs-toggle="modal" data-bs-target="#modalView">
-        <i class="fas fa-eye"></i>
-      </button>
-
-      <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalEdit">
-        <i class="fas fa-edit"></i>
-      </button>
-
-      <button class="btn btn-sm btn-outline-dark" data-bs-toggle="modal" data-bs-target="#modalAksi">
-        <i class="fas fa-cogs"></i>
-      </button>
-    </td>
-  </tr>
-
-  <tr>
-    <td>2</td>
-    <td>1102</td>
-    <td>Bank BCA Operasional</td>
-    <td>ASET</td>
-    <td>Debit</td>
-    <td class="text-center">
-      <button class="btn btn-sm btn-outline-info"><i class="fas fa-eye"></i></button>
-      <button class="btn btn-sm btn-outline-primary"><i class="fas fa-edit"></i></button>
-      <button class="btn btn-sm btn-outline-dark"><i class="fas fa-cogs"></i></button>
-    </td>
-  </tr>
-
-  <tr>
-    <td>3</td>
-    <td>1201</td>
-    <td>Piutang Usaha</td>
-    <td>ASET</td>
-    <td>Debit</td>
-    <td class="text-center">
-      <button class="btn btn-sm btn-outline-info"><i class="fas fa-eye"></i></button>
-      <button class="btn btn-sm btn-outline-primary"><i class="fas fa-edit"></i></button>
-      <button class="btn btn-sm btn-outline-dark"><i class="fas fa-cogs"></i></button>
-    </td>
-  </tr>
-
-  <tr>
-    <td>4</td>
-    <td>1301</td>
-    <td>Persediaan Barang Dagang</td>
-    <td>ASET</td>
-    <td>Debit</td>
-    <td class="text-center">
-      <button class="btn btn-sm btn-outline-info"><i class="fas fa-eye"></i></button>
-      <button class="btn btn-sm btn-outline-primary"><i class="fas fa-edit"></i></button>
-      <button class="btn btn-sm btn-outline-dark"><i class="fas fa-cogs"></i></button>
-    </td>
-  </tr>
-
-  <tr>
-    <td>5</td>
-    <td>1401</td>
-    <td>Kendaraan Operasional</td>
-    <td>ASET</td>
-    <td>Debit</td>
-    <td class="text-center">
-      <button class="btn btn-sm btn-outline-info"><i class="fas fa-eye"></i></button>
-      <button class="btn btn-sm btn-outline-primary"><i class="fas fa-edit"></i></button>
-      <button class="btn btn-sm btn-outline-dark"><i class="fas fa-cogs"></i></button>
-    </td>
-  </tr>
-
-  <tr>
-    <td>6</td>
-    <td>2101</td>
-    <td>Hutang Usaha</td>
-    <td>UTANG</td>
-    <td>Kredit</td>
-    <td class="text-center">
-      <button class="btn btn-sm btn-outline-info"><i class="fas fa-eye"></i></button>
-      <button class="btn btn-sm btn-outline-primary"><i class="fas fa-edit"></i></button>
-      <button class="btn btn-sm btn-outline-dark"><i class="fas fa-cogs"></i></button>
-    </td>
-  </tr>
-
-  <tr>
-    <td>7</td>
-    <td>2201</td>
-    <td>Hutang Bank</td>
-    <td>UTANG</td>
-    <td>Kredit</td>
-    <td class="text-center">
-      <button class="btn btn-sm btn-outline-info"><i class="fas fa-eye"></i></button>
-      <button class="btn btn-sm btn-outline-primary"><i class="fas fa-edit"></i></button>
-      <button class="btn btn-sm btn-outline-dark"><i class="fas fa-cogs"></i></button>
-    </td>
-  </tr>
-
-  <tr>
-    <td>8</td>
-    <td>3101</td>
-    <td>Modal Pemilik</td>
-    <td>MODAL</td>
-    <td>Kredit</td>
-    <td class="text-center">
-      <button class="btn btn-sm btn-outline-info"><i class="fas fa-eye"></i></button>
-      <button class="btn btn-sm btn-outline-primary"><i class="fas fa-edit"></i></button>
-      <button class="btn btn-sm btn-outline-dark"><i class="fas fa-cogs"></i></button>
-    </td>
-  </tr>
-
-  <tr>
-    <td>9</td>
-    <td>4101</td>
-    <td>Pendapatan Penjualan</td>
-    <td>PENDAPATAN</td>
-    <td>Kredit</td>
-    <td class="text-center">
-      <button class="btn btn-sm btn-outline-info"><i class="fas fa-eye"></i></button>
-      <button class="btn btn-sm btn-outline-primary"><i class="fas fa-edit"></i></button>
-      <button class="btn btn-sm btn-outline-dark"><i class="fas fa-cogs"></i></button>
-    </td>
-  </tr>
-
-  <tr>
-    <td>10</td>
-    <td>5101</td>
-    <td>Beban Gaji</td>
-    <td>BEBAN</td>
-    <td>Debit</td>
-    <td class="text-center">
-      <button class="btn btn-sm btn-outline-info"><i class="fas fa-eye"></i></button>
-      <button class="btn btn-sm btn-outline-primary"><i class="fas fa-edit"></i></button>
-      <button class="btn btn-sm btn-outline-dark"><i class="fas fa-cogs"></i></button>
-    </td>
-  </tr>
-
-  <tr>
-    <td>11</td>
-    <td>5201</td>
-    <td>Beban Operasional Kantor</td>
-    <td>BEBAN</td>
-    <td>Debit</td>
-    <td class="text-center">
-      <button class="btn btn-sm btn-outline-info"><i class="fas fa-eye"></i></button>
-      <button class="btn btn-sm btn-outline-primary"><i class="fas fa-edit"></i></button>
-      <button class="btn btn-sm btn-outline-dark"><i class="fas fa-cogs"></i></button>
-    </td>
-  </tr>
 
 
-  <tr>
-    <td>12</td>
-    <td>1103</td>
-    <td>Bank Mandiri</td>
-    <td>Asset</td>
-    <td>Debit</td>
-    <td>Rekening bank operasional perusahaan</td>
-    <td>bank</td>
-    <td><span class="badge bg-success">Aktif</span></td>
-    <td class="text-center">
-      <button class="btn btn-sm btn-outline-info"><i class="fas fa-eye"></i></button>
-      <button class="btn btn-sm btn-outline-primary"><i class="fas fa-edit"></i></button>
-      <button class="btn btn-sm btn-outline-dark"><i class="fas fa-cogs"></i></button>
-    </td>
-  </tr>
-
-  <tr>
-    <td>13</td>
-    <td>1202</td>
-    <td>Piutang Karyawan</td>
-    <td>Asset</td>
-    <td>Debit</td>
-    <td>Pinjaman atau talangan kepada karyawan</td>
-    <td>employee</td>
-    <td><span class="badge bg-success">Aktif</span></td>
-    <td class="text-center">
-      <button class="btn btn-sm btn-outline-info"><i class="fas fa-eye"></i></button>
-      <button class="btn btn-sm btn-outline-primary"><i class="fas fa-edit"></i></button>
-      <button class="btn btn-sm btn-outline-dark"><i class="fas fa-cogs"></i></button>
-    </td>
-  </tr>
-
-  <tr>
-    <td>14</td>
-    <td>1302</td>
-    <td>Persediaan Barang Retail</td>
-    <td>Asset</td>
-    <td>Debit</td>
-    <td>Stok barang retail untuk dijual</td>
-    <td>inventory</td>
-    <td><span class="badge bg-success">Aktif</span></td>
-    <td class="text-center">
-      <button class="btn btn-sm btn-outline-info"><i class="fas fa-eye"></i></button>
-      <button class="btn btn-sm btn-outline-primary"><i class="fas fa-edit"></i></button>
-      <button class="btn btn-sm btn-outline-dark"><i class="fas fa-cogs"></i></button>
-    </td>
-  </tr>
-
-  <tr>
-    <td>15</td>
-    <td>1303</td>
-    <td>Persediaan Barang Gudang Pusat</td>
-    <td>Asset</td>
-    <td>Debit</td>
-    <td>Stok barang di gudang pusat</td>
-    <td>warehouse</td>
-    <td><span class="badge bg-success">Aktif</span></td>
-    <td class="text-center">
-      <button class="btn btn-sm btn-outline-info"><i class="fas fa-eye"></i></button>
-      <button class="btn btn-sm btn-outline-primary"><i class="fas fa-edit"></i></button>
-      <button class="btn btn-sm btn-outline-dark"><i class="fas fa-cogs"></i></button>
-    </td>
-  </tr>
-
-  <tr>
-    <td>16</td>
-    <td>2102</td>
-    <td>Hutang Bank</td>
-    <td>Liability</td>
-    <td>Credit</td>
-    <td>Kewajiban pinjaman bank</td>
-    <td>bank</td>
-    <td><span class="badge bg-success">Aktif</span></td>
-    <td class="text-center">
-      <button class="btn btn-sm btn-outline-info"><i class="fas fa-eye"></i></button>
-      <button class="btn btn-sm btn-outline-primary"><i class="fas fa-edit"></i></button>
-      <button class="btn btn-sm btn-outline-dark"><i class="fas fa-cogs"></i></button>
-    </td>
-  </tr>
-
-  <tr>
-    <td>17</td>
-    <td>2202</td>
-    <td>Hutang Pajak</td>
-    <td>Liability</td>
-    <td>Credit</td>
-    <td>Kewajiban pajak perusahaan</td>
-    <td>tax</td>
-    <td><span class="badge bg-success">Aktif</span></td>
-    <td class="text-center">
-      <button class="btn btn-sm btn-outline-info"><i class="fas fa-eye"></i></button>
-      <button class="btn btn-sm btn-outline-primary"><i class="fas fa-edit"></i></button>
-      <button class="btn btn-sm btn-outline-dark"><i class="fas fa-cogs"></i></button>
-    </td>
-  </tr>
-
-  <tr>
-    <td>18</td>
-    <td>4102</td>
-    <td>Pendapatan Jasa</td>
-    <td>Revenue</td>
-    <td>Credit</td>
-    <td>Pendapatan dari jasa layanan</td>
-    <td>customer</td>
-    <td><span class="badge bg-success">Aktif</span></td>
-    <td class="text-center">
-      <button class="btn btn-sm btn-outline-info"><i class="fas fa-eye"></i></button>
-      <button class="btn btn-sm btn-outline-primary"><i class="fas fa-edit"></i></button>
-      <button class="btn btn-sm btn-outline-dark"><i class="fas fa-cogs"></i></button>
-    </td>
-  </tr>
-
-  <tr>
-    <td>19</td>
-    <td>5102</td>
-    <td>Beban Listrik</td>
-    <td>Expense</td>
-    <td>Debit</td>
-    <td>Beban utilitas listrik operasional</td>
-    <td>branch</td>
-    <td><span class="badge bg-success">Aktif</span></td>
-    <td class="text-center">
-      <button class="btn btn-sm btn-outline-info"><i class="fas fa-eye"></i></button>
-      <button class="btn btn-sm btn-outline-primary"><i class="fas fa-edit"></i></button>
-      <button class="btn btn-sm btn-outline-dark"><i class="fas fa-cogs"></i></button>
-    </td>
-  </tr>
-
-  <tr>
-    <td>20</td>
-    <td>5103</td>
-    <td>Beban Marketing</td>
-    <td>Expense</td>
-    <td>Debit</td>
-    <td>Beban promosi dan iklan</td>
-    <td>project</td>
-    <td><span class="badge bg-success">Aktif</span></td>
-    <td class="text-center">
-      <button class="btn btn-sm btn-outline-info"><i class="fas fa-eye"></i></button>
-      <button class="btn btn-sm btn-outline-primary"><i class="fas fa-edit"></i></button>
-      <button class="btn btn-sm btn-outline-dark"><i class="fas fa-cogs"></i></button>
-    </td>
-  </tr>
-
-  <tr>
-    <td>21</td>
-    <td>6102</td>
-    <td>Beban Maintenance Kendaraan</td>
-    <td>Expense</td>
-    <td>Debit</td>
-    <td>Servis dan maintenance kendaraan</td>
-    <td>vehicle</td>
-    <td><span class="badge bg-success">Aktif</span></td>
-    <td class="text-center">
-      <button class="btn btn-sm btn-outline-info"><i class="fas fa-eye"></i></button>
-      <button class="btn btn-sm btn-outline-primary"><i class="fas fa-edit"></i></button>
-      <button class="btn btn-sm btn-outline-dark"><i class="fas fa-cogs"></i></button>
-    </td>
-  </tr>
-
-  <tr>
-    <td>22</td>
-    <td>3102</td>
-    <td>Prive Pemilik</td>
-    <td>Equity</td>
-    <td>Debit</td>
-    <td>Pengambilan dana oleh pemilik</td>
-    <td>investor</td>
-    <td><span class="badge bg-success">Aktif</span></td>
-    <td class="text-center">
-      <button class="btn btn-sm btn-outline-info"><i class="fas fa-eye"></i></button>
-      <button class="btn btn-sm btn-outline-primary"><i class="fas fa-edit"></i></button>
-      <button class="btn btn-sm btn-outline-dark"><i class="fas fa-cogs"></i></button>
-    </td>
-  </tr>
+                    <tr>
+                      <td><code>unit</code></td>
+                      <td>Unit bisnis</td>
+                      <td>Profit Center</td>
+                    </tr>
 
 
                   </tbody>
 
                 </table>
-
               </div>
 
             </div>
