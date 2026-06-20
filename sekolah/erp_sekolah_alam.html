@@ -1,0 +1,2009 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ERP Sekolah Alam — Sistem Manajemen Terpadu</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Fraunces:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --green:#1a6b3c;--green2:#2d8a56;--green3:#e6f4ec;--green4:#b8dfc7;
+  --amber:#b5621a;--amber2:#f5e6d3;
+  --blue:#1a4a7a;--blue2:#e6eef8;
+  --red:#991f1f;--red2:#fdeaea;
+  --purple:#4a2d7a;--purple2:#ede6f8;
+  --teal:#1a6b6b;--teal2:#e6f4f4;
+  --gray:#6b7280;--gray2:#f3f4f6;--gray3:#e5e7eb;--gray4:#374151;
+  --white:#fff;--dark:#111827;
+  --sidebar-w:240px;--header-h:60px;
+  --font:'Plus Jakarta Sans',sans-serif;
+  --serif:'Fraunces',serif;
+  --radius:10px;--radius-sm:6px;
+}
+body{font-family:var(--font);background:#f0f2f5;color:var(--dark);font-size:14px;overflow:hidden;height:100vh}
+
+/* ROLE SWITCHER */
+#role-switcher{position:fixed;top:10px;right:12px;z-index:9999;display:flex;gap:4px;align-items:center;background:rgba(255,255,255,0.96);backdrop-filter:blur(10px);border:1px solid var(--gray3);border-radius:30px;padding:5px 8px;box-shadow:0 4px 20px rgba(0,0,0,0.12);flex-wrap:wrap;max-width:640px}
+#role-switcher span{font-size:10px;font-weight:700;color:var(--gray);text-transform:uppercase;letter-spacing:.5px;margin-right:2px}
+.rs-btn{border:none;background:none;padding:4px 9px;border-radius:20px;font-size:10.5px;font-weight:600;cursor:pointer;transition:all .2s;color:var(--gray4);font-family:var(--font)}
+.rs-btn.active{background:var(--green);color:#fff}
+.rs-btn:hover:not(.active){background:var(--gray2)}
+
+/* LAYOUT */
+#app{display:flex;height:100vh;overflow:hidden}
+
+/* SIDEBAR */
+#sidebar{width:var(--sidebar-w);background:var(--dark);display:flex;flex-direction:column;flex-shrink:0;overflow-y:auto;overflow-x:hidden}
+.sidebar-brand{padding:16px 14px 10px;border-bottom:1px solid rgba(255,255,255,.08)}
+.brand-logo{display:flex;align-items:center;gap:10px}
+.brand-icon{width:32px;height:32px;background:var(--green);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.brand-icon svg{width:17px;height:17px;fill:#fff}
+.brand-name{font-size:13px;font-weight:700;color:#fff;line-height:1.2}
+.brand-sub{font-size:10px;color:rgba(255,255,255,.35)}
+.user-badge{margin:10px 12px;background:rgba(255,255,255,.06);border-radius:var(--radius-sm);padding:9px 10px;display:flex;align-items:center;gap:9px}
+.user-avatar{width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#fff;flex-shrink:0}
+.user-info-name{font-size:12px;font-weight:600;color:#fff;line-height:1.3}
+.user-info-role{font-size:10px;color:rgba(255,255,255,.4)}
+nav{flex:1;padding:6px 0}
+.nav-section{padding:14px 14px 5px;font-size:9px;font-weight:700;color:rgba(255,255,255,.25);text-transform:uppercase;letter-spacing:1px}
+.nav-item{display:flex;align-items:center;gap:9px;padding:7px 14px;cursor:pointer;transition:all .15s;color:rgba(255,255,255,.55);font-size:12px;font-weight:500;border-left:3px solid transparent;margin:1px 0}
+.nav-item:hover{background:rgba(255,255,255,.06);color:rgba(255,255,255,.9)}
+.nav-item.active{background:rgba(45,138,86,.2);color:#fff;border-left-color:var(--green2)}
+.nav-item svg{width:15px;height:15px;flex-shrink:0;opacity:.7}
+.nav-item.active svg{opacity:1}
+.nav-badge{margin-left:auto;background:var(--amber);color:#fff;font-size:9px;font-weight:700;padding:1px 5px;border-radius:10px}
+
+/* MAIN */
+#main{flex:1;display:flex;flex-direction:column;overflow:hidden}
+#topbar{height:var(--header-h);background:#fff;border-bottom:1px solid var(--gray3);display:flex;align-items:center;padding:0 20px;gap:14px;flex-shrink:0;margin-top:0}
+.topbar-title{font-size:15px;font-weight:700;color:var(--dark);flex:1;font-family:var(--serif)}
+.topbar-search{display:flex;align-items:center;gap:7px;background:var(--gray2);border-radius:20px;padding:5px 12px;font-size:12px;color:var(--gray)}
+.topbar-search svg{width:13px;height:13px}
+.topbar-icon{width:30px;height:30px;border-radius:50%;background:var(--gray2);display:flex;align-items:center;justify-content:center;cursor:pointer;position:relative}
+.topbar-icon svg{width:15px;height:15px;color:var(--gray)}
+.notif-dot{position:absolute;top:5px;right:5px;width:6px;height:6px;background:var(--red);border-radius:50%;border:1.5px solid #fff}
+#content{flex:1;overflow-y:auto;padding:20px}
+
+/* PAGE */
+.page-header{margin-bottom:20px}
+.page-title{font-size:20px;font-weight:700;color:var(--dark);font-family:var(--serif)}
+.page-sub{font-size:12px;color:var(--gray);margin-top:3px}
+
+/* STATS GRID */
+.stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:12px;margin-bottom:20px}
+.stat-card{background:#fff;border-radius:var(--radius);padding:14px;border:1px solid var(--gray3)}
+.stat-label{font-size:11px;color:var(--gray);font-weight:500;margin-bottom:4px}
+.stat-val{font-size:22px;font-weight:700;color:var(--dark)}
+.stat-change{font-size:10px;margin-top:3px}
+.stat-up{color:var(--green)}.stat-down{color:var(--red)}
+
+/* CARDS */
+.card{background:#fff;border-radius:var(--radius);border:1px solid var(--gray3);padding:18px}
+.card-title{font-size:13px;font-weight:700;color:var(--dark);margin-bottom:12px;display:flex;align-items:center;justify-content:space-between}
+.card-title-action{font-size:11px;font-weight:500;color:var(--green);cursor:pointer}
+
+/* GRID LAYOUTS */
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.grid-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px}
+.grid-65{display:grid;grid-template-columns:1.6fr 1fr;gap:14px}
+.grid-56{display:grid;grid-template-columns:1fr 1.6fr;gap:14px}
+
+/* TABLE */
+.data-table{width:100%;border-collapse:collapse}
+.data-table th{text-align:left;font-size:10px;font-weight:700;color:var(--gray);text-transform:uppercase;letter-spacing:.5px;padding:7px 10px;border-bottom:1px solid var(--gray3);background:var(--gray2)}
+.data-table td{padding:9px 10px;border-bottom:1px solid var(--gray3);font-size:12.5px;color:var(--dark)}
+.data-table tr:last-child td{border-bottom:none}
+.data-table tr:hover td{background:var(--gray2)}
+
+/* BADGES */
+.badge{display:inline-flex;align-items:center;padding:2px 8px;border-radius:20px;font-size:10px;font-weight:600}
+.badge-green{background:var(--green3);color:var(--green)}
+.badge-amber{background:var(--amber2);color:var(--amber)}
+.badge-red{background:var(--red2);color:var(--red)}
+.badge-blue{background:var(--blue2);color:var(--blue)}
+.badge-purple{background:var(--purple2);color:var(--purple)}
+.badge-gray{background:var(--gray2);color:var(--gray)}
+.badge-teal{background:var(--teal2);color:var(--teal)}
+
+/* TIMELINE */
+.timeline{display:flex;flex-direction:column;gap:11px}
+.tl-item{display:flex;gap:10px;align-items:flex-start}
+.tl-dot{width:8px;height:8px;border-radius:50%;margin-top:4px;flex-shrink:0}
+.tl-dot-green{background:var(--green)}.tl-dot-amber{background:var(--amber)}
+.tl-dot-blue{background:var(--blue)}.tl-dot-red{background:var(--red)}
+.tl-text{font-size:12px;color:var(--dark);line-height:1.4}
+.tl-time{font-size:10px;color:var(--gray);margin-top:2px}
+
+/* PROGRESS */
+.progress-row{margin-bottom:10px}
+.progress-label{display:flex;justify-content:space-between;font-size:12px;margin-bottom:4px}
+.progress-bar{height:6px;background:var(--gray3);border-radius:3px;overflow:hidden}
+.progress-fill{height:100%;border-radius:3px;background:var(--green)}
+
+/* AVATAR */
+.avatar{width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#fff;flex-shrink:0}
+
+/* BUTTONS */
+.btn{display:inline-flex;align-items:center;gap:5px;padding:7px 13px;border-radius:var(--radius-sm);font-size:12px;font-weight:600;cursor:pointer;border:none;font-family:var(--font);transition:all .15s}
+.btn-primary{background:var(--green);color:#fff}.btn-primary:hover{background:var(--green2)}
+.btn-outline{background:#fff;color:var(--dark);border:1px solid var(--gray3)}.btn-outline:hover{background:var(--gray2)}
+.btn-sm{padding:4px 9px;font-size:11px}
+
+/* CALENDAR MINI */
+.cal-mini{display:grid;grid-template-columns:repeat(7,1fr);gap:2px;text-align:center}
+.cal-mini .day-name{font-size:9px;font-weight:700;color:var(--gray);padding:3px 0}
+.cal-mini .day{font-size:11px;padding:4px 2px;border-radius:4px;cursor:pointer}
+.cal-mini .day:hover{background:var(--gray2)}
+.cal-mini .today{background:var(--green);color:#fff;border-radius:4px}
+.cal-mini .has-event{color:var(--green);font-weight:700}
+
+/* BAR CHART */
+.bar-chart{display:flex;align-items:flex-end;gap:7px;height:100px;margin-top:8px}
+.bar-wrap{flex:1;display:flex;flex-direction:column;align-items:center;gap:3px}
+.bar{width:100%;background:var(--green3);border-radius:3px 3px 0 0;transition:all .3s}
+.bar:hover{background:var(--green2)}
+.bar-label{font-size:9px;color:var(--gray)}
+.bar-val{font-size:9px;font-weight:700;color:var(--dark)}
+
+/* FORM */
+.form-group{margin-bottom:12px}
+.form-label{font-size:11px;font-weight:600;color:var(--gray4);margin-bottom:4px;display:block}
+.form-input{width:100%;padding:7px 11px;border:1px solid var(--gray3);border-radius:var(--radius-sm);font-size:13px;font-family:var(--font);color:var(--dark);outline:none;background:#fff}
+.form-input:focus{border-color:var(--green);box-shadow:0 0 0 3px rgba(26,107,60,.1)}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+textarea.form-input{resize:vertical;min-height:70px}
+select.form-input{cursor:pointer}
+
+/* NOTIF */
+.notif-item{display:flex;gap:9px;padding:9px 10px;border-radius:var(--radius-sm);cursor:pointer}
+.notif-item:hover{background:var(--gray2)}
+.notif-item.unread{background:var(--green3)}
+
+/* LOA OUTCOME */
+.outcome-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.outcome-card{background:var(--gray2);border-radius:var(--radius-sm);padding:10px}
+.outcome-name{font-size:11px;font-weight:600;color:var(--dark);margin-bottom:5px}
+.outcome-pct{font-size:17px;font-weight:700;color:var(--green);margin-bottom:4px}
+
+/* SCHEDULE */
+.schedule-item{display:flex;gap:10px;align-items:center;padding:8px 0;border-bottom:1px solid var(--gray3)}
+.schedule-item:last-child{border-bottom:none}
+.schedule-time{font-size:11px;font-weight:600;color:var(--green);min-width:65px}
+.schedule-subject{font-size:13px;font-weight:600;color:var(--dark)}
+.schedule-class{font-size:11px;color:var(--gray)}
+.schedule-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+
+/* ATTENDANCE */
+.att-grid{display:flex;flex-wrap:wrap;gap:4px;margin-top:6px}
+.att-dot{width:22px;height:22px;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;cursor:pointer}
+.att-h{background:var(--green3);color:var(--green)}
+.att-s{background:var(--red2);color:var(--red)}
+.att-i{background:var(--amber2);color:var(--amber)}
+.att-a{background:var(--gray2);color:var(--gray)}
+
+/* STUDENT */
+.student-item{display:flex;align-items:center;gap:9px;padding:7px;border-radius:var(--radius-sm);cursor:pointer}
+.student-item:hover{background:var(--gray2)}
+.student-name{font-size:13px;font-weight:600;color:var(--dark)}
+.student-info{font-size:11px;color:var(--gray)}
+
+/* SCROLLBAR */
+::-webkit-scrollbar{width:4px}::-webkit-scrollbar-track{background:transparent}::-webkit-scrollbar-thumb{background:var(--gray3);border-radius:2px}
+
+/* BILLING */
+.billing-item{display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid var(--gray3)}
+.billing-item:last-child{border-bottom:none}
+.billing-icon{width:34px;height:34px;border-radius:8px;display:flex;align-items:center;justify-content:center}
+.billing-name{font-size:13px;font-weight:600;color:var(--dark)}
+.billing-date{font-size:11px;color:var(--gray)}
+.billing-amount{font-size:14px;font-weight:700;margin-left:auto}
+
+/* PORTFOLIO */
+.portfolio-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(110px,1fr));gap:9px}
+.portfolio-item{background:var(--gray2);border-radius:var(--radius-sm);overflow:hidden;cursor:pointer}
+.portfolio-thumb{height:65px;display:flex;align-items:center;justify-content:center;font-size:26px;background:linear-gradient(135deg,var(--green3),var(--teal2))}
+.portfolio-caption{padding:5px 7px;font-size:10px;font-weight:600;color:var(--dark)}
+.portfolio-date{font-size:9px;color:var(--gray);padding:0 7px 5px}
+
+/* TABS */
+.tabs{display:flex;gap:0;border-bottom:2px solid var(--gray3);margin-bottom:16px}
+.tab{padding:7px 14px;font-size:12px;font-weight:600;color:var(--gray);cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-2px;transition:.15s}
+.tab.active{color:var(--green);border-bottom-color:var(--green)}
+.tab-content{display:none}.tab-content.active{display:block}
+
+/* EVENT CARD */
+.event-card{background:#fff;border-radius:var(--radius);border:1px solid var(--gray3);overflow:hidden;cursor:pointer;transition:box-shadow .2s}
+.event-card:hover{box-shadow:0 4px 16px rgba(0,0,0,.1)}
+.event-thumb{height:72px;display:flex;align-items:center;justify-content:center;font-size:30px}
+.event-body{padding:11px}
+.event-title{font-size:13px;font-weight:700;color:var(--dark);margin-bottom:3px}
+.event-meta{font-size:11px;color:var(--gray)}
+.event-footer{display:flex;justify-content:space-between;align-items:center;margin-top:7px}
+
+/* RAPOR */
+.rapor-subject{display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid var(--gray3)}
+.rapor-subject:last-child{border-bottom:none}
+.rapor-name{flex:1;font-size:13px;font-weight:600}
+.rapor-score{font-size:16px;font-weight:700;color:var(--green)}
+.rapor-grade{font-size:12px;font-weight:700;color:var(--amber);min-width:28px}
+.rapor-desc{font-size:11px;color:var(--gray);flex:2}
+
+/* AUDIT */
+.audit-row{display:flex;align-items:center;gap:9px;padding:7px 0;border-bottom:1px solid var(--gray3);font-size:12px}
+.audit-row:last-child{border-bottom:none}
+.audit-time{color:var(--gray);min-width:50px;font-size:11px}
+.audit-user{font-weight:600;min-width:140px}
+.audit-target{color:var(--gray4);flex:1}
+
+/* PAYMENT ROW */
+.pay-row{display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid var(--gray3)}
+.pay-row:last-child{border-bottom:none}
+.pay-month{font-size:12px;font-weight:600;color:var(--dark);min-width:90px}
+.pay-desc{font-size:11px;color:var(--gray);flex:1}
+.pay-amount{font-size:13px;font-weight:700}
+.pay-status{min-width:60px;text-align:right}
+
+/* MONITOR */
+.monitor-card{background:#fff;border-radius:var(--radius);border:1px solid var(--gray3);padding:12px;display:flex;align-items:center;gap:10px}
+.monitor-icon{width:38px;height:38px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
+.monitor-count{font-size:22px;font-weight:700;color:var(--dark)}
+.monitor-label{font-size:11px;color:var(--gray)}
+.monitor-action{margin-left:auto;font-size:11px;color:var(--green);font-weight:600;cursor:pointer;white-space:nowrap}
+
+/* EVIDENCE */
+.evidence-zone{border:2px dashed var(--gray3);border-radius:var(--radius);padding:20px;text-align:center;color:var(--gray);font-size:12px;cursor:pointer;transition:.2s}
+.evidence-zone:hover{border-color:var(--green);background:var(--green3)}
+</style>
+</head>
+<body>
+
+<!-- ROLE SWITCHER -->
+<div id="role-switcher">
+  <span>Role:</span>
+  <button class="rs-btn active" onclick="switchRole('kepala',this)">Kepala Sekolah</button>
+  <button class="rs-btn" onclick="switchRole('admin',this)">Admin</button>
+  <button class="rs-btn" onclick="switchRole('guru',this)">Guru</button>
+  <button class="rs-btn" onclick="switchRole('wali',this)">Wali Kelas</button>
+  <button class="rs-btn" onclick="switchRole('siswa',this)">Siswa</button>
+  <button class="rs-btn" onclick="switchRole('ortu',this)">Orang Tua</button>
+  <button class="rs-btn" onclick="switchRole('keuangan',this)">Staff Keuangan</button>
+  <button class="rs-btn" onclick="switchRole('panitia',this)">Panitia Event</button>
+  <button class="rs-btn" onclick="switchRole('auditor',this)">Auditor</button>
+</div>
+
+<div id="app">
+  <div id="sidebar">
+    <div class="sidebar-brand">
+      <div class="brand-logo">
+        <div class="brand-icon">
+          <svg viewBox="0 0 24 24"><path d="M17 8C8 10 5.9 16.17 3.82 19H5c0 1 .5 2 2 2h14l-3-6c2.5-1 5-5 5-10C19 3 16 2 12 2c-3.5 0-6.5 2-8 5 1.5-1 3.5-2 6-2 4 0 6 2 7 3z"/></svg>
+        </div>
+        <div>
+          <div class="brand-name">Sekolah Alam</div>
+          <div class="brand-sub">ERP System v1.0</div>
+        </div>
+      </div>
+    </div>
+    <div class="user-badge">
+      <div class="user-avatar" id="user-avatar" style="background:var(--green)">KS</div>
+      <div>
+        <div class="user-info-name" id="user-name">Dr. Hendra Wijaya</div>
+        <div class="user-info-role" id="user-role">Kepala Sekolah</div>
+      </div>
+    </div>
+    <nav id="sidebar-nav"></nav>
+  </div>
+
+  <div id="main">
+    <div id="topbar">
+      <div class="topbar-title" id="topbar-title">Dashboard</div>
+      <div class="topbar-search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        Cari...
+      </div>
+      <div class="topbar-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+        <div class="notif-dot"></div>
+      </div>
+      <div class="topbar-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M20 21a8 8 0 1 0-16 0"/></svg>
+      </div>
+    </div>
+    <div id="content"></div>
+  </div>
+</div>
+<script>
+// ============================================================
+// DUMMY DATA
+// ============================================================
+const D = {
+  siswa:[
+    {id:'S001',name:'Arjuna Pratama',kelas:'6A',gender:'L',ortu:'Budi Pratama',status:'Aktif',avg:88,att:95},
+    {id:'S002',name:'Siti Aisyah',kelas:'6A',gender:'P',ortu:'Ahmad Fauzi',status:'Aktif',avg:92,att:98},
+    {id:'S003',name:'Rafi Andika',kelas:'5B',gender:'L',ortu:'Doni Andika',status:'Aktif',avg:79,att:79},
+    {id:'S004',name:'Nayla Putri',kelas:'5B',gender:'P',ortu:'Rina Hartati',status:'Aktif',avg:90,att:93},
+    {id:'S005',name:'Zaki Firmansyah',kelas:'4A',gender:'L',ortu:'Firmansyah',status:'Aktif',avg:75,att:75},
+    {id:'S006',name:'Hana Dewi',kelas:'4A',gender:'P',ortu:'Dewi Sartika',status:'Aktif',avg:95,att:99},
+    {id:'S007',name:'Bagas Saputra',kelas:'3B',gender:'L',ortu:'Saputra HW',status:'Aktif',avg:83,att:91},
+    {id:'S008',name:'Intan Permata',kelas:'3B',gender:'P',ortu:'Permata Indah',status:'Aktif',avg:87,att:94},
+    {id:'S009',name:'Daffa Ramadhan',kelas:'2A',gender:'L',ortu:'Ramadhan SW',status:'Aktif',avg:80,att:82},
+    {id:'S010',name:'Rara Anjani',kelas:'2A',gender:'P',ortu:'Anjani Sari',status:'Aktif',avg:91,att:97},
+  ],
+  guru:[
+    {id:'G001',name:'Ibu Sari Wulandari',mapel:'Matematika & Sains',kelas:'6A, 5B',status:'Aktif'},
+    {id:'G002',name:'Pak Bimo Susanto',mapel:'Bahasa & Literasi',kelas:'6A, 4A',status:'Aktif'},
+    {id:'G003',name:'Ibu Ratna Dewi',mapel:'IPA Terpadu',kelas:'5B, 3B',status:'Aktif'},
+    {id:'G004',name:'Pak Yoga Pratama',mapel:'Alam & Lingkungan',kelas:'4A, 2A',status:'Aktif'},
+    {id:'G005',name:'Ibu Maya Kristina',mapel:'Seni & Budaya',kelas:'3B, 2A',status:'Aktif'},
+    {id:'G006',name:'Pak Andi Kurniawan',mapel:'Olahraga & Gerak',kelas:'Semua',status:'Aktif'},
+  ],
+  kelas:[
+    {id:'K01',name:'Kelas 6A',guru:'Pak Bimo Susanto',siswa:22,ruang:'Ruang Pohon Beringin'},
+    {id:'K02',name:'Kelas 5B',guru:'Ibu Ratna Dewi',siswa:20,ruang:'Ruang Pohon Mangga'},
+    {id:'K03',name:'Kelas 4A',guru:'Pak Yoga Pratama',siswa:21,ruang:'Ruang Pohon Jambu'},
+    {id:'K04',name:'Kelas 3B',guru:'Ibu Maya Kristina',siswa:19,ruang:'Ruang Pohon Rambutan'},
+    {id:'K05',name:'Kelas 2A',guru:'Pak Yoga Pratama',siswa:18,ruang:'Ruang Pohon Pepaya'},
+  ],
+  events:[
+    {id:'E001',name:'Market Day',date:'15 Jun 2025',status:'Upcoming',peserta:180,emoji:'🛒',desc:'Kegiatan jual beli produk karya siswa'},
+    {id:'E002',name:'Outbound Alam',date:'22 Jun 2025',status:'Upcoming',peserta:120,emoji:'🌿',desc:'Eksplorasi hutan dan alam terbuka'},
+    {id:'E003',name:'Pentas Seni',date:'5 Jul 2025',status:'Upcoming',peserta:250,emoji:'🎭',desc:'Pertunjukan seni dan budaya siswa'},
+    {id:'E004',name:'Parenting Seminar',date:'12 Jul 2025',status:'Upcoming',peserta:150,emoji:'👨‍👩‍👧',desc:'Seminar pendidikan untuk orang tua'},
+    {id:'E005',name:'Outing Class 5B',date:'18 Mei 2025',status:'Selesai',peserta:22,emoji:'🚌',desc:'Kunjungan kebun raya Bogor'},
+    {id:'E006',name:'Wisuda 2025',date:'20 Jul 2025',status:'Upcoming',peserta:300,emoji:'🎓',desc:'Wisuda kelas 6'},
+  ],
+  tagihan:[
+    {id:'T001',siswa:'Arjuna Pratama',jenis:'SPP Mei 2025',amount:1500000,status:'Lunas',tgl:'2 Mei 2025'},
+    {id:'T002',siswa:'Siti Aisyah',jenis:'SPP Mei 2025',amount:1500000,status:'Lunas',tgl:'1 Mei 2025'},
+    {id:'T003',siswa:'Rafi Andika',jenis:'SPP Mei 2025',amount:1500000,status:'Belum Bayar',tgl:'-'},
+    {id:'T004',siswa:'Nayla Putri',jenis:'SPP Mei 2025',amount:1500000,status:'Lunas',tgl:'3 Mei 2025'},
+    {id:'T005',siswa:'Zaki Firmansyah',jenis:'SPP Mei 2025',amount:1500000,status:'Jatuh Tempo',tgl:'-'},
+    {id:'T006',siswa:'Hana Dewi',jenis:'SPP Mei 2025',amount:1500000,status:'Lunas',tgl:'1 Mei 2025'},
+    {id:'T007',siswa:'Bagas Saputra',jenis:'SPP Mei 2025',amount:1500000,status:'Lunas',tgl:'5 Mei 2025'},
+    {id:'T008',siswa:'Daffa Ramadhan',jenis:'SPP Mei 2025',amount:1500000,status:'Belum Bayar',tgl:'-'},
+  ],
+  ppdb:[
+    {id:'P001',name:'Farhan Maulana',kelas:'1A',tgl:'10 Apr 2025',status:'Diterima',score:88},
+    {id:'P002',name:'Aliya Zahra',kelas:'1A',tgl:'11 Apr 2025',status:'Diterima',score:91},
+    {id:'P003',name:'Gilang Saputra',kelas:'1A',tgl:'12 Apr 2025',status:'Wawancara',score:0},
+    {id:'P004',name:'Nadia Rahmawati',kelas:'2A',tgl:'13 Apr 2025',status:'Seleksi',score:0},
+    {id:'P005',name:'Kevin Pratama',kelas:'1A',tgl:'14 Apr 2025',status:'Ditolak',score:52},
+    {id:'P006',name:'Layla Putri',kelas:'1A',tgl:'15 Apr 2025',status:'Diterima',score:85},
+  ],
+  loa:[
+    {code:'LO-01',name:'Karakter Mandiri',pct:82},
+    {code:'LO-02',name:'Berpikir Kritis',pct:75},
+    {code:'LO-03',name:'Kreativitas & Inovasi',pct:88},
+    {code:'LO-04',name:'Kerja Sama Tim',pct:91},
+    {code:'LO-05',name:'Cinta Lingkungan',pct:95},
+    {code:'LO-06',name:'Literasi Digital',pct:70},
+  ],
+  jadwal:[
+    {waktu:'07:30',mapel:'Upacara & Ikrar',kelas:'Semua',guru:'Seluruh Guru',warna:'#1a6b3c'},
+    {waktu:'08:00',mapel:'Matematika Eksplorasi',kelas:'6A',guru:'Ibu Sari Wulandari',warna:'#1a4a7a'},
+    {waktu:'09:30',mapel:'Literasi & Membaca',kelas:'6A',guru:'Pak Bimo Susanto',warna:'#4a2d7a'},
+    {waktu:'10:30',mapel:'IPA — Ekosistem',kelas:'5B',guru:'Ibu Ratna Dewi',warna:'#1a6b3c'},
+    {waktu:'12:00',mapel:'Istirahat & Makan Siang',kelas:'Semua',guru:'-',warna:'#6b7280'},
+    {waktu:'13:00',mapel:'Seni & Kerajinan',kelas:'3B',guru:'Ibu Maya Kristina',warna:'#991f1f'},
+    {waktu:'14:00',mapel:'Olahraga Alam',kelas:'4A',guru:'Pak Andi Kurniawan',warna:'#b5621a'},
+  ],
+  dailyplan:{
+    tema:'Ekosistem Hutan Tropis',
+    tujuan:'Siswa mampu mengidentifikasi 5 jenis tumbuhan hutan, menjelaskan rantai makanan, dan merefleksikan peran manusia dalam ekosistem.',
+    aktivitas:[
+      {waktu:'08:00-09:30',judul:'Jalan Alam — Observasi Tumbuhan',tipe:'Outdoor',icon:'🌿'},
+      {waktu:'09:30-10:00',judul:'Diskusi Kelompok — Temuan Alam',tipe:'Diskusi',icon:'💬'},
+      {waktu:'10:00-11:00',judul:'Menggambar Rantai Makanan',tipe:'Kreasi',icon:'🎨'},
+      {waktu:'11:00-12:00',judul:'Presentasi Kelompok',tipe:'Presentasi',icon:'📢'},
+    ]
+  },
+  portofolio:[
+    {judul:'Herbarium Tumbuhan',tipe:'Karya',emoji:'🌿',tgl:'12 Mei'},
+    {judul:'Video Ekosistem',tipe:'Video',emoji:'🎥',tgl:'18 Mei'},
+    {judul:'Esai Lingkungan',tipe:'Tulisan',emoji:'📝',tgl:'20 Mei'},
+    {judul:'Poster Daur Ulang',tipe:'Karya',emoji:'♻️',tgl:'25 Mei'},
+    {judul:'Laporan Observasi',tipe:'Laporan',emoji:'📊',tgl:'28 Mei'},
+    {judul:'Rekaman Wawancara',tipe:'Audio',emoji:'🎙️',tgl:'1 Jun'},
+  ],
+  auditLogs:[
+    {time:'09:12',user:'Ratna Sari (Admin)',action:'CREATE',target:'Siswa baru: Farhan Maulana',tbl:'students'},
+    {time:'09:45',user:'Ibu Sari Wulandari',action:'UPDATE',target:'Nilai Arjuna Pratama → 88',tbl:'assessments'},
+    {time:'10:02',user:'Dewi Lestari',action:'APPROVE',target:'Pembayaran T001 — Rp 1.500.000',tbl:'payments'},
+    {time:'10:30',user:'Ratna Sari (Admin)',action:'DELETE',target:'Jadwal duplikat kelas 6A',tbl:'schedules'},
+    {time:'11:15',user:'Ibu Ratna Dewi',action:'CREATE',target:'Observasi LOA — Rafi Andika',tbl:'loa_obs'},
+    {time:'12:00',user:'Dr. Hendra Wijaya',action:'APPROVE',target:'Event Market Day disetujui',tbl:'events'},
+    {time:'13:22',user:'Dewi Lestari',action:'CREATE',target:'Tagihan SPP Jun 2025 (247 siswa)',tbl:'billings'},
+    {time:'14:05',user:'Pak Yoga Pratama',action:'UPDATE',target:'Daily Report Kelas 4A → Published',tbl:'daily_reports'},
+  ]
+};
+
+// ============================================================
+// HELPERS
+// ============================================================
+const fmt = n => new Intl.NumberFormat('id-ID',{style:'currency',currency:'IDR',minimumFractionDigits:0}).format(n);
+const ava = (name,bg='var(--green)',sz=30) => {
+  const init = name.split(' ').map(w=>w[0]).slice(0,2).join('');
+  return `<div class="avatar" style="background:${bg};width:${sz}px;height:${sz}px;font-size:${sz*0.38}px">${init}</div>`;
+};
+const badge = (s) => {
+  const m = {
+    'Aktif':'badge-green','Lunas':'badge-green','Diterima':'badge-green','Selesai':'badge-green','Hadir':'badge-green','Terdaftar':'badge-green','Terkirim':'badge-green','Lengkap':'badge-green','Compliant':'badge-green','Berhasil':'badge-green','Naik Kelas':'badge-green',
+    'Upcoming':'badge-blue','Wawancara':'badge-amber','Seleksi':'badge-amber','Belum Bayar':'badge-amber','Perlu Evidence':'badge-amber','Berjalan':'badge-amber','Draft':'badge-amber',
+    'Jatuh Tempo':'badge-red','Ditolak':'badge-red','Tidak Aktif':'badge-red','Gagal':'badge-red',
+    'CREATE':'badge-green','UPDATE':'badge-blue','DELETE':'badge-red','APPROVE':'badge-teal',
+    'LOGIN':'badge-green','LOGOUT':'badge-gray',
+  };
+  return `<span class="badge ${m[s]||'badge-gray'}">${s}</span>`;
+};
+
+// ============================================================
+// ICONS
+// ============================================================
+const IC = {
+  home:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>`,
+  chart:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>`,
+  monitor:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>`,
+  users:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>`,
+  teacher:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3h18v13H3z"/><path d="M21 19H3"/><path d="M8 21h8"/><path d="M12 16v3"/></svg>`,
+  book:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>`,
+  calendar:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>`,
+  layers:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>`,
+  smile:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>`,
+  dollar:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>`,
+  settings:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>`,
+  file:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>`,
+  check:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>`,
+  assign:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="15" y2="15"/></svg>`,
+  plan:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>`,
+  play:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>`,
+  report:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>`,
+  portfolio:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>`,
+  card:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>`,
+  shield:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>`,
+  user:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>`,
+  rapor:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>`,
+  screen:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>`,
+};
+
+// ============================================================
+// ROLE DEFINITIONS
+// ============================================================
+const ROLES = {
+  kepala:{
+    label:'Kepala Sekolah',name:'Dr. Hendra Wijaya',initials:'HW',color:'#1a6b3c',
+    nav:[
+      {section:'Utama',items:[
+        {id:'dashboard',icon:'home',label:'Dashboard'},
+        {id:'executive',icon:'chart',label:'Laporan Eksekutif'},
+        {id:'monitoring',icon:'monitor',label:'Monitoring'},
+      ]},
+      {section:'Data Sekolah',items:[
+        {id:'students',icon:'users',label:'Data Siswa'},
+        {id:'teachers',icon:'teacher',label:'Data Guru'},
+        {id:'classes',icon:'book',label:'Kelas'},
+      ]},
+      {section:'Program',items:[
+        {id:'loa_dash',icon:'layers',label:'LOA Dashboard'},
+        {id:'events_dash',icon:'smile',label:'Event'},
+        {id:'finance_dash',icon:'dollar',label:'Keuangan'},
+      ]},
+      {section:'Sistem',items:[
+        {id:'settings',icon:'settings',label:'Pengaturan'}
+      ]}
+    ]
+  },
+  admin:{
+    label:'Admin Sekolah',name:'Ratna Sari, S.Pd',initials:'RS',color:'#1a4a7a',
+    nav:[
+      {section:'Utama',items:[
+        {id:'dashboard',icon:'home',label:'Dashboard'},
+        {id:'ppdb',icon:'file',label:'PPDB'},
+      ]},
+      {section:'Data',items:[
+        {id:'students',icon:'users',label:'Data Siswa'},
+        {id:'teachers',icon:'teacher',label:'Data Guru'},
+        {id:'classes',icon:'book',label:'Kelas'},
+      ]},
+      {section:'Operasional',items:[
+        {id:'schedule',icon:'calendar',label:'Jadwal'},
+        {id:'events_dash',icon:'smile',label:'Event'},
+        {id:'billing',icon:'dollar',label:'Tagihan'},
+        {id:'users_admin',icon:'user',label:'Pengguna'},
+      ]}
+    ]
+  },
+  guru:{
+    label:'Fasilitator / Guru',name:'Ibu Sari Wulandari',initials:'SW',color:'#4a2d7a',
+    nav:[
+      {section:'Utama',items:[
+        {id:'dashboard',icon:'home',label:'Dashboard'},
+        {id:'daily_plan',icon:'plan',label:'Learning Planning'},
+        {id:'daily_exec',icon:'play',label:'Daily Execution'},
+      ]},
+      {section:'Kelas',items:[
+        {id:'attendance_guru',icon:'check',label:'Absensi'},
+        {id:'assignment',icon:'assign',label:'Penugasan'},
+        {id:'assessment_guru',icon:'file',label:'Penilaian'},
+      ]},
+      {section:'LOA & Laporan',items:[
+        {id:'loa_guru',icon:'layers',label:'Observasi LOA'},
+        {id:'daily_report',icon:'report',label:'Daily Report'},
+        {id:'rapor',icon:'rapor',label:'Rapor'},
+      ]}
+    ]
+  },
+  wali:{
+    label:'Wali Kelas',name:'Pak Bimo Susanto',initials:'BS',color:'#1a6b6b',
+    nav:[
+      {section:'Utama',items:[
+        {id:'dashboard',icon:'home',label:'Dashboard'},
+        {id:'my_class',icon:'book',label:'Kelas Saya'},
+        {id:'students',icon:'users',label:'Daftar Siswa'},
+      ]},
+      {section:'Akademik',items:[
+        {id:'attendance_guru',icon:'check',label:'Absensi Kelas'},
+        {id:'loa_guru',icon:'layers',label:'LOA Siswa'},
+        {id:'portfolio',icon:'portfolio',label:'Portofolio'},
+      ]},
+      {section:'Laporan',items:[
+        {id:'daily_report',icon:'report',label:'Daily Report'},
+        {id:'progress',icon:'chart',label:'Progress Siswa'},
+        {id:'rapor',icon:'rapor',label:'Rapor'},
+      ]}
+    ]
+  },
+  siswa:{
+    label:'Siswa',name:'Arjuna Pratama',initials:'AP',color:'#b5621a',
+    nav:[
+      {section:'Beranda',items:[
+        {id:'dashboard',icon:'home',label:'Beranda'},
+        {id:'jadwal_siswa',icon:'calendar',label:'Jadwalku'},
+        {id:'tugas_siswa',icon:'assign',label:'Tugas'},
+      ]},
+      {section:'Belajar',items:[
+        {id:'materi',icon:'screen',label:'Materi Belajar'},
+        {id:'portfolio',icon:'portfolio',label:'Portofoliomu'},
+        {id:'nilai_siswa',icon:'file',label:'Nilai & LOA'},
+      ]},
+      {section:'Lainnya',items:[
+        {id:'rapor',icon:'rapor',label:'Rapor'},
+        {id:'events_dash',icon:'smile',label:'Event Sekolah'},
+      ]}
+    ]
+  },
+  ortu:{
+    label:'Orang Tua',name:'Budi Pratama',initials:'BP',color:'#991f1f',
+    nav:[
+      {section:'Beranda',items:[
+        {id:'dashboard',icon:'home',label:'Beranda'},
+        {id:'profil_anak',icon:'users',label:'Profil Anak'},
+        {id:'daily_ortu',icon:'report',label:'Laporan Harian'},
+      ]},
+      {section:'Perkembangan',items:[
+        {id:'rapor',icon:'rapor',label:'Rapor Anak'},
+        {id:'loa_ortu',icon:'layers',label:'LOA Anak'},
+        {id:'portfolio',icon:'portfolio',label:'Portofolio'},
+      ]},
+      {section:'Keuangan',items:[
+        {id:'tagihan_ortu',icon:'card',label:'Tagihan SPP'},
+        {id:'events_dash',icon:'smile',label:'Event Sekolah'},
+      ]}
+    ]
+  },
+  keuangan:{
+    label:'Staff Keuangan',name:'Dewi Lestari, S.E',initials:'DL',color:'#1a4a7a',
+    nav:[
+      {section:'Utama',items:[
+        {id:'dashboard',icon:'home',label:'Dashboard'},
+        {id:'billing',icon:'dollar',label:'Tagihan'},
+        {id:'payment',icon:'card',label:'Verifikasi Bayar'},
+      ]},
+      {section:'Laporan',items:[
+        {id:'finance_dash',icon:'chart',label:'Laporan Keuangan'},
+        {id:'collection',icon:'monitor',label:'Rekapitulasi'},
+      ]}
+    ]
+  },
+  panitia:{
+    label:'Panitia Event',name:'Pak Rudi Santoso',initials:'RS',color:'#991f1f',
+    nav:[
+      {section:'Utama',items:[
+        {id:'dashboard',icon:'home',label:'Dashboard'},
+        {id:'events_dash',icon:'smile',label:'Daftar Event'},
+        {id:'event_reg',icon:'users',label:'Registrasi Peserta'},
+      ]},
+      {section:'Pengelolaan',items:[
+        {id:'event_exec',icon:'play',label:'Pelaksanaan'},
+        {id:'event_eval',icon:'file',label:'Evaluasi'},
+        {id:'event_report',icon:'report',label:'Laporan Event'},
+      ]}
+    ]
+  },
+  auditor:{
+    label:'Auditor Internal',name:'Hadi Nugroho, S.H',initials:'HN',color:'#374151',
+    nav:[
+      {section:'Audit',items:[
+        {id:'dashboard',icon:'home',label:'Dashboard Audit'},
+        {id:'audit_trail',icon:'shield',label:'Audit Trail'},
+        {id:'login_audit',icon:'user',label:'Login Audit'},
+      ]},
+      {section:'Laporan',items:[
+        {id:'finance_audit',icon:'dollar',label:'Audit Keuangan'},
+        {id:'academic_audit',icon:'book',label:'Audit Akademik'},
+        {id:'compliance',icon:'check',label:'Kepatuhan'},
+      ]}
+    ]
+  }
+};
+
+// ============================================================
+// STATE
+// ============================================================
+let currentRole = 'kepala';
+let currentPage = 'dashboard';
+
+// ============================================================
+// SIDEBAR
+// ============================================================
+function renderSidebar(role){
+  const r = ROLES[role];
+  document.getElementById('user-avatar').textContent = r.initials;
+  document.getElementById('user-avatar').style.background = r.color;
+  document.getElementById('user-name').textContent = r.name;
+  document.getElementById('user-role').textContent = r.label;
+  let html = '';
+  r.nav.forEach(sec => {
+    html += `<div class="nav-section">${sec.section}</div>`;
+    sec.items.forEach(item => {
+      html += `<div class="nav-item${currentPage===item.id?' active':''}" id="nav-${item.id}" onclick="navigateTo('${item.id}')">${IC[item.icon]||''}<span>${item.label}</span></div>`;
+    });
+  });
+  document.getElementById('sidebar-nav').innerHTML = html;
+}
+
+function navigateTo(pageId){
+  currentPage = pageId;
+  document.querySelectorAll('.nav-item').forEach(el=>el.classList.remove('active'));
+  const el = document.getElementById('nav-'+pageId);
+  if(el) el.classList.add('active');
+  let title = pageId;
+  ROLES[currentRole].nav.forEach(s=>s.items.forEach(i=>{if(i.id===pageId)title=i.label;}));
+  document.getElementById('topbar-title').textContent = title;
+  document.getElementById('content').innerHTML = getPage(currentRole, pageId);
+}
+
+function switchRole(role, btn){
+  currentRole = role; currentPage = 'dashboard';
+  document.querySelectorAll('.rs-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  renderSidebar(role);
+  navigateTo('dashboard');
+}
+
+// ============================================================
+// TAB HELPER
+// ============================================================
+function switchTab(el, tid){
+  const par = el.closest('.tabs');
+  par.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+  el.classList.add('active');
+  document.querySelectorAll('.tab-content').forEach(t=>t.classList.remove('active'));
+  const tc = document.getElementById(tid);
+  if(tc) tc.classList.add('active');
+}
+
+// ============================================================
+// PAGE ROUTER
+// ============================================================
+function getPage(role, pageId){
+  const map = {
+    // shared pages
+    students: pgStudents,
+    teachers: pgTeachers,
+    classes: pgClasses,
+    events_dash: pgEvents,
+    billing: pgBilling,
+    finance_dash: pgFinanceDash,
+    schedule: pgSchedule,
+    loa_guru: pgLOAGuru,
+    daily_report: pgDailyReport,
+    rapor: pgRapor,
+    attendance_guru: pgAttendance,
+    assignment: pgAssignment,
+    assessment_guru: pgAssessment,
+    daily_plan: pgDailyPlan,
+    daily_exec: pgDailyExec,
+    portfolio: pgPortfolio,
+    progress: pgProgress,
+    my_class: pgMyClass,
+    // kepala
+    executive: pgExecutive,
+    monitoring: pgMonitoring,
+    loa_dash: pgLOADash,
+    settings: pgSettings,
+    // admin
+    ppdb: pgPPDB,
+    users_admin: pgUsers,
+    // siswa
+    jadwal_siswa: pgJadwalSiswa,
+    tugas_siswa: pgTugasSiswa,
+    materi: pgMateri,
+    nilai_siswa: pgNilai,
+    // ortu
+    profil_anak: pgProfilAnak,
+    daily_ortu: pgDailyOrtu,
+    loa_ortu: pgLOAOrtu,
+    tagihan_ortu: pgTagihanOrtu,
+    // keuangan
+    payment: pgPayment,
+    collection: pgCollection,
+    // panitia
+    event_reg: pgEventReg,
+    event_exec: pgEventExec,
+    event_eval: pgEventEval,
+    event_report: pgEventReport,
+    // auditor
+    audit_trail: pgAuditTrail,
+    login_audit: pgLoginAudit,
+    finance_audit: pgFinanceAudit,
+    academic_audit: pgAcademicAudit,
+    compliance: pgCompliance,
+  };
+
+  if(pageId === 'dashboard') return dashboards[role]();
+  if(map[pageId]) return map[pageId]();
+  return `<div class="card" style="text-align:center;padding:60px"><div style="font-size:48px;margin-bottom:12px">🚧</div><p style="color:var(--gray)">Halaman <strong>${pageId}</strong> sedang dikembangkan.</p></div>`;
+}
+
+// ============================================================
+// DASHBOARDS PER ROLE
+// ============================================================
+const dashboards = {
+
+kepala:()=>`
+<div class="page-header">
+  <h1 class="page-title">Selamat Pagi, Dr. Hendra 👋</h1>
+  <p class="page-sub">Senin, 2 Juni 2025 — Tahun Ajaran 2024/2025 Semester 2</p>
+</div>
+<div class="stats-grid">
+  <div class="stat-card"><div class="stat-label">Total Siswa</div><div class="stat-val">247</div><div class="stat-change stat-up">↑ 12 dari semester lalu</div></div>
+  <div class="stat-card"><div class="stat-label">Guru Aktif</div><div class="stat-val">18</div><div class="stat-change stat-up">↑ 2 guru baru</div></div>
+  <div class="stat-card"><div class="stat-label">Kelas Aktif</div><div class="stat-val">12</div><div class="stat-change" style="color:var(--gray)">Kelas 1–6</div></div>
+  <div class="stat-card"><div class="stat-label">Pendapatan Bulan Ini</div><div class="stat-val" style="font-size:17px">Rp 370 Jt</div><div class="stat-change stat-up">↑ 8% dari Mei</div></div>
+  <div class="stat-card"><div class="stat-label">Tingkat Kehadiran</div><div class="stat-val">94.2%</div><div class="stat-change stat-up">Sangat Baik</div></div>
+  <div class="stat-card"><div class="stat-label">LOA Achievement</div><div class="stat-val">83%</div><div class="stat-change stat-up">↑ Target 80% ✓</div></div>
+</div>
+<div class="grid-65" style="margin-bottom:14px">
+  <div class="card">
+    <div class="card-title">Tren Kehadiran Mingguan</div>
+    <div class="bar-chart">
+      ${[['Sen',92],['Sel',95],['Rab',88],['Kam',96],['Jum',91]].map(([d,v])=>`<div class="bar-wrap"><span class="bar-val">${v}%</span><div class="bar" style="height:${v}px"></div><span class="bar-label">${d}</span></div>`).join('')}
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-title">Event Mendatang</div>
+    <div class="timeline">
+      ${D.events.filter(e=>e.status==='Upcoming').slice(0,4).map(e=>`<div class="tl-item"><div class="tl-dot tl-dot-green"></div><div><div class="tl-text">${e.emoji} ${e.name}</div><div class="tl-time">${e.date} · ${e.peserta} peserta</div></div></div>`).join('')}
+    </div>
+  </div>
+</div>
+<div class="grid-56">
+  <div>
+    <div class="card">
+      <div class="card-title">Monitoring Cepat</div>
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <div class="monitor-card"><div class="monitor-icon" style="background:var(--red2)">⚠️</div><div><div class="monitor-count" style="color:var(--red)">3</div><div class="monitor-label">Tagihan Jatuh Tempo</div></div><span class="monitor-action" onclick="navigateTo('finance_dash')">Lihat →</span></div>
+        <div class="monitor-card"><div class="monitor-icon" style="background:var(--amber2)">📋</div><div><div class="monitor-count" style="color:var(--amber)">5</div><div class="monitor-label">Calon Siswa Menunggu</div></div><span class="monitor-action" onclick="navigateTo('ppdb')">Lihat →</span></div>
+        <div class="monitor-card"><div class="monitor-icon" style="background:var(--teal2)">📊</div><div><div class="monitor-count" style="color:var(--teal)">8</div><div class="monitor-label">LOA Belum Submit</div></div><span class="monitor-action" onclick="navigateTo('loa_dash')">Lihat →</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-title">Capaian LOA</div>
+    <div class="outcome-grid">
+      ${D.loa.map(o=>`<div class="outcome-card"><div class="outcome-name">${o.name}</div><div class="outcome-pct">${o.pct}%</div><div class="progress-bar"><div class="progress-fill" style="width:${o.pct}%"></div></div></div>`).join('')}
+    </div>
+  </div>
+</div>`,
+
+admin:()=>`
+<div class="page-header">
+  <h1 class="page-title">Dashboard Admin 🗂️</h1>
+  <p class="page-sub">Senin, 2 Juni 2025</p>
+</div>
+<div class="stats-grid">
+  <div class="stat-card"><div class="stat-label">Siswa Aktif</div><div class="stat-val">247</div><div class="stat-change stat-up">12 kelas</div></div>
+  <div class="stat-card"><div class="stat-label">Calon Siswa PPDB</div><div class="stat-val" style="color:var(--amber)">6</div><div class="stat-change">Menunggu proses</div></div>
+  <div class="stat-card"><div class="stat-label">Event Bulan Ini</div><div class="stat-val" style="color:var(--blue)">4</div></div>
+  <div class="stat-card"><div class="stat-label">Pengguna Sistem</div><div class="stat-val">42</div><div class="stat-change stat-up">18 online</div></div>
+</div>
+<div class="grid-2">
+  <div class="card">
+    <div class="card-title">Aktivitas Terkini</div>
+    <div class="timeline">
+      ${[['Siswa baru Farhan Maulana didaftarkan','5 menit lalu','tl-dot-green'],['Jadwal kelas 6A diperbarui','1 jam lalu','tl-dot-blue'],['PPDB: Gilang Saputra jadwal wawancara','2 jam lalu','tl-dot-amber'],['Event Market Day dibuat','3 jam lalu','tl-dot-green'],['Tagihan SPP Juni digenerate','4 jam lalu','tl-dot-blue']].map(([t,ti,c])=>`<div class="tl-item"><div class="tl-dot ${c}"></div><div><div class="tl-text">${t}</div><div class="tl-time">${ti}</div></div></div>`).join('')}
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-title">Status PPDB</div>
+    <table class="data-table">
+      <thead><tr><th>Nama</th><th>Tgl Daftar</th><th>Status</th></tr></thead>
+      <tbody>${D.ppdb.map(p=>`<tr><td><strong>${p.name}</strong></td><td style="font-size:11px;color:var(--gray)">${p.tgl}</td><td>${badge(p.status)}</td></tr>`).join('')}</tbody>
+    </table>
+  </div>
+</div>`,
+
+guru:()=>`
+<div class="page-header">
+  <h1 class="page-title">Selamat Pagi, Ibu Sari 🌿</h1>
+  <p class="page-sub">Senin, 2 Juni 2025 — Kelas 6A & 5B</p>
+</div>
+<div class="stats-grid">
+  <div class="stat-card"><div class="stat-label">Siswa Hari Ini</div><div class="stat-val">42</div><div class="stat-change">2 kelas</div></div>
+  <div class="stat-card"><div class="stat-label">Hadir</div><div class="stat-val" style="color:var(--green)">39</div><div class="stat-change stat-up">92.8%</div></div>
+  <div class="stat-card"><div class="stat-label">Tugas Aktif</div><div class="stat-val" style="color:var(--amber)">3</div><div class="stat-change">Perlu dinilai</div></div>
+  <div class="stat-card"><div class="stat-label">Observasi LOA</div><div class="stat-val" style="color:var(--teal)">5</div><div class="stat-change">Hari ini</div></div>
+</div>
+<div class="grid-65">
+  <div class="card">
+    <div class="card-title">Jadwal Mengajar Hari Ini</div>
+    ${D.jadwal.filter(j=>j.guru.includes('Sari')||j.kelas==='Semua').map(j=>`
+    <div class="schedule-item">
+      <div class="schedule-dot" style="background:${j.warna}"></div>
+      <div class="schedule-time">${j.waktu}</div>
+      <div style="flex:1"><div class="schedule-subject">${j.mapel}</div><div class="schedule-class">${j.kelas}</div></div>
+      ${j.kelas!=='Semua'?`<button class="btn btn-outline btn-sm" onclick="navigateTo('daily_exec')">Mulai</button>`:''}
+    </div>`).join('')}
+  </div>
+  <div>
+    <div class="card" style="margin-bottom:12px">
+      <div class="card-title">Tema Hari Ini</div>
+      <div style="padding:10px;background:var(--green3);border-radius:var(--radius-sm);margin-bottom:10px">
+        <div style="font-size:10px;font-weight:700;color:var(--green)">TEMA</div>
+        <div style="font-size:13px;font-weight:600">${D.dailyplan.tema}</div>
+      </div>
+      ${D.dailyplan.aktivitas.map(a=>`<div style="display:flex;gap:8px;align-items:center;padding:5px 0;border-bottom:1px solid var(--gray3);font-size:12px"><span>${a.icon}</span><div><div style="font-weight:600">${a.judul}</div><div style="font-size:10px;color:var(--gray)">${a.waktu}</div></div></div>`).join('')}
+    </div>
+    <div class="card">
+      <div class="card-title">Observasi Tadi</div>
+      <div class="timeline">
+        ${[['Arjuna: Kerja sama aktif saat diskusi','08:45 · LO-04'],['Siti: Bertanya kritis & mencatat','09:15 · LO-02'],['Hana: Identifikasi 7 spesies tumbuhan','09:30 · LO-05']].map(([t,m])=>`<div class="tl-item"><div class="tl-dot tl-dot-green"></div><div><div class="tl-text">${t}</div><div class="tl-time">${m}</div></div></div>`).join('')}
+      </div>
+    </div>
+  </div>
+</div>`,
+
+wali:()=>`
+<div class="page-header">
+  <h1 class="page-title">Halo, Pak Bimo 🌿</h1>
+  <p class="page-sub">Wali Kelas 6A · 22 Siswa</p>
+</div>
+<div class="stats-grid">
+  <div class="stat-card"><div class="stat-label">Siswa Kelas 6A</div><div class="stat-val">22</div></div>
+  <div class="stat-card"><div class="stat-label">Hadir Hari Ini</div><div class="stat-val" style="color:var(--green)">20</div><div class="stat-change">90.9%</div></div>
+  <div class="stat-card"><div class="stat-label">Tugas Aktif</div><div class="stat-val" style="color:var(--amber)">2</div></div>
+  <div class="stat-card"><div class="stat-label">Observasi LOA</div><div class="stat-val" style="color:var(--teal)">28</div><div class="stat-change">Bulan ini</div></div>
+</div>
+<div class="grid-2">
+  <div class="card">
+    <div class="card-title">Daftar Siswa Kelas 6A</div>
+    ${D.siswa.slice(0,6).map(s=>`<div class="student-item">${ava(s.name,s.gender==='P'?'var(--purple)':'var(--blue)')}<div style="flex:1"><div class="student-name">${s.name}</div><div class="student-info">${s.gender==='P'?'Perempuan':'Laki-laki'}</div></div><span class="badge ${s.att>=90?'badge-green':'badge-amber'}">${s.att}%</span></div>`).join('')}
+  </div>
+  <div class="card">
+    <div class="card-title">Capaian LOA Kelas 6A</div>
+    ${D.loa.map(o=>`<div class="progress-row"><div class="progress-label"><span style="font-size:11px">${o.name}</span><span style="font-size:11px;font-weight:700;color:${o.pct>=80?'var(--green)':'var(--amber)'}">${o.pct}%</span></div><div class="progress-bar"><div class="progress-fill" style="width:${o.pct}%"></div></div></div>`).join('')}
+  </div>
+</div>`,
+
+siswa:()=>`
+<div class="page-header">
+  <h1 class="page-title">Halo, Arjuna! 🌱</h1>
+  <p class="page-sub">Kelas 6A · Senin, 2 Juni 2025</p>
+</div>
+<div class="stats-grid">
+  <div class="stat-card"><div class="stat-label">Kehadiranmu</div><div class="stat-val" style="color:var(--green)">95%</div><div class="stat-change stat-up">Sangat Baik!</div></div>
+  <div class="stat-card"><div class="stat-label">Rata-rata Nilai</div><div class="stat-val">88</div></div>
+  <div class="stat-card"><div class="stat-label">Tugas Aktif</div><div class="stat-val" style="color:var(--amber)">2</div><div class="stat-change">Segera kumpul!</div></div>
+  <div class="stat-card"><div class="stat-label">Item Portofolio</div><div class="stat-val" style="color:var(--teal)">${D.portofolio.length}</div></div>
+</div>
+<div class="grid-2">
+  <div class="card">
+    <div class="card-title">Kegiatan Hari Ini</div>
+    ${D.dailyplan.aktivitas.map(a=>`<div style="display:flex;gap:9px;align-items:center;padding:7px 0;border-bottom:1px solid var(--gray3)"><span style="font-size:18px">${a.icon}</span><div style="flex:1"><div style="font-size:13px;font-weight:600">${a.judul}</div><div style="font-size:11px;color:var(--gray)">${a.waktu}</div></div></div>`).join('')}
+  </div>
+  <div class="card">
+    <div class="card-title">Capaian LOA Kamu</div>
+    ${D.loa.slice(0,4).map(o=>`<div class="progress-row"><div class="progress-label"><span style="font-size:11px">${o.name}</span><span style="font-size:11px;font-weight:700;color:var(--green)">${o.pct-2}%</span></div><div class="progress-bar"><div class="progress-fill" style="width:${o.pct-2}%"></div></div></div>`).join('')}
+  </div>
+</div>
+<div class="card" style="margin-top:12px">
+  <div class="card-title">Portofoliomu Terbaru</div>
+  <div class="portfolio-grid">${D.portofolio.slice(0,4).map(p=>`<div class="portfolio-item"><div class="portfolio-thumb">${p.emoji}</div><div class="portfolio-caption">${p.judul}</div><div class="portfolio-date">${p.tgl}</div></div>`).join('')}</div>
+</div>`,
+
+ortu:()=>`
+<div class="page-header">
+  <h1 class="page-title">Halo, Pak Budi 👋</h1>
+  <p class="page-sub">Pantau perkembangan Arjuna</p>
+</div>
+<div class="stats-grid">
+  <div class="stat-card"><div class="stat-label">Kehadiran Arjuna</div><div class="stat-val" style="color:var(--green)">95%</div><div class="stat-change stat-up">Sangat Baik</div></div>
+  <div class="stat-card"><div class="stat-label">Rata-rata Nilai</div><div class="stat-val">88</div></div>
+  <div class="stat-card"><div class="stat-label">Tagihan SPP</div><div class="stat-val" style="color:var(--green)">Lunas</div><div class="stat-change stat-up">Juni 2025</div></div>
+  <div class="stat-card"><div class="stat-label">Laporan Harian</div><div class="stat-val" style="color:var(--teal)">Baru</div><div class="stat-change">2 Jun 2025</div></div>
+</div>
+<div class="grid-2">
+  <div class="card">
+    <div class="card-title">Laporan Harian Terbaru</div>
+    <div style="padding:12px;background:var(--green3);border-radius:var(--radius-sm);margin-bottom:10px">
+      <div style="font-size:10px;font-weight:700;color:var(--green);margin-bottom:3px">📅 SENIN, 2 JUNI 2025</div>
+      <div style="font-size:14px;font-weight:700;margin-bottom:5px">${D.dailyplan.tema}</div>
+      <div style="font-size:12px;color:var(--dark);line-height:1.6">Arjuna sangat antusias melakukan eksplorasi alam. Berhasil mengidentifikasi 7 spesies tumbuhan berbeda dan aktif memimpin diskusi kelompok.</div>
+    </div>
+    <div style="display:flex;gap:6px">
+      ${D.dailyplan.aktivitas.map(a=>`<div style="flex:1;text-align:center;padding:9px 4px;background:var(--gray2);border-radius:var(--radius-sm)"><div style="font-size:16px">${a.icon}</div><div style="font-size:9px;color:var(--gray);margin-top:2px">${a.tipe}</div></div>`).join('')}
+    </div>
+  </div>
+  <div>
+    <div class="card" style="margin-bottom:12px">
+      <div class="card-title">Capaian LOA Arjuna</div>
+      ${D.loa.slice(0,3).map(o=>`<div class="progress-row"><div class="progress-label"><span style="font-size:11px">${o.name}</span><span style="font-size:11px;font-weight:700;color:var(--green)">${o.pct}%</span></div><div class="progress-bar"><div class="progress-fill" style="width:${o.pct}%"></div></div></div>`).join('')}
+    </div>
+    <div class="card">
+      <div class="card-title">Tagihan Mendatang</div>
+      <div class="billing-item"><div class="billing-icon" style="background:var(--green3)">📋</div><div><div class="billing-name">SPP Juli 2025</div><div class="billing-date">Jatuh tempo: 10 Jul 2025</div></div><div class="billing-amount" style="color:var(--green)">Rp 1.500.000</div></div>
+    </div>
+  </div>
+</div>`,
+
+keuangan:()=>`
+<div class="page-header">
+  <h1 class="page-title">Dashboard Keuangan 💰</h1>
+  <p class="page-sub">Dewi Lestari — Staff Keuangan</p>
+</div>
+<div class="stats-grid">
+  <div class="stat-card"><div class="stat-label">Total Tagihan Jun</div><div class="stat-val" style="font-size:16px">Rp 370,5 Jt</div></div>
+  <div class="stat-card"><div class="stat-label">Terkumpul</div><div class="stat-val" style="font-size:16px;color:var(--green)">Rp 320 Jt</div><div class="stat-change stat-up">86.4%</div></div>
+  <div class="stat-card"><div class="stat-label">Belum Bayar</div><div class="stat-val" style="font-size:16px;color:var(--amber)">Rp 43 Jt</div><div class="stat-change">29 siswa</div></div>
+  <div class="stat-card"><div class="stat-label">Jatuh Tempo</div><div class="stat-val" style="font-size:16px;color:var(--red)">Rp 7,5 Jt</div><div class="stat-change">5 siswa</div></div>
+</div>
+<div class="grid-2">
+  <div class="card">
+    <div class="card-title">Tren Koleksi SPP 2025</div>
+    <div class="bar-chart">
+      ${[['Jan',95],['Feb',88],['Mar',92],['Apr',85],['Mei',90],['Jun',86]].map(([b,v])=>`<div class="bar-wrap"><span class="bar-val">${v}%</span><div class="bar" style="height:${v}px"></div><span class="bar-label">${b}</span></div>`).join('')}
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-title">Transaksi Terkini</div>
+    <div class="timeline">
+      ${[['Siti Aisyah bayar SPP Jun','10 menit lalu','tl-dot-green'],['Hana Dewi bayar SPP Jun','1 jam lalu','tl-dot-green'],['Tagihan Jun digenerate — 247 siswa','2 jam lalu','tl-dot-blue'],['Rafi Andika jatuh tempo SPP Mei','3 jam lalu','tl-dot-red']].map(([t,ti,c])=>`<div class="tl-item"><div class="tl-dot ${c}"></div><div><div class="tl-text">${t}</div><div class="tl-time">${ti}</div></div></div>`).join('')}
+    </div>
+  </div>
+</div>`,
+
+panitia:()=>`
+<div class="page-header">
+  <h1 class="page-title">Dashboard Panitia Event 🎉</h1>
+  <p class="page-sub">Pak Rudi Santoso — Koordinator Event</p>
+</div>
+<div class="stats-grid">
+  <div class="stat-card"><div class="stat-label">Event Aktif</div><div class="stat-val" style="color:var(--blue)">4</div></div>
+  <div class="stat-card"><div class="stat-label">Total Peserta</div><div class="stat-val">312</div></div>
+  <div class="stat-card"><div class="stat-label">Event Selesai</div><div class="stat-val" style="color:var(--green)">1</div></div>
+  <div class="stat-card"><div class="stat-label">Event Bulan Ini</div><div class="stat-val" style="color:var(--amber)">2</div></div>
+</div>
+<div class="grid-2">
+  <div class="card">
+    <div class="card-title">Status Event</div>
+    ${D.events.map(e=>`<div style="display:flex;align-items:center;gap:9px;padding:9px;border-radius:var(--radius-sm);margin-bottom:5px;background:var(--gray2)"><span style="font-size:20px">${e.emoji}</span><div style="flex:1"><div style="font-size:13px;font-weight:700">${e.name}</div><div style="font-size:11px;color:var(--gray)">${e.date} · 👥 ${e.peserta}</div></div>${badge(e.status)}</div>`).join('')}
+  </div>
+  <div class="card">
+    <div class="card-title">Checklist Market Day (15 Jun)</div>
+    ${[['Koordinasi venue & dekorasi','✅','Selesai'],['Registrasi peserta (siswa)','✅','Selesai'],['Registrasi pengunjung','🔄','Berjalan'],['Persiapan booth siswa','⏳','Menunggu'],['Briefing panitia','⏳','Menunggu'],['Dokumentasi acara','⏳','Menunggu']].map(([t,s,l])=>`<div style="display:flex;align-items:center;gap:8px;padding:7px 0;border-bottom:1px solid var(--gray3);font-size:12px"><span>${s}</span><div style="flex:1">${t}</div><span style="font-size:10px;color:var(--gray)">${l}</span></div>`).join('')}
+  </div>
+</div>`,
+
+auditor:()=>`
+<div class="page-header">
+  <h1 class="page-title">Dashboard Audit Internal 🛡️</h1>
+  <p class="page-sub">Hadi Nugroho — Auditor Internal</p>
+</div>
+<div class="stats-grid">
+  <div class="stat-card"><div class="stat-label">Log Aktivitas Hari Ini</div><div class="stat-val">${D.auditLogs.length}</div></div>
+  <div class="stat-card"><div class="stat-label">Login Aktif</div><div class="stat-val" style="color:var(--green)">18</div></div>
+  <div class="stat-card"><div class="stat-label">Perubahan Data</div><div class="stat-val" style="color:var(--amber)">4</div></div>
+  <div class="stat-card"><div class="stat-label">Anomali Terdeteksi</div><div class="stat-val" style="color:var(--red)">0</div><div class="stat-change stat-up">Aman</div></div>
+</div>
+<div class="card">
+  <div class="card-title">Audit Log Terbaru</div>
+  ${D.auditLogs.map(l=>`<div class="audit-row"><div class="audit-time">${l.time}</div><div class="audit-user">${l.user}</div><div>${badge(l.action)}</div><div class="audit-target">${l.target}</div><div style="font-size:10px;color:var(--gray);min-width:90px">${l.tbl}</div></div>`).join('')}
+</div>`,
+
+};
+
+// ============================================================
+// SHARED PAGES
+// ============================================================
+function pgStudents(){return`
+<div class="page-header" style="display:flex;align-items:center;justify-content:space-between">
+  <div><h1 class="page-title">Data Siswa</h1><p class="page-sub">${D.siswa.length} dari 247 siswa aktif</p></div>
+  <button class="btn btn-primary">+ Tambah Siswa</button>
+</div>
+<div class="card">
+  <div style="display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap">
+    <input class="form-input" style="max-width:220px" placeholder="🔍 Cari nama siswa...">
+    <select class="form-input" style="max-width:130px"><option>Semua Kelas</option>${D.kelas.map(k=>`<option>${k.name}</option>`).join('')}</select>
+    <select class="form-input" style="max-width:130px"><option>Semua Status</option><option>Aktif</option></select>
+  </div>
+  <table class="data-table">
+    <thead><tr><th>ID</th><th>Nama Siswa</th><th>Kelas</th><th>Orang Tua</th><th>Kehadiran</th><th>Avg Nilai</th><th>Status</th><th>Aksi</th></tr></thead>
+    <tbody>${D.siswa.map(s=>`<tr>
+      <td style="color:var(--gray);font-size:10px">${s.id}</td>
+      <td><div style="display:flex;align-items:center;gap:8px">${ava(s.name,s.gender==='P'?'var(--purple)':'var(--blue)')}<div><div style="font-weight:600">${s.name}</div><div style="font-size:10px;color:var(--gray)">${s.gender==='P'?'Perempuan':'Laki-laki'}</div></div></div></td>
+      <td>${badge(s.kelas.replace(/\w+/,'badge-blue')||s.kelas)}<span class="badge badge-blue">${s.kelas}</span></td>
+      <td style="font-size:11px;color:var(--gray)">${s.ortu}</td>
+      <td><span class="badge ${s.att>=90?'badge-green':s.att>=80?'badge-amber':'badge-red'}">${s.att}%</span></td>
+      <td><strong>${s.avg}</strong></td>
+      <td>${badge(s.status)}</td>
+      <td><button class="btn btn-outline btn-sm">Detail</button></td>
+    </tr>`).join('')}</tbody>
+  </table>
+</div>`;}
+
+function pgTeachers(){return`
+<div class="page-header" style="display:flex;align-items:center;justify-content:space-between">
+  <div><h1 class="page-title">Data Guru / Fasilitator</h1><p class="page-sub">${D.guru.length} guru aktif</p></div>
+  <button class="btn btn-primary">+ Tambah Guru</button>
+</div>
+<div class="grid-2">
+  ${D.guru.map(g=>`<div class="card" style="display:flex;align-items:center;gap:12px">
+    ${ava(g.name,'var(--green)',44)}
+    <div style="flex:1">
+      <div style="font-weight:700;font-size:14px">${g.name}</div>
+      <div style="font-size:12px;color:var(--gray)">${g.mapel}</div>
+      <div style="margin-top:5px;display:flex;gap:5px;flex-wrap:wrap">${g.kelas.split(',').map(k=>`<span class="badge badge-teal">${k.trim()}</span>`).join('')}</div>
+    </div>
+    ${badge(g.status)}
+  </div>`).join('')}
+</div>`;}
+
+function pgClasses(){return`
+<div class="page-header"><h1 class="page-title">Manajemen Kelas</h1><p class="page-sub">Kelas aktif tahun ajaran 2024/2025</p></div>
+<div class="grid-2">
+  ${D.kelas.map(k=>`<div class="card">
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px">
+      <div><h3 style="font-size:17px;font-weight:700;font-family:var(--serif)">${k.name}</h3><p style="font-size:11px;color:var(--gray)">📍 ${k.ruang}</p></div>
+      ${badge('Aktif')}
+    </div>
+    <div style="display:flex;gap:16px;margin-bottom:10px">
+      <div><div style="font-size:11px;color:var(--gray)">Wali Kelas</div><div style="font-size:13px;font-weight:600">${k.guru}</div></div>
+      <div><div style="font-size:11px;color:var(--gray)">Siswa</div><div style="font-size:22px;font-weight:700;color:var(--green)">${k.siswa}</div></div>
+    </div>
+    <button class="btn btn-outline btn-sm" style="width:100%">Detail Kelas</button>
+  </div>`).join('')}
+</div>`;}
+
+function pgEvents(){return`
+<div class="page-header" style="display:flex;align-items:center;justify-content:space-between">
+  <div><h1 class="page-title">Event Sekolah</h1><p class="page-sub">${D.events.filter(e=>e.status==='Upcoming').length} event mendatang</p></div>
+  <button class="btn btn-primary">+ Buat Event</button>
+</div>
+<div class="grid-3">
+  ${D.events.map(e=>`<div class="event-card">
+    <div class="event-thumb" style="background:linear-gradient(135deg,var(--green3),var(--teal2))">${e.emoji}</div>
+    <div class="event-body">
+      <div class="event-title">${e.name}</div>
+      <div class="event-meta">📅 ${e.date}</div>
+      <div class="event-meta">👥 ${e.peserta} peserta</div>
+      <div class="event-meta" style="margin-top:3px;font-size:10px;color:var(--gray)">${e.desc}</div>
+      <div class="event-footer">${badge(e.status)}<button class="btn btn-outline btn-sm">Detail</button></div>
+    </div>
+  </div>`).join('')}
+</div>`;}
+
+function pgBilling(){return`
+<div class="page-header" style="display:flex;align-items:center;justify-content:space-between">
+  <div><h1 class="page-title">Manajemen Tagihan</h1></div>
+  <button class="btn btn-primary">+ Generate Tagihan</button>
+</div>
+<div class="card">
+  <div style="display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap">
+    <input class="form-input" style="max-width:200px" placeholder="🔍 Cari siswa...">
+    <select class="form-input" style="max-width:140px"><option>Semua Status</option><option>Lunas</option><option>Belum Bayar</option><option>Jatuh Tempo</option></select>
+    <select class="form-input" style="max-width:140px"><option>Juni 2025</option><option>Mei 2025</option></select>
+  </div>
+  <table class="data-table">
+    <thead><tr><th>ID</th><th>Siswa</th><th>Jenis</th><th>Jumlah</th><th>Status</th><th>Tgl Bayar</th><th>Aksi</th></tr></thead>
+    <tbody>${D.tagihan.map(t=>`<tr>
+      <td style="font-size:10px;color:var(--gray)">${t.id}</td>
+      <td><strong>${t.siswa}</strong></td>
+      <td style="font-size:11px">${t.jenis}</td>
+      <td style="font-weight:700">${fmt(t.amount)}</td>
+      <td>${badge(t.status)}</td>
+      <td style="font-size:11px;color:var(--gray)">${t.tgl}</td>
+      <td><div style="display:flex;gap:4px"><button class="btn btn-outline btn-sm">Detail</button>${t.status!=='Lunas'?`<button class="btn btn-primary btn-sm">Verifikasi</button>`:''}</div></td>
+    </tr>`).join('')}</tbody>
+  </table>
+</div>`;}
+
+function pgFinanceDash(){return`
+<div class="page-header"><h1 class="page-title">Dashboard Keuangan</h1><p class="page-sub">Juni 2025</p></div>
+<div class="stats-grid">
+  <div class="stat-card"><div class="stat-label">Total Tagihan</div><div class="stat-val" style="font-size:16px">Rp 370,5 Jt</div></div>
+  <div class="stat-card"><div class="stat-label">Terkumpul</div><div class="stat-val" style="font-size:16px;color:var(--green)">Rp 320 Jt</div><div class="stat-change stat-up">86.4%</div></div>
+  <div class="stat-card"><div class="stat-label">Belum Bayar</div><div class="stat-val" style="font-size:16px;color:var(--amber)">Rp 43 Jt</div></div>
+  <div class="stat-card"><div class="stat-label">Jatuh Tempo</div><div class="stat-val" style="font-size:16px;color:var(--red)">Rp 7,5 Jt</div></div>
+</div>
+<div class="card">
+  <div class="card-title">Rekap Tagihan</div>
+  <table class="data-table">
+    <thead><tr><th>Siswa</th><th>Jenis</th><th>Jumlah</th><th>Status</th><th>Tgl Bayar</th></tr></thead>
+    <tbody>${D.tagihan.map(t=>`<tr><td><strong>${t.siswa}</strong></td><td style="font-size:11px">${t.jenis}</td><td style="font-weight:700">${fmt(t.amount)}</td><td>${badge(t.status)}</td><td style="font-size:11px;color:var(--gray)">${t.tgl}</td></tr>`).join('')}</tbody>
+  </table>
+</div>`;}
+
+function pgSchedule(){return`
+<div class="page-header"><h1 class="page-title">Jadwal Akademik</h1><p class="page-sub">Senin, 2 Juni 2025</p></div>
+<div class="grid-65">
+  <div class="card">
+    <div class="card-title">Jadwal Hari Ini</div>
+    ${D.jadwal.map(j=>`<div class="schedule-item"><div class="schedule-dot" style="background:${j.warna}"></div><div class="schedule-time">${j.waktu}</div><div style="flex:1"><div class="schedule-subject">${j.mapel}</div><div class="schedule-class">${j.kelas} · ${j.guru}</div></div></div>`).join('')}
+  </div>
+  <div>
+    <div class="card" style="margin-bottom:12px">
+      <div class="card-title">Kalender Juni 2025</div>
+      <div class="cal-mini">
+        ${['M','S','S','R','K','J','S'].map(d=>`<div class="day-name">${d}</div>`).join('')}
+        ${Array.from({length:30},(_,i)=>{const d=i+1;const c=d===2?'today':d%7===0||d%7===6?'has-event':'';return`<div class="day ${c}">${d}</div>`;}).join('')}
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title">Tambah Jadwal</div>
+      <div class="form-group"><label class="form-label">Mata Pelajaran</label><input class="form-input" placeholder="Nama mata pelajaran"></div>
+      <div class="form-row">
+        <div class="form-group"><label class="form-label">Kelas</label><select class="form-input">${D.kelas.map(k=>`<option>${k.name}</option>`).join('')}</select></div>
+        <div class="form-group"><label class="form-label">Waktu</label><input class="form-input" type="time" value="08:00"></div>
+      </div>
+      <button class="btn btn-primary" style="width:100%">Simpan Jadwal</button>
+    </div>
+  </div>
+</div>`;}
+
+function pgLOAGuru(){return`
+<div class="page-header"><h1 class="page-title">Observasi LOA</h1><p class="page-sub">Rekam Learning Outcome Assessment</p></div>
+<div class="grid-65">
+  <div class="card">
+    <div class="card-title">Observasi Bulan Ini</div>
+    <table class="data-table">
+      <thead><tr><th>Tgl</th><th>Siswa</th><th>Outcome</th><th>Level</th><th>Evidence</th><th>Status</th></tr></thead>
+      <tbody>
+        ${[['2 Jun','Arjuna Pratama','LO-04 Kerja Sama','Melampaui','📷 2 foto','Lengkap'],['2 Jun','Siti Aisyah','LO-02 Berpikir Kritis','Sesuai','📷 1 foto','Lengkap'],['1 Jun','Hana Dewi','LO-05 Cinta Lingkungan','Melampaui','🎥 1 video','Lengkap'],['1 Jun','Rafi Andika','LO-01 Mandiri','Berkembang','-','Perlu Evidence'],['31 Mei','Nayla Putri','LO-03 Kreativitas','Melampaui','📷 3 foto','Lengkap']].map(([d,s,o,l,e,st])=>`
+        <tr><td style="font-size:10px;color:var(--gray)">${d}</td><td><strong>${s}</strong></td><td style="font-size:11px;color:var(--teal)">${o}</td><td style="font-size:11px">${l}</td><td style="font-size:11px">${e}</td><td>${badge(st)}</td></tr>`).join('')}
+      </tbody>
+    </table>
+  </div>
+  <div class="card">
+    <div class="card-title">Input Observasi Baru</div>
+    <div class="form-group"><label class="form-label">Siswa</label><select class="form-input">${D.siswa.map(s=>`<option>${s.name}</option>`).join('')}</select></div>
+    <div class="form-group"><label class="form-label">Learning Outcome</label><select class="form-input">${D.loa.map(o=>`<option>${o.code} — ${o.name}</option>`).join('')}</select></div>
+    <div class="form-group"><label class="form-label">Deskripsi Observasi</label><textarea class="form-input" rows="3" placeholder="Tuliskan perilaku atau pencapaian yang diamati..."></textarea></div>
+    <div class="form-group"><label class="form-label">Level Capaian</label><select class="form-input"><option>Berkembang</option><option selected>Sesuai Harapan</option><option>Melampaui</option></select></div>
+    <div class="form-group"><label class="form-label">Upload Evidence</label><div class="evidence-zone">📎 Foto / Video / Dokumen<br><span style="font-size:10px">Maks 10MB</span></div></div>
+    <button class="btn btn-primary" style="width:100%">Simpan Observasi</button>
+  </div>
+</div>`;}
+
+function pgDailyReport(){return`
+<div class="page-header"><h1 class="page-title">Daily Report</h1><p class="page-sub">Laporan harian untuk orang tua</p></div>
+<div class="grid-2">
+  <div class="card">
+    <div class="card-title">Buat Laporan — 2 Jun 2025</div>
+    <div class="form-group"><label class="form-label">Kelas</label><select class="form-input">${D.kelas.slice(0,2).map(k=>`<option>${k.name}</option>`).join('')}</select></div>
+    <div class="form-group"><label class="form-label">Tema Hari Ini</label><input class="form-input" value="${D.dailyplan.tema}"></div>
+    <div class="form-group"><label class="form-label">Ringkasan Kegiatan</label><textarea class="form-input" rows="4">Hari ini siswa melakukan jalan alam mengobservasi ekosistem hutan kecil di sekitar sekolah. Dilanjutkan diskusi kelompok dan membuat peta konsep rantai makanan secara kreatif.</textarea></div>
+    <div class="form-group"><label class="form-label">Pencapaian Menonjol</label><textarea class="form-input" rows="2">Arjuna dan Siti mengidentifikasi 8 spesies tumbuhan. Diskusi berlangsung sangat aktif dan produktif.</textarea></div>
+    <div class="form-group"><label class="form-label">Rencana Besok</label><textarea class="form-input" rows="2">Presentasi hasil peta konsep dan refleksi pembelajaran.</textarea></div>
+    <div class="form-group"><label class="form-label">Foto Kegiatan</label><div class="evidence-zone">📷 Upload foto kegiatan (maks 5 foto)</div></div>
+    <div style="display:flex;gap:8px"><button class="btn btn-outline" style="flex:1">Simpan Draft</button><button class="btn btn-primary" style="flex:1">Publish ke Ortu</button></div>
+  </div>
+  <div class="card">
+    <div class="card-title">Laporan Sebelumnya</div>
+    ${[['1 Jun 2025','Rantai Makanan','Terkirim'],['30 Mei 2025','Keanekaragaman Hayati','Terkirim'],['29 Mei 2025','Energi Matahari','Terkirim'],['28 Mei 2025','Daur Air','Terkirim']].map(([d,t,s])=>`
+    <div style="display:flex;align-items:center;gap:9px;padding:9px;border-radius:var(--radius-sm);margin-bottom:5px;background:var(--gray2);cursor:pointer">
+      <div style="flex:1"><div style="font-size:13px;font-weight:600">${t}</div><div style="font-size:11px;color:var(--gray)">${d}</div></div>
+      ${badge('Aktif'.replace('Aktif',s))}
+      <button class="btn btn-outline btn-sm">Lihat</button>
+    </div>`).join('')}
+  </div>
+</div>`;}
+
+function pgRapor(){return`
+<div class="page-header"><h1 class="page-title">Rapor Siswa</h1><p class="page-sub">Semester 2 — Tahun Ajaran 2024/2025</p></div>
+<div style="display:flex;gap:8px;margin-bottom:14px">
+  <select class="form-input" style="max-width:140px">${D.kelas.map(k=>`<option>${k.name}</option>`).join('')}</select>
+  <select class="form-input" style="max-width:200px">${D.siswa.slice(0,5).map(s=>`<option>${s.name}</option>`).join('')}</select>
+</div>
+<div class="grid-65">
+  <div class="card">
+    <div style="display:flex;align-items:center;gap:14px;margin-bottom:18px;padding-bottom:14px;border-bottom:2px solid var(--green3)">
+      ${ava('Arjuna Pratama','var(--green)',50)}
+      <div><div style="font-size:17px;font-weight:700;font-family:var(--serif)">Arjuna Pratama</div>
+      <div style="font-size:12px;color:var(--gray)">Kelas 6A · Semester 2 · 2024/2025</div>
+      <div style="margin-top:5px;display:flex;gap:5px">${badge('Naik Kelas')}<span class="badge badge-blue">Kehadiran 95%</span></div></div>
+    </div>
+    <div class="card-title">Nilai Akademik</div>
+    ${[['Matematika Eksplorasi',87,'B+','Kemampuan berhitung kuat dan logis'],['Literasi & Bahasa',91,'A','Kosakata kaya, senang membaca & menulis'],['IPA Terpadu',88,'B+','Aktif dalam eksplorasi sains alam'],['Seni & Kreasi',85,'B','Kerajinan menarik dan unik'],['Alam & Lingkungan',94,'A','Sangat antusias, pengetahuan tinggi'],['Olahraga',82,'B','Aktif dan sportif']].map(([s,n,g,d])=>`
+    <div class="rapor-subject"><div class="rapor-name">${s}</div><div class="rapor-score">${n}</div><div class="rapor-grade">${g}</div><div class="rapor-desc">${d}</div></div>`).join('')}
+  </div>
+  <div>
+    <div class="card" style="margin-bottom:12px">
+      <div class="card-title">Capaian LOA</div>
+      ${D.loa.map(o=>`<div class="progress-row"><div class="progress-label"><span style="font-size:11px">${o.name}</span><span style="font-size:11px;font-weight:700;color:var(--green)">${o.pct}%</span></div><div class="progress-bar"><div class="progress-fill" style="width:${o.pct}%"></div></div></div>`).join('')}
+    </div>
+    <div class="card">
+      <div class="card-title">Catatan Wali Kelas</div>
+      <p style="font-size:12px;line-height:1.8;color:var(--dark)">Arjuna adalah siswa aktif dengan rasa ingin tahu tinggi terhadap alam. Mampu bekerja sama dengan baik dan sering memimpin diskusi kelompok. Ke depan perlu ditingkatkan konsistensi mengumpulkan tugas tepat waktu.</p>
+      <div style="margin-top:10px;padding-top:10px;border-top:1px solid var(--gray3);font-size:10px;color:var(--gray)">Wali Kelas: Pak Bimo Susanto · 30 Juni 2025</div>
+    </div>
+  </div>
+</div>`;}
+
+function pgAttendance(){return`
+<div class="page-header"><h1 class="page-title">Absensi Kelas</h1><p class="page-sub">Senin, 2 Juni 2025</p></div>
+<div class="grid-2">
+  <div class="card">
+    <div class="card-title">Kelas 6A — Input Absensi</div>
+    <table class="data-table">
+      <thead><tr><th>Siswa</th><th>Status</th><th>Keterangan</th></tr></thead>
+      <tbody>${D.siswa.slice(0,6).map((s,i)=>`<tr>
+        <td><div style="display:flex;align-items:center;gap:7px">${ava(s.name,'var(--green)',24)}<span style="font-size:12px;font-weight:600">${s.name}</span></div></td>
+        <td><select class="form-input" style="padding:3px 7px;font-size:11px;width:85px">
+          <option ${i!==2&&i!==4?'selected':''}>Hadir</option>
+          <option ${i===2?'selected':''}>Sakit</option>
+          <option ${i===4?'selected':''}>Izin</option>
+          <option>Alpha</option>
+        </select></td>
+        <td><input class="form-input" placeholder="Keterangan..." style="font-size:11px;padding:3px 7px"></td>
+      </tr>`).join('')}</tbody>
+    </table>
+    <button class="btn btn-primary" style="margin-top:10px;width:100%">Simpan Absensi</button>
+  </div>
+  <div class="card">
+    <div class="card-title">Rekap Kehadiran Bulan Ini</div>
+    <div class="bar-chart">
+      ${[['M1',88],['M2',95],['M3',92],['M4',85]].map(([w,v])=>`<div class="bar-wrap"><span class="bar-val">${v}%</span><div class="bar" style="height:${v}px"></div><span class="bar-label">${w}</span></div>`).join('')}
+    </div>
+    <div style="margin-top:14px">
+      <div class="card-title">Siswa Kehadiran Rendah</div>
+      ${D.siswa.filter(s=>s.att<85).map(s=>`<div style="display:flex;align-items:center;gap:8px;padding:6px 0;border-bottom:1px solid var(--gray3)">${ava(s.name,'var(--amber)',24)}<div style="flex:1"><div style="font-size:12px;font-weight:600">${s.name}</div><div style="font-size:10px;color:var(--gray)">${s.kelas}</div></div><span class="badge badge-amber">${s.att}%</span></div>`).join('')}
+    </div>
+  </div>
+</div>`;}
+
+function pgAssignment(){return`
+<div class="page-header" style="display:flex;align-items:center;justify-content:space-between">
+  <div><h1 class="page-title">Penugasan</h1></div>
+  <button class="btn btn-primary">+ Buat Tugas</button>
+</div>
+<div class="grid-2">
+  <div class="card">
+    <div class="card-title">Tugas Aktif</div>
+    ${[{judul:'Laporan Observasi Ekosistem',kelas:'6A',deadline:'5 Jun 2025',submit:18,total:22},
+       {judul:'Menggambar Rantai Makanan',kelas:'5B',deadline:'7 Jun 2025',submit:12,total:20},
+       {judul:'Esai Refleksi Alam',kelas:'6A',deadline:'10 Jun 2025',submit:5,total:22}].map(t=>`
+    <div style="padding:12px;background:var(--gray2);border-radius:var(--radius-sm);margin-bottom:8px">
+      <div style="font-size:13px;font-weight:700;margin-bottom:5px">${t.judul}</div>
+      <div style="display:flex;gap:7px;align-items:center;margin-bottom:6px"><span class="badge badge-blue">${t.kelas}</span><span style="font-size:10px;color:var(--gray)">⏰ ${t.deadline}</span></div>
+      <div class="progress-label" style="margin-bottom:3px"><span style="font-size:10px;color:var(--gray)">Pengumpulan</span><span style="font-size:10px;font-weight:700">${t.submit}/${t.total}</span></div>
+      <div class="progress-bar"><div class="progress-fill" style="width:${Math.round(t.submit/t.total*100)}%"></div></div>
+      <button class="btn btn-outline btn-sm" style="margin-top:7px">Lihat Pengumpulan</button>
+    </div>`).join('')}
+  </div>
+  <div class="card">
+    <div class="card-title">Buat Tugas Baru</div>
+    <div class="form-group"><label class="form-label">Judul Tugas</label><input class="form-input" placeholder="Nama penugasan..."></div>
+    <div class="form-row">
+      <div class="form-group"><label class="form-label">Kelas</label><select class="form-input">${D.kelas.map(k=>`<option>${k.name}</option>`).join('')}<option>Semua Kelas</option></select></div>
+      <div class="form-group"><label class="form-label">Deadline</label><input class="form-input" type="date" value="2025-06-10"></div>
+    </div>
+    <div class="form-group"><label class="form-label">Deskripsi</label><textarea class="form-input" placeholder="Jelaskan detail tugas..."></textarea></div>
+    <div class="form-group"><label class="form-label">Lampiran Materi</label><div class="evidence-zone">📎 Upload file materi</div></div>
+    <button class="btn btn-primary" style="width:100%">Buat Tugas</button>
+  </div>
+</div>`;}
+
+function pgAssessment(){return`
+<div class="page-header"><h1 class="page-title">Penilaian Akademik</h1></div>
+<div class="card">
+  <div style="display:flex;gap:8px;margin-bottom:12px">
+    <select class="form-input" style="max-width:150px"><option>Kelas 6A</option><option>Kelas 5B</option></select>
+    <select class="form-input" style="max-width:220px"><option>Laporan Observasi Ekosistem</option><option>Esai Refleksi Alam</option></select>
+  </div>
+  <table class="data-table">
+    <thead><tr><th>Siswa</th><th>Status Kumpul</th><th>Nilai</th><th>Predikat</th><th>Komentar Guru</th><th>Aksi</th></tr></thead>
+    <tbody>${D.siswa.slice(0,6).map((s,i)=>`<tr>
+      <td><strong>${s.name}</strong></td>
+      <td>${badge(i===2?'Belum Bayar':'Lunas'.replace('Lunas','Terkumpul').replace('Belum Bayar','Belum'))}</td>
+      <td><input class="form-input" style="width:55px;padding:3px 7px;font-size:12px" value="${i===2?'':s.avg}"></td>
+      <td>${i===2?'-':`<span class="badge ${s.avg>=85?'badge-green':s.avg>=70?'badge-amber':'badge-red'}">${s.avg>=85?'A':s.avg>=70?'B':'C'}</span>`}</td>
+      <td><input class="form-input" placeholder="Komentar..." style="font-size:11px;padding:3px 7px"></td>
+      <td><button class="btn btn-primary btn-sm">Simpan</button></td>
+    </tr>`).join('')}</tbody>
+  </table>
+</div>`;}
+
+function pgDailyPlan(){return`
+<div class="page-header"><h1 class="page-title">Learning Planning</h1></div>
+<div class="tabs">
+  <div class="tab active" onclick="switchTab(this,'tab-sem')">Semester Plan</div>
+  <div class="tab" onclick="switchTab(this,'tab-wk')">Weekly Plan</div>
+  <div class="tab" onclick="switchTab(this,'tab-day')">Daily Plan</div>
+</div>
+<div id="tab-sem" class="tab-content active">
+  <div class="card">
+    <div class="card-title">Semester Plan — Semester 2 2024/2025</div>
+    <table class="data-table">
+      <thead><tr><th>Bulan</th><th>Tema Besar</th><th>Learning Outcome</th><th>Status</th></tr></thead>
+      <tbody>${[['Januari','Air & Kehidupan','LO-05 Cinta Lingkungan','Selesai'],['Februari','Keberagaman Hayati','LO-02 Berpikir Kritis','Selesai'],['Maret','Energi Terbarukan','LO-03 Kreativitas','Selesai'],['April','Manusia & Alam','LO-01 Mandiri','Selesai'],['Mei','Hutan Hujan Tropis','LO-04 Kerja Sama','Selesai'],['Juni','Ekosistem Kota','LO-06 Literasi Digital','Berjalan']].map(([b,t,lo,s])=>`<tr><td><strong>${b}</strong></td><td>${t}</td><td style="font-size:11px;color:var(--teal)">${lo}</td><td>${badge(s)}</td></tr>`).join('')}</tbody>
+    </table>
+  </div>
+</div>
+<div id="tab-wk" class="tab-content">
+  <div class="card">
+    <div class="card-title">Weekly Plan — Minggu 1 Juni 2025</div>
+    ${['Senin','Selasa','Rabu','Kamis','Jumat'].map((d,i)=>`<div style="padding:9px 0;border-bottom:1px solid var(--gray3);display:flex;gap:10px;align-items:flex-start"><div style="min-width:65px;font-weight:700;font-size:12px;color:${i===0?'var(--green)':'var(--dark)'}">${d}</div><div><div style="font-size:13px;font-weight:600">${['Observasi Ekosistem Hutan','Diskusi & Analisis Data','Kreasi Peta Konsep','Presentasi Kelompok','Refleksi & Portfolio'][i]}</div><div style="font-size:11px;color:var(--gray)">${ ['Outdoor Learning · 6A','Kelas 6A & 5B','Kelas 6A','Semua Kelas','Refleksi Individual'][i]}</div></div></div>`).join('')}
+  </div>
+</div>
+<div id="tab-day" class="tab-content">
+  <div class="grid-2">
+    <div class="card">
+      <div class="card-title">Daily Plan — Senin 2 Juni 2025</div>
+      <div class="form-group"><label class="form-label">Tema</label><input class="form-input" value="${D.dailyplan.tema}"></div>
+      <div class="form-group"><label class="form-label">Kelas</label><select class="form-input">${D.kelas.slice(0,2).map(k=>`<option>${k.name}</option>`).join('')}</select></div>
+      <div class="form-group"><label class="form-label">Learning Outcome Target</label><select class="form-input">${D.loa.map(o=>`<option>${o.code} — ${o.name}</option>`).join('')}</select></div>
+      <div class="form-group"><label class="form-label">Tujuan Pembelajaran</label><textarea class="form-input">${D.dailyplan.tujuan}</textarea></div>
+      <button class="btn btn-primary" style="width:100%">Simpan Daily Plan</button>
+    </div>
+    <div class="card">
+      <div class="card-title">Aktivitas Terjadwal</div>
+      ${D.dailyplan.aktivitas.map(a=>`<div style="display:flex;gap:9px;align-items:flex-start;padding:10px;background:var(--gray2);border-radius:var(--radius-sm);margin-bottom:7px"><span style="font-size:18px">${a.icon}</span><div style="flex:1"><div style="font-size:12px;font-weight:600">${a.judul}</div><div style="font-size:10px;color:var(--gray)">${a.waktu} · <span class="badge badge-teal">${a.tipe}</span></div></div><button class="btn btn-outline btn-sm">Edit</button></div>`).join('')}
+      <button class="btn btn-outline" style="width:100%;margin-top:4px">+ Tambah Aktivitas</button>
+    </div>
+  </div>
+</div>`;}
+
+function pgDailyExec(){return`
+<div class="page-header"><h1 class="page-title">Daily Execution</h1><p class="page-sub">Kelas 6A · ${D.dailyplan.tema}</p></div>
+<div class="grid-65">
+  <div>
+    <div class="card" style="margin-bottom:12px">
+      <div class="card-title">Alur Aktivitas Hari Ini</div>
+      ${D.dailyplan.aktivitas.map((a,i)=>`<div style="display:flex;gap:10px;align-items:center;padding:9px;border-radius:var(--radius-sm);margin-bottom:5px;background:${i===0?'var(--green3)':'var(--gray2)'}"><div style="width:26px;height:26px;border-radius:50%;background:${i===0?'var(--green)':'var(--gray3)'};display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:${i===0?'#fff':'var(--gray)'};flex-shrink:0">${i+1}</div><span style="font-size:16px">${a.icon}</span><div style="flex:1"><div style="font-size:12px;font-weight:600;color:${i===0?'var(--green)':'var(--dark)'}">${a.judul}</div><div style="font-size:10px;color:var(--gray)">${a.waktu}</div></div><span class="badge ${i===0?'badge-green':'badge-gray'}">${i===0?'Berjalan':'Menunggu'}</span></div>`).join('')}
+    </div>
+    <div class="card">
+      <div class="card-title">Rekam Observasi Cepat</div>
+      <div class="form-group"><label class="form-label">Siswa</label><select class="form-input">${D.siswa.slice(0,6).map(s=>`<option>${s.name}</option>`).join('')}</select></div>
+      <div class="form-group"><label class="form-label">Learning Outcome</label><select class="form-input">${D.loa.map(o=>`<option>${o.code} — ${o.name}</option>`).join('')}</select></div>
+      <div class="form-group"><label class="form-label">Catatan</label><textarea class="form-input" rows="3" placeholder="Tuliskan perilaku yang diamati..."></textarea></div>
+      <div class="form-group"><label class="form-label">Evidence</label><div class="evidence-zone">📎 Upload foto/video</div></div>
+      <button class="btn btn-primary" style="width:100%">Simpan Observasi</button>
+    </div>
+  </div>
+  <div>
+    <div class="card" style="margin-bottom:12px">
+      <div class="card-title">Absensi Cepat — 6A</div>
+      <div class="att-grid">${D.siswa.slice(0,6).map((s,i)=>`<div title="${s.name}" class="att-dot att-${i===2?'s':i===4?'i':'h'}" style="width:34px;height:34px;font-size:9px">${s.name.split(' ').map(w=>w[0]).slice(0,2).join('')}</div>`).join('')}</div>
+      <div style="display:flex;gap:6px;margin-top:8px;font-size:11px"><span class="badge badge-green">H: 4</span><span class="badge badge-red">S: 1</span><span class="badge badge-amber">I: 1</span></div>
+    </div>
+    <div class="card">
+      <div class="card-title">Observasi Tadi</div>
+      <div class="timeline">
+        ${[['Arjuna: Kerja sama aktif saat diskusi kelompok','08:45 · LO-04'],['Siti: Aktif bertanya & mencatat temuan','09:15 · LO-02'],['Hana: Mengidentifikasi 7 spesies tumbuhan','09:30 · LO-05']].map(([t,m])=>`<div class="tl-item"><div class="tl-dot tl-dot-green"></div><div><div class="tl-text">${t}</div><div class="tl-time">${m}</div></div></div>`).join('')}
+      </div>
+    </div>
+  </div>
+</div>`;}
+
+function pgPortfolio(){return`
+<div class="page-header"><h1 class="page-title">Portofolio Siswa</h1><p class="page-sub">Arjuna Pratama · Kelas 6A</p></div>
+<div class="stats-grid">
+  <div class="stat-card"><div class="stat-label">Total Item</div><div class="stat-val">${D.portofolio.length}</div></div>
+  <div class="stat-card"><div class="stat-label">Bulan Ini</div><div class="stat-val" style="color:var(--green)">3</div></div>
+  <div class="stat-card"><div class="stat-label">LOA Terdokumentasi</div><div class="stat-val" style="color:var(--teal)">4</div></div>
+  <div class="stat-card"><div class="stat-label">Dipublish ke Ortu</div><div class="stat-val" style="color:var(--blue)">6</div></div>
+</div>
+<div class="card">
+  <div class="card-title">Koleksi Portofolio <span class="card-title-action">+ Tambah Item</span></div>
+  <div class="portfolio-grid">${D.portofolio.map(p=>`<div class="portfolio-item"><div class="portfolio-thumb">${p.emoji}</div><div class="portfolio-caption">${p.judul}</div><div class="portfolio-date">${p.tipe} · ${p.tgl}</div></div>`).join('')}</div>
+</div>`;}
+
+function pgProgress(){return`
+<div class="page-header"><h1 class="page-title">Progress Siswa</h1><p class="page-sub">Kelas 6A — perkembangan bulanan</p></div>
+<div class="card" style="margin-bottom:14px">
+  <div class="card-title">Tren Nilai Rata-rata Kelas 6A</div>
+  <div class="bar-chart">${[['Jan',82],['Feb',84],['Mar',83],['Apr',86],['Mei',87],['Jun',88]].map(([b,v])=>`<div class="bar-wrap"><span class="bar-val">${v}</span><div class="bar" style="height:${v*1.1}px"></div><span class="bar-label">${b}</span></div>`).join('')}</div>
+</div>
+<div class="card">
+  <div class="card-title">Progress Individual</div>
+  <table class="data-table">
+    <thead><tr><th>Siswa</th><th>Jan</th><th>Feb</th><th>Mar</th><th>Apr</th><th>Mei</th><th>Jun</th><th>Trend</th></tr></thead>
+    <tbody>${D.siswa.slice(0,6).map(s=>`<tr><td><strong>${s.name}</strong></td>${[s.avg-6,s.avg-4,s.avg-3,s.avg-2,s.avg-1,s.avg].map(v=>`<td>${v}</td>`).join('')}<td><span class="badge badge-green">↑</span></td></tr>`).join('')}</tbody>
+  </table>
+</div>`;}
+
+function pgMyClass(){return`
+<div class="page-header"><h1 class="page-title">Kelas 6A</h1><p class="page-sub">Ruang Pohon Beringin · 22 Siswa</p></div>
+<div class="stats-grid">
+  <div class="stat-card"><div class="stat-label">Total Siswa</div><div class="stat-val">22</div></div>
+  <div class="stat-card"><div class="stat-label">Rata-rata Nilai</div><div class="stat-val">88</div></div>
+  <div class="stat-card"><div class="stat-label">Kehadiran</div><div class="stat-val">94%</div><div class="stat-change stat-up">Target 90% ✓</div></div>
+  <div class="stat-card"><div class="stat-label">LOA Capaian</div><div class="stat-val">85%</div></div>
+</div>
+<div class="card">
+  <div class="card-title">Profil Siswa Kelas 6A</div>
+  <table class="data-table">
+    <thead><tr><th>Nama</th><th>Kehadiran</th><th>Avg Nilai</th><th>LOA</th><th>Portofolio</th><th>Aksi</th></tr></thead>
+    <tbody>${D.siswa.slice(0,6).map(s=>`<tr>
+      <td><div style="display:flex;align-items:center;gap:7px">${ava(s.name,s.gender==='P'?'var(--purple)':'var(--green)',24)}<strong>${s.name}</strong></div></td>
+      <td><span class="badge ${s.att>=90?'badge-green':'badge-amber'}">${s.att}%</span></td>
+      <td><strong>${s.avg}</strong></td>
+      <td><span class="badge badge-teal">85%</span></td>
+      <td><span class="badge badge-purple">6 item</span></td>
+      <td><button class="btn btn-outline btn-sm">Detail</button></td>
+    </tr>`).join('')}</tbody>
+  </table>
+</div>`;}
+
+// ============================================================
+// KEPALA SEKOLAH SPECIFIC PAGES
+// ============================================================
+function pgExecutive(){return`
+<div class="page-header"><h1 class="page-title">Laporan Eksekutif</h1><p class="page-sub">Semester 2 — Tahun Ajaran 2024/2025</p></div>
+<div class="stats-grid">
+  <div class="stat-card"><div class="stat-label">Total Pendapatan</div><div class="stat-val" style="font-size:16px;color:var(--green)">Rp 1,85 M</div><div class="stat-change stat-up">↑ 15% dari semester lalu</div></div>
+  <div class="stat-card"><div class="stat-label">Pengeluaran</div><div class="stat-val" style="font-size:16px;color:var(--blue)">Rp 1,32 M</div><div class="stat-change stat-up">↓ Efisiensi 8%</div></div>
+  <div class="stat-card"><div class="stat-label">Net Surplus</div><div class="stat-val" style="font-size:16px;color:var(--teal)">Rp 530 Jt</div><div class="stat-change stat-up">Sehat</div></div>
+  <div class="stat-card"><div class="stat-label">Capaian LOA</div><div class="stat-val" style="color:var(--purple)">83%</div><div class="stat-change stat-up">Target 80% ✓</div></div>
+</div>
+<div class="grid-2" style="margin-bottom:14px">
+  <div class="card">
+    <div class="card-title">Capaian per Kelas</div>
+    <table class="data-table">
+      <thead><tr><th>Kelas</th><th>Siswa</th><th>Kehadiran</th><th>Avg Nilai</th><th>LOA</th></tr></thead>
+      <tbody>${[['6A',22,'96%',88,'90%'],['5B',20,'93%',85,'87%'],['4A',21,'94%',82,'84%'],['3B',19,'95%',87,'88%'],['2A',18,'92%',80,'82%']].map(([k,s,h,n,l])=>`<tr><td><strong>${k}</strong></td><td>${s}</td><td><span class="badge badge-green">${h}</span></td><td>${n}</td><td>${l}</td></tr>`).join('')}</tbody>
+    </table>
+  </div>
+  <div class="card">
+    <div class="card-title">Realisasi Koleksi SPP per Bulan</div>
+    <div class="bar-chart">${[['Jan',95],['Feb',88],['Mar',92],['Apr',85],['Mei',90],['Jun',86]].map(([b,v])=>`<div class="bar-wrap"><span class="bar-val" style="font-size:8px">${v}%</span><div class="bar" style="height:${v}px"></div><span class="bar-label">${b}</span></div>`).join('')}</div>
+  </div>
+</div>
+<div class="card">
+  <div class="card-title">Ringkasan Capaian Learning Outcome Keseluruhan</div>
+  ${D.loa.map(o=>`<div class="progress-row"><div class="progress-label"><span>${o.name}</span><span style="font-weight:700;color:${o.pct>=80?'var(--green)':'var(--amber)'}">${o.pct}%</span></div><div class="progress-bar"><div class="progress-fill" style="width:${o.pct}%;background:${o.pct>=80?'var(--green)':'var(--amber)'}"></div></div></div>`).join('')}
+</div>`;}
+
+function pgMonitoring(){return`
+<div class="page-header"><h1 class="page-title">Monitoring Operasional</h1><p class="page-sub">Pantau kondisi real-time ERP</p></div>
+<div class="stats-grid" style="margin-bottom:14px">
+  ${[['Tagihan Jatuh Tempo','3','var(--red)'],['Absensi Rendah (<80%)','2 siswa','var(--amber)'],['LOA Belum Submit','8','var(--teal)'],['PPDB Menunggu','5','var(--blue)'],['Event Mendatang','4','var(--purple)'],['Pesan Orang Tua','12','var(--green)']].map(([l,v,col])=>`<div class="stat-card" style="border-left:3px solid ${col}"><div class="stat-label">${l}</div><div class="stat-val" style="color:${col}">${v}</div></div>`).join('')}
+</div>
+<div class="grid-2">
+  <div class="card">
+    <div class="card-title">Siswa Kehadiran di Bawah 80%</div>
+    <table class="data-table">
+      <thead><tr><th>Siswa</th><th>Kelas</th><th>Kehadiran</th><th>Aksi</th></tr></thead>
+      <tbody>
+        <tr><td>Zaki Firmansyah</td><td>4A</td><td><span class="badge badge-red">75%</span></td><td><button class="btn btn-outline btn-sm">Hubungi Ortu</button></td></tr>
+        <tr><td>Rafi Andika</td><td>5B</td><td><span class="badge badge-amber">79%</span></td><td><button class="btn btn-outline btn-sm">Hubungi Ortu</button></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="card">
+    <div class="card-title">Tagihan Overdue</div>
+    <table class="data-table">
+      <thead><tr><th>Siswa</th><th>Jumlah</th><th>Jatuh Tempo</th></tr></thead>
+      <tbody>
+        <tr><td>Rafi Andika</td><td style="color:var(--red);font-weight:700">${fmt(1500000)}</td><td><span class="badge badge-red">30 Mei</span></td></tr>
+        <tr><td>Zaki Firmansyah</td><td style="color:var(--red);font-weight:700">${fmt(1500000)}</td><td><span class="badge badge-red">30 Mei</span></td></tr>
+        <tr><td>Daffa Ramadhan</td><td style="color:var(--amber);font-weight:700">${fmt(1500000)}</td><td><span class="badge badge-amber">2 Jun</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>`;}
+
+function pgLOADash(){return`
+<div class="page-header"><h1 class="page-title">LOA Dashboard</h1><p class="page-sub">Capaian Learning Outcome Semester 2</p></div>
+<div class="stats-grid">
+  <div class="stat-card"><div class="stat-label">Total Outcome</div><div class="stat-val">6</div></div>
+  <div class="stat-card"><div class="stat-label">Observasi Bulan Ini</div><div class="stat-val" style="color:var(--green)">128</div><div class="stat-change stat-up">↑ 14%</div></div>
+  <div class="stat-card"><div class="stat-label">Evidence Terupload</div><div class="stat-val" style="color:var(--blue)">342</div><div class="stat-change">dari 400 target</div></div>
+  <div class="stat-card"><div class="stat-label">Rata-rata Capaian</div><div class="stat-val" style="color:var(--teal)">83%</div><div class="stat-change stat-up">Target 80% ✓</div></div>
+</div>
+<div class="card" style="margin-bottom:14px">
+  <div class="card-title">Capaian per Learning Outcome</div>
+  ${D.loa.map(o=>`<div class="progress-row"><div class="progress-label"><span><strong>${o.code}</strong> — ${o.name}</span><span style="font-weight:700;color:${o.pct>=80?'var(--green)':'var(--amber)'}">${o.pct}%</span></div><div class="progress-bar"><div class="progress-fill" style="width:${o.pct}%;background:${o.pct>=80?'var(--green)':'var(--amber)'}"></div></div></div>`).join('')}
+</div>
+<div class="grid-2">
+  <div class="card">
+    <div class="card-title">Observasi Terbaru</div>
+    <div class="timeline">
+      ${[['Arjuna — Kerja Sama Tim','Kelas 6A · 5 menit lalu','tl-dot-green'],['Siti — Kreativitas & Inovasi','Kelas 6A · 12 menit lalu','tl-dot-blue'],['Rafi — Berpikir Kritis','Kelas 5B · 1 jam lalu','tl-dot-amber'],['Nayla — Mandiri','Kelas 5B · 2 jam lalu','tl-dot-green']].map(([n,t,c])=>`<div class="tl-item"><div class="tl-dot ${c}"></div><div><div class="tl-text">${n}</div><div class="tl-time">${t}</div></div></div>`).join('')}
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-title">Evidence Belum Lengkap</div>
+    <table class="data-table">
+      <thead><tr><th>Siswa</th><th>Outcome</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td>Zaki F.</td><td style="font-size:11px">LO-02 Berpikir Kritis</td><td><span class="badge badge-amber">Perlu Evidence</span></td></tr>
+        <tr><td>Rafi A.</td><td style="font-size:11px">LO-01 Mandiri</td><td><span class="badge badge-amber">Perlu Evidence</span></td></tr>
+        <tr><td>Daffa R.</td><td style="font-size:11px">LO-06 Literasi Digital</td><td><span class="badge badge-amber">Perlu Evidence</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>`;}
+
+function pgSettings(){return`
+<div class="page-header"><h1 class="page-title">Pengaturan Sistem</h1></div>
+<div class="grid-2">
+  <div class="card">
+    <div class="card-title">Informasi Sekolah</div>
+    <div class="form-group"><label class="form-label">Nama Sekolah</label><input class="form-input" value="Sekolah Alam Nusantara"></div>
+    <div class="form-group"><label class="form-label">Tahun Ajaran Aktif</label><input class="form-input" value="2024/2025"></div>
+    <div class="form-group"><label class="form-label">Kepala Sekolah</label><input class="form-input" value="Dr. Hendra Wijaya"></div>
+    <div class="form-group"><label class="form-label">Alamat</label><textarea class="form-input">Jl. Hijau Daun No. 12, Bogor, Jawa Barat 16153</textarea></div>
+    <button class="btn btn-primary">Simpan Perubahan</button>
+  </div>
+  <div class="card">
+    <div class="card-title">Pengaturan Akademik</div>
+    <div class="form-group"><label class="form-label">Jam Masuk</label><input class="form-input" type="time" value="07:30"></div>
+    <div class="form-group"><label class="form-label">Jam Pulang</label><input class="form-input" type="time" value="14:30"></div>
+    <div class="form-group"><label class="form-label">Batas Kehadiran (%)</label><input class="form-input" type="number" value="80"></div>
+    <div class="form-group"><label class="form-label">KKM Default</label><input class="form-input" type="number" value="70"></div>
+    <div class="form-group"><label class="form-label">Semester Aktif</label><select class="form-input"><option>Semester 2</option><option>Semester 1</option></select></div>
+    <button class="btn btn-primary">Simpan</button>
+  </div>
+</div>`;}
+
+// ============================================================
+// ADMIN SPECIFIC
+// ============================================================
+function pgPPDB(){return`
+<div class="page-header" style="display:flex;align-items:center;justify-content:space-between">
+  <div><h1 class="page-title">PPDB — Penerimaan Peserta Didik Baru</h1><p class="page-sub">Tahun Ajaran 2025/2026</p></div>
+  <button class="btn btn-primary">+ Daftarkan Calon Siswa</button>
+</div>
+<div class="stats-grid">
+  <div class="stat-card"><div class="stat-label">Total Pendaftar</div><div class="stat-val">6</div></div>
+  <div class="stat-card"><div class="stat-label">Diterima</div><div class="stat-val" style="color:var(--green)">3</div></div>
+  <div class="stat-card"><div class="stat-label">Menunggu Proses</div><div class="stat-val" style="color:var(--amber)">2</div></div>
+  <div class="stat-card"><div class="stat-label">Ditolak</div><div class="stat-val" style="color:var(--red)">1</div></div>
+</div>
+<div class="card" style="margin-bottom:14px">
+  <table class="data-table">
+    <thead><tr><th>ID</th><th>Nama Calon Siswa</th><th>Kelas Tujuan</th><th>Tgl Daftar</th><th>Skor Seleksi</th><th>Status</th><th>Aksi</th></tr></thead>
+    <tbody>${D.ppdb.map(p=>`<tr>
+      <td style="font-size:10px;color:var(--gray)">${p.id}</td>
+      <td><strong>${p.name}</strong></td>
+      <td><span class="badge badge-blue">${p.kelas}</span></td>
+      <td style="font-size:11px;color:var(--gray)">${p.tgl}</td>
+      <td>${p.score>0?`<strong>${p.score}</strong>`:'-'}</td>
+      <td>${badge(p.status)}</td>
+      <td><div style="display:flex;gap:4px"><button class="btn btn-outline btn-sm">Detail</button>${p.status==='Wawancara'?`<button class="btn btn-primary btn-sm">Nilai</button>`:''}</div></td>
+    </tr>`).join('')}</tbody>
+  </table>
+</div>
+<div class="card">
+  <div class="card-title">Formulir Pendaftaran Calon Siswa Baru</div>
+  <div class="form-row">
+    <div class="form-group"><label class="form-label">Nama Lengkap</label><input class="form-input" placeholder="Nama calon siswa"></div>
+    <div class="form-group"><label class="form-label">Tempat, Tanggal Lahir</label><input class="form-input" placeholder="Jakarta, 10 Jan 2019"></div>
+  </div>
+  <div class="form-row">
+    <div class="form-group"><label class="form-label">Kelas Tujuan</label><select class="form-input"><option>Kelas 1</option><option>Kelas 2</option><option>Kelas 3</option></select></div>
+    <div class="form-group"><label class="form-label">Nama Orang Tua / Wali</label><input class="form-input" placeholder="Nama orang tua / wali"></div>
+  </div>
+  <div class="form-group"><label class="form-label">Nomor HP Orang Tua</label><input class="form-input" placeholder="08xx-xxxx-xxxx"></div>
+  <div class="form-group"><label class="form-label">Alamat</label><textarea class="form-input" placeholder="Alamat lengkap"></textarea></div>
+  <button class="btn btn-primary">Submit Pendaftaran</button>
+</div>`;}
+
+function pgUsers(){return`
+<div class="page-header" style="display:flex;align-items:center;justify-content:space-between">
+  <div><h1 class="page-title">Manajemen Pengguna</h1><p class="page-sub">Kelola akses dan role pengguna sistem</p></div>
+  <button class="btn btn-primary">+ Tambah Pengguna</button>
+</div>
+<div class="card">
+  <table class="data-table">
+    <thead><tr><th>Nama</th><th>Email</th><th>Role</th><th>Terakhir Login</th><th>Status</th><th>Aksi</th></tr></thead>
+    <tbody>${[['Dr. Hendra Wijaya','hendra@sekolahalam.id','Kepala Sekolah','2 jam lalu','Aktif'],['Ratna Sari, S.Pd','ratna@sekolahalam.id','Admin','1 jam lalu','Aktif'],['Ibu Sari Wulandari','sari@sekolahalam.id','Guru','30 menit lalu','Aktif'],['Pak Bimo Susanto','bimo@sekolahalam.id','Wali Kelas','Kemarin','Aktif'],['Dewi Lestari, S.E','dewi@sekolahalam.id','Staff Keuangan','3 jam lalu','Aktif'],['Pak Andi Kurniawan','andi@sekolahalam.id','Guru','2 hari lalu','Aktif'],['Pak Rudi Santoso','rudi@sekolahalam.id','Panitia Event','Kemarin','Aktif'],['Budi Pratama','budi@gmail.com','Orang Tua','1 minggu lalu','Aktif'],['Hadi Nugroho, S.H','hadi@sekolahalam.id','Auditor','Kemarin','Aktif']].map(([n,e,r,l,s])=>`
+    <tr>
+      <td><div style="display:flex;align-items:center;gap:7px">${ava(n,'var(--green)',26)}<strong>${n}</strong></div></td>
+      <td style="font-size:11px;color:var(--gray)">${e}</td>
+      <td><span class="badge badge-purple">${r}</span></td>
+      <td style="font-size:11px;color:var(--gray)">${l}</td>
+      <td>${badge(s)}</td>
+      <td><button class="btn btn-outline btn-sm">Edit</button></td>
+    </tr>`).join('')}</tbody>
+  </table>
+</div>`;}
+
+// ============================================================
+// SISWA SPECIFIC
+// ============================================================
+function pgJadwalSiswa(){return`
+<div class="page-header"><h1 class="page-title">Jadwalku</h1><p class="page-sub">Kelas 6A · Senin, 2 Juni 2025</p></div>
+<div class="card">
+  <div class="card-title">Jadwal Hari Ini</div>
+  ${D.jadwal.map(j=>`<div class="schedule-item"><div class="schedule-dot" style="background:${j.warna}"></div><div class="schedule-time">${j.waktu}</div><div><div class="schedule-subject">${j.mapel}</div><div class="schedule-class">${j.guru}</div></div></div>`).join('')}
+</div>`;}
+
+function pgTugasSiswa(){return`
+<div class="page-header"><h1 class="page-title">Tugas & Pengumpulan</h1></div>
+<div class="grid-2">
+  <div>
+    <div class="card" style="margin-bottom:12px">
+      <div class="card-title" style="color:var(--amber)">⚠️ Harus Dikumpulkan</div>
+      ${[{judul:'Laporan Observasi Ekosistem',deadline:'5 Jun 2025',mapel:'IPA Terpadu'},{judul:'Esai Refleksi Alam',deadline:'10 Jun 2025',mapel:'Literasi'}].map(t=>`
+      <div style="padding:11px;background:var(--amber2);border-radius:var(--radius-sm);margin-bottom:7px">
+        <div style="font-size:13px;font-weight:700">${t.judul}</div>
+        <div style="font-size:11px;color:var(--amber);margin-top:3px">⏰ Deadline: ${t.deadline} · ${t.mapel}</div>
+        <button class="btn btn-primary btn-sm" style="margin-top:7px">Kumpulkan Tugas</button>
+      </div>`).join('')}
+    </div>
+    <div class="card">
+      <div class="card-title" style="color:var(--green)">✅ Sudah Dikumpulkan</div>
+      ${[{judul:'Menggambar Rantai Makanan',tgl:'28 Mei',nilai:88},{judul:'Herbarium Tumbuhan',tgl:'20 Mei',nilai:92},{judul:'Poster Daur Ulang',tgl:'15 Mei',nilai:85}].map(t=>`
+      <div style="display:flex;align-items:center;gap:9px;padding:7px;background:var(--green3);border-radius:var(--radius-sm);margin-bottom:5px">
+        <div style="flex:1"><div style="font-size:12px;font-weight:600">${t.judul}</div><div style="font-size:10px;color:var(--gray)">Dikumpulkan ${t.tgl}</div></div>
+        <span class="badge badge-green">${t.nilai}</span>
+      </div>`).join('')}
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-title">Kumpulkan Tugas</div>
+    <div class="form-group"><label class="form-label">Pilih Tugas</label><select class="form-input"><option>Laporan Observasi Ekosistem</option><option>Esai Refleksi Alam</option></select></div>
+    <div class="form-group"><label class="form-label">Keterangan</label><textarea class="form-input" placeholder="Tuliskan keterangan..."></textarea></div>
+    <div class="form-group"><label class="form-label">Upload File</label><div class="evidence-zone">📎 Upload file tugasmu<br><span style="font-size:10px">PDF, DOC, JPG maks 10MB</span></div></div>
+    <button class="btn btn-primary" style="width:100%">Kumpulkan Sekarang</button>
+  </div>
+</div>`;}
+
+function pgMateri(){return`
+<div class="page-header"><h1 class="page-title">Materi Belajar</h1><p class="page-sub">LMS — Kelas 6A</p></div>
+<div class="grid-3">
+  ${[{e:'🌿',j:'Ekosistem Hutan Tropis',d:'Panduan lengkap ekosistem hutan hujan tropis',t:'PDF',u:'2.4 MB'},{e:'💧',j:'Siklus Air di Alam',d:'Animasi dan materi siklus air',t:'Video',u:'45 MB'},{e:'🐦',j:'Keanekaragaman Hayati',d:'Panduan identifikasi flora & fauna lokal',t:'PDF',u:'3.1 MB'},{e:'🌱',j:'Fotosintesis',d:'Percobaan fotosintesis sederhana',t:'Interaktif',u:'-'},{e:'♻️',j:'Daur Ulang & Lingkungan',d:'Video dan panduan aksi peduli lingkungan',t:'Video',u:'62 MB'},{e:'🔬',j:'Lab Alam Mini',d:'Panduan praktikum sains bahan alam',t:'PDF',u:'1.8 MB'}].map(m=>`
+  <div class="card" style="cursor:pointer">
+    <div style="font-size:30px;margin-bottom:9px">${m.e}</div>
+    <div style="font-size:13px;font-weight:700;margin-bottom:3px">${m.j}</div>
+    <div style="font-size:11px;color:var(--gray);margin-bottom:9px">${m.d}</div>
+    <div style="display:flex;justify-content:space-between;align-items:center"><span class="badge badge-blue">${m.t}</span><span style="font-size:10px;color:var(--gray)">${m.u}</span></div>
+  </div>`).join('')}
+</div>`;}
+
+function pgNilai(){return`
+<div class="page-header"><h1 class="page-title">Nilai & LOA</h1><p class="page-sub">Semester 2 · Arjuna Pratama</p></div>
+<div class="grid-2">
+  <div class="card">
+    <div class="card-title">Nilai Mata Pelajaran</div>
+    ${[['Matematika Eksplorasi',87,'B+'],['Literasi & Bahasa',91,'A'],['IPA Terpadu',88,'B+'],['Seni & Kreasi',85,'B'],['Alam & Lingkungan',94,'A'],['Olahraga',82,'B']].map(([s,n,g])=>`<div class="rapor-subject"><div class="rapor-name">${s}</div><div class="rapor-score">${n}</div><div class="rapor-grade">${g}</div></div>`).join('')}
+  </div>
+  <div class="card">
+    <div class="card-title">Capaian Learning Outcome Kamu</div>
+    ${D.loa.map(o=>`<div class="progress-row"><div class="progress-label"><span style="font-size:11px">${o.name}</span><span style="font-size:11px;font-weight:700;color:var(--green)">${o.pct}%</span></div><div class="progress-bar"><div class="progress-fill" style="width:${o.pct}%"></div></div></div>`).join('')}
+  </div>
+</div>`;}
+
+// ============================================================
+// ORANG TUA SPECIFIC
+// ============================================================
+function pgProfilAnak(){return`
+<div class="page-header"><h1 class="page-title">Profil Arjuna Pratama</h1></div>
+<div class="grid-2">
+  <div class="card">
+    <div style="text-align:center;padding:14px 0 18px;border-bottom:1px solid var(--gray3);margin-bottom:14px">
+      ${ava('Arjuna Pratama','var(--green)',60)}
+      <div style="font-size:17px;font-weight:700;font-family:var(--serif);margin-top:9px">Arjuna Pratama</div>
+      <div style="font-size:12px;color:var(--gray)">Kelas 6A · Laki-laki</div>
+      <div style="margin-top:7px">${badge('Aktif')}</div>
+    </div>
+    <table class="data-table">
+      <tbody>
+        <tr><td style="color:var(--gray)">Tempat Lahir</td><td>Jakarta</td></tr>
+        <tr><td style="color:var(--gray)">Tgl Lahir</td><td>12 Maret 2014</td></tr>
+        <tr><td style="color:var(--gray)">Orang Tua</td><td>Budi Pratama</td></tr>
+        <tr><td style="color:var(--gray)">Tahun Masuk</td><td>2020</td></tr>
+        <tr><td style="color:var(--gray)">Wali Kelas</td><td>Pak Bimo Susanto</td></tr>
+        <tr><td style="color:var(--gray)">No. Induk</td><td>2020-0012</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="card">
+    <div class="card-title">Tren Nilai Arjuna</div>
+    <div class="bar-chart">${[['S1/22',82],['S2/22',85],['S1/23',84],['S2/23',87],['S1/24',86],['S2/24',88]].map(([b,v])=>`<div class="bar-wrap"><span class="bar-val" style="font-size:8px">${v}</span><div class="bar" style="height:${v*0.9}px"></div><span class="bar-label" style="font-size:8px">${b}</span></div>`).join('')}</div>
+    <div class="card-title" style="margin-top:14px;margin-bottom:8px">Kehadiran per Semester</div>
+    ${[['Semester 1 2024','92%'],['Semester 2 2024','95%'],['Semester 1 2025','94%']].map(([s,k])=>`<div class="progress-row"><div class="progress-label"><span style="font-size:11px">${s}</span><span style="font-weight:700;color:var(--green)">${k}</span></div><div class="progress-bar"><div class="progress-fill" style="width:${k}"></div></div></div>`).join('')}
+  </div>
+</div>`;}
+
+function pgDailyOrtu(){return`
+<div class="page-header"><h1 class="page-title">Laporan Harian Arjuna</h1><p class="page-sub">Aktivitas harian dari sekolah</p></div>
+${[['Senin, 2 Jun 2025','Ekosistem Hutan Tropis','Arjuna sangat antusias melakukan eksplorasi alam. Berhasil mengidentifikasi 7 spesies tumbuhan dan aktif memimpin diskusi kelompok. Pengetahuan ekologinya semakin berkembang pesat.'],['Jumat, 30 Mei 2025','Keanekaragaman Hayati','Arjuna membuat poster yang sangat kreatif tentang rantai makanan. Kemampuan visualisasi dan presentasinya sangat menonjol hari ini.'],['Kamis, 29 Mei 2025','Energi Matahari','Partisipasi aktif dalam percobaan panel surya sederhana. Arjuna mengajukan banyak pertanyaan yang kritis dan mendorong diskusi kelompok.']].map(([d,t,isi])=>`
+<div class="card" style="margin-bottom:12px">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
+    <div><div style="font-size:13px;font-weight:700">${t}</div><div style="font-size:11px;color:var(--gray)">${d}</div></div>
+    ${badge('Terkirim')}
+  </div>
+  <p style="font-size:12px;line-height:1.8;color:var(--dark)">${isi}</p>
+  <div style="display:flex;gap:7px;margin-top:9px">
+    <button class="btn btn-outline btn-sm">💬 Balas</button>
+    <button class="btn btn-outline btn-sm">📷 Foto Kegiatan</button>
+  </div>
+</div>`).join('')}`;}
+
+function pgLOAOrtu(){return`
+<div class="page-header"><h1 class="page-title">LOA Arjuna Pratama</h1><p class="page-sub">Learning Outcome Assessment — Semester 2</p></div>
+<div class="card">
+  <div class="card-title">Capaian per Learning Outcome</div>
+  ${D.loa.map(o=>`
+  <div style="padding:12px;background:var(--gray2);border-radius:var(--radius-sm);margin-bottom:9px">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:7px">
+      <div><div style="font-size:13px;font-weight:700">${o.name}</div><div style="font-size:10px;color:var(--gray)">${o.code}</div></div>
+      <div style="font-size:22px;font-weight:700;color:${o.pct>=80?'var(--green)':'var(--amber)'}">${o.pct}%</div>
+    </div>
+    <div class="progress-bar"><div class="progress-fill" style="width:${o.pct}%;background:${o.pct>=80?'var(--green)':'var(--amber)'}"></div></div>
+    <div style="font-size:10px;color:var(--gray);margin-top:5px">${o.pct>=85?'🌟 Melampaui harapan':o.pct>=80?'✓ Sesuai harapan':'📈 Sedang berkembang'}</div>
+  </div>`).join('')}
+</div>`;}
+
+function pgTagihanOrtu(){return`
+<div class="page-header"><h1 class="page-title">Tagihan SPP</h1><p class="page-sub">Arjuna Pratama · Kelas 6A</p></div>
+<div class="card" style="margin-bottom:14px">
+  <div style="padding:14px;background:var(--green3);border-radius:var(--radius-sm);display:flex;align-items:center;gap:14px">
+    <div style="font-size:30px">✅</div>
+    <div><div style="font-size:15px;font-weight:700;color:var(--green)">Tagihan Bulan Ini: LUNAS</div><div style="font-size:12px;color:var(--gray)">SPP Juni 2025 · Dibayar 1 Juni 2025</div></div>
+  </div>
+</div>
+<div class="card">
+  <div class="card-title">Riwayat Pembayaran 2025</div>
+  ${[['Jun 2025','SPP Bulan Juni',1500000,'Lunas','1 Jun 2025'],['Mei 2025','SPP Bulan Mei',1500000,'Lunas','2 Mei 2025'],['Apr 2025','SPP Bulan April',1500000,'Lunas','1 Apr 2025'],['Mar 2025','SPP Bulan Maret',1500000,'Lunas','3 Mar 2025'],['Feb 2025','SPP Bulan Februari',1500000,'Lunas','1 Feb 2025'],['Jan 2025','SPP Bulan Januari',1500000,'Lunas','2 Jan 2025']].map(([b,d,a,s,t])=>`
+  <div class="pay-row">
+    <div class="pay-month">${b}</div>
+    <div class="pay-desc">${d}</div>
+    <div class="pay-amount">${fmt(a)}</div>
+    <div class="pay-status">${badge(s)}</div>
+    <div style="font-size:10px;color:var(--gray);min-width:75px">${t}</div>
+  </div>`).join('')}
+</div>`;}
+
+// ============================================================
+// KEUANGAN SPECIFIC
+// ============================================================
+function pgPayment(){return`
+<div class="page-header"><h1 class="page-title">Verifikasi Pembayaran</h1></div>
+<div class="card" style="margin-bottom:14px">
+  <div class="card-title">Menunggu Verifikasi</div>
+  ${[{siswa:'Arjuna Pratama',jenis:'SPP Jun',amount:1500000,bukti:'BCA_20250602.jpg',waktu:'08:30'},{siswa:'Nayla Putri',jenis:'SPP Jun',amount:1500000,bukti:'Mandiri_20250602.jpg',waktu:'09:15'},{siswa:'Bagas Saputra',jenis:'SPP Jun',amount:1500000,bukti:'BNI_20250602.jpg',waktu:'10:00'}].map(p=>`
+  <div style="display:flex;align-items:center;gap:12px;padding:12px;background:var(--amber2);border-radius:var(--radius-sm);margin-bottom:7px">
+    <div style="flex:1"><div style="font-weight:700">${p.siswa}</div><div style="font-size:11px;color:var(--gray)">${p.jenis} · ${p.waktu}</div><div style="font-size:11px;color:var(--blue);margin-top:2px">📎 ${p.bukti}</div></div>
+    <div style="font-size:15px;font-weight:700">${fmt(p.amount)}</div>
+    <div style="display:flex;gap:5px"><button class="btn btn-primary btn-sm">✓ Terima</button><button class="btn btn-outline btn-sm">✗ Tolak</button></div>
+  </div>`).join('')}
+</div>
+<div class="card">
+  <div class="card-title">Pembayaran Terverifikasi Hari Ini</div>
+  <table class="data-table">
+    <thead><tr><th>Siswa</th><th>Jenis</th><th>Jumlah</th><th>Waktu</th><th>Kode Bukti</th></tr></thead>
+    <tbody>${D.tagihan.filter(t=>t.status==='Lunas').map(t=>`<tr><td><strong>${t.siswa}</strong></td><td style="font-size:11px">${t.jenis}</td><td style="font-weight:700;color:var(--green)">${fmt(t.amount)}</td><td style="font-size:11px;color:var(--gray)">${t.tgl}</td><td style="font-size:11px;color:var(--gray)">RCPT-${t.id}</td></tr>`).join('')}</tbody>
+  </table>
+</div>`;}
+
+function pgCollection(){return`
+<div class="page-header"><h1 class="page-title">Rekapitulasi Keuangan</h1></div>
+<div class="grid-2">
+  <div class="card">
+    <div class="card-title">Koleksi per Kelas — Juni 2025</div>
+    <table class="data-table">
+      <thead><tr><th>Kelas</th><th>Siswa</th><th>Lunas</th><th>Belum</th><th>%</th></tr></thead>
+      <tbody>${[['6A',22,21,1,'95.5%'],['5B',20,18,2,'90%'],['4A',21,17,4,'81%'],['3B',19,18,1,'94.7%'],['2A',18,15,3,'83.3%']].map(([k,s,l,b,p])=>`<tr><td><strong>${k}</strong></td><td>${s}</td><td style="color:var(--green);font-weight:700">${l}</td><td style="color:var(--red)">${b}</td><td><span class="badge ${parseInt(p)>=90?'badge-green':'badge-amber'}">${p}</span></td></tr>`).join('')}</tbody>
+    </table>
+  </div>
+  <div class="card">
+    <div class="card-title">Summary Bulanan 2025</div>
+    ${[['Januari','Rp 350 Jt','95%','badge-green'],['Februari','Rp 340 Jt','88%','badge-amber'],['Maret','Rp 355 Jt','92%','badge-green'],['April','Rp 345 Jt','85%','badge-amber'],['Mei','Rp 360 Jt','90%','badge-green'],['Juni','Rp 370 Jt','86%','badge-amber']].map(([b,t,p,c])=>`
+    <div style="display:flex;align-items:center;gap:10px;padding:7px 0;border-bottom:1px solid var(--gray3)">
+      <div style="font-weight:600;min-width:75px;font-size:12px">${b}</div>
+      <div style="flex:1;font-size:13px;font-weight:700">${t}</div>
+      <span class="badge ${c}">${p}</span>
+    </div>`).join('')}
+  </div>
+</div>`;}
+
+// ============================================================
+// PANITIA SPECIFIC
+// ============================================================
+function pgEventReg(){return`
+<div class="page-header"><h1 class="page-title">Registrasi Peserta Event</h1></div>
+<div class="card" style="margin-bottom:14px">
+  <div style="display:flex;gap:8px;margin-bottom:12px">
+    <select class="form-input" style="max-width:220px"><option>Market Day — 15 Jun</option><option>Outbound Alam — 22 Jun</option></select>
+  </div>
+  <div class="stats-grid" style="margin-bottom:12px">
+    <div class="stat-card"><div class="stat-label">Terdaftar</div><div class="stat-val" style="color:var(--green)">142</div></div>
+    <div class="stat-card"><div class="stat-label">Kapasitas</div><div class="stat-val">200</div></div>
+    <div class="stat-card"><div class="stat-label">Sisa Slot</div><div class="stat-val" style="color:var(--amber)">58</div></div>
+  </div>
+  <table class="data-table">
+    <thead><tr><th>Peserta</th><th>Tipe</th><th>Tgl Daftar</th><th>Status</th></tr></thead>
+    <tbody>${[...D.siswa.slice(0,6).map(s=>({nama:s.name,tipe:'Siswa',tgl:'28 Mei'})),{nama:'Budi Pratama',tipe:'Orang Tua',tgl:'29 Mei'},{nama:'Ahmad Fauzi',tipe:'Orang Tua',tgl:'30 Mei'}].map(p=>`<tr><td><strong>${p.nama}</strong></td><td><span class="badge ${p.tipe==='Siswa'?'badge-blue':'badge-purple'}">${p.tipe}</span></td><td style="font-size:11px;color:var(--gray)">${p.tgl}</td><td>${badge('Aktif'.replace('Aktif','Terdaftar'))}</td></tr>`).join('')}</tbody>
+  </table>
+</div>`;}
+
+function pgEventExec(){return`
+<div class="page-header"><h1 class="page-title">Pelaksanaan Event</h1><p class="page-sub">Outing Class 5B — 18 Mei 2025 (Selesai)</p></div>
+<div class="grid-2">
+  <div class="card">
+    <div class="card-title">Absensi Peserta</div>
+    <table class="data-table">
+      <thead><tr><th>Peserta</th><th>Status</th><th>Check-in</th></tr></thead>
+      <tbody>${D.siswa.slice(2,8).map((s,i)=>`<tr><td><strong>${s.name}</strong></td><td>${badge('Aktif'.replace('Aktif','Hadir'))}</td><td style="font-size:11px;color:var(--gray)">07:${30+i*5}</td></tr>`).join('')}</tbody>
+    </table>
+  </div>
+  <div class="card">
+    <div class="card-title">Rundown Acara</div>
+    ${[['07:30','Kumpul & Briefing','✅'],['08:00','Perjalanan ke Kebun Raya','✅'],['09:00','Observasi & Eksplorasi','✅'],['11:00','Workshop Botani','✅'],['12:30','Makan Siang','✅'],['14:00','Perjalanan Pulang','✅']].map(([t,k,s])=>`<div style="display:flex;gap:9px;align-items:center;padding:7px 0;border-bottom:1px solid var(--gray3);font-size:12px"><span style="font-weight:600;color:var(--green);min-width:50px">${t}</span><span style="flex:1">${k}</span><span>${s}</span></div>`).join('')}
+  </div>
+</div>`;}
+
+function pgEventEval(){return`
+<div class="page-header"><h1 class="page-title">Evaluasi Event</h1><p class="page-sub">Outing Class 5B — Selesai</p></div>
+<div class="grid-2">
+  <div class="card">
+    <div class="card-title">Hasil Evaluasi</div>
+    <div class="stats-grid" style="margin-bottom:12px">
+      <div class="stat-card"><div class="stat-label">Kepuasan</div><div class="stat-val" style="color:var(--green)">4.6/5</div></div>
+      <div class="stat-card"><div class="stat-label">Peserta Hadir</div><div class="stat-val">20/22</div></div>
+    </div>
+    ${[['Kualitas Konten & Materi',92],['Koordinasi Panitia',88],['Keamanan & Kondisi',95],['Kepuasan Peserta',90]].map(([k,v])=>`<div class="progress-row"><div class="progress-label"><span style="font-size:11px">${k}</span><span style="font-weight:700;color:var(--green)">${v}%</span></div><div class="progress-bar"><div class="progress-fill" style="width:${v}%"></div></div></div>`).join('')}
+  </div>
+  <div class="card">
+    <div class="card-title">Input Evaluasi Panitia</div>
+    <div class="form-group"><label class="form-label">Yang Berjalan Baik</label><textarea class="form-input">Logistik transportasi sangat lancar, siswa sangat antusias.</textarea></div>
+    <div class="form-group"><label class="form-label">Yang Perlu Diperbaiki</label><textarea class="form-input">Waktu workshop terlalu singkat, perlu ditambah 30 menit.</textarea></div>
+    <div class="form-group"><label class="form-label">Rekomendasi Berikutnya</label><textarea class="form-input" placeholder="Saran untuk pelaksanaan selanjutnya..."></textarea></div>
+    <button class="btn btn-primary" style="width:100%">Submit Evaluasi</button>
+  </div>
+</div>`;}
+
+function pgEventReport(){return`
+<div class="page-header"><h1 class="page-title">Laporan Event</h1></div>
+<div class="card">
+  <div class="card-title">Rekap Seluruh Event</div>
+  <table class="data-table">
+    <thead><tr><th>Event</th><th>Tanggal</th><th>Peserta</th><th>Kepuasan</th><th>Status</th><th>Laporan</th></tr></thead>
+    <tbody>${D.events.map(e=>`<tr>
+      <td><div style="display:flex;align-items:center;gap:7px"><span>${e.emoji}</span><strong>${e.name}</strong></div></td>
+      <td style="font-size:11px;color:var(--gray)">${e.date}</td>
+      <td>${e.peserta}</td>
+      <td>${e.status==='Selesai'?'4.6/5':'-'}</td>
+      <td>${badge(e.status)}</td>
+      <td>${e.status==='Selesai'?`<button class="btn btn-outline btn-sm">Download</button>`:'-'}</td>
+    </tr>`).join('')}</tbody>
+  </table>
+</div>`;}
+
+// ============================================================
+// AUDITOR SPECIFIC
+// ============================================================
+function pgAuditTrail(){return`
+<div class="page-header"><h1 class="page-title">Audit Trail Lengkap</h1></div>
+<div class="card">
+  <div style="display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap">
+    <input class="form-input" style="max-width:180px" placeholder="🔍 Cari...">
+    <select class="form-input" style="max-width:130px"><option>Semua Aksi</option><option>CREATE</option><option>UPDATE</option><option>DELETE</option><option>APPROVE</option></select>
+    <select class="form-input" style="max-width:150px"><option>Semua Tabel</option><option>students</option><option>assessments</option><option>payments</option><option>events</option></select>
+    <input class="form-input" type="date" value="2025-06-02" style="max-width:155px">
+  </div>
+  <table class="data-table">
+    <thead><tr><th>Waktu</th><th>Pengguna</th><th>Aksi</th><th>Target</th><th>Tabel</th><th>Detail</th></tr></thead>
+    <tbody>${D.auditLogs.map(l=>`<tr>
+      <td style="font-size:11px;color:var(--gray)">${l.time}</td>
+      <td><strong>${l.user}</strong></td>
+      <td>${badge(l.action)}</td>
+      <td style="font-size:12px">${l.target}</td>
+      <td style="font-size:10px;color:var(--gray)">${l.tbl}</td>
+      <td><button class="btn btn-outline btn-sm">Lihat</button></td>
+    </tr>`).join('')}</tbody>
+  </table>
+</div>`;}
+
+function pgLoginAudit(){return`
+<div class="page-header"><h1 class="page-title">Login Audit</h1></div>
+<div class="card">
+  <table class="data-table">
+    <thead><tr><th>Waktu</th><th>Pengguna</th><th>Role</th><th>IP Address</th><th>Aksi</th><th>Status</th></tr></thead>
+    <tbody>${[['07:28','Dr. Hendra Wijaya','Kepala Sekolah','192.168.1.10','LOGIN','Berhasil'],['07:35','Ratna Sari','Admin','192.168.1.14','LOGIN','Berhasil'],['07:40','Ibu Sari Wulandari','Guru','192.168.1.22','LOGIN','Berhasil'],['07:45','Dewi Lestari','Staff Keuangan','192.168.1.30','LOGIN','Berhasil'],['08:00','Pak Bimo Susanto','Wali Kelas','192.168.1.25','LOGIN','Berhasil'],['09:12','Unknown','?','203.x.x.x','LOGIN','Gagal'],['10:30','Ratna Sari','Admin','192.168.1.14','LOGOUT','Berhasil'],['12:00','Dr. Hendra Wijaya','Kepala Sekolah','192.168.1.10','LOGOUT','Berhasil']].map(([t,n,r,ip,a,s])=>`
+    <tr>
+      <td style="font-size:11px;color:var(--gray)">${t}</td>
+      <td><strong>${n}</strong></td>
+      <td><span class="badge badge-purple">${r}</span></td>
+      <td style="font-size:11px;font-family:monospace">${ip}</td>
+      <td>${badge(a)}</td>
+      <td style="font-size:12px;color:${s==='Gagal'?'var(--red)':'var(--green)'};font-weight:600">${s}</td>
+    </tr>`).join('')}</tbody>
+  </table>
+</div>`;}
+
+function pgFinanceAudit(){return`
+<div class="page-header"><h1 class="page-title">Audit Keuangan</h1></div>
+<div class="stats-grid">
+  <div class="stat-card"><div class="stat-label">Total Transaksi Jun</div><div class="stat-val">247</div></div>
+  <div class="stat-card"><div class="stat-label">Nilai Total</div><div class="stat-val" style="font-size:15px">Rp 370,5 Jt</div></div>
+  <div class="stat-card"><div class="stat-label">Terverifikasi</div><div class="stat-val" style="color:var(--green)">214</div><div class="stat-change stat-up">86.4%</div></div>
+  <div class="stat-card"><div class="stat-label">Anomali</div><div class="stat-val" style="color:var(--green)">0</div><div class="stat-change stat-up">Aman</div></div>
+</div>
+<div class="card">
+  <div class="card-title">Log Transaksi Keuangan</div>
+  <table class="data-table">
+    <thead><tr><th>Waktu</th><th>Tipe</th><th>Siswa</th><th>Jumlah</th><th>Operator</th><th>Status</th></tr></thead>
+    <tbody>${D.tagihan.map(t=>`<tr>
+      <td style="font-size:11px;color:var(--gray)">${t.tgl}</td>
+      <td><span class="badge badge-blue">${t.status==='Lunas'?'PAYMENT':'BILLING'}</span></td>
+      <td><strong>${t.siswa}</strong></td>
+      <td style="font-weight:700">${fmt(t.amount)}</td>
+      <td style="font-size:11px;color:var(--gray)">Dewi Lestari</td>
+      <td>${badge(t.status)}</td>
+    </tr>`).join('')}</tbody>
+  </table>
+</div>`;}
+
+function pgAcademicAudit(){return`
+<div class="page-header"><h1 class="page-title">Audit Akademik</h1></div>
+<div class="card">
+  <div class="card-title">Rekap Perubahan Data Akademik</div>
+  <table class="data-table">
+    <thead><tr><th>Waktu</th><th>Pengguna</th><th>Aksi</th><th>Data</th><th>Sebelum</th><th>Sesudah</th></tr></thead>
+    <tbody>${[['09:45','Ibu Sari','UPDATE','Nilai Arjuna','82','88'],['10:02','Ibu Ratna','UPDATE','Nilai Rafi','75','79'],['11:15','Ibu Ratna','CREATE','Observasi LOA','-','Kerja Sama: 88%'],['14:05','Pak Yoga','UPDATE','Daily Report Kelas 4A','Draft','Published'],['15:00','Pak Bimo','UPDATE','Jadwal 6A Senin','07:30','08:00']].map(([t,u,a,d,b,s])=>`
+    <tr>
+      <td style="font-size:11px;color:var(--gray)">${t}</td>
+      <td><strong>${u}</strong></td>
+      <td>${badge(a)}</td>
+      <td style="font-size:12px">${d}</td>
+      <td style="font-size:11px;color:var(--red)">${b}</td>
+      <td style="font-size:11px;color:var(--green)">${s}</td>
+    </tr>`).join('')}</tbody>
+  </table>
+</div>`;}
+
+function pgCompliance(){return`
+<div class="page-header"><h1 class="page-title">Kepatuhan Sistem</h1></div>
+<div class="grid-2">
+  <div class="card">
+    <div class="card-title">Status Kepatuhan</div>
+    ${[['Kelengkapan Data Siswa','98%','badge-green'],['LOA Evidence Terlengkapi','87%','badge-green'],['Pembayaran Terverifikasi','86%','badge-amber'],['Daily Report Terkirim','92%','badge-green'],['Audit Log Lengkap','100%','badge-green'],['Backup Data Terkini','100%','badge-green']].map(([k,v,b])=>`
+    <div style="display:flex;align-items:center;gap:9px;padding:7px 0;border-bottom:1px solid var(--gray3)">
+      <div style="flex:1;font-size:12px;font-weight:600">${k}</div>
+      <span class="badge ${b}">${v}</span>
+    </div>`).join('')}
+  </div>
+  <div class="card">
+    <div class="card-title">Business Rules Check</div>
+    ${[['ADM-001: Kelengkapan dokumen PPDB','✅ Compliant'],['ADM-002: Siswa hanya didaftarkan setelah diterima','✅ Compliant'],['ACD-001: Nilai diinput setelah tugas dikumpulkan','✅ Compliant'],['LOA-001: Observasi wajib disertai evidence','⚠️ 8 observasi tanpa evidence'],['FIN-001: Tagihan lunas setelah verifikasi','✅ Compliant']].map(([r,s])=>`
+    <div style="display:flex;gap:9px;align-items:flex-start;padding:8px 0;border-bottom:1px solid var(--gray3)">
+      <div style="flex:1;font-size:11px">${r}</div>
+      <div style="font-size:10px;font-weight:700;color:${s.includes('⚠️')?'var(--amber)':'var(--green)'};min-width:110px;text-align:right">${s}</div>
+    </div>`).join('')}
+  </div>
+</div>`;}
+
+// ============================================================
+// INIT
+// ============================================================
+renderSidebar('kepala');
+navigateTo('dashboard');
+</script>
+</body>
+</html>

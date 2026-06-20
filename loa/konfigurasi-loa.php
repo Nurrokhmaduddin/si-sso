@@ -143,7 +143,7 @@
                           <th width="5%">No.</th>
                           <th>Keterangan</th>
                           <th width="35%">Batas Ketuntasan (Accomplished)</th>
-                          <th width="35%">Batas Standar (Threshold)</th>
+                          <th width="35%">Target Prodi (Threshold)</th>
                           <th width="15%"><center>Aksi</center></th>
                         </tr>
                       </thead>

@@ -131,7 +131,7 @@
 
 <!-- card-card refleksi -->
 <!-- Satu card besar -->
-  <div class="card">
+   <div class="card">
     <div class="card-header bg-primary text-white">
       <h5>Catatan & Evaluasi Kelas (utama & wajib diisi - Kolaboratif)<br></h5>
     <small>Deskripsi: Formulir ini mencatat evaluasi satu kelas yang Anda ampu. Hasil isian dibagikan ke seluruh tim pengampu satu kelas dan direkap untuk prodi.</small>
@@ -260,7 +260,7 @@
     <div class="card-footer">
       <button class="btn btn-primary">Simpan Catatan & Evaluasi</button>
     </div>
-  </div>
+  </div> 
 
 <!-- Satu card besar -->
 <div class="card">

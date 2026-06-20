@@ -475,16 +475,6 @@ function moduleColor($mod, $map) { return $map[$mod] ?? 'secondary'; }
 
 <?php include('5script.php'); ?>
 
-<!-- ── Select2 — searchable dropdown ─────────────────────────
-     AdminLTE sudah include jQuery, tinggal load Select2 di atas
-     Gunakan CDN jsDelivr (tersedia offline jika sudah cached)
-─────────────────────────────────────────────────────────────── -->
-<link rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css">
-<link rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/select2-bootstrap-5-theme@1.3.0/dist/select2-bootstrap-5-theme.min.css">
-<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-
 <script>
 // ══════════════════════════════════════════════════════════════
 // FILTER & SEARCH
@@ -577,9 +567,15 @@ function renderModalBody(res) {
     var lines = res.lines;
     var coa   = res.coa;
 
-    // Build COA optgroup sekali — dipakai ulang di semua baris
-    // urutan tipe: ASSET → LIABILITY → EQUITY → REVENUE → EXPENSE
-    var coaOptsGrouped = buildCoaOptgroups(coa, null);
+    // Build COA option list sekali pakai
+    var coaOpts = '<option value="">— Pilih COA —</option>';
+    coa.forEach(function(c) {
+        coaOpts += `<option value="${c.id}"
+            data-tipe="${c.tipe_akun}"
+            data-saldo="${c.saldo_normal}">
+            ${c.kode_akun} — ${c.nama_akun} (${c.saldo_normal})
+        </option>`;
+    });
 
     // ── Info Header Rule ──────────────────────────────────
     var headerHtml = `
@@ -712,8 +708,17 @@ function renderModalBody(res) {
                    </small>`
                 : '<span class="text-danger"><i class="fas fa-exclamation-triangle me-1"></i>Belum mapping</span>';
 
-            // Build option dengan optgroup + selected berdasarkan coa_id baris ini
-            var opts = buildCoaOptgroups(res.coa, ln.coa_id);
+            // Build option dengan selected
+            var opts = '<option value="">— Pilih COA —</option>';
+            res.coa.forEach(function(c) {
+                var sel = (String(c.id) === String(ln.coa_id)) ? 'selected' : '';
+                opts += `<option value="${c.id}"
+                    data-tipe="${c.tipe_akun}"
+                    data-saldo="${c.saldo_normal}"
+                    ${sel}>
+                    ${c.kode_akun} — ${c.nama_akun} (${c.saldo_normal})
+                </option>`;
+            });
 
             var mappingId = ln.mapping_id || 0;
 
@@ -794,31 +799,16 @@ function renderModalBody(res) {
 
     // Render ke modal
     $('#modalConfigBody').html(headerHtml + tableHtml);
-
-    // ── Inisialisasi Select2 di semua dropdown COA ────────
-    // Jalankan setelah DOM modal selesai dirender
-    setTimeout(function() {
-        $('#modalConfigBody .select-coa-new').each(function() {
-            $(this).select2({
-                theme       : 'bootstrap-5',
-                width       : '100%',
-                placeholder : '— Pilih COA —',
-                allowClear  : true,
-                dropdownParent: $('#modalConfig'),
-            });
-        });
-    }, 100);
 }
 
 // ══════════════════════════════════════════════════════════════
 // TAMPILKAN INFO SALDO NORMAL SAAT COA DROPDOWN BERUBAH
-// (kompatibel Select2 — pakai event delegasi ke document)
 // ══════════════════════════════════════════════════════════════
 $(document).on('change', '.select-coa-new', function() {
 
     var detailId  = $(this).data('detail-id');
     var $opt      = $(this).find('option:selected');
-    var saldo     = $opt.data('saldo') || $opt.attr('data-saldo') || '';
+    var saldo     = $opt.data('saldo') || '';
     var $infoBox  = $('#coa-info-' + detailId);
 
     if (!saldo) {
@@ -970,69 +960,4 @@ function saldoNormalBadge(saldo) {
     var i = saldo === 'CREDIT' ? 'fa-arrow-up': 'fa-arrow-down';
     return `<span class="badge ${c}"><i class="fas ${i} me-1"></i>${saldo}</span>`;
 }
-
-// ══════════════════════════════════════════════════════════════
-// HELPER: Build COA <optgroup> berdasarkan tipe_akun
-// Urutan: ASSET → LIABILITY → EQUITY → REVENUE → EXPENSE
-// selectedId: coa_id yang akan di-selected (null = tidak ada)
-// ══════════════════════════════════════════════════════════════
-function buildCoaOptgroups(coaList, selectedId) {
-
-    var order = ['ASSET', 'LIABILITY', 'EQUITY', 'REVENUE', 'EXPENSE'];
-
-    // Kelompokkan COA per tipe
-    var grouped = {};
-    order.forEach(function(t) { grouped[t] = []; });
-
-    coaList.forEach(function(c) {
-        var t = c.tipe_akun || 'ASSET';
-        if (!grouped[t]) grouped[t] = [];
-        grouped[t].push(c);
-    });
-
-    var html = '<option value="">— Pilih COA —</option>';
-
-    order.forEach(function(tipe) {
-        var items = grouped[tipe];
-        if (!items || items.length === 0) return;
-
-        // Label optgroup dengan warna berbeda per tipe
-        var tipeLabel = {
-            'ASSET'     : '📦 ASSET',
-            'LIABILITY' : '💳 LIABILITY',
-            'EQUITY'    : '💼 EQUITY',
-            'REVENUE'   : '📈 REVENUE',
-            'EXPENSE'   : '📉 EXPENSE',
-        }[tipe] || tipe;
-
-        html += `<optgroup label="${tipeLabel}">`;
-
-        items.forEach(function(c) {
-            var sel = selectedId && (String(c.id) === String(selectedId))
-                      ? 'selected' : '';
-            // Gunakan attr biasa + data-* untuk kompatibilitas Select2
-            html += `<option
-                value="${c.id}"
-                data-tipe="${escHtml(c.tipe_akun)}"
-                data-saldo="${escHtml(c.saldo_normal)}"
-                ${sel}>
-                ${escHtml(c.kode_akun)} — ${escHtml(c.nama_akun)} (${escHtml(c.saldo_normal)})
-            </option>`;
-        });
-
-        html += '</optgroup>';
-    });
-
-    return html;
-}
-
-// ── Destroy Select2 saat modal ditutup (cegah memory leak) ────
-$('#modalConfig').on('hidden.bs.modal', function() {
-    $('#modalConfigBody .select-coa-new').each(function() {
-        if ($(this).hasClass('select2-hidden-accessible')) {
-            $(this).select2('destroy');
-        }
-    });
-});
-
 </script>

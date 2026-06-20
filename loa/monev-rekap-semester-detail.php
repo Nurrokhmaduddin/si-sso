@@ -223,7 +223,107 @@
     </tr>
   </div>
 </div>
+--------
+<div class="card card-primary">
+  <div class="card-header bg-primary text-white">
+    <h5 class="card-title mb-0">Rekapan Catatan & Evaluasi Mata Kuliah ini</h5>
+    <small>Kolaboratif • Berdasarkan isian 13 dosen</small>
+  </div>
 
+  <div class="card-body">
+
+    <h6><strong>1. Capaian CPMK</strong></h6>
+    <p>🏆 Tercapai Kuat (9 dari 13 dosen)</p>
+
+    <h6><strong>2. Tingkat Partisipasi Mahasiswa</strong></h6>
+    <p>🏆 Aktif hingga Sangat Aktif (10 dari 13 dosen)</p>
+
+    <hr>
+
+    <h6><strong>3. Efektivitas Metode Pengajaran (Skala 1–5)</strong></h6>
+    <ul>
+      <li>Rata-rata skor: <strong>4.3</strong></li>
+      <li>Skor terbanyak: <strong>4</strong> (7 dosen)</li>
+      <li>Skor 5: 4 dosen</li>
+      <li>Skor 3: 2 dosen</li>
+    </ul>
+
+    <h6><strong>4. Kesesuaian Penilaian dengan Kemampuan Mahasiswa (Skala 1–5)</strong></h6>
+    <ul>
+      <li>Rata-rata skor: <strong>4.1</strong></li>
+      <li>Skor terbanyak: <strong>4</strong> (8 dosen)</li>
+      <li>Skor 5: 3 dosen</li>
+      <li>Skor 3: 2 dosen</li>
+    </ul>
+
+    <hr>
+
+    <h6><strong>5. Kendala Utama yang Paling Banyak Muncul</strong></h6>
+
+    <span class="badge badge-danger">Waktu Perkuliahan Terbatas (10)</span>
+    <span class="badge badge-warning">Materi Terlalu Padat (8)</span>
+    <span class="badge badge-info">Partisipasi Mahasiswa Tidak Merata (7)</span>
+    <span class="badge badge-secondary">Koneksi Internet (4)</span>
+    <span class="badge badge-secondary">Keterbatasan Perangkat Praktikum (3)</span>
+
+    <hr>
+
+    <h6><strong>6. Metode Pengajaran yang Dinilai Paling Efektif</strong></h6>
+
+    <span class="badge badge-success">Praktikum (11)</span>
+    <span class="badge badge-primary">Diskusi Kelompok (9)</span>
+    <span class="badge badge-info">Studi Kasus (8)</span>
+    <span class="badge badge-secondary">Project Based Learning (6)</span>
+    <span class="badge badge-light">Presentasi Mahasiswa (4)</span>
+
+    <hr>
+
+    <h6><strong>7. Ringkasan Dinamika Kelas</strong></h6>
+
+    <ul>
+      <li>Mayoritas dosen menilai mahasiswa menunjukkan peningkatan pemahaman pada pertengahan hingga akhir semester.</li>
+      <li>Mahasiswa lebih aktif ketika pembelajaran dikaitkan dengan studi kasus dan praktik langsung.</li>
+      <li>Beberapa kelompok mahasiswa masih mengalami kesulitan pada materi dasar yang menjadi prasyarat.</li>
+      <li>Tingkat kehadiran relatif baik, namun partisipasi diskusi belum merata di seluruh kelas.</li>
+      <li>Praktikum dinilai mampu meningkatkan pemahaman CPMK secara signifikan.</li>
+    </ul>
+
+    <hr>
+
+    <h6><strong>8. Rekomendasi Perbaikan Semester Berikutnya</strong></h6>
+
+    <ul>
+      <li>Menambah porsi praktikum dan latihan berbasis kasus nyata.</li>
+      <li>Menyediakan materi pengayaan untuk mahasiswa yang masih lemah pada konsep dasar.</li>
+      <li>Mengurangi kepadatan materi dalam satu pertemuan.</li>
+      <li>Menerapkan pre-test dan post-test untuk memonitor perkembangan capaian CPMK.</li>
+      <li>Meningkatkan aktivitas diskusi terstruktur dan tugas kelompok.</li>
+    </ul>
+
+    <hr>
+
+    <h6><strong>9. Insight Strategis Program Studi</strong></h6>
+
+    <div class="alert alert-light border">
+      <strong>Kesimpulan:</strong><br>
+      Berdasarkan masukan 13 dosen, proses pembelajaran dinilai berjalan baik dan CPMK mayoritas tercapai. 
+      Namun terdapat indikasi bahwa sebagian mahasiswa masih memerlukan penguatan konsep dasar sebelum memasuki materi lanjutan. 
+      Praktikum dan studi kasus terbukti menjadi pendekatan paling efektif untuk meningkatkan pemahaman mahasiswa.
+    </div>
+
+  </div>
+
+  <div class="card-footer d-flex justify-content-between">
+    <button class="btn btn-outline-secondary">
+      Export Rekap
+    </button>
+
+    <button class="btn btn-outline-primary">
+      Lihat Detail 13 Responden
+    </button>
+  </div>
+</div>
+--------
 <div class="card">
   <div class="card-body">
     <!-- tabel tren 3 periode -->  

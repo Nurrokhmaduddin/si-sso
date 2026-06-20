@@ -210,9 +210,9 @@ if ($persen == 100) {
     </div>
     <div class="card-body">
       <h6><strong>1. Capaian CPMK</strong></h6>
-      <p>🏆 Tercapai Kuat (2 dosen)</p>
+      <p>🏆 Tercapai Kuat (2 dari 3 dosen)</p>
       <h6><strong>2. Tingkat Partisipasi Mahasiswa</strong></h6>
-      <p>🏆 Sangat Aktif (1 dosen)</p>
+      <p>🏆 Sangat Aktif (3 dari 3 dosen)</p>
       <hr>
       <h6><strong>3. Efektivitas Metode Pengajaran (skala 1–5)</strong></h6>
       <ul>
@@ -250,12 +250,161 @@ if ($persen == 100) {
         <li>Dosen 3: Lebih banyak diskusi interaktif, sediakan modul latihan mandiri.</li>
       </ul>
     </div>
-    <!-- FOOTER -->
-    <!-- <div class="card-footer d-flex justify-content-between">
+    <div class="card-footer d-flex justify-content-between">
       <button class="btn btn-outline-secondary">Export Rekap</button>
-    </div> -->
+    </div>
   </div>
 
+<!-- CARD REKAP MASUKAN & INSIGHT PRODI -->
+<div class="card">
+  <div class="card-header">
+    <h3 class="card-title">
+      <i class="fas fa-chart-line mr-1"></i>
+      Ringkasan Kualitatif
+    </h3>
+    <div class="card-tools">
+      <small class="text-muted">Semester Ganjil 2025/2026</small>
+    </div>
+  </div>
+
+  <div class="card-header bg-warning text-white">
+    <h5>Rekap Masukan & Insight untuk Prodi</h5>
+    <small>Ringkasan dari 3 dosen</small>
+  </div>
+
+  <div class="card-body">
+
+    <!-- 1️⃣ Kesiapan Mahasiswa -->
+    <h6><strong>1. Kesiapan Mahasiswa</strong></h6>
+    <p>🏆 Cukup (2 dari 3 dosen)</p>
+    <hr>
+
+    <!-- 2️⃣ CPMK -->
+    <h6><strong>2. CPMK Tercapai</strong></h6>
+    <p>🏆 Tercapai Kuat (2 dari 3 dosen)</p>
+    <hr>
+
+    <!-- 3️⃣ Skor -->
+    <h6><strong>3. Skor Skala (Rata-rata Dosen)</strong></h6>
+    <ul>
+      <li>Kesiapan Mahasiswa : <strong>3.7 / 5</strong></li>
+      <li>Efektivitas Metode Pembelajaran : <strong>4.3 / 5</strong></li>
+    </ul>
+    <hr>
+
+    <!-- 4️⃣ Kurikulum -->
+    <h6><strong>4. Kesesuaian Kurikulum</strong></h6>
+
+    <span class="badge badge-danger">
+      Gap Materi Dasar Pemrograman (2)
+    </span>
+
+    <span class="badge badge-info">
+      Materi Tumpang Tindih (1)
+    </span>
+
+    <span class="badge badge-secondary">
+      CPMK Terlalu Luas (1)
+    </span>
+
+    <p class="mt-2">
+      <small>
+        Beberapa mahasiswa masih kesulitan mengikuti materi lanjutan karena
+        penguasaan konsep dasar belum merata.
+      </small>
+    </p>
+
+    <hr>
+
+    <!-- 5️⃣ Metode -->
+    <h6><strong>5. Metode Pembelajaran Paling Efektif</strong></h6>
+
+    <span class="badge badge-success">
+      Praktikum Langsung (3)
+    </span>
+
+    <span class="badge badge-primary">
+      Diskusi Kelompok (2)
+    </span>
+
+    <span class="badge badge-warning">
+      Project Based Learning (1)
+    </span>
+
+    <p class="mt-2">
+      <small>
+        Praktikum dan studi kasus nyata dinilai paling membantu mahasiswa
+        memahami capaian pembelajaran.
+      </small>
+    </p>
+
+    <hr>
+
+    <!-- 6️⃣ Insight -->
+    <h6><strong>6. Insight Evaluasi</strong></h6>
+    <small class="text-muted">3 responden</small>
+
+    <ul class="list-group mb-3">
+
+      <li class="list-group-item">
+        <strong>Dosen A - Pemrograman Web</strong><br>
+        Mahasiswa cukup aktif saat praktikum, namun masih kurang percaya diri
+        dalam menyelesaikan studi kasus secara mandiri.
+      </li>
+
+      <li class="list-group-item">
+        <strong>Dosen B - Basis Data</strong><br>
+        Sebagian mahasiswa belum menguasai konsep relasi tabel sehingga perlu
+        penguatan materi dasar pada awal semester.
+      </li>
+
+      <li class="list-group-item">
+        <strong>Dosen C - Analisis Sistem</strong><br>
+        Mahasiswa menunjukkan kemampuan analisis yang baik saat diskusi
+        kelompok dan presentasi proyek.
+      </li>
+
+    </ul>
+
+    <hr>
+
+    <!-- 7️⃣ Rekomendasi -->
+    <h6><strong>7. Rekomendasi & Action Plan</strong></h6>
+    <small class="text-muted">3 responden</small>
+
+    <ul class="list-group">
+
+      <li class="list-group-item">
+        <strong>Dosen A</strong><br>
+        Menambah sesi praktikum terstruktur pada minggu awal perkuliahan.
+      </li>
+
+      <li class="list-group-item">
+        <strong>Dosen B</strong><br>
+        Menyediakan modul pengayaan untuk materi basis data dasar sebelum
+        memasuki topik lanjutan.
+      </li>
+
+      <li class="list-group-item">
+        <strong>Dosen C</strong><br>
+        Memperbanyak tugas berbasis proyek dan studi kasus industri agar
+        mahasiswa lebih siap menghadapi dunia kerja.
+      </li>
+
+    </ul>
+
+  </div>
+
+  <div class="card-footer text-right">
+    <button class="btn btn-outline-success">
+      <i class="fas fa-download"></i> Unduh Rekap
+    </button>
+
+    <button class="btn btn-outline-info">
+      <i class="fas fa-comments"></i> Lihat Semua Masukan
+    </button>
+  </div>
+</div>
 
 <!-- ========== CARD MODERN: Refleksi Personal Dosen ========== -->
 <div class="card shadow-sm mb-3 collapse" >
