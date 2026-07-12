@@ -1,4 +1,4 @@
-<?php $page = 'monev_semester'; ?>
+<?php $page = 'monev_semester3'; ?>
 <?php include('1header.php'); ?>
 <?php include('2navbar.php'); ?>
 <?php include('3sidebar.php'); ?>

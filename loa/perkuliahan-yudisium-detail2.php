@@ -12,7 +12,7 @@
         <button type="button" class="btn btn-tool" data-bs-toggle="modal" data-bs-target="#modalBantuan" title="Bantuan"><i class="fas fa-question-circle"></i>
         </button> 
       </h3>
-        <p class="text-muted mb-0">Melalui halaman ini pengguna dapat membuat batch yudisium, mengelola daftar peserta, serta memantau status pelaksanaan yudisium.</p>
+        <p class="text-muted mb-0">Keterangan singkat cara baca informasi halaman ini</p>
     </div>
   </section>
 
@@ -33,31 +33,45 @@
               </div>
             </div> -->
 
-            <!-- <div class="card-body ">
+            <div class="card-body ">
               <div class="row">
                 <div class="col-md-6">
-                  <b>Periode:</b> 2023 &nbsp;
+                  <b>Tahun Akademik:</b> 2025/2026 &nbsp;
                 </div>                
                 <div class="col-md-6">
-                  <b>Status:</b> Aktif
+                  <b>Semester:</b> Genap
                 </div>
+                <div class="col-md-6">
+                  <b>Batch Yudisium:</b> Gelombang I &nbsp;
+                </div>  
+                <div class="col-md-6">
+                  <b>Status:</b> Aktif &nbsp;
+                </div>  
+                <div class="col-md-6">
+                  <b>Peserta:</b>  128 Mahasiswa &nbsp;
+                </div>  
               </div>
-            </div> -->
+            </div>
 
             <div class="card-footer">
               <div class="card-tools ms-auto">
+                <button type="button" 
+                class="btn btn-outline-secondary btn-sm"
+                onclick="window.location.href='perkuliahan-yudisium.php'">
+                <span class="fas fa-reply me-1"></span> Kembali
+              </button>
                 <!-- <button class="btn btn-outline-info btn-sm " data-bs-toggle="modal" data-bs-target="#modalFilter">
                   <i class="fas fa-filter me-1"></i> Filter
                 </button> -->
                 <button type="button" class="btn btn-outline-primary btn-sm " data-bs-toggle="modal" data-bs-target="#modalTambahData">
                   <i class="fas fa-plus me-1"></i> Add
                 </button>
-                <!-- <button type="button" class="btn btn-outline-primary btn-sm " data-bs-toggle="modal" data-bs-target="#modalImpor">
+                <button type="button" class="btn btn-outline-primary btn-sm " data-bs-toggle="modal" data-bs-target="#modalImpor">
                   <i class="fas fa-file-upload me-1"></i> Import
-                </button> -->                
-                <!-- <button type="button" class="btn btn-outline-success btn-sm">
+                </button>                
+                <button type="button" class="btn btn-outline-success btn-sm">
                   <i class="fas fa-file-download me-1"></i> Export
-                </button> -->
+                </button>
                 <!-- <button type="button" class="btn btn-outline-danger btn-sm">
                   <i class="fas fa-ban me-1"></i> Reset
                 </button>   -->  
@@ -66,7 +80,12 @@
 
           </div>
 
-
+  <!-- TAB NAV  -->
+  <ul class="nav nav-tabs">   
+    <li class="nav-item" onclick="window.location='perkuliahan-yudisium-detail.php'"><a class="nav-link ">Administrasi</a></li>
+    <li class="nav-item" onclick="window.location='perkuliahan-yudisium-detail2.php'"><a class="nav-link active">Hasil Yudisium</a>
+        <li class="nav-item" onclick="window.location='perkuliahan-yudisium-detail3.php'"><a class="nav-link ">Joined</a></li></li>
+  </ul>
 <!-- ========== CARD 3: Tabel saja ========== -->
           <div class="card">
             <!-- <div class="card-header d-flex align-items-center">
@@ -86,162 +105,121 @@
 
             <div class="card-body">
               <div class="table-responsive">
-<table class="table table1 table-bordered table-striped table-sm datatables1">
-    <thead>
-        <tr>
-            <th style="width: 5px;">No.</th>
-            <th>Tahun Akademik</th>
-            <th>Semester</th>
-            <th>Batch Yudisium</th>
-            <th>Tanggal Penetapan</th>
-            <th>Jumlah Mahasiswa</th>
-            <th>Status</th>
-            <th style="width: 180px;">Aksi</th>
-        </tr>
-    </thead>
+               <table class="table table-bordered table-striped datatables1">
+  <thead>
+    <tr>
+      <th>No</th>
+      <th>NIM</th>
+      <th>Nama Mahasiswa</th>
+      <th>IPK</th>
+      <th>SKS</th>
+      <th>Status Kelulusan</th>
+      <th>Predikat</th>
+    </tr>
+  </thead>
+<tbody>
 
-    <tbody>
+<tr>
+    <td>1</td>
+    <td>20521003</td>
+    <td>NAFASA CAHYA KHARIMAH</td>
+    <td>3.91</td>
+    <td>144</td>
+    <td><span class="badge badge-success">Lulus</span></td>
+    <td>Cumlaude</td>
+</tr>
 
-        <tr>
-            <td>1</td>
-            <td>2025/2026</td>
-            <td>Genap</td>
-            <td>Gelombang I</td>
-            <td>30 Juni 2026</td>
-            <td>128</td>
-            <td>
-                 <span class="badge badge-secondary">Selesai</span>
-            <td>
-                <button class="btn btn-sm btn-outline-info"
-                    onclick="window.location.href='perkuliahan-yudisium-detail.php'">
-                    📄 Mahasiswa
-                </button>
-                <button class="btn btn-sm btn-outline-primary"
-                    data-toggle="modal"
-                    data-target="#modalEditAkun">
-                    ✏️
-                </button>
-                <button class="btn btn-sm btn-outline-danger"
-                    data-toggle="modal"
-                    data-target="#modalHapusAkun">
-                    🗑️
-                </button>
-            </td>
-        </tr>
+<tr>
+    <td>2</td>
+    <td>20521071</td>
+    <td>ULYA NADHATUL SHIFA</td>
+    <td>3.84</td>
+    <td>146</td>
+    <td><span class="badge badge-success">Lulus</span></td>
+    <td>Cumlaude</td>
+</tr>
 
-        <tr>
-            <td>2</td>
-            <td>2025/2026</td>
-            <td>Genap</td>
-            <td>Gelombang II</td>
-            <td>15 Juli 2026</td>
-            <td>42</td>
-            <td>
-               <span class="badge badge-primary">Aktif</span>
-            </td>
-            <td>
-                <button class="btn btn-sm btn-outline-info"
-                    onclick="window.location.href='perkuliahan-yudisium-detail.php'">
-                    📄 Mahasiswa
-                </button>
-                <button class="btn btn-sm btn-outline-primary"
-                    data-toggle="modal"
-                    data-target="#modalEditAkun">
-                    ✏️
-                </button>
-                <button class="btn btn-sm btn-outline-danger"
-                    data-toggle="modal"
-                    data-target="#modalHapusAkun">
-                    🗑️
-                </button>
-            </td>
-        </tr>
+<tr>
+    <td>3</td>
+    <td>20521075</td>
+    <td>BAGUS RIDWAN WIBISONO</td>
+    <td>3.42</td>
+    <td>144</td>
+    <td><span class="badge badge-success">Lulus</span></td>
+    <td>Sangat Memuaskan</td>
+</tr>
 
-        <tr>
-            <td>3</td>
-            <td>2025/2026</td>
-            <td>Ganjil</td>
-            <td>Gelombang I</td>
-            <td>30 Januari 2026</td>
-            <td>115</td>
-            <td>
-                <span class="badge badge-secondary">Selesai</span>
-            </td>
-            <td>
-                <button class="btn btn-sm btn-outline-info"
-                    onclick="window.location.href='perkuliahan-yudisium-detail.php'">
-                    📄 Mahasiswa
-                </button>
-                <button class="btn btn-sm btn-outline-primary"
-                    data-toggle="modal"
-                    data-target="#modalEditAkun">
-                    ✏️
-                </button>
-                <button class="btn btn-sm btn-outline-danger"
-                    data-toggle="modal"
-                    data-target="#modalHapusAkun">
-                    🗑️
-                </button>
-            </td>
-        </tr>
+<tr>
+    <td>4</td>
+    <td>20521078</td>
+    <td>KHARIS MUSYAFA</td>
+    <td>3.27</td>
+    <td>145</td>
+    <td><span class="badge badge-success">Lulus</span></td>
+    <td>Sangat Memuaskan</td>
+</tr>
 
-        <tr>
-            <td>4</td>
-            <td>2024/2025</td>
-            <td>Genap</td>
-            <td>Yudisium Reguler</td>
-            <td>28 Juni 2025</td>
-            <td>97</td>
-            <td>
-                <span class="badge badge-secondary">Selesai</span>
-            </td>
-            <td>
-                <button class="btn btn-sm btn-outline-info"
-                    onclick="window.location.href='perkuliahan-yudisium-detail.php'">
-                    📄 Mahasiswa
-                </button>
-                <button class="btn btn-sm btn-outline-primary"
-                    data-toggle="modal"
-                    data-target="#modalEditAkun">
-                    ✏️
-                </button>
-                <button class="btn btn-sm btn-outline-danger"
-                    data-toggle="modal"
-                    data-target="#modalHapusAkun">
-                    🗑️
-                </button>
-            </td>
-        </tr>
+<tr>
+    <td>5</td>
+    <td>20521088</td>
+    <td>PUTRI IZZATUL AULIA</td>
+    <td>3.76</td>
+    <td>144</td>
+    <td><span class="badge badge-success">Lulus</span></td>
+    <td>Cumlaude</td>
+</tr>
 
-        <tr>
-            <td>5</td>
-            <td>2024/2025</td>
-            <td>Ganjil</td>
-            <td>Gelombang III</td>
-            <td>31 Januari 2025</td>
-            <td>83</td>
-            <td>
-                <span class="badge badge-warning">Draft</span>
-            </td>
-            <td>
-                <button class="btn btn-sm btn-outline-info"
-                    onclick="window.location.href='perkuliahan-yudisium-detail.php'">
-                    📄 Mahasiswa
-                </button>
-                <button class="btn btn-sm btn-outline-primary"
-                    data-toggle="modal"
-                    data-target="#modalEditAkun">
-                    ✏️
-                </button>
-                <button class="btn btn-sm btn-outline-danger"
-                    data-toggle="modal"
-                    data-target="#modalHapusAkun">
-                    🗑️
-                </button>
-            </td>
-        </tr>
+<tr>
+    <td>6</td>
+    <td>20521092</td>
+    <td>SIFA AMELIA RAHAYU</td>
+    <td>3.58</td>
+    <td>144</td>
+    <td><span class="badge badge-success">Lulus</span></td>
+    <td>Sangat Memuaskan</td>
+</tr>
 
-    </tbody>
+<tr>
+    <td>7</td>
+    <td>20521116</td>
+    <td>ASTRI NURISNAENI ANJASMOKO</td>
+    <td>3.11</td>
+    <td>144</td>
+    <td><span class="badge badge-success">Lulus</span></td>
+    <td>Memuaskan</td>
+</tr>
+
+<tr>
+    <td>8</td>
+    <td>20521121</td>
+    <td>HANIFAH DHIYA ULHAQ</td>
+    <td>3.88</td>
+    <td>146</td>
+    <td><span class="badge badge-success">Lulus</span></td>
+    <td>Cumlaude</td>
+</tr>
+
+<tr>
+    <td>9</td>
+    <td>20521124</td>
+    <td>GHAITSA PRAJATANTRI SAHARRANI</td>
+    <td>2.95</td>
+    <td>138</td>
+    <td><span class="badge badge-warning">Pending</span></td>
+    <td>-</td>
+</tr>
+
+<tr>
+    <td>10</td>
+    <td>20521125</td>
+    <td>SHAFANISA DESTIARA PUTRI</td>
+    <td>3.67</td>
+    <td>144</td>
+    <td><span class="badge badge-success">Lulus</span></td>
+    <td>Sangat Memuaskan</td>
+</tr>
+
+</tbody>
 </table>
 
 
@@ -383,3 +361,13 @@
 </div>
 
 <?php include('5script.php'); ?>
+
+
+
+
+
+
+
+
+
+

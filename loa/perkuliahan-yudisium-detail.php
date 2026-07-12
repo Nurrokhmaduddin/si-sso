@@ -36,11 +36,20 @@
             <div class="card-body ">
               <div class="row">
                 <div class="col-md-6">
-                  <b>Periode:</b> 2023 &nbsp;
+                  <b>Tahun Akademik:</b> 2025/2026 &nbsp;
                 </div>                
                 <div class="col-md-6">
-                  <b>Status:</b> Aktif
+                  <b>Semester:</b> Genap
                 </div>
+                <div class="col-md-6">
+                  <b>Batch Yudisium:</b> Gelombang I &nbsp;
+                </div>  
+                <div class="col-md-6">
+                  <b>Status:</b> Aktif &nbsp;
+                </div>  
+                <div class="col-md-6">
+                  <b>Peserta:</b>  128 Mahasiswa &nbsp;
+                </div>  
               </div>
             </div>
 
@@ -71,7 +80,12 @@
 
           </div>
 
-
+  <!-- TAB NAV  -->
+  <ul class="nav nav-tabs">   
+    <li class="nav-item" onclick="window.location='perkuliahan-yudisium-detail.php'"><a class="nav-link active">Administrasi</a></li>
+    <li class="nav-item" onclick="window.location='perkuliahan-yudisium-detail2.php'"><a class="nav-link ">Hasil Yudisium</a></li>
+        <li class="nav-item" onclick="window.location='perkuliahan-yudisium-detail3.php'"><a class="nav-link ">Joined</a></li>
+  </ul>
 <!-- ========== CARD 3: Tabel saja ========== -->
           <div class="card">
             <!-- <div class="card-header d-flex align-items-center">
@@ -99,7 +113,7 @@
       <th>Nama Mahasiswa</th>
       <th>Dokumen</th>
       <th>Tanggal Daftar</th>
-      <th>Status</th>
+      <th>Status Verifikasi</th>
       <th>Aksi</th>
     </tr>
   </thead>

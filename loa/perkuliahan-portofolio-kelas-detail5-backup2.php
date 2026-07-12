@@ -131,251 +131,288 @@
 
 <!-- card-card refleksi -->
 <!-- Satu card besar -->
-<div class="card card-info">
-  <div class="card-header">
-    <h5 class="mb-0">
-      Refleksi Penyelenggaraan Kelas
-    </h5>
-    <small class="text-light">
-      Mendokumentasikan kondisi pelaksanaan pembelajaran pada kelas ini sebagai bahan evaluasi penyelenggaraan.
-    </small>
+   <div class="card">
+    <div class="card-header bg-primary text-white">
+      <h5>Catatan & Evaluasi Kelas (utama & wajib diisi - Kolaboratif)<br></h5>
+    <small>Deskripsi: Formulir ini mencatat evaluasi satu kelas yang Anda ampu. Hasil isian dibagikan ke seluruh tim pengampu satu kelas dan direkap untuk prodi.</small>
+    </div>
+    <div class="card-body">
+
+      <!-- 1️⃣ Select Pertanyaan: Capaian CPMK -->
+      <h5>1. Apakah capaian CPMK pada kelas ini tercapai? <small class="text-muted">(Wajib)</small></h5>
+      <select class="form-select mb-3" name="cpmk_tercapai">
+        <option value="" selected disabled>Pilih status capaian CPMK</option>
+        <option value="Tercapai Kuat">Tercapai Kuat</option>
+        <option value="Tercapai Minimal">Tercapai Minimal</option>
+        <option value="Tidak Tercapai">Tidak Tercapai</option>
+      </select>
+
+      <!-- 2️⃣ Select Pertanyaan: Tingkat Partisipasi Mahasiswa -->
+      <h5>2. Bagaimana tingkat partisipasi mahasiswa dalam kelas? <small class="text-muted">(Wajib)</small></h5>
+      <select class="form-select mb-3" name="partisipasi_mahasiswa">
+        <option value="" selected disabled>Pilih tingkat partisipasi</option>
+        <option value="Sangat Aktif">Sangat Aktif</option>
+        <option value="Cukup Aktif">Cukup Aktif</option>
+        <option value="Kurang Aktif">Kurang Aktif</option>
+        <option value="Pasif">Pasif</option>
+      </select>
+
+      <hr>
+
+      <!-- 3️⃣ Scale Pertanyaan: Efektivitas Metode -->
+      <h5>3. Seberapa efektif metode pengajaran yang digunakan? <small class="text-muted">(1 = Tidak Efektif, 5 = Sangat Efektif)</small></h5>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="efektivitas_metode" id="scale_metode_1" value="1">
+        <label class="form-check-label" for="scale_metode_1">1</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="efektivitas_metode" id="scale_metode_2" value="2">
+        <label class="form-check-label" for="scale_metode_2">2</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="efektivitas_metode" id="scale_metode_3" value="3">
+        <label class="form-check-label" for="scale_metode_3">3</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="efektivitas_metode" id="scale_metode_4" value="4">
+        <label class="form-check-label" for="scale_metode_4">4</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="efektivitas_metode" id="scale_metode_5" value="5">
+        <label class="form-check-label" for="scale_metode_5">5</label>
+      </div>
+      <hr>
+
+      <!-- 4️⃣ Scale Pertanyaan: Kesesuaian Penilaian -->
+      <h5>4. Seberapa sesuai penilaian dengan kemampuan mahasiswa? <small class="text-muted">(1 = Tidak Sesuai, 5 = Sangat Sesuai)</small></h5>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="kesesuaian_penilaian" id="scale_penilaian_1" value="1">
+        <label class="form-check-label" for="scale_penilaian_1">1</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="kesesuaian_penilaian" id="scale_penilaian_2" value="2">
+        <label class="form-check-label" for="scale_penilaian_2">2</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="kesesuaian_penilaian" id="scale_penilaian_3" value="3">
+        <label class="form-check-label" for="scale_penilaian_3">3</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="kesesuaian_penilaian" id="scale_penilaian_4" value="4">
+        <label class="form-check-label" for="scale_penilaian_4">4</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="kesesuaian_penilaian" id="scale_penilaian_5" value="5">
+        <label class="form-check-label" for="scale_penilaian_5">5</label>
+      </div>
+
+      <hr>
+
+      <!-- 5️⃣ Tagging Pertanyaan: Kendala Utama -->
+      <h5>5. Kendala utama selama perkuliahan <small class="text-muted">(Pilih semua yang relevan)</small></h5>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="Koneksi Internet" id="kendala1">
+        <label class="form-check-label" for="kendala1">Koneksi Internet</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="Partisipasi Rendah" id="kendala2">
+        <label class="form-check-label" for="kendala2">Partisipasi Rendah</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="Materi Kompleks" id="kendala3">
+        <label class="form-check-label" for="kendala3">Materi Kompleks</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="Waktu Terbatas" id="kendala4">
+        <label class="form-check-label" for="kendala4">Waktu Terbatas</label>
+      </div>
+
+      <!-- 6️⃣ Tagging Pertanyaan: Metode Paling Efektif -->
+      <h5>6. Metode pengajaran yang paling efektif <small class="text-muted">(Pilih semua yang relevan)</small></h5>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="Diskusi" id="metode1">
+        <label class="form-check-label" for="metode1">Diskusi</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="Praktikum" id="metode2">
+        <label class="form-check-label" for="metode2">Praktikum</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="Studi Kasus" id="metode3">
+        <label class="form-check-label" for="metode3">Studi Kasus</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="Project Based Learning" id="metode4">
+        <label class="form-check-label" for="metode4">Project Based Learning</label>
+      </div>
+
+      <hr>
+
+      <!-- 7️⃣ Open Text Pertanyaan: Catatan Dinamika Kelas -->
+      <h5>7. Catatan dinamika kelas <small class="text-muted">(Wajib)</small></h5>
+      <textarea class="form-control mb-3" rows="4" placeholder="Tuliskan kondisi nyata di kelas, interaksi mahasiswa, dan hal-hal penting yang terjadi selama perkuliahan."></textarea>
+
+      <!-- 8️⃣ Open Text Pertanyaan: Rekomendasi Perbaikan -->
+      <h5>8. Rekomendasi perbaikan <small class="text-muted">(Wajib)</small></h5>
+      <textarea class="form-control mb-3" rows="4" placeholder="Tuliskan saran perbaikan metode, kegiatan, atau strategi untuk meningkatkan kualitas pembelajaran."></textarea>
+
+    </div>
+    <div class="card-footer">
+      <button class="btn btn-primary">Simpan Catatan & Evaluasi</button>
+    </div>
+  </div> 
+
+<!-- Satu card besar -->
+<div class="card">
+  <div class="card-header bg-warning text-white">
+    <h5>Masukan & Insight untuk Prodi (lanjutan dari kelas - Strategis)<br></h5>
+    <small>Deskripsi: Formulir ini mencatat masukan, insight, dan rekomendasi dosen pada mata kuliah ini kepada program studi untuk evaluasi dan pengambilan keputusan</small>
   </div>
   <div class="card-body">
-    <div class="alert alert-light border">
-      <strong>Tujuan Refleksi</strong>
-      <div class="small mt-2">
-        Fokuskan jawaban pada proses pembelajaran yang terjadi selama perkuliahan, seperti dinamika kelas, partisipasi mahasiswa, pelaksanaan asesmen, metode pembelajaran, fasilitas, maupun hambatan yang memengaruhi penyelenggaraan kelas.
-        <br><br>
-        <strong>Tidak perlu memberikan usulan perubahan kurikulum atau rencana perbaikan pribadi.</strong>
-      </div>
+
+
+    <!-- 1️⃣ Kesiapan Mahasiswa -->
+    <h5>Kesiapan Mahasiswa</h5>
+    <select class="form-select mb-3" name="kesiapan_mahasiswa">
+      <option value="" selected disabled>Pilih Kesiapan Mahasiswa</option>
+      <option value="Cukup">Cukup</option>
+      <option value="Kurang">Kurang</option>
+      <option value="Sangat Lemah">Sangat Lemah</option>
+    </select>
+
+    <hr>
+
+    <!-- 4️⃣ CPMK Tercapai -->
+    <h5>CPMK Tercapai</h5>
+    <select class="form-select mb-3" name="cpmk">
+      <option value="" selected disabled>Pilih Status CPMK</option>
+      <option value="Tercapai Kuat">Tercapai Kuat</option>
+      <option value="Tercapai Minimal">Tercapai Minimal</option>
+      <option value="Tidak Tercapai">Tidak Tercapai</option>
+    </select>
+
+    <hr>
+    <!-- 1️⃣ Scale Pertanyaan: Kesiapan Mahasiswa -->
+    <h5>1. Kesiapan Mahasiswa</h5>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="scale_kesiapan" id="scale1_1" value="1">
+      <label class="form-check-label" for="scale1_1">1</label>
     </div>
-
-    <!-- ============================= -->
-    <!-- Refleksi Penyelenggaraan Kelas -->
-    <!-- ============================= -->
-
-    <div class="mb-4">
-
-      <!-- Q1 -->
-      <div class="mb-4">
-        <h6>
-          1. Bagaimana keterlaksanaan pembelajaran sesuai RPS pada kelas ini?
-        </h6>
-        <div class="btn-group mt-2" role="group">
-          <input type="radio" class="btn-check" name="q1" id="q1a">
-          <label class="btn btn-outline-success" for="q1a">Sangat Sesuai</label>
-          <input type="radio" class="btn-check" name="q1" id="q1b">
-          <label class="btn btn-outline-success" for="q1b">Sesuai</label>
-          <input type="radio" class="btn-check" name="q1" id="q1c">
-          <label class="btn btn-outline-warning" for="q1c">Sebagian</label>
-          <input type="radio" class="btn-check" name="q1" id="q1d">
-          <label class="btn btn-outline-danger" for="q1d">Kurang Sesuai</label>
-        </div>
-      </div>
-
-
-      <!-- Q2 -->
-      <div class="mb-4">
-        <h6>
-          2. Faktor apa yang paling mempengaruhi jalannya pembelajaran pada kelas ini?
-        </h6>
-        <div class="mt-2">
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox">
-            <label class="form-check-label">Partisipasi mahasiswa</label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox">
-            <label class="form-check-label">Kesiapan mahasiswa</label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox">
-            <label class="form-check-label">Metode pembelajaran</label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox">
-            <label class="form-check-label">Media pembelajaran</label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox">
-            <label class="form-check-label">Alokasi waktu</label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox">
-            <label class="form-check-label">Fasilitas pembelajaran</label>
-          </div>
-        </div>
-      </div>
-
-
-      <!-- Q3 -->
-      <div class="mb-4">
-        <h6>
-          3. Secara umum, bagaimana tingkat partisipasi mahasiswa selama pembelajaran?
-        </h6>
-        <select class="form-select mt-2">
-          <option>-- Pilih --</option>
-          <option>Sangat Aktif</option>
-          <option>Aktif</option>
-          <option>Cukup Aktif</option>
-          <option>Kurang Aktif</option>
-        </select>
-      </div>
-
-
-      <!-- Q4 -->
-      <div class="mb-4">
-        <h6>
-          4. Praktik pembelajaran apa yang menurut Anda paling efektif pada kelas ini?
-        </h6>
-        <textarea class="form-control mt-2"
-        rows="4"
-        placeholder="Contoh: Praktikum setiap pertemuan membuat mahasiswa lebih cepat memahami implementasi konsep dibandingkan ceramah penuh."></textarea>
-      </div>
-
-
-      <!-- Q5 -->
-      <div>
-        <h6>
-          5. Catatan lain mengenai penyelenggaraan kelas (opsional)
-        </h6>
-        <textarea class="form-control mt-2"
-        rows="3"
-        placeholder="Tuliskan apabila terdapat kondisi khusus yang belum tercakup pada pertanyaan sebelumnya."></textarea>
-      </div>
-
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="scale_kesiapan" id="scale1_2" value="2">
+      <label class="form-check-label" for="scale1_2">2</label>
     </div>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="scale_kesiapan" id="scale1_3" value="3">
+      <label class="form-check-label" for="scale1_3">3</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="scale_kesiapan" id="scale1_4" value="4">
+      <label class="form-check-label" for="scale1_4">4</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="scale_kesiapan" id="scale1_5" value="5">
+      <label class="form-check-label" for="scale1_5">5</label>
+    </div>
+    <div class="scale-labels">
+      <span>Sangat Lemah</span>
+      <span>-----</span>
+      <span>Sangat Kuat</span>
+    </div>
+    <hr>
+    <!-- 2️⃣ Scale Pertanyaan: Efektivitas Metode Pembelajaran -->
+    <h5>2. Efektivitas Metode Pembelajaran</h5>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="scale_metode" id="scale2_1" value="1">
+      <label class="form-check-label" for="scale2_1">1</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="scale_metode" id="scale2_2" value="2">
+      <label class="form-check-label" for="scale2_2">2</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="scale_metode" id="scale2_3" value="3">
+      <label class="form-check-label" for="scale2_3">3</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="scale_metode" id="scale2_4" value="4">
+      <label class="form-check-label" for="scale2_4">4</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="scale_metode" id="scale2_5" value="5">
+      <label class="form-check-label" for="scale2_5">5</label>
+    </div>
+    <div class="scale-labels">
+      <span>Sangat Tidak Efektif</span>
+      <span>-----</span>
+      <span>Sangat Efektif</span>
+    </div>
+    <hr>
+    <!-- 2️⃣ Kesesuaian Kurikulum -->
+    <h5>Kesesuaian Kurikulum</h5>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="Gap Materi" id="kurikulum1">
+      <label class="form-check-label" for="kurikulum1">Gap Materi</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="Tumpang Tindih" id="kurikulum2">
+      <label class="form-check-label" for="kurikulum2">Tumpang Tindih Materi</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="CPMK Ambisius" id="kurikulum3">
+      <label class="form-check-label" for="kurikulum3">CPMK Terlalu Ambisius</label>
+    </div>
+    <textarea class="form-control mt-2" rows="2" placeholder="Catatan tambahan terkait kurikulum..."></textarea>
+
+    <hr>
+
+    <!-- 3️⃣ Efektivitas Metode Pembelajaran -->
+    <h5>Efektivitas Metode Pembelajaran</h5>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="Ceramah Tidak Cukup" id="metode1">
+      <label class="form-check-label" for="metode1">Ceramah Tidak Cukup</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="Diskusi Efektif" id="metode2">
+      <label class="form-check-label" for="metode2">Diskusi Efektif</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="Studi Kasus Efektif" id="metode3">
+      <label class="form-check-label" for="metode3">Studi Kasus Efektif</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="Praktikum Menguatkan CPMK" id="metode4">
+      <label class="form-check-label" for="metode4">Praktikum Menguatkan CPMK</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="Project Based Learning Efektif" id="metode5">
+      <label class="form-check-label" for="metode5">Project Based Learning Efektif</label>
+    </div>
+    <textarea class="form-control mt-2" rows="2" placeholder="Catatan tambahan terkait metode pembelajaran..."></textarea>
+    <hr>
+
+    <!-- 6️⃣ Refleksi Mahasiswa -->
+    <h5>Insight Evaluasi</h5>
+    <textarea class="form-control mb-2" rows="2" placeholder="Apa yang sudah baik dan Apa kendala umum..."></textarea>
+    <hr>
+    <!-- 7️⃣ Rekomendasi & Action Plan -->
+    <h5>Rekomendasi & Action Plan</h5>
+    <textarea class="form-control mb-2" rows="2" placeholder="Hal yang diubah jika diajar ulang..."></textarea>
+    <textarea class="form-control mb-2" rows="2" placeholder="Perubahan kecil semester depan..."></textarea>
+    <textarea class="form-control mb-2" rows="2" placeholder="Pengadaan / alat / bahan yang dapat meningkatkan CPMK..."></textarea>
+    <textarea class="form-control mb-2" rows="2" placeholder="Rekomendasi kurikulum / sistem..."></textarea>
+    <textarea class="form-control" rows="2" placeholder="Rekomendasi pedagogis..."></textarea>
 
   </div>
   <div class="card-footer">
-    <button class="btn btn-outline-primary">Simpan Catatan & Evaluasi</button>
+    <button class="btn btn-primary">Kirim Masukan & Insight</button>
   </div>
 </div>
-
-
-<div class="card card-warning">
-  <div class="card-header">
-    <h5 class="mb-0">
-      Masukan Strategis untuk Program Studi
-    </h5>
-    <small class="text-dark">
-      Memberikan masukan bagi Program Studi dalam melakukan Continuous Quality Improvement (CQI) terhadap kurikulum, mata kuliah, maupun penyelenggaraan akademik.
-    </small>
-  </div>
-  <div class="card-body">
-    <div class="alert alert-light border">
-      <strong>Tujuan Refleksi</strong>
-      <div class="small mt-2">
-        Fokuskan jawaban pada hal-hal yang menurut Anda perlu menjadi perhatian Program Studi, seperti struktur kurikulum, CPMK, CPL, prasyarat mata kuliah, laboratorium, referensi, perangkat pembelajaran, maupun kebijakan akademik.
-        <br><br>
-        <strong>Tidak perlu menjelaskan kembali proses pembelajaran di kelas maupun rencana perbaikan pribadi.</strong>
-      </div>
-    </div>
-
-    <!-- ============================= -->
-    <!-- Masukan Strategis Program Studi -->
-    <!-- ============================= -->
-
-    <div class="mb-4">
-
-      <!-- Q1 -->
-      <div class="mb-4">
-        <h6>
-          1. Menurut Anda, apakah capaian pembelajaran (CPMK) pada mata kuliah ini sudah realistis untuk dicapai mahasiswa?
-        </h6>
-        <select class="form-select mt-2">
-          <option>-- Pilih --</option>
-          <option>Sangat Realistis</option>
-          <option>Realistis</option>
-          <option>Cukup Realistis</option>
-          <option>Kurang Realistis</option>
-        </select>
-      </div>
-
-      <!-- Q2 -->
-      <div class="mb-4">
-        <h6>
-          2. Aspek apa yang menurut Anda perlu menjadi perhatian Program Studi?
-        </h6>
-        <div class="mt-2">
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox">
-            <label class="form-check-label">Kurikulum</label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox">
-            <label class="form-check-label">Urutan Mata Kuliah</label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox">
-            <label class="form-check-label">Mata Kuliah Prasyarat</label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox">
-            <label class="form-check-label">Laboratorium</label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox">
-            <label class="form-check-label">Perangkat Lunak</label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox">
-            <label class="form-check-label">Referensi Pembelajaran</label>
-          </div>
-        </div>
-      </div>
-
-
-      <!-- Q3 -->
-      <div class="mb-4">
-        <h6>
-          3. Seberapa besar kebutuhan perbaikan terhadap aspek yang dipilih?
-        </h6>
-        <div class="btn-group mt-2">
-          <input type="radio" class="btn-check" name="priority" id="p1">
-          <label class="btn btn-outline-success" for="p1">Rendah</label>
-          <input type="radio" class="btn-check" name="priority" id="p2">
-          <label class="btn btn-outline-warning" for="p2">Sedang</label>
-          <input type="radio" class="btn-check" name="priority" id="p3">
-          <label class="btn btn-outline-danger" for="p3">Tinggi</label>
-        </div>
-      </div>
-
-
-      <!-- Q4 -->
-      <div class="mb-4">
-        <h6>
-          4. Jelaskan masukan atau rekomendasi yang ingin Anda sampaikan kepada Program Studi.
-        </h6>
-        <textarea class="form-control mt-2"
-        rows="4"
-        placeholder="Contoh: Materi Basis Data sebaiknya dipindahkan sebelum mata kuliah Pemrograman Web agar mahasiswa memiliki bekal yang lebih memadai."></textarea>
-      </div>
-
-
-      <!-- Q5 -->
-      <div>
-        <h6>
-          5. Masukan tambahan untuk pengembangan Program Studi (opsional)
-        </h6>
-        <textarea class="form-control mt-2"
-        rows="3"
-        placeholder="Tuliskan apabila terdapat usulan lain yang belum tercakup pada pertanyaan sebelumnya."></textarea>
-      </div>
-    </div>
-
-  </div>
-  <div class="card-footer">
-    <button class="btn btn-outline-primary">Kirim Masukan & Insight</button>
-  </div>
-</div>
-
-
 
   
 
 <!-- Satu card besar -->
-<div class="card card-secondary">
+<div class="card">
   <div class="card-header ">
     <h5>Jurnal Refleksi CQI Pengajaran Mata Kuliah (Personal)<br></h5>
     <small>Deskripsi: Catatan refleksi ini bersifat pribadi dan hanya dapat diakses oleh Anda. Tujuannya adalah membantu mengevaluasi proses pembelajaran serta menjadi referensi dalam meningkatkan kualitas penyelenggaraan mata kuliah pada semester berikutnya.</small>
@@ -408,7 +445,7 @@
 
   </div>
   <div class="card-footer">
-    <button class="btn btn-outline-primary">Simpan Catatan Refleksi</button>
+    <button class="btn btn-primary">Simpan Catatan Refleksi</button>
   </div>
 </div>
 
