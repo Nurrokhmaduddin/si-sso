@@ -315,6 +315,15 @@ if (file_exists($sidebar_file)) {
                 </ul>
               </div>
             </div>
+            order:
+dibawa&ambil sendiri - jemput&antarkan.
+jika jemput&antarakan ada pnanggungajwabnya.
+
+jenis pembayaran:
+tunai - hutang.
+
+posisi operation:
+pencatat, pencuci, pengisi, pengorbit(jemput-antar)
           </div>
 
         </div>

@@ -520,6 +520,31 @@ include('3sidebar-dosen.php');
           <div class="card-footer small text-muted">
             <strong>Lifecycle:</strong>
             Planning → Requirement → Design → Development → Testing → Deployment / Launching (BAST) → Maintenance / Subscription Service
+            <small>Saran penamaan menu (biar terasa “dosen banget”)
+
+Kalau mau lebih human dan nggak terlalu teknis:
+
+Aktivitas Kelas
+
+Ringkasan Kelas
+
+Evaluasi & Pengembangan
+
+Atau:
+
+Mengajar
+
+Merefleksi
+
+Mengembangkan
+---
+
+Mengingatkan, bukan menyuruh
+
+“Belum ada catatan refleksi minggu ini”
+
+Bukan: “Anda belum mengisi laporan”
+---</small>
           </div>
         </div>
 

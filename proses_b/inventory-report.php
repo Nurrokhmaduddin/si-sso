@@ -1,6 +1,6 @@
 
 <?php
-$page = 'master-employee';
+$page = 'inventory-report';
 
 include('koneksi.php');
 include('1header.php');

@@ -52,7 +52,19 @@
                 </button>                
                 <button type="button" class="btn btn-outline-success btn-sm">
                   <i class="fas fa-file-download me-1"></i> Export
-                </button>    
+                </button>   
+                <button
+                type="button"
+                class="btn btn-outline-success btn-sm"
+                onclick="window.location.href='data-nilai-akhir.xls'">
+                <i class="fas fa-file-download me-1"></i> Export NILAI AKHIR
+              </button> 
+              <button
+              type="button"
+              class="btn btn-outline-success btn-sm"
+              onclick="window.location.href='data-portofolio.xls'">
+              <i class="fas fa-file-download me-1"></i> Export PORTOFOLIO
+            </button>
                 <a class="btn btn-sm btn-outline-primary" href="formulir-evaluasi.php" target="_blank"><i class="fas fa-clipboard-list me-1"> </i>Catat Temuan </a>             
               </div>
 

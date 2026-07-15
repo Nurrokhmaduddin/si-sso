@@ -1210,7 +1210,7 @@ TOKO BERLIAN / JEWELRY SHOWROOM
         'children' => [
 
           [
-            'label' => 'Inventory Report',
+            'label' => '# Inventory Report',
             'url'   => 'inventory-report.php',
             'page'  => 'inventory-report'
           ],

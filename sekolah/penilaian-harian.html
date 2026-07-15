@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Penilaian Harian & Rekap Rapor — SikolahKu</title>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   DESIGN SYSTEM
+   Aesthetic: Warm editorial — saffron & forest,
+   structured density like a refined gradebook.
+   Unforgettable: The stacked column header groups
+   and colour-coded score cells that glow on hover.
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+:root {
+  /* Core palette */
+  --forest:   #1a5c3a;
+  --forest-m: #2d8055;
+  --forest-l: #d4edd9;
+  --forest-xl:#f0f9f2;
+  --saffron:  #d97706;
+  --saffron-l:#fef3c7;
+  --saffron-m:#fde68a;
+  --crimson:  #b91c1c;
+  --crimson-l:#fee2e2;
+  --sky:      #0369a1;
+  --sky-l:    #dbeafe;
+  --violet:   #6d28d9;
+  --violet-l: #ede9fe;
+  --rose:     #be185d;
+  --rose-l:   #fce7f3;
+  --teal:     #0f766e;
+  --teal-l:   #ccfbf1;
+  --slate:    #1e293b;
+  --slate-m:  #334155;
+  --muted:    #64748b;
+  --muted-2:  #94a3b8;
+  --border:   #e2e8f0;
+  --border-2: #f1f5f9;
+  --bg:       #f8f7f4;   /* warm off-white */
+  --paper:    #ffffff;
+  --text:     #0f172a;
+  --text-2:   #334155;
+  --text-3:   #64748b;
+
+  /* Typography */
+  --font-display: 'Lora', Georgia, serif;
+  --font-body:    'Sora', sans-serif;
+  --font-mono:    'DM Mono', monospace;
+
+  /* Tokens */
+  --radius:    12px;
+  --radius-sm: 8px;
+  --radius-xs: 5px;
+  --shadow-sm: 0 1px 3px rgba(15,23,42,.06), 0 1px 2px rgba(15,23,42,.04);
+  --shadow:    0 4px 16px rgba(15,23,42,.08), 0 1px 4px rgba(15,23,42,.03);
+  --shadow-md: 0 8px 32px rgba(15,23,42,.12);
+  --shadow-lg: 0 20px 60px rgba(15,23,42,.16);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* ── TOPBAR ── */
+.topbar {
+  background: var(--slate);
+  color: #fff;
+  padding: 0 28px;
+  height: 56px;
+  display: flex; align-items: center; justify-content: space-between;
+  position: sticky; top: 0; z-index: 200;
+  box-shadow: var(--shadow-md);
+}
+.tb-left { display: flex; align-items: center; gap: 14px; }
+.tb-logo { font-family: var(--font-display); font-size: 18px; font-weight: 700; color: #fff; }
+.tb-logo span { color: #4ade80; }
+.tb-sep { width: 1px; height: 20px; background: rgba(255,255,255,.18); }
+.tb-breadcrumb { font-size: 12px; color: rgba(255,255,255,.55); display: flex; align-items: center; gap: 6px; }
+.tb-breadcrumb strong { color: rgba(255,255,255,.85); font-weight: 600; }
+.tb-right { display: flex; align-items: center; gap: 10px; font-size: 12px; color: rgba(255,255,255,.55); }
+.tb-user { display: flex; align-items: center; gap: 7px; padding: 4px 10px; border-radius: var(--radius-sm); border: 1px solid rgba(255,255,255,.14); }
+.tb-av { width: 26px; height: 26px; border-radius: 50%; background: var(--forest-m); display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 700; color: #fff; }
+
+/* ── SHELL ── */
+.shell { max-width: 1400px; margin: 0 auto; padding: 24px 24px 80px; }
+
+/* ── CONTEXT BAND ── */
+.ctx-band {
+  background: linear-gradient(135deg, var(--forest) 0%, var(--teal) 100%);
+  border-radius: var(--radius);
+  padding: 20px 26px;
+  color: #fff;
+  margin-bottom: 22px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 20px;
+  align-items: center;
+  box-shadow: var(--shadow-md);
+  position: relative; overflow: hidden;
+}
+.ctx-band::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+.ctx-meta { display: flex; flex-wrap: wrap; gap: 20px; position: relative; }
+.ctx-item { }
+.ctx-lbl { font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; opacity: .55; margin-bottom: 4px; }
+.ctx-val { font-size: 14px; font-weight: 700; }
+.ctx-val.big { font-family: var(--font-display); font-size: 22px; font-weight: 700; }
+.ctx-actions { display: flex; gap: 8px; position: relative; flex-shrink: 0; }
+
+/* ── VIEW TABS ── */
+.view-tabs { display: flex; gap: 0; border-bottom: 2px solid var(--border); margin-bottom: 22px; }
+.vt { font-size: 13px; font-weight: 600; padding: 10px 22px; cursor: pointer; color: var(--text-3); border-bottom: 3px solid transparent; margin-bottom: -2px; background: none; border-top: none; border-left: none; border-right: none; font-family: var(--font-body); transition: all .15s; display: flex; align-items: center; gap: 8px; }
+.vt:hover { color: var(--text); }
+.vt.active { color: var(--forest); border-bottom-color: var(--forest); font-weight: 700; }
+.vt .badge { font-size: 10px; font-weight: 700; padding: 1px 7px; border-radius: 20px; background: var(--saffron-l); color: var(--saffron); }
+.vt.active .badge { background: var(--forest-l); color: var(--forest); }
+.view { display: none; }
+.view.active { display: block; animation: fadeUp .2s ease; }
+@keyframes fadeUp { from { opacity:0; transform:translateY(6px) } to { opacity:1; transform:translateY(0) } }
+
+/* ── BUTTONS ── */
+.btn { font-size: 12px; font-weight: 600; padding: 7px 15px; border-radius: var(--radius-sm); cursor: pointer; border: 1.5px solid var(--border); background: var(--paper); color: var(--text-2); font-family: var(--font-body); transition: all .15s; display: inline-flex; align-items: center; gap: 6px; }
+.btn:hover { background: var(--bg); border-color: var(--muted-2); }
+.btn svg { width: 13px; height: 13px; }
+.btn-forest { background: var(--forest); color: #fff; border-color: var(--forest); }
+.btn-forest:hover { background: #144d30; }
+.btn-saffron { background: var(--saffron); color: #fff; border-color: var(--saffron); }
+.btn-ghost { background: rgba(255,255,255,.12); border-color: rgba(255,255,255,.2); color: #fff; }
+.btn-ghost:hover { background: rgba(255,255,255,.2); }
+.btn-sm { font-size: 11px; padding: 5px 11px; }
+
+/* ── SECTION HEADER ── */
+.sec-hd { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 14px; gap: 12px; }
+.sec-hd-l h2 { font-family: var(--font-display); font-size: 18px; font-weight: 700; color: var(--text); letter-spacing: -.3px; }
+.sec-hd-l p { font-size: 12px; color: var(--text-3); margin-top: 3px; }
+.sec-hd-r { display: flex; gap: 8px; align-items: center; }
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   DAILY ASSESSMENT TABLE
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.assess-wrap { overflow-x: auto; background: var(--paper); border-radius: var(--radius); box-shadow: var(--shadow); border: 1px solid var(--border); }
+.assess-table { border-collapse: collapse; font-size: 11.5px; font-family: var(--font-body); width: 100%; min-width: 1100px; }
+
+/* ── Column group headers ── */
+.grp-header {
+  font-size: 10px; font-weight: 800; text-transform: uppercase;
+  letter-spacing: .6px; padding: 8px 10px; text-align: center;
+  border: 1px solid rgba(255,255,255,.2);
+  white-space: nowrap;
+}
+.grp-ki34 { background: #16a34a; color: #fff; }
+.grp-ki2  { background: #0369a1; color: #fff; }
+.grp-akhlaq { background: #d97706; color: #fff; }
+.grp-rekap { background: #6d28d9; color: #fff; }
+.grp-catatan { background: var(--slate-m); color: #fff; }
+.grp-no { background: var(--slate); color: #fff; }
+
+/* ── Sub-group headers ── */
+.subgrp { font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: .4px; padding: 5px 6px; text-align: center; border: 1px solid rgba(0,0,0,.06); white-space: nowrap; }
+.sg-eksplorasi { background: #dcfce7; color: #15803d; }
+.sg-siang { background: #dbeafe; color: #1e40af; }
+.sg-target { background: #fef9c3; color: #854d0e; }
+.sg-ilove { background: #f3e8ff; color: #6d28d9; }
+.sg-nonton { background: #ffe4e6; color: #be185d; }
+.sg-rekap-sub { background: #ede9fe; color: #5b21b6; }
+
+/* ── Column headers ── */
+.col-hd {
+  font-size: 9px; font-weight: 700; writing-mode: vertical-rl;
+  text-orientation: mixed; transform: rotate(180deg);
+  padding: 10px 6px; text-align: center; border: 1px solid var(--border);
+  background: #fafbfc; color: var(--text-2); white-space: nowrap;
+  max-height: 90px; vertical-align: bottom;
+}
+.col-hd.ki34 { background: #f0fdf4; color: #15803d; }
+.col-hd.ki2  { background: #eff6ff; color: #1e40af; }
+.col-hd.akhlaq { background: #fef3c7; color: #92400e; }
+.col-hd.rekap { background: #ede9fe; color: #5b21b6; }
+
+/* ── Fixed columns ── */
+.col-no { width: 32px; text-align: center; font-weight: 700; color: var(--text-3); font-size: 11px; }
+.col-nama { min-width: 160px; font-weight: 600; color: var(--text); font-size: 12px; }
+
+/* ── Data cells ── */
+.assess-table td {
+  padding: 7px 5px;
+  border: 1px solid var(--border);
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  transition: background .12s;
+  min-width: 34px;
+}
+.assess-table tbody tr { transition: background .1s; }
+.assess-table tbody tr:hover td { background: #fffbf0 !important; }
+.assess-table tbody tr:nth-child(even) td { background: #fafbfc; }
+
+/* Score cell coloring */
+.score-cell { position: relative; cursor: pointer; }
+.score-cell:hover { z-index: 2; outline: 2px solid var(--saffron); outline-offset: -2px; }
+.sc-A  { color: #15803d; font-weight: 700; }
+.sc-B  { color: #1e40af; font-weight: 700; }
+.sc-C  { color: #92400e; }
+.sc-D  { color: var(--crimson); }
+.sc-hi { background: #f0fdf4; }     /* 85-100 */
+.sc-md { background: #fffbeb; }     /* 75-84 */
+.sc-lo { background: #fff7ed; }     /* <75 */
+
+/* Predikat badges */
+.predikat {
+  display: inline-flex; align-items: center; justify-content: center;
+  font-size: 11px; font-weight: 800; font-family: var(--font-mono);
+  width: 34px; height: 22px; border-radius: 5px;
+}
+.pred-A  { background: #dcfce7; color: #15803d; border: 1px solid #86efac; }
+.pred-Am { background: #d1fae5; color: #065f46; border: 1px solid #6ee7b7; }
+.pred-B  { background: #dbeafe; color: #1d4ed8; border: 1px solid #93c5fd; }
+.pred-Bp { background: #ede9fe; color: #5b21b6; border: 1px solid #c4b5fd; }
+.pred-C  { background: #fef3c7; color: #92400e; border: 1px solid #fcd34d; }
+.pred-D  { background: var(--crimson-l); color: var(--crimson); border: 1px solid #fca5a5; }
+
+/* Akhlaq radio-style cells */
+.akhlaq-cell { cursor: pointer; font-weight: 700; font-size: 13px; }
+.ak-5 { color: #15803d; }
+.ak-4 { color: #2563eb; }
+.ak-3 { color: var(--saffron); }
+.ak-2 { color: #ea580c; }
+.ak-1 { color: var(--crimson); }
+
+/* ── Row total / rerata ── */
+.cell-rerata { font-family: var(--font-mono); font-size: 12px; font-weight: 700; color: var(--forest); background: var(--forest-xl) !important; }
+.cell-konversi { font-family: var(--font-mono); font-size: 12px; font-weight: 700; color: var(--violet); background: var(--violet-l) !important; }
+
+/* ── Notes cell ── */
+.cell-notes { min-width: 120px; text-align: left; font-family: var(--font-body); font-size: 11px; color: var(--text-3); background: #fffbf0 !important; padding: 6px 8px; }
+
+/* ── Table footer / legend ── */
+.assess-legend { padding: 14px 18px; background: #fafbfc; border-top: 1px solid var(--border); display: flex; gap: 20px; flex-wrap: wrap; align-items: center; }
+.legend-group { display: flex; align-items: center; gap: 6px; }
+.legend-lbl { font-size: 10px; font-weight: 700; color: var(--text-3); text-transform: uppercase; letter-spacing: .5px; }
+.legend-item { display: flex; align-items: center; gap: 4px; font-size: 11px; font-weight: 600; color: var(--text-2); }
+.legend-swatch { width: 12px; height: 12px; border-radius: 3px; border: 1px solid rgba(0,0,0,.1); }
+
+/* ── Criteria card ── */
+.criteria-card {
+  background: var(--saffron-l); border: 1.5px solid var(--saffron-m);
+  border-radius: var(--radius-sm); padding: 12px 16px; margin-bottom: 14px;
+  display: flex; gap: 24px; flex-wrap: wrap; align-items: flex-start;
+}
+.crit-group { }
+.crit-title { font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: .6px; color: var(--saffron); margin-bottom: 7px; }
+.crit-row { display: flex; align-items: center; gap: 8px; font-size: 11px; color: var(--text-2); margin-bottom: 4px; }
+.crit-badge { width: 22px; height: 18px; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 800; flex-shrink: 0; }
+.crit-minimal { background: var(--crimson-l); border: 1px solid #fca5a5; border-radius: var(--radius-sm); padding: 8px 14px; font-size: 12px; font-weight: 700; color: var(--crimson); display: flex; flex-direction: column; align-items: center; gap: 2px; }
+.crit-minimal span { font-size: 9px; opacity: .7; text-transform: uppercase; letter-spacing: .5px; }
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   REKAP SEMESTER TABLE
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.rekap-wrap { overflow-x: auto; background: var(--paper); border-radius: var(--radius); box-shadow: var(--shadow); border: 1px solid var(--border); }
+.rekap-table { border-collapse: collapse; font-size: 11px; font-family: var(--font-body); width: 100%; min-width: 2000px; }
+
+.mapel-header { font-size: 9px; font-weight: 800; text-transform: uppercase; letter-spacing: .4px; padding: 10px 8px; text-align: center; writing-mode: vertical-rl; text-orientation: mixed; transform: rotate(180deg); max-height: 110px; white-space: nowrap; border: 1px solid rgba(0,0,0,.08); }
+.mh-spiritual { background: #fef3c7; color: #92400e; }
+.mh-sosial    { background: #dbeafe; color: #1e40af; }
+.mh-ipa       { background: #d1fae5; color: #065f46; }
+.mh-ips       { background: #fce7f3; color: #9d174d; }
+.mh-ppkn      { background: #ede9fe; color: #4c1d95; }
+.mh-agama     { background: #fef9c3; color: #713f12; }
+.mh-bahasa    { background: #ccfbf1; color: #134e4a; }
+.mh-math      { background: #dbeafe; color: #1e3a8a; }
+.mh-penjas    { background: #dcfce7; color: #14532d; }
+.mh-sbk       { background: #ffe4e6; color: #9f1239; }
+.mh-budaya    { background: #fef3c7; color: #78350f; }
+.mh-basajawa  { background: #f0f9ff; color: #0c4a6e; }
+
+/* Kompetensi sub-header */
+.kd-sub { font-size: 9px; font-weight: 700; padding: 4px 6px; text-align: center; border: 1px solid rgba(0,0,0,.06); white-space: nowrap; }
+.kd-ki1 { background: #fef9c3; color: #713f12; }
+.kd-ki2 { background: #dbeafe; color: #1e40af; }
+.kd-ki3 { background: #d1fae5; color: #14532d; }
+.kd-ki4 { background: #ffe4e6; color: #9f1239; }
+.kd-val { font-size: 8px; font-weight: 600; padding: 3px 4px; text-align: center; border: 1px solid var(--border); color: var(--text-3); background: #fafbfc; white-space: nowrap; }
+
+.rekap-table td {
+  padding: 6px 5px;
+  border: 1px solid var(--border);
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  white-space: nowrap;
+  transition: background .1s;
+  min-width: 30px;
+}
+.rekap-table tbody tr:hover td { background: #fffbf0 !important; }
+.rekap-table tbody tr:nth-child(even) td { background: #fafbfc; }
+
+.r-nama { text-align: left; font-weight: 600; font-family: var(--font-body); font-size: 12px; min-width: 140px; color: var(--text); padding-left: 12px; }
+.r-num  { text-align: center; font-weight: 700; color: var(--text-3); font-size: 11px; width: 28px; }
+.r-total { font-weight: 700; font-family: var(--font-mono); }
+.r-pred { font-weight: 700; font-size: 11px; }
+.r-predikat-M { color: #15803d; }
+.r-predikat-BT { color: var(--crimson); font-size: 9px; }
+
+/* Score value cells */
+.rv { font-size: 11px; font-family: var(--font-mono); }
+.rv-hi { color: #15803d; font-weight: 700; background: #f0fdf4; }
+.rv-md { color: #1e40af; font-weight: 600; }
+.rv-lo { color: var(--crimson); }
+.rv-pred-A  { color: #15803d; font-weight: 800; }
+.rv-pred-Am { color: #065f46; font-weight: 800; }
+.rv-pred-B  { color: #1d4ed8; font-weight: 700; }
+.rv-pred-Bp { color: #5b21b6; font-weight: 700; }
+.rv-pred-C  { color: #92400e; font-weight: 700; }
+.rv-pred-D  { color: var(--crimson); font-weight: 700; }
+
+/* ── Stats bar ── */
+.stats-bar {
+  display: flex; gap: 14px; flex-wrap: wrap;
+  background: var(--paper); border: 1px solid var(--border);
+  border-radius: var(--radius-sm); padding: 14px 18px;
+  margin-bottom: 16px; box-shadow: var(--shadow-sm);
+}
+.stat-chip { text-align: center; padding: 8px 16px; border-radius: var(--radius-sm); min-width: 100px; }
+.sc-forest { background: var(--forest-l); border: 1px solid #86efac; }
+.sc-sky    { background: var(--sky-l); border: 1px solid #93c5fd; }
+.sc-saffron{ background: var(--saffron-l); border: 1px solid var(--saffron-m); }
+.sc-crimson{ background: var(--crimson-l); border: 1px solid #fca5a5; }
+.sc-violet { background: var(--violet-l); border: 1px solid #c4b5fd; }
+.stat-val { font-family: var(--font-display); font-size: 22px; font-weight: 700; line-height: 1; }
+.stat-lbl { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .5px; margin-top: 4px; opacity: .75; }
+
+/* ── Info callout ── */
+.callout {
+  border-radius: var(--radius-sm); padding: 13px 16px;
+  display: flex; gap: 12px; align-items: flex-start;
+  margin-bottom: 16px;
+}
+.callout-forest { background: var(--forest-xl); border: 1px solid var(--forest-l); }
+.callout-saffron { background: var(--saffron-l); border: 1px solid var(--saffron-m); }
+.callout-icon { font-size: 18px; flex-shrink: 0; margin-top: 1px; }
+.callout-body { font-size: 12px; color: var(--text-2); line-height: 1.6; }
+.callout-body strong { color: var(--text); font-weight: 700; }
+
+/* ── SCROLLBAR ── */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+
+/* ── Print styles ── */
+@media print {
+  .topbar, .view-tabs, .ctx-actions, .sec-hd-r { display: none !important; }
+  .shell { padding: 0; max-width: 100%; }
+  .view { display: block !important; }
+}
+
+/* ── MODAL ── */
+.overlay { position: fixed; inset: 0; background: rgba(15,23,42,.5); backdrop-filter: blur(4px); display: none; align-items: center; justify-content: center; z-index: 999; padding: 20px; }
+.overlay.open { display: flex; }
+.modal { background: var(--paper); border-radius: var(--radius); width: 460px; max-width: 100%; box-shadow: var(--shadow-lg); animation: fadeUp .2s ease; overflow: hidden; }
+.modal-hd { padding: 18px 22px; border-bottom: 1px solid var(--border); background: var(--forest); color: #fff; display: flex; align-items: center; justify-content: space-between; }
+.modal-title { font-family: var(--font-display); font-size: 17px; font-weight: 700; }
+.modal-x { width: 28px; height: 28px; border-radius: 50%; border: 1px solid rgba(255,255,255,.25); background: rgba(255,255,255,.1); cursor: pointer; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 17px; }
+.modal-body { padding: 20px 22px; }
+.modal-ft { padding: 14px 22px; border-top: 1px solid var(--border); display: flex; gap: 10px; justify-content: flex-end; background: #fafbfc; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 14px; }
+.form-full { grid-column: 1/-1; }
+.fg { display: flex; flex-direction: column; gap: 5px; }
+.fl { font-size: 11px; font-weight: 700; color: var(--text-2); text-transform: uppercase; letter-spacing: .4px; }
+.fi { font-size: 13px; padding: 8px 11px; border: 1.5px solid var(--border); border-radius: var(--radius-sm); background: var(--paper); color: var(--text); font-family: var(--font-body); outline: none; transition: border-color .15s; }
+.fi:focus { border-color: var(--forest-m); box-shadow: 0 0 0 3px rgba(45,128,85,.1); }
+
+/* ── TOAST ── */
+.toast { position: fixed; bottom: 24px; right: 24px; z-index: 2000; background: var(--slate); color: #fff; padding: 11px 17px; border-radius: var(--radius-sm); font-size: 13px; font-weight: 600; box-shadow: var(--shadow-md); display: none; align-items: center; gap: 10px; animation: fadeUp .2s ease; }
+.toast.show { display: flex; }
+</style>
+</head>
+<body>
+
+<!-- ── TOPBAR ── -->
+<div class="topbar">
+  <div class="tb-left">
+    <div class="tb-logo">Sikolah<span>Ku</span></div>
+    <div class="tb-sep"></div>
+    <div class="tb-breadcrumb">Aktivitas <span>›</span> <strong>Penilaian Harian & Rekap Rapor</strong></div>
+  </div>
+  <div class="tb-right">
+    <div class="tb-user"><div class="tb-av">WK</div>Bu Sari Utami · Wali Kelas</div>
+  </div>
+</div>
+
+<div class="shell">
+
+  <!-- ── CONTEXT BAND ── -->
+  <div class="ctx-band">
+    <div class="ctx-meta">
+      <div class="ctx-item"><div class="ctx-lbl">Kelas</div><div class="ctx-val big">MARS</div></div>
+      <div class="ctx-item"><div class="ctx-lbl">Semester</div><div class="ctx-val">2 (Genap)</div></div>
+      <div class="ctx-item"><div class="ctx-lbl">Week</div><div class="ctx-val">6</div></div>
+      <div class="ctx-item"><div class="ctx-lbl">Tema</div><div class="ctx-val">BIO AND ENERGY</div></div>
+      <div class="ctx-item"><div class="ctx-lbl">Sub-Tema</div><div class="ctx-val">I Love Animal</div></div>
+      <div class="ctx-item"><div class="ctx-lbl">Sekolah</div><div class="ctx-val">Sekolah Alam Baturraden</div></div>
+    </div>
+    <div class="ctx-actions">
+      <button class="btn btn-ghost" onclick="window.print()">
+        <svg viewBox="0 0 14 14" fill="none"><path d="M3 4V1h8v3M3 10H1V5h12v5h-2M3 7h8M3 10v3h8v-3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Cetak
+      </button>
+      <button class="btn btn-ghost" onclick="doExport()">
+        <svg viewBox="0 0 14 14" fill="none"><path d="M7 9V2M4 6l3 3 3-3M2 12h10" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Export
+      </button>
+    </div>
+  </div>
+
+  <!-- ── VIEW TABS ── -->
+  <div class="view-tabs">
+    <button class="vt active" onclick="switchView('harian',this)">
+      <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><rect x="2" y="3" width="12" height="11" rx="1.5" stroke="currentColor" stroke-width="1.3"/><path d="M5 2v2M11 2v2M2 7h12" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+      Penilaian Harian
+      <span class="badge">11 Siswa</span>
+    </button>
+    <button class="vt" onclick="switchView('rekap',this)">
+      <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M2 4h12M2 8h8M2 12h5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+      Rekap Nilai Rapor
+      <span class="badge">Semester 2</span>
+    </button>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       VIEW 1 : PENILAIAN HARIAN
+       ══════════════════════════════════════════ -->
+  <div class="view active" id="view-harian">
+
+    <!-- Criteria reference -->
+    <div class="criteria-card">
+      <div class="crit-group">
+        <div class="crit-title">Kriteria Nilai KI1 & KI2</div>
+        <div class="crit-row"><div class="crit-badge" style="background:#fee2e2;color:#b91c1c">1</div> Belum Tampak</div>
+        <div class="crit-row"><div class="crit-badge" style="background:#fff7ed;color:#c2410c">2</div> Perlu Bimbingan</div>
+        <div class="crit-row"><div class="crit-badge" style="background:#fef9c3;color:#a16207">3</div> Perlu Motivasi</div>
+        <div class="crit-row"><div class="crit-badge" style="background:#d1fae5;color:#059669">4</div> Mulai Berkembang</div>
+        <div class="crit-row"><div class="crit-badge" style="background:#dcfce7;color:#15803d">5</div> Mandiri</div>
+      </div>
+      <div class="crit-group">
+        <div class="crit-title">Kriteria Nilai KI3 & KI4</div>
+        <div class="crit-row" style="font-size:12px;font-weight:600;color:var(--text-2)">Skala 0 – 100</div>
+        <div style="margin-top:6px;font-size:11px;color:var(--text-3);line-height:1.7">
+          Kolom 1 & 2: TEORI / Pengetahuan<br>
+          Kolom 3, 4 & 5: Skill / Ketrampilan
+        </div>
+      </div>
+      <div class="crit-minimal">
+        <span>Capaian Minimal</span>
+        <strong style="font-size:20px;font-family:var(--font-display)">2.66</strong>
+      </div>
+      <div style="margin-left:auto;display:flex;gap:10px;align-items:flex-start">
+        <button class="btn btn-forest" onclick="openModal()">
+          <svg viewBox="0 0 14 14" fill="none"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          Input Nilai
+        </button>
+        <button class="btn" onclick="toast('Export berhasil!')">
+          <svg viewBox="0 0 14 14" fill="none"><path d="M7 9V2M4 6l3 3 3-3M2 12h10" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Export
+        </button>
+      </div>
+    </div>
+
+    <!-- Callout -->
+    <div class="callout callout-forest">
+      <div class="callout-icon">📋</div>
+      <div class="callout-body">
+        <strong>Penilaian berbasis aktivitas harian</strong> — Penilaian tidak berdasarkan mata pelajaran, melainkan dari kegiatan dan pengalaman belajar siswa sepanjang hari.
+        Sistem mengakumulasi <strong>Evaluasi KI 3&4 (Pengetahuan & Ketrampilan)</strong>, <strong>KI 2 (Sikap Sosial)</strong>, dan <strong>3 Target Akhlaq</strong> untuk menghasilkan nilai rekapitulasi harian yang komprehensif.
+      </div>
+    </div>
+
+    <!-- Stats bar -->
+    <div class="stats-bar">
+      <div class="stat-chip sc-forest"><div class="stat-val" style="color:var(--forest)">11</div><div class="stat-lbl" style="color:var(--forest)">Total Siswa</div></div>
+      <div class="stat-chip sc-sky"><div class="stat-val" style="color:var(--sky)">8</div><div class="stat-lbl" style="color:var(--sky)">A- keatas</div></div>
+      <div class="stat-chip sc-saffron"><div class="stat-val" style="color:var(--saffron)">2</div><div class="stat-lbl" style="color:var(--saffron)">B range</div></div>
+      <div class="stat-chip sc-crimson"><div class="stat-val" style="color:var(--crimson)">1</div><div class="stat-lbl" style="color:var(--crimson)">Perlu Perhatian</div></div>
+      <div class="stat-chip sc-violet"><div class="stat-val" style="color:var(--violet)">84.1</div><div class="stat-lbl" style="color:var(--violet)">Rerata Kelas</div></div>
+      <div style="margin-left:auto;display:flex;align-items:center;gap:8px;font-size:12px;color:var(--text-3)">
+        <span>Tampilkan:</span>
+        <select style="font-size:12px;padding:5px 10px;border:1px solid var(--border);border-radius:var(--radius-xs);background:var(--paper);outline:none;font-family:var(--font-body)">
+          <option>Semua Kegiatan</option>
+          <option>I Love Animal</option>
+          <option>Nonton Fabel</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- THE BIG TABLE -->
+    <div class="assess-wrap">
+      <table class="assess-table" id="assess-tbl">
+        <thead>
+          <!-- Row 1: Group headers -->
+          <tr>
+            <th rowspan="4" class="grp-header grp-no" style="width:32px">No</th>
+            <th rowspan="4" class="grp-header grp-no" style="min-width:155px;text-align:left;padding-left:10px">Nama Siswa</th>
+            <!-- KI 3&4 group -->
+            <th colspan="8" class="grp-header grp-ki34">
+              Evaluasi Kompetensi Inti 3 & 4 — Pengetahuan & Ketrampilan
+            </th>
+            <!-- KI 2 group -->
+            <th colspan="3" class="grp-header grp-ki2">
+              Evaluasi Kompetensi Inti 2 — Sikap Sosial
+            </th>
+            <!-- Akhlaq -->
+            <th colspan="3" class="grp-header grp-akhlaq">
+              3 Target Akhlaq <span style="font-size:9px;opacity:.8">(Wajib)</span>
+            </th>
+            <!-- Rekap -->
+            <th colspan="6" class="grp-header grp-rekap">
+              Rekapitulasi Nilai Harian
+            </th>
+            <!-- Catatan -->
+            <th rowspan="4" class="grp-header grp-catatan" style="min-width:120px">Catatan Fasilitator</th>
+          </tr>
+
+          <!-- Row 2: Sub-group activity names -->
+          <tr>
+            <!-- KI 3&4 sub-groups -->
+            <th colspan="5" class="subgrp sg-eksplorasi">Eksplorasi Senin — I Love Animal</th>
+            <th colspan="3" class="subgrp sg-siang">Kegiatan Siang — Nonton Fabel</th>
+            <!-- KI 2 -->
+            <th colspan="3" class="subgrp sg-target">3 Target Akhlaq (Wajib disampaikan)</th>
+            <!-- Akhlaq -->
+            <th colspan="3" class="subgrp" style="background:#fef9c3;color:#713f12">Sikap Harian</th>
+            <!-- Rekap -->
+            <th colspan="3" class="subgrp sg-ilove">I Love Animal</th>
+            <th colspan="3" class="subgrp sg-nonton">Nonton Fabel</th>
+          </tr>
+
+          <!-- Row 3: column labels (vertical) -->
+          <tr>
+            <!-- KI3&4 – Eksplorasi 5 cols -->
+            <th class="col-hd ki34">Pemahaman Wawasan Teori</th>
+            <th class="col-hd ki34">Pemahaman Teori</th>
+            <th class="col-hd ki34">Tertib dan Fokus</th>
+            <th class="col-hd ki34">Logika Berpikir</th>
+            <th class="col-hd ki34">Worksheet</th>
+            <!-- KI3&4 – Siang 3 cols -->
+            <th class="col-hd ki34">Pemahaman Pengetahuan dan Teori</th>
+            <th class="col-hd ki34">Antusias dalam Kegiatan</th>
+            <th class="col-hd ki34">Disiplin</th>
+            <!-- KI2 – 3 cols -->
+            <th class="col-hd ki2">Berani</th>
+            <th class="col-hd ki2">Memberi Manfaat pada Sesama</th>
+            <th class="col-hd ki2">Menghargai Orang Lain</th>
+            <!-- Akhlaq 3 -->
+            <th class="col-hd akhlaq">KI 3 Eksplorasi</th>
+            <th class="col-hd akhlaq">KI 4 Eksplorasi</th>
+            <th class="col-hd akhlaq">—</th>
+            <!-- Rekap ILoveAnimal 3 -->
+            <th class="col-hd rekap">Rerata</th>
+            <th class="col-hd rekap">Konversi</th>
+            <th class="col-hd rekap">Predikat</th>
+            <!-- Rekap Nonton Fabel 3 -->
+            <th class="col-hd rekap">Rerata</th>
+            <th class="col-hd rekap">Konversi</th>
+            <th class="col-hd rekap">Predikat</th>
+          </tr>
+        </thead>
+
+        <tbody id="assess-tbody"></tbody>
+      </table>
+
+      <!-- Legend -->
+      <div class="assess-legend">
+        <div class="legend-group">
+          <div class="legend-lbl">Warna Nilai:</div>
+          <div class="legend-item"><div class="legend-swatch" style="background:#f0fdf4;border-color:#86efac"></div> 85–100 (Sangat Baik)</div>
+          <div class="legend-item"><div class="legend-swatch" style="background:#fffbeb;border-color:#fcd34d"></div> 75–84 (Baik)</div>
+          <div class="legend-item"><div class="legend-swatch" style="background:#fff7ed;border-color:#fdba74"></div> &lt;75 (Perlu Perhatian)</div>
+        </div>
+        <div class="legend-group" style="margin-left:20px">
+          <div class="legend-lbl">Akhlaq:</div>
+          <div class="legend-item"><span class="ak-5" style="font-weight:700">5</span>=Mandiri</div>
+          <div class="legend-item"><span class="ak-4" style="font-weight:700">4</span>=Berkembang</div>
+          <div class="legend-item"><span class="ak-3" style="font-weight:700">3</span>=Perlu Motivasi</div>
+          <div class="legend-item"><span class="ak-2" style="font-weight:700">2</span>=Bimbingan</div>
+          <div class="legend-item"><span class="ak-1" style="font-weight:700">1</span>=Belum Tampak</div>
+        </div>
+        <div style="margin-left:auto;font-size:11px;color:var(--text-3)">
+          Catatan: Semua kolom WAJIB diisi setiap hari. Kolom 1&2 = TEORI, Kolom 3–5 = SKILL/Ketrampilan
+        </div>
+      </div>
+    </div>
+  </div><!-- /view-harian -->
+
+  <!-- ══════════════════════════════════════════
+       VIEW 2 : REKAP NILAI RAPOR
+       ══════════════════════════════════════════ -->
+  <div class="view" id="view-rekap">
+
+    <div class="callout callout-saffron">
+      <div class="callout-icon">📊</div>
+      <div class="callout-body">
+        <strong>Rekap Nilai Rapor — Semester Aggregation Layer.</strong> Seluruh data penilaian harian yang terakumulasi selama satu semester dirangkum dalam tabel ini sebagai dasar perhitungan nilai akhir rapor.
+        Setiap mapel menampilkan nilai <strong>Kompetensi Inti 1 (Spiritual)</strong>, <strong>KI 2 (Sosial)</strong>, <strong>KI 3 (Pengetahuan)</strong>, dan <strong>KI 4 (Ketrampilan)</strong> beserta konversi dan predikat akhirnya.
+      </div>
+    </div>
+
+    <div class="stats-bar">
+      <div class="stat-chip sc-forest"><div class="stat-val" style="color:var(--forest)">11</div><div class="stat-lbl" style="color:var(--forest)">Siswa</div></div>
+      <div class="stat-chip sc-sky"><div class="stat-val" style="color:var(--sky)">12</div><div class="stat-lbl" style="color:var(--sky)">Mapel</div></div>
+      <div class="stat-chip sc-violet"><div class="stat-val" style="color:var(--violet)">3,42</div><div class="stat-lbl" style="color:var(--violet)">Rerata Kelas</div></div>
+      <div class="stat-chip sc-saffron"><div class="stat-val" style="color:var(--saffron)">A-</div><div class="stat-lbl" style="color:var(--saffron)">Predikat Umum</div></div>
+      <div style="margin-left:auto;display:flex;align-items:center;gap:8px">
+        <button class="btn btn-forest btn-sm" onclick="toast('Laporan rapor dicetak!')">Cetak Rapor</button>
+        <button class="btn btn-sm" onclick="doExport()">Export Excel</button>
+      </div>
+    </div>
+
+    <!-- Rekap table -->
+    <div class="rekap-wrap">
+      <table class="rekap-table" id="rekap-tbl">
+        <thead id="rekap-head"></thead>
+        <tbody id="rekap-tbody"></tbody>
+      </table>
+    </div>
+
+  </div><!-- /view-rekap -->
+
+</div><!-- /shell -->
+
+<!-- ── MODAL: Input Nilai ── -->
+<div class="overlay" id="overlay" onclick="if(event.target===this)closeModal()">
+  <div class="modal">
+    <div class="modal-hd">
+      <div class="modal-title">Input Nilai Harian</div>
+      <button class="modal-x" onclick="closeModal()">×</button>
+    </div>
+    <div class="modal-body">
+      <div class="form-row">
+        <div class="fg"><label class="fl">Siswa</label>
+          <select class="fi" id="m-siswa">
+            <option>Aisha Mughny Shaliha</option>
+            <option>Aurelia Marsya Putri</option>
+            <option>Daneen Alesa Judia</option>
+            <option>Elmaira Lubna Kamila</option>
+            <option>Kiana Padmi Larasati</option>
+            <option>Keefe Mikail</option>
+            <option>Muhammad Farrel</option>
+            <option>Muhammad Alfatih</option>
+            <option>Muhammad Zaidan</option>
+            <option>Muhammad Zidan Al</option>
+            <option>Muhammad Annafi</option>
+          </select></div>
+        <div class="fg"><label class="fl">Kegiatan</label>
+          <select class="fi"><option>I Love Animal</option><option>Nonton Fabel</option></select></div>
+      </div>
+      <div style="font-size:11px;font-weight:700;color:var(--text-3);text-transform:uppercase;letter-spacing:.5px;margin-bottom:10px">KI 3 & 4 — Pengetahuan & Ketrampilan (0–100)</div>
+      <div class="form-row">
+        <div class="fg"><label class="fl">Pemahaman Wawasan</label><input class="fi" type="number" id="m-k1" min="0" max="100" placeholder="84"/></div>
+        <div class="fg"><label class="fl">Pemahaman Teori</label><input class="fi" type="number" id="m-k2" min="0" max="100" placeholder="84"/></div>
+        <div class="fg"><label class="fl">Tertib & Fokus</label><input class="fi" type="number" id="m-k3" min="0" max="100" placeholder="84"/></div>
+        <div class="fg"><label class="fl">Logika Berpikir</label><input class="fi" type="number" id="m-k4" min="0" max="100" placeholder="85"/></div>
+        <div class="fg"><label class="fl">Worksheet</label><input class="fi" type="number" id="m-k5" min="0" max="100" placeholder="85"/></div>
+        <div class="fg"><label class="fl">Antusias</label><input class="fi" type="number" id="m-k6" min="0" max="100" placeholder="85"/></div>
+      </div>
+      <div style="font-size:11px;font-weight:700;color:var(--text-3);text-transform:uppercase;letter-spacing:.5px;margin:14px 0 10px">KI 2 — Sikap Sosial (1–5) & Target Akhlaq</div>
+      <div class="form-row">
+        <div class="fg"><label class="fl">Berani</label><select class="fi"><option>5</option><option>4</option><option selected>4</option><option>3</option><option>2</option><option>1</option></select></div>
+        <div class="fg"><label class="fl">Beri Manfaat</label><select class="fi"><option>5</option><option selected>4</option><option>3</option><option>2</option><option>1</option></select></div>
+        <div class="fg"><label class="fl">Menghargai Orang</label><select class="fi"><option selected>5</option><option>4</option><option>3</option><option>2</option><option>1</option></select></div>
+        <div class="fg form-full"><label class="fl">Catatan Fasilitator</label><input class="fi" placeholder="Catatan perkembangan siswa hari ini..."/></div>
+      </div>
+    </div>
+    <div class="modal-ft">
+      <button class="btn" onclick="closeModal()">Batal</button>
+      <button class="btn btn-forest" onclick="saveNilai()">Simpan Nilai</button>
+    </div>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast"><span id="toast-msg"></span></div>
+
+<script>
+// ══════════════════════════════════════════════
+// DATA — faithfully mirrored from FileMaker screenshot
+// ══════════════════════════════════════════════
+
+// Daily assessment data: each row = one student
+// Columns: [nama, k1,k2,k3,k4,k5, s1,s2,s3, akhlaq1,akhlaq2,akhlaq3, ki3_ilove,ki4_ilove, rerata_ilove,konv_ilove,pred_ilove, rerata_nonton,konv_nonton,pred_nonton, catatan]
+const DAILY = [
+  {nama:'Aisha Mughny Shaliha',  k:[84,84,84,85,85,85,85,86], ki2:[5,5,5], ki34a:[84,85], ilove:{r:85,k:3.41,p:'A-'}, nonton:{r:85,k:3.41,p:'A-'}, notes:''},
+  {nama:'Aurelia Marsya Putri',  k:[83,83,82,82,82,83,82,82], ki2:[5,4,5], ki34a:[83,82], ilove:{r:82,k:3.29,p:'B+'}, nonton:{r:82,k:3.29,p:'B+'}, notes:''},
+  {nama:'Daneen Alesa Judia',    k:[81,83,83,84,82,83,84,83], ki2:[5,4,4], ki34a:[82,83], ilove:{r:83,k:3.33,p:'A-'}, nonton:{r:83,k:3.33,p:'A-'}, notes:''},
+  {nama:'Elmaira Lubna Kamila',  k:[83,82,83,82,83,84,83,84], ki2:[5,5,5], ki34a:[83,83], ilove:{r:85,k:3.39,p:'A-'}, nonton:{r:83,k:3.35,p:'A-'}, notes:''},
+  {nama:'Kiana Padmi Larasati',  k:[80,81,82,81,83,84,85,85], ki2:[4,4,4], ki34a:[81,82], ilove:{r:85,k:3.39,p:'A-'}, nonton:{r:81,k:3.26,p:'A-'}, notes:''},
+  {nama:'Keefe Mikail',          k:[75,75,80,75,75,75,75,75], ki2:[4,3,4], ki34a:[75,77], ilove:{r:75,k:3.00,p:'B' }, nonton:{r:75,k:3.00,p:'B' }, notes:''},
+  {nama:'Muhammad Farrel',       k:[84,82,83,83,82,83,84,83], ki2:[5,5,5], ki34a:[83,83], ilove:{r:83,k:3.33,p:'A-'}, nonton:{r:83,k:3.33,p:'A-'}, notes:''},
+  {nama:'Muhammad Alfatih',      k:[80,80,80,87,87,84,83,84], ki2:[4,4,3], ki34a:[80,85], ilove:{r:84,k:3.35,p:'A-'}, nonton:{r:84,k:3.35,p:'A-'}, notes:''},
+  {nama:'Muhammad Zaidan',       k:[83,83,82,83,82,84,82,85], ki2:[4,4,4], ki34a:[83,82], ilove:{r:84,k:3.35,p:'A-'}, nonton:{r:84,k:3.35,p:'A-'}, notes:''},
+  {nama:'Muhammad Zidan Al',     k:[83,84,83,84,82,84,85,83], ki2:[4,4,4], ki34a:[84,83], ilove:{r:84,k:3.36,p:'A-'}, nonton:{r:84,k:3.36,p:'A-'}, notes:''},
+  {nama:'Muhammad Annafi',       k:[83,83,84,83,85,84,83,84], ki2:[4,4,5], ki34a:[83,84], ilove:{r:84,k:3.35,p:'A-'}, nonton:{r:84,k:3.35,p:'A-'}, notes:''},
+];
+
+// Rekap rapor data — per mapel, each student has [ki1M/BT, ki2M/BT, ki3_val, ki3_pred, ki4_val, ki4_pred]
+// Mapel list from image 2
+const MAPEL = [
+  {name:'Sikap Spiritual', short:'Sprt', color:'mh-spiritual'},
+  {name:'Sikap Sosial',    short:'Sos',  color:'mh-sosial'},
+  {name:'IPA KI3',         short:'IPA3', color:'mh-ipa'},
+  {name:'IPA KI4',         short:'IPA4', color:'mh-ipa'},
+  {name:'IPS KI3',         short:'IPS3', color:'mh-ips'},
+  {name:'IPS KI4',         short:'IPS4', color:'mh-ips'},
+  {name:'PPKN KI3',        short:'PKN3', color:'mh-ppkn'},
+  {name:'PPKN KI4',        short:'PKN4', color:'mh-ppkn'},
+  {name:'Agama KI3',       short:'Agm3', color:'mh-agama'},
+  {name:'Agama KI4',       short:'Agm4', color:'mh-agama'},
+  {name:'Bahasa KI3',      short:'Bhs3', color:'mh-bahasa'},
+  {name:'Bahasa KI4',      short:'Bhs4', color:'mh-bahasa'},
+  {name:'Math KI3',        short:'Mt3',  color:'mh-math'},
+  {name:'Math KI4',        short:'Mt4',  color:'mh-math'},
+  {name:'Penjas KI3',      short:'Pnj3', color:'mh-penjas'},
+  {name:'Penjas KI4',      short:'Pnj4', color:'mh-penjas'},
+  {name:'SBK KI3',         short:'SBK3', color:'mh-sbk'},
+  {name:'SBK KI4',         short:'SBK4', color:'mh-sbk'},
+  {name:'Bud.Sunda',       short:'BudS', color:'mh-budaya'},
+  {name:'Basa Jawa',       short:'BasJ', color:'mh-basajawa'},
+];
+
+// Student rekap rows — from image 2
+const REKAP = [
+  {nama:'Aisha Mughny',    total:5.00, pred_ki1:'M', pred_ki2_total:4.67, pred_ki2:'M',
+   scores:[3.46,'A-',3.48,'A-',3.52,'A-',3.54,'A-',3.52,'A-',3.54,'A-',3.46,'A-',3.48,'A-',3.46,'A-',3.48,'A-',3.36,'A-',3.38,'A-',3.46,'A-',3.48,'A-',3.32,'B+',3.34,'A-',3.31,'B+',3.31,'E']},
+  {nama:'Aurelia Marsya',  total:5.00, pred_ki1:'M', pred_ki2_total:4.44, pred_ki2:'M',
+   scores:[3.38,'A-',3.39,'A-',3.46,'A-',3.47,'A-',3.46,'A-',3.47,'A-',3.36,'A-',3.37,'A-',3.38,'A-',3.39,'A-',3.36,'A-',3.37,'A-',3.16,'B+',3.17,'B+',3.26,'B+',3.27,'B+',3.29,'B+',3.29,'E']},
+  {nama:'Daneen Alesa',    total:5.00, pred_ki1:'M', pred_ki2_total:4.44, pred_ki2:'M',
+   scores:[3.43,'A-',3.46,'A-',3.43,'A-',3.43,'A-',3.43,'A-',3.54,'A-',3.43,'A-',3.46,'A-',3.43,'A-',3.46,'A-',3.41,'A-',3.44,'A-',3.41,'A-',3.44,'A-',3.25,'B+',3.28,'B+',3.36,'A-',3.36,'A-']},
+  {nama:'Elmaira Lubna',   total:5.00, pred_ki1:'M', pred_ki2_total:4.78, pred_ki2:'M',
+   scores:[3.17,'B+',3.17,'B+',3.17,'B+',3.17,'B+',3.17,'B+',3.17,'B+',3.39,'A-',3.39,'A-',3.17,'B+',3.17,'B+',3.05,'B+',3.05,'B+',3.39,'A-',3.39,'A-',3.17,'B+',3.17,'B+',3.20,'B+',3.20,'E']},
+  {nama:'Kiana Padmi',     total:4.50, pred_ki1:'M', pred_ki2_total:4.44, pred_ki2:'M',
+   scores:[2.64,'B-',2.70,'B-',2.64,'B-',2.70,'B-',2.64,'B-',2.70,'B-',2.64,'B-',2.70,'B-',2.64,'B-',2.70,'B-',2.64,'B-',2.70,'B-',2.64,'B-',2.70,'B-',2.64,'B-',2.70,'B-',2.62,'B-',2.70,'E']},
+  {nama:'Keefe Mikail',    total:4.75, pred_ki1:'M', pred_ki2_total:4.11, pred_ki2:'M',
+   scores:[2.62,'B-',2.63,'B-',2.62,'B-',2.63,'B-',2.62,'B-',2.63,'B-',2.62,'B-',2.63,'B-',2.62,'B-',2.63,'B-',2.62,'B-',2.63,'B-',2.62,'B-',2.63,'B-',2.57,'B-',2.57,'B-',2.57,'B-',2.57,'E']},
+  {nama:'Muhammad Farrel', total:5.00, pred_ki1:'M', pred_ki2_total:4.78, pred_ki2:'M',
+   scores:[3.51,'A-',3.53,'A-',3.51,'A-',3.53,'A-',3.51,'A-',3.53,'A-',3.51,'A-',3.53,'A-',3.51,'A-',3.53,'A-',3.45,'A-',3.47,'A-',3.51,'A-',3.53,'A-',3.43,'A-',3.36,'A-',3.36,'A-',3.36,'E']},
+  {nama:'Muhammad (Alfatih)',total:4.50,pred_ki1:'M',pred_ki2_total:4.22,pred_ki2:'M',
+   scores:[2.65,'B-',2.69,'B',2.65,'B-',2.69,'B',2.65,'B-',2.69,'B',2.65,'B-',2.69,'B',2.65,'B-',2.69,'B',2.65,'B-',2.69,'B',2.65,'B-',2.69,'B',2.65,'B-',2.69,'B',2.62,'B-',2.62,'E']},
+  {nama:'Muhammad (Zaidan)',total:5.00,pred_ki1:'M',pred_ki2_total:4.44,pred_ki2:'M',
+   scores:[3.52,'A-',3.53,'A-',3.46,'A-',3.47,'A-',3.46,'A-',3.47,'A-',3.42,'A-',3.43,'A-',3.52,'A-',3.53,'A-',3.12,'B+',3.13,'B+',3.42,'A-',3.43,'A-',3.52,'A-',3.53,'A-',3.37,'A-',3.37,'E']},
+  {nama:'Mhd Zidan Al',    total:5.00, pred_ki1:'M', pred_ki2_total:4.33, pred_ki2:'M',
+   scores:[3.45,'A-',3.48,'A-',3.46,'A-',3.47,'A-',3.46,'A-',3.47,'A-',3.46,'A-',3.51,'A-',3.54,'A-',3.48,'A-',3.41,'A-',3.44,'A-',3.41,'A-',3.44,'A-',3.23,'B+',3.26,'B+',3.37,'A-',3.37,'E']},
+  {nama:'Muhammad Annafi', total:4.75, pred_ki1:'M', pred_ki2_total:4.44, pred_ki2:'M',
+   scores:[3.48,'A-',3.51,'A-',3.40,'A-',3.43,'A-',3.40,'A-',3.43,'A-',3.42,'A-',3.45,'A-',3.48,'A-',3.51,'A-',3.48,'A-',3.51,'A-',3.32,'B+',3.35,'B+',3.30,'B+',3.33,'B+',3.26,'B+',3.26,'E']},
+];
+
+// ── FORMAT HELPERS ──
+const fmt100 = v => {
+  const bg = v>=85?'sc-hi':v>=75?'sc-md':'sc-lo';
+  return `<td class="score-cell ${bg}">${v}</td>`;
+};
+const fmtAkhlaq = v => {
+  const cls = v>=5?'ak-5':v>=4?'ak-4':v>=3?'ak-3':v>=2?'ak-2':'ak-1';
+  return `<td class="akhlaq-cell ${cls}">${v}</td>`;
+};
+const fmtPred = p => {
+  const pmap = {'A':'pred-A','A-':'pred-Am','B+':'pred-Bp','B':'pred-B','B-':'pred-B','C':'pred-C','D':'pred-D'};
+  return `<span class="predikat ${pmap[p]||'pred-C'}">${p}</span>`;
+};
+const fmtRekapPred = p => {
+  const m = {'A':'rv-pred-A','A-':'rv-pred-Am','B+':'rv-pred-Bp','B':'rv-pred-B','B-':'rv-pred-B','B ':'rv-pred-B','C':'rv-pred-C','D':'rv-pred-D'};
+  return `<span class="${m[p?.trim()]||'rv-pred-C'}">${p||'—'}</span>`;
+};
+const fmtKonv = v => {
+  const cls = v>=3.5?'rv-hi':v>=3.0?'rv-md':'rv-lo';
+  return `<span class="${cls}">${v.toFixed(2)}</span>`;
+};
+
+// ── RENDER DAILY TABLE ──
+function renderDaily(){
+  const tbody = document.getElementById('assess-tbody');
+  tbody.innerHTML = DAILY.map((s,i) => {
+    const [k1,k2,k3,k4,k5,s1,s2,s3] = s.k;
+    const [a1,a2,a3] = s.ki2;
+    const [ki3,ki4] = s.ki34a;
+    return `<tr>
+      <td class="col-no" style="background:#fafbfc;font-weight:700">${i+1}</td>
+      <td class="col-nama" style="background:#fafbfc;text-align:left;padding-left:10px">${s.nama}</td>
+      ${fmt100(k1)}${fmt100(k2)}${fmt100(k3)}${fmt100(k4)}${fmt100(k5)}
+      ${fmt100(s1)}${fmt100(s2)}${fmt100(s3)}
+      ${fmtAkhlaq(a1)}${fmtAkhlaq(a2)}${fmtAkhlaq(a3)}
+      <td style="background:#f0fdf4;font-family:var(--font-mono);font-size:12px;font-weight:700;color:var(--forest)">${ki3}</td>
+      <td style="background:#f0fdf4;font-family:var(--font-mono);font-size:12px;font-weight:700;color:var(--forest)">${ki4}</td>
+      <td class="cell-rerata">${s.ilove.r}</td>
+      <td class="cell-konversi">${s.ilove.k.toFixed(2)}</td>
+      <td style="background:#ede9fe">${fmtPred(s.ilove.p)}</td>
+      <td class="cell-rerata" style="background:#fff0f3">${s.nonton.r}</td>
+      <td class="cell-konversi" style="background:#fce7f3;color:var(--rose)">${s.nonton.k.toFixed(2)}</td>
+      <td style="background:#fce7f3">${fmtPred(s.nonton.p)}</td>
+      <td class="cell-notes">${s.notes || '<span style="opacity:.3">—</span>'}</td>
+    </tr>`;
+  }).join('');
+}
+
+// ── RENDER REKAP TABLE ──
+function renderRekap(){
+  const head = document.getElementById('rekap-head');
+  const tbody = document.getElementById('rekap-tbody');
+
+  // Header: row 1 — Mapel group headers (each spans 2 cols: nilai + pred)
+  let h1 = `<tr>
+    <th rowspan="3" style="background:var(--slate);color:#fff;font-size:11px;font-weight:800;padding:8px;min-width:28px;text-align:center">No</th>
+    <th rowspan="3" style="background:var(--slate);color:#fff;font-size:11px;font-weight:800;padding:8px;min-width:140px;text-align:left;padding-left:10px">Nama Siswa</th>
+    <th colspan="2" style="background:#fef3c7;color:#713f12;font-size:10px;font-weight:800;padding:7px;text-align:center;border:1px solid rgba(0,0,0,.08)">KI 1 & KI 2</th>`;
+  MAPEL.forEach(m => {
+    h1 += `<th colspan="2" class="mapel-header ${m.color}">${m.name}</th>`;
+  });
+  h1 += '</tr>';
+
+  // Header: row 2 — sub labels
+  let h2 = `<tr>
+    <th class="kd-sub kd-ki1">Spiritual</th>
+    <th class="kd-sub kd-ki2">Sosial</th>`;
+  MAPEL.forEach(() => {
+    h2 += `<th class="kd-sub kd-ki3">Nilai</th><th class="kd-sub kd-ki4">Pred</th>`;
+  });
+  h2 += '</tr>';
+
+  head.innerHTML = h1 + h2;
+
+  // Body rows
+  tbody.innerHTML = REKAP.map((s,i) => {
+    let cells = '';
+    if(s.scores){
+      for(let j=0;j<s.scores.length;j+=2){
+        const val = s.scores[j];
+        const pred= s.scores[j+1];
+        const cls = val>=3.5?'rv-hi':val>=3.0?'rv-md':'rv-lo';
+        cells += `<td class="${cls}">${typeof val==='number'?val.toFixed(2):val}</td>
+                  <td>${fmtRekapPred(pred)}</td>`;
+      }
+    }
+    const ki1cls = s.pred_ki1==='M'?'r-predikat-M':'r-predikat-BT';
+    const ki2cls = s.pred_ki2==='M'?'r-predikat-M':'r-predikat-BT';
+    return `<tr>
+      <td class="r-num">${i+1}</td>
+      <td class="r-nama">${s.nama}</td>
+      <td class="${ki1cls}" style="font-weight:800;font-family:var(--font-mono)">${s.total.toFixed(2)} <span style="font-size:10px">${s.pred_ki1}</span></td>
+      <td class="${ki2cls}" style="font-weight:800;font-family:var(--font-mono)">${s.pred_ki2_total.toFixed(2)} <span style="font-size:10px">${s.pred_ki2}</span></td>
+      ${cells}
+    </tr>`;
+  }).join('');
+}
+
+// ── VIEW SWITCH ──
+function switchView(name, btn){
+  document.querySelectorAll('.view').forEach(v=>v.classList.remove('active'));
+  document.getElementById('view-'+name).classList.add('active');
+  document.querySelectorAll('.vt').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+}
+
+// ── MODAL ──
+function openModal(){ document.getElementById('overlay').classList.add('open'); }
+function closeModal(){ document.getElementById('overlay').classList.remove('open'); }
+function saveNilai(){
+  closeModal();
+  toast('✅ Nilai berhasil disimpan!');
+}
+
+// ── EXPORT ──
+function doExport(){
+  const rows = [['No','Nama','K1','K2','K3','K4','K5','S1','S2','S3','Akhlaq1','Akhlaq2','Akhlaq3','KI3-ILA','KI4-ILA','Rerata-ILA','Konv-ILA','Pred-ILA','Rerata-NF','Konv-NF','Pred-NF']];
+  DAILY.forEach((s,i)=>{
+    rows.push([i+1,s.nama,...s.k,...s.ki2,...s.ki34a,s.ilove.r,s.ilove.k,s.ilove.p,s.nonton.r,s.nonton.k,s.nonton.p]);
+  });
+  const a=document.createElement('a');
+  a.href='data:text/csv;charset=utf-8,'+encodeURIComponent(rows.map(r=>r.join(',')).join('\n'));
+  a.download='penilaian-harian-mars-w6.csv'; a.click();
+  toast('📊 Export berhasil!');
+}
+
+// ── TOAST ──
+function toast(msg){
+  const el=document.getElementById('toast');
+  document.getElementById('toast-msg').textContent=msg;
+  el.classList.add('show');
+  setTimeout(()=>el.classList.remove('show'),3000);
+}
+
+// ── INIT ──
+renderDaily();
+renderRekap();
+</script>
+</body>
+</html>

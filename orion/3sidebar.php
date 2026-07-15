@@ -478,6 +478,14 @@ Sales -->
         </p>
       </a>
     </li>
+        <li class="nav-item">
+      <a href="laporan-retur-pembelian.php" class="nav-link <?php echo $page == 'laporan_retur_pembelian' ? 'active' : ''; ?>">
+        <i class="nav-icon far fa-circle"></i>
+        <p>
+          Lap. Retur Pembelian
+        </p>
+      </a>
+    </li>
     <li class="nav-item">
       <a href="laporan-insentif-sales.php" class="nav-link <?php echo $page == 'laporan_insentif_sales' ? 'active' : ''; ?>">
         <i class="nav-icon far fa-circle"></i>

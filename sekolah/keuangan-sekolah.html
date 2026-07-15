@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Keuangan Sekolah — SikolahKu</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+:root {
+  --green:#1a6b45; --green-mid:#2d9265; --green-light:#e6f5ee; --green-soft:#c8ecd9;
+  --amber:#d97706; --amber-light:#fef3c7;
+  --red:#dc2626; --red-light:#fee2e2;
+  --blue:#2563eb; --blue-light:#dbeafe;
+  --teal:#0f766e; --teal-light:#ccfbf1;
+  --slate:#1e293b; --slate-mid:#334155; --slate-soft:#64748b; --slate-muted:#94a3b8;
+  --border:#e2e8f0; --border-soft:#f1f5f9;
+  --bg:#f1f5f9; --surface:#ffffff;
+  --text:#0f172a; --text-2:#334155; --text-3:#64748b;
+  --sidebar-w:240px; --topbar-h:60px;
+  --radius:12px; --radius-sm:8px; --radius-xs:6px;
+  --shadow-sm:0 1px 3px rgba(15,23,42,.06),0 1px 2px rgba(15,23,42,.04);
+  --shadow:0 4px 16px rgba(15,23,42,.08),0 1px 4px rgba(15,23,42,.04);
+  --shadow-md:0 8px 32px rgba(15,23,42,.12);
+  --shadow-lg:0 20px 60px rgba(15,23,42,.18);
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;}
+a{text-decoration:none;color:inherit;}
+
+/* ── LAYOUT ── */
+.app{display:flex;min-height:100vh;}
+
+/* ── SIDEBAR ── */
+.sidebar{width:var(--sidebar-w);background:var(--slate);color:#fff;display:flex;flex-direction:column;position:fixed;top:0;left:0;height:100vh;z-index:100;}
+.sb-brand{padding:20px 18px 14px;border-bottom:1px solid rgba(255,255,255,.08);}
+.sb-logo{font-family:'Fraunces',serif;font-size:21px;font-weight:700;color:#fff;letter-spacing:-.5px;}
+.sb-logo span{color:var(--green-mid);}
+.sb-tagline{font-size:10px;color:rgba(255,255,255,.35);margin-top:2px;letter-spacing:.3px;}
+.sb-mod{margin:12px 12px 0;padding:10px 12px;background:rgba(45,146,101,.22);border:1px solid rgba(45,146,101,.38);border-radius:var(--radius-sm);display:flex;align-items:center;gap:9px;}
+.sb-mod-icon{width:28px;height:28px;border-radius:7px;background:var(--green-mid);display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0;}
+.sb-mod-name{font-size:12px;font-weight:700;color:#fff;line-height:1.3;}
+.sb-mod-sub{font-size:10px;color:rgba(255,255,255,.45);}
+.sb-nav{flex:1;overflow-y:auto;padding:12px 8px;}
+.sb-lbl{font-size:9px;letter-spacing:1.2px;color:rgba(255,255,255,.28);font-weight:700;padding:10px 10px 4px;text-transform:uppercase;}
+.sb-item{display:flex;align-items:center;gap:9px;padding:9px 11px;border-radius:var(--radius-sm);cursor:pointer;color:rgba(255,255,255,.55);font-size:13px;font-weight:500;transition:all .15s;position:relative;}
+.sb-item:hover{background:rgba(255,255,255,.07);color:#fff;}
+.sb-item.active{background:var(--green);color:#fff;font-weight:600;}
+.sb-item.active::before{content:'';position:absolute;left:-8px;top:50%;transform:translateY(-50%);width:3px;height:18px;background:var(--green-mid);border-radius:0 3px 3px 0;}
+.sb-item svg{width:15px;height:15px;opacity:.7;flex-shrink:0;}
+.sb-item.active svg{opacity:1;}
+.sb-badge{margin-left:auto;font-size:10px;font-weight:700;padding:1px 7px;border-radius:20px;}
+.bg-green{background:var(--green-mid);color:#fff;}
+.bg-red{background:var(--red);color:#fff;}
+.sb-foot{padding:12px 14px;border-top:1px solid rgba(255,255,255,.08);}
+.sb-back{display:flex;align-items:center;gap:7px;font-size:12px;color:rgba(255,255,255,.45);cursor:pointer;padding:8px 10px;border-radius:var(--radius-sm);border:1px solid rgba(255,255,255,.1);transition:all .15s;}
+.sb-back:hover{background:rgba(255,255,255,.07);color:rgba(255,255,255,.75);}
+.sb-back svg{width:12px;height:12px;}
+
+/* ── MAIN ── */
+.main-wrap{margin-left:var(--sidebar-w);flex:1;display:flex;flex-direction:column;min-height:100vh;}
+.topbar{background:var(--surface);border-bottom:1px solid var(--border);padding:0 26px;height:var(--topbar-h);display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:50;box-shadow:var(--shadow-sm);}
+.breadcrumb{font-size:13px;color:var(--text-3);display:flex;align-items:center;gap:6px;}
+.breadcrumb strong{color:var(--text);font-weight:700;}
+.breadcrumb .sep{opacity:.35;}
+.tb-right{display:flex;align-items:center;gap:10px;}
+.tb-user{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--text-3);padding:5px 10px;border-radius:var(--radius-sm);border:1px solid var(--border);background:var(--bg);}
+.tb-av{width:26px;height:26px;border-radius:50%;background:var(--slate);color:#fff;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;}
+
+/* ── CONTENT ── */
+.content{padding:22px 26px 60px;flex:1;}
+
+/* ── PAGE HEADER ── */
+.pg-hd{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:22px;gap:14px;}
+.pg-hd-l h1{font-family:'Fraunces',serif;font-size:26px;font-weight:700;color:var(--text);letter-spacing:-.5px;line-height:1.1;}
+.pg-hd-l h1 em{font-style:italic;color:var(--green);}
+.pg-hd-l p{font-size:13px;color:var(--text-3);margin-top:4px;}
+.pg-hd-r{display:flex;gap:8px;flex-shrink:0;}
+
+/* ── BUTTONS ── */
+.btn{font-size:13px;font-weight:600;padding:8px 16px;border-radius:var(--radius-sm);cursor:pointer;border:1.5px solid var(--border);background:var(--surface);color:var(--text-2);font-family:inherit;transition:all .15s;display:inline-flex;align-items:center;gap:6px;}
+.btn:hover{background:var(--bg);border-color:var(--slate-muted);}
+.btn svg{width:13px;height:13px;flex-shrink:0;}
+.btn-green{background:var(--green);color:#fff;border-color:var(--green);box-shadow:0 2px 6px rgba(26,107,69,.2);}
+.btn-green:hover{background:#155534;}
+.btn-red{background:var(--red);color:#fff;border-color:var(--red);}
+.btn-red:hover{opacity:.87;}
+.btn-sm{font-size:12px;padding:6px 13px;border-radius:var(--radius-xs);}
+.btn-ghost{background:transparent;border-color:transparent;color:var(--text-3);}
+.btn-ghost:hover{background:var(--border-soft);color:var(--text);}
+
+/* ── VIEW TABS ── */
+.vtabs{display:flex;border-bottom:1px solid var(--border);margin-bottom:20px;}
+.vt{font-size:13px;font-weight:600;padding:9px 18px;cursor:pointer;color:var(--text-3);border-bottom:2.5px solid transparent;background:none;border-top:none;border-left:none;border-right:none;font-family:inherit;transition:all .15s;margin-bottom:-1px;}
+.vt.active{color:var(--green);border-bottom-color:var(--green);}
+.view{display:none;}
+.view.active{display:block;animation:fu .2s ease;}
+@keyframes fu{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:translateY(0)}}
+
+/* ── PERIOD STRIP ── */
+.ps{display:flex;align-items:center;gap:4px;margin-bottom:20px;flex-wrap:wrap;}
+.pb{font-size:12px;font-weight:600;padding:5px 13px;border-radius:20px;border:1.5px solid var(--border);background:var(--surface);color:var(--text-3);cursor:pointer;font-family:inherit;transition:all .15s;}
+.pb:hover{border-color:var(--green-mid);color:var(--green);}
+.pb.active{background:var(--green);color:#fff;border-color:var(--green);box-shadow:0 2px 6px rgba(26,107,69,.18);}
+.ps-yr{margin-left:auto;}
+.ps-yr select{font-size:12px;font-weight:600;padding:5px 12px;border:1.5px solid var(--border);border-radius:var(--radius-sm);background:var(--surface);color:var(--text-2);cursor:pointer;font-family:inherit;outline:none;}
+
+/* ── KPI ── */
+.kpi-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:13px;margin-bottom:18px;}
+.kpi{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:17px 19px;box-shadow:var(--shadow-sm);position:relative;overflow:hidden;transition:box-shadow .18s,transform .15s;}
+.kpi:hover{box-shadow:var(--shadow);transform:translateY(-1px);}
+.kpi-stripe{position:absolute;top:0;left:0;right:0;height:3px;}
+.kpi-ico{width:38px;height:38px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:17px;margin-bottom:11px;}
+.kpi-val{font-family:'Fraunces',serif;font-size:24px;font-weight:700;line-height:1;letter-spacing:-.3px;}
+.kpi-lbl{font-size:11px;font-weight:700;color:var(--text-3);text-transform:uppercase;letter-spacing:.5px;margin-top:5px;}
+.kpi-sub{font-size:11px;color:var(--text-3);margin-top:5px;display:flex;align-items:center;gap:4px;}
+.up{color:var(--green);font-weight:700;}
+.dn{color:var(--red);font-weight:700;}
+
+/* ── CARDS ── */
+.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow-sm);overflow:hidden;margin-bottom:16px;}
+.card-hd{padding:15px 20px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;background:linear-gradient(to right,#fafbfc,var(--surface));}
+.card-title{font-size:14px;font-weight:700;color:var(--text);}
+.card-sub{font-size:12px;color:var(--text-3);margin-top:1px;}
+.card-body{padding:18px 20px;}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;}
+
+/* ── BAR CHART ── */
+.leg{display:flex;gap:12px;}
+.leg-it{display:flex;align-items:center;gap:5px;font-size:11px;font-weight:600;color:var(--text-3);}
+.leg-dot{width:9px;height:9px;border-radius:2px;}
+.bars-outer{display:flex;align-items:flex-end;gap:6px;height:150px;}
+.bar-grp{display:flex;flex-direction:column;align-items:center;gap:4px;flex:1;}
+.bar-pair{display:flex;gap:3px;align-items:flex-end;width:100%;height:130px;}
+.bar{flex:1;border-radius:4px 4px 0 0;min-height:2px;position:relative;cursor:pointer;transition:opacity .15s;}
+.bar:hover{opacity:.8;}
+.bar-in{background:var(--green-mid);}
+.bar-out{background:#f87171;}
+.bar-lbl{font-size:10px;font-weight:700;color:var(--text-3);}
+.tip{position:absolute;bottom:calc(100%+4px);left:50%;transform:translateX(-50%);background:var(--slate);color:#fff;font-size:10px;font-weight:600;padding:3px 7px;border-radius:4px;white-space:nowrap;display:none;z-index:5;}
+.bar:hover .tip{display:block;}
+.cs{display:flex;border-top:1px solid var(--border-soft);}
+.cs-c{flex:1;padding:12px 16px;border-right:1px solid var(--border-soft);}
+.cs-c:last-child{border-right:none;}
+.cs-lbl{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--text-3);margin-bottom:3px;}
+.cs-val{font-family:'Fraunces',serif;font-size:16px;font-weight:700;}
+
+/* ── CATEGORY BREAKDOWN ── */
+.cat-row{display:flex;align-items:center;gap:9px;padding:8px 0;border-bottom:1px solid var(--border-soft);}
+.cat-row:last-child{border-bottom:none;}
+.cat-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;}
+.cat-name{font-size:13px;font-weight:500;color:var(--text-2);flex:1;}
+.cat-bar-wrap{width:72px;height:5px;background:var(--border-soft);border-radius:3px;overflow:hidden;}
+.cat-bar-fill{height:100%;border-radius:3px;}
+.cat-amt{font-family:'DM Mono',monospace;font-size:11px;font-weight:500;min-width:68px;text-align:right;}
+.cat-pct{font-size:11px;font-weight:700;color:var(--text-3);min-width:28px;text-align:right;}
+
+/* ── FILTER BAR ── */
+.fb{display:flex;align-items:center;gap:9px;padding:11px 16px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-sm);margin-bottom:12px;flex-wrap:wrap;box-shadow:var(--shadow-sm);}
+.fl-lbl{font-size:12px;font-weight:600;color:var(--text-3);}
+.fsel{font-size:12px;font-weight:500;padding:5px 24px 5px 9px;border:1.5px solid var(--border);border-radius:var(--radius-xs);background:var(--bg);color:var(--text);font-family:inherit;outline:none;cursor:pointer;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='7' viewBox='0 0 10 7'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%2394a3b8' stroke-width='1.4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 7px center;}
+.fsel:focus{border-color:var(--green-mid);}
+.finput{font-size:12px;padding:5px 10px;border:1.5px solid var(--border);border-radius:var(--radius-xs);background:var(--bg);font-family:inherit;outline:none;flex:1;min-width:150px;}
+.finput:focus{border-color:var(--green-mid);background:var(--surface);}
+.fb-r{margin-left:auto;display:flex;align-items:center;gap:8px;}
+.jt-wrap{display:flex;background:var(--bg);border:1.5px solid var(--border);border-radius:var(--radius-xs);overflow:hidden;}
+.jt{font-size:12px;font-weight:600;padding:5px 12px;border:none;background:none;cursor:pointer;color:var(--text-3);font-family:inherit;transition:all .15s;}
+.jt.ja{background:var(--slate);color:#fff;}
+.jt.ji{background:var(--green);color:#fff;}
+.jt.jo{background:var(--red);color:#fff;}
+
+/* ── TABLE ── */
+.tbl{width:100%;border-collapse:collapse;font-size:13px;}
+.tbl thead tr{background:#fafbfc;}
+.tbl th{padding:9px 15px;text-align:left;font-size:10px;font-weight:700;color:var(--text-3);text-transform:uppercase;letter-spacing:.6px;border-bottom:1px solid var(--border);white-space:nowrap;}
+.tbl td{padding:11px 15px;border-bottom:1px solid var(--border-soft);vertical-align:middle;color:var(--text-2);}
+.tbl tbody tr{transition:background .1s;}
+.tbl tbody tr:hover{background:var(--border-soft);}
+.tbl tbody tr:last-child td{border-bottom:none;}
+.tbl tr.ri{border-left:3px solid var(--green-mid);}
+.tbl tr.ro{border-left:3px solid #f87171;}
+.tbl tfoot tr{background:#fafbfc;}
+.tbl tfoot td{padding:10px 15px;border-top:2px solid var(--border);font-weight:700;font-size:13px;}
+.tx-id{font-family:'DM Mono',monospace;font-size:11px;color:var(--slate-muted);}
+.tx-date{font-size:12px;color:var(--text-3);white-space:nowrap;}
+.tx-desc{font-weight:600;color:var(--text);}
+.tx-sub{font-size:11px;color:var(--text-3);margin-top:1px;}
+.tx-amt{font-family:'Fraunces',serif;font-size:16px;font-weight:700;white-space:nowrap;}
+.tx-amt.in{color:var(--green);}
+.tx-amt.out{color:var(--red);}
+
+/* Pills */
+.pill{display:inline-flex;align-items:center;font-size:11px;font-weight:600;padding:3px 9px;border-radius:20px;white-space:nowrap;}
+.p-spp{background:#eff6ff;color:#1d4ed8;}
+.p-gaji{background:#faf5ff;color:#7c3aed;}
+.p-keg{background:var(--amber-light);color:#92400e;}
+.p-ops{background:var(--green-light);color:var(--green);}
+.p-util{background:var(--border-soft);color:var(--slate-soft);}
+.p-don{background:#fdf4ff;color:#a21caf;}
+.p-etc{background:var(--border-soft);color:var(--text-3);}
+.st-pill{display:inline-flex;align-items:center;gap:4px;font-size:11px;font-weight:600;padding:3px 9px;border-radius:20px;}
+.sv{background:var(--green-light);color:var(--green);}
+.sp{background:var(--amber-light);color:var(--amber);}
+.sr{background:var(--red-light);color:var(--red);}
+.acts{display:flex;gap:3px;justify-content:center;}
+.act{width:27px;height:27px;border-radius:var(--radius-xs);border:1px solid var(--border);background:var(--bg);cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--text-3);transition:all .15s;font-size:12px;}
+.act:hover{background:var(--surface);color:var(--text);border-color:var(--slate-muted);}
+.act.del:hover{background:var(--red-light);color:var(--red);border-color:var(--red);}
+
+/* ── SEMESTER HERO ── */
+.sem-hero{background:linear-gradient(135deg,var(--slate) 0%,var(--green) 100%);border-radius:var(--radius);padding:24px 26px;color:#fff;display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:0;margin-bottom:18px;box-shadow:var(--shadow-md);}
+.sh-i{padding:0 20px;border-right:1px solid rgba(255,255,255,.1);}
+.sh-i:first-child{padding-left:0;}
+.sh-i:last-child{border-right:none;}
+.sh-lbl{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;opacity:.5;margin-bottom:7px;}
+.sh-val{font-family:'Fraunces',serif;font-size:26px;font-weight:700;line-height:1;}
+.sh-val.pos{color:#4ade80;}
+.sh-val.neg{color:#f87171;}
+.sh-sub{font-size:11px;opacity:.5;margin-top:4px;}
+
+/* Month chips */
+.mc-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:9px;margin-bottom:18px;}
+.mc{background:var(--surface);border:1.5px solid var(--border);border-radius:var(--radius-sm);padding:11px 7px;text-align:center;cursor:pointer;transition:all .15s;}
+.mc:hover{border-color:var(--green-mid);}
+.mc.active{background:var(--green);border-color:var(--green);color:#fff;}
+.mc-name{font-size:11px;font-weight:700;color:var(--text);margin-bottom:6px;}
+.mc.active .mc-name{color:#fff;}
+.mc-bars{height:36px;display:flex;gap:3px;align-items:flex-end;justify-content:center;margin-bottom:4px;}
+.mc-in,.mc-out{width:7px;border-radius:2px 2px 0 0;}
+.mc-in{background:var(--green-mid);}
+.mc-out{background:#f87171;}
+.mc.active .mc-in{background:rgba(255,255,255,.8);}
+.mc.active .mc-out{background:rgba(255,255,255,.4);}
+.mc-val{font-size:9px;font-weight:600;color:var(--text-3);}
+.mc.active .mc-val{color:rgba(255,255,255,.65);}
+
+/* Detail table */
+.dt{width:100%;border-collapse:collapse;font-size:13px;}
+.dt th{padding:8px 13px;background:#fafbfc;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--text-3);border-bottom:1px solid var(--border);text-align:left;}
+.dt td{padding:10px 13px;border-bottom:1px solid var(--border-soft);}
+.dt tr:last-child td{border-bottom:none;}
+.dt tfoot td{background:#fafbfc;font-weight:700;border-top:2px solid var(--border);}
+.prog-mini{display:flex;align-items:center;gap:7px;}
+.prog-track{flex:1;height:4px;background:var(--border-soft);border-radius:2px;overflow:hidden;}
+.prog-fill{height:100%;border-radius:2px;background:var(--green-mid);}
+
+/* ── MODAL ── */
+.overlay{position:fixed;inset:0;background:rgba(15,23,42,.48);backdrop-filter:blur(4px);display:none;align-items:center;justify-content:center;z-index:999;padding:20px;}
+.overlay.open{display:flex;animation:fi .18s ease;}
+@keyframes fi{from{opacity:0}to{opacity:1}}
+.modal{background:var(--surface);border-radius:var(--radius);width:548px;max-width:100%;max-height:92vh;overflow-y:auto;box-shadow:var(--shadow-lg);animation:mu .2s ease;}
+@keyframes mu{from{transform:translateY(14px);opacity:0}to{transform:translateY(0);opacity:1}}
+.modal-hd{padding:19px 22px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;background:var(--surface);z-index:1;}
+.modal-title{font-family:'Fraunces',serif;font-size:19px;font-weight:700;color:var(--text);}
+.modal-x{width:29px;height:29px;border-radius:50%;border:1px solid var(--border);background:var(--bg);cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--text-3);font-size:17px;transition:all .15s;}
+.modal-x:hover{background:var(--border-soft);color:var(--text);}
+.modal-body{padding:20px 22px;}
+.modal-ft{padding:15px 22px;border-top:1px solid var(--border);display:flex;gap:9px;justify-content:flex-end;position:sticky;bottom:0;background:var(--surface);}
+.jb-wrap{display:flex;gap:9px;margin-bottom:20px;}
+.jb{flex:1;padding:13px;border-radius:var(--radius-sm);cursor:pointer;font-family:inherit;font-size:13px;font-weight:700;border:2px solid var(--border);background:var(--bg);color:var(--text-3);transition:all .18s;display:flex;flex-direction:column;align-items:center;gap:5px;}
+.jb em{font-size:20px;font-style:normal;}
+.jb.sel-in{background:var(--green-light);border-color:var(--green-mid);color:var(--green);}
+.jb.sel-out{background:var(--red-light);border-color:var(--red);color:var(--red);}
+.fg{display:flex;flex-direction:column;gap:5px;}
+.fl{font-size:12px;font-weight:700;color:var(--text-2);}
+.fl .req{color:var(--red);}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:13px;}
+.form-full{grid-column:1/-1;}
+.fi{font-size:13px;padding:9px 11px;border:1.5px solid var(--border);border-radius:var(--radius-sm);background:var(--surface);color:var(--text);font-family:inherit;transition:border-color .15s;outline:none;width:100%;}
+.fi:focus{border-color:var(--green-mid);box-shadow:0 0 0 3px rgba(45,146,101,.1);}
+.fi.mono{font-family:'DM Mono',monospace;font-size:14px;}
+textarea.fi{resize:vertical;min-height:72px;line-height:1.6;}
+.fi-preview{font-family:'Fraunces',serif;font-size:13px;font-weight:700;color:var(--green);margin-top:3px;min-height:17px;}
+
+/* ── TOAST ── */
+.toast{position:fixed;bottom:24px;right:24px;z-index:2000;background:var(--slate);color:#fff;padding:11px 17px;border-radius:var(--radius-sm);font-size:13px;font-weight:600;box-shadow:var(--shadow-md);display:none;align-items:center;gap:9px;}
+.toast.show{display:flex;animation:mu .2s ease;}
+
+/* ── SCROLLBAR ── */
+::-webkit-scrollbar{width:5px;height:5px;}
+::-webkit-scrollbar-track{background:transparent;}
+::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px;}
+</style>
+</head>
+<body>
+<div class="app">
+
+<!-- ══ SIDEBAR ══ -->
+<aside class="sidebar">
+  <div class="sb-brand">
+    <div class="sb-logo">Sikolah<span>Ku</span></div>
+    <div class="sb-tagline">Sistem Manajemen Sekolah Alam</div>
+  </div>
+  <div class="sb-mod">
+    <div class="sb-mod-icon">💰</div>
+    <div>
+      <div class="sb-mod-name">Keuangan Sekolah</div>
+      <div class="sb-mod-sub">Administrator · 2025/2026</div>
+    </div>
+  </div>
+  <nav class="sb-nav">
+    <div class="sb-lbl">Arus Kas</div>
+    <div class="sb-item active" id="sb-bulanan" onclick="switchView('bulanan',this)">
+      <svg viewBox="0 0 16 16" fill="none"><rect x="2" y="3" width="12" height="11" rx="1.5" stroke="currentColor" stroke-width="1.3"/><path d="M5 2v2M11 2v2M2 7h12" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+      Transaksi Bulanan
+      <span class="sb-badge bg-green">Apr</span>
+    </div>
+    <div class="sb-item" id="sb-semester" onclick="switchView('semester',this)">
+      <svg viewBox="0 0 16 16" fill="none"><path d="M2 4h12M2 8h8M2 12h5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+      Rekap Semester
+    </div>
+    <div class="sb-item" id="sb-tahunan" onclick="switchView('tahunan',this)">
+      <svg viewBox="0 0 16 16" fill="none"><rect x="1" y="1" width="6" height="6" rx="1.5" stroke="currentColor" stroke-width="1.3"/><rect x="9" y="1" width="6" height="6" rx="1.5" stroke="currentColor" stroke-width="1.3"/><rect x="1" y="9" width="6" height="6" rx="1.5" stroke="currentColor" stroke-width="1.3"/><rect x="9" y="9" width="6" height="6" rx="1.5" stroke="currentColor" stroke-width="1.3"/></svg>
+      Ringkasan Tahunan
+    </div>
+    <div class="sb-lbl">Input Cepat</div>
+    <div class="sb-item" onclick="openModal('masuk')">
+      <svg viewBox="0 0 16 16" fill="none"><path d="M8 3v10M5 10l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Catat Pemasukan
+      <span class="sb-badge bg-green">+</span>
+    </div>
+    <div class="sb-item" onclick="openModal('keluar')">
+      <svg viewBox="0 0 16 16" fill="none"><path d="M8 13V3M5 6l3-3 3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Catat Pengeluaran
+      <span class="sb-badge bg-red">−</span>
+    </div>
+    <div class="sb-lbl">Ekspor</div>
+    <div class="sb-item" onclick="doExport()">
+      <svg viewBox="0 0 16 16" fill="none"><path d="M8 10V3M5 7l3 3 3-3M3 13h10" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Export CSV
+    </div>
+    <div class="sb-item">
+      <svg viewBox="0 0 16 16" fill="none"><path d="M3 4h10a1 1 0 011 1v7a1 1 0 01-1 1H3a1 1 0 01-1-1V5a1 1 0 011-1z" stroke="currentColor" stroke-width="1.3"/><path d="M5 8h6M5 11h4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+      Cetak Laporan
+    </div>
+  </nav>
+  <div class="sb-foot">
+    <div class="sb-back" onclick="window.location.href='sikolahku.html'">
+      <svg viewBox="0 0 14 14" fill="none"><path d="M9 2L4 7l5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Kembali ke SikolahKu
+    </div>
+  </div>
+</aside>
+
+<!-- ══ MAIN ══ -->
+<div class="main-wrap">
+
+  <!-- TOPBAR -->
+  <div class="topbar">
+    <div class="breadcrumb">
+      Manajemen <span class="sep">›</span> <strong id="bc">Transaksi Bulanan</strong>
+    </div>
+    <div class="tb-right">
+      <button class="btn btn-sm btn-green" onclick="openModal('masuk')">
+        <svg viewBox="0 0 16 16" fill="none"><path d="M8 3v10M5 10l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Pemasukan
+      </button>
+      <button class="btn btn-sm btn-red" onclick="openModal('keluar')">
+        <svg viewBox="0 0 16 16" fill="none"><path d="M8 13V3M5 6l3-3 3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Pengeluaran
+      </button>
+      <div class="tb-user">
+        <div class="tb-av">AD</div>
+        Admin Sistem
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+
+    <!-- ═══ BULANAN ═══ -->
+    <div class="view active" id="view-bulanan">
+      <div class="pg-hd">
+        <div class="pg-hd-l">
+          <h1>Arus Kas <em>Bulanan</em></h1>
+          <p id="sub-bul">April 2026 · Tahun Akademik 2025/2026</p>
+        </div>
+        <div class="pg-hd-r"><button class="btn" onclick="doExport()">Export CSV</button></div>
+      </div>
+      <div class="ps" id="ps">
+        <button class="pb" onclick="selMonth(this,'Jan')">Jan</button>
+        <button class="pb" onclick="selMonth(this,'Feb')">Feb</button>
+        <button class="pb" onclick="selMonth(this,'Mar')">Mar</button>
+        <button class="pb active" onclick="selMonth(this,'Apr')">Apr</button>
+        <button class="pb" onclick="selMonth(this,'Mei')">Mei</button>
+        <button class="pb" onclick="selMonth(this,'Jun')">Jun</button>
+        <button class="pb" onclick="selMonth(this,'Jul')">Jul</button>
+        <button class="pb" onclick="selMonth(this,'Agu')">Agu</button>
+        <button class="pb" onclick="selMonth(this,'Sep')">Sep</button>
+        <button class="pb" onclick="selMonth(this,'Okt')">Okt</button>
+        <button class="pb" onclick="selMonth(this,'Nov')">Nov</button>
+        <button class="pb" onclick="selMonth(this,'Des')">Des</button>
+        <div class="ps-yr"><select><option>2025 / 2026</option><option>2024 / 2025</option></select></div>
+      </div>
+
+      <div class="kpi-grid" id="kpi-row"></div>
+
+      <div class="g2">
+        <div class="card" style="margin-bottom:0">
+          <div class="card-hd">
+            <div><div class="card-title">Arus Kas 4 Bulan Terakhir</div><div class="card-sub">Pemasukan vs Pengeluaran</div></div>
+            <div class="leg">
+              <div class="leg-it"><div class="leg-dot" style="background:var(--green-mid)"></div>Masuk</div>
+              <div class="leg-it"><div class="leg-dot" style="background:#f87171"></div>Keluar</div>
+            </div>
+          </div>
+          <div class="card-body"><div class="bars-outer" id="bar-bul"></div></div>
+          <div class="cs" id="cs-bul"></div>
+        </div>
+        <div class="card" style="margin-bottom:0">
+          <div class="card-hd"><div class="card-title">Rekap per Kategori</div><div class="card-sub" id="cat-lbl">April 2026</div></div>
+          <div class="card-body" id="cat-body"></div>
+        </div>
+      </div>
+
+      <div class="fb">
+        <div class="jt-wrap">
+          <button class="jt ja" id="jta" onclick="setJF('all',this)">Semua</button>
+          <button class="jt" id="jti" onclick="setJF('masuk',this)">▲ Masuk</button>
+          <button class="jt" id="jto" onclick="setJF('keluar',this)">▼ Keluar</button>
+        </div>
+        <span class="fl-lbl">Kategori:</span>
+        <select class="fsel" id="fk" onchange="renderTbl()">
+          <option value="">Semua</option>
+          <option>SPP</option><option>Kegiatan</option><option>Gaji</option>
+          <option>Operasional</option><option>Utilitas</option><option>Donasi</option>
+        </select>
+        <span class="fl-lbl">Status:</span>
+        <select class="fsel" id="fs" onchange="renderTbl()">
+          <option value="">Semua</option><option>verified</option><option>pending</option>
+        </select>
+        <input class="finput" id="fq" placeholder="🔍 Cari transaksi..." oninput="renderTbl()"/>
+        <div class="fb-r">
+          <button class="btn btn-sm btn-ghost" onclick="resetF()">Reset</button>
+          <span style="font-size:12px;color:var(--text-3)" id="f-cnt"></span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-hd">
+          <div><div class="card-title">Daftar Transaksi</div><div class="card-sub" id="tbl-sub">April 2026</div></div>
+          <div style="display:flex;gap:8px">
+            <button class="btn btn-sm" onclick="doExport()">Export CSV</button>
+            <button class="btn btn-sm btn-green" onclick="openModal('masuk')">+ Tambah</button>
+          </div>
+        </div>
+        <div style="overflow-x:auto">
+          <table class="tbl">
+            <thead><tr>
+              <th style="width:86px">ID</th><th style="width:90px">Tanggal</th>
+              <th>Keterangan</th><th style="width:96px">Kategori</th>
+              <th style="width:148px">Jumlah</th><th style="width:88px">Metode</th>
+              <th style="width:86px">Status</th><th style="width:76px;text-align:center">Aksi</th>
+            </tr></thead>
+            <tbody id="tx-tbody"></tbody>
+            <tfoot id="tx-tfoot"></tfoot>
+          </table>
+        </div>
+      </div>
+    </div><!-- /bulanan -->
+
+    <!-- ═══ SEMESTER ═══ -->
+    <div class="view" id="view-semester">
+      <div class="pg-hd">
+        <div class="pg-hd-l"><h1>Rekap <em>Semester</em></h1><p>Ringkasan arus kas per semester akademik</p></div>
+        <div class="pg-hd-r">
+          <div style="display:flex;gap:5px" id="sem-sw">
+            <button class="pb active" onclick="setSem(0,this)">Ganjil 25/26</button>
+            <button class="pb" onclick="setSem(1,this)">Genap 25/26</button>
+            <button class="pb" onclick="setSem(2,this)">Ganjil 24/25</button>
+          </div>
+          <button class="btn btn-sm" onclick="doExport()">Export</button>
+        </div>
+      </div>
+      <div class="sem-hero" id="sem-hero"></div>
+      <div class="g2">
+        <div class="card" style="margin-bottom:0">
+          <div class="card-hd"><div class="card-title">Distribusi per Bulan</div></div>
+          <div class="card-body">
+            <div class="mc-grid" id="mc-grid"></div>
+            <div style="overflow-x:auto;border:1px solid var(--border);border-radius:var(--radius-sm)">
+              <table class="dt" id="sem-dt">
+                <thead><tr><th>Bulan</th><th>Pemasukan</th><th>Pengeluaran</th><th>Net</th><th>Porsi Masuk</th><th>Status</th></tr></thead>
+                <tbody id="sem-tbody"></tbody><tfoot id="sem-tfoot"></tfoot>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="card" style="margin-bottom:0">
+          <div class="card-hd"><div class="card-title">Komposisi Keuangan</div></div>
+          <div class="card-body">
+            <div style="font-size:11px;font-weight:700;color:var(--text-3);text-transform:uppercase;letter-spacing:.5px;margin-bottom:9px">Sumber Pemasukan</div>
+            <div id="sem-in" style="margin-bottom:18px"></div>
+            <div style="font-size:11px;font-weight:700;color:var(--text-3);text-transform:uppercase;letter-spacing:.5px;margin-bottom:9px">Alokasi Pengeluaran</div>
+            <div id="sem-out"></div>
+          </div>
+        </div>
+      </div>
+    </div><!-- /semester -->
+
+    <!-- ═══ TAHUNAN ═══ -->
+    <div class="view" id="view-tahunan">
+      <div class="pg-hd">
+        <div class="pg-hd-l"><h1>Ringkasan <em>Tahunan</em></h1><p>Tahun Akademik 2025/2026 · Juli 2025 — Juni 2026</p></div>
+        <div class="pg-hd-r"><button class="btn" onclick="doExport()">Export CSV</button><button class="btn btn-green">Cetak PDF</button></div>
+      </div>
+      <div class="kpi-grid" id="kpi-ann"></div>
+      <div class="g2">
+        <div class="card" style="margin-bottom:0">
+          <div class="card-hd">
+            <div class="card-title">Arus Kas 12 Bulan</div>
+            <div class="leg">
+              <div class="leg-it"><div class="leg-dot" style="background:var(--green-mid)"></div>Masuk</div>
+              <div class="leg-it"><div class="leg-dot" style="background:#f87171"></div>Keluar</div>
+            </div>
+          </div>
+          <div class="card-body"><div class="bars-outer" id="bar-ann"></div></div>
+          <div class="cs" id="cs-ann"></div>
+        </div>
+        <div class="card" style="margin-bottom:0">
+          <div class="card-hd"><div class="card-title">Perbandingan Semester</div></div>
+          <div class="card-body">
+            <div id="sem-cmp"></div>
+            <div style="margin-top:18px">
+              <div style="font-size:11px;font-weight:700;color:var(--text-3);text-transform:uppercase;letter-spacing:.5px;margin-bottom:9px">Alokasi Pengeluaran Tahunan</div>
+              <div id="ann-cat"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card" style="margin-top:16px">
+        <div class="card-hd"><div class="card-title">Rekap Bulanan — Tahun Akademik 2025/2026</div></div>
+        <div style="overflow-x:auto">
+          <table class="dt"><thead><tr><th>Bulan</th><th>Pemasukan</th><th>Pengeluaran</th><th>Net</th><th>Kumulatif</th><th>Status</th></tr></thead>
+          <tbody id="ann-tbody"></tbody><tfoot id="ann-tfoot"></tfoot></table>
+        </div>
+      </div>
+    </div><!-- /tahunan -->
+
+  </div><!-- /content -->
+</div><!-- /main-wrap -->
+</div><!-- /app -->
+
+<!-- ══ MODAL ══ -->
+<div class="overlay" id="overlay" onclick="if(event.target===this)closeModal()">
+  <div class="modal">
+    <div class="modal-hd">
+      <div class="modal-title" id="m-title">Catat Pemasukan</div>
+      <button class="modal-x" onclick="closeModal()">×</button>
+    </div>
+    <div class="modal-body">
+      <div class="jb-wrap">
+        <button class="jb sel-in" id="jb-in" onclick="setMJ('masuk')"><em>▲</em> Pemasukan</button>
+        <button class="jb" id="jb-out" onclick="setMJ('keluar')"><em>▼</em> Pengeluaran</button>
+      </div>
+      <div class="form-grid">
+        <div class="fg form-full"><label class="fl">Keterangan <span class="req">*</span></label><input class="fi" id="f-ket" placeholder="cth: SPP April — Ananda Putri"/></div>
+        <div class="fg">
+          <label class="fl">Jumlah (Rp) <span class="req">*</span></label>
+          <input class="fi mono" id="f-jml" type="number" placeholder="500000" oninput="prvw()"/>
+          <div class="fi-preview" id="f-prv"></div>
+        </div>
+        <div class="fg"><label class="fl">Tanggal <span class="req">*</span></label><input class="fi" id="f-tgl" type="date"/></div>
+        <div class="fg"><label class="fl">Kategori</label>
+          <select class="fi" id="m-kat">
+            <option>SPP</option><option>Kegiatan</option><option>Gaji</option>
+            <option>Operasional</option><option>Utilitas</option><option>Donasi</option><option>Lainnya</option>
+          </select></div>
+        <div class="fg"><label class="fl">Metode Bayar</label>
+          <select class="fi" id="m-met"><option>Cash</option><option>Transfer Bank</option><option>QRIS</option><option>e-Wallet</option></select></div>
+        <div class="fg"><label class="fl">Kelas Terkait</label>
+          <select class="fi" id="m-kls">
+            <option value="—">— (Umum)</option>
+            <option>1A</option><option>2A</option><option>3A</option>
+            <option>4A</option><option>5A</option><option>5B</option><option>6A</option>
+          </select></div>
+        <div class="fg form-full"><label class="fl">Catatan / Referensi</label><textarea class="fi" id="m-cat" placeholder="No. kwitansi, bukti, atau catatan tambahan..."></textarea></div>
+      </div>
+    </div>
+    <div class="modal-ft">
+      <button class="btn" onclick="closeModal()">Batal</button>
+      <button class="btn btn-green" id="m-save" onclick="saveTx()">Simpan Transaksi</button>
+    </div>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast"><span id="toast-msg"></span></div>
+
+<script>
+// ══ DATA ══
+const MN=['Jan','Feb','Mar','Apr','Mei','Jun','Jul','Agu','Sep','Okt','Nov','Des'];
+const CC={SPP:'#2563eb',Gaji:'#7c3aed',Kegiatan:'#d97706',Operasional:'#1a6b45',Utilitas:'#64748b',Donasi:'#a21caf',Lainnya:'#94a3b8'};
+const CP={SPP:'p-spp',Gaji:'p-gaji',Kegiatan:'p-keg',Operasional:'p-ops',Utilitas:'p-util',Donasi:'p-don',Lainnya:'p-etc'};
+
+let TX=[
+  {id:'TRX-001',tgl:'2026-04-21',ket:'SPP April — Ananda Putri',sub:'Kelas 3A',kat:'SPP',jenis:'masuk',jumlah:500000,metode:'Transfer',status:'verified',kelas:'3A'},
+  {id:'TRX-002',tgl:'2026-04-21',ket:'SPP April — Citra Dewi',sub:'Kelas 3A',kat:'SPP',jenis:'masuk',jumlah:500000,metode:'QRIS',status:'verified',kelas:'3A'},
+  {id:'TRX-003',tgl:'2026-04-21',ket:'Alat Farming — pot galon & kapur',sub:'Aktivitas 3A',kat:'Operasional',jenis:'keluar',jumlah:150000,metode:'Kas',status:'verified',kelas:'3A'},
+  {id:'TRX-004',tgl:'2026-04-20',ket:'SPP April — Bagas Setiawan',sub:'Kelas 3A',kat:'SPP',jenis:'masuk',jumlah:500000,metode:'Cash',status:'verified',kelas:'3A'},
+  {id:'TRX-005',tgl:'2026-04-20',ket:'Biaya Kunjungan Museum — Kelas 4',sub:'Field Trip',kat:'Kegiatan',jenis:'keluar',jumlah:450000,metode:'Kas',status:'verified',kelas:'4A'},
+  {id:'TRX-006',tgl:'2026-04-19',ket:'Donasi Perlengkapan — Bpk. Andi S.',sub:'Wali Murid 3A',kat:'Donasi',jenis:'masuk',jumlah:2000000,metode:'Transfer',status:'verified',kelas:'—'},
+  {id:'TRX-007',tgl:'2026-04-19',ket:'Gaji Fasilitator April — Bu Sari Utami',sub:'Wali Kelas 3A',kat:'Gaji',jenis:'keluar',jumlah:3500000,metode:'Transfer',status:'verified',kelas:'—'},
+  {id:'TRX-008',tgl:'2026-04-18',ket:'SPP April — Dimas Prayoga',sub:'Kelas 3A',kat:'SPP',jenis:'masuk',jumlah:500000,metode:'QRIS',status:'pending',kelas:'3A'},
+  {id:'TRX-009',tgl:'2026-04-18',ket:'Listrik & Air — April 2026',sub:'Utilitas Bulanan',kat:'Utilitas',jenis:'keluar',jumlah:875000,metode:'Transfer',status:'verified',kelas:'—'},
+  {id:'TRX-010',tgl:'2026-04-17',ket:'Supplies Market Day — Kelas 5B',sub:'Kegiatan 5B',kat:'Kegiatan',jenis:'keluar',jumlah:320000,metode:'Kas',status:'verified',kelas:'5B'},
+  {id:'TRX-011',tgl:'2026-04-15',ket:'Pemeliharaan Alat Outdoor & Taman',sub:'Operasional Sekolah',kat:'Operasional',jenis:'keluar',jumlah:280000,metode:'Kas',status:'verified',kelas:'—'},
+];
+
+const MONTHLY=[
+  {m:'Jan',in:12500000,out:9800000},{m:'Feb',in:13200000,out:10100000},
+  {m:'Mar',in:14800000,out:11200000},{m:'Apr',in:4000000,out:5575000},
+];
+
+const SEMESTERS=[
+  {lbl:'Ganjil 2025/2026',period:'Januari – Juni 2026',months:[
+    {m:'Januari 2026',in:12500000,out:9800000},{m:'Februari 2026',in:13200000,out:10100000},
+    {m:'Maret 2026',in:14800000,out:11200000},{m:'April 2026',in:4000000,out:5575000},
+    {m:'Mei 2026',in:0,out:0},{m:'Juni 2026',in:0,out:0},
+  ],
+  catIn:[{n:'SPP',p:62,a:27625000},{n:'Donasi',p:24,a:10700000},{n:'Lainnya',p:14,a:6175000}],
+  catOut:[{n:'Gaji',p:57,a:20900000},{n:'Kegiatan',p:21,a:7700000},{n:'Utilitas',p:12,a:4400000},{n:'Operasional',p:10,a:3675000}]},
+  {lbl:'Genap 2025/2026',period:'Juli – Desember 2025',months:[
+    {m:'Juli 2025',in:14200000,out:11500000},{m:'Agustus 2025',in:13800000,out:10900000},
+    {m:'September 2025',in:14100000,out:11800000},{m:'Oktober 2025',in:12900000,out:10200000},
+    {m:'November 2025',in:11000000,out:8900000},{m:'Desember 2025',in:8500000,out:8200000},
+  ],
+  catIn:[{n:'SPP',p:65,a:28925000},{n:'Donasi',p:20,a:8900000},{n:'Lainnya',p:15,a:6675000}],
+  catOut:[{n:'Gaji',p:55,a:20185000},{n:'Kegiatan',p:23,a:8443750},{n:'Utilitas',p:12,a:4407000},{n:'Operasional',p:10,a:3672500}]},
+  {lbl:'Ganjil 2024/2025',period:'Januari – Juni 2025',months:[
+    {m:'Januari 2025',in:11500000,out:9200000},{m:'Februari 2025',in:12300000,out:9800000},
+    {m:'Maret 2025',in:13800000,out:10400000},{m:'April 2025',in:12500000,out:9900000},
+    {m:'Mei 2025',in:11200000,out:8700000},{m:'Juni 2025',in:9700000,out:8100000},
+  ],
+  catIn:[{n:'SPP',p:68,a:48680000},{n:'Donasi',p:18,a:12870000},{n:'Lainnya',p:14,a:10010000}],
+  catOut:[{n:'Gaji',p:60,a:34200000},{n:'Kegiatan',p:19,a:10830000},{n:'Utilitas',p:11,a:6270000},{n:'Operasional',p:10,a:5700000}]},
+];
+
+const ANNUAL=[
+  {m:'Jul',in:14200000,out:11500000},{m:'Agu',in:13800000,out:10900000},
+  {m:'Sep',in:14100000,out:11800000},{m:'Okt',in:12900000,out:10200000},
+  {m:'Nov',in:11000000,out:8900000},{m:'Des',in:8500000,out:8200000},
+  {m:'Jan',in:12500000,out:9800000},{m:'Feb',in:13200000,out:10100000},
+  {m:'Mar',in:14800000,out:11200000},{m:'Apr',in:4000000,out:5575000},
+  {m:'Mei',in:0,out:0},{m:'Jun',in:0,out:0},
+];
+
+let JF='all', MJ='masuk', editId=null, curSem=0;
+
+// ── FORMAT ──
+const fmt=n=>'Rp '+n.toLocaleString('id-ID');
+const fs=n=>n>=1000000?(n/1000000).toFixed(1)+'jt':n>=1000?(n/1000).toFixed(0)+'rb':String(n);
+const fd=d=>{const dt=new Date(d);return dt.getDate()+' '+MN[dt.getMonth()]+' '+dt.getFullYear();};
+
+// ── VIEW SWITCH ──
+function switchView(name,el){
+  document.querySelectorAll('.view').forEach(v=>v.classList.remove('active'));
+  document.getElementById('view-'+name).classList.add('active');
+  document.querySelectorAll('.sb-item[id^="sb-"]').forEach(i=>i.classList.remove('active'));
+  const m={'bulanan':'sb-bulanan','semester':'sb-semester','tahunan':'sb-tahunan'};
+  document.getElementById(m[name]).classList.add('active');
+  document.getElementById('bc').textContent={'bulanan':'Transaksi Bulanan','semester':'Rekap Semester','tahunan':'Ringkasan Tahunan'}[name];
+}
+
+// ── KPIs ──
+function renderKPIs(){
+  const si=TX.filter(t=>t.jenis==='masuk').reduce((s,t)=>s+t.jumlah,0);
+  const so=TX.filter(t=>t.jenis==='keluar').reduce((s,t)=>s+t.jumlah,0);
+  const n=si-so; const pos=n>=0;
+  const p=TX.filter(t=>t.status==='pending').length;
+  document.getElementById('kpi-row').innerHTML=
+    kpiCard('#1a6b45','var(--green-light)','💚','Total Pemasukan',fmt(si),TX.filter(t=>t.jenis==='masuk').length+' transaksi',true)+
+    kpiCard('#dc2626','var(--red-light)','❤️','Total Pengeluaran',fmt(so),TX.filter(t=>t.jenis==='keluar').length+' transaksi',false)+
+    kpiCard(pos?'#1a6b45':'#dc2626',pos?'var(--green-light)':'var(--red-light)','⚖️','Saldo Bersih (Net)',(pos?'+ ':'− ')+fmt(Math.abs(n)),pos?'Surplus bulan ini':'Defisit bulan ini',pos)+
+    kpiCard('#7c3aed','#faf5ff','⏳','Pending Verifikasi',p,'transaksi belum diverifikasi',null);
+}
+function kpiCard(ac,bg,ico,lbl,val,sub,up){
+  const sh=up===null?`<div class="kpi-sub" style="color:#7c3aed;font-weight:700">${sub}</div>`
+    :`<div class="kpi-sub">${up?'<span class="up">▲</span>':'<span class="dn">▼</span>'} ${sub}</div>`;
+  return `<div class="kpi"><div class="kpi-stripe" style="background:${ac}"></div><div class="kpi-ico" style="background:${bg}">${ico}</div><div class="kpi-val" style="color:${ac}">${val}</div><div class="kpi-lbl">${lbl}</div>${sh}</div>`;
+}
+
+// ── BAR CHART ──
+function renderBar(cid,data,sid){
+  const max=Math.max(...data.map(d=>Math.max(d.in||0,d.out||0)),1);
+  document.getElementById(cid).innerHTML=data.map(d=>{
+    const hi=d.in?Math.max(Math.round((d.in/max)*124),3):0;
+    const ho=d.out?Math.max(Math.round((d.out/max)*124),3):0;
+    return`<div class="bar-grp"><div class="bar-pair">
+      ${d.in?`<div class="bar bar-in" style="height:${hi}px"><div class="tip">▲ ${fs(d.in)}</div></div>`:'<div class="bar" style="height:3px;opacity:0"></div>'}
+      ${d.out?`<div class="bar bar-out" style="height:${ho}px"><div class="tip">▼ ${fs(d.out)}</div></div>`:'<div class="bar" style="height:3px;opacity:0"></div>'}
+    </div><div class="bar-lbl">${d.m}</div></div>`;
+  }).join('');
+  if(sid){
+    const ti=data.reduce((s,d)=>s+(d.in||0),0);
+    const to=data.reduce((s,d)=>s+(d.out||0),0);
+    const tn=ti-to; const act=data.filter(d=>d.in>0||d.out>0).length||1;
+    document.getElementById(sid).innerHTML=
+      `<div class="cs-c"><div class="cs-lbl">Total Masuk</div><div class="cs-val" style="color:var(--green)">${fs(ti)}</div></div>
+       <div class="cs-c"><div class="cs-lbl">Total Keluar</div><div class="cs-val" style="color:var(--red)">${fs(to)}</div></div>
+       <div class="cs-c"><div class="cs-lbl">Net</div><div class="cs-val" style="color:${tn>=0?'var(--green)':'var(--red)'}">${tn>=0?'+ ':'− '}${fs(Math.abs(tn))}</div></div>
+       <div class="cs-c"><div class="cs-lbl">Rata-rata/Bln</div><div class="cs-val">${fs(Math.round(tn/act))}</div></div>`;
+  }
+}
+
+// ── CATEGORY BREAKDOWN ──
+function renderCat(){
+  const cats={};
+  TX.forEach(t=>{ if(!cats[t.kat]) cats[t.kat]={in:0,out:0}; cats[t.kat][t.jenis==='masuk'?'in':'out']+=t.jumlah; });
+  const ti=TX.filter(t=>t.jenis==='masuk').reduce((s,t)=>s+t.jumlah,0);
+  const to=TX.filter(t=>t.jenis==='keluar').reduce((s,t)=>s+t.jumlah,0);
+  let h='';
+  Object.entries(cats).forEach(([k,v])=>{
+    const isIn=v.in>=v.out; const amt=isIn?v.in:v.out; const ref=isIn?ti:to;
+    const pct=ref>0?Math.round(amt/ref*100):0; const col=CC[k]||'#94a3b8';
+    h+=`<div class="cat-row"><div class="cat-dot" style="background:${col}"></div><div class="cat-name">${k}</div>
+      <div class="cat-bar-wrap"><div class="cat-bar-fill" style="width:${pct}%;background:${col}"></div></div>
+      <div class="cat-amt" style="color:${isIn?'var(--green)':'var(--red)'}">${isIn?'+':'−'}${fs(amt)}</div>
+      <div class="cat-pct">${pct}%</div></div>`;
+  });
+  document.getElementById('cat-body').innerHTML=h||'<p style="color:var(--text-3);font-size:13px">Belum ada data.</p>';
+}
+
+// ── TABLE ──
+function renderTbl(){
+  const q=document.getElementById('fq').value.toLowerCase();
+  const k=document.getElementById('fk').value;
+  const s=document.getElementById('fs').value;
+  const f=TX.filter(t=>{
+    if(JF!=='all'&&t.jenis!==JF) return false;
+    if(k&&t.kat!==k) return false;
+    if(s&&t.status!==s) return false;
+    if(q&&!t.ket.toLowerCase().includes(q)&&!t.id.toLowerCase().includes(q)) return false;
+    return true;
+  });
+  const si=f.filter(t=>t.jenis==='masuk').reduce((s,t)=>s+t.jumlah,0);
+  const so=f.filter(t=>t.jenis==='keluar').reduce((s,t)=>s+t.jumlah,0);
+  const n=si-so;
+  document.getElementById('f-cnt').textContent=`${f.length} dari ${TX.length}`;
+  document.getElementById('tbl-sub').textContent=`April 2026 · ${f.length} transaksi`;
+  document.getElementById('tx-tbody').innerHTML=f.map(t=>`
+    <tr class="${t.jenis==='masuk'?'ri':'ro'}">
+      <td><span class="tx-id">${t.id}</span></td>
+      <td><span class="tx-date">${fd(t.tgl)}</span></td>
+      <td><div class="tx-desc">${t.ket}</div>${t.sub?`<div class="tx-sub">${t.sub}</div>`:''}</td>
+      <td><span class="pill ${CP[t.kat]||'p-etc'}">${t.kat}</span></td>
+      <td><span class="tx-amt ${t.jenis==='masuk'?'in':'out'}">${t.jenis==='masuk'?'▲ ':'▼ '}${fmt(t.jumlah)}</span></td>
+      <td style="font-size:12px;color:var(--text-3)">${t.metode}</td>
+      <td><span class="st-pill ${t.status==='verified'?'sv':'sp'}">${t.status==='verified'?'✓ Verified':'⏳ Pending'}</span></td>
+      <td><div class="acts"><button class="act" onclick="editTx('${t.id}')">✏</button><button class="act del" onclick="delTx('${t.id}')">🗑</button></div></td>
+    </tr>`).join('')||`<tr><td colspan="8" style="text-align:center;padding:40px;color:var(--text-3)">Tidak ada transaksi yang sesuai filter.</td></tr>`;
+  document.getElementById('tx-tfoot').innerHTML=`<tr>
+    <td colspan="4">Total (${f.length})</td>
+    <td><div style="color:var(--green);font-size:12px;font-weight:700">▲ ${fmt(si)}</div><div style="color:var(--red);font-size:12px;font-weight:700">▼ ${fmt(so)}</div></td>
+    <td colspan="3" style="font-family:'Fraunces',serif;font-size:16px;color:${n>=0?'var(--green)':'var(--red)'}">${n>=0?'+ ':'− '}${fmt(Math.abs(n))}</td>
+  </tr>`;
+}
+
+function setJF(v,btn){
+  JF=v;
+  document.getElementById('jta').className='jt';
+  document.getElementById('jti').className='jt';
+  document.getElementById('jto').className='jt';
+  btn.className='jt '+(v==='all'?'ja':v==='masuk'?'ji':'jo');
+  renderTbl();
+}
+function resetF(){
+  JF='all';
+  document.getElementById('jta').className='jt ja';
+  document.getElementById('jti').className='jt';
+  document.getElementById('jto').className='jt';
+  document.getElementById('fk').value='';
+  document.getElementById('fs').value='';
+  document.getElementById('fq').value='';
+  renderTbl();
+}
+function selMonth(btn,m){
+  document.querySelectorAll('#ps .pb').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('sub-bul').textContent=m+' 2026 · Tahun Akademik 2025/2026';
+  document.getElementById('cat-lbl').textContent=m+' 2026';
+  toast('📅 Menampilkan data '+m+' 2026');
+}
+function delTx(id){
+  if(!confirm('Hapus transaksi '+id+'?')) return;
+  TX=TX.filter(t=>t.id!==id);
+  renderKPIs(); renderCat(); renderTbl();
+  toast('🗑 Transaksi '+id+' dihapus');
+}
+function editTx(id){ openModal(TX.find(t=>t.id===id).jenis,TX.find(t=>t.id===id)); }
+
+// ── SEMESTER ──
+function setSem(idx,btn){
+  curSem=idx;
+  document.querySelectorAll('#sem-sw .pb').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  const d=SEMESTERS[idx];
+  const ti=d.months.reduce((s,m)=>s+m.in,0);
+  const to=d.months.reduce((s,m)=>s+m.out,0);
+  const n=ti-to;
+  document.getElementById('sem-hero').innerHTML=`
+    <div class="sh-i"><div class="sh-lbl">Semester</div><div style="font-family:'Fraunces',serif;font-size:19px;color:#fff;font-weight:700">${d.lbl}</div><div class="sh-sub">${d.period}</div></div>
+    <div class="sh-i"><div class="sh-lbl">Total Pemasukan</div><div class="sh-val pos">${fs(ti)}</div><div class="sh-sub">${d.months.filter(m=>m.in>0).length} bulan aktif</div></div>
+    <div class="sh-i"><div class="sh-lbl">Total Pengeluaran</div><div class="sh-val neg">${fs(to)}</div><div class="sh-sub">${d.months.filter(m=>m.out>0).length} bulan aktif</div></div>
+    <div class="sh-i"><div class="sh-lbl">Saldo Semester</div><div class="sh-val ${n>=0?'pos':'neg'}">${n>=0?'+ ':'− '}${fs(Math.abs(n))}</div><div class="sh-sub">${n>=0?'✓ Surplus':'⚠ Defisit'}</div></div>`;
+  // Month chips
+  const mx=Math.max(...d.months.map(m=>Math.max(m.in,m.out)),1);
+  document.getElementById('mc-grid').innerHTML=d.months.map((m,i)=>{
+    const hi=m.in?Math.max(Math.round(m.in/mx*32),3):0;
+    const ho=m.out?Math.max(Math.round(m.out/mx*32),3):0;
+    return`<div class="mc ${i===3&&idx===0?'active':''}" onclick="this.parentElement.querySelectorAll('.mc').forEach(x=>x.classList.remove('active'));this.classList.add('active')">
+      <div class="mc-name">${m.m.split(' ')[0]}</div>
+      <div class="mc-bars"><div class="mc-in" style="height:${hi}px"></div><div class="mc-out" style="height:${ho}px"></div></div>
+      <div class="mc-val">${m.in?fs(m.in):'—'}</div>
+    </div>`;
+  }).join('');
+  // Monthly table
+  document.getElementById('sem-tbody').innerHTML=d.months.map(m=>{
+    const n=m.in-m.out; const has=m.in>0||m.out>0;
+    const pct=ti>0&&m.in>0?Math.round(m.in/ti*100):0;
+    return`<tr style="${!has?'opacity:.38':''}">
+      <td style="font-weight:500">${m.m}</td>
+      <td style="color:var(--green);font-weight:${has?'700':'400'}">${m.in?fmt(m.in):'—'}</td>
+      <td style="color:var(--red);font-weight:${has?'700':'400'}">${m.out?fmt(m.out):'—'}</td>
+      <td style="font-weight:700;color:${n>0?'var(--green)':n<0?'var(--red)':'var(--text-3)'}">${has?(n>=0?'+ ':'− ')+fmt(Math.abs(n)):'—'}</td>
+      <td>${has?`<div class="prog-mini"><div class="prog-track"><div class="prog-fill" style="width:${pct}%"></div></div><span style="font-size:11px;font-weight:700;color:var(--text-3);min-width:26px">${pct}%</span></div>`:'—'}</td>
+      <td>${has?`<span class="st-pill ${n>=0?'sv':'sr'}">${n>=0?'✓ Surplus':'⚠ Defisit'}</span>`:'<span style="color:var(--text-3);font-size:12px">Belum dimulai</span>'}</td>
+    </tr>`;
+  }).join('');
+  document.getElementById('sem-tfoot').innerHTML=`<tr><td>Total</td><td style="color:var(--green)">${fmt(ti)}</td><td style="color:var(--red)">${fmt(to)}</td><td style="color:${n>=0?'var(--green)':'var(--red)'}">${n>=0?'+ ':'− '}${fmt(Math.abs(n))}</td><td><div class="prog-mini"><div class="prog-track"><div class="prog-fill" style="width:100%"></div></div><span style="font-size:11px;font-weight:700;color:var(--text-3)">100%</span></div></td><td><span class="st-pill ${n>=0?'sv':'sr'}">${n>=0?'✓ Surplus':'⚠ Defisit'}</span></td></tr>`;
+  // Cat rows
+  const cr=(cats,isIn)=>cats.map(c=>`<div class="cat-row"><div class="cat-dot" style="background:${CC[c.n]||'#94a3b8'}"></div><div class="cat-name">${c.n}</div><div class="cat-bar-wrap"><div class="cat-bar-fill" style="width:${c.p}%;background:${CC[c.n]||'#94a3b8'}"></div></div><div class="cat-amt" style="color:${isIn?'var(--green)':'var(--red)'}">${fmt(c.a)}</div><div class="cat-pct">${c.p}%</div></div>`).join('');
+  document.getElementById('sem-in').innerHTML=cr(d.catIn,true);
+  document.getElementById('sem-out').innerHTML=cr(d.catOut,false);
+}
+
+// ── TAHUNAN ──
+function renderTahunan(){
+  const ti=ANNUAL.reduce((s,d)=>s+d.in,0);
+  const to=ANNUAL.reduce((s,d)=>s+d.out,0);
+  const n=ti-to;
+  document.getElementById('kpi-ann').innerHTML=
+    kpiCard('#1a6b45','var(--green-light)','💚','Total Pemasukan Tahunan',fs(ti),'Tahun akademik 2025/26',true)+
+    kpiCard('#dc2626','var(--red-light)','❤️','Total Pengeluaran Tahunan',fs(to),'Tahun akademik 2025/26',false)+
+    kpiCard('#1a6b45','var(--green-light)','⚖️','Saldo Tahunan','+ '+fs(n),'Surplus keseluruhan',true)+
+    kpiCard('#2563eb','var(--blue-light)','📊','Net Rata-rata/Bulan',fs(Math.round(n/ANNUAL.filter(d=>d.in>0||d.out>0).length||1)),'per bulan aktif',null);
+  renderBar('bar-ann',ANNUAL,'cs-ann');
+  // Semester compare
+  document.getElementById('sem-cmp').innerHTML=SEMESTERS.slice(0,2).map(s=>{
+    const si=s.months.reduce((a,m)=>a+m.in,0);
+    const so=s.months.reduce((a,m)=>a+m.out,0);
+    const sn=si-so;
+    return`<div style="padding:11px 0;border-bottom:1px solid var(--border-soft)">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:5px">
+        <span style="font-size:13px;font-weight:600;color:var(--text)">${s.lbl}</span>
+        <span class="st-pill ${sn>=0?'sv':'sr'}">${sn>=0?'✓ Surplus':'⚠ Defisit'}</span>
+      </div>
+      <div style="display:flex;gap:14px;font-size:12px">
+        <span style="color:var(--green)">▲ ${fs(si)}</span>
+        <span style="color:var(--red)">▼ ${fs(so)}</span>
+        <span style="font-weight:700;color:${sn>=0?'var(--green)':'var(--red)'}">${sn>=0?'+ ':'− '}${fs(Math.abs(sn))}</span>
+      </div></div>`;
+  }).join('');
+  document.getElementById('ann-cat').innerHTML=[{n:'Gaji',p:57},{n:'Kegiatan',p:21},{n:'Utilitas',p:12},{n:'Operasional',p:10}]
+    .map(c=>`<div class="cat-row"><div class="cat-dot" style="background:${CC[c.n]}"></div><div class="cat-name">${c.n}</div><div class="cat-bar-wrap"><div class="cat-bar-fill" style="width:${c.p}%;background:${CC[c.n]}"></div></div><div class="cat-pct">${c.p}%</div></div>`).join('');
+  // Annual table
+  let cum=0;
+  document.getElementById('ann-tbody').innerHTML=ANNUAL.map(d=>{
+    const n=d.in-d.out; const has=d.in>0||d.out>0;
+    if(has) cum+=n;
+    return`<tr style="${!has?'opacity:.35':''}">
+      <td style="font-weight:500">${d.m} 2025/26</td>
+      <td style="color:var(--green);font-weight:${has?'700':'400'}">${d.in?fmt(d.in):'—'}</td>
+      <td style="color:var(--red);font-weight:${has?'700':'400'}">${d.out?fmt(d.out):'—'}</td>
+      <td style="font-weight:700;color:${n>0?'var(--green)':n<0?'var(--red)':'var(--text-3)'}">${has?(n>=0?'+ ':'− ')+fmt(Math.abs(n)):'—'}</td>
+      <td style="font-family:'DM Mono',monospace;font-size:11px;color:${cum>=0?'var(--green)':'var(--red)'}">${has?(cum>=0?'+ ':'− ')+fmt(Math.abs(cum)):'—'}</td>
+      <td>${has?`<span class="st-pill ${n>=0?'sv':'sr'}">${n>=0?'✓ Surplus':'⚠ Defisit'}</span>`:'<span style="color:var(--text-3);font-size:12px">Belum dimulai</span>'}</td>
+    </tr>`;
+  }).join('');
+  const fn=ANNUAL.reduce((s,d)=>s+(d.in-d.out),0);
+  document.getElementById('ann-tfoot').innerHTML=`<tr><td>Total Tahunan</td><td style="color:var(--green)">${fmt(ti)}</td><td style="color:var(--red)">${fmt(to)}</td><td style="color:${fn>=0?'var(--green)':'var(--red)'}">${fn>=0?'+ ':'− '}${fmt(Math.abs(fn))}</td><td style="font-family:'DM Mono',monospace;font-size:11px;color:${fn>=0?'var(--green)':'var(--red)'}">${fn>=0?'+ ':'− '}${fmt(Math.abs(fn))}</td><td><span class="st-pill ${fn>=0?'sv':'sr'}">${fn>=0?'✓ Surplus':'⚠ Defisit'}</span></td></tr>`;
+}
+
+// ── MODAL ──
+function openModal(jenis='masuk',tx=null){
+  MJ=jenis; editId=tx?tx.id:null;
+  document.getElementById('overlay').classList.add('open');
+  document.getElementById('m-title').textContent=tx?'Edit Transaksi':(jenis==='masuk'?'Catat Pemasukan':'Catat Pengeluaran');
+  document.getElementById('f-ket').value=tx?tx.ket:'';
+  document.getElementById('f-jml').value=tx?tx.jumlah:'';
+  document.getElementById('f-tgl').value=tx?tx.tgl:new Date().toISOString().split('T')[0];
+  document.getElementById('m-kat').value=tx?tx.kat:'SPP';
+  document.getElementById('m-met').value=tx?tx.metode:'Cash';
+  document.getElementById('m-kls').value=tx?tx.kelas:'—';
+  document.getElementById('m-cat').value=tx?tx.sub||'':'';
+  document.getElementById('f-prv').textContent=tx?fmt(tx.jumlah):'';
+  setMJ(tx?tx.jenis:jenis);
+}
+function closeModal(){document.getElementById('overlay').classList.remove('open');editId=null;}
+function setMJ(j){
+  MJ=j;
+  document.getElementById('m-title').textContent=editId?'Edit Transaksi':(j==='masuk'?'Catat Pemasukan':'Catat Pengeluaran');
+  document.getElementById('jb-in').className='jb'+(j==='masuk'?' sel-in':'');
+  document.getElementById('jb-out').className='jb'+(j==='keluar'?' sel-out':'');
+  document.getElementById('m-save').className='btn '+(j==='masuk'?'btn-green':'btn-red');
+}
+function prvw(){const n=parseInt(document.getElementById('f-jml').value)||0;document.getElementById('f-prv').textContent=n>0?fmt(n):'';}
+function saveTx(){
+  const ket=document.getElementById('f-ket').value.trim();
+  const jml=parseInt(document.getElementById('f-jml').value)||0;
+  const tgl=document.getElementById('f-tgl').value;
+  if(!ket||!jml||!tgl){alert('Keterangan, jumlah, dan tanggal wajib diisi.');return;}
+  const kat=document.getElementById('m-kat').value;
+  const met=document.getElementById('m-met').value;
+  const kls=document.getElementById('m-kls').value;
+  const sub=document.getElementById('m-cat').value.trim();
+  if(editId){
+    const i=TX.findIndex(t=>t.id===editId);
+    TX[i]={...TX[i],ket,jumlah:jml,tgl,kat,metode:met,kelas:kls,sub,jenis:MJ};
+    toast('✏️ Transaksi diperbarui');
+  } else {
+    TX.unshift({id:'TRX-'+String(TX.length+1).padStart(3,'0'),tgl,ket,sub,kat,jenis:MJ,jumlah:jml,metode:met,status:'pending',kelas:kls});
+    toast('✅ Transaksi baru disimpan — status: Pending verifikasi');
+  }
+  closeModal();
+  renderKPIs(); renderCat(); renderTbl();
+}
+
+// ── EXPORT ──
+function doExport(){
+  const rows=[['ID','Tanggal','Keterangan','Kategori','Jenis','Jumlah','Metode','Status','Kelas']];
+  TX.forEach(t=>rows.push([t.id,t.tgl,t.ket,t.kat,t.jenis,t.jumlah,t.metode,t.status,t.kelas]));
+  const a=document.createElement('a');
+  a.href='data:text/csv;charset=utf-8,'+encodeURIComponent(rows.map(r=>r.join(',')).join('\n'));
+  a.download='keuangan-sekolah.csv';a.click();
+  toast('📊 File CSV berhasil diunduh');
+}
+
+// ── TOAST ──
+function toast(msg){
+  const el=document.getElementById('toast');
+  document.getElementById('toast-msg').textContent=msg;
+  el.classList.add('show');
+  setTimeout(()=>el.classList.remove('show'),3000);
+}
+
+// ── INIT ──
+renderKPIs();
+renderBar('bar-bul',MONTHLY,'cs-bul');
+renderCat();
+renderTbl();
+setSem(0,document.getElementById('sem-sw').children[0]);
+renderTahunan();
+</script>
+</body>
+</html>

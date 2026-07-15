@@ -376,14 +376,14 @@
 
 <!-- Satu card besar -->
 <div class="card card-secondary">
-  <div class="card-header ">
+  <div class="card-header "> 
     <h5>Jurnal Refleksi CQI Pengajaran Mata Kuliah (Personal)<br></h5>
-    <small>Deskripsi: Catatan refleksi ini bersifat pribadi dan hanya dapat diakses oleh Anda. Tujuannya adalah membantu mengevaluasi proses pembelajaran serta menjadi referensi dalam meningkatkan kualitas penyelenggaraan mata kuliah pada semester berikutnya.</small>
+    <small>Deskripsi: Catatan refleksi ini bersifat pribadi dan hanya dapat diakses oleh Anda. Tujuannya adalah membantu mengevaluasi proses pembelajaran serta menjadi referensi dalam meningkatkan kualitas penyelenggaraan mata kuliah pada semester berikutnya. </small> pengisian text area bisa seperti rich text sehingga bisa bullet poin.
   </div>
   <div class="card-body">
 
     <!-- Q1 -->
-    <h5>Q1. Mnurut Anda, praktik pembelajaran apa yang <b>paling efektif</b> membantu mahasiswa mencapai CPMK/CPL pada mata kuliah ini? <small class="text-muted"></small></h5>
+    <h5>Q1. Menurut Anda, praktik pembelajaran apa yang <b>paling efektif</b> membantu pencapaian CPMK/CPL pada mata kuliah ini? <small class="text-muted"></small></h5>
     <textarea class="form-control mb-3" rows="6" placeholder="Tuliskan metode, strategi, media, aktivitas pembelajaran, atau bentuk asesmen yang menurut Anda paling efektif. Fokuskan pada hal-hal yang benar-benar membantu mahasiswa memahami materi atau mencapai CPMK/CPL.
     Contoh:
     • Studi kasus nyata membuat mahasiswa lebih mudah memahami konsep.
@@ -399,7 +399,7 @@
     • Rubrik penilaian perlu dibuat lebih jelas agar ekspektasi mahasiswa lebih terarah."></textarea>
 
     <!-- Q3 -->
-    <h5>Q3. Berdasarkan pengalaman pada semester ini, <b>tindakan perbaikan</b> apa (maksimal 3) yang akan Anda terapkan pada penyelenggaraan mata kuliah berikutnya? <small class="text-muted"></small></h5>
+    <h5>Q3. Berdasarkan pengalaman pada semester ini, apa <b>tindakan perbaikan</b> (maksimal 3) yang akan Anda terapkan pada penyelenggaraan mata kuliah berikutnya? <small class="text-muted"></small></h5>
     <textarea class="form-control mb-3" rows="6" placeholder="Tuliskan rencana perbaikan yang konkret dan realistis untuk meningkatkan proses pembelajaran atau ketercapaian CPMK/CPL pada penyelenggaraan berikutnya.
     Contoh:
     • Menambahkan pre-test pada awal perkuliahan.
