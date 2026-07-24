@@ -58,7 +58,7 @@
     <a href="#" class="nav-link">
         <i class="nav-icon fas fa-tasks"></i>
         <p>
-            Daftar Registrasi
+            Daftar Aktivitas
             <i class="right fas fa-angle-left"></i>
         </p>
     </a>
@@ -73,7 +73,7 @@
         </li>
 
         <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="sita-regis-ujian-ta.php" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Ujian Tugas Akhir</p>
             </a>
@@ -108,7 +108,7 @@
         </li>
 
         <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="sita-regis-publikasi.php" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Publikasi / Diseminasi</p>
             </a>
@@ -120,7 +120,7 @@
 
 <li class="nav-item has-treeview">
     <a href="#" class="nav-link">
-        <i class="nav-icon fas fa-tasks"></i>
+        <i class="nav-icon fas fa-list"></i>
         <p>
             Input Registrasi
             <i class="right fas fa-angle-left"></i>
@@ -130,14 +130,14 @@
     <ul class="nav nav-treeview">
 
         <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="sita-input-bim-ta.php" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Bimbingan Tugas Akhir</p>
             </a>
         </li>
 
         <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="sita-input-ujian-ta.php" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Ujian Tugas Akhir</p>
             </a>

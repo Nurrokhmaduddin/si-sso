@@ -1199,13 +1199,20 @@ $("#edit_type").on("change", function () {
         </div>
         <!-- REKAPITULASI -->
         <div class="mb-3">
-          <label class="form-label">Satuan Rekapitulasi</label>
+          <label class="form-label">Lingkup Refleksi</label>
           <select id="add_required" class="form-select">
-            <option value="1">per dosen</option>
-            <option value="0">per kelas</option>
-            <option value="0">per mata kuliah</option>
+            <option value="1">○ Penyelenggaraan Kelas</option>
+            <option value="0">○ Mata Kuliah</option>
+            <option value="0">○ Program Studi</option>
+            <option value="0">○ Refleksi Pribadi Dosen</option>
           </select>
         </div>
+
+
+
+
+
+
 
       </div>
 

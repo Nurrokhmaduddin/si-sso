@@ -1,10 +1,10 @@
-<?php $page = 'master_mahasiswa'; ?>
+<?php $page = 'monev_kinerja_pembimbing'; ?>
 <?php include('1header.php'); ?>
 <?php include('2navbar.php'); ?>
 <?php include('3sidebar--.php'); ?>
 
-  
-<div class="content-wrapper" style="min-height: 626.4px;">    
+
+<div class="content-wrapper" style="min-height: 626.4px;">
 
   <section class="content-header">
     <div class="container-fluid">
@@ -12,7 +12,7 @@
         <button type="button" class="btn btn-tool" data-bs-toggle="modal" data-bs-target="#modalBantuan" title="Bantuan"><i class="fas fa-question-circle"></i>
         </button>
       </h3>
-        <p class="text-muted mb-0">Keterangan singkat cara baca informasi halaman ini</p>
+      <p class="text-muted mb-0">Keterangan singkat cara baca informasi halaman ini</p>
     </div>
   </section>
 
@@ -22,178 +22,228 @@
       <!-- Main row -->
       <div class="row">
         <div class="col-md-12">
+
           <!-- ========== CARD : Filter & Export ========== -->
           <div class="card">
-            <!-- <div class="card-header">
-              <h5 class="card-title mb-0"><i class="fas fa-filter "></i> Judul Tabel yang terdampak tombol aksi ini<button type="button" class="btn btn-tool" data-bs-toggle="modal" data-bs-target="#modalBantuan" title="Bantuan">
-                <i class="fas fa-question-circle"></i>
-              </button> </h5>
-              <div class="card-tools ms-auto">
-                <button class="btn btn-outline-info btn-sm " data-bs-toggle="modal" data-bs-target="#modalFilter">
-                  <i class="fas fa-filter me-1"></i> Filter
-                </button>
-                <button type="button" class="btn btn-outline-primary btn-sm " data-bs-toggle="modal" data-bs-target="#modalTambahData">
-                  <i class="fas fa-plus me-1"></i> Add
-                </button>
-                <button type="button" class="btn btn-outline-primary btn-sm " data-bs-toggle="modal" data-bs-target="#modalImpor">
-                  <i class="fas fa-file-upload me-1"></i> Import
-                </button>                
-                <button type="button" class="btn btn-outline-success btn-sm">
-                  <i class="fas fa-file-download me-1"></i> Export
-                </button>
-                 <button type="button" class="btn btn-outline-danger btn-sm" data-bs-toggle="modal" data-bs-target="#modalResetData">
-                  <i class="fas fa-ban me-1"></i> Reset
-                </button>
-                
-              </div>
-            </div> -->
-            <div class="card-body ">
+            <div class="card-body">
               <div class="row">
 
-                <div class="col-md-6">
-                  <b>Periode:</b> 2023 &nbsp;
-                </div>   
-                <!-- <div class="col-md-6">
-                  <b>Status:</b> Semua
-                </div> -->
+                <div class="col-md-4">
+                  <b>Tahun Akademik:</b> Semua &nbsp;
+                </div>
+                <div class="col-md-4">
+                  <b>Program Studi:</b> Manajemen
+                </div>
+                <div class="col-md-4">
+                  <b>Status Kuota:</b> Semua
+                </div>
 
               </div>
             </div>
 
-             <div class="card-footer">
+            <div class="card-footer">
               <div class="card-tools ms-auto">
-                <button class="btn btn-outline-info btn-sm " data-bs-toggle="modal" data-bs-target="#modalFilter">
+                <button class="btn btn-outline-info btn-sm" data-bs-toggle="modal" data-bs-target="#modalFilter">
                   <i class="fas fa-filter me-1"></i> Filter
-                </button>               
-                <button type="button" class="btn btn-outline-success btn-sm">
+                </button>
+                <button type="button" class="btn btn-outline-success btn-sm" data-bs-toggle="modal" data-bs-target="#modalExport">
                   <i class="fas fa-file-download me-1"></i> Export
-                </button>  
+                </button>
+                <button type="button" class="btn btn-outline-danger btn-sm" data-bs-toggle="modal" data-bs-target="#modalResetData">
+                  <i class="fas fa-ban me-1"></i> Reset
+                </button>
               </div>
             </div>
-            
+
           </div>
 
 
-         <!-- ========== CARD : Tabel  Granular ========== -->
-<div class="card">
-<!--   <div class="card-header d-flex align-items-center">
-    <h5 class="card-title mb-0">Daftar Mahasiswa</h5>    
-  </div>
- -->
-  <div class="card-body">
-    <div class="table-responsive">
-      <table class="table table-bordered table-striped table-sm datatables1">
-        <thead>
-          <tr class="text-uppercase text-center">
-            <th width="5%">No.</th>
-            <th>NIK</th>
-            <th>Nama Dosen</th>
-            <th>Kuota</th>
-            <th>Sisa Kuota</th>
-            <th>Aktif</th>
-            <th>Selesai</th>
-            <th>Tidak Selesai</th>
-            <th>Total</th>
-            <th width="15%">Aksi</th>
-          </tr>
-        </thead>
-        <tbody>
+          <!-- ========== CARD : Tabel Granular ========== -->
+          <div class="card">
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table table-bordered table-striped table-sm datatables1">
+                  <thead>
+                    <tr class="text-uppercase text-center">
+                      <th width="5px" rowspan="2">No.</th>
+                      <th rowspan="2">NIK</th>
+                      <th rowspan="2">Nama Dosen</th>
+                      <th rowspan="2">Kuota</th>
+                      <th rowspan="2">Sisa Kuota Bimbingan</th>
+                      <th colspan="4">Bimbingan</th>
+                      <th rowspan="2">Aksi</th>
+                    </tr>
+                    <tr class="text-uppercase text-center">
+                      <th>Aktif</th>
+                      <th>Selesai</th>
+                      <th>Tidak Selesai</th>
+                      <th>Total</th>
+                    </tr>
+                  </thead>
+                  <tbody>
 
-          <?php
+                    <tr>
+                      <td class="text-center">1</td>
+                      <td>933110102</td>
+                      <td>Abdul Moin, S.E., M.B.A., Ph.D., CQRM.</td>
+                      <td class="text-center">1</td>
+                      <td class="text-center">-1</td>
+                      <td class="text-center">2</td>
+                      <td class="text-center">7</td>
+                      <td class="text-center">0</td>
+                      <td class="text-center">9</td>
+                      <td class="text-center">
+                        <button class="btn btn-sm btn-outline-info" onclick="window.location.href='sita-kinerja_pembimbing_detail.php?nik=933110102'"><i class="fas fa-info-circle"></i></button>
+                      </td>
+                    </tr>
 
-          $rows = [
+                    <tr>
+                      <td class="text-center">2</td>
+                      <td>133110105</td>
+                      <td>Abdur Rafik, S.E., M.Sc.</td>
+                      <td class="text-center">1</td>
+                      <td class="text-center">-1</td>
+                      <td class="text-center">2</td>
+                      <td class="text-center">14</td>
+                      <td class="text-center">0</td>
+                      <td class="text-center">16</td>
+                      <td class="text-center">
+                        <button class="btn btn-sm btn-outline-info" onclick="window.location.href='sita-kinerja_pembimbing_detail.php?nik=133110105'"><i class="fas fa-info-circle"></i></button>
+                      </td>
+                    </tr>
 
-            ['1','933110102','Abdul Moin, S.E., M.B.A., Ph.D., CQRM.','1','-1','2','7','0','9'],
+                    <tr>
+                      <td class="text-center">3</td>
+                      <td>243111201</td>
+                      <td>Achmad Rizal, SE., MSc. Fin.</td>
+                      <td class="text-center">1</td>
+                      <td class="text-center">0</td>
+                      <td class="text-center">1</td>
+                      <td class="text-center">3</td>
+                      <td class="text-center">0</td>
+                      <td class="text-center">4</td>
+                      <td class="text-center">
+                        <button class="btn btn-sm btn-outline-info" onclick="window.location.href='sita-kinerja_pembimbing_detail.php?nik=243111201'"><i class="fas fa-info-circle"></i></button>
+                      </td>
+                    </tr>
 
-            ['2','133110105','Abdur Rafik, S.E., M.Sc.','1','-1','2','14','0','16'],
+                    <tr>
+                      <td class="text-center">4</td>
+                      <td>903110104</td>
+                      <td>Agus Abdurrahman, Drs., M.M.</td>
+                      <td class="text-center">0</td>
+                      <td class="text-center">0</td>
+                      <td class="text-center">0</td>
+                      <td class="text-center">18</td>
+                      <td class="text-center">0</td>
+                      <td class="text-center">18</td>
+                      <td class="text-center">
+                        <button class="btn btn-sm btn-outline-info" onclick="window.location.href='sita-kinerja_pembimbing_detail.php?nik=903110104'"><i class="fas fa-info-circle"></i></button>
+                      </td>
+                    </tr>
 
-            ['3','243111201','Achmad Rizal, SE., MSc. Fin.','1','0','1','3','0','4'],
+                    <tr>
+                      <td class="text-center">5</td>
+                      <td>873110104</td>
+                      <td>Al Hasin, Drs., MBA.</td>
+                      <td class="text-center">1</td>
+                      <td class="text-center">-4</td>
+                      <td class="text-center">5</td>
+                      <td class="text-center">25</td>
+                      <td class="text-center">0</td>
+                      <td class="text-center">30</td>
+                      <td class="text-center">
+                        <button class="btn btn-sm btn-outline-info" onclick="window.location.href='sita-kinerja_pembimbing_detail.php?nik=873110104'"><i class="fas fa-info-circle"></i></button>
+                      </td>
+                    </tr>
 
-            ['4','903110104','Agus Abdurrahman, Drs., M.M.','0','0','0','18','0','18'],
+                    <tr>
+                      <td class="text-center">6</td>
+                      <td>883110103</td>
+                      <td>Albari, Dr., Drs., M.Si.</td>
+                      <td class="text-center">1</td>
+                      <td class="text-center">-6</td>
+                      <td class="text-center">7</td>
+                      <td class="text-center">55</td>
+                      <td class="text-center">0</td>
+                      <td class="text-center">62</td>
+                      <td class="text-center">
+                        <button class="btn btn-sm btn-outline-info" onclick="window.location.href='sita-kinerja_pembimbing_detail.php?nik=883110103'"><i class="fas fa-info-circle"></i></button>
+                      </td>
+                    </tr>
 
-            ['5','873110104','Al Hasin, Drs., MBA.','1','-4','5','25','0','30'],
+                    <tr>
+                      <td class="text-center">7</td>
+                      <td>193110102</td>
+                      <td>Alldila Nadhira Ayu Setyaning, S.E., MBA.</td>
+                      <td class="text-center">1</td>
+                      <td class="text-center">-4</td>
+                      <td class="text-center">5</td>
+                      <td class="text-center">65</td>
+                      <td class="text-center">0</td>
+                      <td class="text-center">70</td>
+                      <td class="text-center">
+                        <button class="btn btn-sm btn-outline-info" onclick="window.location.href='sita-kinerja_pembimbing_detail.php?nik=193110102'"><i class="fas fa-info-circle"></i></button>
+                      </td>
+                    </tr>
 
-            ['6','883110103','Albari, Dr., Drs., M.Si.','1','-6','7','55','0','62'],
+                    <tr>
+                      <td class="text-center">8</td>
+                      <td>883110102</td>
+                      <td>Anas Hidayat, Prof., Drs., M.B.A., Ph.D.</td>
+                      <td class="text-center">1</td>
+                      <td class="text-center">-1</td>
+                      <td class="text-center">2</td>
+                      <td class="text-center">68</td>
+                      <td class="text-center">0</td>
+                      <td class="text-center">70</td>
+                      <td class="text-center">
+                        <button class="btn btn-sm btn-outline-info" onclick="window.location.href='sita-kinerja_pembimbing_detail.php?nik=883110102'"><i class="fas fa-info-circle"></i></button>
+                      </td>
+                    </tr>
 
-            ['7','193110102','Alldila Nadhira Ayu Setyaning, S.E., MBA.','1','-4','5','65','0','70'],
+                    <tr>
+                      <td class="text-center">9</td>
+                      <td>123110101</td>
+                      <td>Andriyastuti Suratman, S.E., M.M.</td>
+                      <td class="text-center">1</td>
+                      <td class="text-center">-6</td>
+                      <td class="text-center">7</td>
+                      <td class="text-center">38</td>
+                      <td class="text-center">0</td>
+                      <td class="text-center">45</td>
+                      <td class="text-center">
+                        <button class="btn btn-sm btn-outline-info" onclick="window.location.href='sita-kinerja_pembimbing_detail.php?nik=123110101'"><i class="fas fa-info-circle"></i></button>
+                      </td>
+                    </tr>
 
-            ['8','883110102','Anas Hidayat, Prof., Drs., M.B.A., Ph.D.','1','-1','2','68','0','70'],
+                    <tr>
+                      <td class="text-center">10</td>
+                      <td>073110101</td>
+                      <td>Anjar Priyono, S.E., M.Si., Ph.D.</td>
+                      <td class="text-center">1</td>
+                      <td class="text-center">-3</td>
+                      <td class="text-center">4</td>
+                      <td class="text-center">26</td>
+                      <td class="text-center">0</td>
+                      <td class="text-center">30</td>
+                      <td class="text-center">
+                        <button class="btn btn-sm btn-outline-info" onclick="window.location.href='sita-kinerja_pembimbing_detail.php?nik=073110101'"><i class="fas fa-info-circle"></i></button>
+                      </td>
+                    </tr>
 
-            ['9','123110101','Andriyastuti Suratman, S.E., M.M.','1','-6','7','38','0','45'],
-
-            ['10','073110101','Anjar Priyono, S.E., M.Si., Ph.D.','1','-3','4','26','0','30'],
-
-          ];
-
-          foreach($rows as $r):
-
-            $sisaClass = ($r[4] < 0) ? 'danger' : (($r[4] == 0) ? 'warning' : 'success');
-
-            ?>
-
-            <tr>
-
-              <td class="text-center"><?= $r[0] ?></td>
-
-              <td class="text-center"><?= $r[1] ?></td>
-
-              <td><?= $r[2] ?></td>
-
-              <td class="text-center">
-                <span class="badge badge-primary"><?= $r[3] ?></span>
-              </td>
-
-              <td class="text-center">
-                <span class="badge badge-<?= $sisaClass ?>"><?= $r[4] ?></span>
-              </td>
-
-              <td class="text-center"><?= $r[5] ?></td>
-
-              <td class="text-center"><?= $r[6] ?></td>
-
-              <td class="text-center"><?= $r[7] ?></td>
-
-              <td class="text-center">
-                <strong><?= $r[8] ?></strong>
-              </td>
-
-              <td class="text-center">
-
-                <a href="#" class="btn btn-xs btn-info">
-                  <i class="fas fa-eye"></i>
-                </a>
-
-                <a href="#" class="btn btn-xs btn-warning">
-                  <i class="fas fa-edit"></i>
-                </a>
-
-                <a href="#" class="btn btn-xs btn-danger">
-                  <i class="fas fa-trash"></i>
-                </a>
-
-              </td>
-
-            </tr>
-
-          <?php endforeach; ?>
-
-        </tbody>
-      </table>
-    </div>
-  </div>
-</div>
-
-          
-
-
-
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
 
         </div>
       </div>
     </div>
   </section>
-  </div>
-  <!-- /.content-wrapper -->
+</div>
+<!-- /.content-wrapper -->
 
 <?php include('4footer.php'); ?>
 
@@ -201,36 +251,44 @@
 <div class="modal fade" id="modalFilter" tabindex="-1" aria-labelledby="modalFilterLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content rounded-3 shadow">
-      <div class="modal-header bg-info text-white">
+      <div class="modal-header bg-primary text-white">
         <h5 class="modal-title" id="modalFilterLabel">Filter Data</h5>
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <form action="" method="GET">
 
         <div class="modal-body">
-          <!-- Catatan penting -->
           <div class="alert alert-warning mb-3" role="alert" style="font-size: 0.9rem;">
-            <b>Informasi:</b> Halaman ini otomatis menampilkan data angkatan terbaru saat pertama dibuka. Data awal yang tampil adalah angkatan [2025].
+            <b>Informasi:</b> Halaman ini otomatis menampilkan data seluruh dosen pembimbing pada program studi berjalan.
           </div>
           <div class="mb-3">
-            <label for="angkatan" class="form-label">Angkatan</label>
-            <select name="angkatan" id="angkatan" class="form-select">
-              <option value="">-- Pilih Angkatan --</option>
-              <option value="2025">2025</option>
-              <option value="2024">2024</option>
-              <option value="2023">2023</option>
+            <label for="tahun_akademik" class="form-label">Tahun Akademik</label>
+            <select name="tahun_akademik" id="tahun_akademik" class="form-select">
+              <option value="">-- Pilih Tahun Akademik --</option>
+              <option value="2025/2026">2025/2026</option>
+              <option value="2024/2025">2024/2025</option>
+              <option value="2023/2024">2023/2024</option>
             </select>
           </div>
           <div class="mb-3">
-            <label for="status" class="form-label">Status</label>
-            <select name="status" id="status" class="form-select">
-              <option value="">-- Pilih Status --</option>
-              <option value="Aktif">Aktif</option>
-              <option value="NonAktif">NonAktif</option>
+            <label for="program_studi" class="form-label">Program Studi</label>
+            <select name="program_studi" id="program_studi" class="form-select">
+              <option value="">-- Pilih Program Studi --</option>
+              <option value="Manajemen">Manajemen</option>
+              <option value="Akuntansi">Akuntansi</option>
+              <option value="Ekonomi">Ekonomi</option>
             </select>
           </div>
-       
-       </div>
+          <div class="mb-3">
+            <label for="status_kuota" class="form-label">Status Kuota</label>
+            <select name="status_kuota" id="status_kuota" class="form-select">
+              <option value="">-- Pilih Status Kuota --</option>
+              <option value="Tersedia">Tersedia</option>
+              <option value="Terlampaui">Terlampaui</option>
+            </select>
+          </div>
+
+        </div>
 
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
@@ -243,122 +301,32 @@
 </div>
 
 
-
-<!-- Modal Tambah Data -->
-<div class="modal fade" id="modalTambahData" tabindex="-1" aria-labelledby="modalTambahDataLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
+<!-- Modal Export -->
+<div class="modal fade" id="modalExport" tabindex="-1" aria-labelledby="modalExportLabel" aria-hidden="true">
+  <div class="modal-dialog">
     <div class="modal-content rounded-3 shadow">
-      <div class="modal-header bg-primary text-white">
-        <h5 class="modal-title" id="modalTambahDataLabel">Tambah Data</h5>
+      <div class="modal-header bg-success text-white">
+        <h5 class="modal-title" id="modalExportLabel">Export Data</h5>
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <form action="" method="POST" enctype="multipart/form-data">
-        <div class="modal-body">
-
-          <!-- Informasi -->
-          <div class="alert alert-warning mb-3 py-2" role="alert" style="font-size: 0.9rem;">
-            <i class="fas fa-info-circle me-1"></i>
-            <strong>Catatan:</strong> Semua field yang diberi tanda <span class="text-danger">*</span> wajib diisi.
-          </div>
-
-          <!-- Form Inputs -->
-          <div class="mb-3">
-            <label for="username" class="form-label">NIM <span class="text-danger">*</span></label>
-            <input type="text" class="form-control" id="username" name="username" placeholder="Masukkan Username" required>
-          </div>
-
-          <div class="mb-3">
-            <label for="displayname" class="form-label">Nama Lengkap <span class="text-danger">*</span></label>
-            <input type="text" class="form-control" id="displayname" name="displayname" placeholder="Masukkan Nama Lengkap" required>
-          </div>
-
-          <div class="mb-3">
-            <label for="email" class="form-label">Email <span class="text-danger">*</span></label>
-            <input type="email" class="form-control" id="email" name="email" placeholder="Masukkan Email" required>
-          </div>
-
-          <div class="mb-3">
-            <label for="hp" class="form-label">Nomor HP <span class="text-danger">*</span></label>
-            <input type="text" class="form-control" id="hp" name="hp" placeholder="Masukkan Nomor HP" required>
-          </div>
-          <div class="mb-3">
-            <label for="angkatan" class="form-label">Angkatan</label>
-            <select name="angkatan" id="angkatan" class="form-select">
-              <option value="">-- Pilih Angkatan --</option>
-              <option value="2025">2025</option>
-              <option value="2024">2024</option>
-              <option value="2023">2023</option>
-            </select>
-          </div>
-          <div class="mb-3">
-            <label for="angkatan" class="form-label">Peminatan</label>
-            <select name="angkatan" id="angkatan" class="form-select">
-              <option value="">-- Pilih Peminatan --</option>
-              <option value="2025">A</option>
-              <option value="2024">B</option>
-              <option value="2023">C</option>
-            </select>
-          </div>
-          <div class="mb-3">
-            <label for="status" class="form-label">Status <span class="text-danger">*</span></label>
-            <select class="form-select" id="status" name="status" required>
-              <option value="">-- Pilih Status --</option>
-              <option value="Aktif">Aktif</option>
-              <option value="NonAktif">NonAktif</option>
-              <option value="Cuti">Cuti</option>
-              <option value="Skors">Skors</option>
-              <option value="PassedOut">Passed Out</option>
-              <option value="DropOut">Drop Out</option>
-              <option value="Lulus">Lulus</option>
-            </select>
-          </div>
-
-          <div class="mb-3">
-            <label for="foto" class="form-label">Foto <span class="text-danger">*</span></label>
-            <input type="file" class="form-control" id="foto" name="foto" required>
-          </div>
+      <div class="modal-body">
+        <p>Pilih format export untuk data Kinerja Pembimbing yang sedang ditampilkan.</p>
+        <div class="d-grid gap-2">
+          <a href="export_kinerja_pembimbing.php?format=excel" class="btn btn-outline-success">
+            <i class="fas fa-file-excel me-1"></i> Export Excel
+          </a>
+          <a href="export_kinerja_pembimbing.php?format=pdf" class="btn btn-outline-danger">
+            <i class="fas fa-file-pdf me-1"></i> Export PDF
+          </a>
         </div>
-
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
-          <button type="submit" class="btn btn-primary">Simpan Data</button>
-        </div>
-      </form>
-    </div>
-  </div>
-</div>
-
-
-<!-- Modal Impor -->
-<div class="modal fade" id="modalImpor" tabindex="-1">
-  <div class="modal-dialog">
-    <div class="modal-content">
-
-      <div class="modal-header bg-primary text-white">
-        <h5 class="modal-title">Impor Data</h5>
-        <button class="btn-close" data-bs-dismiss="modal"></button>
       </div>
-
-      <div class="modal-body">   
-        <div class="alert alert-warning mb-3 py-2" role="alert" style="font-size: 0.9rem;">
-          <i class="fas fa-exclamation-triangle me-1"></i>
-          <strong>Penting:</strong> Pastikan file yang akan diimpor menggunakan <strong>template resmi</strong> yang sudah disediakan. Menggunakan file lain atau format berbeda dapat menyebabkan <strong>kesalahan impor</strong>.
-        </div>     
-
-        <label class="form-label">Pilih File:</label>
-        <input type="file" class="form-control mb-3" accept=".xlsx,.xls">
-
-        <a href="template-impor-mahasiswa.xls" class="btn btn-sm btn-outline-success w-100">Download Template</a>
-      </div>
-
       <div class="modal-footer">
-        <button class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
-        <button class="btn btn-primary">Impor</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
       </div>
-
     </div>
   </div>
 </div>
+
 
 <!-- Modal Bantuan -->
 <div class="modal fade" id="modalBantuan" tabindex="-1" aria-labelledby="modalBantuanLabel" aria-hidden="true">
@@ -370,17 +338,14 @@
       </div>
       <div class="modal-body">
         <p>
-          Ini adalah penjelasan panjang tentang tabel. Anda bisa menuliskan informasi detail,
-          petunjuk penggunaan tombol, cara membaca data, dan tips penting lainnya di sini.
+          Halaman ini menampilkan rekap kinerja dosen pembimbing, meliputi kuota bimbingan,
+          sisa kuota, dan jumlah mahasiswa bimbingan berdasarkan status (Aktif, Selesai, Tidak Selesai).
         </p>
         <p>
-          Misalnya:  
-          - Tombol Filter digunakan untuk memfilter data berdasarkan kolom.  
-          - Tombol Impor digunakan untuk memasukkan data dari file Excel.  
-          - Tombol Reset akan menghapus semua data di tabel, gunakan dengan hati-hati.  
-        </p>
-        <p>
-          Anda bisa menambahkan banyak paragraf atau daftar sesuai kebutuhan.
+          Misalnya:
+          - Kolom <b>Sisa Kuota Bimbingan</b> bernilai negatif menandakan dosen sudah melebihi kuota yang ditetapkan.
+          - Tombol <i class="fas fa-info-circle"></i> pada kolom Aksi digunakan untuk melihat detail mahasiswa bimbingan per dosen.
+          - Tombol Export digunakan untuk mengunduh data dalam format Excel atau PDF.
         </p>
       </div>
       <div class="modal-footer">
@@ -390,6 +355,8 @@
   </div>
 </div>
 
+
+<!-- Modal Reset Data -->
 <div class="modal fade" id="modalResetData" tabindex="-1" aria-labelledby="modalResetDataLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content rounded-3 shadow">
@@ -399,26 +366,14 @@
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
       </div>
 
-      <form action="proses_hapus_akun.php" method="POST">
+      <form action="proses_reset_kinerja_pembimbing.php" method="POST">
         <div class="modal-body text-center">
-
-          <!-- ID disimpan sebagai hidden input -->
-          <input type="hidden" name="id_akun" id="hapus_id_akun">
-
-          <p class="fs-5">Apakah Anda yakin ingin menghapus semua data ini?</p>
-
-          <!-- Tampilkan kode dan nama akun -->
-         <!--  <p class="text-muted mb-0 d-flex justify-content-center gap-2">
-            <span id="hapus_kode_akun"></span>
-            <span>|</span>
-            <strong id="hapus_nama_akun"></strong>
-          </p> -->
-
+          <p class="fs-5">Apakah Anda yakin ingin mereset filter pada halaman ini?</p>
         </div>
 
         <div class="modal-footer justify-content-center">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
-          <button type="submit" class="btn btn-danger">Hapus</button>
+          <button type="submit" class="btn btn-danger">Reset</button>
         </div>
 
       </form>

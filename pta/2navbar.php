@@ -11,6 +11,15 @@
     <li class="nav-item d-none d-sm-inline-block">
       <a href="demo.php" target="_blank" class="nav-link">Demo</a>
     </li>
+    <li class="nav-item d-none d-sm-inline-block">
+      <a href="index.php"  class="nav-link">Index 0</a>
+    </li>
+    <li class="nav-item d-none d-sm-inline-block">
+      <a href="index1.php" class="nav-link">Index 1</a>
+    </li>
+    <li class="nav-item d-none d-sm-inline-block">
+      <a href="index2.php" class="nav-link">Index 2</a>
+    </li>
   </ul>
 
   <!-- Right navbar links -->

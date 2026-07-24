@@ -44,6 +44,7 @@
                   <b>Status:</b> Aktif
                 </div>
               </div>
+              *kalau tampilan dari sisi dosen, munculkan daftar mahasiswa yang diwali akademik kan saja.
             </div>
             <div class="card-footer">
               <div class="card-tools ms-auto">

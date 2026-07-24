@@ -234,7 +234,7 @@
   });
 </script>
 <!-- ========== CARD : Chart Row CPMK remidi ========== -->
-<div class="card">
+<div class="card collapse">
   <div class="card-header">
     <h3 class="card-title">
       <i class="fas fa-chart-bar mr-1"></i>

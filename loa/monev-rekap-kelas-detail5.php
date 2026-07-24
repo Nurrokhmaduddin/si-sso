@@ -190,7 +190,7 @@ if ($persen == 100) {
 <!-- Info bawah -->
 <div class="mt-2 d-flex justify-content-between">
   <small class="text-muted">
-    <?php echo ($total_dosen - $sudah_isi); ?> dosen belum mengisi
+    <?php echo ($total_dosen - $sudah_isi); ?> dosen belum lengkap mengisi
   </small>
   <small class="text-muted">
     Update terakhir: 12 Jan 2024
@@ -200,10 +200,137 @@ if ($persen == 100) {
 </div>
 </div>
 
+<!-- HASIL CATATAN & EVALUASI KELAS SESUAI PERTANYAAN -->
+<div class="card">
+  <div class="card-body">
+    <div class="table-responsive">
+      <table id="data_refleksi_dosen" class="table table-bordered table-striped table-hover table-sm datatables1">
+    <thead>
+        <tr class="text-uppercase text-center align-middle">
+            <th width="5%">No.</th>
+            <th width="30%">Dosen Pengampu</th>
+            <th width="5%">Status</th>
+            <th width="15%">Update Terakhir</th>
+            <th width="12%">Refleksi Kelas</th>
+            <th width="12%">Masukan Prodi</th>
+            <!-- <th width="12%">Jurnal Pribadi</th> -->
+            <th width="14%">Aksi</th>
+        </tr>
+    </thead>
 
+    <tbody>
+
+        <tr>
+            <td class="text-center">1</td>
+            <td>
+                <strong>Tri Nugroho Sulistyantoro, S.T., M.T.</strong>
+                <br>
+                <small><b>(195110502)</b></small>
+                <span class="badge bg-primary ms-1">Koordinator</span>
+            </td>
+<td><span class="badge bg-success">Lengkap</span></td>
+            <td class="text-center">
+                12 Jan 2025
+                <br>
+                <small class="text-muted">08:35 WIB</small>
+            </td>
+
+            <td class="text-center">
+                <span class="badge bg-success">Lengkap</span>
+            </td>
+
+            <td class="text-center">
+                <span class="badge bg-success">Lengkap</span>
+            </td>
+
+            <!-- <td class="text-center">
+                <span class="badge bg-success">Lengkap</span>
+            </td> -->
+
+            <td class="text-center">
+                <a href="refleksi-dosen-detail.php?id=1"
+                   class="btn btn-sm btn-outline-primary">
+                    <i class="fas fa-eye"></i>  Detail
+                </a>
+            </td>
+        </tr>
+
+
+        <tr>
+            <td class="text-center">2</td>
+            <td>
+                <strong>Hasan, S.T., M.T.</strong>
+                <br>
+                <small><b>(198888502)</b></small>
+            </td>
+<td><span class="badge bg-warning text-dark">Sebagian</span></td>
+            <td class="text-center">
+                11 Jan 2025
+                <br>
+                <small class="text-muted">15:42 WIB</small>
+            </td>
+
+            <td class="text-center">
+                <span class="badge bg-success">Lengkap</span>
+            </td>
+
+            <td class="text-center">
+                <span class="badge bg-warning text-dark">Sebagian</span>
+            </td>
+
+           <!--  <td class="text-center">
+                <span class="badge bg-success">Lengkap</span>
+            </td> -->
+
+            <td class="text-center">
+                <a href="refleksi-dosen-detail.php?id=2"
+                   class="btn btn-sm btn-outline-primary">
+                    <i class="fas fa-eye"></i>  Detail
+                </a>
+            </td>
+        </tr>
+
+
+        <tr>
+            <td class="text-center">3</td>
+            <td>
+                <strong>Ahmad Fauzi, S.T., M.T.</strong>
+                <br>
+                <small><b>(197711223)</b></small>
+            </td>
+<td><span class="badge bg-secondary">Belum</span></td>
+            <td class="text-center">
+                -
+            </td>
+
+            <td class="text-center">
+                <span class="badge bg-secondary">Belum</span>
+            </td>
+
+            <td class="text-center">
+                <span class="badge bg-secondary">Belum</span>
+            </td>
+
+          <!--   <td class="text-center">
+                <span class="badge bg-secondary">Belum</span>
+            </td> -->
+
+            <td class="text-center">
+                <a href="refleksi-dosen-detail.php?id=3"
+                   class="btn btn-sm btn-outline-primary">
+                    <i class="fas fa-eye"></i>  Detail
+                </a>
+            </td>
+        </tr>
+
+    </tbody>
+</table>
+    </div>
+  </div>
+</div>
 
 <!-- CARD REKAP CATATAN & EVALUASI KELAS SESUAI PERTANYAAN -->
-  <div class="card card-primary ">
+  <div class="card card-primary collapse">
     <div class="card-header bg-primary text-white">
       <h5 class="card-title mb-0">Rekapan Catatan & Evaluasi Kelas ini</h5>
       <small>Kolaboratif • Berdasarkan isian seluruh dosen</small>
@@ -256,7 +383,7 @@ if ($persen == 100) {
   </div>
 
 <!-- CARD REKAP MASUKAN & INSIGHT PRODI -->
-<div class="card">
+<div class="card collapse">
   <div class="card-header">
     <h3 class="card-title">
       <i class="fas fa-chart-line mr-1"></i>
@@ -401,7 +528,7 @@ if ($persen == 100) {
     </button>
 
     <button class="btn btn-outline-info">
-      <i class="fas fa-comments"></i> Lihat Semua Masukan
+      <i class="fas fa-comments"></i>  Semua Masukan
     </button>
   </div>
 </div>

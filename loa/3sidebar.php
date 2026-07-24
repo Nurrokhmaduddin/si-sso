@@ -191,7 +191,7 @@
           
             <i class="nav-icon fas fa-project-diagram"></i>
             <p>
-              Pemetaan OBE
+              Perencanaan OBE
               <i class="right fas fa-angle-left"></i>
             </p>
           </a>
@@ -268,7 +268,7 @@
           <a href="#" class="nav-link <?php echo in_array($page, ['kelas_perkuliahan','kelas_konversi','portofolio_kelas','nilai_cpmk','master_periode','pengumuman','yudisium','soal_ujian','rps','monitor_verifikasi_soal']) ? 'active' : ''; ?>">
             <i class="nav-icon fas fa-chalkboard-teacher"></i>
             <p>
-              Perkuliahan OBE
+              Pelaksanaan OBE
               <i class="right fas fa-angle-left"></i>
             </p>
           </a>
@@ -343,13 +343,13 @@
             <li class="nav-item">
               <a href="progres-perwalian.php" class="nav-link <?php echo $page == 'progress_perwalian' ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
-                <p>Perwalian</p>
+                <p>Bimbingan Perwalian</p>
               </a>
             </li>
             <li class="nav-item">
               <a href="perkuliahan-yudisium.php" class="nav-link <?php echo $page == 'yudisium' ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
-                <p>Yudisium</p>
+                <p>Batch Yudisium</p>
               </a>
             </li>
 
@@ -358,8 +358,8 @@
 
 
         <!-- MONITORING OBE -->
-        <li class="nav-item <?php echo in_array($page, ['status_mahasiswa','status_pemetaan','monev_individu','monev_kelas','monev_tahunan','monev_angkatan','monev_yudisium','monev_semester','monev_semester3']) ? 'menu-open' : ''; ?>">
-          <a href="#" class="nav-link <?php echo in_array($page, ['status_mahasiswa','status_pemetaan','monev_individu','monev_kelas','monev_tahunan','monev_angkatan','monev_yudisium','monev_semester','monev_semester3']) ? 'active' : ''; ?>">
+        <li class="nav-item <?php echo in_array($page, ['status_mahasiswa','status_pemetaan','monev_individu','monev_kelas','monev_tahunan','monev_angkatan','monev_yudisium','monev_semester','monev_semester3','monev_matakuliah']) ? 'menu-open' : ''; ?>">
+          <a href="#" class="nav-link <?php echo in_array($page, ['status_mahasiswa','status_pemetaan','monev_individu','monev_kelas','monev_tahunan','monev_angkatan','monev_yudisium','monev_semester','monev_semester3','monev_matakuliah']) ? 'active' : ''; ?>">
             <i class="nav-icon fas fa-chart-pie"></i>
             <p>
               Monitoring OBE
@@ -386,7 +386,7 @@
             <li class="nav-item">
               <a href="monev-rekap-kelas-.php" class="nav-link <?php echo $page == 'monev_kelas' ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
-                <p>Monev Kelas</p>
+                <p>Semester Kelas</p>
               </a>
             </li>
             <!-- <li class="nav-item">
@@ -408,9 +408,15 @@
               </a>
             </li> -->
             <li class="nav-item">
+              <a href="monev-rekap-matakuliah.php" class="nav-link <?php echo $page == 'monev_matakuliah' ? 'active' : ''; ?>">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Semester Matakuliah</p>
+              </a>
+            </li>
+            <li class="nav-item">
               <a href="monev-rekap-semester3-.php" class="nav-link <?php echo $page == 'monev_semester3' ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
-                <p>Monev Semester</p>
+                <p>Semester Prodi</p>
               </a>
             </li>
             <!-- <li class="nav-item">
@@ -458,7 +464,7 @@
             <li class="nav-item">
               <a href="monev-rekap-individual-.php" class="nav-link <?php echo $page == 'monev_individu' ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
-                <p>Monev Individu</p>
+                <p>CPL Individu</p>
               </a>
             </li>
 
@@ -471,14 +477,14 @@
             <li class="nav-item">
               <a href="monev-rekap-angkatan-.php" class="nav-link <?php echo $page == 'monev_angkatan' ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
-                <p>Monev Angkatan</p>
+                <p>CPL Angkatan</p>
               </a>
             </li>
 
             <li class="nav-item">
               <a href="monev-rekap-yudisium-.php" class="nav-link <?php echo $page == 'monev_yudisium' ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
-                <p>Monev Yudisium</p>
+                <p>CPL Yudisium</p>
               </a>
             </li>
 
@@ -494,7 +500,7 @@
           <a href="#" class="nav-link <?php echo in_array($page, ['progress_kelas','progress_mk','progress_pemetaan','progress_cpl','evaluasi_rapat','evaluasi_pembelajaran','evaluasi_kemajuan','evaluasi_lulusan','evaluasi_kurikulum','evaluasi_prodi']) ? 'active' : ''; ?>">
             <i class="nav-icon fas fa-chart-line"></i>
             <p>
-              Pengembangan OBE
+              Tindak Lanjut OBE
               <i class="right fas fa-angle-left"></i>
             </p>
           </a>

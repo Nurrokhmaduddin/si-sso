@@ -87,7 +87,7 @@
           <tr class="text-uppercase text-center">
             <th width="5%">No.</th>
             <th>Tahun Akademik</th>
-            <th>No Registrasi</th>
+            <th>Pin Registrasi</th>
             <th>Tanggal Kadaluarsa Akun</th>
             <th>Mahasiswa</th>
             <th>Tugas Akhir</th>

@@ -190,6 +190,179 @@
                 </div>
                 <!-- /.card-body -->
               </div>
+              <div class="card">
+
+                <div class="card-header">
+                  <h5 class="card-title">
+                    <i class="fas fa-check-circle text-primary"></i>
+                    &nbsp;Kriteria Ketuntasan Pembelajaran
+                  </h5>
+                </div>
+
+                <div class="card-body">
+
+                  <!-- Penjelasan -->
+                  <div class="alert alert-light border mb-3">
+                    <h6 class="mb-2">
+                      <i class="fas fa-info-circle text-primary"></i>
+                      Cara Membaca Tabel
+                    </h6>
+
+                    <ul class="mb-0 pl-3">
+                      <li>
+                        <strong>Nilai Minimum Lulus</strong> adalah nilai minimum yang harus
+                        diperoleh mahasiswa agar dinyatakan <strong>Tuntas (Accomplished)</strong>.
+                      </li>
+
+                      <li>
+                        <strong>Target Prodi</strong> adalah persentase minimal mahasiswa yang
+                        harus mencapai nilai minimum tersebut agar capaian pembelajaran dianggap
+                        memenuhi target Program Studi.
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="table-responsive">
+
+                    <table class="table table-bordered table-hover table-sm">
+
+                      <thead class="thead-light">
+
+                        <tr class="text-center">
+                          <th width="5%">No</th>
+
+                          <th width="20%">
+                            Level Penilaian
+                          </th>
+
+                          <th width="30%">
+                            Nilai Minimum Lulus
+                            <br>
+                            <small class="text-muted">
+                              (Minimal nilai mahasiswa agar dinyatakan Tuntas)
+                            </small>
+                          </th>
+
+                          <th width="30%">
+                            Target Ketuntasan Prodi
+                            <br>
+                            <small class="text-muted">
+                              (% mahasiswa yang harus mencapai nilai minimum)
+                            </small>
+                          </th>
+
+                          <th width="15%">Aksi</th>
+                        </tr>
+
+                      </thead>
+
+                      <tbody>
+
+                        <tr>
+                          <td class="text-center">1</td>
+
+                          <td><strong>CPL</strong></td>
+
+                          <td class="text-center">
+                            <span class="badge badge-success px-3 py-2">
+                              ≥ 70
+                            </span>
+                          </td>
+
+                          <td class="text-center">
+                            <span class="badge badge-info px-3 py-2">
+                              ≥ 65% Mahasiswa
+                            </span>
+                          </td>
+
+                          <td class="text-center">
+                            <button class="btn btn-success btn-sm">
+                              <i class="fas fa-edit"></i>
+                            </button>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td class="text-center">2</td>
+
+                          <td><strong>IK (Indikator Kinerja)</strong></td>
+
+                          <td class="text-center">
+                            <span class="badge badge-success px-3 py-2">
+                              ≥ 70
+                            </span>
+                          </td>
+
+                          <td class="text-center">
+                            <span class="badge badge-info px-3 py-2">
+                              ≥ 65% Mahasiswa
+                            </span>
+                          </td>
+
+                          <td class="text-center">
+                            <button class="btn btn-success btn-sm">
+                              <i class="fas fa-edit"></i>
+                            </button>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td class="text-center">3</td>
+
+                          <td><strong>CPMK</strong></td>
+
+                          <td class="text-center">
+                            <span class="badge badge-success px-3 py-2">
+                              ≥ 70
+                            </span>
+                          </td>
+
+                          <td class="text-center">
+                            <span class="badge badge-info px-3 py-2">
+                              ≥ 65% Mahasiswa
+                            </span>
+                          </td>
+
+                          <td class="text-center">
+                            <button class="btn btn-success btn-sm">
+                              <i class="fas fa-edit"></i>
+                            </button>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td class="text-center">4</td>
+
+                          <td><strong>Mata Kuliah</strong></td>
+
+                          <td class="text-center">
+                            <span class="badge badge-success px-3 py-2">
+                              ≥ 70
+                            </span>
+                          </td>
+
+                          <td class="text-center">
+                            <span class="badge badge-info px-3 py-2">
+                              ≥ 65% Mahasiswa
+                            </span>
+                          </td>
+
+                          <td class="text-center">
+                            <button class="btn btn-success btn-sm">
+                              <i class="fas fa-edit"></i>
+                            </button>
+                          </td>
+                        </tr>
+
+                      </tbody>
+
+                    </table>
+
+                  </div>
+
+                </div>
+
+              </div>
             </div>
             <div class="col-md-12">
               <div class="card">

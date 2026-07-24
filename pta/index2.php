@@ -7,9 +7,9 @@ include "2navbar.php";
 ?>
  
 <?php
-include "3sidebar.php"; 
+// include "3sidebar.php"; 
 // include "3sidebar-.php"; 
-// include "3sidebar--.php"; 
+include "3sidebar--.php"; 
 ?>
  
 
