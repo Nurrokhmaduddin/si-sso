@@ -12,7 +12,7 @@
       <a href="demo.php" target="_blank" class="nav-link">Demo</a>
     </li>
     <li class="nav-item d-none d-sm-inline-block">
-      <a href="mjerusalem,+9.+Berlian+-+UII+rev.pdf" target="_blank" class="nav-link">Jurnal Ilmiah</a>
+      <a href="data-mjerusalem,+9.+Berlian+-+UII+rev.pdf" target="_blank" class="nav-link">Jurnal Ilmiah</a>
     </li>
   </ul>
 

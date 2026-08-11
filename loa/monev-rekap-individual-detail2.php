@@ -1,9 +1,369 @@
-<?php $page = 'monev_individu'; ?>
+<?php
+// ============================================================
+// SCREEN : Monev CPL Individu - Tabel
+// FILE   : monev-rekap-individual-detail2.php
+// SINGLE FILE SCREEN CONVENTION - Mode 2 (Visual Mockup with Dummy Data)
+// ------------------------------------------------------------
+// Catatan refactor: file ini mengikuti konvensi include multi-part
+// yang sudah baku di seluruh project (1header/2navbar/3sidebar/
+// 4footer/5script). Penandaan seksi di bawah HANYA menambahkan
+// komentar struktur (Single File Screen Convention) — TIDAK ada
+// nama file, path include, variabel, maupun ID elemen HTML yang
+// diubah, sehingga relasi dengan file lain (tab navigasi, sidebar,
+// modal, dsb.) tetap 100% utuh.
+// ============================================================
+
+// ------------------------------------------------------------
+// 1. BOOTSTRAP SECTION
+//    include layout shell project: header / navbar / sidebar
+// ------------------------------------------------------------
+$page = 'monev_individu';
+?>
 <?php include('1header.php'); ?>
 <?php include('2navbar.php'); ?>
 <?php include('3sidebar.php'); ?>
 
-  
+<?php
+// ------------------------------------------------------------
+// 2. MODEL SECTION
+//    Belum ada query database pada file ini — data CPL/IK/CPMK
+//    di bawah masih MOCKUP DATA STATIS, TAPI sudah dalam bentuk
+//    array terstruktur (bukan lagi markup HTML berulang manual)
+//    sehingga tabel di View Section cukup di-loop 1x per tipe baris.
+//    Saat masuk Mode 3 (Full Development), TINGGAL GANTI isi
+//    $dataCpl ini dari hasil getRekapCplIndividu($pdo, $nim, ...)
+//    — struktur foreach di View Section TIDAK PERLU diubah.
+// ------------------------------------------------------------
+// Data CPL/IK/CPMK individu mahasiswa (MOCKUP DATA STATIS - lihat MODEL SECTION).
+// Diekstrak 1:1 dari markup asli, dipakai oleh loop di kedua tabel View Section
+// (cardGrafik) di bawah ini.
+$dataCpl = [
+  [
+    'kode' => 'CPL 1',
+    'deskripsi' => 'Bertakwa kepada Tuhan Yang Maha Esa dan berperilaku islami (jujur, disiplin, tanggung jawab, dan kerja cerdas) pada setiap peran yang dijalani, baik di industri kimia maupun masyarakat umum',
+    'capaian_akhir' => '61,26',
+    'ik' => [
+      [
+        'kode' => 'IK 1.1',
+        'deskripsi' => 'Memahami dinul Islam serta pemikiran dan peradaban umat Islam',
+        'nilai' => '86,89',
+        'label' => 'H',
+        'capaian' => '86,89',
+        'cpmk' => [
+          [ 'kode_mk' => 'UNI600 - <b>1</b>', 'nama_mk' => 'Pendidikan Agama Islam', 'border' => true, 'deskripsi' => 'Menjelaskan konsep fitrah manusia dan hidayah sesuai Al-Qur’an dan Hadis', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'UNI600 - <b>2</b>', 'nama_mk' => 'Pendidikan Agama Islam', 'border' => true, 'deskripsi' => 'Menunjukkan sikap ketakwaan dengan menjalankan syariat-Nya dalam kehidupan sehari-hari', 'nilai' => '90', 'label' => 'H', 'capaian' => '90' ],
+          [ 'kode_mk' => 'UNI600 - <b>3</b>', 'nama_mk' => 'Pendidikan Agama Islam', 'border' => true, 'deskripsi' => 'Merefleksikan kesadaran personal sebagai Mukmin, Muslim, dan Muhsin', 'nilai' => '86', 'label' => 'L', 'capaian' => '21,5' ],
+          [ 'kode_mk' => 'UNI600 - <b>4</b>', 'nama_mk' => 'Pendidikan Agama Islam', 'border' => true, 'deskripsi' => 'Mengidentifikasi nilai-nilai kebaikan dan etika universal yang terkandung dalam ajaran Islam serta menelaah secara kritis implementasinya dalam kehidupan umat muslim', 'nilai' => '84', 'label' => 'H', 'capaian' => '84' ],
+          [ 'kode_mk' => 'UNI600 - <b>5</b>', 'nama_mk' => 'Pendidikan Agama Islam', 'border' => true, 'deskripsi' => 'Merefleksikan kesesuaian perilaku pribadi keseharian dengan nilai-nilai keislaman', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+        ],
+      ],
+      [
+        'kode' => 'IK 1.2',
+        'deskripsi' => 'Menunjukkan perilaku Islami pada setiap peran yang dijalani',
+        'nilai' => '10',
+        'label' => 'M',
+        'capaian' => '5',
+        'cpmk' => [
+          [ 'kode_mk' => 'UNI600 - <b>1</b>', 'nama_mk' => 'Pendidikan Agama Islam', 'border' => true, 'deskripsi' => 'Menjelaskan konsep fitrah manusia dan hidayah sesuai Al-Qur’an dan Hadis', 'nilai' => '10', 'label' => 'H', 'capaian' => '10' ],
+          [ 'kode_mk' => 'UNI600 - <b>2</b>', 'nama_mk' => 'Pendidikan Agama Islam', 'border' => true, 'deskripsi' => 'Menunjukkan sikap ketakwaan dengan menjalankan syariat-Nya dalam kehidupan sehari-hari', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'UNI600 - <b>3</b>', 'nama_mk' => 'Pendidikan Agama Islam', 'border' => true, 'deskripsi' => 'Merefleksikan kesadaran personal sebagai Mukmin, Muslim, dan Muhsin', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'UNI600 - <b>4</b>', 'nama_mk' => 'Pendidikan Agama Islam', 'border' => true, 'deskripsi' => 'Mengidentifikasi nilai-nilai kebaikan dan etika universal yang terkandung dalam ajaran Islam serta menelaah secara kritis implementasinya dalam kehidupan umat muslim', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'UNI600 - <b>5</b>', 'nama_mk' => 'Pendidikan Agama Islam', 'border' => true, 'deskripsi' => 'Merefleksikan kesesuaian perilaku pribadi keseharian dengan nilai-nilai keislaman', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'UNI601 - <b>1</b>', 'nama_mk' => 'Islam Ulil Albab', 'border' => true, 'deskripsi' => 'Menjelaskan konsep insan ulil albab berdasarkan Al-Quran dan hadits serta merefleksikannya sebagai individu dalam kehidupan sehari-hari', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'UNI601 - <b>2</b>', 'nama_mk' => 'Islam Ulil Albab', 'border' => true, 'deskripsi' => 'Membandingkan berbagai macam pemikiran dalam Islam', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'UNI601 - <b>3</b>', 'nama_mk' => 'Islam Ulil Albab', 'border' => true, 'deskripsi' => 'Mengidentifikasi faktor-faktor pendukung kejayaan, keruntuhan, dan kebangkitan kembali peradaban Islam', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'UNI601 - <b>4</b>', 'nama_mk' => 'Islam Ulil Albab', 'border' => true, 'deskripsi' => 'Merefleksikan peran dan keteladanan pendiri dan tokoh UII utamanya kepemimpinan dan etika kerja dalam rangka mengembangkan individu yang berilmu amaliah dan beramal ilmiah', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'UNI602 - <b>1</b>', 'nama_mk' => 'Islam Rahmatan Lil Alamin', 'border' => true, 'deskripsi' => 'Mahasiswa mampu menjelaskan konsep Islam Rahmatan Lil Alamin berdasarkan Al-Quran dan Hadis', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'UNI602 - <b>2</b>', 'nama_mk' => 'Islam Rahmatan Lil Alamin', 'border' => true, 'deskripsi' => 'Mahasiswa mampu menjelaskan interaksi nilai keislaman dengan bidang ilmu yang ditekuni', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'UNI602 - <b>3</b>', 'nama_mk' => 'Islam Rahmatan Lil Alamin', 'border' => true, 'deskripsi' => 'Mahasiswa mampu menunjukkan pemikiran, produk dan/atau unjuk kerja yang merupakan perwujudan hasil integrasi nilai keislaman pada bidang ilmu yang ditekuni', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'UNI602 - <b>4</b>', 'nama_mk' => 'Islam Rahmatan Lil Alamin', 'border' => true, 'deskripsi' => 'Mahasiswa mampu menumbuhkan sikap proaktif serta kebanggaan sebagai muslim/muslimah', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'UNI602 - <b>5</b>', 'nama_mk' => 'Islam Rahmatan Lil Alamin', 'border' => true, 'deskripsi' => 'Mahasiswa mampu merumuskan kontribusi personal dalam bidang ilmu yang ditekuninya dalam lingkup lingkungan sekitar bagi kemajuan peradaban Islam', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'UNI603 - <b>1</b>', 'nama_mk' => 'Pendidikan Pancasila', 'border' => true, 'deskripsi' => 'Mengekspresikan sikap pemahaman terhadap ideologi Pancasila dan konsep kebangsaan Indonesia dalam kehidupan bermasyarakat, berbangsa, dan bernegara', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'UNI603 - <b>2</b>', 'nama_mk' => 'Pendidikan Pancasila', 'border' => true, 'deskripsi' => 'Mengidentifikasi dan menganalisis kaitan antara ideologi dan perspektif Pancasila dengan perspektif keislaman', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'UNI603 - <b>3</b>', 'nama_mk' => 'Pendidikan Pancasila', 'border' => true, 'deskripsi' => 'Menganalisis perbandingan antara ideologi Pancasila dengan ideologi lain', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'UNI603 - <b>4</b>', 'nama_mk' => 'Pendidikan Pancasila', 'border' => true, 'deskripsi' => 'Merefleksikan Pancasila sebagai nilai dan norma personal dalam konteks kehidupan bermasyarakat, berbangsa, dan bernegara', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'UNI603 - <b>5</b>', 'nama_mk' => 'Pendidikan Pancasila', 'border' => true, 'deskripsi' => 'Merefleksikan Pancasila sebagai sistem etika dalam konteks pengembangan dan penerapan ilmu dan teknologi pada bidang studi yang dipelajari', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'UNI604 - <b>1</b>', 'nama_mk' => 'Pendidikan Kewarganegaraan', 'border' => true, 'deskripsi' => 'Mampu menunjukkan sikap sebagai warga negara yang cerdas dan bertanggung jawab berlandaskan nilai keIslaman dan  keIndonesiaan', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+        ],
+      ],
+    ],
+  ],
+  [
+    'kode' => 'CPL 2',
+    'deskripsi' => 'Kemampuan untuk menginternalisasi semangat kemandirian dan Kewirausahaan',
+    'capaian_akhir' => '0',
+    'ik' => [
+      [
+        'kode' => 'IK 2.1',
+        'deskripsi' => 'Memahami kewirausahaan sebagai sarana untuk mengembangkan potensi diri dan meningkatkan kualitas hidup',
+        'nilai' => '-',
+        'label' => 'M',
+        'capaian' => '-',
+        'cpmk' => [
+          [ 'kode_mk' => 'STK521 - <b>1</b>', 'nama_mk' => 'Ekonomi Teknik', 'border' => true, 'deskripsi' => 'Mahasiswa mampu menjelaskan konsep nilai uang terhadap waktu', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'STK521 - <b>2</b>', 'nama_mk' => 'Ekonomi Teknik', 'border' => true, 'deskripsi' => 'Mahasiswa mampu menghitung modal investasi tetap dan biaya manufaktur pabrik serta mengevaluasi laba', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'STK521 - <b>3</b>', 'nama_mk' => 'Ekonomi Teknik', 'border' => true, 'deskripsi' => 'Mahasiswa mampu melakukan analisis kelayakan pabrik', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'STK947 - <b>3</b>', 'nama_mk' => 'Startup Business', 'border' => false, 'deskripsi' => 'Mahasiswa mampu membuat dan mempresentasikan business plan', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'UNI605 - <b>1</b>', 'nama_mk' => 'Kewirausahaan Syariah', 'border' => true, 'deskripsi' => 'Mengidentifikasi, merumuskan, dan merefleksikan karakter Rasulullah dan para sahabat sebagai wirausahawan muslim', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'UNI605 - <b>2</b>', 'nama_mk' => 'Kewirausahaan Syariah', 'border' => true, 'deskripsi' => 'Mengidentifikasi, merumuskan, menganalisis, dan mengembangkan alternatif peluang berwirausaha berbasis syariat Islam pada bidang yang dipelajari.', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'UNI605 - <b>3</b>', 'nama_mk' => 'Kewirausahaan Syariah', 'border' => true, 'deskripsi' => 'Menyusun konsep rencana bisnis untuk berwirausaha sesuai dengan syariat Islam pada bidang yang diminati', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+        ],
+      ],
+      [
+        'kode' => 'IK 2.3',
+        'deskripsi' => 'Membuat perencanaan usaha mandiri',
+        'nilai' => '-',
+        'label' => 'M',
+        'capaian' => '-',
+        'cpmk' => [
+          [ 'kode_mk' => 'STK521 - <b>1</b>', 'nama_mk' => 'Ekonomi Teknik', 'border' => true, 'deskripsi' => 'Mahasiswa mampu menjelaskan konsep nilai uang terhadap waktu', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'STK521 - <b>2</b>', 'nama_mk' => 'Ekonomi Teknik', 'border' => true, 'deskripsi' => 'Mahasiswa mampu menghitung modal investasi tetap dan biaya manufaktur pabrik serta mengevaluasi laba', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'STK521 - <b>3</b>', 'nama_mk' => 'Ekonomi Teknik', 'border' => true, 'deskripsi' => 'Mahasiswa mampu melakukan analisis kelayakan pabrik', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'STK947 - <b>1</b>', 'nama_mk' => 'Startup Business', 'border' => false, 'deskripsi' => 'Mahasiswa mampu menunjukkan motivasi dalam merintis usaha', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'STK947 - <b>2</b>', 'nama_mk' => 'Startup Business', 'border' => false, 'deskripsi' => 'Mahasiswa mampu memilih bidang usaha yang mempunyai prospek', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'STK947 - <b>3</b>', 'nama_mk' => 'Startup Business', 'border' => false, 'deskripsi' => 'Mahasiswa mampu membuat dan mempresentasikan business plan', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'UNI605 - <b>1</b>', 'nama_mk' => 'Kewirausahaan Syariah', 'border' => true, 'deskripsi' => 'Mengidentifikasi, merumuskan, dan merefleksikan karakter Rasulullah dan para sahabat sebagai wirausahawan muslim', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'UNI605 - <b>2</b>', 'nama_mk' => 'Kewirausahaan Syariah', 'border' => true, 'deskripsi' => 'Mengidentifikasi, merumuskan, menganalisis, dan mengembangkan alternatif peluang berwirausaha berbasis syariat Islam pada bidang yang dipelajari.', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'UNI605 - <b>3</b>', 'nama_mk' => 'Kewirausahaan Syariah', 'border' => true, 'deskripsi' => 'Menyusun konsep rencana bisnis untuk berwirausaha sesuai dengan syariat Islam pada bidang yang diminati', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+        ],
+      ],
+    ],
+  ],
+  [
+    'kode' => 'CPL 3',
+    'deskripsi' => 'Kemampuan untuk bertanggung jawab kepada masyarakat dan mematuhi etika profesi dalam menyelesaikan permasalahan teknik kimia',
+    'capaian_akhir' => '0',
+    'ik' => [
+      [
+        'kode' => 'IK 3.1',
+        'deskripsi' => 'Mampu memahami dampak teknologi dari bidang teknik kimia terhadap kesejahteraan masyarakat, keselamatan lingkungan, dan pembangunan yang berkelanjutan',
+        'nilai' => '-',
+        'label' => 'H',
+        'capaian' => '-',
+        'cpmk' => [
+          [ 'kode_mk' => 'STK724 - <b>1</b>', 'nama_mk' => 'Pengolahan Limbah dan Keselamatan Industri', 'border' => true, 'deskripsi' => 'Mahasiswa mampu menjelaskan tentang parameter pencemaran udara, air, dan tanah', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'STK724 - <b>2</b>', 'nama_mk' => 'Pengolahan Limbah dan Keselamatan Industri', 'border' => true, 'deskripsi' => 'Mahasiswa mampu menjelaskan tentang cara pengolahan limbah secara fisis, biologis, dan kimiawi sesuai baku mutu', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'STK724 - <b>3</b>', 'nama_mk' => 'Pengolahan Limbah dan Keselamatan Industri', 'border' => true, 'deskripsi' => 'Mahasiswa mampu menjelaskan tentang karakteristik bahan kimia B3 dan melakukan analisis risiko', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'STK724 - <b>4</b>', 'nama_mk' => 'Pengolahan Limbah dan Keselamatan Industri', 'border' => true, 'deskripsi' => 'Mahasiswa mampu menjelaskan tentang dasar-dasar kesehatan dan keselamatan kerja sesuai peraturan/undang-undang yang berlaku', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'UNI600 - <b>1</b>', 'nama_mk' => 'Pendidikan Agama Islam', 'border' => true, 'deskripsi' => 'Menjelaskan konsep fitrah manusia dan hidayah sesuai Al-Qur’an dan Hadis', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'UNI600 - <b>2</b>', 'nama_mk' => 'Pendidikan Agama Islam', 'border' => true, 'deskripsi' => 'Menunjukkan sikap ketakwaan dengan menjalankan syariat-Nya dalam kehidupan sehari-hari', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'UNI600 - <b>3</b>', 'nama_mk' => 'Pendidikan Agama Islam', 'border' => true, 'deskripsi' => 'Merefleksikan kesadaran personal sebagai Mukmin, Muslim, dan Muhsin', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'UNI600 - <b>4</b>', 'nama_mk' => 'Pendidikan Agama Islam', 'border' => true, 'deskripsi' => 'Mengidentifikasi nilai-nilai kebaikan dan etika universal yang terkandung dalam ajaran Islam serta menelaah secara kritis implementasinya dalam kehidupan umat muslim', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'UNI600 - <b>5</b>', 'nama_mk' => 'Pendidikan Agama Islam', 'border' => true, 'deskripsi' => 'Merefleksikan kesesuaian perilaku pribadi keseharian dengan nilai-nilai keislaman', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'UNI601 - <b>1</b>', 'nama_mk' => 'Islam Ulil Albab', 'border' => true, 'deskripsi' => 'Menjelaskan konsep insan ulil albab berdasarkan Al-Quran dan hadits serta merefleksikannya sebagai individu dalam kehidupan sehari-hari', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'UNI601 - <b>2</b>', 'nama_mk' => 'Islam Ulil Albab', 'border' => true, 'deskripsi' => 'Membandingkan berbagai macam pemikiran dalam Islam', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'UNI601 - <b>3</b>', 'nama_mk' => 'Islam Ulil Albab', 'border' => true, 'deskripsi' => 'Mengidentifikasi faktor-faktor pendukung kejayaan, keruntuhan, dan kebangkitan kembali peradaban Islam', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'UNI601 - <b>4</b>', 'nama_mk' => 'Islam Ulil Albab', 'border' => true, 'deskripsi' => 'Merefleksikan peran dan keteladanan pendiri dan tokoh UII utamanya kepemimpinan dan etika kerja dalam rangka mengembangkan individu yang berilmu amaliah dan beramal ilmiah', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'UNI602 - <b>1</b>', 'nama_mk' => 'Islam Rahmatan Lil Alamin', 'border' => true, 'deskripsi' => 'Mahasiswa mampu menjelaskan konsep Islam Rahmatan Lil Alamin berdasarkan Al-Quran dan Hadis', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'UNI602 - <b>2</b>', 'nama_mk' => 'Islam Rahmatan Lil Alamin', 'border' => true, 'deskripsi' => 'Mahasiswa mampu menjelaskan interaksi nilai keislaman dengan bidang ilmu yang ditekuni', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'UNI602 - <b>3</b>', 'nama_mk' => 'Islam Rahmatan Lil Alamin', 'border' => true, 'deskripsi' => 'Mahasiswa mampu menunjukkan pemikiran, produk dan/atau unjuk kerja yang merupakan perwujudan hasil integrasi nilai keislaman pada bidang ilmu yang ditekuni', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'UNI602 - <b>4</b>', 'nama_mk' => 'Islam Rahmatan Lil Alamin', 'border' => true, 'deskripsi' => 'Mahasiswa mampu menumbuhkan sikap proaktif serta kebanggaan sebagai muslim/muslimah', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'UNI602 - <b>5</b>', 'nama_mk' => 'Islam Rahmatan Lil Alamin', 'border' => true, 'deskripsi' => 'Mahasiswa mampu merumuskan kontribusi personal dalam bidang ilmu yang ditekuninya dalam lingkup lingkungan sekitar bagi kemajuan peradaban Islam', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'UNI603 - <b>1</b>', 'nama_mk' => 'Pendidikan Pancasila', 'border' => true, 'deskripsi' => 'Mengekspresikan sikap pemahaman terhadap ideologi Pancasila dan konsep kebangsaan Indonesia dalam kehidupan bermasyarakat, berbangsa, dan bernegara', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'UNI603 - <b>2</b>', 'nama_mk' => 'Pendidikan Pancasila', 'border' => true, 'deskripsi' => 'Mengidentifikasi dan menganalisis kaitan antara ideologi dan perspektif Pancasila dengan perspektif keislaman', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'UNI603 - <b>3</b>', 'nama_mk' => 'Pendidikan Pancasila', 'border' => true, 'deskripsi' => 'Menganalisis perbandingan antara ideologi Pancasila dengan ideologi lain', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'UNI603 - <b>4</b>', 'nama_mk' => 'Pendidikan Pancasila', 'border' => true, 'deskripsi' => 'Merefleksikan Pancasila sebagai nilai dan norma personal dalam konteks kehidupan bermasyarakat, berbangsa, dan bernegara', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'UNI603 - <b>5</b>', 'nama_mk' => 'Pendidikan Pancasila', 'border' => true, 'deskripsi' => 'Merefleksikan Pancasila sebagai sistem etika dalam konteks pengembangan dan penerapan ilmu dan teknologi pada bidang studi yang dipelajari', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'UNI608 - <b>1</b>', 'nama_mk' => 'Kuliah Kerja Nyata', 'border' => true, 'deskripsi' => 'Mahasiswa mampu melakukan dakwah Islamiyah bil hal atau bil khitabah atau bil kitabah', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'UNI608 - <b>2</b>', 'nama_mk' => 'Kuliah Kerja Nyata', 'border' => true, 'deskripsi' => 'Mahasiswa mampu bekerjasama dengan disiplin ilmu yang lain untuk merencanakan dan melaksanakan program solutif bagi persoalan masyarakat secara nyata', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'UNI608 - <b>3</b>', 'nama_mk' => 'Kuliah Kerja Nyata', 'border' => true, 'deskripsi' => 'Mahasiswa mampu menyusun analisis potensi dan masalah yang dihadapi masyarakat secara nyata', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'UNI608 - <b>4</b>', 'nama_mk' => 'Kuliah Kerja Nyata', 'border' => true, 'deskripsi' => 'Mahasiswa mampu merencanakan, mengkoordinasi, melaksanakan, dan mengevaluasi program sesuai bidang ilmu yang melibatkan masyarakat secara langsung', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+        ],
+      ],
+      [
+        'kode' => 'IK 3.2',
+        'deskripsi' => 'Memahami dan mematuhi kode etik profesi dan peraturan',
+        'nilai' => '-',
+        'label' => 'M',
+        'capaian' => '-',
+        'cpmk' => [
+          [ 'kode_mk' => 'STK724 - <b>1</b>', 'nama_mk' => 'Pengolahan Limbah dan Keselamatan Industri', 'border' => true, 'deskripsi' => 'Mahasiswa mampu menjelaskan tentang parameter pencemaran udara, air, dan tanah', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'STK724 - <b>2</b>', 'nama_mk' => 'Pengolahan Limbah dan Keselamatan Industri', 'border' => true, 'deskripsi' => 'Mahasiswa mampu menjelaskan tentang cara pengolahan limbah secara fisis, biologis, dan kimiawi sesuai baku mutu', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'STK724 - <b>3</b>', 'nama_mk' => 'Pengolahan Limbah dan Keselamatan Industri', 'border' => true, 'deskripsi' => 'Mahasiswa mampu menjelaskan tentang karakteristik bahan kimia B3 dan melakukan analisis risiko', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'STK724 - <b>4</b>', 'nama_mk' => 'Pengolahan Limbah dan Keselamatan Industri', 'border' => true, 'deskripsi' => 'Mahasiswa mampu menjelaskan tentang dasar-dasar kesehatan dan keselamatan kerja sesuai peraturan/undang-undang yang berlaku', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'UNI600 - <b>1</b>', 'nama_mk' => 'Pendidikan Agama Islam', 'border' => true, 'deskripsi' => 'Menjelaskan konsep fitrah manusia dan hidayah sesuai Al-Qur’an dan Hadis', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'UNI600 - <b>2</b>', 'nama_mk' => 'Pendidikan Agama Islam', 'border' => true, 'deskripsi' => 'Menunjukkan sikap ketakwaan dengan menjalankan syariat-Nya dalam kehidupan sehari-hari', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'UNI600 - <b>3</b>', 'nama_mk' => 'Pendidikan Agama Islam', 'border' => true, 'deskripsi' => 'Merefleksikan kesadaran personal sebagai Mukmin, Muslim, dan Muhsin', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'UNI600 - <b>4</b>', 'nama_mk' => 'Pendidikan Agama Islam', 'border' => true, 'deskripsi' => 'Mengidentifikasi nilai-nilai kebaikan dan etika universal yang terkandung dalam ajaran Islam serta menelaah secara kritis implementasinya dalam kehidupan umat muslim', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'UNI600 - <b>5</b>', 'nama_mk' => 'Pendidikan Agama Islam', 'border' => true, 'deskripsi' => 'Merefleksikan kesesuaian perilaku pribadi keseharian dengan nilai-nilai keislaman', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'UNI601 - <b>1</b>', 'nama_mk' => 'Islam Ulil Albab', 'border' => true, 'deskripsi' => 'Menjelaskan konsep insan ulil albab berdasarkan Al-Quran dan hadits serta merefleksikannya sebagai individu dalam kehidupan sehari-hari', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'UNI601 - <b>2</b>', 'nama_mk' => 'Islam Ulil Albab', 'border' => true, 'deskripsi' => 'Membandingkan berbagai macam pemikiran dalam Islam', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'UNI601 - <b>3</b>', 'nama_mk' => 'Islam Ulil Albab', 'border' => true, 'deskripsi' => 'Mengidentifikasi faktor-faktor pendukung kejayaan, keruntuhan, dan kebangkitan kembali peradaban Islam', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'UNI601 - <b>4</b>', 'nama_mk' => 'Islam Ulil Albab', 'border' => true, 'deskripsi' => 'Merefleksikan peran dan keteladanan pendiri dan tokoh UII utamanya kepemimpinan dan etika kerja dalam rangka mengembangkan individu yang berilmu amaliah dan beramal ilmiah', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'UNI602 - <b>1</b>', 'nama_mk' => 'Islam Rahmatan Lil Alamin', 'border' => true, 'deskripsi' => 'Mahasiswa mampu menjelaskan konsep Islam Rahmatan Lil Alamin berdasarkan Al-Quran dan Hadis', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'UNI602 - <b>2</b>', 'nama_mk' => 'Islam Rahmatan Lil Alamin', 'border' => true, 'deskripsi' => 'Mahasiswa mampu menjelaskan interaksi nilai keislaman dengan bidang ilmu yang ditekuni', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'UNI602 - <b>3</b>', 'nama_mk' => 'Islam Rahmatan Lil Alamin', 'border' => true, 'deskripsi' => 'Mahasiswa mampu menunjukkan pemikiran, produk dan/atau unjuk kerja yang merupakan perwujudan hasil integrasi nilai keislaman pada bidang ilmu yang ditekuni', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'UNI602 - <b>4</b>', 'nama_mk' => 'Islam Rahmatan Lil Alamin', 'border' => true, 'deskripsi' => 'Mahasiswa mampu menumbuhkan sikap proaktif serta kebanggaan sebagai muslim/muslimah', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'UNI602 - <b>5</b>', 'nama_mk' => 'Islam Rahmatan Lil Alamin', 'border' => true, 'deskripsi' => 'Mahasiswa mampu merumuskan kontribusi personal dalam bidang ilmu yang ditekuninya dalam lingkup lingkungan sekitar bagi kemajuan peradaban Islam', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'UNI603 - <b>1</b>', 'nama_mk' => 'Pendidikan Pancasila', 'border' => true, 'deskripsi' => 'Mengekspresikan sikap pemahaman terhadap ideologi Pancasila dan konsep kebangsaan Indonesia dalam kehidupan bermasyarakat, berbangsa, dan bernegara', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'UNI603 - <b>2</b>', 'nama_mk' => 'Pendidikan Pancasila', 'border' => true, 'deskripsi' => 'Mengidentifikasi dan menganalisis kaitan antara ideologi dan perspektif Pancasila dengan perspektif keislaman', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'UNI603 - <b>3</b>', 'nama_mk' => 'Pendidikan Pancasila', 'border' => true, 'deskripsi' => 'Menganalisis perbandingan antara ideologi Pancasila dengan ideologi lain', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'UNI603 - <b>4</b>', 'nama_mk' => 'Pendidikan Pancasila', 'border' => true, 'deskripsi' => 'Merefleksikan Pancasila sebagai nilai dan norma personal dalam konteks kehidupan bermasyarakat, berbangsa, dan bernegara', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+        ],
+      ],
+    ],
+  ],
+  [
+    'kode' => 'CPL 4',
+    'deskripsi' => 'Kemampuan berkomunikasi secara efektif baik lisan maupun tulisan',
+    'capaian_akhir' => '0',
+    'ik' => [
+      [
+        'kode' => 'IK 4.1',
+        'deskripsi' => 'Mampu melakukan presentasi yang efektif dalam bahasa Indonesia dan bahasa Inggris',
+        'nilai' => '-',
+        'label' => 'H',
+        'capaian' => '-',
+        'cpmk' => [
+          [ 'kode_mk' => 'STK281 - <b>1</b>', 'nama_mk' => 'Praktikum Kimia Dasar dan Kimia Organik', 'border' => true, 'deskripsi' => 'Mahasiswa mampu mengukur pH larutan', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'STK281 - <b>2</b>', 'nama_mk' => 'Praktikum Kimia Dasar dan Kimia Organik', 'border' => true, 'deskripsi' => 'Mahasiswa mampu menentukan sifat-sifat fisik zat cair dan larutan', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'STK281 - <b>3</b>', 'nama_mk' => 'Praktikum Kimia Dasar dan Kimia Organik', 'border' => true, 'deskripsi' => 'Mahasiswa mampu menentukan besaran fisik gas', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'STK281 - <b>4</b>', 'nama_mk' => 'Praktikum Kimia Dasar dan Kimia Organik', 'border' => true, 'deskripsi' => 'Mahasiswa mampu menentukan tetapan kesetimbangan termodinamika', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'STK281 - <b>5</b>', 'nama_mk' => 'Praktikum Kimia Dasar dan Kimia Organik', 'border' => true, 'deskripsi' => 'Mahasiswa mampu melakukan sintesa senyawa-senyawa organik', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'STK281 - <b>6</b>', 'nama_mk' => 'Praktikum Kimia Dasar dan Kimia Organik', 'border' => true, 'deskripsi' => 'Mahasiswa mampu melakukan sintesa senyawa organik industrial', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'STK281 - <b>7</b>', 'nama_mk' => 'Praktikum Kimia Dasar dan Kimia Organik', 'border' => true, 'deskripsi' => 'Mahasiswa mampu melakukan isolasi komponen-komponen bahan alam', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'STK281 - <b>8</b>', 'nama_mk' => 'Praktikum Kimia Dasar dan Kimia Organik', 'border' => true, 'deskripsi' => 'Mahasiswa mampu menyusun laporan praktikum kelompok', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'STK382 - <b>1</b>', 'nama_mk' => 'Praktikum Kimia Analitik dan Kimia Fisika', 'border' => true, 'deskripsi' => 'Mahasiswa mampu melakukan analisis kuantitatif dan melakukan perhitungan untuk menentukan kadar suatu zat', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'STK382 - <b>2</b>', 'nama_mk' => 'Praktikum Kimia Analitik dan Kimia Fisika', 'border' => true, 'deskripsi' => 'Mahasiswa mampu melakukan pemisahan dan mengidentifikasi zat-zat dalam campuran', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'STK382 - <b>3</b>', 'nama_mk' => 'Praktikum Kimia Analitik dan Kimia Fisika', 'border' => true, 'deskripsi' => 'Mahasiswa mampu menentukan sifat-sifat fisik zat cair dan larutan', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'STK382 - <b>4</b>', 'nama_mk' => 'Praktikum Kimia Analitik dan Kimia Fisika', 'border' => true, 'deskripsi' => 'Mahasiswa mampu menyusun peralatan serta menentukan besaran fisik gas', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'STK382 - <b>5</b>', 'nama_mk' => 'Praktikum Kimia Analitik dan Kimia Fisika', 'border' => true, 'deskripsi' => 'Mahasiswa mampu melakukan pengukuran besaran-besaran elektrokimia', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'STK483 - <b>1</b>', 'nama_mk' => 'Praktikum Operasi Teknik Kimia 1', 'border' => true, 'deskripsi' => 'Mampu mengoperasikan peralatan aliran fluida dan melakukan pengukuran variabel-variabel untuk menetapkan parameter unjuk kerja dan menyusun laporannya', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'STK483 - <b>2</b>', 'nama_mk' => 'Praktikum Operasi Teknik Kimia 1', 'border' => true, 'deskripsi' => 'Mampu mengoperasikan peralatan pengayakan dan melakukan pengukuran variabel-variabel untuk menetapkan parameter unjuk kerja dan menyusun laporannya', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'STK483 - <b>3</b>', 'nama_mk' => 'Praktikum Operasi Teknik Kimia 1', 'border' => true, 'deskripsi' => 'Mampu mengoperasikan peralatan fluid mixing dan melakukan pengukuran variabel-variabel untuk menetapkan parameter unjuk kerja dan menyusun laporannya', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'STK483 - <b>4</b>', 'nama_mk' => 'Praktikum Operasi Teknik Kimia 1', 'border' => true, 'deskripsi' => 'Mampu mengoperasikan peralatan filtrasi dan melakukan pengukuran variabel-variabel untuk menetapkan parameter unjuk kerja dan menyusun laporannya', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'STK483 - <b>5</b>', 'nama_mk' => 'Praktikum Operasi Teknik Kimia 1', 'border' => true, 'deskripsi' => 'Mampu mengoperasikan peralatan sedimentasi dan melakukan pengukuran variabel-variabel untuk menetapkan parameter unjuk kerja dan menyusun laporannya', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'STK483 - <b>6</b>', 'nama_mk' => 'Praktikum Operasi Teknik Kimia 1', 'border' => true, 'deskripsi' => 'Mampu mengoperasikan peralatan fluidisasi dan melakukan pengukuran variabel-variabel untuk menetapkan parameter unjuk kerja dan menyusun laporannya', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'STK483 - <b>7</b>', 'nama_mk' => 'Praktikum Operasi Teknik Kimia 1', 'border' => true, 'deskripsi' => 'Mampu mengoperasikan peralatan kesetimbangan uap – cair dan melakukan pengukuran variabel-variabel untuk menetapkan parameter unjuk kerja dan menyusun laporannya', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'STK584 - <b>1</b>', 'nama_mk' => 'Praktikum Operasi Teknik Kimia 2', 'border' => true, 'deskripsi' => 'Mampu mengoperasikan peralatan absorpsi dan melakukan pengukuran variabel-variabel untuk menetapkan parameter unjuk kerja dan menyusun laporannya', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'STK584 - <b>2</b>', 'nama_mk' => 'Praktikum Operasi Teknik Kimia 2', 'border' => true, 'deskripsi' => 'Mampu mengoperasikan peralatan ekstraksi dan melakukan pengukuran variabel-variabel untuk menetapkan parameter unjuk kerja dan menyusun laporannya', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'STK584 - <b>3</b>', 'nama_mk' => 'Praktikum Operasi Teknik Kimia 2', 'border' => true, 'deskripsi' => 'Mampu mengoperasikan peralatan distilasi dan melakukan pengukuran variabel-variabel untuk menetapkan parameter unjuk kerja dan menyusun laporannya', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'STK584 - <b>4</b>', 'nama_mk' => 'Praktikum Operasi Teknik Kimia 2', 'border' => true, 'deskripsi' => 'Mampu mengoperasikan peralatan evaporasi dan melakukan pengukuran variabel-variabel untuk menetapkan parameter unjuk kerja dan menyusun laporannya', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'STK584 - <b>5</b>', 'nama_mk' => 'Praktikum Operasi Teknik Kimia 2', 'border' => true, 'deskripsi' => 'Mampu mengoperasikan peralatan drying dan melakukan pengukuran variabel-variabel untuk menetapkan parameter unjuk kerja dan menyusun laporannya', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'STK584 - <b>6</b>', 'nama_mk' => 'Praktikum Operasi Teknik Kimia 2', 'border' => true, 'deskripsi' => 'Mampu mengoperasikan peralatan heat-exchanger dan melakukan pengukuran variabel-variabel untuk menetapkan parameter unjuk kerja dan menyusun laporannya', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'STK584 - <b>7</b>', 'nama_mk' => 'Praktikum Operasi Teknik Kimia 2', 'border' => true, 'deskripsi' => 'Mampu mengoperasikan peralatan pengendalian proses dan melakukan pengukuran variabel-variabel untuk menetapkan parameter unjuk kerja dan menyusun laporannya', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'STK584 - <b>8</b>', 'nama_mk' => 'Praktikum Operasi Teknik Kimia 2', 'border' => true, 'deskripsi' => 'Mahasiswa mampu menyusun laporan praktikum kelompok', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'STK585 - <b>1</b>', 'nama_mk' => 'Metodologi Penelitian', 'border' => true, 'deskripsi' => 'Mahasiswa mampu menyusun proposal penelitian', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'STK585 - <b>2</b>', 'nama_mk' => 'Metodologi Penelitian', 'border' => true, 'deskripsi' => 'Mahasiswa mampu mempresentasikan proposal penelitian', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'STK686 - <b>1</b>', 'nama_mk' => 'Penelitian', 'border' => true, 'deskripsi' => 'Mahasiswa mampu melaksanakan penelitian dalam lingkup bidang ilmu teknik kimia', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'STK686 - <b>2</b>', 'nama_mk' => 'Penelitian', 'border' => true, 'deskripsi' => 'Mahasiswa mampu menyusun dan mempresentasikan hasil penelitian dalam bentuk laporan dan seminar penelitian', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'STK752 - <b>1</b>', 'nama_mk' => 'Kerja Praktik', 'border' => true, 'deskripsi' => 'Mahasiswa mampu menerapkan pengetahuan teknik kimia di industri kimia dan menyelesaikan tugas khusus lapangan', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'STK752 - <b>2</b>', 'nama_mk' => 'Kerja Praktik', 'border' => true, 'deskripsi' => 'Mahasiswa mampu menyusun dan mempresentasikan laporan akhir Kerja Praktik', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'STK853 - <b>1</b>', 'nama_mk' => 'Tugas Pra-Rancangan Pabrik Kimia', 'border' => true, 'deskripsi' => 'Mahasiswa mampu menerapkan pengetahuan teknik kimia untuk merancang pabrik kimia', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'STK853 - <b>2</b>', 'nama_mk' => 'Tugas Pra-Rancangan Pabrik Kimia', 'border' => true, 'deskripsi' => 'Mahasiswa mampu menyusun dan mempresentasikan naskah tugas Pra-Rancangan Pabrik Kimia', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'UNI606 - <b>1</b>', 'nama_mk' => 'Bahasa Inggris', 'border' => true, 'deskripsi' => 'Menjelaskan isi buku teks dalam bahasa Inggris sesuai bidang ilmu yang ditekuni', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'UNI606 - <b>2</b>', 'nama_mk' => 'Bahasa Inggris', 'border' => true, 'deskripsi' => 'Menulis paragraf dalam bahasa Inggris mengenai suatu topik dalam bidang ilmu yang ditekuni', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'UNI606 - <b>3</b>', 'nama_mk' => 'Bahasa Inggris', 'border' => true, 'deskripsi' => 'Berbicara aktif mendeskripsikan profil diri sendiri dan suatu topik dalam bidang ilmu secara efektif dan impresif dengan bahasa Inggris', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'UNI607 - <b>1</b>', 'nama_mk' => 'Kecakapan Komunikasi Ilmiah', 'border' => true, 'deskripsi' => 'Merefleksikan penggunaan Bahasa Indonesia sebagai identitas keindonesiaan dalam komunikasi lisan dan tulisan sehari-hari', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'UNI607 - <b>2</b>', 'nama_mk' => 'Kecakapan Komunikasi Ilmiah', 'border' => true, 'deskripsi' => 'Menyusun tulisan dan melakukan presentasi  dalam konteks akademik yang runtut dan terstruktur serta memenuhi kaidah Pedoman Umum Ejaan Bahasa Indonesia, penulisan ilmiah, dan anti-plagiarisme.', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'UNI607 - <b>3</b>', 'nama_mk' => 'Kecakapan Komunikasi Ilmiah', 'border' => true, 'deskripsi' => 'Memanfaatkan teknologi untuk yang menunjang penyusunan tulisan akademik seperti fitur perangkat lunak pengolah kata dan perangkat lunak sitasi manajemen', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+        ],
+      ],
+      [
+        'kode' => 'IK 4.2',
+        'deskripsi' => 'Mampu menulis ide/gagasan/laporan sesuai kaidah ilmiah dalam bahasa Indonesia dan bahasa Inggris',
+        'nilai' => '-',
+        'label' => 'H',
+        'capaian' => '-',
+        'cpmk' => [
+          [ 'kode_mk' => 'STK281 - <b>1</b>', 'nama_mk' => 'Praktikum Kimia Dasar dan Kimia Organik', 'border' => true, 'deskripsi' => 'Mahasiswa mampu mengukur pH larutan', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'STK281 - <b>2</b>', 'nama_mk' => 'Praktikum Kimia Dasar dan Kimia Organik', 'border' => true, 'deskripsi' => 'Mahasiswa mampu menentukan sifat-sifat fisik zat cair dan larutan', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'STK281 - <b>3</b>', 'nama_mk' => 'Praktikum Kimia Dasar dan Kimia Organik', 'border' => true, 'deskripsi' => 'Mahasiswa mampu menentukan besaran fisik gas', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'STK281 - <b>4</b>', 'nama_mk' => 'Praktikum Kimia Dasar dan Kimia Organik', 'border' => true, 'deskripsi' => 'Mahasiswa mampu menentukan tetapan kesetimbangan termodinamika', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'STK281 - <b>5</b>', 'nama_mk' => 'Praktikum Kimia Dasar dan Kimia Organik', 'border' => true, 'deskripsi' => 'Mahasiswa mampu melakukan sintesa senyawa-senyawa organik', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'STK281 - <b>6</b>', 'nama_mk' => 'Praktikum Kimia Dasar dan Kimia Organik', 'border' => true, 'deskripsi' => 'Mahasiswa mampu melakukan sintesa senyawa organik industrial', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'STK281 - <b>7</b>', 'nama_mk' => 'Praktikum Kimia Dasar dan Kimia Organik', 'border' => true, 'deskripsi' => 'Mahasiswa mampu melakukan isolasi komponen-komponen bahan alam', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'STK281 - <b>8</b>', 'nama_mk' => 'Praktikum Kimia Dasar dan Kimia Organik', 'border' => true, 'deskripsi' => 'Mahasiswa mampu menyusun laporan praktikum kelompok', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'STK382 - <b>1</b>', 'nama_mk' => 'Praktikum Kimia Analitik dan Kimia Fisika', 'border' => true, 'deskripsi' => 'Mahasiswa mampu melakukan analisis kuantitatif dan melakukan perhitungan untuk menentukan kadar suatu zat', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'STK382 - <b>2</b>', 'nama_mk' => 'Praktikum Kimia Analitik dan Kimia Fisika', 'border' => true, 'deskripsi' => 'Mahasiswa mampu melakukan pemisahan dan mengidentifikasi zat-zat dalam campuran', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'STK382 - <b>3</b>', 'nama_mk' => 'Praktikum Kimia Analitik dan Kimia Fisika', 'border' => true, 'deskripsi' => 'Mahasiswa mampu menentukan sifat-sifat fisik zat cair dan larutan', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'STK382 - <b>4</b>', 'nama_mk' => 'Praktikum Kimia Analitik dan Kimia Fisika', 'border' => true, 'deskripsi' => 'Mahasiswa mampu menyusun peralatan serta menentukan besaran fisik gas', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'STK382 - <b>5</b>', 'nama_mk' => 'Praktikum Kimia Analitik dan Kimia Fisika', 'border' => true, 'deskripsi' => 'Mahasiswa mampu melakukan pengukuran besaran-besaran elektrokimia', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'STK483 - <b>1</b>', 'nama_mk' => 'Praktikum Operasi Teknik Kimia 1', 'border' => true, 'deskripsi' => 'Mampu mengoperasikan peralatan aliran fluida dan melakukan pengukuran variabel-variabel untuk menetapkan parameter unjuk kerja dan menyusun laporannya', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'STK483 - <b>2</b>', 'nama_mk' => 'Praktikum Operasi Teknik Kimia 1', 'border' => true, 'deskripsi' => 'Mampu mengoperasikan peralatan pengayakan dan melakukan pengukuran variabel-variabel untuk menetapkan parameter unjuk kerja dan menyusun laporannya', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'STK483 - <b>3</b>', 'nama_mk' => 'Praktikum Operasi Teknik Kimia 1', 'border' => true, 'deskripsi' => 'Mampu mengoperasikan peralatan fluid mixing dan melakukan pengukuran variabel-variabel untuk menetapkan parameter unjuk kerja dan menyusun laporannya', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'STK483 - <b>4</b>', 'nama_mk' => 'Praktikum Operasi Teknik Kimia 1', 'border' => true, 'deskripsi' => 'Mampu mengoperasikan peralatan filtrasi dan melakukan pengukuran variabel-variabel untuk menetapkan parameter unjuk kerja dan menyusun laporannya', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'STK483 - <b>5</b>', 'nama_mk' => 'Praktikum Operasi Teknik Kimia 1', 'border' => true, 'deskripsi' => 'Mampu mengoperasikan peralatan sedimentasi dan melakukan pengukuran variabel-variabel untuk menetapkan parameter unjuk kerja dan menyusun laporannya', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'STK483 - <b>6</b>', 'nama_mk' => 'Praktikum Operasi Teknik Kimia 1', 'border' => true, 'deskripsi' => 'Mampu mengoperasikan peralatan fluidisasi dan melakukan pengukuran variabel-variabel untuk menetapkan parameter unjuk kerja dan menyusun laporannya', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'STK483 - <b>7</b>', 'nama_mk' => 'Praktikum Operasi Teknik Kimia 1', 'border' => true, 'deskripsi' => 'Mampu mengoperasikan peralatan kesetimbangan uap – cair dan melakukan pengukuran variabel-variabel untuk menetapkan parameter unjuk kerja dan menyusun laporannya', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'STK584 - <b>1</b>', 'nama_mk' => 'Praktikum Operasi Teknik Kimia 2', 'border' => true, 'deskripsi' => 'Mampu mengoperasikan peralatan absorpsi dan melakukan pengukuran variabel-variabel untuk menetapkan parameter unjuk kerja dan menyusun laporannya', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'STK584 - <b>2</b>', 'nama_mk' => 'Praktikum Operasi Teknik Kimia 2', 'border' => true, 'deskripsi' => 'Mampu mengoperasikan peralatan ekstraksi dan melakukan pengukuran variabel-variabel untuk menetapkan parameter unjuk kerja dan menyusun laporannya', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'STK584 - <b>3</b>', 'nama_mk' => 'Praktikum Operasi Teknik Kimia 2', 'border' => true, 'deskripsi' => 'Mampu mengoperasikan peralatan distilasi dan melakukan pengukuran variabel-variabel untuk menetapkan parameter unjuk kerja dan menyusun laporannya', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'STK584 - <b>4</b>', 'nama_mk' => 'Praktikum Operasi Teknik Kimia 2', 'border' => true, 'deskripsi' => 'Mampu mengoperasikan peralatan evaporasi dan melakukan pengukuran variabel-variabel untuk menetapkan parameter unjuk kerja dan menyusun laporannya', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'STK584 - <b>5</b>', 'nama_mk' => 'Praktikum Operasi Teknik Kimia 2', 'border' => true, 'deskripsi' => 'Mampu mengoperasikan peralatan drying dan melakukan pengukuran variabel-variabel untuk menetapkan parameter unjuk kerja dan menyusun laporannya', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'STK584 - <b>6</b>', 'nama_mk' => 'Praktikum Operasi Teknik Kimia 2', 'border' => true, 'deskripsi' => 'Mampu mengoperasikan peralatan heat-exchanger dan melakukan pengukuran variabel-variabel untuk menetapkan parameter unjuk kerja dan menyusun laporannya', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'STK584 - <b>7</b>', 'nama_mk' => 'Praktikum Operasi Teknik Kimia 2', 'border' => true, 'deskripsi' => 'Mampu mengoperasikan peralatan pengendalian proses dan melakukan pengukuran variabel-variabel untuk menetapkan parameter unjuk kerja dan menyusun laporannya', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'STK584 - <b>8</b>', 'nama_mk' => 'Praktikum Operasi Teknik Kimia 2', 'border' => true, 'deskripsi' => 'Mahasiswa mampu menyusun laporan praktikum kelompok', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'STK585 - <b>1</b>', 'nama_mk' => 'Metodologi Penelitian', 'border' => true, 'deskripsi' => 'Mahasiswa mampu menyusun proposal penelitian', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'STK585 - <b>2</b>', 'nama_mk' => 'Metodologi Penelitian', 'border' => true, 'deskripsi' => 'Mahasiswa mampu mempresentasikan proposal penelitian', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'STK686 - <b>1</b>', 'nama_mk' => 'Penelitian', 'border' => true, 'deskripsi' => 'Mahasiswa mampu melaksanakan penelitian dalam lingkup bidang ilmu teknik kimia', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'STK686 - <b>2</b>', 'nama_mk' => 'Penelitian', 'border' => true, 'deskripsi' => 'Mahasiswa mampu menyusun dan mempresentasikan hasil penelitian dalam bentuk laporan dan seminar penelitian', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'STK752 - <b>1</b>', 'nama_mk' => 'Kerja Praktik', 'border' => true, 'deskripsi' => 'Mahasiswa mampu menerapkan pengetahuan teknik kimia di industri kimia dan menyelesaikan tugas khusus lapangan', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'STK752 - <b>2</b>', 'nama_mk' => 'Kerja Praktik', 'border' => true, 'deskripsi' => 'Mahasiswa mampu menyusun dan mempresentasikan laporan akhir Kerja Praktik', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'STK853 - <b>1</b>', 'nama_mk' => 'Tugas Pra-Rancangan Pabrik Kimia', 'border' => true, 'deskripsi' => 'Mahasiswa mampu menerapkan pengetahuan teknik kimia untuk merancang pabrik kimia', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'STK853 - <b>2</b>', 'nama_mk' => 'Tugas Pra-Rancangan Pabrik Kimia', 'border' => true, 'deskripsi' => 'Mahasiswa mampu menyusun dan mempresentasikan naskah tugas Pra-Rancangan Pabrik Kimia', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'UNI606 - <b>1</b>', 'nama_mk' => 'Bahasa Inggris', 'border' => true, 'deskripsi' => 'Menjelaskan isi buku teks dalam bahasa Inggris sesuai bidang ilmu yang ditekuni', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+        ],
+      ],
+    ],
+  ],
+  [
+    'kode' => 'CPL 5',
+    'deskripsi' => 'Kemampuan merencanakan, menyelesaikan, dan mengevaluasi tugas di dalam batasan-batasan yang ada',
+    'capaian_akhir' => '0',
+    'ik' => [
+      [
+        'kode' => 'IK 5.1',
+        'deskripsi' => 'Mampu merencanakan dan menyelesaikan tugas-tugas kurikuler (penelitian, kerja praktik, dan tugas akhir)',
+        'nilai' => '-',
+        'label' => 'H',
+        'capaian' => '-',
+        'cpmk' => [
+          [ 'kode_mk' => 'STK686 - <b>1</b>', 'nama_mk' => 'Penelitian', 'border' => true, 'deskripsi' => 'Mahasiswa mampu melaksanakan penelitian dalam lingkup bidang ilmu teknik kimia', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'STK686 - <b>2</b>', 'nama_mk' => 'Penelitian', 'border' => true, 'deskripsi' => 'Mahasiswa mampu menyusun dan mempresentasikan hasil penelitian dalam bentuk laporan dan seminar penelitian', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'STK752 - <b>1</b>', 'nama_mk' => 'Kerja Praktik', 'border' => true, 'deskripsi' => 'Mahasiswa mampu menerapkan pengetahuan teknik kimia di industri kimia dan menyelesaikan tugas khusus lapangan', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'STK752 - <b>2</b>', 'nama_mk' => 'Kerja Praktik', 'border' => true, 'deskripsi' => 'Mahasiswa mampu menyusun dan mempresentasikan laporan akhir Kerja Praktik', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'STK853 - <b>1</b>', 'nama_mk' => 'Tugas Pra-Rancangan Pabrik Kimia', 'border' => true, 'deskripsi' => 'Mahasiswa mampu menerapkan pengetahuan teknik kimia untuk merancang pabrik kimia', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'STK853 - <b>2</b>', 'nama_mk' => 'Tugas Pra-Rancangan Pabrik Kimia', 'border' => true, 'deskripsi' => 'Mahasiswa mampu menyusun dan mempresentasikan naskah tugas Pra-Rancangan Pabrik Kimia', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+        ],
+      ],
+      [
+        'kode' => 'IK 5.2',
+        'deskripsi' => 'Mampu mengevaluasi proses dan hasil tugas-tugas kurikuler',
+        'nilai' => '-',
+        'label' => 'H',
+        'capaian' => '-',
+        'cpmk' => [
+          [ 'kode_mk' => 'STK686 - <b>1</b>', 'nama_mk' => 'Penelitian', 'border' => true, 'deskripsi' => 'Mahasiswa mampu melaksanakan penelitian dalam lingkup bidang ilmu teknik kimia', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'STK686 - <b>2</b>', 'nama_mk' => 'Penelitian', 'border' => true, 'deskripsi' => 'Mahasiswa mampu menyusun dan mempresentasikan hasil penelitian dalam bentuk laporan dan seminar penelitian', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'STK752 - <b>1</b>', 'nama_mk' => 'Kerja Praktik', 'border' => true, 'deskripsi' => 'Mahasiswa mampu menerapkan pengetahuan teknik kimia di industri kimia dan menyelesaikan tugas khusus lapangan', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'STK752 - <b>2</b>', 'nama_mk' => 'Kerja Praktik', 'border' => true, 'deskripsi' => 'Mahasiswa mampu menyusun dan mempresentasikan laporan akhir Kerja Praktik', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'STK853 - <b>1</b>', 'nama_mk' => 'Tugas Pra-Rancangan Pabrik Kimia', 'border' => true, 'deskripsi' => 'Mahasiswa mampu menerapkan pengetahuan teknik kimia untuk merancang pabrik kimia', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+          [ 'kode_mk' => 'STK853 - <b>2</b>', 'nama_mk' => 'Tugas Pra-Rancangan Pabrik Kimia', 'border' => true, 'deskripsi' => 'Mahasiswa mampu menyusun dan mempresentasikan naskah tugas Pra-Rancangan Pabrik Kimia', 'nilai' => '-', 'label' => 'H', 'capaian' => '-' ],
+        ],
+      ],
+    ],
+  ],
+];
+
+// ------------------------------------------------------------
+// 3. CONTROLLER SECTION
+//    Halaman ini bersifat READ-ONLY (rekap/tampilan), tidak ada
+//    aksi create/update/delete. Form pada "Modal Filter" (lihat
+//    View Section) saat ini submit via GET tanpa diproses server
+//    — belum ada percabangan $action.
+//    Saat masuk Mode 3, tambahkan di sini misalnya:
+//      $angkatan = $_GET['angkatan'] ?? '';
+//      $status   = $_GET['status'] ?? '';
+//      $rekap    = getRekapCplIndividu($pdo, $nim, [...]);
+// ------------------------------------------------------------
+
+// ------------------------------------------------------------
+// 4. VIEW SECTION
+//    HTML output: card filter, tab nav, tabel CPL/IK/CPMK, dan
+//    modal (Filter, Bantuan, Preview Risiko, Detil Mahasiswa)
+// ------------------------------------------------------------
+?>
 <div class="content-wrapper" style="min-height: 626.4px;">    
 
   <section class="content-header">
@@ -163,2731 +523,57 @@
               <th class="pl-2 pr-2" style="vertical-align: middle;">Capaian</th>
             </tr>
           </thead>
-          <tbody>
-            <!-- BARIS 1 -->
+                    <tbody>
+<?php foreach ($dataCpl as $cpl): ?>
             <tr>
-              <td align="center">CPL 1</td>
-              <td colspan="4">Bertakwa kepada Tuhan Yang Maha Esa dan berperilaku islami (jujur, disiplin, tanggung jawab, dan kerja cerdas) pada setiap peran yang dijalani, baik di industri kimia maupun masyarakat umum</td>
+              <td align="center"><?= $cpl['kode'] ?></td>
+              <td colspan="4"><?= $cpl['deskripsi'] ?></td>
               <td></td>
               <td></td>
               <td></td>
               <td></td>
               <td></td>
               <td></td>
-              <td align="center"><b>61,26</b></td>
+              <td align="center"><b><?= $cpl['capaian_akhir'] ?></b></td>
             </tr>
-            <!-- BARIS 2 -->
+<?php foreach ($cpl['ik'] as $ik): ?>
             <tr>
               <td></td>
-              <td align="center">IK 1.1</td>
-              <td colspan="3">Memahami dinul Islam serta pemikiran dan peradaban umat Islam </td>
+              <td align="center"><?= $ik['kode'] ?></td>
+              <td colspan="3"><?= $ik['deskripsi'] ?></td>
               <td></td>
               <td></td>
               <td></td>
-              <td align="center"><b>86,89</b></td>
-              <td align="center"><b>H</b></td>
-              <td align="center"><b>86,89</b></td>
+              <td align="center"><b><?= $ik['nilai'] ?></b></td>
+              <td align="center"><b><?= $ik['label'] ?></b></td>
+              <td align="center"><b><?= $ik['capaian'] ?></b></td>
               <td></td>
             </tr>
-            <!-- BARIS 3 -->
+<?php foreach ($ik['cpmk'] as $c): $borderStyle = $c['border'] ? ' style="border-left: 3px solid #2d5f8b;"' : ''; ?>
             <tr>
               <td></td>
               <td></td>
-              <td>UNI600 - <b>1</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Pendidikan Agama Islam</td>
-              <td style="max-width: 300px;">Menjelaskan konsep fitrah manusia dan hidayah sesuai Al-Qur’an dan Hadis</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
+              <td><?= $c['kode_mk'] ?></td>
+              <td<?= $borderStyle ?>><?= $c['nama_mk'] ?></td>
+              <td style="max-width: 300px;"><?= $c['deskripsi'] ?></td>
+              <td align="center"><?= $c['nilai'] ?></td>
+              <td align="center"><b><?= $c['label'] ?></b></td>
+              <td align="center"><?= $c['capaian'] ?></td>
               <td></td>
               <td></td>
               <td></td>
               <td></td>
             </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>UNI600 - <b>2</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Pendidikan Agama Islam</td>
-              <td style="max-width: 300px;">Menunjukkan sikap ketakwaan dengan menjalankan syariat-Nya dalam kehidupan sehari-hari </td>
-              <td align="center">90</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">90</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>UNI600 - <b>3</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Pendidikan Agama Islam</td>
-              <td style="max-width: 300px;">Merefleksikan kesadaran personal sebagai Mukmin, Muslim, dan Muhsin</td>
-              <td align="center">86</td>
-              <td align="center"><b>L</b></td>
-              <td align="center">21,5</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>UNI600 - <b>4</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Pendidikan Agama Islam</td>
-              <td style="max-width: 300px;">Mengidentifikasi nilai-nilai kebaikan dan etika universal yang terkandung dalam ajaran Islam serta menelaah secara kritis implementasinya dalam kehidupan umat muslim</td>
-              <td align="center">84</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">84</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>UNI600 - <b>5</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Pendidikan Agama Islam</td>
-              <td style="max-width: 300px;">Merefleksikan kesesuaian perilaku pribadi keseharian dengan nilai-nilai keislaman </td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td align="center">IK 1.2</td>
-              <td colspan="3">Menunjukkan perilaku Islami pada setiap peran yang dijalani</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td align="center"><b>10</b></td>
-              <td align="center"><b>M</b></td>
-              <td align="center"><b>5</b></td>
-              <td></td>
-            </tr>
-            <!-- BARIS 3 -->
-            <tr>
-              <td></td>
-              <td></td>
-              <td>UNI600 - <b>1</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Pendidikan Agama Islam</td>
-              <td style="max-width: 300px;">Menjelaskan konsep fitrah manusia dan hidayah sesuai Al-Qur’an dan Hadis</td>
-              <td align="center">10                                             </td>
-              <td align="center"><b>H</b></td>
-              <td align="center">10</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>UNI600 - <b>2</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Pendidikan Agama Islam</td>
-              <td style="max-width: 300px;">Menunjukkan sikap ketakwaan dengan menjalankan syariat-Nya dalam kehidupan sehari-hari </td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>UNI600 - <b>3</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Pendidikan Agama Islam</td>
-              <td style="max-width: 300px;">Merefleksikan kesadaran personal sebagai Mukmin, Muslim, dan Muhsin</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>UNI600 - <b>4</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Pendidikan Agama Islam</td>
-              <td style="max-width: 300px;">Mengidentifikasi nilai-nilai kebaikan dan etika universal yang terkandung dalam ajaran Islam serta menelaah secara kritis implementasinya dalam kehidupan umat muslim</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>UNI600 - <b>5</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Pendidikan Agama Islam</td>
-              <td style="max-width: 300px;">Merefleksikan kesesuaian perilaku pribadi keseharian dengan nilai-nilai keislaman </td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>UNI601 - <b>1</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Islam Ulil Albab</td>
-              <td style="max-width: 300px;">Menjelaskan konsep insan ulil albab berdasarkan Al-Quran dan hadits serta merefleksikannya sebagai individu dalam kehidupan sehari-hari</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>UNI601 - <b>2</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Islam Ulil Albab</td>
-              <td style="max-width: 300px;">Membandingkan berbagai macam pemikiran dalam Islam</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>UNI601 - <b>3</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Islam Ulil Albab</td>
-              <td style="max-width: 300px;">Mengidentifikasi faktor-faktor pendukung kejayaan, keruntuhan, dan kebangkitan kembali peradaban Islam</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>UNI601 - <b>4</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Islam Ulil Albab</td>
-              <td style="max-width: 300px;">Merefleksikan peran dan keteladanan pendiri dan tokoh UII utamanya kepemimpinan dan etika kerja dalam rangka mengembangkan individu yang berilmu amaliah dan beramal ilmiah</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>UNI602 - <b>1</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Islam Rahmatan Lil Alamin</td>
-              <td style="max-width: 300px;">Mahasiswa mampu menjelaskan konsep Islam Rahmatan Lil Alamin berdasarkan Al-Quran dan Hadis</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>UNI602 - <b>2</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Islam Rahmatan Lil Alamin</td>
-              <td style="max-width: 300px;">Mahasiswa mampu menjelaskan interaksi nilai keislaman dengan bidang ilmu yang ditekuni</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>UNI602 - <b>3</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Islam Rahmatan Lil Alamin</td>
-              <td style="max-width: 300px;">Mahasiswa mampu menunjukkan pemikiran, produk dan/atau unjuk kerja yang merupakan perwujudan hasil integrasi nilai keislaman pada bidang ilmu yang ditekuni</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>UNI602 - <b>4</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Islam Rahmatan Lil Alamin</td>
-              <td style="max-width: 300px;">Mahasiswa mampu menumbuhkan sikap proaktif serta kebanggaan sebagai muslim/muslimah</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>UNI602 - <b>5</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Islam Rahmatan Lil Alamin</td>
-              <td style="max-width: 300px;">Mahasiswa mampu merumuskan kontribusi personal dalam bidang ilmu yang ditekuninya dalam lingkup lingkungan sekitar bagi kemajuan peradaban Islam </td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>UNI603 - <b>1</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Pendidikan Pancasila</td>
-              <td style="max-width: 300px;">Mengekspresikan sikap pemahaman terhadap ideologi Pancasila dan konsep kebangsaan Indonesia dalam kehidupan bermasyarakat, berbangsa, dan bernegara</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>UNI603 - <b>2</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Pendidikan Pancasila</td>
-              <td style="max-width: 300px;">Mengidentifikasi dan menganalisis kaitan antara ideologi dan perspektif Pancasila dengan perspektif keislaman</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>UNI603 - <b>3</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Pendidikan Pancasila</td>
-              <td style="max-width: 300px;">Menganalisis perbandingan antara ideologi Pancasila dengan ideologi lain</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>UNI603 - <b>4</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Pendidikan Pancasila</td>
-              <td style="max-width: 300px;">Merefleksikan Pancasila sebagai nilai dan norma personal dalam konteks kehidupan bermasyarakat, berbangsa, dan bernegara</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>UNI603 - <b>5</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Pendidikan Pancasila</td>
-              <td style="max-width: 300px;">Merefleksikan Pancasila sebagai sistem etika dalam konteks pengembangan dan penerapan ilmu dan teknologi pada bidang studi yang dipelajari</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>UNI604 - <b>1</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Pendidikan Kewarganegaraan</td>
-              <td style="max-width: 300px;">Mampu menunjukkan sikap sebagai warga negara yang cerdas dan bertanggung jawab berlandaskan nilai keIslaman dan  keIndonesiaan</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <!-- BARIS 1 -->
-            <tr>
-              <td align="center">CPL 2</td>
-              <td colspan="4">Kemampuan untuk menginternalisasi semangat kemandirian dan Kewirausahaan</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td align="center"><b>0</b></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td align="center">IK 2.1</td>
-              <td colspan="3">Memahami kewirausahaan sebagai sarana untuk mengembangkan potensi diri dan meningkatkan kualitas hidup</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td align="center"><b>-</b></td>
-              <td align="center"><b>M</b></td>
-              <td align="center"><b>-</b></td>
-              <td></td>
-            </tr>
-            <!-- BARIS 3 -->
-            <tr>
-              <td></td>
-              <td></td>
-              <td>STK521 - <b>1</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Ekonomi Teknik</td>
-              <td style="max-width: 300px;">Mahasiswa mampu menjelaskan konsep nilai uang terhadap waktu </td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>STK521 - <b>2</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Ekonomi Teknik</td>
-              <td style="max-width: 300px;">Mahasiswa mampu menghitung modal investasi tetap dan biaya manufaktur pabrik serta mengevaluasi laba</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>STK521 - <b>3</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Ekonomi Teknik</td>
-              <td style="max-width: 300px;">Mahasiswa mampu melakukan analisis kelayakan pabrik </td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>STK947 - <b>3</b></td>
-              <td >Startup Business</td>
-              <td style="max-width: 300px;">Mahasiswa mampu membuat dan mempresentasikan business plan</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>UNI605 - <b>1</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Kewirausahaan Syariah</td>
-              <td style="max-width: 300px;">Mengidentifikasi, merumuskan, dan merefleksikan karakter Rasulullah dan para sahabat sebagai wirausahawan muslim</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>UNI605 - <b>2</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Kewirausahaan Syariah</td>
-              <td style="max-width: 300px;">Mengidentifikasi, merumuskan, menganalisis, dan mengembangkan alternatif peluang berwirausaha berbasis syariat Islam pada bidang yang dipelajari.</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>UNI605 - <b>3</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Kewirausahaan Syariah</td>
-              <td style="max-width: 300px;">Menyusun konsep rencana bisnis untuk berwirausaha sesuai dengan syariat Islam pada bidang yang diminati</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td align="center">IK 2.3</td>
-              <td colspan="3">Membuat perencanaan usaha mandiri </td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td align="center"><b>-</b></td>
-              <td align="center"><b>M</b></td>
-              <td align="center"><b>-</b></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>STK521 - <b>1</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Ekonomi Teknik</td>
-              <td style="max-width: 300px;">Mahasiswa mampu menjelaskan konsep nilai uang terhadap waktu </td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>STK521 - <b>2</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Ekonomi Teknik</td>
-              <td style="max-width: 300px;">Mahasiswa mampu menghitung modal investasi tetap dan biaya manufaktur pabrik serta mengevaluasi laba</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>STK521 - <b>3</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Ekonomi Teknik</td>
-              <td style="max-width: 300px;">Mahasiswa mampu melakukan analisis kelayakan pabrik </td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>STK947 - <b>1</b></td>
-              <td >Startup Business</td>
-              <td style="max-width: 300px;">Mahasiswa mampu menunjukkan motivasi dalam merintis usaha </td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>STK947 - <b>2</b></td>
-              <td >Startup Business</td>
-              <td style="max-width: 300px;">Mahasiswa mampu memilih bidang usaha yang mempunyai prospek</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>STK947 - <b>3</b></td>
-              <td >Startup Business</td>
-              <td style="max-width: 300px;">Mahasiswa mampu membuat dan mempresentasikan business plan</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>UNI605 - <b>1</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Kewirausahaan Syariah</td>
-              <td style="max-width: 300px;">Mengidentifikasi, merumuskan, dan merefleksikan karakter Rasulullah dan para sahabat sebagai wirausahawan muslim</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>UNI605 - <b>2</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Kewirausahaan Syariah</td>
-              <td style="max-width: 300px;">Mengidentifikasi, merumuskan, menganalisis, dan mengembangkan alternatif peluang berwirausaha berbasis syariat Islam pada bidang yang dipelajari.</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>UNI605 - <b>3</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Kewirausahaan Syariah</td>
-              <td style="max-width: 300px;">Menyusun konsep rencana bisnis untuk berwirausaha sesuai dengan syariat Islam pada bidang yang diminati</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <!-- BARIS 1 -->
-            <tr>
-              <td align="center">CPL 3</td>
-              <td colspan="4">Kemampuan untuk bertanggung jawab kepada masyarakat dan mematuhi etika profesi dalam menyelesaikan permasalahan teknik kimia</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td align="center"><b>0</b></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td align="center">IK 3.1</td>
-              <td colspan="3">Mampu memahami dampak teknologi dari bidang teknik kimia terhadap kesejahteraan masyarakat, keselamatan lingkungan, dan pembangunan yang berkelanjutan</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td align="center"><b>-</b></td>
-              <td align="center"><b>H</b></td>
-              <td align="center"><b>-</b></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>STK724 - <b>1</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Pengolahan Limbah dan Keselamatan Industri</td>
-              <td style="max-width: 300px;">Mahasiswa mampu menjelaskan tentang parameter pencemaran udara, air, dan tanah </td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>STK724 - <b>2</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Pengolahan Limbah dan Keselamatan Industri</td>
-              <td style="max-width: 300px;">Mahasiswa mampu menjelaskan tentang cara pengolahan limbah secara fisis, biologis, dan kimiawi sesuai baku mutu </td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>STK724 - <b>3</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Pengolahan Limbah dan Keselamatan Industri</td>
-              <td style="max-width: 300px;">Mahasiswa mampu menjelaskan tentang karakteristik bahan kimia B3 dan melakukan analisis risiko </td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>STK724 - <b>4</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Pengolahan Limbah dan Keselamatan Industri</td>
-              <td style="max-width: 300px;">Mahasiswa mampu menjelaskan tentang dasar-dasar kesehatan dan keselamatan kerja sesuai peraturan/undang-undang yang berlaku </td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>UNI600 - <b>1</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Pendidikan Agama Islam</td>
-              <td style="max-width: 300px;">Menjelaskan konsep fitrah manusia dan hidayah sesuai Al-Qur’an dan Hadis</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>UNI600 - <b>2</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Pendidikan Agama Islam</td>
-              <td style="max-width: 300px;">Menunjukkan sikap ketakwaan dengan menjalankan syariat-Nya dalam kehidupan sehari-hari </td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>UNI600 - <b>3</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Pendidikan Agama Islam</td>
-              <td style="max-width: 300px;">Merefleksikan kesadaran personal sebagai Mukmin, Muslim, dan Muhsin</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>UNI600 - <b>4</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Pendidikan Agama Islam</td>
-              <td style="max-width: 300px;">Mengidentifikasi nilai-nilai kebaikan dan etika universal yang terkandung dalam ajaran Islam serta menelaah secara kritis implementasinya dalam kehidupan umat muslim</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>UNI600 - <b>5</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Pendidikan Agama Islam</td>
-              <td style="max-width: 300px;">Merefleksikan kesesuaian perilaku pribadi keseharian dengan nilai-nilai keislaman </td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>UNI601 - <b>1</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Islam Ulil Albab</td>
-              <td style="max-width: 300px;">Menjelaskan konsep insan ulil albab berdasarkan Al-Quran dan hadits serta merefleksikannya sebagai individu dalam kehidupan sehari-hari</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>UNI601 - <b>2</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Islam Ulil Albab</td>
-              <td style="max-width: 300px;">Membandingkan berbagai macam pemikiran dalam Islam</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>UNI601 - <b>3</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Islam Ulil Albab</td>
-              <td style="max-width: 300px;">Mengidentifikasi faktor-faktor pendukung kejayaan, keruntuhan, dan kebangkitan kembali peradaban Islam</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>UNI601 - <b>4</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Islam Ulil Albab</td>
-              <td style="max-width: 300px;">Merefleksikan peran dan keteladanan pendiri dan tokoh UII utamanya kepemimpinan dan etika kerja dalam rangka mengembangkan individu yang berilmu amaliah dan beramal ilmiah</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>UNI602 - <b>1</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Islam Rahmatan Lil Alamin</td>
-              <td style="max-width: 300px;">Mahasiswa mampu menjelaskan konsep Islam Rahmatan Lil Alamin berdasarkan Al-Quran dan Hadis</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>UNI602 - <b>2</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Islam Rahmatan Lil Alamin</td>
-              <td style="max-width: 300px;">Mahasiswa mampu menjelaskan interaksi nilai keislaman dengan bidang ilmu yang ditekuni</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>UNI602 - <b>3</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Islam Rahmatan Lil Alamin</td>
-              <td style="max-width: 300px;">Mahasiswa mampu menunjukkan pemikiran, produk dan/atau unjuk kerja yang merupakan perwujudan hasil integrasi nilai keislaman pada bidang ilmu yang ditekuni</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>UNI602 - <b>4</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Islam Rahmatan Lil Alamin</td>
-              <td style="max-width: 300px;">Mahasiswa mampu menumbuhkan sikap proaktif serta kebanggaan sebagai muslim/muslimah</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>UNI602 - <b>5</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Islam Rahmatan Lil Alamin</td>
-              <td style="max-width: 300px;">Mahasiswa mampu merumuskan kontribusi personal dalam bidang ilmu yang ditekuninya dalam lingkup lingkungan sekitar bagi kemajuan peradaban Islam </td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>UNI603 - <b>1</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Pendidikan Pancasila</td>
-              <td style="max-width: 300px;">Mengekspresikan sikap pemahaman terhadap ideologi Pancasila dan konsep kebangsaan Indonesia dalam kehidupan bermasyarakat, berbangsa, dan bernegara</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>UNI603 - <b>2</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Pendidikan Pancasila</td>
-              <td style="max-width: 300px;">Mengidentifikasi dan menganalisis kaitan antara ideologi dan perspektif Pancasila dengan perspektif keislaman</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>UNI603 - <b>3</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Pendidikan Pancasila</td>
-              <td style="max-width: 300px;">Menganalisis perbandingan antara ideologi Pancasila dengan ideologi lain</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>UNI603 - <b>4</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Pendidikan Pancasila</td>
-              <td style="max-width: 300px;">Merefleksikan Pancasila sebagai nilai dan norma personal dalam konteks kehidupan bermasyarakat, berbangsa, dan bernegara</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>UNI603 - <b>5</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Pendidikan Pancasila</td>
-              <td style="max-width: 300px;">Merefleksikan Pancasila sebagai sistem etika dalam konteks pengembangan dan penerapan ilmu dan teknologi pada bidang studi yang dipelajari</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>UNI608 - <b>1</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Kuliah Kerja Nyata</td>
-              <td style="max-width: 300px;">Mahasiswa mampu melakukan dakwah Islamiyah bil hal atau bil khitabah atau bil kitabah</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>UNI608 - <b>2</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Kuliah Kerja Nyata</td>
-              <td style="max-width: 300px;">Mahasiswa mampu bekerjasama dengan disiplin ilmu yang lain untuk merencanakan dan melaksanakan program solutif bagi persoalan masyarakat secara nyata</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>UNI608 - <b>3</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Kuliah Kerja Nyata</td>
-              <td style="max-width: 300px;">Mahasiswa mampu menyusun analisis potensi dan masalah yang dihadapi masyarakat secara nyata</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>UNI608 - <b>4</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Kuliah Kerja Nyata</td>
-              <td style="max-width: 300px;">Mahasiswa mampu merencanakan, mengkoordinasi, melaksanakan, dan mengevaluasi program sesuai bidang ilmu yang melibatkan masyarakat secara langsung</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td align="center">IK 3.2</td>
-              <td colspan="3">Memahami dan mematuhi kode etik profesi dan peraturan</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td align="center"><b>-</b></td>
-              <td align="center"><b>M</b></td>
-              <td align="center"><b>-</b></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>STK724 - <b>1</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Pengolahan Limbah dan Keselamatan Industri</td>
-              <td style="max-width: 300px;">Mahasiswa mampu menjelaskan tentang parameter pencemaran udara, air, dan tanah </td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>STK724 - <b>2</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Pengolahan Limbah dan Keselamatan Industri</td>
-              <td style="max-width: 300px;">Mahasiswa mampu menjelaskan tentang cara pengolahan limbah secara fisis, biologis, dan kimiawi sesuai baku mutu </td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>STK724 - <b>3</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Pengolahan Limbah dan Keselamatan Industri</td>
-              <td style="max-width: 300px;">Mahasiswa mampu menjelaskan tentang karakteristik bahan kimia B3 dan melakukan analisis risiko </td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>STK724 - <b>4</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Pengolahan Limbah dan Keselamatan Industri</td>
-              <td style="max-width: 300px;">Mahasiswa mampu menjelaskan tentang dasar-dasar kesehatan dan keselamatan kerja sesuai peraturan/undang-undang yang berlaku </td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>UNI600 - <b>1</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Pendidikan Agama Islam</td>
-              <td style="max-width: 300px;">Menjelaskan konsep fitrah manusia dan hidayah sesuai Al-Qur’an dan Hadis</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>UNI600 - <b>2</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Pendidikan Agama Islam</td>
-              <td style="max-width: 300px;">Menunjukkan sikap ketakwaan dengan menjalankan syariat-Nya dalam kehidupan sehari-hari </td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>UNI600 - <b>3</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Pendidikan Agama Islam</td>
-              <td style="max-width: 300px;">Merefleksikan kesadaran personal sebagai Mukmin, Muslim, dan Muhsin</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>UNI600 - <b>4</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Pendidikan Agama Islam</td>
-              <td style="max-width: 300px;">Mengidentifikasi nilai-nilai kebaikan dan etika universal yang terkandung dalam ajaran Islam serta menelaah secara kritis implementasinya dalam kehidupan umat muslim</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>UNI600 - <b>5</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Pendidikan Agama Islam</td>
-              <td style="max-width: 300px;">Merefleksikan kesesuaian perilaku pribadi keseharian dengan nilai-nilai keislaman </td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>UNI601 - <b>1</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Islam Ulil Albab</td>
-              <td style="max-width: 300px;">Menjelaskan konsep insan ulil albab berdasarkan Al-Quran dan hadits serta merefleksikannya sebagai individu dalam kehidupan sehari-hari</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>UNI601 - <b>2</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Islam Ulil Albab</td>
-              <td style="max-width: 300px;">Membandingkan berbagai macam pemikiran dalam Islam</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>UNI601 - <b>3</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Islam Ulil Albab</td>
-              <td style="max-width: 300px;">Mengidentifikasi faktor-faktor pendukung kejayaan, keruntuhan, dan kebangkitan kembali peradaban Islam</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>UNI601 - <b>4</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Islam Ulil Albab</td>
-              <td style="max-width: 300px;">Merefleksikan peran dan keteladanan pendiri dan tokoh UII utamanya kepemimpinan dan etika kerja dalam rangka mengembangkan individu yang berilmu amaliah dan beramal ilmiah</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>UNI602 - <b>1</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Islam Rahmatan Lil Alamin</td>
-              <td style="max-width: 300px;">Mahasiswa mampu menjelaskan konsep Islam Rahmatan Lil Alamin berdasarkan Al-Quran dan Hadis</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>UNI602 - <b>2</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Islam Rahmatan Lil Alamin</td>
-              <td style="max-width: 300px;">Mahasiswa mampu menjelaskan interaksi nilai keislaman dengan bidang ilmu yang ditekuni</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>UNI602 - <b>3</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Islam Rahmatan Lil Alamin</td>
-              <td style="max-width: 300px;">Mahasiswa mampu menunjukkan pemikiran, produk dan/atau unjuk kerja yang merupakan perwujudan hasil integrasi nilai keislaman pada bidang ilmu yang ditekuni</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>UNI602 - <b>4</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Islam Rahmatan Lil Alamin</td>
-              <td style="max-width: 300px;">Mahasiswa mampu menumbuhkan sikap proaktif serta kebanggaan sebagai muslim/muslimah</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>UNI602 - <b>5</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Islam Rahmatan Lil Alamin</td>
-              <td style="max-width: 300px;">Mahasiswa mampu merumuskan kontribusi personal dalam bidang ilmu yang ditekuninya dalam lingkup lingkungan sekitar bagi kemajuan peradaban Islam </td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>UNI603 - <b>1</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Pendidikan Pancasila</td>
-              <td style="max-width: 300px;">Mengekspresikan sikap pemahaman terhadap ideologi Pancasila dan konsep kebangsaan Indonesia dalam kehidupan bermasyarakat, berbangsa, dan bernegara</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>UNI603 - <b>2</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Pendidikan Pancasila</td>
-              <td style="max-width: 300px;">Mengidentifikasi dan menganalisis kaitan antara ideologi dan perspektif Pancasila dengan perspektif keislaman</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>UNI603 - <b>3</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Pendidikan Pancasila</td>
-              <td style="max-width: 300px;">Menganalisis perbandingan antara ideologi Pancasila dengan ideologi lain</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>UNI603 - <b>4</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Pendidikan Pancasila</td>
-              <td style="max-width: 300px;">Merefleksikan Pancasila sebagai nilai dan norma personal dalam konteks kehidupan bermasyarakat, berbangsa, dan bernegara</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <!-- BARIS 1 -->
-            <tr>
-              <td align="center">CPL 4</td>
-              <td colspan="4">Kemampuan berkomunikasi secara efektif baik lisan maupun tulisan</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td align="center"><b>0</b></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td align="center">IK 4.1</td>
-              <td colspan="3">Mampu melakukan presentasi yang efektif dalam bahasa Indonesia dan bahasa Inggris</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td align="center"><b>-</b></td>
-              <td align="center"><b>H</b></td>
-              <td align="center"><b>-</b></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>STK281 - <b>1</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Praktikum Kimia Dasar dan Kimia Organik</td>
-              <td style="max-width: 300px;">Mahasiswa mampu mengukur pH larutan</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>STK281 - <b>2</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Praktikum Kimia Dasar dan Kimia Organik</td>
-              <td style="max-width: 300px;">Mahasiswa mampu menentukan sifat-sifat fisik zat cair dan larutan </td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>STK281 - <b>3</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Praktikum Kimia Dasar dan Kimia Organik</td>
-              <td style="max-width: 300px;">Mahasiswa mampu menentukan besaran fisik gas </td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>STK281 - <b>4</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Praktikum Kimia Dasar dan Kimia Organik</td>
-              <td style="max-width: 300px;">Mahasiswa mampu menentukan tetapan kesetimbangan termodinamika </td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>STK281 - <b>5</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Praktikum Kimia Dasar dan Kimia Organik</td>
-              <td style="max-width: 300px;">Mahasiswa mampu melakukan sintesa senyawa-senyawa organik </td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>STK281 - <b>6</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Praktikum Kimia Dasar dan Kimia Organik</td>
-              <td style="max-width: 300px;">Mahasiswa mampu melakukan sintesa senyawa organik industrial </td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>STK281 - <b>7</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Praktikum Kimia Dasar dan Kimia Organik</td>
-              <td style="max-width: 300px;">Mahasiswa mampu melakukan isolasi komponen-komponen bahan alam</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>STK281 - <b>8</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Praktikum Kimia Dasar dan Kimia Organik</td>
-              <td style="max-width: 300px;">Mahasiswa mampu menyusun laporan praktikum kelompok</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>STK382 - <b>1</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Praktikum Kimia Analitik dan Kimia Fisika</td>
-              <td style="max-width: 300px;">Mahasiswa mampu melakukan analisis kuantitatif dan melakukan perhitungan untuk menentukan kadar suatu zat</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>STK382 - <b>2</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Praktikum Kimia Analitik dan Kimia Fisika</td>
-              <td style="max-width: 300px;">Mahasiswa mampu melakukan pemisahan dan mengidentifikasi zat-zat dalam campuran</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>STK382 - <b>3</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Praktikum Kimia Analitik dan Kimia Fisika</td>
-              <td style="max-width: 300px;">Mahasiswa mampu menentukan sifat-sifat fisik zat cair dan larutan</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>STK382 - <b>4</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Praktikum Kimia Analitik dan Kimia Fisika</td>
-              <td style="max-width: 300px;">Mahasiswa mampu menyusun peralatan serta menentukan besaran fisik gas</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>STK382 - <b>5</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Praktikum Kimia Analitik dan Kimia Fisika</td>
-              <td style="max-width: 300px;">Mahasiswa mampu melakukan pengukuran besaran-besaran elektrokimia</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>STK483 - <b>1</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Praktikum Operasi Teknik Kimia 1</td>
-              <td style="max-width: 300px;">Mampu mengoperasikan peralatan aliran fluida dan melakukan pengukuran variabel-variabel untuk menetapkan parameter unjuk kerja dan menyusun laporannya</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>STK483 - <b>2</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Praktikum Operasi Teknik Kimia 1</td>
-              <td style="max-width: 300px;">Mampu mengoperasikan peralatan pengayakan dan melakukan pengukuran variabel-variabel untuk menetapkan parameter unjuk kerja dan menyusun laporannya</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>STK483 - <b>3</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Praktikum Operasi Teknik Kimia 1</td>
-              <td style="max-width: 300px;">Mampu mengoperasikan peralatan fluid mixing dan melakukan pengukuran variabel-variabel untuk menetapkan parameter unjuk kerja dan menyusun laporannya</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>STK483 - <b>4</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Praktikum Operasi Teknik Kimia 1</td>
-              <td style="max-width: 300px;">Mampu mengoperasikan peralatan filtrasi dan melakukan pengukuran variabel-variabel untuk menetapkan parameter unjuk kerja dan menyusun laporannya</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>STK483 - <b>5</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Praktikum Operasi Teknik Kimia 1</td>
-              <td style="max-width: 300px;">Mampu mengoperasikan peralatan sedimentasi dan melakukan pengukuran variabel-variabel untuk menetapkan parameter unjuk kerja dan menyusun laporannya</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>STK483 - <b>6</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Praktikum Operasi Teknik Kimia 1</td>
-              <td style="max-width: 300px;">Mampu mengoperasikan peralatan fluidisasi dan melakukan pengukuran variabel-variabel untuk menetapkan parameter unjuk kerja dan menyusun laporannya</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>STK483 - <b>7</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Praktikum Operasi Teknik Kimia 1</td>
-              <td style="max-width: 300px;">Mampu mengoperasikan peralatan kesetimbangan uap – cair dan melakukan pengukuran variabel-variabel untuk menetapkan parameter unjuk kerja dan menyusun laporannya</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>STK584 - <b>1</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Praktikum Operasi Teknik Kimia 2</td>
-              <td style="max-width: 300px;">Mampu mengoperasikan peralatan absorpsi dan melakukan pengukuran variabel-variabel untuk menetapkan parameter unjuk kerja dan menyusun laporannya</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>STK584 - <b>2</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Praktikum Operasi Teknik Kimia 2</td>
-              <td style="max-width: 300px;">Mampu mengoperasikan peralatan ekstraksi dan melakukan pengukuran variabel-variabel untuk menetapkan parameter unjuk kerja dan menyusun laporannya</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>STK584 - <b>3</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Praktikum Operasi Teknik Kimia 2</td>
-              <td style="max-width: 300px;">Mampu mengoperasikan peralatan distilasi dan melakukan pengukuran variabel-variabel untuk menetapkan parameter unjuk kerja dan menyusun laporannya</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>STK584 - <b>4</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Praktikum Operasi Teknik Kimia 2</td>
-              <td style="max-width: 300px;">Mampu mengoperasikan peralatan evaporasi dan melakukan pengukuran variabel-variabel untuk menetapkan parameter unjuk kerja dan menyusun laporannya</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>STK584 - <b>5</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Praktikum Operasi Teknik Kimia 2</td>
-              <td style="max-width: 300px;">Mampu mengoperasikan peralatan drying dan melakukan pengukuran variabel-variabel untuk menetapkan parameter unjuk kerja dan menyusun laporannya</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>STK584 - <b>6</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Praktikum Operasi Teknik Kimia 2</td>
-              <td style="max-width: 300px;">Mampu mengoperasikan peralatan heat-exchanger dan melakukan pengukuran variabel-variabel untuk menetapkan parameter unjuk kerja dan menyusun laporannya</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>STK584 - <b>7</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Praktikum Operasi Teknik Kimia 2</td>
-              <td style="max-width: 300px;">Mampu mengoperasikan peralatan pengendalian proses dan melakukan pengukuran variabel-variabel untuk menetapkan parameter unjuk kerja dan menyusun laporannya</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>STK584 - <b>8</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Praktikum Operasi Teknik Kimia 2</td>
-              <td style="max-width: 300px;">Mahasiswa mampu menyusun laporan praktikum kelompok</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>STK585 - <b>1</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Metodologi Penelitian</td>
-              <td style="max-width: 300px;">Mahasiswa mampu menyusun proposal penelitian </td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>STK585 - <b>2</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Metodologi Penelitian</td>
-              <td style="max-width: 300px;">Mahasiswa mampu mempresentasikan proposal penelitian </td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>STK686 - <b>1</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Penelitian</td>
-              <td style="max-width: 300px;">Mahasiswa mampu melaksanakan penelitian dalam lingkup bidang ilmu teknik kimia</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>STK686 - <b>2</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Penelitian</td>
-              <td style="max-width: 300px;">Mahasiswa mampu menyusun dan mempresentasikan hasil penelitian dalam bentuk laporan dan seminar penelitian </td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>STK752 - <b>1</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Kerja Praktik</td>
-              <td style="max-width: 300px;">Mahasiswa mampu menerapkan pengetahuan teknik kimia di industri kimia dan menyelesaikan tugas khusus lapangan</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>STK752 - <b>2</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Kerja Praktik</td>
-              <td style="max-width: 300px;">Mahasiswa mampu menyusun dan mempresentasikan laporan akhir Kerja Praktik</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>STK853 - <b>1</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Tugas Pra-Rancangan Pabrik Kimia</td>
-              <td style="max-width: 300px;">Mahasiswa mampu menerapkan pengetahuan teknik kimia untuk merancang pabrik kimia</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>STK853 - <b>2</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Tugas Pra-Rancangan Pabrik Kimia</td>
-              <td style="max-width: 300px;">Mahasiswa mampu menyusun dan mempresentasikan naskah tugas Pra-Rancangan Pabrik Kimia</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>UNI606 - <b>1</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Bahasa Inggris</td>
-              <td style="max-width: 300px;">Menjelaskan isi buku teks dalam bahasa Inggris sesuai bidang ilmu yang ditekuni</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>UNI606 - <b>2</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Bahasa Inggris</td>
-              <td style="max-width: 300px;">Menulis paragraf dalam bahasa Inggris mengenai suatu topik dalam bidang ilmu yang ditekuni</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>UNI606 - <b>3</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Bahasa Inggris</td>
-              <td style="max-width: 300px;">Berbicara aktif mendeskripsikan profil diri sendiri dan suatu topik dalam bidang ilmu secara efektif dan impresif dengan bahasa Inggris</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>UNI607 - <b>1</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Kecakapan Komunikasi Ilmiah</td>
-              <td style="max-width: 300px;">Merefleksikan penggunaan Bahasa Indonesia sebagai identitas keindonesiaan dalam komunikasi lisan dan tulisan sehari-hari</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>UNI607 - <b>2</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Kecakapan Komunikasi Ilmiah</td>
-              <td style="max-width: 300px;">Menyusun tulisan dan melakukan presentasi  dalam konteks akademik yang runtut dan terstruktur serta memenuhi kaidah Pedoman Umum Ejaan Bahasa Indonesia, penulisan ilmiah, dan anti-plagiarisme.</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>UNI607 - <b>3</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Kecakapan Komunikasi Ilmiah</td>
-              <td style="max-width: 300px;">Memanfaatkan teknologi untuk yang menunjang penyusunan tulisan akademik seperti fitur perangkat lunak pengolah kata dan perangkat lunak sitasi manajemen</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td align="center">IK 4.2</td>
-              <td colspan="3">Mampu menulis ide/gagasan/laporan sesuai kaidah ilmiah dalam bahasa Indonesia dan bahasa Inggris</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td align="center"><b>-</b></td>
-              <td align="center"><b>H</b></td>
-              <td align="center"><b>-</b></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>STK281 - <b>1</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Praktikum Kimia Dasar dan Kimia Organik</td>
-              <td style="max-width: 300px;">Mahasiswa mampu mengukur pH larutan</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>STK281 - <b>2</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Praktikum Kimia Dasar dan Kimia Organik</td>
-              <td style="max-width: 300px;">Mahasiswa mampu menentukan sifat-sifat fisik zat cair dan larutan </td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>STK281 - <b>3</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Praktikum Kimia Dasar dan Kimia Organik</td>
-              <td style="max-width: 300px;">Mahasiswa mampu menentukan besaran fisik gas </td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>STK281 - <b>4</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Praktikum Kimia Dasar dan Kimia Organik</td>
-              <td style="max-width: 300px;">Mahasiswa mampu menentukan tetapan kesetimbangan termodinamika </td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>STK281 - <b>5</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Praktikum Kimia Dasar dan Kimia Organik</td>
-              <td style="max-width: 300px;">Mahasiswa mampu melakukan sintesa senyawa-senyawa organik </td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>STK281 - <b>6</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Praktikum Kimia Dasar dan Kimia Organik</td>
-              <td style="max-width: 300px;">Mahasiswa mampu melakukan sintesa senyawa organik industrial </td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>STK281 - <b>7</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Praktikum Kimia Dasar dan Kimia Organik</td>
-              <td style="max-width: 300px;">Mahasiswa mampu melakukan isolasi komponen-komponen bahan alam</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>STK281 - <b>8</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Praktikum Kimia Dasar dan Kimia Organik</td>
-              <td style="max-width: 300px;">Mahasiswa mampu menyusun laporan praktikum kelompok</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>STK382 - <b>1</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Praktikum Kimia Analitik dan Kimia Fisika</td>
-              <td style="max-width: 300px;">Mahasiswa mampu melakukan analisis kuantitatif dan melakukan perhitungan untuk menentukan kadar suatu zat</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>STK382 - <b>2</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Praktikum Kimia Analitik dan Kimia Fisika</td>
-              <td style="max-width: 300px;">Mahasiswa mampu melakukan pemisahan dan mengidentifikasi zat-zat dalam campuran</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>STK382 - <b>3</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Praktikum Kimia Analitik dan Kimia Fisika</td>
-              <td style="max-width: 300px;">Mahasiswa mampu menentukan sifat-sifat fisik zat cair dan larutan</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>STK382 - <b>4</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Praktikum Kimia Analitik dan Kimia Fisika</td>
-              <td style="max-width: 300px;">Mahasiswa mampu menyusun peralatan serta menentukan besaran fisik gas</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>STK382 - <b>5</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Praktikum Kimia Analitik dan Kimia Fisika</td>
-              <td style="max-width: 300px;">Mahasiswa mampu melakukan pengukuran besaran-besaran elektrokimia</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>STK483 - <b>1</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Praktikum Operasi Teknik Kimia 1</td>
-              <td style="max-width: 300px;">Mampu mengoperasikan peralatan aliran fluida dan melakukan pengukuran variabel-variabel untuk menetapkan parameter unjuk kerja dan menyusun laporannya</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>STK483 - <b>2</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Praktikum Operasi Teknik Kimia 1</td>
-              <td style="max-width: 300px;">Mampu mengoperasikan peralatan pengayakan dan melakukan pengukuran variabel-variabel untuk menetapkan parameter unjuk kerja dan menyusun laporannya</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>STK483 - <b>3</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Praktikum Operasi Teknik Kimia 1</td>
-              <td style="max-width: 300px;">Mampu mengoperasikan peralatan fluid mixing dan melakukan pengukuran variabel-variabel untuk menetapkan parameter unjuk kerja dan menyusun laporannya</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>STK483 - <b>4</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Praktikum Operasi Teknik Kimia 1</td>
-              <td style="max-width: 300px;">Mampu mengoperasikan peralatan filtrasi dan melakukan pengukuran variabel-variabel untuk menetapkan parameter unjuk kerja dan menyusun laporannya</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>STK483 - <b>5</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Praktikum Operasi Teknik Kimia 1</td>
-              <td style="max-width: 300px;">Mampu mengoperasikan peralatan sedimentasi dan melakukan pengukuran variabel-variabel untuk menetapkan parameter unjuk kerja dan menyusun laporannya</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>STK483 - <b>6</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Praktikum Operasi Teknik Kimia 1</td>
-              <td style="max-width: 300px;">Mampu mengoperasikan peralatan fluidisasi dan melakukan pengukuran variabel-variabel untuk menetapkan parameter unjuk kerja dan menyusun laporannya</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>STK483 - <b>7</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Praktikum Operasi Teknik Kimia 1</td>
-              <td style="max-width: 300px;">Mampu mengoperasikan peralatan kesetimbangan uap – cair dan melakukan pengukuran variabel-variabel untuk menetapkan parameter unjuk kerja dan menyusun laporannya</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>STK584 - <b>1</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Praktikum Operasi Teknik Kimia 2</td>
-              <td style="max-width: 300px;">Mampu mengoperasikan peralatan absorpsi dan melakukan pengukuran variabel-variabel untuk menetapkan parameter unjuk kerja dan menyusun laporannya</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>STK584 - <b>2</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Praktikum Operasi Teknik Kimia 2</td>
-              <td style="max-width: 300px;">Mampu mengoperasikan peralatan ekstraksi dan melakukan pengukuran variabel-variabel untuk menetapkan parameter unjuk kerja dan menyusun laporannya</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>STK584 - <b>3</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Praktikum Operasi Teknik Kimia 2</td>
-              <td style="max-width: 300px;">Mampu mengoperasikan peralatan distilasi dan melakukan pengukuran variabel-variabel untuk menetapkan parameter unjuk kerja dan menyusun laporannya</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>STK584 - <b>4</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Praktikum Operasi Teknik Kimia 2</td>
-              <td style="max-width: 300px;">Mampu mengoperasikan peralatan evaporasi dan melakukan pengukuran variabel-variabel untuk menetapkan parameter unjuk kerja dan menyusun laporannya</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>STK584 - <b>5</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Praktikum Operasi Teknik Kimia 2</td>
-              <td style="max-width: 300px;">Mampu mengoperasikan peralatan drying dan melakukan pengukuran variabel-variabel untuk menetapkan parameter unjuk kerja dan menyusun laporannya</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>STK584 - <b>6</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Praktikum Operasi Teknik Kimia 2</td>
-              <td style="max-width: 300px;">Mampu mengoperasikan peralatan heat-exchanger dan melakukan pengukuran variabel-variabel untuk menetapkan parameter unjuk kerja dan menyusun laporannya</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>STK584 - <b>7</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Praktikum Operasi Teknik Kimia 2</td>
-              <td style="max-width: 300px;">Mampu mengoperasikan peralatan pengendalian proses dan melakukan pengukuran variabel-variabel untuk menetapkan parameter unjuk kerja dan menyusun laporannya</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>STK584 - <b>8</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Praktikum Operasi Teknik Kimia 2</td>
-              <td style="max-width: 300px;">Mahasiswa mampu menyusun laporan praktikum kelompok</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>STK585 - <b>1</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Metodologi Penelitian</td>
-              <td style="max-width: 300px;">Mahasiswa mampu menyusun proposal penelitian </td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>STK585 - <b>2</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Metodologi Penelitian</td>
-              <td style="max-width: 300px;">Mahasiswa mampu mempresentasikan proposal penelitian </td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>STK686 - <b>1</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Penelitian</td>
-              <td style="max-width: 300px;">Mahasiswa mampu melaksanakan penelitian dalam lingkup bidang ilmu teknik kimia</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>STK686 - <b>2</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Penelitian</td>
-              <td style="max-width: 300px;">Mahasiswa mampu menyusun dan mempresentasikan hasil penelitian dalam bentuk laporan dan seminar penelitian </td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>STK752 - <b>1</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Kerja Praktik</td>
-              <td style="max-width: 300px;">Mahasiswa mampu menerapkan pengetahuan teknik kimia di industri kimia dan menyelesaikan tugas khusus lapangan</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>STK752 - <b>2</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Kerja Praktik</td>
-              <td style="max-width: 300px;">Mahasiswa mampu menyusun dan mempresentasikan laporan akhir Kerja Praktik</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>STK853 - <b>1</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Tugas Pra-Rancangan Pabrik Kimia</td>
-              <td style="max-width: 300px;">Mahasiswa mampu menerapkan pengetahuan teknik kimia untuk merancang pabrik kimia</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>STK853 - <b>2</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Tugas Pra-Rancangan Pabrik Kimia</td>
-              <td style="max-width: 300px;">Mahasiswa mampu menyusun dan mempresentasikan naskah tugas Pra-Rancangan Pabrik Kimia</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>UNI606 - <b>1</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Bahasa Inggris</td>
-              <td style="max-width: 300px;">Menjelaskan isi buku teks dalam bahasa Inggris sesuai bidang ilmu yang ditekuni</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <!-- BARIS 1 -->
-            <tr>
-              <td align="center">CPL 5</td>
-              <td colspan="4">Kemampuan merencanakan, menyelesaikan, dan mengevaluasi tugas di dalam batasan-batasan yang ada</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td align="center"><b>0</b></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td align="center">IK 5.1</td>
-              <td colspan="3">Mampu merencanakan dan menyelesaikan tugas-tugas kurikuler (penelitian, kerja praktik, dan tugas akhir)</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td align="center"><b>-</b></td>
-              <td align="center"><b>H</b></td>
-              <td align="center"><b>-</b></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>STK686 - <b>1</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Penelitian</td>
-              <td style="max-width: 300px;">Mahasiswa mampu melaksanakan penelitian dalam lingkup bidang ilmu teknik kimia</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>STK686 - <b>2</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Penelitian</td>
-              <td style="max-width: 300px;">Mahasiswa mampu menyusun dan mempresentasikan hasil penelitian dalam bentuk laporan dan seminar penelitian </td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>STK752 - <b>1</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Kerja Praktik</td>
-              <td style="max-width: 300px;">Mahasiswa mampu menerapkan pengetahuan teknik kimia di industri kimia dan menyelesaikan tugas khusus lapangan</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>STK752 - <b>2</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Kerja Praktik</td>
-              <td style="max-width: 300px;">Mahasiswa mampu menyusun dan mempresentasikan laporan akhir Kerja Praktik</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>STK853 - <b>1</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Tugas Pra-Rancangan Pabrik Kimia</td>
-              <td style="max-width: 300px;">Mahasiswa mampu menerapkan pengetahuan teknik kimia untuk merancang pabrik kimia</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>STK853 - <b>2</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Tugas Pra-Rancangan Pabrik Kimia</td>
-              <td style="max-width: 300px;">Mahasiswa mampu menyusun dan mempresentasikan naskah tugas Pra-Rancangan Pabrik Kimia</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td align="center">IK 5.2</td>
-              <td colspan="3">Mampu mengevaluasi proses dan hasil tugas-tugas kurikuler </td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td align="center"><b>-</b></td>
-              <td align="center"><b>H</b></td>
-              <td align="center"><b>-</b></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>STK686 - <b>1</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Penelitian</td>
-              <td style="max-width: 300px;">Mahasiswa mampu melaksanakan penelitian dalam lingkup bidang ilmu teknik kimia</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>STK686 - <b>2</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Penelitian</td>
-              <td style="max-width: 300px;">Mahasiswa mampu menyusun dan mempresentasikan hasil penelitian dalam bentuk laporan dan seminar penelitian </td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>STK752 - <b>1</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Kerja Praktik</td>
-              <td style="max-width: 300px;">Mahasiswa mampu menerapkan pengetahuan teknik kimia di industri kimia dan menyelesaikan tugas khusus lapangan</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>STK752 - <b>2</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Kerja Praktik</td>
-              <td style="max-width: 300px;">Mahasiswa mampu menyusun dan mempresentasikan laporan akhir Kerja Praktik</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>STK853 - <b>1</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Tugas Pra-Rancangan Pabrik Kimia</td>
-              <td style="max-width: 300px;">Mahasiswa mampu menerapkan pengetahuan teknik kimia untuk merancang pabrik kimia</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>STK853 - <b>2</b></td>
-              <td style="border-left: 3px solid #2d5f8b;">Tugas Pra-Rancangan Pabrik Kimia</td>
-              <td style="max-width: 300px;">Mahasiswa mampu menyusun dan mempresentasikan naskah tugas Pra-Rancangan Pabrik Kimia</td>
-              <td align="center">-</td>
-              <td align="center"><b>H</b></td>
-              <td align="center">-</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
+<?php endforeach; ?>
+<?php endforeach; ?>
+<?php endforeach; ?>
           </tbody>
         </table>
       </div>
     </div>
   </div>
 </div>
+
 
 
 <!-- ========== CARD 4:  Tabel CPL & Progress ========== --> 
@@ -3187,7 +873,11 @@
   </div>
   <!-- /.content-wrapper -->
 
-<?php include('4footer.php'); ?>
+<?php
+// (lanjutan VIEW SECTION) include layout shell footer, lalu
+// definisi Modal (Filter, Bantuan, Preview Risiko, Detil Mahasiswa)
+include('4footer.php');
+?>
 
 <!-- Modal Filter -->
 <div class="modal fade" id="modalFilter" tabindex="-1" aria-labelledby="modalFilterLabel" aria-hidden="true">
@@ -3305,6 +995,9 @@
     </div>
   </div>
 
+<!-- ============================================================
+     5. CLIENT SCRIPT SECTION
+     ============================================================ -->
 <script>
 function showTabel() {
   document.getElementById('cardGrafik').classList.add('d-none');
@@ -3317,4 +1010,11 @@ function showGrafik() {
 }
 </script>
 
-<?php include('5script.php'); ?>
+<?php
+// include('5script.php') memuat shared JS project (jQuery, Bootstrap,
+// DataTables, dsb.) — WAJIB tetap di posisi akhir file ini agar urutan
+// load script tidak berubah dan relasi dengan layout shell
+// (1header/2navbar/3sidebar/4footer) tetap konsisten dengan seluruh
+// screen lain di project ini.
+include('5script.php');
+?>

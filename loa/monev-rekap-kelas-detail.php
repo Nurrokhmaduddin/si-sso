@@ -205,35 +205,7 @@
   </div>
   <div class="card-body">
     <canvas id="chartCpmk" width="400" height="100"></canvas>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script>
-      const ctx = document.getElementById('chartCpmk').getContext('2d');
-      const chartCpmk = new Chart(ctx, {
-        type: 'bar',
-        data: {
-          labels: ['CPMK 1','CPMK 2','CPMK 3','CPMK 4'],
-          datasets: [{
-            label: 'Rerata Capaian (%)',
-            data: [72.14, 77.86, 76.14, 76.14], 
-            backgroundColor: 'rgba(54, 162, 235, 0.6)',
-            borderColor: 'rgba(54, 162, 235, 1)',
-            borderWidth: 1
-          }]
-        },
-        options: {
-          scales: {
-            y: { beginAtZero: true, max: 100 }
-          },
-          plugins: {
-            legend: { display: false },
-            title: {
-              display: false,
-              text: 'Rerata Nilai CPMK pada Kelas Perkuliahan'
-            }
-          }
-        }
-      });
-    </script>
+    
 
   </div>
 </div> -->
@@ -406,6 +378,34 @@ jika ada kesamaan NIM di satu mata kuliah(artinya mahasiswa tempuh >1 kali MK ts
 </div>
 
 
+    <script>
+      const ctx = document.getElementById('chartCpmk').getContext('2d');
+      const chartCpmk = new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: ['CPMK 1','CPMK 2','CPMK 3','CPMK 4'],
+          datasets: [{
+            label: 'Rerata Capaian (%)',
+            data: [72.14, 77.86, 76.14, 76.14], 
+            backgroundColor: 'rgba(54, 162, 235, 0.6)',
+            borderColor: 'rgba(54, 162, 235, 1)',
+            borderWidth: 1
+          }]
+        },
+        options: {
+          scales: {
+            y: { beginAtZero: true, max: 100 }
+          },
+          plugins: {
+            legend: { display: false },
+            title: {
+              display: false,
+              text: 'Rerata Nilai CPMK pada Kelas Perkuliahan'
+            }
+          }
+        }
+      });
+    </script>
 <script>
 // Generate label CPMK 1 - 256
 const labelsCPMK = Array.from({ length: 40 }, (_, i) => `NIM ${i + 1}`);

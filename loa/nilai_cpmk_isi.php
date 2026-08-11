@@ -3,7 +3,7 @@
 <?php include('2navbar.php'); ?>
 <?php include('3sidebar.php'); ?>
 
-  
+  <!-- //obsolete desain -->
 <div class="content-wrapper" style="min-height: 626.4px;">    
 
   <section class="content-header">

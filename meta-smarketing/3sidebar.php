@@ -67,7 +67,6 @@ $menu = [
       ['label' => 'Customer / Buyer', 'url' => 'master-customer.php', 'page' => 'master-customer'],
 ['label' => 'Marketing / Reseller', 'url' => 'master-Marketing.php', 'page' => 'master-Marketing'],
 
-      ['label' => 'COA (Chart of Account)', 'url' => 'master-coa.php', 'page' => 'master-coa'],
     ]
   ],
 

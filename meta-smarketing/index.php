@@ -196,7 +196,7 @@
                     <!-- REKAP -->
                     <tr>
                       <td>
-                        <strong>Rekap / Laporan</strong>
+                        <strong>Reporting (Rekap / Laporan)</strong>
                       </td>
 
                       <td>
@@ -233,7 +233,7 @@
                     <!-- ANALISA -->
                     <tr>
                       <td>
-                        <strong>Analisa</strong>
+                        <strong>Analytics (Analisa)</strong>
                       </td>
 
                       <td>
@@ -270,11 +270,11 @@
                     <!-- RIWAYAT -->
                     <tr>
                       <td>
-                        <strong>Riwayat / Audit Trail</strong>
+                        <strong>Riwayat / Audit Trail /Log </strong>
                       </td>
 
                       <td>
-                        Jejak detail aktivitas sistem
+                        Jejak detail perubahan perjalanan aktivitas bisnis/sistem
                       </td>
 
                       <td>
@@ -303,7 +303,116 @@
                         </ul>
                       </td>
                     </tr>
+                  <!-- RIWAYAT -->
+                  <tr>
+                    <td>
+                      <strong>History (Riwayat)</strong>
+                    </td>
 
+                    <td>
+                      Perjalanan atau evolusi data bisnis
+                    </td>
+
+                    <td>
+                      "Bagaimana perjalanan data bisnis ini?"
+                    </td>
+
+                    <td>
+                      <ul class="mb-0 pl-3">
+                        <li>Riwayat status transaksi</li>
+                        <li>Riwayat jabatan pegawai</li>
+                        <li>Riwayat gaji</li>
+                        <li>Riwayat harga</li>
+                        <li>Riwayat kepemilikan</li>
+                        <li>Riwayat pembacaan pengumuman</li>
+                      </ul>
+                    </td>
+
+                    <td>
+                      <ul class="mb-0 pl-3">
+                        <li>Berorientasi bisnis</li>
+                        <li>Menunjukkan perubahan keadaan</li>
+                        <li>Bersifat kronologis</li>
+                        <li>Digunakan untuk evaluasi bisnis</li>
+                        <li>Dipahami pengguna bisnis</li>
+                        <li>Bukan pencatatan teknis sistem</li>
+                      </ul>
+                    </td>
+                  </tr>
+
+                  <!-- AUDIT TRAIL -->
+                  <tr>
+                    <td>
+                      <strong>Audit Trail</strong>
+                    </td>
+
+                    <td>
+                      Jejak perubahan data
+                    </td>
+
+                    <td>
+                      "Siapa mengubah data ini?"
+                    </td>
+
+                    <td>
+                      <ul class="mb-0 pl-3">
+                        <li>Nilai sebelum & sesudah</li>
+                        <li>Field yang diubah</li>
+                        <li>Pengguna yang mengubah</li>
+                        <li>Waktu perubahan</li>
+                        <li>Alasan perubahan (opsional)</li>
+                        <li>Riwayat persetujuan</li>
+                      </ul>
+                    </td>
+
+                    <td>
+                      <ul class="mb-0 pl-3">
+                        <li>Governance & compliance</li>
+                        <li>Integritas data</li>
+                        <li>Investigasi perubahan</li>
+                        <li>Immutable / tidak mudah diubah</li>
+                        <li>Digunakan auditor</li>
+                        <li>Bukan informasi bisnis</li>
+                      </ul>
+                    </td>
+                  </tr>
+
+                  <!-- LOG -->
+                  <tr>
+                    <td>
+                      <strong>System Log</strong>
+                    </td>
+
+                    <td>
+                      Aktivitas teknis sistem
+                    </td>
+
+                    <td>
+                      "Apa yang terjadi di sistem?"
+                    </td>
+
+                    <td>
+                      <ul class="mb-0 pl-3">
+                        <li>Login & logout</li>
+                        <li>Aktivitas pengguna</li>
+                        <li>Error & exception</li>
+                        <li>Pemanggilan API</li>
+                        <li>Proses impor/ekspor</li>
+                        <li>Aktivitas background job</li>
+                      </ul>
+                    </td>
+
+                    <td>
+                      <ul class="mb-0 pl-3">
+                        <li>Berorientasi teknis</li>
+                        <li>Monitoring sistem</li>
+                        <li>Debugging & troubleshooting</li>
+                        <li>Realtime / append-only</li>
+                        <li>Digunakan developer & DevOps</li>
+                        <li>Bukan informasi bisnis</li>
+                      </ul>
+                    </td>
+                  </tr>
                   </tbody>
 
                 </table>

@@ -85,7 +85,40 @@ if (file_exists($sidebar_file)) {
 
 
         </div>
+<!-- Periode Akademik -->
+      <div class="row mb-3">
+        <div class="col-md-4">
+          <div class="card bg-primary text-white">
+            <div class="card-body">
+              <h5>Periode Akademik Aktif</h5>
+              <h3>2025/2026 - Gasal</h3>
+              <p class="mb-0"><i class="fas fa-calendar-alt"></i> Berlaku hingga: 30 Feb 2026</p>
+            </div>
+          </div>
+        </div>
 
+        <!-- Persentase Nilai CPMK Terinput -->
+        <div class="col-md-4">
+          <div class="card bg-success text-white">
+            <div class="card-body">
+              <h5>Progress Entri Nilai</h5>
+              <h3>82%</h3>
+              <p class="mb-0"><i class="fas fa-edit"></i> Dari total kelas Mata Kuliah semester ini.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Jumlah Pengumuman -->
+        <div class="col-md-4">
+          <div class="card bg-warning text-white">
+            <div class="card-body">
+              <h5>Progress Unggah Portofolio</h5>
+              <h3>20%</h3>
+              <p class="mb-0"><i class="fas fa-check"></i> Dari total kelas Mata Kuliah semester ini.</p>
+            </div>
+          </div>
+        </div>
+      </div>
         <!-- Chart & Announcement -->
         <div class="row mb-3">
 
@@ -319,7 +352,49 @@ if (file_exists($sidebar_file)) {
 
         </div>
 
-
+<!-- Quick Links / Tindakan Cepat -->
+      <!-- <div class="row">
+        <div class="col-md-3">
+          <a href="#" class="text-decoration-none">
+            <div class="card bg-info text-white text-center">
+              <div class="card-body">
+                <i class="fas fa-edit fa-2x mb-2"></i>
+                <h6>Input Capaian</h6>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-3">
+          <a href="#" class="text-decoration-none">
+            <div class="card bg-secondary text-white text-center">
+              <div class="card-body">
+                <i class="fas fa-file-alt fa-2x mb-2"></i>
+                <h6>Laporan LOA</h6>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-3">
+          <a href="#" class="text-decoration-none">
+            <div class="card bg-success text-white text-center">
+              <div class="card-body">
+                <i class="fas fa-user-check fa-2x mb-2"></i>
+                <h6>Validasi Data</h6>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-3">
+          <a href="#" class="text-decoration-none">
+            <div class="card bg-warning text-white text-center">
+              <div class="card-body">
+                <i class="fas fa-bell fa-2x mb-2"></i>
+                <h6>Pengumuman</h6>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div> -->
         <!-- Card Action Capability -->
         <div class="card">
 

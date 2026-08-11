@@ -110,7 +110,7 @@
              
 
 
-
+<div class="row g-3 mb-3"> <div class="col-md-3"> <div class="kpi bg-primary"> <div class="small">Rata-rata CPL</div> <div class="big" id="kpiAvg">75.2</div> <div class="small">dari 12 CPL</div> </div> </div> <div class="col-md-3"> <div class="kpi " style="background:#20c997;"> <div class="small">Persentase Jumlah Rerata CPMK Tercapai dari 258 CPMK </div> <div class="big" id="kpiGap">68%</div> <div class="small">target ketuntasan > 60%</div> </div> </div> <div class="col-md-3"> <div class="kpi" style="background:#ff7f0e;"> <div class="small"> Rerata Nilai Akhir MK Tercapai</div> <div class="big" id="kpiReached">54 / 78</div> <div class="small">yang melebihi target >= 60%</div> </div> </div> <div class="col-md-3"> <div class="kpi bg-danger"> <div class="small">Mahasiswa Risiko</div> <div class="big" id="kpiRisk">23 / 450</div> <div class="small">yang masih memiliki nilai CPL < 50%</div> </div> </div> </div>
 
 
 

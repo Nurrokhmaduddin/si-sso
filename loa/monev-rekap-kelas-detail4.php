@@ -190,49 +190,7 @@
   </div>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script>
-  const ctxCompare = document.getElementById('chartCpmkCompare').getContext('2d');
 
-  // ===== CUSTOM WARNA =====
-  const colorBarA = 'rgba(108, 117, 125, 0.8)';   // Abu-abu (bisa diganti)
-  const colorBarB = 'rgba(0, 123, 255, 0.8)';     // Biru (bisa diganti)
-
-  const chartCpmkCompare = new Chart(ctxCompare, {
-    type: 'bar',
-    data: {
-      labels: ['CPMK 1', 'CPMK 2', 'CPMK 3', 'CPMK 4'],
-      datasets: [
-        {
-          label: 'Bar A',
-          data: [56.14, 56.14, 56.14, 56.14],
-          backgroundColor: colorBarA,
-          borderColor: colorBarA,
-          borderWidth: 1
-        },
-        {
-          label: 'Bar B',
-          data: [80.25, 82.10, 78.50, 79.30],
-          backgroundColor: colorBarB,
-          borderColor: colorBarB,
-          borderWidth: 1
-        }
-      ]
-    },
-    options: {
-      scales: {
-        y: { beginAtZero: true, max: 100 }
-      },
-      plugins: {
-        legend: { display: false },
-        title: {
-          display: false,
-          text: 'Perbandingan Remidi CPMK (Before vs After)'
-        }
-      }
-    }
-  });
-</script>
 <!-- ========== CARD : Chart Row CPMK remidi ========== -->
 <div class="card collapse">
   <div class="card-header">
@@ -328,6 +286,48 @@ jika ada kesamaan NIM di satu mata kuliah(artinya mahasiswa tempuh >1 kali MK ts
   </div>
 </div>
 
+<script>
+  const ctxCompare = document.getElementById('chartCpmkCompare').getContext('2d');
+
+  // ===== CUSTOM WARNA =====
+  const colorBarA = 'rgba(108, 117, 125, 0.8)';   // Abu-abu (bisa diganti)
+  const colorBarB = 'rgba(0, 123, 255, 0.8)';     // Biru (bisa diganti)
+
+  const chartCpmkCompare = new Chart(ctxCompare, {
+    type: 'bar',
+    data: {
+      labels: ['CPMK 1', 'CPMK 2', 'CPMK 3', 'CPMK 4'],
+      datasets: [
+        {
+          label: 'Bar A',
+          data: [56.14, 56.14, 56.14, 56.14],
+          backgroundColor: colorBarA,
+          borderColor: colorBarA,
+          borderWidth: 1
+        },
+        {
+          label: 'Bar B',
+          data: [80.25, 82.10, 78.50, 79.30],
+          backgroundColor: colorBarB,
+          borderColor: colorBarB,
+          borderWidth: 1
+        }
+      ]
+    },
+    options: {
+      scales: {
+        y: { beginAtZero: true, max: 100 }
+      },
+      plugins: {
+        legend: { display: false },
+        title: {
+          display: false,
+          text: 'Perbandingan Remidi CPMK (Before vs After)'
+        }
+      }
+    }
+  });
+</script>
 <!-- ========== CARD : Chart Row CPMK remidi ========== -->
 <script>
 
