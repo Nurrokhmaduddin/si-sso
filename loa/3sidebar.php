@@ -646,7 +646,7 @@
           <a href="#" class="nav-link <?php echo in_array($page, ['pengaturan_user','pengaturan_role','pengaturan_app','pengaturan_feedback','pengaturan_log']) ? 'active' : ''; ?>">
             <i class="nav-icon fas fa-cog"></i>
             <p>
-              Pengaturan
+              System Administration
               <i class="right fas fa-angle-left"></i>
             </p>
           </a>

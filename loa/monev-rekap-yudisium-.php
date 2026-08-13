@@ -891,16 +891,16 @@ new Chart(ctx, {
       'CPL 6','CPL 7','CPL 8','CPL 9','CPL 10'
     ],
     datasets: [
-      {
-        label: 'Batas Standar',
-        type: 'line',
-        yMin: 65, 
-        yMax: 65,
-        backgroundColor: 'rgba(255,255,255,0.7)',
-        borderColor: 'red',
-        borderWidth: 2,
-        borderDash: [6, 6],
-      },
+      // {
+      //   label: 'Batas Standar',
+      //   type: 'line',
+      //   yMin: 65, 
+      //   yMax: 65,
+      //   backgroundColor: 'rgba(255,255,255,0.7)',
+      //   borderColor: 'red',
+      //   borderWidth: 2,
+      //   borderDash: [6, 6],
+      // },
       // {
       //   label: 'Rerata Skor',
       //   data: [82, 80, 79, 83, 78, 81, 77, 72, 70, 74],
@@ -932,7 +932,7 @@ new Chart(ctx, {
             borderDash: [6, 6],
             label: {
               display: true,
-              content: 'Target % Mahasiswa = 60',
+              content: 'Target Prodi >= 65%',
               position: 'start',
               color: 'red',
               backgroundColor: 'rgba(255,255,255,0.7)',

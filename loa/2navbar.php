@@ -9,7 +9,7 @@
       <a href="homepage.php" target="_blank" class="nav-link">Home</a>
     </li>
     <li class="nav-item d-none d-sm-inline-block">
-      <a href="demo.php" target="_blank" class="nav-link">Demo</a>
+      <a href="demo.html" target="_blank" class="nav-link">Demo</a>
     </li>
     <li class="nav-item d-none d-sm-inline-block">
       <a href="data-mjerusalem,+9.+Berlian+-+UII+rev.pdf" target="_blank" class="nav-link">Jurnal Ilmiah</a>

@@ -64,7 +64,7 @@
                 </button>
                 <button type="button" 
                 class="btn btn-outline-info btn-sm"
-                onclick="window.location.href='konfigurasi-kuesioner-rekap.php'">
+                onclick="window.location.href='konfigurasi-kuesioner-rekap.html'">
                 <span class="fas fa-chart-area me-1"></span> Rekap Preview
               </button>
               </div>
