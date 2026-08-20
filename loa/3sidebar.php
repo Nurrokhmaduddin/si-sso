@@ -115,13 +115,12 @@
           </a>
 
           <ul class="nav nav-treeview">
-
             
- <li class="nav-item">
-              <a href="master-actor.php" class="nav-link <?php echo $page == 'master_actor' ? 'active' : ''; ?>">
-                <i class="far fa-circle nav-icon"></i>
-                <p>MASTER ACTOR TABLE</p>
-              </a>
+           <li class="nav-item">
+            <a href="master-actor.php" class="nav-link <?php echo $page == 'master_actor' ? 'active' : ''; ?>">
+              <i class="far fa-circle nav-icon"></i>
+              <p>MASTER ACTOR TABLE</p>
+            </a>
             </li>
            <!--  <li class="nav-item">
               <a href="master-prodi.php" class="nav-link <?php echo $page == 'master_prodi' ? 'active' : ''; ?>">
@@ -129,7 +128,7 @@
                 <p>Program Studi</p>
               </a>
             </li> -->
- <li class="nav-item">
+            <li class="nav-item">
               <a href="master-tahun.php" class="nav-link <?php echo $page == 'master_tahun' ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Tahun</p>
@@ -205,21 +204,12 @@
               </a>
             </li>
 
-
             <li class="nav-item">
               <a href="pemetaan-matakuliah.php" class="nav-link <?php echo $page == 'pemetaan_matakuliah' ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Mata Kuliah</p>
               </a>
             </li>
-            <!-- <li class="nav-item">
-              <a href="pemetaan-matakuliah2.php" class="nav-link <?php echo $page == 'pemetaan_kurikulum_mk' ? 'active' : ''; ?>">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Mata Kuliah</p>
-              </a>
-            </li> -->
-
-            
 
             <li class="nav-item">
               <a href="pemetaan-cpl.php" class="nav-link <?php echo $page == 'pemetaan_cpl' ? 'active' : ''; ?>">
@@ -234,7 +224,6 @@
                 <p>Daftar IK</p>
               </a>
             </li>
-
             <!-- <li class="nav-item">
               <a href="pemetaan-cpmk.php" class="nav-link <?php echo $page == 'pemetaan_cpmk' ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
@@ -247,7 +236,7 @@
                 <p>Daftar CPMK</p>
               </a>
             </li>
-<li class="nav-item">
+            <li class="nav-item">
               <a href="pemetaan-setpemetaan.php" class="nav-link <?php echo $page == 'pemetaan_set' ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Set Pemetaan</p>
@@ -281,7 +270,7 @@
                 <p>Pengumuman</p>
               </a>
             </li>
-<li class="nav-item">
+            <li class="nav-item">
               <a href="master-periode.php" class="nav-link <?php echo $page == 'master_periode' ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Periode Akademik</p>
@@ -328,7 +317,7 @@
               </a>
             </li> -->
 
-<li class="nav-item">
+            <li class="nav-item">
               <a href="monitor-verifikasi-soal.php" class="nav-link <?php echo $page == 'monitor_verifikasi_soal' ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Verifikasi Soal Ujian</p>
@@ -369,44 +358,13 @@
 
           <ul class="nav nav-treeview">
 
-            <!-- <li class="nav-item">
-              <a href="monev-status-mahasiswa.php" class="nav-link <?php echo $page == 'status_mahasiswa' ? 'active' : ''; ?>">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Status Mahasiswa</p>
-              </a>
-            </li> -->
-
-            <!-- <li class="nav-item">
-              <a href="monev-status-pemetaan.php" class="nav-link <?php echo $page == 'status_pemetaan' ? 'active' : ''; ?>">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Mapping Kurikulum</p>
-              </a>
-            </li> -->
-
             <li class="nav-item">
               <a href="monev-rekap-kelas-.php" class="nav-link <?php echo $page == 'monev_kelas' ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Semester Kelas</p>
               </a>
             </li>
-            <!-- <li class="nav-item">
-              <a href="monev-rekap-kelas.php" class="nav-link <?php echo $page == 'monev_kelas' ? 'active' : ''; ?>">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Monev Kelas Setahun</p>
-              </a>
-            </li> -->
-            <!-- <li class="nav-item">
-              <a href="monev-rekap-semester-.php" class="nav-link <?php echo $page == 'monev_semester' ? 'active' : ''; ?>">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Monev Semester CPMK</p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="monev-rekap-semester2-.php" class="nav-link <?php echo $page == 'monev_semester' ? 'active' : ''; ?>">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Monev Semester IK</p>
-              </a>
-            </li> -->
+            
             <li class="nav-item">
               <a href="monev-rekap-matakuliah.php" class="nav-link <?php echo $page == 'monev_matakuliah' ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
@@ -419,32 +377,19 @@
                 <p>Semester Prodi</p>
               </a>
             </li>
-            <!-- <li class="nav-item">
-              <a href="monev-rekap-cpmk.php" class="nav-link <?php echo $page == 'monev_cpmk' ? 'active' : ''; ?>">
+            
+ <!-- <li class="nav-item">
+              <a href="monev-status-mahasiswa.php" class="nav-link <?php echo $page == 'status_mahasiswa' ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
-                <p>Monev MK Setahun</p>
+                <p>Status Mahasiswa</p>
               </a>
-            </li> -->
-            <!-- <li class="nav-item">
-              <a href="monev-rekap-cpl.php" class="nav-link <?php echo $page == 'monev_cpl' ? 'active' : ''; ?>">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Rekapitulasi CPL</p>
-              </a>
-            </li> -->
-            <!-- <li class="nav-item">
-              <a href="monev-rekap-cpl.php" class="nav-link <?php echo $page == 'monev_cpmk' ? 'active' : ''; ?>">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Monev Semester</p>
-              </a>
-            </li> -->
-            <!-- <li class="nav-item">
+            </li> 
+            <li class="nav-item">
               <a href="monev-rekap-tahunan-.php" class="nav-link <?php echo $page == 'monev_tahunan' ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Monev Tahunan</p>
               </a>
-            </li> -->
-
-<!-- 
+            </li> 
             <li class="nav-item">
               <a href="rekap-cpmk.php" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
@@ -452,15 +397,6 @@
               </a>
             </li> -->
 
-
-           
-
-            <!-- <li class="nav-item">
-              <a href="monev-cpl-individual.php" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Monev CPL Mahasiswa</p>
-              </a>
-            </li> -->
             <li class="nav-item">
               <a href="monev-rekap-individual-.php" class="nav-link <?php echo $page == 'monev_individu' ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
@@ -468,12 +404,6 @@
               </a>
             </li>
 
-           <!--  <li class="nav-item">
-              <a href="monev-cpl-angkatan.php" class="nav-link <?php echo $page == 'monev_angkatan' ? 'active' : ''; ?>">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Monev CPL Angkatan</p>
-              </a>
-            </li> -->
             <li class="nav-item">
               <a href="monev-rekap-angkatan-.php" class="nav-link <?php echo $page == 'monev_angkatan' ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
@@ -487,7 +417,6 @@
                 <p>CPL Yudisium</p>
               </a>
             </li>
-
             
 
           </ul>
@@ -506,6 +435,18 @@
           </a>
 
           <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <a href="evaluasi-prodi.php" class="nav-link <?php echo $page == 'evaluasi_prodi' ? 'active' : ''; ?>">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Evaluasi & Action Plan</p>
+              </a>
+            </li>
+             <li class="nav-item">
+              <a href="evaluasi-rapat.php" class="nav-link <?php echo $page == 'evaluasi_rapat' ? 'active' : ''; ?>">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Keputusan & Kebijakan</p>
+              </a>
+            </li>
             <!-- <li class="nav-item">
               <a href="evaluasi-pembelajaran.php" class="nav-link <?php echo $page == 'evaluasi_pembelajaran' ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
@@ -529,48 +470,34 @@
                 <i class="far fa-circle nav-icon"></i>
                 <p>Evaluasi Kurikulum</p>
               </a>
-            </li> -->
-            <li class="nav-item">
-              <a href="evaluasi-prodi.php" class="nav-link <?php echo $page == 'evaluasi_prodi' ? 'active' : ''; ?>">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Evaluasi & Action Plan</p>
-              </a>
-            </li>
-             <li class="nav-item">
-              <a href="evaluasi-rapat.php" class="nav-link <?php echo $page == 'evaluasi_rapat' ? 'active' : ''; ?>">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Keputusan & Kebijakan</p>
-              </a>
             </li>
 
-            <!-- <li class="nav-item">
+            <li class="nav-item">
               <a href="progres-pemetaan.php" class="nav-link <?php echo $page == 'progress_pemetaan' ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Progres Pemetaan</p>
               </a>
-            </li> -->
-            <!-- <li class="nav-item">
+            </li>
+            <li class="nav-item">
               <a href="progres-kelas-semester.php" class="nav-link <?php echo $page == 'progress_kelas' ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Progres kelas</p>
               </a>
-            </li> -->
-            <!-- <li class="nav-item">
+            </li>
+            <li class="nav-item">
               <a href="progres-mk-semester.php" class="nav-link <?php echo $page == 'progress_mk' ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Progres MK</p>
               </a>
-            </li> -->
-            <!-- <li class="nav-item">
+            </li>
+            <li class="nav-item">
               <a href="progres-cpl-semester.php" class="nav-link <?php echo $page == 'progress_cpl' ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Progres CPL </p>
               </a>
-            </li> -->
-            
-           
+            </li>
 
-            <!-- <li class="nav-item">
+            <li class="nav-item">
               <a href="rekap-status-mahasiswa.php" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Eval CPL oleh Prodi</p>
@@ -589,8 +516,8 @@
                 <i class="far fa-circle nav-icon"></i>
                 <p>Eval Dosen oleh Mhs</p>
               </a>
-            </li> -->
-            <!-- <li class="nav-item">
+            </li>
+            <li class="nav-item">
               <a href="progres-perwalian.php" class="nav-link <?php echo $page == 'progress_perwalian' ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Perwalian</p>
@@ -598,18 +525,8 @@
             </li> -->
             
 
-          
-
-
           </ul>
         </li>
-
-       <!--  <li class="nav-item">
-          <a href="../menu.php" class="nav-link">
-            <i class="nav-icon fas fa-history"></i>
-            <p>Audit Aktivitas</p>
-          </a>
-        </li> -->
 
 <!-- KONFIGURASI SETUP (murni editorial konten bisnis event: LOA, kuesioner, notifikasi) -->
 <li class="nav-item <?php echo in_array($page, ['konfigurasi_loa','konfigurasi_notifikasi','konfigurasi_kuesioner']) ? 'menu-open' : ''; ?>">
@@ -811,8 +728,6 @@
       </ul>
     </li>
  
-
- 
     <!-- ARSIP - tidak dipakai: model multi-role per akun (bertentangan dengan prinsip 1 akun = 1 data role)
     <li class="nav-item">
       <a href="pengaturan-user-role-map.php" class="nav-link">
@@ -854,26 +769,20 @@
       </div>
 
       <div class="modal-body text-center">
-
         <button class="btn btn-outline-primary w-100 mb-2 role-select" data-role="Admin">
           Admin
         </button>
-
         <button class="btn btn-outline-primary w-100 mb-2 role-select" data-role="Manajer">
           Manajer
         </button>
-
         <button class="btn btn-outline-primary w-100 mb-2 role-select" data-role="Dosen">
           Dosen
         </button>
-
         <button class="btn btn-outline-primary w-100 role-select" data-role="Mahasiswa">
           Mahasiswa
         </button>
-
       </div>
 
     </div>
   </div>
 </div>
-

@@ -26,22 +26,22 @@
           <!-- ========== CARD : Filter & Export ========== -->
           <div class="card">
             <div class="card-body ">
-                  <!-- Identitas Mata Kuliah -->
-    <h6><b>Identitas Angkatan [Semua CPL]</b></h6>
-    <table class="table table-sm table-hover table-bordered table-striped deta">
-      <tr>
-        <th>Kurikulum</th>
-        <td>Merdeka Belajar</td>
-      </tr>
-      <tr>
-        <th>Angkatan</th>
-        <td>2024</td>
-      </tr>
-      <tr>
-        <th>Periode Semester</th>
-        <td>sem3 [2025/2026 - Ganjil]</td>
-      </tr>
-    </table>
+              <!-- Identitas Mata Kuliah -->
+              <h6><b>Identitas Angkatan [Semua CPL]</b></h6>
+              <table class="table table-sm table-hover table-bordered table-striped deta">
+                <tr>
+                  <th>Kurikulum</th>
+                  <td>Merdeka Belajar</td>
+                </tr>
+                <tr>
+                  <th>Angkatan</th>
+                  <td>2024</td>
+                </tr>
+                <tr>
+                  <th>Periode Semester</th>
+                  <td>sem3 [2025/2026 - Ganjil]</td>
+                </tr>
+              </table>
             </div>
             <div class="card-footer">
               <div class="card-tools ml-auto">

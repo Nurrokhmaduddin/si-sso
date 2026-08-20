@@ -31,12 +31,9 @@
                 <div class="col-md-6">
                   <b>Kurikulum:</b> Merdeka Belajar &nbsp;
                 </div>                
-               
                 <div class="col-md-6">
-                                    <b>Jalur Kelas:</b> Reguler
-
+                  <b>Jalur Kelas:</b> Reguler
                 </div>
-               
 
               </div>
             </div>
@@ -69,21 +66,6 @@
 
         <!-- ========== CARD : Tabel  ========== -->
           <div class="card">
-            <!-- <div class="card-header d-flex align-items-center">
-              <h5 class="card-title mb-0">Judul tabel ini</h5>    
-              <div class="ml-auto">                
-                <button type="button" class="btn btn-outline-primary btn-sm " data-toggle="modal" data-target="#modalTambahData">
-                  <i class="fas fa-plus mr-1"></i> Add
-                </button>
-                <button type="button" class="btn btn-outline-primary btn-sm ">
-                  <i class="fas fa-file-upload mr-1"></i> Import
-                </button>
-                <button type="button" class="btn btn-outline-success btn-sm">
-                  <i class="fas fa-file-download mr-1"></i> Export
-                </button>
-              </div>
-            </div> -->
-
             <div class="card-body">
             	<div class="table-responsive">
             		<table class="table table1 table-bordered table-striped table-sm datatables1">
@@ -299,7 +281,6 @@
               <option value="NonAktif">NonAktif</option>
             </select>
           </div>
-       
        </div>
 
         <div class="modal-footer">
@@ -387,26 +368,6 @@
               </select>
             </div>
           </div>
-
-          <!-- Semester Tempuh -->
-         <!--  <div class="form-group row mb-2">
-            <label for="semester" class="col-sm-3 col-form-label">
-              Semester Tempuh <span class="text-danger">*</span>
-            </label>
-            <div class="col-sm-9">
-              <input type="number" class="form-control" id="semester" name="semester" placeholder="Contoh: 4" required>
-            </div>
-          </div> -->
-
-          <!-- Jumlah CPMK -->
-         <!--  <div class="form-group row mb-2">
-            <label for="jumlah_cpmk" class="col-sm-3 col-form-label">
-              Jumlah CPMK <span class="text-danger">*</span>
-            </label>
-            <div class="col-sm-9">
-              <input type="number" class="form-control" id="jumlah_cpmk" name="jumlah_cpmk" placeholder="Contoh: 5" required>
-            </div>
-          </div> -->
 
           <!-- Jumlah SKS -->
           <div class="form-group row mb-2">
@@ -545,26 +506,6 @@
               </select>
             </div>
           </div>
-
-          <!-- Semester Tempuh -->
-         <!--  <div class="form-group row mb-2">
-            <label for="semester" class="col-sm-3 col-form-label">
-              Semester Tempuh <span class="text-danger">*</span>
-            </label>
-            <div class="col-sm-9">
-              <input type="number" class="form-control" id="semester" name="semester" placeholder="Contoh: 4" required>
-            </div>
-          </div> -->
-
-          <!-- Jumlah CPMK -->
-         <!--  <div class="form-group row mb-2">
-            <label for="jumlah_cpmk" class="col-sm-3 col-form-label">
-              Jumlah CPMK <span class="text-danger">*</span>
-            </label>
-            <div class="col-sm-9">
-              <input type="number" class="form-control" id="jumlah_cpmk" name="jumlah_cpmk" placeholder="Contoh: 5" required>
-            </div>
-          </div> -->
 
           <!-- Jumlah SKS -->
           <div class="form-group row mb-2">

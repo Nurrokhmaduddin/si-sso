@@ -188,7 +188,7 @@ foreach ($rows as $index => $row) {
   </div>
 </div>
           <!-- ========== CARD 4: Chart CPMK Min/Max/Rerata/%Tuntas ========== -->
-          <!-- <div class="card">
+          <div class="card">
             <div class="card-header">
               <h5 class="card-title mb-0"><i class="fas fa-chart-bar mr-2"></i> Rerata Ketercapaian - CPMK</h5>
               <div class="card-tools">
@@ -215,7 +215,7 @@ foreach ($rows as $index => $row) {
                 </div>
               </div>
             </div>            
-          </div> -->
+          </div>
 
 
 
@@ -1832,9 +1832,3 @@ new Chart(ctxm, {
 });
 </script>
 <?php include('5script.php'); ?>
-
-
-
-
-
-

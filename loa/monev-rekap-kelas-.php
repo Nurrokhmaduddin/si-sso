@@ -164,7 +164,7 @@
 
           </div>
         
-
+ 
         <!-- Rangking Performa -->
         <div class="row collapse" id="daftarIKCPL41" >
           <!-- Card Lowest -->
@@ -184,58 +184,25 @@
                         <th>Deskripsi</th>
                       </tr>
                     </thead>
-                    <tbody>                
-                      <tr>
-                        <td>
-                          <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                            <div style="background:#f54242; width:10%; height:12px; border-radius:4px;"></div>
-                          </div>
-                        </td>
-                        <td class="text-center"><span class="clickable" data-MK="MK-01" data-type="min" data-value="57">20</span></td>
-                        <td>STK314</td>
-                        <td>Fisika Dasar 2</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                            <div style="background:#f54242; width:25%; height:12px; border-radius:4px;"></div>
-                          </div>
-                        </td>
-                        <td class="text-center"><span class="clickable" data-MK="MK-01" data-type="min" data-value="57">30</span></td>
-                        <td>STK114</td>
-                        <td>Azas Teknik Kimia 1</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                            <div style="background:#f54242; width:35%; height:12px; border-radius:4px;"></div>
-                          </div>
-                        </td>
-                        <td class="text-center"><span class="clickable" data-MK="MK-01" data-type="min" data-value="57">50</span></td>
-                        <td>STK115</td>
-                        <td>Aljabar Linear</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                            <div style="background:#f54242; width:50%; height:12px; border-radius:4px;"></div>
-                          </div>
-                        </td>
-                        <td class="text-center"><span class="clickable" data-MK="MK-01" data-type="min" data-value="57">51</span></td>
-                        <td>STK116</td>
-                        <td>Bahasa Inggris</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                            <div style="background:#f54242; width:70%; height:12px; border-radius:4px;"></div>
-                          </div>
-                        </td>
-                        <td class="text-center"><span class="clickable" data-MK="MK-01" data-type="min" data-value="57">57</span></td>
-                        <td>STK144</td>
-                        <td>Perancangan Alat Proses</td>
-                      </tr>
-                    </tbody>
+                    <tbody> 
+<?php
+$rows = [
+  ["ranking" => "<div style=\"background:#eee; width:100%; height:12px; border-radius:4px;\"> <div style=\"background:#f54242; width:10%; height:12px; border-radius:4px;\"></div> </div>", "rerata_nilai_akhir" => "<span class=\"clickable\" data-MK=\"MK-01\" data-type=\"min\" data-value=\"57\">20</span>", "mk" => "STK314", "deskripsi" => "Fisika Dasar 2"],
+  ["ranking" => "<div style=\"background:#eee; width:100%; height:12px; border-radius:4px;\"> <div style=\"background:#f54242; width:25%; height:12px; border-radius:4px;\"></div> </div>", "rerata_nilai_akhir" => "<span class=\"clickable\" data-MK=\"MK-01\" data-type=\"min\" data-value=\"57\">30</span>", "mk" => "STK114", "deskripsi" => "Azas Teknik Kimia 1"],
+  ["ranking" => "<div style=\"background:#eee; width:100%; height:12px; border-radius:4px;\"> <div style=\"background:#f54242; width:35%; height:12px; border-radius:4px;\"></div> </div>", "rerata_nilai_akhir" => "<span class=\"clickable\" data-MK=\"MK-01\" data-type=\"min\" data-value=\"57\">50</span>", "mk" => "STK115", "deskripsi" => "Aljabar Linear"],
+  ["ranking" => "<div style=\"background:#eee; width:100%; height:12px; border-radius:4px;\"> <div style=\"background:#f54242; width:50%; height:12px; border-radius:4px;\"></div> </div>", "rerata_nilai_akhir" => "<span class=\"clickable\" data-MK=\"MK-01\" data-type=\"min\" data-value=\"57\">51</span>", "mk" => "STK116", "deskripsi" => "Bahasa Inggris"],
+  ["ranking" => "<div style=\"background:#eee; width:100%; height:12px; border-radius:4px;\"> <div style=\"background:#f54242; width:70%; height:12px; border-radius:4px;\"></div> </div>", "rerata_nilai_akhir" => "<span class=\"clickable\" data-MK=\"MK-01\" data-type=\"min\" data-value=\"57\">57</span>", "mk" => "STK144", "deskripsi" => "Perancangan Alat Proses"],
+];
+foreach ($rows as $index => $row) {
+?>
+          <tr>
+            <td><?= $row['ranking'] ?></td>
+            <td class="text-center"><?= $row['rerata_nilai_akhir'] ?></td>
+            <td><?= $row['mk'] ?></td>
+            <td><?= $row['deskripsi'] ?></td>
+          </tr>
+<?php } ?>
+</tbody>
                   </table>
                 </div>               
               </div>
@@ -258,58 +225,25 @@
                         <th>Deskripsi</th>
                       </tr>
                     </thead>
-                    <tbody>                
-                      <tr>                      
-                        <td>
-                          <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                            <div style="background:#4287f5; width:95%; height:12px; border-radius:4px;"></div>
-                          </div>
-                        </td>
-                        <td class="text-center"><span class="clickable" data-MK="MK-01" data-type="max" data-value="95">95</span></td>
-                        <td>STS911</td>
-                        <td>Bahasa Inggris</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                            <div style="background:#4287f5; width:85%; height:12px; border-radius:4px;"></div>
-                          </div>
-                        </td>
-                        <td class="text-center"><span class="clickable" data-MK="MK-01" data-type="max" data-value="95">90</span></td>
-                        <td>STS916</td>
-                        <td>Ekonomi Teknik</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                            <div style="background:#4287f5; width:78%; height:12px; border-radius:4px;"></div>
-                          </div>
-                        </td>
-                        <td class="text-center"><span class="clickable" data-MK="MK-01" data-type="max" data-value="95">85</span></td>
-                        <td>UNI913</td>
-                        <td>Kuliah Kerja Nyata</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                            <div style="background:#4287f5; width:65%; height:12px; border-radius:4px;"></div>
-                          </div>
-                        </td>
-                        <td class="text-center"><span class="clickable" data-MK="MK-01" data-type="max" data-value="95">70</span></td>
-                        <td>STS991</td>
-                        <td>Fisika Dasar</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                            <div style="background:#4287f5; width:50%; height:12px; border-radius:4px;"></div>
-                          </div>
-                        </td>
-                        <td class="text-center"><span class="clickable" data-MK="MK-01" data-type="max" data-value="95">70</span></td>
-                        <td>STS914</td>
-                        <td>Islam Ulil Albab</td>
-                      </tr>
-                    </tbody>
+                    <tbody>
+<?php
+$rows = [
+  ["ranking" => "<div style=\"background:#eee; width:100%; height:12px; border-radius:4px;\"> <div style=\"background:#4287f5; width:95%; height:12px; border-radius:4px;\"></div> </div>", "rerata_nilai_akhir" => "<span class=\"clickable\" data-MK=\"MK-01\" data-type=\"max\" data-value=\"95\">95</span>", "mk" => "STS911", "deskripsi" => "Bahasa Inggris"],
+  ["ranking" => "<div style=\"background:#eee; width:100%; height:12px; border-radius:4px;\"> <div style=\"background:#4287f5; width:85%; height:12px; border-radius:4px;\"></div> </div>", "rerata_nilai_akhir" => "<span class=\"clickable\" data-MK=\"MK-01\" data-type=\"max\" data-value=\"95\">90</span>", "mk" => "STS916", "deskripsi" => "Ekonomi Teknik"],
+  ["ranking" => "<div style=\"background:#eee; width:100%; height:12px; border-radius:4px;\"> <div style=\"background:#4287f5; width:78%; height:12px; border-radius:4px;\"></div> </div>", "rerata_nilai_akhir" => "<span class=\"clickable\" data-MK=\"MK-01\" data-type=\"max\" data-value=\"95\">85</span>", "mk" => "UNI913", "deskripsi" => "Kuliah Kerja Nyata"],
+  ["ranking" => "<div style=\"background:#eee; width:100%; height:12px; border-radius:4px;\"> <div style=\"background:#4287f5; width:65%; height:12px; border-radius:4px;\"></div> </div>", "rerata_nilai_akhir" => "<span class=\"clickable\" data-MK=\"MK-01\" data-type=\"max\" data-value=\"95\">70</span>", "mk" => "STS991", "deskripsi" => "Fisika Dasar"],
+  ["ranking" => "<div style=\"background:#eee; width:100%; height:12px; border-radius:4px;\"> <div style=\"background:#4287f5; width:50%; height:12px; border-radius:4px;\"></div> </div>", "rerata_nilai_akhir" => "<span class=\"clickable\" data-MK=\"MK-01\" data-type=\"max\" data-value=\"95\">70</span>", "mk" => "STS914", "deskripsi" => "Islam Ulil Albab"],
+];
+foreach ($rows as $index => $row) {
+?>
+          <tr>
+            <td><?= $row['ranking'] ?></td>
+            <td class="text-center"><?= $row['rerata_nilai_akhir'] ?></td>
+            <td><?= $row['mk'] ?></td>
+            <td><?= $row['deskripsi'] ?></td>
+          </tr>
+<?php } ?>
+</tbody>
                   </table>
                 </div>
 
@@ -338,118 +272,31 @@
                         <th>NAMA</th>
                       </tr>
                     </thead>
-                    <tbody>                
-                      <tr>
-                        <td>
-                          <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                            <div style="background:#f54242; width:10%; height:12px; border-radius:4px;"></div>
-                          </div>
-                        </td>
-                        <td class="text-center"><span class="clickable" data-MK="MK-01" data-type="min" data-value="57">20</span></td>
-                        <td>STK114</td>
-                        <td>20241099</td>
-                        <td>Andi Saputra</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                            <div style="background:#f54242; width:22%; height:12px; border-radius:4px;"></div>
-                          </div>
-                        </td>
-                        <td class="text-center"><span class="clickable" data-MK="MK-01" data-type="min" data-value="57">30</span></td>
-                        <td>STK115</td>
-                        <td>20241002</td>
-                        <td>Siti Rahma</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                            <div style="background:#f54242; width:25%; height:12px; border-radius:4px;"></div>
-                          </div>
-                        </td>
-                        <td class="text-center"><span class="clickable" data-MK="MK-01" data-type="min" data-value="57">44</span></td>
-                        <td>STK119</td>
-                        <td>20241055</td>
-                        <td>Budi Santoso</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                            <div style="background:#f54242; width:35%; height:12px; border-radius:4px;"></div>
-                          </div>
-                        </td>
-                        <td class="text-center"><span class="clickable" data-MK="MK-01" data-type="min" data-value="57">45</span></td>
-                        <td>STK116</td>
-                        <td>20241077</td>
-                        <td>Nina Lestari</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                            <div style="background:#f54242; width:37%; height:12px; border-radius:4px;"></div>
-                          </div>
-                        </td>
-                        <td class="text-center"><span class="clickable" data-MK="MK-01" data-type="min" data-value="57">49</span></td>
-                        <td>STK144</td>
-                        <td>20241011</td>
-                        <td>Rian Kurnia</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                            <div style="background:#f54242; width:40%; height:12px; border-radius:4px;"></div>
-                          </div>
-                        </td>
-                        <td class="text-center"><span class="clickable" data-MK="MK-01" data-type="min" data-value="57">50</span></td>
-                        <td>STK521</td>
-                        <td>20241099</td>
-                        <td>Andi Saputra</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                            <div style="background:#f54242; width:45%; height:12px; border-radius:4px;"></div>
-                          </div>
-                        </td>
-                        <td class="text-center"><span class="clickable" data-MK="MK-01" data-type="min" data-value="57">50</span></td>
-                        <td>STK911</td>
-                        <td>20241002</td>
-                        <td>Siti Rahma</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                            <div style="background:#f54242; width:45%; height:12px; border-radius:4px;"></div>
-                          </div>
-                        </td>
-                        <td class="text-center"><span class="clickable" data-MK="MK-01" data-type="min" data-value="57">56</span></td>
-                        <td>STK914</td>
-                        <td>20241055</td>
-                        <td>Budi Santoso</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                            <div style="background:#f54242; width:50%; height:12px; border-radius:4px;"></div>
-                          </div>
-                        </td>
-                        <td class="text-center"><span class="clickable" data-MK="MK-01" data-type="min" data-value="57">56</span></td>
-                        <td>STK921</td>
-                        <td>20241077</td>
-                        <td>Nina Lestari</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                            <div style="background:#f54242; width:70%; height:12px; border-radius:4px;"></div>
-                          </div>
-                        </td>
-                        <td class="text-center"><span class="clickable" data-MK="MK-01" data-type="min" data-value="57">57</span></td>
-                        <td>STK925</td>
-                        <td>20241011</td>
-                        <td>Rian Kurnia</td>
-                      </tr>
-                    </tbody>
+                    <tbody>
+<?php
+$rows = [
+  ["ranking" => "<div style=\"background:#eee; width:100%; height:12px; border-radius:4px;\"> <div style=\"background:#f54242; width:10%; height:12px; border-radius:4px;\"></div> </div>", "nilai_akhir" => "<span class=\"clickable\" data-MK=\"MK-01\" data-type=\"min\" data-value=\"57\">20</span>", "mk" => "STK114", "nim" => "20241099", "nama" => "Andi Saputra"],
+  ["ranking" => "<div style=\"background:#eee; width:100%; height:12px; border-radius:4px;\"> <div style=\"background:#f54242; width:22%; height:12px; border-radius:4px;\"></div> </div>", "nilai_akhir" => "<span class=\"clickable\" data-MK=\"MK-01\" data-type=\"min\" data-value=\"57\">30</span>", "mk" => "STK115", "nim" => "20241002", "nama" => "Siti Rahma"],
+  ["ranking" => "<div style=\"background:#eee; width:100%; height:12px; border-radius:4px;\"> <div style=\"background:#f54242; width:25%; height:12px; border-radius:4px;\"></div> </div>", "nilai_akhir" => "<span class=\"clickable\" data-MK=\"MK-01\" data-type=\"min\" data-value=\"57\">44</span>", "mk" => "STK119", "nim" => "20241055", "nama" => "Budi Santoso"],
+  ["ranking" => "<div style=\"background:#eee; width:100%; height:12px; border-radius:4px;\"> <div style=\"background:#f54242; width:35%; height:12px; border-radius:4px;\"></div> </div>", "nilai_akhir" => "<span class=\"clickable\" data-MK=\"MK-01\" data-type=\"min\" data-value=\"57\">45</span>", "mk" => "STK116", "nim" => "20241077", "nama" => "Nina Lestari"],
+  ["ranking" => "<div style=\"background:#eee; width:100%; height:12px; border-radius:4px;\"> <div style=\"background:#f54242; width:37%; height:12px; border-radius:4px;\"></div> </div>", "nilai_akhir" => "<span class=\"clickable\" data-MK=\"MK-01\" data-type=\"min\" data-value=\"57\">49</span>", "mk" => "STK144", "nim" => "20241011", "nama" => "Rian Kurnia"],
+  ["ranking" => "<div style=\"background:#eee; width:100%; height:12px; border-radius:4px;\"> <div style=\"background:#f54242; width:40%; height:12px; border-radius:4px;\"></div> </div>", "nilai_akhir" => "<span class=\"clickable\" data-MK=\"MK-01\" data-type=\"min\" data-value=\"57\">50</span>", "mk" => "STK521", "nim" => "20241099", "nama" => "Andi Saputra"],
+  ["ranking" => "<div style=\"background:#eee; width:100%; height:12px; border-radius:4px;\"> <div style=\"background:#f54242; width:45%; height:12px; border-radius:4px;\"></div> </div>", "nilai_akhir" => "<span class=\"clickable\" data-MK=\"MK-01\" data-type=\"min\" data-value=\"57\">50</span>", "mk" => "STK911", "nim" => "20241002", "nama" => "Siti Rahma"],
+  ["ranking" => "<div style=\"background:#eee; width:100%; height:12px; border-radius:4px;\"> <div style=\"background:#f54242; width:45%; height:12px; border-radius:4px;\"></div> </div>", "nilai_akhir" => "<span class=\"clickable\" data-MK=\"MK-01\" data-type=\"min\" data-value=\"57\">56</span>", "mk" => "STK914", "nim" => "20241055", "nama" => "Budi Santoso"],
+  ["ranking" => "<div style=\"background:#eee; width:100%; height:12px; border-radius:4px;\"> <div style=\"background:#f54242; width:50%; height:12px; border-radius:4px;\"></div> </div>", "nilai_akhir" => "<span class=\"clickable\" data-MK=\"MK-01\" data-type=\"min\" data-value=\"57\">56</span>", "mk" => "STK921", "nim" => "20241077", "nama" => "Nina Lestari"],
+  ["ranking" => "<div style=\"background:#eee; width:100%; height:12px; border-radius:4px;\"> <div style=\"background:#f54242; width:70%; height:12px; border-radius:4px;\"></div> </div>", "nilai_akhir" => "<span class=\"clickable\" data-MK=\"MK-01\" data-type=\"min\" data-value=\"57\">57</span>", "mk" => "STK925", "nim" => "20241011", "nama" => "Rian Kurnia"],
+];
+foreach ($rows as $index => $row) {
+?>
+          <tr>
+            <td><?= $row['ranking'] ?></td>
+            <td class="text-center"><?= $row['nilai_akhir'] ?></td>
+            <td><?= $row['mk'] ?></td>
+            <td><?= $row['nim'] ?></td>
+            <td><?= $row['nama'] ?></td>
+          </tr>
+<?php } ?>
+</tbody>
                   </table>
                 </div>
               </div>
@@ -474,117 +321,30 @@
                       </tr>
                     </thead>
                     <tbody>
-                      <tr>                      
-                        <td>
-                          <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                            <div style="background:#4287f5; width:95%; height:12px; border-radius:4px;"></div>
-                          </div>
-                        </td>
-                        <td class="text-center"><span class="clickable" data-MK="MK-01" data-type="max" data-value="95">95</span></td>
-                        <td>STS911</td>
-                        <td>20241099</td>
-                        <td>Andi Saputra</td>
-                      </tr>
-                      <tr>                      
-                        <td>
-                          <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                            <div style="background:#4287f5; width:95%; height:12px; border-radius:4px;"></div>
-                          </div>
-                        </td>
-                        <td class="text-center"><span class="clickable" data-MK="MK-01" data-type="max" data-value="95">94</span></td>
-                        <td>STS981</td>
-                        <td>20241099</td>
-                        <td>Andi Saputra</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                            <div style="background:#4287f5; width:85%; height:12px; border-radius:4px;"></div>
-                          </div>
-                        </td>
-                        <td class="text-center"><span class="clickable" data-MK="MK-01" data-type="max" data-value="95">90</span></td>
-                        <td>STS916</td>
-                        <td>20241099</td>
-                        <td>Andi Saputra</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                            <div style="background:#4287f5; width:85%; height:12px; border-radius:4px;"></div>
-                          </div>
-                        </td>
-                        <td class="text-center"><span class="clickable" data-MK="MK-01" data-type="max" data-value="95">89</span></td>
-                        <td>STS916</td>
-                        <td>20241002</td>
-                        <td>Siti Rahma</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                            <div style="background:#4287f5; width:78%; height:12px; border-radius:4px;"></div>
-                          </div>
-                        </td>
-                        <td class="text-center"><span class="clickable" data-MK="MK-01" data-type="max" data-value="95">85</span></td>
-                        <td>STS913</td>
-                        <td>20241099</td>
-                        <td>Andi Saputra</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                            <div style="background:#4287f5; width:78%; height:12px; border-radius:4px;"></div>
-                          </div>
-                        </td>
-                        <td class="text-center"><span class="clickable" data-MK="MK-01" data-type="max" data-value="95">85</span></td>
-                        <td>STS913</td>
-                        <td>13521171</td>
-                        <td>Taufik Kusuma</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                            <div style="background:#4287f5; width:65%; height:12px; border-radius:4px;"></div>
-                          </div>
-                        </td>
-                        <td class="text-center"><span class="clickable" data-MK="MK-01" data-type="max" data-value="95">70</span></td>
-                        <td>STS991</td>
-                        <td>20241099</td>
-                        <td>Andi Saputra</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                            <div style="background:#4287f5; width:65%; height:12px; border-radius:4px;"></div>
-                          </div>
-                        </td>
-                        <td class="text-center"><span class="clickable" data-MK="MK-01" data-type="max" data-value="95">68</span></td>
-                        <td>STS991</td>
-                        <td>13521143</td>
-                        <td>Ega Nur Hidayat</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                            <div style="background:#4287f5; width:50%; height:12px; border-radius:4px;"></div>
-                          </div>
-                        </td>
-                        <td class="text-center"><span class="clickable" data-MK="MK-01" data-type="max" data-value="95">67</span></td>
-                        <td>STS914</td>
-                        <td>20241002</td>
-                        <td>Siti Rahma</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                            <div style="background:#4287f5; width:50%; height:12px; border-radius:4px;"></div>
-                          </div>
-                        </td>
-                        <td class="text-center"><span class="clickable" data-MK="MK-01" data-type="max" data-value="95">67</span></td>
-                        <td>STS914</td>
-                        <td>16521014</td>
-                        <td>Satya Aditya</td>
-                      </tr>
-                    </tbody>
+<?php
+$rows = [
+  ["ranking" => "<div style=\"background:#eee; width:100%; height:12px; border-radius:4px;\"> <div style=\"background:#4287f5; width:95%; height:12px; border-radius:4px;\"></div> </div>", "nilai_akhir" => "<span class=\"clickable\" data-MK=\"MK-01\" data-type=\"max\" data-value=\"95\">95</span>", "mk" => "STS911", "nim" => "20241099", "nama" => "Andi Saputra"],
+  ["ranking" => "<div style=\"background:#eee; width:100%; height:12px; border-radius:4px;\"> <div style=\"background:#4287f5; width:95%; height:12px; border-radius:4px;\"></div> </div>", "nilai_akhir" => "<span class=\"clickable\" data-MK=\"MK-01\" data-type=\"max\" data-value=\"95\">94</span>", "mk" => "STS981", "nim" => "20241099", "nama" => "Andi Saputra"],
+  ["ranking" => "<div style=\"background:#eee; width:100%; height:12px; border-radius:4px;\"> <div style=\"background:#4287f5; width:85%; height:12px; border-radius:4px;\"></div> </div>", "nilai_akhir" => "<span class=\"clickable\" data-MK=\"MK-01\" data-type=\"max\" data-value=\"95\">90</span>", "mk" => "STS916", "nim" => "20241099", "nama" => "Andi Saputra"],
+  ["ranking" => "<div style=\"background:#eee; width:100%; height:12px; border-radius:4px;\"> <div style=\"background:#4287f5; width:85%; height:12px; border-radius:4px;\"></div> </div>", "nilai_akhir" => "<span class=\"clickable\" data-MK=\"MK-01\" data-type=\"max\" data-value=\"95\">89</span>", "mk" => "STS916", "nim" => "20241002", "nama" => "Siti Rahma"],
+  ["ranking" => "<div style=\"background:#eee; width:100%; height:12px; border-radius:4px;\"> <div style=\"background:#4287f5; width:78%; height:12px; border-radius:4px;\"></div> </div>", "nilai_akhir" => "<span class=\"clickable\" data-MK=\"MK-01\" data-type=\"max\" data-value=\"95\">85</span>", "mk" => "STS913", "nim" => "20241099", "nama" => "Andi Saputra"],
+  ["ranking" => "<div style=\"background:#eee; width:100%; height:12px; border-radius:4px;\"> <div style=\"background:#4287f5; width:78%; height:12px; border-radius:4px;\"></div> </div>", "nilai_akhir" => "<span class=\"clickable\" data-MK=\"MK-01\" data-type=\"max\" data-value=\"95\">85</span>", "mk" => "STS913", "nim" => "13521171", "nama" => "Taufik Kusuma"],
+  ["ranking" => "<div style=\"background:#eee; width:100%; height:12px; border-radius:4px;\"> <div style=\"background:#4287f5; width:65%; height:12px; border-radius:4px;\"></div> </div>", "nilai_akhir" => "<span class=\"clickable\" data-MK=\"MK-01\" data-type=\"max\" data-value=\"95\">70</span>", "mk" => "STS991", "nim" => "20241099", "nama" => "Andi Saputra"],
+  ["ranking" => "<div style=\"background:#eee; width:100%; height:12px; border-radius:4px;\"> <div style=\"background:#4287f5; width:65%; height:12px; border-radius:4px;\"></div> </div>", "nilai_akhir" => "<span class=\"clickable\" data-MK=\"MK-01\" data-type=\"max\" data-value=\"95\">68</span>", "mk" => "STS991", "nim" => "13521143", "nama" => "Ega Nur Hidayat"],
+  ["ranking" => "<div style=\"background:#eee; width:100%; height:12px; border-radius:4px;\"> <div style=\"background:#4287f5; width:50%; height:12px; border-radius:4px;\"></div> </div>", "nilai_akhir" => "<span class=\"clickable\" data-MK=\"MK-01\" data-type=\"max\" data-value=\"95\">67</span>", "mk" => "STS914", "nim" => "20241002", "nama" => "Siti Rahma"],
+  ["ranking" => "<div style=\"background:#eee; width:100%; height:12px; border-radius:4px;\"> <div style=\"background:#4287f5; width:50%; height:12px; border-radius:4px;\"></div> </div>", "nilai_akhir" => "<span class=\"clickable\" data-MK=\"MK-01\" data-type=\"max\" data-value=\"95\">67</span>", "mk" => "STS914", "nim" => "16521014", "nama" => "Satya Aditya"],
+];
+foreach ($rows as $index => $row) {
+?>
+          <tr>
+            <td><?= $row['ranking'] ?></td>
+            <td class="text-center"><?= $row['nilai_akhir'] ?></td>
+            <td><?= $row['mk'] ?></td>
+            <td><?= $row['nim'] ?></td>
+            <td><?= $row['nama'] ?></td>
+          </tr>
+<?php } ?>
+</tbody>
                   </table>
                 </div>
 
@@ -612,68 +372,30 @@
                     <th class="text-center">Status</th>
                   </tr>
                 </thead>
-                <tbody>                
-                  <tr>
-                    <td>1</td>
-                    <td>SKS982: Pemahaman Dasar Polimer</td>
-                    <td class="text-center">72.14%</td>
-                    <td class="text-center">🟨 Cukup</td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>SKS917: Teori Komposit</td>
-                    <td class="text-center">71.50%</td>
-                    <td class="text-center">🟨 Cukup</td>
-                  </tr>
-                  <tr>
-                    <td>3</td>
-                    <td>UNI902: Aplikasi Polimer</td>
-                    <td class="text-center">76.80%</td>
-                    <td class="text-center">🟨 Cukup</td>
-                  </tr>
-                  <tr>
-                    <td>4</td>
-                    <td>UNI912: Proses Produksi</td>
-                    <td class="text-center">76.80%</td>
-                    <td class="text-center">🟨 Cukup</td>
-                  </tr>
-                  <tr>
-                    <td>5</td>
-                    <td>SKS234: Analisis Material</td>
-                    <td class="text-center">75.30%</td>
-                   <td class="text-center">🟨 Cukup</td>
-                  </tr>
-                  <tr>
-                    <td>6</td>
-                    <td>SKS812: Keselamatan & Etika</td>
-                     <td class="text-center">76.80%</td>
-                    <td class="text-center">🟨 Cukup</td>
-                  </tr>
-                  <tr>
-                    <td>7</td>
-                    <td>SKS908: Desain Proses</td>                    
-                    <td class="text-center">73.40%</td>
-                    <td class="text-center">🟨 Cukup</td>
-                  </tr>
-                  <tr>
-                    <td>8</td>
-                    <td>SKS111: Metode Eksperimental</td>
-                    <td class="text-center">71.50%</td>
-                    <td class="text-center">🟨 Cukup</td>
-                  </tr>
-                  <tr>
-                    <td>9</td>
-                    <td>SKS113: Statistik & Analisis Data</td>
-                    <td class="text-center">71.50%</td>
-                    <td class="text-center">🟨 Cukup</td>
-                  </tr>
-                  <tr>
-                    <td>10</td>
-                    <td>SKS932: Komunikasi Teknis</td>                    
-                    <td class="text-center">75.00%</td>
-                    <td class="text-center">🟨 Cukup</td>
-                  </tr>
-                </tbody>
+                <tbody>
+<?php
+$rows = [
+  ["cpmk_code" => "SKS982: Pemahaman Dasar Polimer", "nilai" => "72.14%"],
+  ["cpmk_code" => "SKS917: Teori Komposit", "nilai" => "71.50%"],
+  ["cpmk_code" => "UNI902: Aplikasi Polimer", "nilai" => "76.80%"],
+  ["cpmk_code" => "UNI912: Proses Produksi", "nilai" => "76.80%"],
+  ["cpmk_code" => "SKS234: Analisis Material", "nilai" => "75.30%"],
+  ["cpmk_code" => "SKS812: Keselamatan & Etika", "nilai" => "76.80%"],
+  ["cpmk_code" => "SKS908: Desain Proses", "nilai" => "73.40%"],
+  ["cpmk_code" => "SKS111: Metode Eksperimental", "nilai" => "71.50%"],
+  ["cpmk_code" => "SKS113: Statistik & Analisis Data", "nilai" => "71.50%"],
+  ["cpmk_code" => "SKS932: Komunikasi Teknis", "nilai" => "75.00%"],
+];
+foreach ($rows as $index => $row) {
+?>
+          <tr>
+            <td><?= $index + 1 ?></td>
+            <td><?= $row['cpmk_code'] ?></td>
+            <td class="text-center"><?= $row['nilai'] ?></td>
+            <td class="text-center">🟨 Cukup</td>
+          </tr>
+<?php } ?>
+</tbody>
               </table>
             </div>
           </div>                 
@@ -777,264 +499,37 @@
                       <th style="text-align: center;">Aksi</th>
                     </tr>
                   </thead>
-                  <tbody>
-
-                    <tr>
-                      <td align="center">1</td>
-                      <td>Tri Nugroho Sulistyantoro, S.T., M.T.<br>
-                      <small><b>(195110502)</b></small>
-                    </td>
-                    <td>Metode Pelaksanaan Bangunan<br>
-                      <small><b>(STS704)</b></small>
-                    </td>
-                    <td align="center">A</td>
-                    <td align="center">5</td>
-                    <td align="center"><b>27</b></td>                                         
-                    <td class="text-center">
-                      <button type="button" class="btn btn-sm btn-outline-info" onclick="window.location='monev-rekap-kelas-detail.php'"><i class="fas fa-info-circle"></i></button>
-                      <a href="data-portofolio-cpmk.pdf" download class="btn btn-sm btn-outline-success"><i class="fas fa-download"></i></a>
-                    </td>
-                  </td>
-                  </tr>
-
-                  <tr>
-                    <td align="center">2</td>
-                    <td>
-                      Tri Nugroho Sulistyantoro, S.T., M.T.<br>
-                      <small><b>(195110502)</b></small>
-                    </td>
-                    <td>
-                      Metode Pelaksanaan Bangunan<br>
-                      <small><b>(STS704)</b></small>
-                    </td>
-                    <td align="center">C</td>
-                    <td align="center">5</td>
-                    <td align="center"><b>33</b></td>
-                    <td class="text-center">
-                      <button type="button" class="btn btn-sm btn-outline-info" onclick="window.location='monev-rekap-kelas-detail.php'"><i class="fas fa-info-circle"></i></button>
-                      <a href="data-portofolio-cpmk.pdf" download class="btn btn-sm btn-outline-success"><i class="fas fa-download"></i></a>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td align="center">3</td>
-                    <td>
-                      Andi Purnomo, S.T., M.T.<br>
-                      <small><b>(065110501)</b></small>
-                    </td>
-                    <td>
-                      Metode Pelaksanaan Bangunan<br>
-                      <small><b>(STS704)</b></small>
-                    </td>
-                    <td align="center">B</td>
-                    <td align="center">5</td>
-                    <td align="center"><b>26</b></td>
-                    <td class="text-center">
-                      <button type="button" class="btn btn-sm btn-outline-info" onclick="window.location='monev-rekap-kelas-detail.php'"><i class="fas fa-info-circle"></i></button>
-                      <a href="data-portofolio-cpmk.pdf" download class="btn btn-sm btn-outline-success"><i class="fas fa-download"></i></a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td align="center">4</td>
-                    <td>
-                      Vendie Abma, S.T., M.T.<br>
-                      <small><b>(155111310)</b></small>
-                    </td>
-                    <td>
-                      Metode Pelaksanaan Bangunan<br>
-                      <small><b>(STS704)</b></small>
-                    </td>
-                    <td align="center">D</td>
-                    <td align="center">5</td>
-                    <td align="center"><b>23</b></td>
-                    <td class="text-center">
-                      <button type="button" class="btn btn-sm btn-outline-info" onclick="window.location='monev-rekap-kelas-detail.php'"><i class="fas fa-info-circle"></i></button>
-                      <a href="data-portofolio-cpmk.pdf" download class="btn btn-sm btn-outline-success"><i class="fas fa-download"></i></a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td align="center">5</td>
-                    <td>
-                      Rizki Budiman, S.T., M.T.<br>
-                      <small><b>(245111203)</b></small>
-                    </td>
-                    <td>
-                      Metode Pelaksanaan Bangunan<br>
-                      <small><b>(STS704)</b></small>
-                    </td>
-                    <td align="center">F</td>
-                    <td align="center">5</td>
-                    <td align="center"><b>25</b></td>
-                    <td class="text-center">
-                      <button type="button" class="btn btn-sm btn-outline-info" onclick="window.location='monev-rekap-kelas-detail.php'"><i class="fas fa-info-circle"></i></button>
-                      <a href="data-portofolio-cpmk.pdf" download class="btn btn-sm btn-outline-success"><i class="fas fa-download"></i></a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td align="center">6</td>
-                    <td>
-                      Vendie Abma, S.T., M.T.<br>
-                      <small><b>(155111310)</b></small>
-                    </td>
-                    <td>
-                      Metode Pelaksanaan Bangunan<br>
-                      <small><b>(STS704)</b></small>
-                    </td>
-                    <td align="center">E</td>
-                    <td align="center">5</td>
-                    <td align="center"><b>22</b></td>
-                    <td class="text-center">
-                      <button type="button" class="btn btn-sm btn-outline-info" onclick="window.location='monev-rekap-kelas-detail.php'"><i class="fas fa-info-circle"></i></button>
-                      <a href="data-portofolio-cpmk.pdf" download class="btn btn-sm btn-outline-success"><i class="fas fa-download"></i></a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td align="center">7</td>
-                    <td>
-                      Miftahul Fauziah, S.T., M.T., Ph.D.<br>
-                      <small><b>(955110103)</b></small>
-                    </td>
-                    <td>
-                      Bahan Perkerasan Jalan (+Pr)<br>
-                      <small><b>(STS307)</b></small>
-                    </td>
-                    <td align="center">F</td>
-                    <td align="center">9</td>
-                    <td align="center"><b>24</b></td>
-                    <td class="text-center">
-                      <button type="button" class="btn btn-sm btn-outline-info" onclick="window.location='monev-rekap-kelas-detail.php'"><i class="fas fa-info-circle"></i></button>
-                      <a href="data-portofolio-cpmk.pdf" download class="btn btn-sm btn-outline-success"><i class="fas fa-download"></i></a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td align="center">8</td>
-                    <td>
-                      Prayogo Afang Prayitno, S.T., M.Sc.<br>
-                      <small><b>(205111303)</b></small>
-                    </td>
-                    <td>
-                      Bahan Perkerasan Jalan (+Pr)<br>
-                      <small><b>(STS307)</b></small>
-                    </td>
-                    <td align="center">C</td>
-                    <td align="center">9</td>
-                    <td align="center"><b>20</b></td>
-                    <td class="text-center">
-                      <button type="button" class="btn btn-sm btn-outline-info" onclick="window.location='monev-rekap-kelas-detail.php'"><i class="fas fa-info-circle"></i></button>
-                      <a href="data-portofolio-cpmk.pdf" download class="btn btn-sm btn-outline-success"><i class="fas fa-download"></i></a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td align="center">9</td>
-                    <td>
-                      Ir. Berlian Kushari, S.T., M.Eng., IPM, ASEAN Eng.<br>
-                      <small><b>(015110101)</b></small>
-                    </td>
-                    <td>
-                      Bahan Perkerasan Jalan (+Pr)<br>
-                      <small><b>(STS307)</b></small>
-                    </td>
-                    <td align="center">G</td>
-                    <td align="center">9</td>
-                    <td align="center"><b>24</b></td>
-                    <td class="text-center">
-                      <button type="button" class="btn btn-sm btn-outline-info" onclick="window.location='monev-rekap-kelas-detail.php'"><i class="fas fa-info-circle"></i></button>
-                      <a href="data-portofolio-cpmk.pdf" download class="btn btn-sm btn-outline-success"><i class="fas fa-download"></i></a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td align="center">10</td>
-                    <td>
-                      Ir. Mochammad Sigit Darmosudiharjo, M.T.<br>
-                      <small><b>(885110103)</b></small>
-                    </td>
-                    <td>
-                      Bahan Perkerasan Jalan (+Pr)<br>
-                      <small><b>(STS307)</b></small>
-                    </td>
-                    <td align="center">E</td>
-                    <td align="center">9</td>
-                    <td align="center"><b>22</b></td>
-                   <td class="text-center">
-                      <button type="button" class="btn btn-sm btn-outline-info" onclick="window.location='monev-rekap-kelas-detail.php'"><i class="fas fa-info-circle"></i></button>
-                      <a href="data-portofolio-cpmk.pdf" download class="btn btn-sm btn-outline-success"><i class="fas fa-download"></i></a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td align="center">11</td>
-                    <td>
-                      Muhamad Abdul Hadi, S.T., M.T.<br>
-                      <small><b>(215111307)</b></small>
-                    </td>
-                    <td>
-                      Bahan Perkerasan Jalan (+Pr)<br>
-                      <small><b>(STS307)</b></small>
-                    </td>
-                    <td align="center">D</td>
-                    <td align="center">9</td>
-                    <td align="center"><b>24</b></td>
-                   <td class="text-center">
-                      <button type="button" class="btn btn-sm btn-outline-info" onclick="window.location='monev-rekap-kelas-detail.php'"><i class="fas fa-info-circle"></i></button>
-                      <a href="data-portofolio-cpmk.pdf" download class="btn btn-sm btn-outline-success"><i class="fas fa-download"></i></a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td align="center">12</td>
-                    <td>
-                      Muhamad Abdul Hadi, S.T., M.T.<br>
-                      <small><b>(215111307)</b></small>
-                    </td>
-                    <td>
-                      Bahan Perkerasan Jalan (+Pr)<br>
-                      <small><b>(STS307)</b></small>
-                    </td>
-                    <td align="center">B</td>
-                    <td align="center">9</td>
-                    <td align="center"><b>24</b></td>
-                    <td class="text-center">
-                      <button type="button" class="btn btn-sm btn-outline-info" onclick="window.location='monev-rekap-kelas-detail.php'"><i class="fas fa-info-circle"></i></button>
-                      <a href="data-portofolio-cpmk.pdf" download class="btn btn-sm btn-outline-success"><i class="fas fa-download"></i></a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td align="center">13</td>
-                    <td>
-                      Miftahul Fauziah, S.T., M.T., Ph.D.<br>
-                      <small><b>(955110103)</b></small>
-                    </td>
-                    <td>
-                      Bahan Perkerasan Jalan (+Pr)<br>
-                      <small><b>(STS307)</b></small>
-                    </td>
-                    <td align="center">A</td>
-                    <td align="center">9</td>
-                    <td align="center"><b>21</b></td>
-                    <td class="text-center">
-                      <button type="button" class="btn btn-sm btn-outline-info" onclick="window.location='monev-rekap-kelas-detail.php'"><i class="fas fa-info-circle"></i></button>
-                      <a href="data-portofolio-cpmk.pdf" download class="btn btn-sm btn-outline-success"><i class="fas fa-download"></i></a>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td align="center">14</td>
-                    <td>
-                      Ir. Subarkah, M.T.<br>
-                      <small><b>(865110101)</b></small>
-                    </td>
-                    <td>
-                      Bahan Perkerasan Jalan (+Pr)<br>
-                      <small><b>(STS307)</b></small>
-                    </td>
-                    <td align="center">H</td>
-                    <td align="center">9</td>
-                    <td align="center"><b>24</b></td>
-                    <td class="text-center">
-                      <button type="button" class="btn btn-sm btn-outline-info" onclick="window.location='monev-rekap-kelas-detail.php'"><i class="fas fa-info-circle"></i></button>
-                      <a href="data-portofolio-cpmk.pdf" download class="btn btn-sm btn-outline-success"><i class="fas fa-download"></i></a>
-                    </td>
-                  </tr>
-
-                </tbody>
+                  <<tbody>
+<?php
+$rows = [
+  ["dosen_pengampu" => "Tri Nugroho Sulistyantoro, S.T., M.T.<br> <small><b>(195110502)</b></small>", "mata_kuliah" => "Metode Pelaksanaan Bangunan<br> <small><b>(STS704)</b></small>", "kelas" => "A", "cpmk" => "5", "mahasiswa" => "<b>27</b>"],
+  ["dosen_pengampu" => "Tri Nugroho Sulistyantoro, S.T., M.T.<br> <small><b>(195110502)</b></small>", "mata_kuliah" => "Metode Pelaksanaan Bangunan<br> <small><b>(STS704)</b></small>", "kelas" => "C", "cpmk" => "5", "mahasiswa" => "<b>33</b>"],
+  ["dosen_pengampu" => "Andi Purnomo, S.T., M.T.<br> <small><b>(065110501)</b></small>", "mata_kuliah" => "Metode Pelaksanaan Bangunan<br> <small><b>(STS704)</b></small>", "kelas" => "B", "cpmk" => "5", "mahasiswa" => "<b>26</b>"],
+  ["dosen_pengampu" => "Vendie Abma, S.T., M.T.<br> <small><b>(155111310)</b></small>", "mata_kuliah" => "Metode Pelaksanaan Bangunan<br> <small><b>(STS704)</b></small>", "kelas" => "D", "cpmk" => "5", "mahasiswa" => "<b>23</b>"],
+  ["dosen_pengampu" => "Rizki Budiman, S.T., M.T.<br> <small><b>(245111203)</b></small>", "mata_kuliah" => "Metode Pelaksanaan Bangunan<br> <small><b>(STS704)</b></small>", "kelas" => "F", "cpmk" => "5", "mahasiswa" => "<b>25</b>"],
+  ["dosen_pengampu" => "Vendie Abma, S.T., M.T.<br> <small><b>(155111310)</b></small>", "mata_kuliah" => "Metode Pelaksanaan Bangunan<br> <small><b>(STS704)</b></small>", "kelas" => "E", "cpmk" => "5", "mahasiswa" => "<b>22</b>"],
+  ["dosen_pengampu" => "Miftahul Fauziah, S.T., M.T., Ph.D.<br> <small><b>(955110103)</b></small>", "mata_kuliah" => "Bahan Perkerasan Jalan (+Pr)<br> <small><b>(STS307)</b></small>", "kelas" => "F", "cpmk" => "9", "mahasiswa" => "<b>24</b>"],
+  ["dosen_pengampu" => "Prayogo Afang Prayitno, S.T., M.Sc.<br> <small><b>(205111303)</b></small>", "mata_kuliah" => "Bahan Perkerasan Jalan (+Pr)<br> <small><b>(STS307)</b></small>", "kelas" => "C", "cpmk" => "9", "mahasiswa" => "<b>20</b>"],
+  ["dosen_pengampu" => "Ir. Berlian Kushari, S.T., M.Eng., IPM, ASEAN Eng.<br> <small><b>(015110101)</b></small>", "mata_kuliah" => "Bahan Perkerasan Jalan (+Pr)<br> <small><b>(STS307)</b></small>", "kelas" => "G", "cpmk" => "9", "mahasiswa" => "<b>24</b>"],
+  ["dosen_pengampu" => "Ir. Mochammad Sigit Darmosudiharjo, M.T.<br> <small><b>(885110103)</b></small>", "mata_kuliah" => "Bahan Perkerasan Jalan (+Pr)<br> <small><b>(STS307)</b></small>", "kelas" => "E", "cpmk" => "9", "mahasiswa" => "<b>22</b>"],
+  ["dosen_pengampu" => "Muhamad Abdul Hadi, S.T., M.T.<br> <small><b>(215111307)</b></small>", "mata_kuliah" => "Bahan Perkerasan Jalan (+Pr)<br> <small><b>(STS307)</b></small>", "kelas" => "D", "cpmk" => "9", "mahasiswa" => "<b>24</b>"],
+  ["dosen_pengampu" => "Muhamad Abdul Hadi, S.T., M.T.<br> <small><b>(215111307)</b></small>", "mata_kuliah" => "Bahan Perkerasan Jalan (+Pr)<br> <small><b>(STS307)</b></small>", "kelas" => "B", "cpmk" => "9", "mahasiswa" => "<b>24</b>"],
+  ["dosen_pengampu" => "Miftahul Fauziah, S.T., M.T., Ph.D.<br> <small><b>(955110103)</b></small>", "mata_kuliah" => "Bahan Perkerasan Jalan (+Pr)<br> <small><b>(STS307)</b></small>", "kelas" => "A", "cpmk" => "9", "mahasiswa" => "<b>21</b>"],
+  ["dosen_pengampu" => "Ir. Subarkah, M.T.<br> <small><b>(865110101)</b></small>", "mata_kuliah" => "Bahan Perkerasan Jalan (+Pr)<br> <small><b>(STS307)</b></small>", "kelas" => "H", "cpmk" => "9", "mahasiswa" => "<b>24</b>"],
+];
+foreach ($rows as $index => $row) {
+?>
+          <tr>
+            <td align="center"><?= $index + 1 ?></td>
+            <td><?= $row['dosen_pengampu'] ?></td>
+            <td><?= $row['mata_kuliah'] ?></td>
+            <td align="center"><?= $row['kelas'] ?></td>
+            <td align="center"><?= $row['cpmk'] ?></td>
+            <td align="center"><?= $row['mahasiswa'] ?></td>
+            <td class="text-center"><button type="button" class="btn btn-sm btn-outline-info" onclick="window.location='monev-rekap-kelas-detail.php'"><i class="fas fa-info-circle"></i></button> <a href="data-portofolio-cpmk.pdf" download class="btn btn-sm btn-outline-success"><i class="fas fa-download"></i></a></td>
+          </tr>
+<?php } ?>
+</tbody>
               </table>
 
 

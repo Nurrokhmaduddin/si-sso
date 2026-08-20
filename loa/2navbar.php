@@ -59,7 +59,6 @@
             Feedback
           </a>
         </li>
-        <!-- <li><a href="../" class="dropdown-item text-primary"><i class="fas fa-cog mr-2"></i>Laporan Masalah</a></li> -->
         <li><a href="../" class="dropdown-item text-danger"><i class="fas fa-sign-out-alt mr-2"></i>Logout</a></li>
       </ul>
     </li>

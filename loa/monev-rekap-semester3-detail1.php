@@ -1200,38 +1200,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         </div>
       </div>
     </div>
@@ -1296,7 +1264,6 @@
       </div>
       <div class="modal-body">
         <p>
-          
             munculkan ada data kuantitatif, dan data kualitatif. untuk keperluan prodi analisis temuan evaluasi, dan membuat keputusan aksi evaluasi. kedua, masukkan barchart perbandingan antar semester akademik,CPMK dan IK nya disini, yang satuan nya adalah %mahasiswa yg tuntas.
         </p>
         <p>
@@ -1305,7 +1272,6 @@ angkatan | jml mahasiswa |
 2020  | 30
 2021  | 59
 2022  | 120
-
         </p>
         <p>
           Menampilkan untuk monitoring CPMK pada tiap mata kuliah, dalam satu semester. membandingkan antar tahun akademik. Sehingga mencirikan CQI pembelajaran mata kuliah
@@ -1529,7 +1495,6 @@ CPMK Bermasalah
 
         <!-- Tabel Detail Kelas -->
         <h6 class="mb-2"><b>Informasi Kelas</b></h6>
-
         <div class="table-responsive">
           <table class="table table-bordered table-sm">
             <thead class="thead-light">

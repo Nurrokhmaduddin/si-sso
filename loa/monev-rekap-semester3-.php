@@ -142,65 +142,65 @@
     <h6 class="font-weight-bold">Daftar Indikator Kompetensi (IK)</h6>
     <table class="table table-sm table-bordered table-striped table-hover  ">
 
-  <thead>
-    <tr>
-      <th>#</th>
-      <th>Kode IK</th>
-      <th>Deskripsi IK</th>
-      <th>Skor IK (avg)</th>
-    </tr>
-  </thead>
-  <tbody>
-    <!-- CPL 1 -->
-    <tr><td>1</td><td>IK1.1</td><td>Memahami konsep dasar CPL 1</td><td>82</td></tr>
-    <tr><td>2</td><td>IK1.2</td><td>Menerapkan prinsip CPL 1 dalam tugas</td><td>75</td></tr>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Kode IK</th>
+          <th>Deskripsi IK</th>
+          <th>Skor IK (avg)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- CPL 1 -->
+        <tr><td>1</td><td>IK1.1</td><td>Memahami konsep dasar CPL 1</td><td>82</td></tr>
+        <tr><td>2</td><td>IK1.2</td><td>Menerapkan prinsip CPL 1 dalam tugas</td><td>75</td></tr>
 
-    <!-- CPL 2 -->
-    <tr><td>3</td><td>IK2.1</td><td>Analisis kasus CPL 2 secara kritis</td><td>70</td></tr>
-    <tr><td>4</td><td>IK2.2</td><td>Mampu menyelesaikan masalah CPL 2</td><td>78</td></tr>
-    <tr><td>5</td><td>IK2.3</td><td>Menguasai konsep CPL 2 dalam praktik</td><td>83</td></tr>
+        <!-- CPL 2 -->
+        <tr><td>3</td><td>IK2.1</td><td>Analisis kasus CPL 2 secara kritis</td><td>70</td></tr>
+        <tr><td>4</td><td>IK2.2</td><td>Mampu menyelesaikan masalah CPL 2</td><td>78</td></tr>
+        <tr><td>5</td><td>IK2.3</td><td>Menguasai konsep CPL 2 dalam praktik</td><td>83</td></tr>
 
-    <!-- CPL 3 -->
-    <tr><td>6</td><td>IK3.1</td><td>Memahami teknik dasar CPL 3</td><td>72</td></tr>
-    <tr><td>7</td><td>IK3.2</td><td>Mampu menerapkan CPL 3 pada studi kasus</td><td>76</td></tr>
+        <!-- CPL 3 -->
+        <tr><td>6</td><td>IK3.1</td><td>Memahami teknik dasar CPL 3</td><td>72</td></tr>
+        <tr><td>7</td><td>IK3.2</td><td>Mampu menerapkan CPL 3 pada studi kasus</td><td>76</td></tr>
 
-    <!-- CPL 4 -->
-    <tr><td>8</td><td>IK4.1</td><td>Memahami proses CPL 4</td><td>74</td></tr>
-    <tr><td>9</td><td>IK4.2</td><td>Mampu mengaplikasikan CPL 4 secara efektif</td><td>79</td></tr>
+        <!-- CPL 4 -->
+        <tr><td>8</td><td>IK4.1</td><td>Memahami proses CPL 4</td><td>74</td></tr>
+        <tr><td>9</td><td>IK4.2</td><td>Mampu mengaplikasikan CPL 4 secara efektif</td><td>79</td></tr>
 
-    <!-- CPL 5 -->
-    <tr><td>10</td><td>IK5.1</td><td>Menguasai prinsip CPL 5</td><td>73</td></tr>
-    <tr><td>11</td><td>IK5.2</td><td>Mampu menerapkan CPL 5 dalam proyek</td><td>77</td></tr>
+        <!-- CPL 5 -->
+        <tr><td>10</td><td>IK5.1</td><td>Menguasai prinsip CPL 5</td><td>73</td></tr>
+        <tr><td>11</td><td>IK5.2</td><td>Mampu menerapkan CPL 5 dalam proyek</td><td>77</td></tr>
 
-    <!-- CPL 6 -->
-    <tr><td>12</td><td>IK6.1</td><td>Memahami konsep CPL 6</td><td>85</td></tr>
+        <!-- CPL 6 -->
+        <tr><td>12</td><td>IK6.1</td><td>Memahami konsep CPL 6</td><td>85</td></tr>
 
-    <!-- CPL 7 -->
-    <tr><td>13</td><td>IK7.1</td><td>Menunjukkan kemampuan CPL 7</td><td>80</td></tr>
-    <tr><td>14</td><td>IK7.2</td><td>Mengaplikasikan CPL 7 dalam studi kasus</td><td>84</td></tr>
+        <!-- CPL 7 -->
+        <tr><td>13</td><td>IK7.1</td><td>Menunjukkan kemampuan CPL 7</td><td>80</td></tr>
+        <tr><td>14</td><td>IK7.2</td><td>Mengaplikasikan CPL 7 dalam studi kasus</td><td>84</td></tr>
 
-    <!-- CPL 8 -->
-    <tr><td>15</td><td>IK8.1</td><td>Memahami prinsip CPL 8</td><td>78</td></tr>
-    <tr><td>16</td><td>IK8.2</td><td>Mengimplementasikan CPL 8</td><td>82</td></tr>
+        <!-- CPL 8 -->
+        <tr><td>15</td><td>IK8.1</td><td>Memahami prinsip CPL 8</td><td>78</td></tr>
+        <tr><td>16</td><td>IK8.2</td><td>Mengimplementasikan CPL 8</td><td>82</td></tr>
 
-    <!-- CPL 9 -->
-    <tr><td>17</td><td>IK9.1</td><td>Analisis CPL 9 secara kritis</td><td>75</td></tr>
-    <tr><td>18</td><td>IK9.2</td><td>Mampu memecahkan masalah CPL 9</td><td>79</td></tr>
+        <!-- CPL 9 -->
+        <tr><td>17</td><td>IK9.1</td><td>Analisis CPL 9 secara kritis</td><td>75</td></tr>
+        <tr><td>18</td><td>IK9.2</td><td>Mampu memecahkan masalah CPL 9</td><td>79</td></tr>
 
-    <!-- CPL 10 -->
-    <tr><td>19</td><td>IK10.1</td><td>Memahami teknik CPL 10</td><td>76</td></tr>
-    <tr><td>20</td><td>IK10.2</td><td>Mampu mengaplikasikan CPL 10</td><td>80</td></tr>
+        <!-- CPL 10 -->
+        <tr><td>19</td><td>IK10.1</td><td>Memahami teknik CPL 10</td><td>76</td></tr>
+        <tr><td>20</td><td>IK10.2</td><td>Mampu mengaplikasikan CPL 10</td><td>80</td></tr>
 
-    <!-- CPL 11 -->
-    <tr><td>21</td><td>IK11.1</td><td>Menguasai CPL 11</td><td>82</td></tr>
-    <tr><td>22</td><td>IK11.2</td><td>Menerapkan CPL 11 pada proyek</td><td>85</td></tr>
+        <!-- CPL 11 -->
+        <tr><td>21</td><td>IK11.1</td><td>Menguasai CPL 11</td><td>82</td></tr>
+        <tr><td>22</td><td>IK11.2</td><td>Menerapkan CPL 11 pada proyek</td><td>85</td></tr>
 
-    <!-- CPL 12 -->
-    <tr><td>23</td><td>IK12.1</td><td>Menguasai CPL 12 secara menyeluruh</td><td>88</td></tr>
-    <tr><td>24</td><td>IK12.2</td><td>Mampu mengaplikasikan CPL 12</td><td>90</td></tr>
-  </tbody>
+        <!-- CPL 12 -->
+        <tr><td>23</td><td>IK12.1</td><td>Menguasai CPL 12 secara menyeluruh</td><td>88</td></tr>
+        <tr><td>24</td><td>IK12.2</td><td>Mampu mengaplikasikan CPL 12</td><td>90</td></tr>
+      </tbody>
 
-</table>
+    </table>
   </div>
 </div>
 
@@ -295,7 +295,7 @@
 
     <div class="collapse" id="recommendAll">
       <ul class="list-group mb-3">
-      <li class="list-group-item">Standarisasi urutan materi dan CPMK antar mata kuliah. (Dosen 3)</li>
+        <li class="list-group-item">Standarisasi urutan materi dan CPMK antar mata kuliah. (Dosen 3)</li>
         <li class="list-group-item">Rubrik jelas & evaluasi berjenjang untuk penilaian. (Dosen 4)</li>
         <li class="list-group-item">… (Dosen 48)</li>
       </ul>
@@ -414,92 +414,6 @@
   </div>
 
 </div>
-
-
-<!-- ========== CARD 4: Chart CPL-IK ========== -->     
-        <!-- <div class="card">   
-
-          <div class="card-header ">         
-            <h5 class="card-title mb-0">
-              <button class="btn btn-sm btn-outline-primary" data-toggle="collapse" data-target="#chartCPLIK1">
-                <i class="fas fa-expand"></i>
-              </button>
-              kode IK pertama (perbandingan %mahasiswa tuntas IK, periode A vs B)
-            </h5>
-          </div>
-
-          <div class="card-body " id="chartCPLIK1">
-
-            <div class="chart-container">
-              <canvas id="chartCPL1" width="100%" height="30"></canvas>
-            </div>
-            <h6 class="font-weight-bold">Daftar Capaian Mata Kuliah (CPMK)</h6>
-            <div class="table-responsive">
-              <table class="table table-sm table-bordered">
-               <thead class="thead-dark">
-                <tr>
-                  <th style="width: 80px;">Kode CPMK</th>
-                  <th style="width: 80px;">NAMA MK</th>
-                  <th>Deskripsi CPMK</th>                    
-                  <th>Periode A</th>
-                  <th>Periode B</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>STS190-1</td>
-                  <td>Pengantar Ilmu Komunikasi</td>
-                  <td>Mahasiswa mampu menyampaikan informasi secara lisan secara runtut, jelas, dan mudah dipahami.</td>
-                  <td><a href="progres-cpl-semester3.php">78</a></td>
-                  <td><a href="progres-cpl-semester3.php">80</a></td>
-                </tr>
-                <tr>
-                  <td>STS230-2</td>
-                  <td>Dasar Logika Berpikir</td>
-                  <td>Mahasiswa mampu menulis laporan/tulisan akademik sesuai kaidah bahasa dan struktur penulisan yang baik.</td>
-                  <td><a href="progres-cpl-semester3.php">68</a></td>
-                  <td><a href="progres-cpl-semester3.php">70</a></td>
-                </tr>
-                <tr>
-                  <td>STS333-1</td>
-                  <td>Komunikasi Organisasi</td>
-                  <td>Mahasiswa mampu berkomunikasi secara profesional dalam konteks akademik dan industri, termasuk etika komunikasi digital.</td>
-                  <td><a href="progres-cpl-semester3.php">58</a></td>
-                  <td><a href="progres-cpl-semester3.php">60</a></td>
-                </tr>
-                <tr>
-                    <td> STS900-2</td>
-                    <td>Dasar Logika Berpikir</td>
-                    <td>Mahasiswa mampu menyampaikan informasi secara lisan secara runtut, jelas, dan mudah dipahami.</td>
-                    <td><a href="progres-cpl-semester3.php">58</a></td>
-                  <td><a href="progres-cpl-semester3.php">60</a></td>
-                  </tr>
-                  <tr>
-                    <td> STS544-2</td>
-                    <td>Dasar Logika Berpikir</td>
-                    <td>Mahasiswa mampu menulis laporan/tulisan akademik sesuai kaidah bahasa dan struktur penulisan yang baik.</td>
-                    <td><a href="progres-cpl-semester3.php">83</a></td>
-                  <td><a href="progres-cpl-semester3.php">84</a></td>
-                  </tr>
-              </tbody>
-              <tfoot>
-                <tr class="table-secondary">
-                    <td>IK 1</td>
-                    <td colspan="2">Mahasiswa mampu menulis laporan/tulisan akademik sesuai kaidah bahasa dan struktur penulisan yang baik.</td>
-                    <td><a href="progres-cpl-semester3.php">81</a></td>
-                  <td><a href="progres-cpl-semester3.php">81</a></td>
-                  </tr>
-              </tfoot>
-              </table>
-            </div>
-          </div>          
-        </div> -->
-
-
-
-
-
-
 
 
 
@@ -1147,79 +1061,4 @@ CPMK Bermasalah
       }
     });
   </script>
-
-<script>
-const ctx = document.getElementById("chartCPL1");
-
-new Chart(ctx, {
-  type: 'bar',
-  data: {
-    labels: [
-      ' STS190-1','  STS230-2','STS333-1','STS900-2','STS544-2',
-     'IK 1'
-    ],
-    datasets: [
-      {
-        label: 'Target Treshold (> 80%)',
-        type: 'line',
-        yMin: 80, 
-        yMax: 80,
-        backgroundColor: 'rgba(255,255,255,0.7)',
-        borderColor: 'red',
-        borderWidth: 2,
-        borderDash: [6, 6],
-      },
-      {
-        label: 'Previous Periode (%)',
-        data: [78, 68, 58, 58, 83, 81, 77, 72, 70, 74],
-        backgroundColor: '#6c757d',
-        borderColor: '#6c757d',
-        borderWidth: 1
-      },
-      {
-        label: 'Selected Periode (%)',
-        data: [80, 78, 60, 60, 84, 81, 80, 61, 50, 67],
-        backgroundColor: '#007bff',
-        borderColor: '#007bff',
-        borderWidth: 1
-      }
-    ]
-  },
-  options: {
-    responsive: true,
-    plugins: {
-      legend: { position: 'top' },
-      annotation: {
-        annotations: {
-          targetLine: {
-            type: 'line',
-            yMin: 80,
-            yMax: 80,
-            borderColor: 'red',
-            borderWidth: 2,
-            borderDash: [6, 6],
-            label: {
-              display: true,
-              content: 'Target % Mahasiswa = 60',
-              position: 'start',
-              color: 'red',
-              backgroundColor: 'rgba(255,255,255,0.7)',
-              padding: 4
-            }
-          }
-        }
-      }
-    },
-    scales: {
-      y: {
-        beginAtZero: true,
-        max: 100
-      }
-    }
-  }
-});
-</script>
-
-     
- 
     <?php include('5script.php'); ?>

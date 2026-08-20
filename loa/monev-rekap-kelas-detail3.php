@@ -26,14 +26,6 @@
 
           <!-- ========== CARD : Filter & Export ========== -->
           <div class="card">
-            <!-- <div class="card-header bg-secondary">
-              <h5 class="card-title mb-0">
-                <i class="fas fa-database"></i> Data Produk/Barang        
-              </h5>
-              <div class="card-tools ml-auto">
-                               
-              </div>
-            </div> -->
 
             <div class="card-body ">
               <div class="row">   
@@ -50,7 +42,7 @@
                       </tr>
                       <tr>
                         <td width="30%"><b> Dosen Pengampu</b></td>
-                        <td>Tri Nugroho Sulistyantoro, S.T., M.T. - (195110502) <i class="fas fa-star"></i></td> 
+                        <td>Tri Nugroho Sulistyantoro, S.T., M.T. - (195110502) <i class="fas fa-star"></i></td>
                       </tr>
                       <tr>
                         <td width="30%"><b></b></td>
@@ -453,7 +445,7 @@
 </div>
 
 <!-- ========== CARD : Refleksi Personal Dosen (1 baris) ========== --> 
-<!-- <div class="card mb-3">
+<div class="card mb-3">
   <div class="card-header">
     <h5 class="mb-0">
       Refleksi Personal Dosen • 2024/2025 - Gasal
@@ -473,69 +465,13 @@
       <p>Mengurangi penjelasan teori panjang, menambah sesi praktik awal, serta memperpanjang waktu diskusi kelompok.</p>
     </div>
   </div>
-</div> -->
-
-<!-- CARD REKAP CATATAN & EVALUASI KELAS SESUAI PERTANYAAN -->
-<!-- <div class="col-md-12"> -->
-  <!-- <div class="card card-primary">
-
-     <div class="card-header bg-primary text-white">
-      <h5 class="card-title mb-0">Rekapan Catatan & Evaluasi MataKuliah</h5>
-      <small> Kolaboratif • Berdasarkan isian seluruh dosen untuk mata kuliah ini</small>
-    </div>
-
-    <div class="card-body">
-      <h6><strong>1. Capaian CPMK</strong></h6>
-      <p>🏆 Tercapai Kuat (2 dosen)</p>
-      <h6><strong>2. Tingkat Partisipasi Mahasiswa</strong></h6>
-      <p>🏆 Sangat Aktif (1 dosen)</p>
-      <hr>
-
-      <h6><strong>3. Efektivitas Metode Pengajaran (skala 1–5)</strong></h6>
-      <ul>
-        <li>Rata-rata skor: 4.0</li>
-        <li>Skor terbanyak: 4 (2 dosen)</li>
-      </ul>
-      <h6><strong>4. Kesesuaian Penilaian dengan Kemampuan Mahasiswa (skala 1–5)</strong></h6>
-      <ul>
-        <li>Rata-rata skor: 3.7</li>
-        <li>Skor terbanyak: 4 (2 dosen)</li>
-      </ul>
-      <hr>
-      <h6><strong>5. Kendala Utama</strong></h6>
-      <span class="badge badge-secondary">Koneksi Internet (1)</span>
-      <span class="badge badge-info">Partisipasi Rendah (2)</span>
-      <span class="badge badge-info">Materi Kompleks (2)</span>
-      <span class="badge badge-danger">Waktu Terbatas (3)</span>
-      <hr>
-      <h6><strong>6. Metode Pengajaran Paling Efektif</strong></h6>
-      <span class="badge badge-info">Diskusi (2)</span>
-      <span class="badge badge-danger">Praktikum (3)</span>
-      <span class="badge badge-info">Studi Kasus (2)</span>
-      <span class="badge badge-secondary">Project Based Learning (1)</span>
-      <hr>
-      <h6><strong>7. Catatan Dinamika Kelas</strong></h6>
-      <ul>
-        <li>Dosen 1: Partisipasi sedang, mahasiswa awal pasif tapi akhir aktif.</li>
-        <li>Dosen 2: Variatif, beberapa mahasiswa tertinggal materi awal.</li>
-        <li>Dosen 3: Interaksi meningkat saat praktikum, beberapa mahasiswa fokus terbatas.</li>
-      </ul>
-      <h6><strong>8. Rekomendasi Perbaikan</strong></h6>
-      <ul>
-        <li>Dosen 1: Tambah pre-test awal, diferensiasi tugas.</li>
-        <li>Dosen 2: Rubrik penilaian jelas, latihan praktikum tambahan.</li>
-        <li>Dosen 3: Lebih banyak diskusi interaktif, sediakan modul latihan mandiri.</li>
-      </ul>
-    </div>
-  </div> -->
-<!-- </div> -->
+</div>
 
 
 <!-- ================= Card  : Catatan evaluasi dan pengembangan ================= -->
-<!-- 
+
 <div class="row">
-
-
+  
   <div class="col-lg-6">
     <div class="card h-100">
       <div class="card-header bg-secondary text-white">
@@ -574,7 +510,7 @@
 </div>
 
 
- -->
+
           
       </div>
     </div>
@@ -619,7 +555,6 @@
   </div>
 </div>
 
-
 <!-- Modal Bantuan -->
 <div class="modal fade" id="modalBantuan" tabindex="-1" aria-labelledby="modalBantuanLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
@@ -643,151 +578,4 @@ jika ada kesamaan NIM di satu mata kuliah(artinya mahasiswa tempuh >1 kali MK ts
   </div>
 </div>
 
-
-<script>
-// Generate label CPMK 1 - 256
-const labelsCPMK = Array.from({ length: 40 }, (_, i) => `NIM ${i + 1}`);
-
-// Contoh nilai CPMK (0 - 100)
-const nilaiCPMK = Array.from({ length: 40 }, () =>
-  Math.floor(Math.random() * 101)
-);
-
-const cty = document.getElementById('barChartCPMK').getContext('2d');
-
-new Chart(cty, {
-  type: 'bar',
-  data: {
-    labels: labelsCPMK,
-    datasets: [{
-      label: 'Nilai CPMK 1',
-      data: nilaiCPMK,
-      backgroundColor: 'rgba(220, 53, 69, 0.8)', // merah (Bootstrap danger)
-      borderColor: 'rgba(220, 53, 69, 1)',
-      borderWidth: 1
-    }]
-  },
-  options: {
-    responsive: true,
-    maintainAspectRatio: false,
-    plugins: {
-      // title: {
-      //   display: true,
-      //   text: 'Capaian CPMK',
-      //   font: {
-      //     size: 18
-      //   }
-      // },
-      legend: {
-        position: 'top'
-      },
-      tooltip: {
-        callbacks: {
-          label: function(context) {
-            return `Nilai: ${context.raw}`;
-          }
-        }
-      }
-    },
-    scales: {
-      y: {
-        min: 0,
-        max: 100,
-        // title: {
-        //   display: true,
-        //   text: 'Nilai (0–100)'
-        // }
-      },
-      x: {
-        ticks: {
-          autoSkip: true,
-          maxTicksLimit: 30 // supaya tidak overload
-        },
-        title: {
-          display: true,
-          // text: 'CPMK'
-        }
-      }
-    }
-  }
-});
-</script>
-
-
-
-<script>
-// Generate label CPMK 1 - 256
-const labelsCPMK2 = Array.from({ length: 40 }, (_, i) => `NIM ${i + 1}`);
-
-// Contoh nilai CPMK (0 - 100)
-const nilaiCPMK2 = Array.from({ length: 40 }, () =>
-  Math.floor(Math.random() * 101)
-);
-
-const cty2 = document.getElementById('barChartCPMK2').getContext('2d');
-
-new Chart(cty2, {
-  type: 'bar',
-  data: {
-    labels: labelsCPMK2,
-    datasets: [{
-      label: 'Nilai CPMK 2',
-      data: nilaiCPMK2,
-      backgroundColor: 'rgba(220, 53, 69, 0.8)', // merah (Bootstrap danger)
-      borderColor: 'rgba(220, 53, 69, 1)',
-      borderWidth: 1
-    }]
-  },
-  options: {
-    responsive: true,
-    maintainAspectRatio: false,
-    plugins: {
-      // title: {
-      //   display: true,
-      //   text: 'Capaian CPMK',
-      //   font: {
-      //     size: 18
-      //   }
-      // },
-      legend: {
-        position: 'top'
-      },
-      tooltip: {
-        callbacks: {
-          label: function(context) {
-            return `Nilai: ${context.raw}`;
-          }
-        }
-      }
-    },
-    scales: {
-      y: {
-        min: 0,
-        max: 100,
-        // title: {
-        //   display: true,
-        //   text: 'Nilai (0–100)'
-        // }
-      },
-      x: {
-        ticks: {
-          autoSkip: true,
-          maxTicksLimit: 30 // supaya tidak overload
-        },
-        title: {
-          display: true,
-          // text: 'CPMK'
-        }
-      }
-    }
-  }
-});
-</script>
-
 <?php include('5script.php'); ?>
-
-
-
-
-
-

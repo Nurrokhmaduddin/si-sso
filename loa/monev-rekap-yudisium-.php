@@ -34,16 +34,12 @@
                 <div class="col-md-6">
                   <b>Set Pemetaan:</b> KT-6 (K20) Kurikulum 2025 full stage &nbsp;
                 </div>
-              
-              <div class="col-md-5">
-                <b>Periode Yudisium :</b> Jan 2027 
-              </div>
-             <!--  <div class="col-md-5">
-                <b>Status Mahasiswa:</b> Aktif - Semua
-              </div> -->
-                
+                <div class="col-md-5">
+                  <b>Periode Yudisium :</b> Jan 2027 
+                </div>
               </div>
             </div>
+
             <div class="card-footer">
               <div class="card-tools ml-auto">
                 <button class="btn btn-outline-info btn-sm " data-toggle="modal" data-target="#modalFilter">
@@ -55,11 +51,9 @@
                 <button type="button" class="btn btn-sm btn-outline-info" onclick="window.location='detail-cpl.html'"><i class="fas fa-info-circle"></i></button> 
                 <a class="btn btn-sm btn-outline-primary" href="formulir-evaluasi.php" target="_blank"><i class="fas fa-clipboard-list mr-1"> </i>Catat Temuan </a>            
               </div>
-
             </div>
           </div>
  
-
 
   <!-- ========== CARD 3: KPI row ========== --> 
   <style>
@@ -75,134 +69,126 @@
     .ewstable td, .ewstable th { vertical-align: middle; }
     .table-fixed-height { max-height: 360px; overflow:auto; }
   </style>
-    <div class="row g-3 mb-3">
-          <div class="col-md-3">
-            <div class="kpi bg-primary">
-              <div class="small">CPL yang Memenuhi Standar</div>
-              <div class="big" id="kpiAvg">7 dari 10 CPL</div>
-              <div class="small">70% mencapai standar</div>
-            </div>
-          </div>
-          
-
-          <div class="col-md-3">
-            <div class="kpi" style="background:#20c997;">
-              <div class="small"> CPL Terkuat</div>
-              <div class="big" id="kpiReached">CPL 1</div>
-              <div class="small">85% mencapai tuntas</div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="kpi" style="background:#ff7f0e;">
-              <div class="small"> Lulusan Kompeten</div>
-              <div class="big" id="kpiReached">50 dari 90 </div>
-              <div class="small">tuntas semua CPL</div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="kpi bg-danger">
-              <div class="small">CPL Terlemah</div>
-              <div class="big" id="kpiRisk">CPL 4</div>
-              <div class="small">50% mencapai tuntas</div>
-            </div>
-          </div>
-        </div>
+  <div class="row g-3 mb-3">
+    <div class="col-md-3">
+      <div class="kpi bg-primary">
+        <div class="small">CPL yang Memenuhi Standar</div>
+        <div class="big" id="kpiAvg">7 dari 10 CPL</div>
+        <div class="small">70% mencapai standar</div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="kpi" style="background:#20c997;">
+        <div class="small"> CPL Terkuat</div>
+        <div class="big" id="kpiReached">CPL 1</div>
+        <div class="small">85% mencapai tuntas</div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="kpi" style="background:#ff7f0e;">
+        <div class="small"> Lulusan Kompeten</div>
+        <div class="big" id="kpiReached">50 dari 90 </div>
+        <div class="small">tuntas semua CPL</div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="kpi bg-danger">
+        <div class="small">CPL Terlemah</div>
+        <div class="big" id="kpiRisk">CPL 4</div>
+        <div class="small">50% mencapai tuntas</div>
+      </div>
+    </div>
+  </div>
 
          
 
 
 <!-- Level 2 -->
 <div class="card">
-  <!-- <div class="card-header">
-    <h5 class="card-title mb-0"><i class="fas fa-chart-bar mr-2"></i>10 CPL Lulusan</h5>
-    <div class="card-tools">
-      <small class="text-muted">5 Batch Yudisium Terakhir</i></h5></small>
-    </div>
-  </div> -->
   <div class="card-body">
-   
-<canvas id="chartCPL1" width="100%" height="30" class="mb-4"></canvas>
-<table class="table table-bordered table-striped table-sm ">
-    <thead>
+
+    <canvas id="chartCPL1" width="100%" height="30" class="mb-4"></canvas>
+    <table class="table table-bordered table-striped table-sm ">
+      <thead>
         <tr>
-            <th>CPL</th>
-            <th>Deskripsi CPL</th>
-            <th>% Tuntas CPL</th>
+          <th>CPL</th>
+          <th>Deskripsi CPL</th>
+          <th>% Tuntas CPL</th>
         </tr>
-    </thead>
-    <tbody>
+      </thead>
+      <tbody>
         <tr>
-            <td>CPL 1</td>
-            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut l</td>
-            <td>95%</td>
-        </tr>
-        <tr>
-            <td>CPL 2</td>
-            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut l</td>
-            <td>80%</td>
+          <td>CPL 1</td>
+          <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut l</td>
+          <td>95%</td>
         </tr>
         <tr>
-            <td>CPL 3</td>
-           <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut l</td>
-            <td style="color:red;">60%</td>
+          <td>CPL 2</td>
+          <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut l</td>
+          <td>80%</td>
         </tr>
         <tr>
-            <td>CPL 4</td>
-            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut l</td>
-            <td>88%</td>
+          <td>CPL 3</td>
+          <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut l</td>
+          <td style="color:red;">60%</td>
         </tr>
         <tr>
-            <td>CPL 5</td>
-            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut l</td>
-            <td>92%</td>
+          <td>CPL 4</td>
+          <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut l</td>
+          <td>88%</td>
         </tr>
         <tr>
-            <td>CPL 6</td>
-            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut l</td>
-            <td>85%</td>
+          <td>CPL 5</td>
+          <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut l</td>
+          <td>92%</td>
         </tr>
         <tr>
-            <td>CPL 7</td>
-            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut l</td>
-            <td>98%</td>
+          <td>CPL 6</td>
+          <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut l</td>
+          <td>85%</td>
         </tr>
         <tr>
-            <td>CPL 8</td>
-            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut l</td>
-            <td>83%</td>
+          <td>CPL 7</td>
+          <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut l</td>
+          <td>98%</td>
         </tr>
         <tr>
-            <td>CPL 9</td>
-            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut l</td>
-            <td>75%</td>
+          <td>CPL 8</td>
+          <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut l</td>
+          <td>83%</td>
         </tr>
         <tr>
-            <td>CPL 10</td>
-            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut l</td>
-            <td style="color:red;">58%</td>
+          <td>CPL 9</td>
+          <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut l</td>
+          <td>75%</td>
         </tr>
-    </tbody>
-    <tfoot>
         <tr>
-            <td colspan="3">
-                <strong>Cara Membaca Tabel:</strong><br>                
-                - % Lulus CPL menunjukkan persentase mahasiswa yang mencapai batas minimal ketuntasan (misalnya ≥70).<br>
-                - Nilai berwarna <span style="color:red;">merah</span> menunjukkan gagal mencapai batas standar (>= 65%) dan perlu evaluasi lebih lanjut.
-            </td>
+          <td>CPL 10</td>
+          <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut l</td>
+          <td style="color:red;">58%</td>
         </tr>
-    </tfoot>
-</table>
-</div>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="3">
+            <strong>Cara Membaca Tabel:</strong><br>                
+            - % Lulus CPL menunjukkan persentase mahasiswa yang mencapai batas minimal ketuntasan (misalnya ≥70).<br>
+            - Nilai berwarna <span style="color:red;">merah</span> menunjukkan gagal mencapai batas standar (>= 65%) dan perlu evaluasi lebih lanjut.
+          </td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
 </div>
 
 
@@ -227,9 +213,6 @@
       </div>
       <!-- KANAN -->
       <div class="col-lg-6 ">
-        <!-- <canvas id="chartCPL1" width="100%" height="50" class="mb-4"></canvas> -->
-        <!-- <canvas id="stackedCPMKChart" width="100%" height="50" class="mb-4"></canvas> -->
-        <br>
         <!-- <h6><b>Tabel Performa Batch Yudisium</b></h6> -->
         <table class="table table-bordered table-striped table-sm ">
           <thead class=" text-center">
@@ -260,31 +243,12 @@
               <td>Lulusan Tepat Waktu (< 9 sem)</td>
               <td>57(72%)</td>
             </tr>        
-            <!-- <tr>     
-              <td>Tidak Pernah Remedial</td>
-              <td>40(50%)</td>
-            </tr>
-            <tr>
-
-              <td>Remedial Ringan (1–2 MK)</td>
-              <td>28(35%)</td>
-            </tr> -->
             <tr>    
               <td>5</td>
               <td>Lulusan Remedial Tinggi (≥ 3 MK)</td>
               <td>12(15%)</td>
             </tr>
           </tbody>
-          <!-- <tfoot>
-            <tr>
-              <td colspan="4">
-                <strong>Cara membaca tabel:</strong><br>
-                Remedial tinggi didefinisikan sebagai mahasiswa yang pernah mengulang ≥ 3 Mata Kuliah atau > 20% MK selama masa studi.
-                Angka "Persentase" menunjukkan proporsi dari total 80 lulusan pada Batch Jan 2027.<br>
-                Rata-rata jumlah remedial per lulusan: <strong>1.8 MK</strong>.
-              </td>
-            </tr>
-          </tfoot> -->
         </table>
 
       </div>
@@ -319,32 +283,6 @@
         </tr>
       </thead>
       <tbody>
-        <!-- <tr>
-          <td>Periode Jan 2025</td>
-          <td style="color:red;">62</td>
-          <td>70</td>
-          <td>74</td>
-          <td>76</td>
-          <td>78</td>
-          <td>80</td>
-          <td>82</td>
-          <td>81</td>
-          <td>79</td>
-          <td>75</td>
-        </tr>
-        <tr>
-          <td>Periode Jul 2025</td>
-          <td>68</td>
-          <td>72</td>
-          <td>76</td>
-          <td>78</td>
-          <td>80</td>
-          <td>83</td>
-          <td>85</td>
-          <td>84</td>
-          <td>82</td>
-          <td>77</td>
-        </tr> -->
         <tr>
           <td>Periode Jan 2026</td>
           <td>85</td>
@@ -403,145 +341,11 @@
     </table>
   </div>
 </div>
-<!-- ========== CARD :  Grafik Radar CPL & Progress ========== --> 
-<div class="card d-none">
-  <!-- <div class="card-header">
-    <h5 class="card-title mb-0"><i class="fas fa-chart-bar mr-2"></i>Level 1 – Ringkasan</h5>
-    <div class="card-tools">
-      <small class="text-muted">Batch Yudisium Terpilih</i></h5></small> 
-    </div> 
-  </div> -->
-  <div class="card-body p-3">
-    
-  </div>
-</div>
 
-<!-- ========== CARD : Distribusi Angkatan ========== -->
-<!-- <div class="card">
-  <div class="card-header">
-    <h5 class="card-title mb-0"><i class="fas fa-chart-bar mr-2"></i>Distribusi Angkatan Mahasiswa</h5>
-    <div class="card-tools">
-      <small class="text-muted">Batch Yudisium Terpilih</small>
-    </div>
-  </div>
-  <div class="card-body">
-
-<table class="table table-bordered table-striped table-sm">
-  <thead class="text-center">
-    <tr>
-      <th>No</th>
-      <th>Angkatan Masuk</th>
-      <th>Jumlah Lulusan</th>
-      <th>Persentase (%)</th>
-    </tr>
-  </thead>
-  <tbody class="text-center">
-    <tr>
-      <td>1</td>
-      <td>2020</td>
-      <td>50</td>
-      <td>62%</td>
-    </tr>
-    <tr>
-      <td>2</td>
-      <td>2021</td>
-      <td>20</td>
-      <td>25%</td>
-    </tr>
-    <tr>
-      <td>3</td>
-      <td>2019</td>
-      <td>10</td>
-      <td>13%</td>
-    </tr>
-  </tbody>
-  <tfoot>
-    <tr>
-      <td colspan="5">
-        <strong>Total Lulusan: 80 Mahasiswa.</strong><br>
-        Cara membaca tabel: Kolom "Angkatan Masuk" menunjukkan tahun awal studi mahasiswa.
-        Kolom "Persentase" menunjukkan proporsi dari total 80 lulusan pada Batch Yudisium Juli 2026.
-        Angkatan 2020 (62%) mendominasi, yang mengindikasikan mayoritas lulusan menyelesaikan studi tepat waktu.
-        Persentase dari angkatan 2019 (13%) menunjukkan terdapat sebagian lulusan yang menyelesaikan studi lebih dari waktu normal.
-      </td>
-    </tr>
-  </tfoot>
-</table>
-</div>
-</div> -->
-
-
-<!-- ========== CARD : tren antar batch ========== -->
-<!-- <div class="card">
-  <div class="card-body">
-    <h6><b>Tabel Perbandingan Batch Yudisium (Monitoring Periodik)</b></h6>
-    <table class="table table-bordered table-striped table-sm">
-      <thead class=" text-center">
-        <tr>
-          <th>Indikator</th>
-          <th>Batch Jan 2027</th>
-        </tr>
-      </thead>
-      <tbody class="text-center">
-        <tr>
-          <td class="text-left">Jumlah Lulusan</td>
-          <td>80</td>
-        </tr>
-        <tr>
-          <td class="text-left">IPK Rata-rata</td>
-          <td>3.42</td>
-        </tr>
-        <tr>
-          <td class="text-left">CPL Rata-rata</td>
-          <td>83%</td>
-        </tr>
-        <tr>
-          <td class="text-left">% Tepat Waktu</td>
-          <td>72%</td>
-        </tr>        
-        <tr>     
-          <td>Tidak Pernah Remedial</td>
-          <td>40(50%)</td>
-        </tr>
-        <tr>
-
-          <td>Remedial Ringan (1–2 MK)</td>
-          <td>28(35%)</td>
-        </tr>
-        <tr>    
-          <td>Remedial Tinggi (≥ 3 MK)</td>
-          <td>12(15%)</td>
-        </tr>
-      </tbody>
-      <tfoot>
-        <tr>
-          <td colspan="4">
-            <strong>Cara membaca tabel:</strong><br>
-            Tabel ini membandingkan mutu lulusan antar periode yudisium (bukan per angkatan).
-            Kolom "Perubahan" menunjukkan arah perbedaan dari Jan 2026 ke Jul 2026.
-            Jika IPK dan CPL menurun serta persentase remedial tinggi meningkat,
-            maka perlu evaluasi terhadap proses pembelajaran pada periode tersebut.
-            Tabel ini bersifat monitoring mutu output secara periodik.<br>
-            <strong>Total Lulusan: 80 Mahasiswa.</strong><br>
-        Definisi operasional: Remedial tinggi didefinisikan sebagai mahasiswa yang pernah mengulang ≥ 3 Mata Kuliah 
-        atau lebih dari 20% MK selama masa studi.<br>
-        Cara membaca tabel: Kolom "Persentase" menunjukkan proporsi dari total 80 lulusan pada Batch Juli 2026.
-        Sebanyak 50% lulusan tidak pernah remedial (menunjukkan performa akademik stabil),
-        sementara 19% termasuk kategori remedial tinggi, yang dapat menjadi bahan evaluasi mutu pembelajaran.
-        Rata-rata jumlah remedial per lulusan: <strong>1.8 MK</strong>.
-          </td>
-        </tr>
-      </tfoot>
-    </table>
-
-    
-  </div>
-</div> -->
 <!-- ========== CARD : tabel distribusi lulusan ========== -->
 <div class="card">
   <div class="card-header d-flex align-items-center">
     <h5 class="card-title mb-0">Daftar Lulusan</h5>    
-    
   </div>
 
   <div class="card-body">
@@ -561,11 +365,9 @@
             <th>IPK</th>
             <th>Kategori Remedial(0, 1-2, >3)</th>
             <th>Aksi</th>
-
           </tr>
         </thead>
         <tbody>
-
 
           <tr>
             <td class="text-center">1</td>
@@ -804,10 +606,6 @@ Fokusnya kualitas akhir dan konsistensinya.
 
 
  
-
- 
-
-
 
 <script>
   const ctx3 = document.getElementById('stackedCPMKChart').getContext('2d');
