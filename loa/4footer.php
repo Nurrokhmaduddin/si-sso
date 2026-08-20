@@ -25,14 +25,14 @@
 <!-- OverlayScrollbars -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/1.13.3/js/jquery.overlayScrollbars.min.js"></script>
 
-<!-- Bootstrap 5 Bundle (JS + Popper) harus **sebelum** AdminLTE -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Bootstrap 4 Bundle (JS + Popper 1.x) harus **sebelum** AdminLTE -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 
 <!-- AdminLTE v3 -->
 <script src="https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/js/adminlte.min.js"></script>
 
 <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
-<script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap4.min.js"></script>
 
 
 <!-- Chart.js -->
@@ -62,9 +62,8 @@ $(document).ready(function() {
 
       // alert("Anda memilih peran: " + role);
 
-      // menutup modal setelah pilih
-      let modal = bootstrap.Modal.getInstance(document.getElementById('modalPilihPeran'));
-      modal.hide();
+      // menutup modal setelah pilih (BS4: pakai jQuery plugin, bukan bootstrap.Modal.getInstance() ala BS5)
+      $('#modalPilihPeran').modal('hide');
 
       // jika mau redirect
       // window.location.href = "dashboard-" + role.toLowerCase() + ".php";
@@ -98,8 +97,8 @@ $(document).ready(function() {
 
       <!-- Header -->
       <div class="modal-header bg-info text-white">
-        <h5 class="modal-title" id="modalFeedbackLabel"><i class="fas fa-clipboard-list me-2"></i>Send Feedback</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        <h5 class="modal-title" id="modalFeedbackLabel"><i class="fas fa-clipboard-list mr-2"></i>Send Feedback</h5>
+        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
       </div>
 
       <!-- Form -->
@@ -149,7 +148,7 @@ $(document).ready(function() {
 
         <!-- Footer -->
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
           <button type="submit" class="btn btn-info text-white">Kirim Feedback</button>
         </div>
       </form>

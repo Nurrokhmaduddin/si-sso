@@ -9,7 +9,7 @@
   <section class="content-header">
     <div class="container-fluid">
       <h3 class="mb-0">RPS  
-        <button type="button" class="btn btn-tool" data-bs-toggle="modal" data-bs-target="#modalBantuan" title="Bantuan"><i class="fas fa-question-circle"></i>
+        <button type="button" class="btn btn-tool" data-toggle="modal" data-target="#modalBantuan" title="Bantuan"><i class="fas fa-question-circle"></i>
         </button> 
       </h3>
         <p class="text-muted mb-0">Keterangan singkat cara baca informasi halaman ini</p>
@@ -28,7 +28,7 @@
               <h5 class="card-title mb-0">
                 <i class="fas fa-database"></i> Data Produk/Barang        
               </h5>
-              <div class="card-tools ms-auto">
+              <div class="card-tools ml-auto">
                                
               </div>
             </div> -->
@@ -45,24 +45,24 @@
             </div>
 
             <div class="card-footer">
-              <div class="card-tools ms-auto">
-                <button class="btn btn-outline-info btn-sm " data-bs-toggle="modal" data-bs-target="#modalFilter">
-                  <i class="fas fa-filter me-1"></i> Filter
+              <div class="card-tools ml-auto">
+                <button class="btn btn-outline-info btn-sm " data-toggle="modal" data-target="#modalFilter">
+                  <i class="fas fa-filter mr-1"></i> Filter
                 </button>
-               <!--  <button type="button" class="btn btn-outline-primary btn-sm " data-bs-toggle="modal" data-bs-target="#modalTambahData">
-                  <i class="fas fa-plus me-1"></i> Add
+               <!--  <button type="button" class="btn btn-outline-primary btn-sm " data-toggle="modal" data-target="#modalTambahData">
+                  <i class="fas fa-plus mr-1"></i> Add
                 </button> -->
-                <!-- <button type="button" class="btn btn-outline-primary btn-sm " data-bs-toggle="modal" data-bs-target="#modalImpor">
-                  <i class="fas fa-file-upload me-1"></i> Import
+                <!-- <button type="button" class="btn btn-outline-primary btn-sm " data-toggle="modal" data-target="#modalImpor">
+                  <i class="fas fa-file-upload mr-1"></i> Import
                 </button> -->  
-                <!-- <button type="button" class="btn btn-outline-warning btn-sm " data-bs-toggle="modal" data-bs-target="#modalImpor">
-                  <i class="fas fa-file-upload me-1"></i> Import from Gateway UII
+                <!-- <button type="button" class="btn btn-outline-warning btn-sm " data-toggle="modal" data-target="#modalImpor">
+                  <i class="fas fa-file-upload mr-1"></i> Import from Gateway UII
                 </button> -->              
                 <button type="button" class="btn btn-outline-success btn-sm">
-                  <i class="fas fa-file-download me-1"></i> Export
+                  <i class="fas fa-file-download mr-1"></i> Export
                 </button>
                 <!-- <button type="button" class="btn btn-outline-danger btn-sm">
-                  <i class="fas fa-ban me-1"></i> Reset
+                  <i class="fas fa-ban mr-1"></i> Reset
                 </button> -->    
               </div>
             </div>
@@ -132,260 +132,33 @@
           </tr>
         </thead>
         <tbody>
-                          <tr>
-                  <td align="center">1</td>
-                  <td>
-                    Tri Nugroho Sulistyantoro, S.T., M.T.                    <br>
-                    <small><b>(195110502)</b></small>
-                  </td>
-                  <td>
-                    Metode Pelaksanaan Bangunan                    <br>
-                    <small><b>(STS704)</b></small>
-                  </td>
-                  <td>
-                    Civil Engineering Regular                    <br>
-                    <small><b>(511)</b></small>
-                  </td>
-                  <td align="center">A</td>
-                  <td align="center">
-                    <button type="button" class="btn btn-xs btn-outline-success btn-flat">Sudah Dinilai</button>                  </td>
-                  <td align="center">
-                    <a href="nilai_cpmk_isi.php">
-                      <button type="button" class="btn btn-sm btn-primary"><i class="fas fa-download"></i> Download</button>
-                    </a>
-                  </td>
-                </tr>
-                          <tr>
-                  <td align="center">2</td>
-                  <td>
-                    Tri Nugroho Sulistyantoro, S.T., M.T.                    <br>
-                    <small><b>(195110502)</b></small>
-                  </td>
-                  <td>
-                    Metode Pelaksanaan Bangunan                    <br>
-                    <small><b>(STS704)</b></small>
-                  </td>
-                  <td>
-                    Civil Engineering Regular                    <br>
-                    <small><b>(511)</b></small>
-                  </td>
-                  <td align="center">C</td>
-                  <td align="center">
-                    <button type="button" class="btn btn-xs btn-outline-success btn-flat">Sudah Dinilai</button>                  </td>
-                  <td align="center">
-                    <a href="https://tsipil-loa.tmidev.my.id/loa/nilai_cpmk/nilai_cpmk/UVVKc05HODBWV2hSc056RnBPVU16ckIwMDAwOA">
-                      <button type="button" class="btn btn-sm btn-primary"><i class="fas fa-download"></i> Download</button>
-                    </a>
-                  </td>
-                </tr>
-                          <tr>
-                  <td align="center">3</td>
-                  <td>
-                    Andi Purnomo, S.T., M.T.                    <br>
-                    <small><b>(065110501)</b></small>
-                  </td>
-                  <td>
-                    Metode Pelaksanaan Bangunan                    <br>
-                    <small><b>(STS704)</b></small>
-                  </td>
-                  <td>
-                    Civil Engineering Regular                    <br>
-                    <small><b>(511)</b></small>
-                  </td>
-                  <td align="center">B</td>
-                  <td align="center">
-                    <button type="button" class="btn btn-xs btn-outline-success btn-flat">Sudah Dinilai</button>                  </td>
-                  <td align="center">
-                    <a href="https://tsipil-loa.tmidev.my.id/loa/nilai_cpmk/nilai_cpmk/YkdnMGFEUnBNbVRLRDhjNGVqSWQzYzBtM2cwMDAxMA">
-                      <button type="button" class="btn btn-sm btn-primary"><i class="fas fa-download"></i> Download</button>
-                    </a>
-                  </td>
-                </tr>
-                          <tr>
-                  <td align="center">4</td>
-                  <td>
-                    Vendie Abma, S.T., M.T.                    <br>
-                    <small><b>(155111310)</b></small>
-                  </td>
-                  <td>
-                    Metode Pelaksanaan Bangunan                    <br>
-                    <small><b>(STS704)</b></small>
-                  </td>
-                  <td>
-                    Civil Engineering Regular                    <br>
-                    <small><b>(511)</b></small>
-                  </td>
-                  <td align="center">D</td>
-                  <td align="center">
-                    <button type="button" class="btn btn-xs btn-outline-success btn-flat">Sudah Dinilai</button>                  </td>
-                  <td align="center">
-                    <a href="https://tsipil-loa.tmidev.my.id/loa/nilai_cpmk/nilai_cpmk/T1ZjME1qUkxOSEVWMG5neVZUSWQzYzBtYWEwMDAxMA">
-                      <button type="button" class="btn btn-sm btn-primary"><i class="fas fa-download"></i> Download</button>
-                    </a>
-                  </td>
-                </tr>
-                          <tr>
-                  <td align="center">5</td>
-                  <td>
-                    Rizki Budiman, S.T., M.T.                    <br>
-                    <small><b>(245111203)</b></small>
-                  </td>
-                  <td>
-                    Metode Pelaksanaan Bangunan                    <br>
-                    <small><b>(STS704)</b></small>
-                  </td>
-                  <td>
-                    Civil Engineering Regular                    <br>
-                    <small><b>(511)</b></small>
-                  </td>
-                  <td align="center">F</td>
-                  <td align="center">
-                    <button type="button" class="btn btn-xs btn-outline-success btn-flat">Sudah Dinilai</button>                  </td>
-                  <td align="center">
-                    <a href="https://tsipil-loa.tmidev.my.id/loa/nilai_cpmk/nilai_cpmk/WkRsTE5FazA4enRiNFV6VlNNa2N6N2UwMDAwOA">
-                      <button type="button" class="btn btn-sm btn-primary"><i class="fas fa-download"></i> Download</button>
-                    </a>
-                  </td>
-                </tr>
-                          <tr>
-                  <td align="center">6</td>
-                  <td>
-                    Vendie Abma, S.T., M.T.                    <br>
-                    <small><b>(155111310)</b></small>
-                  </td>
-                  <td>
-                    Metode Pelaksanaan Bangunan                    <br>
-                    <small><b>(STS704)</b></small>
-                  </td>
-                  <td>
-                    Civil Engineering Regular                    <br>
-                    <small><b>(511)</b></small>
-                  </td>
-                  <td align="center">E</td>
-                  <td align="center">
-                    <button type="button" class="btn btn-xs btn-outline-success btn-flat">Sudah Dinilai</button>                  </td>
-                  <td align="center">
-                    <a href="https://tsipil-loa.tmidev.my.id/loa/nilai_cpmk/nilai_cpmk/T1ROYU5FNDE2R2JUYmJqQkpNV3N6VDYwMDAwOA">
-                      <button type="button" class="btn btn-sm btn-primary"><i class="fas fa-download"></i> Download</button>
-                    </a>
-                  </td>
-                </tr>
-                          <tr>
-                  <td align="center">7</td>
-                  <td>
-                    Miftahul Fauziah, S.T., M.T., Ph.D.                    <br>
-                    <small><b>(955110103)</b></small>
-                  </td>
-                  <td>
-                    Bahan Perkerasan Jalan (+Pr)                    <br>
-                    <small><b>(STS307)</b></small>
-                  </td>
-                  <td>
-                    Civil Engineering Regular                    <br>
-                    <small><b>(511)</b></small>
-                  </td>
-                  <td align="center">F</td>
-                  <td align="center">
-                    <button type="button" class="btn btn-xs btn-outline-success btn-flat">Sudah Dinilai</button>                  </td>
-                  <td align="center">
-                    <a href="https://tsipil-loa.tmidev.my.id/loa/nilai_cpmk/nilai_cpmk/WlVvMFVqTjZNRFpPdjhNMFFUSWQzYzBtNHMwMDAxMA">
-                      <button type="button" class="btn btn-sm btn-primary"><i class="fas fa-download"></i> Download</button>
-                    </a>
-                  </td>
-                </tr>
-                          <tr>
-                  <td align="center">8</td>
-                  <td>
-                    Prayogo Afang Prayitno, S.T., M.Sc.                    <br>
-                    <small><b>(205111303)</b></small>
-                  </td>
-                  <td>
-                    Bahan Perkerasan Jalan (+Pr)                    <br>
-                    <small><b>(STS307)</b></small>
-                  </td>
-                  <td>
-                    Civil Engineering Regular                    <br>
-                    <small><b>(511)</b></small>
-                  </td>
-                  <td align="center">C</td>
-                  <td align="center">
-                    <button type="button" class="btn btn-xs btn-outline-success btn-flat">Sudah Dinilai</button>                  </td>
-                  <td align="center">
-                    <a href="https://tsipil-loa.tmidev.my.id/loa/nilai_cpmk/nilai_cpmk/VDNkRE5Ea3paWm1DMmRUUkNPSE16T1cwMDAwOA">
-                      <button type="button" class="btn btn-sm btn-primary"><i class="fas fa-download"></i> Download</button>
-                    </a>
-                  </td>
-                </tr>
-                          <tr>
-                  <td align="center">9</td>
-                  <td>
-                    Ir. Berlian Kushari, S.T., M.Eng., IPM, ASEAN Eng.                    <br>
-                    <small><b>(015110101)</b></small>
-                  </td>
-                  <td>
-                    Bahan Perkerasan Jalan (+Pr)                    <br>
-                    <small><b>(STS307)</b></small>
-                  </td>
-                  <td>
-                    Civil Engineering Regular                    <br>
-                    <small><b>(511)</b></small>
-                  </td>
-                  <td align="center">G</td>
-                  <td align="center">
-                    <button type="button" class="btn btn-xs btn-outline-success btn-flat">Sudah Dinilai</button>                  </td>
-                  <td align="center">
-                    <a href="https://tsipil-loa.tmidev.my.id/loa/nilai_cpmk/nilai_cpmk/TWtoSk5IZzBEQlk2OVNURk1NMGt6S2YwMDAwOA">
-                      <button type="button" class="btn btn-sm btn-primary"><i class="fas fa-download"></i> Download</button>
-                    </a>
-                  </td>
-                </tr>
-                          <tr>
-                  <td align="center">10</td>
-                  <td>
-                    Ir. Mochammad Sigit Darmosudiharjo, M.T.                    <br>
-                    <small><b>(885110103)</b></small>
-                  </td>
-                  <td>
-                    Bahan Perkerasan Jalan (+Pr)                    <br>
-                    <small><b>(STS307)</b></small>
-                  </td>
-                  <td>
-                    Civil Engineering Regular                    <br>
-                    <small><b>(511)</b></small>
-                  </td>
-                  <td align="center">E</td>
-                  <td align="center">
-                    <button type="button" class="btn btn-xs btn-outline-success btn-flat">Sudah Dinilai</button>                  </td>
-                  <td align="center">
-                    <a href="https://tsipil-loa.tmidev.my.id/loa/nilai_cpmk/nilai_cpmk/ZVhNMFZ6UkdORXJlOWdVNFJqSWQzYzBtTnMwMDAxMA">
-                      <button type="button" class="btn btn-sm btn-primary"><i class="fas fa-download"></i> Download</button>
-                    </a>
-                  </td>
-                </tr>
-                          <tr>
-                  <td align="center">11</td>
-                  <td>
-                    Muhamad Abdul HadiS.T., M.T.                    <br>
-                    <small><b>(215111307)</b></small>
-                  </td>
-                  <td>
-                    Bahan Perkerasan Jalan (+Pr)                    <br>
-                    <small><b>(STS307)</b></small>
-                  </td>
-                  <td>
-                    Civil Engineering Regular                    <br>
-                    <small><b>(511)</b></small>
-                  </td>
-                  <td align="center">D</td>
-                  <td align="center">
-                    <button type="button" class="btn btn-xs btn-outline-success btn-flat">Sudah Dinilai</button>                  </td>
-                  <td align="center">
-                    <a href="https://tsipil-loa.tmidev.my.id/loa/nilai_cpmk/nilai_cpmk/TXpWV05FZzBISmJ2VVJUZG9NVmd6T0QwMDAwOA">
-                      <button type="button" class="btn btn-sm btn-primary"><i class="fas fa-download"></i> Download</button>
-                    </a>
-                  </td>
-                </tr>
-                </tbody>
+<?php
+$rows = [
+  ["dosen_pengampu" => "Tri Nugroho Sulistyantoro, S.T., M.T. <br> <small><b>(195110502)</b></small>", "mata_kuliah" => "Metode Pelaksanaan Bangunan <br> <small><b>(STS704)</b></small>", "kelas" => "A", "aksi" => "<a href=\"nilai_cpmk_isi.php\"> <button type=\"button\" class=\"btn btn-sm btn-primary\"><i class=\"fas fa-download\"></i> Download</button> </a>"],
+  ["dosen_pengampu" => "Tri Nugroho Sulistyantoro, S.T., M.T. <br> <small><b>(195110502)</b></small>", "mata_kuliah" => "Metode Pelaksanaan Bangunan <br> <small><b>(STS704)</b></small>", "kelas" => "C", "aksi" => "<a href=\"https://tsipil-loa.tmidev.my.id/loa/nilai_cpmk/nilai_cpmk/UVVKc05HODBWV2hSc056RnBPVU16ckIwMDAwOA\"> <button type=\"button\" class=\"btn btn-sm btn-primary\"><i class=\"fas fa-download\"></i> Download</button> </a>"],
+  ["dosen_pengampu" => "Andi Purnomo, S.T., M.T. <br> <small><b>(065110501)</b></small>", "mata_kuliah" => "Metode Pelaksanaan Bangunan <br> <small><b>(STS704)</b></small>", "kelas" => "B", "aksi" => "<a href=\"https://tsipil-loa.tmidev.my.id/loa/nilai_cpmk/nilai_cpmk/YkdnMGFEUnBNbVRLRDhjNGVqSWQzYzBtM2cwMDAxMA\"> <button type=\"button\" class=\"btn btn-sm btn-primary\"><i class=\"fas fa-download\"></i> Download</button> </a>"],
+  ["dosen_pengampu" => "Vendie Abma, S.T., M.T. <br> <small><b>(155111310)</b></small>", "mata_kuliah" => "Metode Pelaksanaan Bangunan <br> <small><b>(STS704)</b></small>", "kelas" => "D", "aksi" => "<a href=\"https://tsipil-loa.tmidev.my.id/loa/nilai_cpmk/nilai_cpmk/T1ZjME1qUkxOSEVWMG5neVZUSWQzYzBtYWEwMDAxMA\"> <button type=\"button\" class=\"btn btn-sm btn-primary\"><i class=\"fas fa-download\"></i> Download</button> </a>"],
+  ["dosen_pengampu" => "Rizki Budiman, S.T., M.T. <br> <small><b>(245111203)</b></small>", "mata_kuliah" => "Metode Pelaksanaan Bangunan <br> <small><b>(STS704)</b></small>", "kelas" => "F", "aksi" => "<a href=\"https://tsipil-loa.tmidev.my.id/loa/nilai_cpmk/nilai_cpmk/WkRsTE5FazA4enRiNFV6VlNNa2N6N2UwMDAwOA\"> <button type=\"button\" class=\"btn btn-sm btn-primary\"><i class=\"fas fa-download\"></i> Download</button> </a>"],
+  ["dosen_pengampu" => "Vendie Abma, S.T., M.T. <br> <small><b>(155111310)</b></small>", "mata_kuliah" => "Metode Pelaksanaan Bangunan <br> <small><b>(STS704)</b></small>", "kelas" => "E", "aksi" => "<a href=\"https://tsipil-loa.tmidev.my.id/loa/nilai_cpmk/nilai_cpmk/T1ROYU5FNDE2R2JUYmJqQkpNV3N6VDYwMDAwOA\"> <button type=\"button\" class=\"btn btn-sm btn-primary\"><i class=\"fas fa-download\"></i> Download</button> </a>"],
+  ["dosen_pengampu" => "Miftahul Fauziah, S.T., M.T., Ph.D. <br> <small><b>(955110103)</b></small>", "mata_kuliah" => "Bahan Perkerasan Jalan (+Pr) <br> <small><b>(STS307)</b></small>", "kelas" => "F", "aksi" => "<a href=\"https://tsipil-loa.tmidev.my.id/loa/nilai_cpmk/nilai_cpmk/WlVvMFVqTjZNRFpPdjhNMFFUSWQzYzBtNHMwMDAxMA\"> <button type=\"button\" class=\"btn btn-sm btn-primary\"><i class=\"fas fa-download\"></i> Download</button> </a>"],
+  ["dosen_pengampu" => "Prayogo Afang Prayitno, S.T., M.Sc. <br> <small><b>(205111303)</b></small>", "mata_kuliah" => "Bahan Perkerasan Jalan (+Pr) <br> <small><b>(STS307)</b></small>", "kelas" => "C", "aksi" => "<a href=\"https://tsipil-loa.tmidev.my.id/loa/nilai_cpmk/nilai_cpmk/VDNkRE5Ea3paWm1DMmRUUkNPSE16T1cwMDAwOA\"> <button type=\"button\" class=\"btn btn-sm btn-primary\"><i class=\"fas fa-download\"></i> Download</button> </a>"],
+  ["dosen_pengampu" => "Ir. Berlian Kushari, S.T., M.Eng., IPM, ASEAN Eng. <br> <small><b>(015110101)</b></small>", "mata_kuliah" => "Bahan Perkerasan Jalan (+Pr) <br> <small><b>(STS307)</b></small>", "kelas" => "G", "aksi" => "<a href=\"https://tsipil-loa.tmidev.my.id/loa/nilai_cpmk/nilai_cpmk/TWtoSk5IZzBEQlk2OVNURk1NMGt6S2YwMDAwOA\"> <button type=\"button\" class=\"btn btn-sm btn-primary\"><i class=\"fas fa-download\"></i> Download</button> </a>"],
+  ["dosen_pengampu" => "Ir. Mochammad Sigit Darmosudiharjo, M.T. <br> <small><b>(885110103)</b></small>", "mata_kuliah" => "Bahan Perkerasan Jalan (+Pr) <br> <small><b>(STS307)</b></small>", "kelas" => "E", "aksi" => "<a href=\"https://tsipil-loa.tmidev.my.id/loa/nilai_cpmk/nilai_cpmk/ZVhNMFZ6UkdORXJlOWdVNFJqSWQzYzBtTnMwMDAxMA\"> <button type=\"button\" class=\"btn btn-sm btn-primary\"><i class=\"fas fa-download\"></i> Download</button> </a>"],
+  ["dosen_pengampu" => "Muhamad Abdul HadiS.T., M.T. <br> <small><b>(215111307)</b></small>", "mata_kuliah" => "Bahan Perkerasan Jalan (+Pr) <br> <small><b>(STS307)</b></small>", "kelas" => "D", "aksi" => "<a href=\"https://tsipil-loa.tmidev.my.id/loa/nilai_cpmk/nilai_cpmk/TXpWV05FZzBISmJ2VVJUZG9NVmd6T0QwMDAwOA\"> <button type=\"button\" class=\"btn btn-sm btn-primary\"><i class=\"fas fa-download\"></i> Download</button> </a>"],
+];
+foreach ($rows as $index => $row) {
+?>
+          <tr>
+            <td align="center"><?= $index + 1 ?></td>
+            <td><?= $row['dosen_pengampu'] ?></td>
+            <td><?= $row['mata_kuliah'] ?></td>
+            <td>Civil Engineering Regular <br> <small><b>(511)</b></small></td>
+            <td align="center"><?= $row['kelas'] ?></td>
+            <td align="center"><button type="button" class="btn btn-xs btn-outline-success btn-flat">Sudah Dinilai</button></td>
+            <td align="center"><?= $row['aksi'] ?></td>
+          </tr>
+<?php } ?>
+</tbody>
               </table>
 
 
@@ -408,7 +181,7 @@
     <div class="modal-content rounded-3 shadow">
       <div class="modal-header bg-info text-white">
         <h5 class="modal-title" id="modalFilterLabel">Filter Data</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
       </div>
       <form action="" method="GET">
         <div class="modal-body">
@@ -421,13 +194,13 @@
           <!-- Pilihan -->
           <div class="mb-3">
             <label for="lembaga" class="form-label">Periode Akademik</label>
-            <select name="lembaga" id="lembaga" class="form-select">
+            <select name="lembaga" id="lembaga" class="custom-select">
               <option value="PA019" selected>2024/2025 - Gasal - (Aktif)</option><option value="PA018" >2023/2024 - Genap</option><option value="PA017" >2023/2024 - Gasal</option><option value="PA016" >2022/2023 - Genap</option><option value="PA015" >2022/2023 - Gasal</option><option value="PA014" >2021/2022 - Genap</option><option value="PA013" >2021/2022 - Gasal</option><option value="PA012" >2020/2021 - Genap</option><option value="PA011" >2020/2021 - Gasal</option><option value="PA010" >2019/2020 - Genap</option><option value="PA009" >2019/2020 - Gasal</option><option value="PA008" >2018/2019 - Genap</option><option value="PA007" >2018/2019 - Gasal</option><option value="PA006" >2017/2018 - Genap</option><option value="PA005" >2017/2018 - Gasal</option><option value="PA004" >2016/2017 - Genap</option><option value="PA003" >2016/2017 - Gasal</option><option value="PA002" >2015/2016 - Genap</option><option value="PA001" >2015/2016 - Gasal</option> 
             </select>
           </div>
 
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
             <button type="submit" class="btn btn-info">Terapkan Filter</button>
           </div>
         </div>
@@ -443,7 +216,7 @@
     <div class="modal-content">
       <div class="modal-header bg-primary text-white">
         <h5 class="modal-title" id="modalBantuanLabel">Bantuan Tabel</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
       </div>
       <div class="modal-body">
         <p>
@@ -454,7 +227,7 @@ jika ada kesamaan NIM di satu mata kuliah(artinya mahasiswa tempuh >1 kali MK ts
         </p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
       </div>
     </div>
   </div>

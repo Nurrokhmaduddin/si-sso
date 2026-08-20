@@ -9,7 +9,7 @@
   <section class="content-header">
     <div class="container-fluid">
       <h3 class="mb-0">Template Kuesioner Refleksi 
-        <button type="button" class="btn btn-tool" data-bs-toggle="modal" data-bs-target="#modalBantuan" title="Bantuan"><i class="fas fa-question-circle"></i>
+        <button type="button" class="btn btn-tool" data-toggle="modal" data-target="#modalBantuan" title="Bantuan"><i class="fas fa-question-circle"></i>
         </button> 
       </h3>
         <p class="text-muted mb-0">Keterangan singkat cara baca informasi halaman ini</p>
@@ -28,7 +28,7 @@
               <h5 class="card-title mb-0">
                 <i class="fas fa-database"></i> Data Produk/Barang        
               </h5>
-              <div class="card-tools ms-auto">
+              <div class="card-tools ml-auto">
                                
               </div>
             </div> -->
@@ -53,19 +53,19 @@
             </div>
 
             <div class="card-footer">
-              <div class="card-tools ms-auto">
+              <div class="card-tools ml-auto">
                 <button type="button" 
                 class="btn btn-outline-secondary btn-sm"
                 onclick="window.location.href='konfigurasi-kuesioner.php'">
-                <span class="fas fa-reply me-1"></span> Kembali
+                <span class="fas fa-reply mr-1"></span> Kembali
               </button>
-                <button class="btn btn-outline-info btn-sm " data-bs-toggle="modal" data-bs-target="#modalFilter">
-                  <i class="fas fa-filter me-1"></i> Filter
+                <button class="btn btn-outline-info btn-sm " data-toggle="modal" data-target="#modalFilter">
+                  <i class="fas fa-filter mr-1"></i> Filter
                 </button>
                 <button type="button" 
                 class="btn btn-outline-info btn-sm"
                 onclick="window.location.href='konfigurasi-kuesioner-rekap.html'">
-                <span class="fas fa-chart-area me-1"></span> Rekap Preview
+                <span class="fas fa-chart-area mr-1"></span> Rekap Preview
               </button>
               </div>
             </div>
@@ -949,7 +949,7 @@
     <div class="modal-content rounded-3 shadow">
       <div class="modal-header bg-info text-white">
         <h5 class="modal-title" id="modalFilterLabel">Filter Data</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
       </div>
       <form action="" method="GET">
         <div class="modal-body">
@@ -962,7 +962,7 @@
           <!-- Pilihan -->
           <div class="mb-3">
             <label for="lembaga" class="form-label">Status</label>
-            <select name="lembaga" id="lembaga" class="form-select">
+            <select name="lembaga" id="lembaga" class="custom-select">
               <option value="">-- Pilih --</option>
               <option value="IABEE" >pilihan 1</option>
               <option value="LAM TEKNIK" >pilihan 2</option>
@@ -972,7 +972,7 @@
           </div>
 
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
             <button type="submit" class="btn btn-info">Terapkan Filter</button>
           </div>
         </div>
@@ -988,7 +988,7 @@
     <div class="modal-content">
       <div class="modal-header bg-primary text-white">
         <h5 class="modal-title" id="modalBantuanLabel">Bantuan Tabel</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
       </div>
       <div class="modal-body">
         <p>
@@ -999,7 +999,7 @@ Perlu dipahami bahwa perubahan konfigurasi tidak mengubah atau menghapus data hi
         </p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
       </div>
     </div>
   </div>
@@ -1022,7 +1022,7 @@ Perlu dipahami bahwa perubahan konfigurasi tidak mengubah atau menghapus data hi
 
       <div class="modal-header">
         <h5 class="modal-title">Edit Pertanyaan</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
       </div>
 
       <div class="modal-body">
@@ -1036,7 +1036,7 @@ Perlu dipahami bahwa perubahan konfigurasi tidak mengubah atau menghapus data hi
         <!-- Tipe -->
         <div class="mb-3">
           <label class="form-label">Tipe Jawaban</label>
-          <select id="edit_type" class="form-select">
+          <select id="edit_type" class="custom-select">
             <option value="selection">Selection</option>
             <option value="tagging">Tagging</option>
             <option value="scale">Skala</option>
@@ -1055,7 +1055,7 @@ Perlu dipahami bahwa perubahan konfigurasi tidak mengubah atau menghapus data hi
         <div class="mb-3" id="edit_scale_group">
           <label class="form-label">Range Skala</label>
           <div class="d-flex">
-            <input type="number" id="scale_min" class="form-control me-2">
+            <input type="number" id="scale_min" class="form-control mr-2">
             <input type="number" id="scale_max" class="form-control">
           </div>
         </div>
@@ -1063,7 +1063,7 @@ Perlu dipahami bahwa perubahan konfigurasi tidak mengubah atau menghapus data hi
         <!-- REQUIRED -->
         <div class="mb-3">
           <label class="form-label">Status</label>
-          <select id="edit_required" class="form-select">
+          <select id="edit_required" class="custom-select">
             <option value="1">Wajib</option>
             <option value="0">Opsional</option>
           </select>
@@ -1145,7 +1145,7 @@ $("#edit_type").on("change", function () {
 
       <div class="modal-header">
         <h5 class="modal-title">Tambah Pertanyaan</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
       </div>
 
       <div class="modal-body">
@@ -1159,7 +1159,7 @@ $("#edit_type").on("change", function () {
         <!-- Tipe -->
         <div class="mb-3">
           <label class="form-label">Tipe Jawaban</label>
-          <select id="add_type" class="form-select">
+          <select id="add_type" class="custom-select">
             <option value="">-- Pilih --</option>
             <option value="selection">Selection</option>
             <option value="tagging">Tagging</option>
@@ -1178,7 +1178,7 @@ $("#edit_type").on("change", function () {
         <div class="mb-3 d-none" id="add_scale_group">
           <label class="form-label">Range Skala</label>
           <div class="d-flex">
-            <input type="number" id="add_scale_min" class="form-control me-2" placeholder="Min">
+            <input type="number" id="add_scale_min" class="form-control mr-2" placeholder="Min">
             <input type="number" id="add_scale_max" class="form-control" placeholder="Max">
           </div>
         </div>
@@ -1192,7 +1192,7 @@ $("#edit_type").on("change", function () {
         <!-- STATUS -->
         <div class="mb-3">
           <label class="form-label">Status</label>
-          <select id="add_required" class="form-select">
+          <select id="add_required" class="custom-select">
             <option value="1">Wajib</option>
             <option value="0">Opsional</option>
           </select>
@@ -1200,7 +1200,7 @@ $("#edit_type").on("change", function () {
         <!-- REKAPITULASI -->
         <div class="mb-3">
           <label class="form-label">Lingkup Refleksi</label>
-          <select id="add_required" class="form-select">
+          <select id="add_required" class="custom-select">
             <option value="1">○ Penyelenggaraan Kelas</option>
             <option value="0">○ Mata Kuliah</option>
             <option value="0">○ Program Studi</option>

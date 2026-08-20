@@ -27,7 +27,7 @@
   <section class="content-header">
     <div class="container-fluid">
       <h3 class="mb-0">Progress MK Periode
-      <button type="button" class="btn btn-tool" data-bs-toggle="modal" data-bs-target="#modalBantuan" title="Bantuan"><i class="fas fa-info-circle"></i>
+      <button type="button" class="btn btn-tool" data-toggle="modal" data-target="#modalBantuan" title="Bantuan"><i class="fas fa-info-circle"></i>
         </button>
       </h3>
         <p class="text-muted mb-0">Keterangan singkat cara baca informasi halaman ini</p>
@@ -62,26 +62,26 @@
               </div>
             </div>
             <div class="card-footer">
-              <div class="card-tools ms-auto">
-                <button class="btn btn-outline-info btn-sm " data-bs-toggle="modal" data-bs-target="#modalFilter">
-                  <i class="fas fa-filter me-1"></i> Filter
+              <div class="card-tools ml-auto">
+                <button class="btn btn-outline-info btn-sm " data-toggle="modal" data-target="#modalFilter">
+                  <i class="fas fa-filter mr-1"></i> Filter
                 </button>
-                <!-- <button type="button" class="btn btn-outline-primary btn-sm " data-bs-toggle="modal" data-bs-target="#modalTambahData">
-                  <i class="fas fa-plus me-1"></i> Add
+                <!-- <button type="button" class="btn btn-outline-primary btn-sm " data-toggle="modal" data-target="#modalTambahData">
+                  <i class="fas fa-plus mr-1"></i> Add
                 </button> -->
-                <button type="button" class="btn btn-outline-primary btn-sm " data-bs-toggle="modal" data-bs-target="#modalImpor">
-                  <i class="fas fa-file-upload me-1"></i> Import
+                <button type="button" class="btn btn-outline-primary btn-sm " data-toggle="modal" data-target="#modalImpor">
+                  <i class="fas fa-file-upload mr-1"></i> Import
                 </button>  
-                <!-- <button type="button" class="btn btn-outline-warning btn-sm " data-bs-toggle="modal" data-bs-target="#modalImpor">
-                  <i class="fas fa-file-upload me-1"></i> Import from Gateway UII
+                <!-- <button type="button" class="btn btn-outline-warning btn-sm " data-toggle="modal" data-target="#modalImpor">
+                  <i class="fas fa-file-upload mr-1"></i> Import from Gateway UII
                 </button>  -->             
                 <button type="button" class="btn btn-outline-success btn-sm">
-                  <i class="fas fa-file-download me-1"></i> Export
+                  <i class="fas fa-file-download mr-1"></i> Export
                 </button>
                 <a href="https://tsipil-loa.tmidev.my.id/loa/portofolio_cpmk/ekspor_hasil_assessmen_data/ZFVwUVMwRnZNd1ZVRUVneFZ6bEZNZ3dGMDAwMDk" type="button" class="btn btn-sm btn-success"><i class="fas fa-file-excel"></i> Ekspor Hasil Assessmen</a>
               <a href="https://tsipil-loa.tmidev.my.id/loa/portofolio_cpmk/ekspor_data_hasil_evaluasi/UWpoalVHVkJSekJWQkNPTGpNVWM1ZWpNZDNjMG1wdzAwMDEy" target="_blank" type="button" class="btn btn-sm btn-success"><i class="fas fa-file-excel"></i> Ekspor Hasil Evaluasi</a>
                 <!-- <button type="button" class="btn btn-outline-danger btn-sm">
-                  <i class="fas fa-ban me-1"></i> Reset
+                  <i class="fas fa-ban mr-1"></i> Reset
                 </button> -->    
               </div>
             </div>
@@ -109,7 +109,7 @@
 
           <tbody>
             <tr>
-              <td class="text-start">Kelas</td>
+              <td class="text-left">Kelas</td>
               <td>✔</td>
               <td>-</td>
               <td>-</td>
@@ -117,7 +117,7 @@
             </tr>
 
             <tr>
-              <td class="text-start">Mata Kuliah</td>
+              <td class="text-left">Mata Kuliah</td>
               <td>✔</td>
               <td>✔</td>
               <td>-</td>
@@ -125,7 +125,7 @@
             </tr>
 
             <tr>
-              <td class="text-start">Angkatan</td>
+              <td class="text-left">Angkatan</td>
               <td>-</td>
               <td>✔</td>
               <td>✔</td>
@@ -133,7 +133,7 @@
             </tr>
 
             <tr>
-              <td class="text-start">Yudisium</td>
+              <td class="text-left">Yudisium</td>
               <td>-</td>
               <td>✔</td>
               <td>✔</td>
@@ -141,7 +141,7 @@
             </tr>
 
             <tr>
-              <td class="text-start">Prodi</td>
+              <td class="text-left">Prodi</td>
               <td>-</td>
               <td>✔</td>
               <td>✔</td>
@@ -149,7 +149,7 @@
             </tr>
 
             <tr>
-              <td class="text-start">Kurikulum</td>
+              <td class="text-left">Kurikulum</td>
               <td>-</td>
               <td>-</td>
               <td>✔</td>
@@ -559,7 +559,7 @@
     <div class="modal-content rounded-3 shadow">
       <div class="modal-header bg-info text-white">
         <h5 class="modal-title" id="modalFilterLabel">Filter Data</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
       </div>
       <form action="" method="GET">
 
@@ -570,7 +570,7 @@
           </div>
           <div class="mb-3">
             <label for="angkatan" class="form-label">Angkatan</label>
-            <select name="angkatan" id="angkatan" class="form-select">
+            <select name="angkatan" id="angkatan" class="custom-select">
               <option value="">-- Pilih Angkatan --</option>
               <option value="2025">2025</option>
               <option value="2024">2024</option>
@@ -579,7 +579,7 @@
           </div>
           <div class="mb-3">
             <label for="status" class="form-label">Status</label>
-            <select name="status" id="status" class="form-select">
+            <select name="status" id="status" class="custom-select">
               <option value="">-- Pilih Status --</option>
               <option value="Aktif">Aktif</option>
               <option value="NonAktif">NonAktif</option>
@@ -589,7 +589,7 @@
        </div>
 
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
           <button type="submit" class="btn btn-info">Terapkan Filter</button>
         </div>
 
@@ -606,14 +606,14 @@
     <div class="modal-content rounded-3 shadow">
       <div class="modal-header bg-primary text-white">
         <h5 class="modal-title" id="modalTambahDataLabel">Tambah Data</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
       </div>
       <form action="" method="POST" enctype="multipart/form-data">
         <div class="modal-body">
 
           <!-- Informasi -->
           <div class="alert alert-warning mb-3 py-2" role="alert" style="font-size: 0.9rem;">
-            <i class="fas fa-info-circle me-1"></i>
+            <i class="fas fa-info-circle mr-1"></i>
             <strong>Catatan:</strong> Semua field yang diberi tanda <span class="text-danger">*</span> wajib diisi.
           </div>
 
@@ -639,7 +639,7 @@
           </div>
           <div class="mb-3">
             <label for="angkatan" class="form-label">Angkatan</label>
-            <select name="angkatan" id="angkatan" class="form-select">
+            <select name="angkatan" id="angkatan" class="custom-select">
               <option value="">-- Pilih Angkatan --</option>
               <option value="2025">2025</option>
               <option value="2024">2024</option>
@@ -648,7 +648,7 @@
           </div>
           <div class="mb-3">
             <label for="angkatan" class="form-label">Peminatan</label>
-            <select name="angkatan" id="angkatan" class="form-select">
+            <select name="angkatan" id="angkatan" class="custom-select">
               <option value="">-- Pilih Peminatan --</option>
               <option value="2025">A</option>
               <option value="2024">B</option>
@@ -657,7 +657,7 @@
           </div>
           <div class="mb-3">
             <label for="status" class="form-label">Status <span class="text-danger">*</span></label>
-            <select class="form-select" id="status" name="status" required>
+            <select class="custom-select" id="status" name="status" required>
               <option value="">-- Pilih Status --</option>
               <option value="Aktif">Aktif</option>
               <option value="NonAktif">NonAktif</option>
@@ -676,7 +676,7 @@
         </div>
 
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
           <button type="submit" class="btn btn-primary">Simpan Data</button>
         </div>
       </form>
@@ -692,12 +692,12 @@
 
       <div class="modal-header bg-primary text-white">
         <h5 class="modal-title">Impor Data</h5>
-        <button class="btn-close" data-bs-dismiss="modal"></button>
+        <button class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
       </div>
 
       <div class="modal-body">   
         <div class="alert alert-warning mb-3 py-2" role="alert" style="font-size: 0.9rem;">
-          <i class="fas fa-exclamation-triangle me-1"></i>
+          <i class="fas fa-exclamation-triangle mr-1"></i>
           <strong>Penting:</strong> Pastikan file yang akan diimpor menggunakan <strong>template resmi</strong> yang sudah disediakan. Menggunakan file lain atau format berbeda dapat menyebabkan <strong>kesalahan impor</strong>.
         </div>     
 
@@ -708,7 +708,7 @@
       </div>
 
       <div class="modal-footer">
-        <button class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+        <button class="btn btn-secondary" data-dismiss="modal">Batal</button>
         <button class="btn btn-primary">Impor</button>
       </div>
 
@@ -722,7 +722,7 @@
     <div class="modal-content">
       <div class="modal-header bg-primary text-white">
         <h5 class="modal-title" id="modalBantuanLabel">Bantuan Tabel</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
       </div>
       <div class="modal-body">
         <p>
@@ -730,7 +730,7 @@
         </p>        
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
       </div>
     </div>
   </div>
@@ -798,7 +798,7 @@
       <div class="modal-content">
         <div class="modal-header bg-info text-white">
           <h6 class="modal-title" id="modalValueTitle">Detail Nilai</h6>
-          <button type="button" class="btn-close btn-close-white" data-dismiss="modal" aria-label="Close"></button>
+          <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         </div>
         <div class="modal-body">
           <dl class="row mb-0">
@@ -823,7 +823,7 @@
       <div class="modal-content">
         <div class="modal-header bg-secondary text-white">
           <h6 class="modal-title">Preview Mahasiswa Risiko (sample)</h6>
-          <button type="button" class="btn-close btn-close-white" data-dismiss="modal" aria-label="Close"></button>
+          <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         </div>
         <div class="modal-body">
           <table class="table table-sm table-bordered">
@@ -848,7 +848,7 @@
       <div class="modal-content">
         <div class="modal-header bg-secondary text-white">
           <h6 class="modal-title">Preview Performa Risiko (sample)</h6>
-          <button type="button" class="btn-close btn-close-white" data-dismiss="modal" aria-label="Close"></button>
+          <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         </div>
         <div class="modal-body">
           <table class="table table-sm table-bordered">
@@ -872,8 +872,8 @@
     <div class="modal-dialog modal-sm">
       <div class="modal-content">
         <div class="modal-header bg-info text-white">
-          <h5 class="modal-title" id="modalStudentLabel"><i class="fas fa-user-graduate me-2"></i> Detil Mahasiswa</h5>
-          <button type="button" class="btn-close btn-close-white" data-dismiss="modal" aria-label="Close"></button>
+          <h5 class="modal-title" id="modalStudentLabel"><i class="fas fa-user-graduate mr-2"></i> Detil Mahasiswa</h5>
+          <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         </div>
         <div class="modal-body">
           <dl class="row mb-0">
@@ -1066,9 +1066,7 @@
       document.getElementById('summaryAngkatan').textContent = ang;
       document.getElementById('summaryProdi').textContent = prodi;
       // close modal if open
-      const modalEl = document.getElementById('modalFilter');
-      const bs = bootstrap.Modal.getInstance(modalEl);
-      if(bs) bs.hide();
+      $('#modalFilter').modal('hide');
       // in real app, perform XHR to backend to update data. Here we simply repopulate with same dummy.
       populateRekap();
       populateEws();

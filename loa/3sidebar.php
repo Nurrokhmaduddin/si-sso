@@ -11,8 +11,8 @@
     <!-- Sidebar User Panel -->
     <div class="user-panel mt-3 pb-3 mb-3 d-flex align-items-center"
     style="border-bottom: 1px solid rgba(255,255,255,.2);"
-    data-bs-toggle="modal"
-    data-bs-target="#modalPilihPeran"
+    data-toggle="modal"
+    data-target="#modalPilihPeran"
     >
 
     <!-- User Icon -->
@@ -329,7 +329,7 @@
             </li> -->
 
 <li class="nav-item">
-              <a href="monitor_verifikasi_soal.php" class="nav-link <?php echo $page == 'monitor_verifikasi_soal' ? 'active' : ''; ?>">
+              <a href="monitor-verifikasi-soal.php" class="nav-link <?php echo $page == 'monitor_verifikasi_soal' ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Verifikasi Soal Ujian</p>
               </a>
@@ -611,12 +611,12 @@
           </a>
         </li> -->
 
-<!-- KONFIGURASI -->
+<!-- KONFIGURASI SETUP (murni editorial konten bisnis event: LOA, kuesioner, notifikasi) -->
 <li class="nav-item <?php echo in_array($page, ['konfigurasi_loa','konfigurasi_notifikasi','konfigurasi_kuesioner']) ? 'menu-open' : ''; ?>">
   <a href="#" class="nav-link <?php echo in_array($page, ['konfigurasi_loa','konfigurasi_notifikasi','konfigurasi_kuesioner']) ? 'active' : ''; ?>">
     <i class="nav-icon fas fa-sliders-h"></i>
     <p>
-      Konfigurasi
+      Configuration Setup
       <i class="right fas fa-angle-left"></i>
     </p>
   </a>
@@ -641,149 +641,191 @@
     </li>
   </ul>
 </li>
-        <!-- PENGATURAN -->
-        <li class="nav-item <?php echo in_array($page, ['pengaturan_user','pengaturan_role','pengaturan_app','pengaturan_feedback','pengaturan_log']) ? 'menu-open' : ''; ?>">
-          <a href="#" class="nav-link <?php echo in_array($page, ['pengaturan_user','pengaturan_role','pengaturan_app','pengaturan_feedback','pengaturan_log']) ? 'active' : ''; ?>">
-            <i class="nav-icon fas fa-cog"></i>
-            <p>
-              System Administration
-              <i class="right fas fa-angle-left"></i>
-            </p>
+<!-- SYSTEM ACCESS (Configuration Driven: seluruh ranah administrator sendiri — identity, audit, log, app settings, feedback. Bukan konfigurasi bisnis event.) -->
+<li class="nav-item <?php echo in_array($page, ['pengaturan_user','pengaturan_role','user_actor_map','audit_trail','log_login','log_aktivitas','error_log','notifikasi_log','page_view_log','feature_usage_log','pengaturan_app','pengaturan_feedback']) ? 'menu-open' : ''; ?>">
+  <a href="#" class="nav-link <?php echo in_array($page, ['pengaturan_user','pengaturan_role','user_actor_map','audit_trail','log_login','log_aktivitas','error_log','notifikasi_log','page_view_log','feature_usage_log','pengaturan_app','pengaturan_feedback']) ? 'active' : ''; ?>">
+    <i class="nav-icon fas fa-user-shield"></i>
+    <p>
+      System Administration
+      <i class="right fas fa-angle-left"></i>
+    </p>
+  </a>
+  <ul class="nav nav-treeview">
+     <!-- FEEDBACK: data masukan pengguna & penanganannya, ranah admin murni -->
+    <li class="nav-item <?php echo in_array($page, ['pengaturan_feedback']) ? 'menu-open' : ''; ?>">
+      <a href="#" class="nav-link <?php echo in_array($page, ['pengaturan_feedback']) ? 'active' : ''; ?>">
+        <i class="far fa-circle nav-icon"></i>
+        <p>
+          Feedback
+          <i class="right fas fa-angle-left"></i>
+        </p>
+      </a>
+      <ul class="nav nav-treeview">
+        <li class="nav-item">
+          <a href="pengaturan-feedback.php" class="nav-link <?php echo $page == 'pengaturan_feedback' ? 'active' : ''; ?>">
+            <i class="far fa-dot-circle nav-icon"></i>
+            <p>Data Feedback</p>
           </a>
-          <ul class="nav nav-treeview">
-            <!-- USER (LEVEL 2) -->
-             <li class="nav-item <?php echo in_array($page, ['g']) ? 'menu-open' : ''; ?>">
-              <a href="#" class="nav-link <?php echo in_array($page, ['pengaturan_user','pengaturan_role']) ? 'active' : ''; ?>">
-                <i class="nav-icon fas fa-cog"></i>
-                <p>
-                  User
-                  <i class="right fas fa-angle-left"></i>
-                </p>
-              </a>
-              <!-- LEVEL 3 -->
-              <ul class="nav nav-treeview">
-                <li class="nav-item">
-                  <a href="pengaturan-users.php" class="nav-link <?php echo $page == 'pengaturan_user' ? 'active' : ''; ?>">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Users</p>
-                  </a>
-                </li>
-
-                <!-- <li class="nav-item">
-                  <a href="pengaturan-roles.php" class="nav-link <?php echo $page == 'pengaturan_role' ? 'active' : ''; ?>">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Roles </p>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="reset-password.php" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Reset Password</p>
-                  </a>
-                </li> -->
-                <li class="nav-item">
-                  <a href="pengaturan-user-actor-map.php" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>USER ↔ ACTOR MAPPING</p>
-                  </a>
-                </li>
-                <!-- <li class="nav-item">
-                  <a href="pengaturan-user-role-map.php" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>USER ↔ ROLE MAPPING</p>
-                  </a>
-                </li> -->
-                
-                <!-- <li class="nav-item">
-                  <a href="pengaturan-user-actor-map.php" class="nav-link">
-                    <i class="far fa-dot-circle nav-icon"></i>
-                    <p>USER ↔ ACTOR MAPPING</p>
-                  </a>
-                </li> -->
-              </ul>
-
-            </li>
-            <!-- <li class="nav-item">
-              <a href="pengaturan-users.php" class="nav-link <?php echo $page == 'pengaturan_users' ? 'active' : ''; ?>">
-                <i class="far fa-circle nav-icon"></i>
-                <p>User</p>
-              </a>
-            </li> -->
-            <!-- <li class="nav-item">
-              <a href="pengaturan-roles.php" class="nav-link <?php echo $page == 'pengaturan_role' ? 'active' : ''; ?>">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Peran & Hak Akses</p>
-              </a>
-            </li> -->
-            
-            <li class="nav-item">
-              <a href="pengaturan-log.php" class="nav-link <?php echo $page == 'pengaturan_log' ? 'active' : ''; ?>">
-                <i class="fas fa-cog nav-icon"></i>
-                <p>Audit Log</p>
-              </a>
-            </li>
-            <!-- USER (LEVEL 2) -->
-             <li class="nav-item <?php echo in_array($page, ['g']) ? 'menu-open' : ''; ?>">
-              <a href="#" class="nav-link <?php echo in_array($page, ['pengaturan_feedback']) ? 'active' : ''; ?>">
-                <i class="nav-icon fas fa-cog"></i>
-                <p>
-                  Audit Feedback
-                  <i class="right fas fa-angle-left"></i>
-                </p>
-              </a>
-              <!-- LEVEL 3 -->
-              <ul class="nav nav-treeview">
-                <li class="nav-item">
-                  <a href="pengaturan-feedback.php" class="nav-link <?php echo $page == 'pengaturan_feedback' ? 'active' : ''; ?>">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Data Feedback</p>
-                  </a>
-                </li>
-
-                <li class="nav-item">
-                  <a href="pengaturan-feedback1.php" class="nav-link <?php echo $page == 'pengaturan_role' ? 'active' : ''; ?>">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Analisis Feedback</p>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="pengaturan-feedback2.php" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Status Penanganan</p>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="pengaturan-feedback3.php" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Kategori Feedback</p>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="pengaturan-feedback4.php" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Rekap Feedback</p>
-                  </a>
-                </li>
-              </ul>
-
-            </li>
-            <li class="nav-item">
-              <a href="pengaturan-notifikasi.php" class="nav-link">
-                <i class="fas fa-cog nav-icon"></i>
-                <p>Daftar Notifikasi</p>
-              </a>
-            </li>
-           
-            <li class="nav-item">
-              <a href="pengaturan-app.php" class="nav-link <?php echo $page == 'pengaturan_app' ? 'active' : ''; ?>">
-                <i class="fas fa-cog nav-icon"></i>
-                <p>Aplikasi</p>
-              </a>
-            </li>
-          </ul>
         </li>
+        <li class="nav-item">
+          <a href="pengaturan-feedback1.php" class="nav-link">
+            <i class="far fa-dot-circle nav-icon"></i>
+            <p>Analisis Feedback</p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="pengaturan-feedback2.php" class="nav-link">
+            <i class="far fa-dot-circle nav-icon"></i>
+            <p>Status Penanganan</p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="pengaturan-feedback3.php" class="nav-link">
+            <i class="far fa-dot-circle nav-icon"></i>
+            <p>Kategori Feedback</p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="pengaturan-feedback4.php" class="nav-link">
+            <i class="far fa-dot-circle nav-icon"></i>
+            <p>Rekap Feedback</p>
+          </a>
+        </li>
+      </ul>
+    </li>
+    <!-- IDENTITY (level 2 collapsible) -->
+    <li class="nav-item <?php echo in_array($page, ['pengaturan_user','pengaturan_role','user_actor_map']) ? 'menu-open' : ''; ?>">
+      <a href="#" class="nav-link <?php echo in_array($page, ['pengaturan_user','pengaturan_role','user_actor_map']) ? 'active' : ''; ?>">
+        <i class="far fa-circle nav-icon"></i>
+        <p>
+          Identity Access
+          <i class="right fas fa-angle-left"></i>
+        </p>
+      </a>
+      <ul class="nav nav-treeview">
+        <li class="nav-item">
+          <a href="pengaturan-users.php" class="nav-link <?php echo $page == 'pengaturan_user' ? 'active' : ''; ?>">
+            <i class="far fa-dot-circle nav-icon"></i>
+            <p>Akun (Users)</p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="pengaturan-roles.php" class="nav-link <?php echo $page == 'pengaturan_role' ? 'active' : ''; ?>">
+            <i class="far fa-dot-circle nav-icon"></i>
+            <p>Role per Akun</p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="pengaturan-user-actor-map.php" class="nav-link <?php echo $page == 'user_actor_map' ? 'active' : ''; ?>">
+            <i class="far fa-dot-circle nav-icon"></i>
+            <p>Pemetaan Data Access</p>
+          </a>
+        </li>
+      </ul>
+    </li>
+ 
+        <!-- AUDIT TRAIL: jejak perubahan data ("siapa mengubah apa") — level 2 collapsible, 1 sub-item -->
+    <li class="nav-item <?php echo in_array($page, ['audit_trail']) ? 'menu-open' : ''; ?>">
+      <a href="#" class="nav-link <?php echo in_array($page, ['audit_trail']) ? 'active' : ''; ?>">
+        <i class="far fa-circle nav-icon"></i>
+        <p>
+          Audit Trail
+          <i class="right fas fa-angle-left"></i>
+        </p>
+      </a>
+      <ul class="nav nav-treeview">
+        <li class="nav-item">
+          <a href="system-audit-trail.php" class="nav-link <?php echo $page == 'audit_trail' ? 'active' : ''; ?>">
+            <i class="far fa-dot-circle nav-icon"></i>
+            <p>Riwayat Perubahan Data</p>
+          </a>
+        </li>
+      </ul>
+    </li>
+ 
+    <!-- SYSTEM LOG: aktivitas teknis sistem ("apa yang terjadi di sistem") -->
+    <li class="nav-item <?php echo in_array($page, ['log_login','log_aktivitas','error_log','notifikasi_log','page_view_log','feature_usage_log']) ? 'menu-open' : ''; ?>">
+      <a href="#" class="nav-link <?php echo in_array($page, ['log_login','log_aktivitas','error_log','notifikasi_log','page_view_log','feature_usage_log']) ? 'active' : ''; ?>">
+        <i class="far fa-circle nav-icon"></i>
+        <p>
+          System Log
+          <i class="right fas fa-angle-left"></i>
+        </p>
+      </a>
+      <ul class="nav nav-treeview">
+        <li class="nav-item">
+          <a href="system-log-login.php" class="nav-link <?php echo $page == 'log_login' ? 'active' : ''; ?>">
+            <i class="far fa-dot-circle nav-icon"></i>
+            <p>Log Login</p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="system-log-aktivitas.php" class="nav-link <?php echo $page == 'log_aktivitas' ? 'active' : ''; ?>">
+            <i class="far fa-dot-circle nav-icon"></i>
+            <p>Log Aktivitas</p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="system-error-log.php" class="nav-link <?php echo $page == 'error_log' ? 'active' : ''; ?>">
+            <i class="far fa-dot-circle nav-icon"></i>
+            <p>Error Log</p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="system-notifikasi-log.php" class="nav-link <?php echo $page == 'notifikasi_log' ? 'active' : ''; ?>">
+            <i class="far fa-dot-circle nav-icon"></i>
+            <p>Notifikasi Log</p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="system-page-view-log.php" class="nav-link <?php echo $page == 'page_view_log' ? 'active' : ''; ?>">
+            <i class="far fa-dot-circle nav-icon"></i>
+            <p>Page View Log</p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="system-feature-usage-log.php" class="nav-link <?php echo $page == 'feature_usage_log' ? 'active' : ''; ?>">
+            <i class="far fa-dot-circle nav-icon"></i>
+            <p>Feature Usage Log</p>
+          </a>
+        </li>
+      </ul>
+    </li>
+ 
+    <!-- APPLICATION SETTINGS: pengaturan teknis aplikasi, ranah admin murni — level 2 collapsible, 1 sub-item -->
+    <li class="nav-item <?php echo in_array($page, ['pengaturan_app']) ? 'menu-open' : ''; ?>">
+      <a href="#" class="nav-link <?php echo in_array($page, ['pengaturan_app']) ? 'active' : ''; ?>">
+        <i class="far fa-circle nav-icon"></i>
+        <p>
+          Pengaturan Umum
+          <i class="right fas fa-angle-left"></i>
+        </p>
+      </a>
+      <ul class="nav nav-treeview">
+        <li class="nav-item">
+          <a href="pengaturan-app.php" class="nav-link <?php echo $page == 'pengaturan_app' ? 'active' : ''; ?>">
+            <i class="far fa-dot-circle nav-icon"></i>
+            <p>Pengaturan Aplikasi</p>
+          </a>
+        </li>
+      </ul>
+    </li>
+ 
 
-        <!-- KEMBALI MENU UTAMA -->
+ 
+    <!-- ARSIP - tidak dipakai: model multi-role per akun (bertentangan dengan prinsip 1 akun = 1 data role)
+    <li class="nav-item">
+      <a href="pengaturan-user-role-map.php" class="nav-link">
+        <i class="far fa-circle nav-icon"></i>
+        <p>USER ↔ ROLE MAPPING (multi-role, deprecated)</p>
+      </a>
+    </li>
+    -->
+  </ul>
+</li>
+
+
+       <!-- KEMBALI MENU UTAMA -->
         <li class="nav-item mt-3">
           <a href="../menu.php" class="nav-link">
             <i class="nav-icon fas fa-arrow-left"></i>
@@ -808,7 +850,7 @@
 
       <div class="modal-header">
         <h5 class="modal-title">Pilih Peran</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
       </div>
 
       <div class="modal-body text-center">

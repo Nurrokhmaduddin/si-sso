@@ -9,7 +9,7 @@
   <section class="content-header">
     <div class="container-fluid">
       <h3 class="mb-0">Monev CPL Angkatan
-        <button type="button" class="btn btn-tool" data-bs-toggle="modal" data-bs-target="#modalBantuan" title="Bantuan">
+        <button type="button" class="btn btn-tool" data-toggle="modal" data-target="#modalBantuan" title="Bantuan">
           <i class="fas fa-question-circle"></i>
         </button>
       </h3>
@@ -50,14 +50,14 @@
               </div>
             </div>
             <div class="card-footer">
-              <div class="card-tools ms-auto">
-                <button class="btn btn-outline-info btn-sm " data-bs-toggle="modal" data-bs-target="#modalFilter">
-                  <i class="fas fa-filter me-1"></i> Filter
+              <div class="card-tools ml-auto">
+                <button class="btn btn-outline-info btn-sm " data-toggle="modal" data-target="#modalFilter">
+                  <i class="fas fa-filter mr-1"></i> Filter
                 </button>                
                 <button type="button" class="btn btn-outline-success btn-sm">
-                  <i class="fas fa-file-download me-1"></i> Export
+                  <i class="fas fa-file-download mr-1"></i> Export
                 </button>  
-                <a class="btn btn-sm btn-outline-primary" href="formulir-evaluasi.php" target="_blank"><i class="fas fa-clipboard-list me-1"> </i>Catat Temuan </a>               
+                <a class="btn btn-sm btn-outline-primary" href="formulir-evaluasi.php" target="_blank"><i class="fas fa-clipboard-list mr-1"> </i>Catat Temuan </a>               
               </div>
 
             </div>
@@ -319,7 +319,7 @@
     <div class="modal-content rounded-3 shadow">
       <div class="modal-header bg-info text-white">
         <h5 class="modal-title" id="modalFilterLabel">Filter Data</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
       </div>
       <form action="" method="GET">
 
@@ -330,7 +330,7 @@
           </div>
           <div class="mb-3">
             <label for="angkatan" class="form-label">Angkatan</label>
-            <select name="angkatan" id="angkatan" class="form-select">
+            <select name="angkatan" id="angkatan" class="custom-select">
               <option value="">-- Pilih Angkatan --</option>
               <option value="2025">2025</option>
               <option value="2024">2024</option>
@@ -339,7 +339,7 @@
           </div>
           <div class="mb-3">
             <label for="status" class="form-label">Status</label>
-            <select name="status" id="status" class="form-select">
+            <select name="status" id="status" class="custom-select">
               <option value="">-- Pilih Status --</option>
               <option value="Aktif">Aktif</option>
               <option value="NonAktif">NonAktif</option>
@@ -349,7 +349,7 @@
        </div>
 
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
           <button type="submit" class="btn btn-info">Terapkan Filter</button>
         </div>
 
@@ -366,7 +366,7 @@
     <div class="modal-content">
       <div class="modal-header bg-primary text-white">
         <h5 class="modal-title" id="modalBantuanLabel">Bantuan Tabel</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
       </div>
       <div class="modal-body">
         <p>
@@ -406,7 +406,7 @@ semester akademik a, semester akademik b, c, dst....
         tren antar angkatan, akan melihat dengan cara pandang sama dengan snapshot, hanya tidak terlalu detail datanya.</p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
       </div>
     </div>
   </div>

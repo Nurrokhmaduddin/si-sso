@@ -8,7 +8,7 @@
   <section class="content-header">
     <div class="container-fluid">
       <h3 class="mb-0">Perwalian - Bimbingan Akademik
-        <button type="button" class="btn btn-tool" data-bs-toggle="modal" data-bs-target="#modalBantuan" title="Bantuan"><i class="fas fa-question-circle"></i>
+        <button type="button" class="btn btn-tool" data-toggle="modal" data-target="#modalBantuan" title="Bantuan"><i class="fas fa-question-circle"></i>
         </button> 
       </h3>
         <p class="text-muted mb-0">Keterangan singkat cara baca informasi halaman ini</p>
@@ -30,7 +30,7 @@
               <h5 class="card-title mb-0">
                 <i class="fas fa-database"></i> Data Produk/Barang        
               </h5>
-              <div class="card-tools ms-auto">
+              <div class="card-tools ml-auto">
                                
               </div>
             </div> -->
@@ -40,30 +40,30 @@
             </div>
 
             <div class="card-footer">
-              <div class="card-tools ms-auto">
+              <div class="card-tools ml-auto">
                  <!-- <button type="button" 
                 class="btn btn-outline-secondary btn-sm"
                 onclick="window.location.href='monev-rekap-kelas.php'">
-                <span class="fas fa-reply me-1"></span> Kembali
+                <span class="fas fa-reply mr-1"></span> Kembali
               </button> -->
 
-                <!-- <button class="btn btn-outline-info btn-sm " data-bs-toggle="modal" data-bs-target="#modalFilter">
-                  <i class="fas fa-filter me-1"></i> Filter
+                <!-- <button class="btn btn-outline-info btn-sm " data-toggle="modal" data-target="#modalFilter">
+                  <i class="fas fa-filter mr-1"></i> Filter
                 </button> -->
-               <!--  <button type="button" class="btn btn-outline-primary btn-sm " data-bs-toggle="modal" data-bs-target="#modalTambahData">
-                  <i class="fas fa-plus me-1"></i> Add
+               <!--  <button type="button" class="btn btn-outline-primary btn-sm " data-toggle="modal" data-target="#modalTambahData">
+                  <i class="fas fa-plus mr-1"></i> Add
                 </button> -->
-                <button type="button" class="btn btn-outline-primary btn-sm " data-bs-toggle="modal" data-bs-target="#modalImpor">
-                  <i class="fas fa-file-upload me-1"></i> Import
+                <button type="button" class="btn btn-outline-primary btn-sm " data-toggle="modal" data-target="#modalImpor">
+                  <i class="fas fa-file-upload mr-1"></i> Import
                 </button>  
-                <!-- <button type="button" class="btn btn-outline-warning btn-sm " data-bs-toggle="modal" data-bs-target="#modalImpor">
-                  <i class="fas fa-file-upload me-1"></i> Import from Gateway UII
+                <!-- <button type="button" class="btn btn-outline-warning btn-sm " data-toggle="modal" data-target="#modalImpor">
+                  <i class="fas fa-file-upload mr-1"></i> Import from Gateway UII
                 </button> -->              
                 <button type="button" class="btn btn-outline-success btn-sm">
-                  <i class="fas fa-file-download me-1"></i> Export
+                  <i class="fas fa-file-download mr-1"></i> Export
                 </button>
                 <button type="button" class="btn btn-outline-danger btn-sm">
-                  <i class="fas fa-ban me-1"></i> Reset
+                  <i class="fas fa-ban mr-1"></i> Reset
                 </button>    
               </div>
             </div>
@@ -238,7 +238,7 @@
     <div class="modal-content rounded-3 shadow">
       <div class="modal-header bg-info text-white">
         <h5 class="modal-title" id="modalFilterLabel">Filter Data</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
       </div>
       <form action="" method="GET">
         <div class="modal-body">
@@ -251,13 +251,13 @@
           <!-- Pilihan -->
           <div class="mb-3">
             <label for="lembaga" class="form-label">Periode Akademik</label>
-            <select name="lembaga" id="lembaga" class="form-select">
+            <select name="lembaga" id="lembaga" class="custom-select">
               <option value="PA019" selected>2024/2025 - Gasal - (Aktif)</option><option value="PA018" >2023/2024 - Genap</option><option value="PA017" >2023/2024 - Gasal</option><option value="PA016" >2022/2023 - Genap</option><option value="PA015" >2022/2023 - Gasal</option><option value="PA014" >2021/2022 - Genap</option><option value="PA013" >2021/2022 - Gasal</option><option value="PA012" >2020/2021 - Genap</option><option value="PA011" >2020/2021 - Gasal</option><option value="PA010" >2019/2020 - Genap</option><option value="PA009" >2019/2020 - Gasal</option><option value="PA008" >2018/2019 - Genap</option><option value="PA007" >2018/2019 - Gasal</option><option value="PA006" >2017/2018 - Genap</option><option value="PA005" >2017/2018 - Gasal</option><option value="PA004" >2016/2017 - Genap</option><option value="PA003" >2016/2017 - Gasal</option><option value="PA002" >2015/2016 - Genap</option><option value="PA001" >2015/2016 - Gasal</option> 
             </select>
           </div>
 
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
             <button type="submit" class="btn btn-info">Terapkan Filter</button>
           </div>
         </div>
@@ -273,7 +273,7 @@
     <div class="modal-content">
       <div class="modal-header bg-primary text-white">
         <h5 class="modal-title" id="modalBantuanLabel">Bantuan Tabel</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
       </div>
       <div class="modal-body">
         <p>
@@ -281,7 +281,7 @@
         </p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
       </div>
     </div>
   </div>

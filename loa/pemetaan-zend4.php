@@ -9,7 +9,7 @@
   <section class="content-header">
     <div class="container-fluid">
       <h3 class="mb-0">Pemetaan CPL-IK-CPMK
-        <button type="button" class="btn btn-tool" data-bs-toggle="modal" data-bs-target="#modalBantuan" title="Bantuan"><i class="fas fa-question-circle"></i>
+        <button type="button" class="btn btn-tool" data-toggle="modal" data-target="#modalBantuan" title="Bantuan"><i class="fas fa-question-circle"></i>
                 </button>
               </h3>
         <p class="text-muted mb-0">Keterangan singkat cara baca informasi halaman ini</p>
@@ -40,21 +40,21 @@
             </div>
 
             <div class="card-footer">
-              <div class="card-tools ms-auto">
-                <button class="btn btn-outline-info btn-sm " data-bs-toggle="modal" data-bs-target="#modalFilter">
-                  <i class="fas fa-filter me-1"></i> Filter
+              <div class="card-tools ml-auto">
+                <button class="btn btn-outline-info btn-sm " data-toggle="modal" data-target="#modalFilter">
+                  <i class="fas fa-filter mr-1"></i> Filter
                 </button>
-                <!-- <button type="button" class="btn btn-outline-primary btn-sm " data-bs-toggle="modal" data-bs-target="#modalTambahData">
-                  <i class="fas fa-plus me-1"></i> Add
+                <!-- <button type="button" class="btn btn-outline-primary btn-sm " data-toggle="modal" data-target="#modalTambahData">
+                  <i class="fas fa-plus mr-1"></i> Add
                 </button>
-                <button type="button" class="btn btn-outline-primary btn-sm " data-bs-toggle="modal" data-bs-target="#modalImpor">
-                  <i class="fas fa-file-upload me-1"></i> Import
+                <button type="button" class="btn btn-outline-primary btn-sm " data-toggle="modal" data-target="#modalImpor">
+                  <i class="fas fa-file-upload mr-1"></i> Import
                 </button> -->                
                 <button type="button" class="btn btn-outline-success btn-sm">
-                  <i class="fas fa-file-download me-1"></i> Export
+                  <i class="fas fa-file-download mr-1"></i> Export
                 </button>
                 <!-- <button type="button" class="btn btn-outline-danger btn-sm">
-                  <i class="fas fa-ban me-1"></i> Reset
+                  <i class="fas fa-ban mr-1"></i> Reset
                 </button> -->    
               </div>
             </div>
@@ -78,7 +78,7 @@
                         <tr>
                           <!-- <th rowspan="2">Kode MK</th> -->
                           <th rowspan="2" colspan="2">CPMK</th>
-                        <th colspan="2" data-bs-toggle="tooltip" title="CPL 1: Bertakwa kepada Tuhan Yang Maha Esa dan berperilaku islami">CPL 1</th>
+                        <th colspan="2" data-toggle="tooltip" title="CPL 1: Bertakwa kepada Tuhan Yang Maha Esa dan berperilaku islami">CPL 1</th>
                           <th colspan="2">CPL 2</th>
                           <th colspan="3">CPL 3</th>
                           <th colspan="2">CPL 4</th>
@@ -91,7 +91,7 @@
                         </tr>
                         <!-- Baris 2: IK -->
                         <tr>
-                          <th data-bs-toggle="tooltip" title="IK 1: Menunjukkan perilaku islami pada setiap peran yang dijalani (50%)">IK 1 (50%)</th>
+                          <th data-toggle="tooltip" title="IK 1: Menunjukkan perilaku islami pada setiap peran yang dijalani (50%)">IK 1 (50%)</th>
                           <th>IK 2 (50%)</th>
                           <th>IK 3 (30%)</th>
                           <th>IK 4 (70%)</th>
@@ -120,7 +120,7 @@
                         </tr>
                         <tr>
                           <td>STE120</td>
-                          <td data-bs-toggle="tooltip" title="Deskripsi CPMK 1">1</td>
+                          <td data-toggle="tooltip" title="Deskripsi CPMK 1">1</td>
                           <td class="text-center">60%</td><td></td>
                           <td></td><td></td>
                           <td></td><td></td><td></td>
@@ -244,7 +244,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="modalTambahIKLabel">➕ Tambah IK</h5>
-        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Tutup">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Tutup">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
@@ -262,7 +262,7 @@
         </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
         <button type="submit" class="btn btn-primary" form="formTambahIK">Simpan</button>
       </div>
     </div>
@@ -275,7 +275,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="modalTambahMKCPMK1Label">➕ Tambah MK-CPMK</h5>
-        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Tutup">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Tutup">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
@@ -304,7 +304,7 @@
         </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
         <button type="submit" class="btn btn-primary" form="formTambahMKCPMK1">Simpan</button>
       </div>
     </div>
@@ -317,7 +317,7 @@
     <div class="modal-content">
       <div class="modal-header bg-primary text-white">
         <h5 class="modal-title" id="modalBantuanLabel">Bantuan Tabel</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
       </div>
       <div class="modal-body">
         <p>pilihan developmen :
@@ -325,7 +325,7 @@
       -pembobotan hanya IK, atau IK dan CPMK</p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
       </div>
     </div>
   </div>

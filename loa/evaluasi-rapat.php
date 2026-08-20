@@ -9,7 +9,7 @@
   <section class="content-header">
     <div class="container-fluid">
       <h3 class="mb-0">Dokumentasi Keputusan & Kebijakan 
-        <button type="button" class="btn btn-tool" data-bs-toggle="modal" data-bs-target="#modalBantuan" title="Bantuan"><i class="fas fa-question-circle"></i>
+        <button type="button" class="btn btn-tool" data-toggle="modal" data-target="#modalBantuan" title="Bantuan"><i class="fas fa-question-circle"></i>
         </button> 
       </h3>
         <p class="text-muted mb-0">Keterangan singkat cara baca informasi halaman ini</p>
@@ -28,7 +28,7 @@
               <h5 class="card-title mb-0">
                 <i class="fas fa-database"></i> Data Produk/Barang        
               </h5>
-              <div class="card-tools ms-auto">
+              <div class="card-tools ml-auto">
                                
               </div>
             </div> -->
@@ -45,21 +45,21 @@
             </div> -->
 
             <div class="card-footer">
-              <div class="card-tools ms-auto">
-                <!-- <button class="btn btn-outline-info btn-sm " data-bs-toggle="modal" data-bs-target="#modalFilter">
-                  <i class="fas fa-filter me-1"></i> Filter
+              <div class="card-tools ml-auto">
+                <!-- <button class="btn btn-outline-info btn-sm " data-toggle="modal" data-target="#modalFilter">
+                  <i class="fas fa-filter mr-1"></i> Filter
                 </button> -->
-                <button type="button" class="btn btn-outline-primary btn-sm " data-bs-toggle="modal" data-bs-target="#modalTambahData">
-                  <i class="fas fa-plus me-1"></i> Add
+                <button type="button" class="btn btn-outline-primary btn-sm " data-toggle="modal" data-target="#modalTambahData">
+                  <i class="fas fa-plus mr-1"></i> Add
                 </button>
-                <!-- <button type="button" class="btn btn-outline-primary btn-sm " data-bs-toggle="modal" data-bs-target="#modalImpor">
-                  <i class="fas fa-file-upload me-1"></i> Import
+                <!-- <button type="button" class="btn btn-outline-primary btn-sm " data-toggle="modal" data-target="#modalImpor">
+                  <i class="fas fa-file-upload mr-1"></i> Import
                 </button> -->                
                 <!-- <button type="button" class="btn btn-outline-success btn-sm">
-                  <i class="fas fa-file-download me-1"></i> Export
+                  <i class="fas fa-file-download mr-1"></i> Export
                 </button> -->
                 <!-- <button type="button" class="btn btn-outline-danger btn-sm">
-                  <i class="fas fa-ban me-1"></i> Reset
+                  <i class="fas fa-ban mr-1"></i> Reset
                 </button>   -->  
               </div>
             </div>
@@ -71,15 +71,15 @@
           <div class="card">
             <!-- <div class="card-header d-flex align-items-center">
               <h5 class="card-title mb-0">Judul tabel ini</h5>    
-              <div class="ms-auto">                
+              <div class="ml-auto">                
                 <button type="button" class="btn btn-outline-primary btn-sm " data-toggle="modal" data-target="#modalTambahData">
-                  <i class="fas fa-plus me-1"></i> Add
+                  <i class="fas fa-plus mr-1"></i> Add
                 </button>
                 <button type="button" class="btn btn-outline-primary btn-sm ">
-                  <i class="fas fa-file-upload me-1"></i> Import
+                  <i class="fas fa-file-upload mr-1"></i> Import
                 </button>
                 <button type="button" class="btn btn-outline-success btn-sm">
-                  <i class="fas fa-file-download me-1"></i> Export
+                  <i class="fas fa-file-download mr-1"></i> Export
                 </button>
               </div>
             </div> -->
@@ -135,7 +135,7 @@
     <div class="modal-content rounded-3 shadow">
       <div class="modal-header bg-info text-white">
         <h5 class="modal-title" id="modalFilterLabel">Filter Data</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
       </div>
       <form action="" method="GET">
         <div class="modal-body">
@@ -148,7 +148,7 @@
           <!-- Pilihan -->
           <div class="mb-3">
             <label for="lembaga" class="form-label">Status</label>
-            <select name="lembaga" id="lembaga" class="form-select">
+            <select name="lembaga" id="lembaga" class="custom-select">
               <option value="">-- Pilih --</option>
               <option value="IABEE" >pilihan 1</option>
               <option value="LAM TEKNIK" >pilihan 2</option>
@@ -158,7 +158,7 @@
           </div>
 
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
             <button type="submit" class="btn btn-info">Terapkan Filter</button>
           </div>
         </div>
@@ -174,7 +174,7 @@
     <div class="modal-content">
       <div class="modal-header bg-primary text-white">
         <h5 class="modal-title" id="modalBantuanLabel">Bantuan Tabel</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
       </div>
       <div class="modal-body">
         <p>
@@ -464,7 +464,7 @@ Itulah makna continuous improvement.
 </p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
       </div>
     </div>
   </div>
@@ -479,10 +479,10 @@ Itulah makna continuous improvement.
       <!-- Header -->
       <div class="modal-header bg-light">
         <h5 class="modal-title fw-semibold">
-          <i class="fas fa-upload me-2 text-primary"></i>
+          <i class="fas fa-upload mr-2 text-primary"></i>
           Upload Dokumen Akademik
         </h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
       </div>
 
       <!-- Form -->
@@ -527,11 +527,11 @@ Itulah makna continuous improvement.
 
         <!-- Footer -->
         <div class="modal-footer bg-light">
-          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+          <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">
             Batal
           </button>
           <button type="submit" name="submit_upload" class="btn btn-primary">
-            <i class="fas fa-save me-2"></i>Simpan
+            <i class="fas fa-save mr-2"></i>Simpan
           </button>
         </div>
 

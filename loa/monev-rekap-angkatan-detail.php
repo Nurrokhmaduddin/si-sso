@@ -9,7 +9,7 @@
   <section class="content-header">
     <div class="container-fluid">
       <h3 class="mb-0">Monev Angkatan
-        <button type="button" class="btn btn-tool" data-bs-toggle="modal" data-bs-target="#modalBantuan" title="Bantuan">
+        <button type="button" class="btn btn-tool" data-toggle="modal" data-target="#modalBantuan" title="Bantuan">
           <i class="fas fa-question-circle"></i>
         </button>
       </h3>
@@ -44,11 +44,11 @@
     </table>
             </div>
             <div class="card-footer">
-              <div class="card-tools ms-auto">
+              <div class="card-tools ml-auto">
                 <button type="button" class="btn btn-outline-secondary btn-sm" onclick="window.location.href='monev-rekap-angkatan-.php'">
-                  <i class="fas fa-reply me-1"></i> Kembali
+                  <i class="fas fa-reply mr-1"></i> Kembali
                 </button>    
-                <a class="btn btn-sm btn-outline-primary" href="formulir-evaluasi.php" target="_blank"><i class="fas fa-clipboard-list me-1"> </i>Catat Temuan </a> 
+                <a class="btn btn-sm btn-outline-primary" href="formulir-evaluasi.php" target="_blank"><i class="fas fa-clipboard-list mr-1"> </i>Catat Temuan </a> 
               </div>
             </div>
           </div>
@@ -118,14 +118,14 @@
 
           <tr>
             <td>Perkembangan Tren</td>
-            <td><span class="badge bg-success">Menaik</span></td>
-            <td><span class="badge bg-warning text-dark">Fluktuatif</span></td>
-            <td><span class="badge bg-success">Menaik</span></td>
-            <td><span class="badge bg-secondary">Stagnan</span></td>
-            <td><span class="badge bg-warning text-dark">Fluktuatif</span></td>
-            <td><span class="badge bg-success">Menaik</span></td>
-            <td><span class="badge bg-danger">Menurun</span></td>
-            <td><span class="badge bg-success">Menaik</span></td>
+            <td><span class="badge-success">Menaik</span></td>
+            <td><span class="badge-warning text-dark">Fluktuatif</span></td>
+            <td><span class="badge-success">Menaik</span></td>
+            <td><span class="badge-secondary">Stagnan</span></td>
+            <td><span class="badge-warning text-dark">Fluktuatif</span></td>
+            <td><span class="badge-success">Menaik</span></td>
+            <td><span class="badge-danger">Menurun</span></td>
+            <td><span class="badge-success">Menaik</span></td>
           </tr>
 
           
@@ -162,7 +162,7 @@
       
       <div class="modal-header bg-info text-white">
         <h5 class="modal-title" id="modalFilterLabel"> Pencarian Mahasiswa</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
       </div>
 
       <form action="" method="GET">
@@ -190,7 +190,7 @@
         </div>
 
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">
             Batal
           </button>
           <button type="submit" class="btn btn-info">
@@ -212,7 +212,7 @@
     <div class="modal-content">
       <div class="modal-header bg-primary text-white">
         <h5 class="modal-title" id="modalBantuanLabel">Bantuan Tabel</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
       </div>
       <div class="modal-body">
         <p>
@@ -220,7 +220,7 @@
         </p>        
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
       </div>
     </div>
   </div>

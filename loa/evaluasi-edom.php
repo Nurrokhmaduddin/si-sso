@@ -47,7 +47,7 @@ if (file_exists($sidebar_file)) {
                                     <span class="fas fa-reply"></span> Kembali
                                 </a>
 
-                                <button type="button" class="btn btn-primary btn-sm me-2">
+                                <button type="button" class="btn btn-primary btn-sm mr-2">
                                     📥 Impor
                                 </button>
 
@@ -70,7 +70,7 @@ if (file_exists($sidebar_file)) {
                         <div class="card mb-4">
                             <div class="card-header bg-primary text-white">
                                 <h5 class="mb-0">
-                                    <i class="fas fa-info-circle me-2"></i>
+                                    <i class="fas fa-info-circle mr-2"></i>
                                     Informasi Kelas
                                 </h5>
                             </div>
@@ -192,7 +192,7 @@ if (file_exists($sidebar_file)) {
     <textarea class="form-control" name="komentar" rows="3"></textarea>
 </div>
 
-<button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane me-1"></i> Kirim Evaluasi</button>
+<button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane mr-1"></i> Kirim Evaluasi</button>
 </form>
 </div>
 </div>
@@ -200,7 +200,7 @@ if (file_exists($sidebar_file)) {
 
 <div class="card mb-4">
   <div class="card-header bg-primary text-white">
-    <h5 class="mb-0"><i class="fas fa-check-circle me-2"></i> Evaluasi Checklist</h5>
+    <h5 class="mb-0"><i class="fas fa-check-circle mr-2"></i> Evaluasi Checklist</h5>
 </div>
 <div class="card-body">
     <form action="submit_checklist.php" method="post">
@@ -259,7 +259,7 @@ if (file_exists($sidebar_file)) {
 </tbody>
 </table>
 
-<button type="submit" class="btn btn-primary mt-3"><i class="fas fa-paper-plane me-1"></i> Kirim Evaluasi</button>
+<button type="submit" class="btn btn-primary mt-3"><i class="fas fa-paper-plane mr-1"></i> Kirim Evaluasi</button>
 </form>
 </div>
 </div>
@@ -267,7 +267,7 @@ if (file_exists($sidebar_file)) {
 
 <div class="card mb-4">
   <div class="card-header bg-primary text-white">
-    <h5 class="mb-0"><i class="fas fa-info-circle me-2"></i> Informasi Kelas</h5>
+    <h5 class="mb-0"><i class="fas fa-info-circle mr-2"></i> Informasi Kelas</h5>
 </div>
 <div class="card-body">
     <div class="row">
@@ -321,7 +321,7 @@ if (file_exists($sidebar_file)) {
 
 <div class="card mb-4">
   <div class="card-header bg-primary text-white">
-    <h5 class="mb-0"><i class="fas fa-info-circle me-2"></i> Informasi Kelas</h5>
+    <h5 class="mb-0"><i class="fas fa-info-circle mr-2"></i> Informasi Kelas</h5>
 </div>
 <div class="card-body">
     <div class="row mb-2">
@@ -372,7 +372,7 @@ if (file_exists($sidebar_file)) {
 
 <div class="mb-2">
     <label>Penguasaan Materi</label>
-    <select class="form-select" name="materi" required>
+    <select class="custom-select" name="materi" required>
       <option value="">Pilih</option>
       <option value="1">1</option>
       <option value="2">2</option>
@@ -384,7 +384,7 @@ if (file_exists($sidebar_file)) {
 
 <div class="mb-2">
     <label>Keterampilan Mengajar</label>
-    <select class="form-select" name="mengajar" required>
+    <select class="custom-select" name="mengajar" required>
       <option value="">Pilih</option>
       <option value="1">1</option>
       <option value="2">2</option>
@@ -396,7 +396,7 @@ if (file_exists($sidebar_file)) {
 
 <div class="mb-2">
     <label>Ketepatan Waktu / Disiplin</label>
-    <select class="form-select" name="disiplin" required>
+    <select class="custom-select" name="disiplin" required>
       <option value="">Pilih</option>
       <option value="1">1</option>
       <option value="2">2</option>
@@ -408,7 +408,7 @@ if (file_exists($sidebar_file)) {
 
 <div class="mb-2">
     <label>Interaksi dengan Mahasiswa</label>
-    <select class="form-select" name="interaksi" required>
+    <select class="custom-select" name="interaksi" required>
       <option value="">Pilih</option>
       <option value="1">1</option>
       <option value="2">2</option>
@@ -420,7 +420,7 @@ if (file_exists($sidebar_file)) {
 
 <div class="mb-2">
     <label>Penggunaan Media / Metode Pembelajaran</label>
-    <select class="form-select" name="media" required>
+    <select class="custom-select" name="media" required>
       <option value="">Pilih</option>
       <option value="1">1</option>
       <option value="2">2</option>
@@ -449,7 +449,7 @@ if (file_exists($sidebar_file)) {
   <div class="col-lg-6">
     <div class="card">
       <div class="card-header bg-success text-white">
-        <h5 class="mb-0"><i class="fas fa-chart-bar me-2"></i> Statistik Penilaian</h5>
+        <h5 class="mb-0"><i class="fas fa-chart-bar mr-2"></i> Statistik Penilaian</h5>
       </div>
       <div class="card-body">
         <div class="row g-3">
@@ -493,7 +493,7 @@ if (file_exists($sidebar_file)) {
   <div class="col-lg-6">
     <div class="card">
       <div class="card-header bg-secondary text-white">
-        <h5 class="mb-0"><i class="fas fa-comments me-2"></i> Komentar / Saran</h5>
+        <h5 class="mb-0"><i class="fas fa-comments mr-2"></i> Komentar / Saran</h5>
       </div>
       <div class="card-body">
         <div class="table-responsive" style="max-height: 400px; overflow-y: auto;">

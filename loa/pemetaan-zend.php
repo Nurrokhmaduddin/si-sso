@@ -9,7 +9,7 @@
   <section class="content-header">
     <div class="container-fluid">
       <h3 class="mb-0">Struktur Pemetaan
-        <button type="button" class="btn btn-tool" data-bs-toggle="modal" data-bs-target="#modalBantuan" title="Bantuan"><i class="fas fa-question-circle"></i>
+        <button type="button" class="btn btn-tool" data-toggle="modal" data-target="#modalBantuan" title="Bantuan"><i class="fas fa-question-circle"></i>
         </button>
       </h3>
       <p class="text-muted mb-0">Keterangan singkat cara baca informasi halaman ini</p>
@@ -38,21 +38,21 @@
             </div>
 
             <div class="card-footer">
-              <div class="card-tools ms-auto">
-                <button class="btn btn-outline-info btn-sm " data-bs-toggle="modal" data-bs-target="#modalFilter">
-                  <i class="fas fa-filter me-1"></i> Filter
+              <div class="card-tools ml-auto">
+                <button class="btn btn-outline-info btn-sm " data-toggle="modal" data-target="#modalFilter">
+                  <i class="fas fa-filter mr-1"></i> Filter
                 </button>
-                <!-- <button type="button" class="btn btn-outline-primary btn-sm " data-bs-toggle="modal" data-bs-target="#modalTambahData">
-                  <i class="fas fa-plus me-1"></i> Add
+                <!-- <button type="button" class="btn btn-outline-primary btn-sm " data-toggle="modal" data-target="#modalTambahData">
+                  <i class="fas fa-plus mr-1"></i> Add
                 </button> -->
-                <button type="button" class="btn btn-outline-primary btn-sm " data-bs-toggle="modal" data-bs-target="#modalImpor">
-                  <i class="fas fa-file-upload me-1"></i> Import
+                <button type="button" class="btn btn-outline-primary btn-sm " data-toggle="modal" data-target="#modalImpor">
+                  <i class="fas fa-file-upload mr-1"></i> Import
                 </button>                
                 <button type="button" class="btn btn-outline-success btn-sm">
-                  <i class="fas fa-file-download me-1"></i> Export
+                  <i class="fas fa-file-download mr-1"></i> Export
                 </button>
                 <!-- <button type="button" class="btn btn-outline-danger btn-sm">
-                  <i class="fas fa-ban me-1"></i> Reset
+                  <i class="fas fa-ban mr-1"></i> Reset
                 </button>  -->   
               </div>
             </div>
@@ -135,7 +135,7 @@
 
                 <tr>
                   <td colspan="4">
-                    <button class="btn btn-outline-primary btn-xs w-100" data-bs-toggle="modal" data-bs-target="#modalTambahMKCPMK1">
+                    <button class="btn btn-outline-primary btn-xs w-100" data-toggle="modal" data-target="#modalTambahMKCPMK1">
                       Tambah CPMK
                     </button>
                   </td>
@@ -194,7 +194,7 @@
 
                 <tr>
                   <td colspan="4">
-                    <button class="btn btn-outline-primary btn-xs w-100" data-bs-toggle="modal" data-bs-target="#modalTambahMKCPMK1">
+                    <button class="btn btn-outline-primary btn-xs w-100" data-toggle="modal" data-target="#modalTambahMKCPMK1">
                       Tambah CPMK
                     </button>
                   </td>
@@ -204,7 +204,7 @@
           </td>
         </tr>     
         <tr>
-          <td colspan="3"><button class="btn btn-outline-primary btn-sm w-100" data-bs-toggle="modal" data-bs-target="#modalTambahIK"> Tambah IK</button></td>
+          <td colspan="3"><button class="btn btn-outline-primary btn-sm w-100" data-toggle="modal" data-target="#modalTambahIK"> Tambah IK</button></td>
         </tr>
       </tbody>
     </table>
@@ -299,7 +299,7 @@ function toggleById(id, btn) {
 
                 <tr>
                   <td colspan="4">
-                    <button class="btn btn-outline-primary btn-xs w-100" data-bs-toggle="modal" data-bs-target="#modalTambahMKCPMK1">
+                    <button class="btn btn-outline-primary btn-xs w-100" data-toggle="modal" data-target="#modalTambahMKCPMK1">
                       Tambah CPMK
                     </button>
                   </td>
@@ -322,7 +322,7 @@ function toggleById(id, btn) {
           <td>Menunjukkan perilaku Islami pada setiap peran yang dijalani</td>
         </tr>
         <tr>
-          <td colspan="3"><button class="btn btn-outline-primary btn-sm w-100" data-bs-toggle="modal" data-bs-target="#modalTambahIK"> Tambah IK</button></td>
+          <td colspan="3"><button class="btn btn-outline-primary btn-sm w-100" data-toggle="modal" data-target="#modalTambahIK"> Tambah IK</button></td>
         </tr>
       </tbody>
     </table>
@@ -413,7 +413,7 @@ function toggleById(id, btn) {
 
                 <tr>
                   <td colspan="4">
-                    <button class="btn btn-outline-primary btn-xs w-100" data-bs-toggle="modal" data-bs-target="#modalTambahMKCPMK1">
+                    <button class="btn btn-outline-primary btn-xs w-100" data-toggle="modal" data-target="#modalTambahMKCPMK1">
                       Tambah CPMK
                     </button>
                   </td>
@@ -472,7 +472,7 @@ function toggleById(id, btn) {
 
                 <tr>
                   <td colspan="4">
-                    <button class="btn btn-outline-primary btn-xs w-100" data-bs-toggle="modal" data-bs-target="#modalTambahMKCPMK1">
+                    <button class="btn btn-outline-primary btn-xs w-100" data-toggle="modal" data-target="#modalTambahMKCPMK1">
                       Tambah CPMK
                     </button>
                   </td>
@@ -485,7 +485,7 @@ function toggleById(id, btn) {
 
 
         <tr>
-          <td colspan="3"><button class="btn btn-outline-primary btn-sm w-100" data-bs-toggle="modal" data-bs-target="#modalTambahIK"> Tambah IK</button></td>
+          <td colspan="3"><button class="btn btn-outline-primary btn-sm w-100" data-toggle="modal" data-target="#modalTambahIK"> Tambah IK</button></td>
         </tr>
       </tbody>
     </table>
@@ -600,7 +600,7 @@ document.querySelectorAll('.ik-row').forEach(function(row) {
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="modalTambahIKLabel">➕ Tambah IK</h5>
-        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Tutup">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Tutup">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
@@ -618,7 +618,7 @@ document.querySelectorAll('.ik-row').forEach(function(row) {
         </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
         <button type="submit" class="btn btn-primary" form="formTambahIK">Simpan</button>
       </div>
     </div>
@@ -631,7 +631,7 @@ document.querySelectorAll('.ik-row').forEach(function(row) {
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="modalTambahMKCPMK1Label">➕ Tambah MK-CPMK</h5>
-        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Tutup">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Tutup">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
@@ -661,7 +661,7 @@ document.querySelectorAll('.ik-row').forEach(function(row) {
         </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
         <button type="submit" class="btn btn-primary" form="formTambahMKCPMK1">Simpan</button>
       </div>
     </div>
@@ -674,12 +674,12 @@ document.querySelectorAll('.ik-row').forEach(function(row) {
 
       <div class="modal-header bg-primary text-white">
         <h5 class="modal-title">Impor Data</h5>
-        <button class="btn-close" data-bs-dismiss="modal"></button>
+        <button class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
       </div>
 
       <div class="modal-body">   
         <div class="alert alert-warning mb-3 py-2" role="alert" style="font-size: 0.9rem;">
-          <i class="fas fa-exclamation-triangle me-1"></i>
+          <i class="fas fa-exclamation-triangle mr-1"></i>
           <strong>Penting:</strong> Pastikan file yang akan diimpor menggunakan <strong>template resmi</strong> yang sudah disediakan. Menggunakan file lain atau format berbeda dapat menyebabkan <strong>kesalahan impor</strong>.
         </div>     
 
@@ -690,7 +690,7 @@ document.querySelectorAll('.ik-row').forEach(function(row) {
       </div>
 
       <div class="modal-footer">
-        <button class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+        <button class="btn btn-secondary" data-dismiss="modal">Batal</button>
         <button class="btn btn-primary">Impor</button>
       </div>
 
@@ -703,7 +703,7 @@ document.querySelectorAll('.ik-row').forEach(function(row) {
     <div class="modal-content">
       <div class="modal-header bg-primary text-white">
         <h5 class="modal-title" id="modalBantuanLabel">Bantuan Tabel</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
       </div>
       <div class="modal-body">
         <p>
@@ -714,7 +714,7 @@ jika ada kesamaan NIM di satu mata kuliah(artinya mahasiswa tempuh >1 kali MK ts
         </p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
       </div>
     </div>
   </div>

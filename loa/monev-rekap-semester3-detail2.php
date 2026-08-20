@@ -9,7 +9,7 @@
   <section class="content-header">
     <div class="container-fluid">
       <h3 class="mb-0">Monev Semester
-        <button type="button" class="btn btn-tool" data-bs-toggle="modal" data-bs-target="#modalBantuan" title="Bantuan">
+        <button type="button" class="btn btn-tool" data-toggle="modal" data-target="#modalBantuan" title="Bantuan">
           <i class="fas fa-question-circle"></i>
         </button>
       </h3>
@@ -46,14 +46,14 @@
               </div>
             </div>
             <div class="card-footer">
-              <div class="card-tools ms-auto">
-                <button class="btn btn-outline-info btn-sm " data-bs-toggle="modal" data-bs-target="#modalFilter">
-                  <i class="fas fa-filter me-1"></i> Filter
+              <div class="card-tools ml-auto">
+                <button class="btn btn-outline-info btn-sm " data-toggle="modal" data-target="#modalFilter">
+                  <i class="fas fa-filter mr-1"></i> Filter
                 </button>                
                 <button type="button" class="btn btn-outline-success btn-sm">
-                  <i class="fas fa-file-download me-1"></i> Export
+                  <i class="fas fa-file-download mr-1"></i> Export
                 </button>    
-                <a class="btn btn-sm btn-outline-primary" href="formulir-evaluasi.php" target="_blank"><i class="fas fa-clipboard-list me-1"> </i>Catat Temuan </a>             
+                <a class="btn btn-sm btn-outline-primary" href="formulir-evaluasi.php" target="_blank"><i class="fas fa-clipboard-list mr-1"> </i>Catat Temuan </a>             
               </div>
 
             </div>
@@ -123,7 +123,7 @@
 <!-- ========== CARD 4: Chart CPMK Min/Max/Rerata/%Tuntas ========== -->
           <div class="card">
             <div class="card-header">
-              <h5 class="card-title mb-0"><i class="fas fa-chart-bar me-2"></i> Mahasisa Ambil - per MK</h5>
+              <h5 class="card-title mb-0"><i class="fas fa-chart-bar mr-2"></i> Mahasisa Ambil - per MK</h5>
               <div class="card-tools">
                 <small class="text-muted">Semester Terpilih</small>
               </div>
@@ -157,137 +157,32 @@
           </tr>
         </thead>
         <tbody>
+<?php
+$rows = [
+  ["kode" => "STS704", "nama_mk" => "Metode Pelaksanaan Bangunan", "cpmk" => "3", "semester_tempuh" => "1", "jumlah_mahasiswa" => "90"],
+  ["kode" => "STS913", "nama_mk" => "Struktur Komposit", "cpmk" => "3", "semester_tempuh" => "1", "jumlah_mahasiswa" => "90"],
+  ["kode" => "51175111", "nama_mk" => "Building Structures Design", "cpmk" => "3", "semester_tempuh" => "1", "jumlah_mahasiswa" => "140"],
+  ["kode" => "STS-101", "nama_mk" => "Engineering Statistics", "cpmk" => "2", "semester_tempuh" => "3", "jumlah_mahasiswa" => "140"],
+  ["kode" => "STS102", "nama_mk" => "Bahan Perkerasan Jalan (+Pr)", "cpmk" => "4", "semester_tempuh" => "3", "jumlah_mahasiswa" => "140"],
+  ["kode" => "STS702", "nama_mk" => "Struktur Baja", "cpmk" => "3", "semester_tempuh" => "3", "jumlah_mahasiswa" => "70"],
+  ["kode" => "51195142", "nama_mk" => "Perancangan Struktur Jembatan", "cpmk" => "2", "semester_tempuh" => "3", "jumlah_mahasiswa" => "50"],
+  ["kode" => "51155081", "nama_mk" => "Introduction to Earthquake Engineering", "cpmk" => "3", "semester_tempuh" => "3", "jumlah_mahasiswa" => "4"],
+  ["kode" => "STS904", "nama_mk" => "BIM untuk Manajemen Konstruksi", "cpmk" => "2", "semester_tempuh" => "5", "jumlah_mahasiswa" => "140"],
+  ["kode" => "STS009", "nama_mk" => "Water Structures Design", "cpmk" => "3", "semester_tempuh" => "5", "jumlah_mahasiswa" => "140"],
+];
+foreach ($rows as $index => $row) {
+?>
           <tr>
-            <td class="text-center">1</td>
-            <td class="text-center">STS704</td>
-            <td>Metode Pelaksanaan Bangunan</td>
-            <td class="text-center">3</td>
-            <td class="text-center">1</td>
-            <td>90</td>
-            <td class="text-center">
-              <a href="monev-rekap-semester-detail.php" class="btn btn-sm btn-outline-info">
-                📄 Detail
-              </a>
-            </td>
+            <td class="text-center"><?= $index + 1 ?></td>
+            <td class="text-center"><?= $row['kode'] ?></td>
+            <td><?= $row['nama_mk'] ?></td>
+            <td class="text-center"><?= $row['cpmk'] ?></td>
+            <td class="text-center"><?= $row['semester_tempuh'] ?></td>
+            <td><?= $row['jumlah_mahasiswa'] ?></td>
+            <td class="text-center"><a href="monev-rekap-semester-detail.php" class="btn btn-sm btn-outline-info"> 📄 Detail </a></td>
           </tr>
-          <tr>
-            <td class="text-center">2</td>
-            <td class="text-center">STS913</td>
-            <td>Struktur Komposit</td>
-            <td class="text-center">3</td>
-            <td class="text-center">1</td>
-            <td>90</td>
-            <td class="text-center">
-              <a href="monev-rekap-semester-detail.php" class="btn btn-sm btn-outline-info">
-                📄 Detail
-              </a>
-            </td>
-          </tr>
-          <tr>
-            <td class="text-center">3</td>
-            <td class="text-center">51175111</td>
-            <td>Building Structures Design</td>
-            <td class="text-center">3</td>
-            <td class="text-center">1</td>
-            <td>140</td>
-            <td class="text-center">
-              <a href="monev-rekap-semester-detail.php" class="btn btn-sm btn-outline-info">
-                📄 Detail
-              </a>
-            </td>
-          </tr>
-          <tr>
-            <td class="text-center">4</td>
-            <td class="text-center">STS-101</td>
-            <td>Engineering Statistics</td>
-            <td class="text-center">2</td>
-            <td class="text-center">3</td>
-            <td>140</td>
-            <td class="text-center">
-              <a href="monev-rekap-semester-detail.php" class="btn btn-sm btn-outline-info">
-                📄 Detail
-              </a>
-            </td>
-          </tr>
-          <tr>
-            <td class="text-center">5</td>
-            <td class="text-center">STS102</td>
-            <td>Bahan Perkerasan Jalan (+Pr)</td>
-            <td class="text-center">4</td>
-            <td class="text-center">3</td>
-            <td>140</td>
-            <td class="text-center">
-              <a href="monev-rekap-semester-detail.php" class="btn btn-sm btn-outline-info">
-                📄 Detail
-              </a>
-            </td>
-          </tr>
-          <tr>
-            <td class="text-center">6</td>
-            <td class="text-center">STS702</td>
-            <td>Struktur Baja</td>
-            <td class="text-center">3</td>
-            <td class="text-center">3</td>
-            <td>70</td>
-            <td class="text-center">
-              <a href="monev-rekap-semester-detail.php" class="btn btn-sm btn-outline-info">
-                📄 Detail
-              </a>
-            </td>
-          </tr>
-          <tr>
-            <td class="text-center">7</td>
-            <td class="text-center">51195142</td>
-            <td>Perancangan Struktur Jembatan</td>
-            <td class="text-center">2</td>
-            <td class="text-center">3</td>
-            <td>50</td>
-            <td class="text-center">
-              <a href="monev-rekap-semester-detail.php" class="btn btn-sm btn-outline-info">
-                📄 Detail
-              </a>
-            </td>
-          </tr>
-          <tr>
-            <td class="text-center">8</td>
-            <td class="text-center">51155081</td>
-            <td>Introduction to Earthquake Engineering</td>
-            <td class="text-center">3</td>
-            <td class="text-center">3</td>
-            <td>4</td>
-            <td class="text-center">
-              <a href="monev-rekap-semester-detail.php" class="btn btn-sm btn-outline-info">
-                📄 Detail
-              </a>
-            </td>
-          </tr>
-          <tr>
-            <td class="text-center">9</td>
-            <td class="text-center">STS904</td>
-            <td>BIM untuk Manajemen Konstruksi</td>
-            <td class="text-center">2</td>
-            <td class="text-center">5</td>
-            <td>140</td>
-            <td class="text-center">
-              <a href="monev-rekap-semester-detail.php" class="btn btn-sm btn-outline-info">
-                📄 Detail
-              </a>
-            </td>
-          </tr>
-          <tr>
-            <td class="text-center">10</td>
-            <td class="text-center">STS009</td>
-            <td>Water Structures Design</td>
-            <td class="text-center">3</td>
-            <td class="text-center">5</td>
-            <td>140</td>
-            <td class="text-center">
-              <a href="monev-rekap-semester-detail.php" class="btn btn-sm btn-outline-info">
-                📄 Detail
-              </a>
-            </td>
-          </tr>
-        </tbody>
+<?php } ?>
+</tbody>
       </table>
     </div>
   </div>
@@ -295,7 +190,7 @@
           <!-- ========== CARD 4: Chart CPMK Min/Max/Rerata/%Tuntas ========== -->
           <!-- <div class="card">
             <div class="card-header">
-              <h5 class="card-title mb-0"><i class="fas fa-chart-bar me-2"></i> Rerata Ketercapaian - CPMK</h5>
+              <h5 class="card-title mb-0"><i class="fas fa-chart-bar mr-2"></i> Rerata Ketercapaian - CPMK</h5>
               <div class="card-tools">
                 <small class="text-muted">Semester Terpilih</small>
               </div>
@@ -304,17 +199,17 @@
               <canvas id="chartCPMK" height="70"></canvas>
               <div class="row text-center mt-3">
                 <div class="col">
-                  <button class="btn btn-outline-info btn-sm w-100" data-bs-toggle="collapse" data-bs-target="#daftarIKCPL31">
+                  <button class="btn btn-outline-info btn-sm w-100" data-toggle="collapse" data-target="#daftarIKCPL31">
                     Rangking Performa
                   </button>
                 </div>
                 <div class="col">
-                  <button class="btn btn-outline-info btn-sm w-100" data-bs-toggle="collapse" data-bs-target="#daftarIKCPL33">
+                  <button class="btn btn-outline-info btn-sm w-100" data-toggle="collapse" data-target="#daftarIKCPL33">
                     Daftar Min/Max/Rerata
                   </button>
                 </div>
                 <div class="col">
-                  <button class="btn btn-outline-danger btn-sm w-100" data-bs-toggle="collapse" onclick="openAllRisikoPreview()">
+                  <button class="btn btn-outline-danger btn-sm w-100" data-toggle="collapse" onclick="openAllRisikoPreview()">
                     Performa Risiko
                   </button>
                 </div>
@@ -327,7 +222,7 @@
           <!-- ========== CARD : Persentase Ketuntasan CPMK ========== -->
           <div class="card">
             <div class="card-header">
-              <h5 class="card-title mb-0"><i class="fas fa-chart-bar me-2"></i>
+              <h5 class="card-title mb-0"><i class="fas fa-chart-bar mr-2"></i>
                 Persentase Ketuntasan - CPMK 
               </h5>
               <div class="card-tools">
@@ -338,17 +233,17 @@
               <canvas id="chartKetuntasanCPMK" height="70"></canvas>
               <div class="row text-center mt-3">
                 <div class="col">
-                  <button class="btn btn-outline-info btn-sm w-100" data-bs-toggle="collapse" data-bs-target="#daftarIKCPL31">
+                  <button class="btn btn-outline-info btn-sm w-100" data-toggle="collapse" data-target="#daftarIKCPL31">
                     Rangking Performa
                   </button>
                 </div>
                 <div class="col">
-                  <button class="btn btn-outline-info btn-sm w-100" data-bs-toggle="collapse" data-bs-target="#daftarIKCPL33">
+                  <button class="btn btn-outline-info btn-sm w-100" data-toggle="collapse" data-target="#daftarIKCPL33">
                     Daftar Min/Max/Rerata
                   </button>
                 </div>
                 <div class="col">
-                  <button class="btn btn-outline-danger btn-sm w-100" data-bs-toggle="collapse" onclick="openAllRisikoPreview()">
+                  <button class="btn btn-outline-danger btn-sm w-100" data-toggle="collapse" onclick="openAllRisikoPreview()">
                     Performa Risiko
                   </button>
                 </div>
@@ -379,57 +274,24 @@
                       </tr>
                     </thead>
                     <tbody>
-                      <tr>
-                        <td>
-                          <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                            <div style="background:#f54242; width:10%; height:12px; border-radius:4px;"></div>
-                          </div>
-                        </td>
-                        <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="min" data-value="57">20</span></td>
-                        <td>SKS198-1</td>
-                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                            <div style="background:#f54242; width:25%; height:12px; border-radius:4px;"></div>
-                          </div>
-                        </td>
-                        <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="min" data-value="57">30</span></td>
-                        <td>SKT911-4</td>
-                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                            <div style="background:#f54242; width:35%; height:12px; border-radius:4px;"></div>
-                          </div>
-                        </td>
-                        <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="min" data-value="57">50</span></td>
-                        <td>SKS123-5</td>
-                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                            <div style="background:#f54242; width:50%; height:12px; border-radius:4px;"></div>
-                          </div>
-                        </td>
-                        <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="min" data-value="57">51</span></td>
-                        <td>SKS345-9</td>
-                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                            <div style="background:#f54242; width:70%; height:12px; border-radius:4px;"></div>
-                          </div>
-                        </td>
-                        <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="min" data-value="57">57</span></td>
-                        <td>UNI901-1</td>
-                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
-                      </tr>
-                    </tbody>
+<?php
+$rows = [
+  ["ranking" => "<div style=\"background:#eee; width:100%; height:12px; border-radius:4px;\"> <div style=\"background:#f54242; width:10%; height:12px; border-radius:4px;\"></div> </div>", "nilai" => "<span class=\"clickable\" data-cpl=\"CPL-01\" data-type=\"min\" data-value=\"57\">20</span>", "cpmk" => "SKS198-1"],
+  ["ranking" => "<div style=\"background:#eee; width:100%; height:12px; border-radius:4px;\"> <div style=\"background:#f54242; width:25%; height:12px; border-radius:4px;\"></div> </div>", "nilai" => "<span class=\"clickable\" data-cpl=\"CPL-01\" data-type=\"min\" data-value=\"57\">30</span>", "cpmk" => "SKT911-4"],
+  ["ranking" => "<div style=\"background:#eee; width:100%; height:12px; border-radius:4px;\"> <div style=\"background:#f54242; width:35%; height:12px; border-radius:4px;\"></div> </div>", "nilai" => "<span class=\"clickable\" data-cpl=\"CPL-01\" data-type=\"min\" data-value=\"57\">50</span>", "cpmk" => "SKS123-5"],
+  ["ranking" => "<div style=\"background:#eee; width:100%; height:12px; border-radius:4px;\"> <div style=\"background:#f54242; width:50%; height:12px; border-radius:4px;\"></div> </div>", "nilai" => "<span class=\"clickable\" data-cpl=\"CPL-01\" data-type=\"min\" data-value=\"57\">51</span>", "cpmk" => "SKS345-9"],
+  ["ranking" => "<div style=\"background:#eee; width:100%; height:12px; border-radius:4px;\"> <div style=\"background:#f54242; width:70%; height:12px; border-radius:4px;\"></div> </div>", "nilai" => "<span class=\"clickable\" data-cpl=\"CPL-01\" data-type=\"min\" data-value=\"57\">57</span>", "cpmk" => "UNI901-1"],
+];
+foreach ($rows as $index => $row) {
+?>
+          <tr>
+            <td><?= $row['ranking'] ?></td>
+            <td class="text-center"><?= $row['nilai'] ?></td>
+            <td><?= $row['cpmk'] ?></td>
+            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
+          </tr>
+<?php } ?>
+</tbody>
                   </table>
                 </div>
               </div>
@@ -452,57 +314,24 @@
                       </tr>
                     </thead>
                     <tbody>
-                      <tr>                      
-                        <td>
-                          <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                            <div style="background:#4287f5; width:95%; height:12px; border-radius:4px;"></div>
-                          </div>
-                        </td>
-                        <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="max" data-value="95">95</span></td>
-                          <td>SKS834-2</td>
-                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                            <div style="background:#4287f5; width:85%; height:12px; border-radius:4px;"></div>
-                          </div>
-                        </td>
-                        <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="max" data-value="95">90</span></td>
-                        <td>SKS923-6</td>
-                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                            <div style="background:#4287f5; width:78%; height:12px; border-radius:4px;"></div>
-                          </div>
-                        </td>
-                       <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="max" data-value="95">85</span></td>
-                        <td>SKS723-7</td>
-                       <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                            <div style="background:#4287f5; width:65%; height:12px; border-radius:4px;"></div>
-                          </div>
-                        </td>
-                       <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="max" data-value="95">70</span></td>
-                        <td>SKS523-2</td>
-                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                            <div style="background:#4287f5; width:50%; height:12px; border-radius:4px;"></div>
-                          </div>
-                        </td>
-                        <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="max" data-value="95">70</span></td>
-                        <td>SKS843-1</td>
-                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
-                      </tr>
-                    </tbody>
+<?php
+$rows = [
+  ["ranking" => "<div style=\"background:#eee; width:100%; height:12px; border-radius:4px;\"> <div style=\"background:#4287f5; width:95%; height:12px; border-radius:4px;\"></div> </div>", "nilai" => "<span class=\"clickable\" data-cpl=\"CPL-01\" data-type=\"max\" data-value=\"95\">95</span>", "cpmk" => "SKS834-2"],
+  ["ranking" => "<div style=\"background:#eee; width:100%; height:12px; border-radius:4px;\"> <div style=\"background:#4287f5; width:85%; height:12px; border-radius:4px;\"></div> </div>", "nilai" => "<span class=\"clickable\" data-cpl=\"CPL-01\" data-type=\"max\" data-value=\"95\">90</span>", "cpmk" => "SKS923-6"],
+  ["ranking" => "<div style=\"background:#eee; width:100%; height:12px; border-radius:4px;\"> <div style=\"background:#4287f5; width:78%; height:12px; border-radius:4px;\"></div> </div>", "nilai" => "<span class=\"clickable\" data-cpl=\"CPL-01\" data-type=\"max\" data-value=\"95\">85</span>", "cpmk" => "SKS723-7"],
+  ["ranking" => "<div style=\"background:#eee; width:100%; height:12px; border-radius:4px;\"> <div style=\"background:#4287f5; width:65%; height:12px; border-radius:4px;\"></div> </div>", "nilai" => "<span class=\"clickable\" data-cpl=\"CPL-01\" data-type=\"max\" data-value=\"95\">70</span>", "cpmk" => "SKS523-2"],
+  ["ranking" => "<div style=\"background:#eee; width:100%; height:12px; border-radius:4px;\"> <div style=\"background:#4287f5; width:50%; height:12px; border-radius:4px;\"></div> </div>", "nilai" => "<span class=\"clickable\" data-cpl=\"CPL-01\" data-type=\"max\" data-value=\"95\">70</span>", "cpmk" => "SKS843-1"],
+];
+foreach ($rows as $index => $row) {
+?>
+          <tr>
+            <td><?= $row['ranking'] ?></td>
+            <td class="text-center"><?= $row['nilai'] ?></td>
+            <td><?= $row['cpmk'] ?></td>
+            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
+          </tr>
+<?php } ?>
+</tbody>
                   </table>
                 </div>
               </div>
@@ -511,8 +340,8 @@
           <!-- daftar min/max/rerate -->
           <div class="card collapse"  >
             <div class="card-header d-flex align-items-center">
-              <h5 class="card-title mb-0"><i class="fas fa-table me-2"></i> Tabel CPL — Min / Max / Rerata</h5>
-              <div class="card-tools ms-auto">
+              <h5 class="card-title mb-0"><i class="fas fa-table mr-2"></i> Tabel CPL — Min / Max / Rerata</h5>
+              <div class="card-tools ml-auto">
                 <small class="text-muted">Klik angka Min/Max untuk melihat 1 mahasiswa (NIM / Nama / Nilai)</small>
               </div>
             </div>
@@ -527,68 +356,30 @@
                       <th class="text-center">Status</th>
                     </tr>
                   </thead>
-                  <tbody>                
-                    <tr>
-                      <td>1</td>
-                      <td>SKS982-1: Pemahaman Dasar Polimer</td>
-                      <td class="text-center">72.14%</td>
-                      <td class="text-center">🟨 Cukup</td>
-                    </tr>
-                    <tr>
-                      <td>2</td>
-                      <td>SKS912-2: Teori Komposit</td>
-                      <td class="text-center">71.50%</td>
-                      <td class="text-center">🟨 Cukup</td>
-                    </tr>
-                    <tr>
-                      <td>3</td>
-                      <td>UNI902-3: Aplikasi Polimer</td>
-                      <td class="text-center">76.80%</td>
-                      <td class="text-center">🟨 Cukup</td>
-                    </tr>
-                    <tr>
-                      <td>4</td>
-                      <td>UNI912-4: Proses Produksi</td>
-                      <td class="text-center">76.80%</td>
-                      <td class="text-center">🟨 Cukup</td>
-                    </tr>
-                    <tr>
-                      <td>5</td>
-                      <td>SKS234-5: Analisis Material</td>
-                      <td class="text-center">75.30%</td>
-                     <td class="text-center">🟨 Cukup</td>
-                    </tr>
-                    <tr>
-                      <td>6</td>
-                      <td>SKS812-6: Keselamatan & Etika</td>
-                       <td class="text-center">76.80%</td>
-                      <td class="text-center">🟨 Cukup</td>
-                    </tr>
-                    <tr>
-                      <td>7</td>
-                      <td>SKS908-7: Desain Proses</td>                    
-                      <td class="text-center">73.40%</td>
-                      <td class="text-center">🟨 Cukup</td>
-                    </tr>
-                    <tr>
-                      <td>8</td>
-                      <td>SKS111-8: Metode Eksperimental</td>
-                      <td class="text-center">71.50%</td>
-                      <td class="text-center">🟨 Cukup</td>
-                    </tr>
-                    <tr>
-                      <td>9</td>
-                      <td>SKS113-9: Statistik & Analisis Data</td>
-                      <td class="text-center">71.50%</td>
-                      <td class="text-center">🟨 Cukup</td>
-                    </tr>
-                    <tr>
-                      <td>10</td>
-                      <td>SKS932-1: Komunikasi Teknis</td>                    
-                      <td class="text-center">75.00%</td>
-                      <td class="text-center">🟨 Cukup</td>
-                    </tr>
-                  </tbody>
+                  <tbody>
+<?php
+$rows = [
+  ["cpmk_code" => "SKS982-1: Pemahaman Dasar Polimer", "nilai" => "72.14%"],
+  ["cpmk_code" => "SKS912-2: Teori Komposit", "nilai" => "71.50%"],
+  ["cpmk_code" => "UNI902-3: Aplikasi Polimer", "nilai" => "76.80%"],
+  ["cpmk_code" => "UNI912-4: Proses Produksi", "nilai" => "76.80%"],
+  ["cpmk_code" => "SKS234-5: Analisis Material", "nilai" => "75.30%"],
+  ["cpmk_code" => "SKS812-6: Keselamatan & Etika", "nilai" => "76.80%"],
+  ["cpmk_code" => "SKS908-7: Desain Proses", "nilai" => "73.40%"],
+  ["cpmk_code" => "SKS111-8: Metode Eksperimental", "nilai" => "71.50%"],
+  ["cpmk_code" => "SKS113-9: Statistik & Analisis Data", "nilai" => "71.50%"],
+  ["cpmk_code" => "SKS932-1: Komunikasi Teknis", "nilai" => "75.00%"],
+];
+foreach ($rows as $index => $row) {
+?>
+          <tr>
+            <td><?= $index + 1 ?></td>
+            <td><?= $row['cpmk_code'] ?></td>
+            <td class="text-center"><?= $row['nilai'] ?></td>
+            <td class="text-center">🟨 Cukup</td>
+          </tr>
+<?php } ?>
+</tbody>
                 </table>
               </div>
             </div>        
@@ -622,50 +413,59 @@
         </tr>
       </thead>
       <tbody>
-        <tr><td>1</td><td>STS009</td><td>STS009-1</td><td>60</td><td>95</td><td>78</td><td>85%</td><td>40</td><td class="memenuhi">Memenuhi</td></tr>
-        <tr><td>2</td><td>STS009</td><td>STS009-2</td><td>50</td><td>88</td><td>72</td><td>75%</td><td>40</td><td class="tidak">Tidak Memenuhi</td></tr>
-        <tr><td>3</td><td>STS009</td><td>STS009-3</td><td>65</td><td>98</td><td>81</td><td>88%</td><td>40</td><td class="memenuhi">Memenuhi</td></tr>
-
-        <tr><td>4</td><td>STS101</td><td>STS101-1</td><td>45</td><td>90</td><td>69</td><td>70%</td><td>120</td><td class="tidak">Tidak Memenuhi</td></tr>
-        <tr><td>5</td><td>STS101</td><td>STS101-2</td><td>62</td><td>99</td><td>84</td><td>90%</td><td>120</td><td class="memenuhi">Memenuhi</td></tr>
-        <tr><td>6</td><td>STS101</td><td>STS101-3</td><td>55</td><td>97</td><td>76</td><td>82%</td><td>120</td><td class="memenuhi">Memenuhi</td></tr>
-        <tr><td>7</td><td>STS101</td><td>STS101-4</td><td>52</td><td>92</td><td>74</td><td>78%</td><td>120</td><td class="tidak">Tidak Memenuhi</td></tr>
-
-        <tr><td>8</td><td>STS102</td><td>STS102-1</td><td>70</td><td>100</td><td>88</td><td>92%</td><td>38</td><td class="memenuhi">Memenuhi</td></tr>
-        <tr><td>9</td><td>STS102</td><td>STS102-2</td><td>48</td><td>85</td><td>67</td><td>65%</td><td>38</td><td class="tidak">Tidak Memenuhi</td></tr>
-        <tr><td>10</td><td>STS102</td><td>STS102-3</td><td>60</td><td>94</td><td>79</td><td>84%</td><td>38</td><td class="memenuhi">Memenuhi</td></tr>
-        <tr><td>11</td><td>STS102</td><td>STS102-4</td><td>63</td><td>96</td><td>82</td><td>87%</td><td>38</td><td class="memenuhi">Memenuhi</td></tr>
-
-        <tr><td>12</td><td>STS201</td><td>STS201-1</td><td>50</td><td>89</td><td>73</td><td>76%</td><td>42</td><td class="tidak">Tidak Memenuhi</td></tr>
-        <tr><td>13</td><td>STS201</td><td>STS201-2</td><td>68</td><td>100</td><td>85</td><td>91%</td><td>42</td><td class="memenuhi">Memenuhi</td></tr>
-        <tr><td>14</td><td>STS201</td><td>STS201-3</td><td>55</td><td>86</td><td>68</td><td>72%</td><td>42</td><td class="tidak">Tidak Memenuhi</td></tr>
-        <tr><td>15</td><td>STS201</td><td>STS201-4</td><td>60</td><td>95</td><td>80</td><td>83%</td><td>42</td><td class="memenuhi">Memenuhi</td></tr>
-
-        <tr><td>16</td><td>STS202</td><td>STS202-1</td><td>58</td><td>93</td><td>77</td><td>81%</td><td>39</td><td class="memenuhi">Memenuhi</td></tr>
-        <tr><td>17</td><td>STS202</td><td>STS202-2</td><td>52</td><td>88</td><td>70</td><td>74%</td><td>39</td><td class="tidak">Tidak Memenuhi</td></tr>
-        <tr><td>18</td><td>STS202</td><td>STS202-3</td><td>67</td><td>100</td><td>86</td><td>93%</td><td>39</td><td class="memenuhi">Memenuhi</td></tr>
-        <tr><td>19</td><td>STS202</td><td>STS202-4</td><td>55</td><td>90</td><td>75</td><td>79%</td><td>39</td><td class="tidak">Tidak Memenuhi</td></tr>
-
-        <tr><td>20</td><td>STS301</td><td>STS301-1</td><td>65</td><td>97</td><td>83</td><td>89%</td><td>41</td><td class="memenuhi">Memenuhi</td></tr>
-        <tr><td>21</td><td>STS301</td><td>STS301-2</td><td>50</td><td>85</td><td>71</td><td>73%</td><td>41</td><td class="tidak">Tidak Memenuhi</td></tr>
-        <tr><td>22</td><td>STS301</td><td>STS301-3</td><td>70</td><td>100</td><td>87</td><td>94%</td><td>41</td><td class="memenuhi">Memenuhi</td></tr>
-        <tr><td>23</td><td>STS301</td><td>STS301-4</td><td>55</td><td>92</td><td>76</td><td>80%</td><td>41</td><td class="tidak">Tidak Memenuhi</td></tr>
-
-        <tr><td>24</td><td>STS302</td><td>STS302-1</td><td>72</td><td>100</td><td>89</td><td>95%</td><td>37</td><td class="memenuhi">Memenuhi</td></tr>
-        <tr><td>25</td><td>STS302</td><td>STS302-2</td><td>60</td><td>96</td><td>78</td><td>85%</td><td>37</td><td class="memenuhi">Memenuhi</td></tr>
-        <tr><td>26</td><td>STS302</td><td>STS302-3</td><td>45</td><td>82</td><td>66</td><td>68%</td><td>37</td><td class="tidak">Tidak Memenuhi</td></tr>
-        <tr><td>27</td><td>STS302</td><td>STS302-4</td><td>68</td><td>98</td><td>84</td><td>90%</td><td>37</td><td class="memenuhi">Memenuhi</td></tr>
-
-        <tr><td>28</td><td>STS401</td><td>STS401-1</td><td>52</td><td>88</td><td>73</td><td>77%</td><td>36</td><td class="tidak">Tidak Memenuhi</td></tr>
-        <tr><td>29</td><td>STS401</td><td>STS401-2</td><td>65</td><td>97</td><td>82</td><td>88%</td><td>36</td><td class="memenuhi">Memenuhi</td></tr>
-        <tr><td>30</td><td>STS401</td><td>STS401-3</td><td>48</td><td>85</td><td>69</td><td>71%</td><td>36</td><td class="tidak">Tidak Memenuhi</td></tr>
-        <tr><td>31</td><td>STS401</td><td>STS401-4</td><td>70</td><td>100</td><td>85</td><td>92%</td><td>36</td><td class="memenuhi">Memenuhi</td></tr>
-
-        <tr><td>32</td><td>STS402</td><td>STS402-1</td><td>55</td><td>89</td><td>74</td><td>78%</td><td>35</td><td class="tidak">Tidak Memenuhi</td></tr>
-        <tr><td>33</td><td>STS402</td><td>STS402-2</td><td>72</td><td>100</td><td>88</td><td>93%</td><td>35</td><td class="memenuhi">Memenuhi</td></tr>
-        <tr><td>34</td><td>STS402</td><td>STS402-3</td><td>50</td><td>87</td><td>72</td><td>75%</td><td>35</td><td class="tidak">Tidak Memenuhi</td></tr>
-        <tr><td>35</td><td>STS402</td><td>STS402-4</td><td>75</td><td>100</td><td>90</td><td>96%</td><td>35</td><td class="memenuhi">Memenuhi</td></tr>
-      </tbody>
+<?php
+$rows = [
+  ["kode_mk" => "STS009", "kode_cpmk" => "STS009-1", "min" => "60", "max" => "95", "rerata" => "78", "ketuntasan" => "85%", "mahasiswa" => "40", "status_standar" => "Memenuhi"],
+  ["kode_mk" => "STS009", "kode_cpmk" => "STS009-2", "min" => "50", "max" => "88", "rerata" => "72", "ketuntasan" => "75%", "mahasiswa" => "40", "status_standar" => "Tidak Memenuhi"],
+  ["kode_mk" => "STS009", "kode_cpmk" => "STS009-3", "min" => "65", "max" => "98", "rerata" => "81", "ketuntasan" => "88%", "mahasiswa" => "40", "status_standar" => "Memenuhi"],
+  ["kode_mk" => "STS101", "kode_cpmk" => "STS101-1", "min" => "45", "max" => "90", "rerata" => "69", "ketuntasan" => "70%", "mahasiswa" => "120", "status_standar" => "Tidak Memenuhi"],
+  ["kode_mk" => "STS101", "kode_cpmk" => "STS101-2", "min" => "62", "max" => "99", "rerata" => "84", "ketuntasan" => "90%", "mahasiswa" => "120", "status_standar" => "Memenuhi"],
+  ["kode_mk" => "STS101", "kode_cpmk" => "STS101-3", "min" => "55", "max" => "97", "rerata" => "76", "ketuntasan" => "82%", "mahasiswa" => "120", "status_standar" => "Memenuhi"],
+  ["kode_mk" => "STS101", "kode_cpmk" => "STS101-4", "min" => "52", "max" => "92", "rerata" => "74", "ketuntasan" => "78%", "mahasiswa" => "120", "status_standar" => "Tidak Memenuhi"],
+  ["kode_mk" => "STS102", "kode_cpmk" => "STS102-1", "min" => "70", "max" => "100", "rerata" => "88", "ketuntasan" => "92%", "mahasiswa" => "38", "status_standar" => "Memenuhi"],
+  ["kode_mk" => "STS102", "kode_cpmk" => "STS102-2", "min" => "48", "max" => "85", "rerata" => "67", "ketuntasan" => "65%", "mahasiswa" => "38", "status_standar" => "Tidak Memenuhi"],
+  ["kode_mk" => "STS102", "kode_cpmk" => "STS102-3", "min" => "60", "max" => "94", "rerata" => "79", "ketuntasan" => "84%", "mahasiswa" => "38", "status_standar" => "Memenuhi"],
+  ["kode_mk" => "STS102", "kode_cpmk" => "STS102-4", "min" => "63", "max" => "96", "rerata" => "82", "ketuntasan" => "87%", "mahasiswa" => "38", "status_standar" => "Memenuhi"],
+  ["kode_mk" => "STS201", "kode_cpmk" => "STS201-1", "min" => "50", "max" => "89", "rerata" => "73", "ketuntasan" => "76%", "mahasiswa" => "42", "status_standar" => "Tidak Memenuhi"],
+  ["kode_mk" => "STS201", "kode_cpmk" => "STS201-2", "min" => "68", "max" => "100", "rerata" => "85", "ketuntasan" => "91%", "mahasiswa" => "42", "status_standar" => "Memenuhi"],
+  ["kode_mk" => "STS201", "kode_cpmk" => "STS201-3", "min" => "55", "max" => "86", "rerata" => "68", "ketuntasan" => "72%", "mahasiswa" => "42", "status_standar" => "Tidak Memenuhi"],
+  ["kode_mk" => "STS201", "kode_cpmk" => "STS201-4", "min" => "60", "max" => "95", "rerata" => "80", "ketuntasan" => "83%", "mahasiswa" => "42", "status_standar" => "Memenuhi"],
+  ["kode_mk" => "STS202", "kode_cpmk" => "STS202-1", "min" => "58", "max" => "93", "rerata" => "77", "ketuntasan" => "81%", "mahasiswa" => "39", "status_standar" => "Memenuhi"],
+  ["kode_mk" => "STS202", "kode_cpmk" => "STS202-2", "min" => "52", "max" => "88", "rerata" => "70", "ketuntasan" => "74%", "mahasiswa" => "39", "status_standar" => "Tidak Memenuhi"],
+  ["kode_mk" => "STS202", "kode_cpmk" => "STS202-3", "min" => "67", "max" => "100", "rerata" => "86", "ketuntasan" => "93%", "mahasiswa" => "39", "status_standar" => "Memenuhi"],
+  ["kode_mk" => "STS202", "kode_cpmk" => "STS202-4", "min" => "55", "max" => "90", "rerata" => "75", "ketuntasan" => "79%", "mahasiswa" => "39", "status_standar" => "Tidak Memenuhi"],
+  ["kode_mk" => "STS301", "kode_cpmk" => "STS301-1", "min" => "65", "max" => "97", "rerata" => "83", "ketuntasan" => "89%", "mahasiswa" => "41", "status_standar" => "Memenuhi"],
+  ["kode_mk" => "STS301", "kode_cpmk" => "STS301-2", "min" => "50", "max" => "85", "rerata" => "71", "ketuntasan" => "73%", "mahasiswa" => "41", "status_standar" => "Tidak Memenuhi"],
+  ["kode_mk" => "STS301", "kode_cpmk" => "STS301-3", "min" => "70", "max" => "100", "rerata" => "87", "ketuntasan" => "94%", "mahasiswa" => "41", "status_standar" => "Memenuhi"],
+  ["kode_mk" => "STS301", "kode_cpmk" => "STS301-4", "min" => "55", "max" => "92", "rerata" => "76", "ketuntasan" => "80%", "mahasiswa" => "41", "status_standar" => "Tidak Memenuhi"],
+  ["kode_mk" => "STS302", "kode_cpmk" => "STS302-1", "min" => "72", "max" => "100", "rerata" => "89", "ketuntasan" => "95%", "mahasiswa" => "37", "status_standar" => "Memenuhi"],
+  ["kode_mk" => "STS302", "kode_cpmk" => "STS302-2", "min" => "60", "max" => "96", "rerata" => "78", "ketuntasan" => "85%", "mahasiswa" => "37", "status_standar" => "Memenuhi"],
+  ["kode_mk" => "STS302", "kode_cpmk" => "STS302-3", "min" => "45", "max" => "82", "rerata" => "66", "ketuntasan" => "68%", "mahasiswa" => "37", "status_standar" => "Tidak Memenuhi"],
+  ["kode_mk" => "STS302", "kode_cpmk" => "STS302-4", "min" => "68", "max" => "98", "rerata" => "84", "ketuntasan" => "90%", "mahasiswa" => "37", "status_standar" => "Memenuhi"],
+  ["kode_mk" => "STS401", "kode_cpmk" => "STS401-1", "min" => "52", "max" => "88", "rerata" => "73", "ketuntasan" => "77%", "mahasiswa" => "36", "status_standar" => "Tidak Memenuhi"],
+  ["kode_mk" => "STS401", "kode_cpmk" => "STS401-2", "min" => "65", "max" => "97", "rerata" => "82", "ketuntasan" => "88%", "mahasiswa" => "36", "status_standar" => "Memenuhi"],
+  ["kode_mk" => "STS401", "kode_cpmk" => "STS401-3", "min" => "48", "max" => "85", "rerata" => "69", "ketuntasan" => "71%", "mahasiswa" => "36", "status_standar" => "Tidak Memenuhi"],
+  ["kode_mk" => "STS401", "kode_cpmk" => "STS401-4", "min" => "70", "max" => "100", "rerata" => "85", "ketuntasan" => "92%", "mahasiswa" => "36", "status_standar" => "Memenuhi"],
+  ["kode_mk" => "STS402", "kode_cpmk" => "STS402-1", "min" => "55", "max" => "89", "rerata" => "74", "ketuntasan" => "78%", "mahasiswa" => "35", "status_standar" => "Tidak Memenuhi"],
+  ["kode_mk" => "STS402", "kode_cpmk" => "STS402-2", "min" => "72", "max" => "100", "rerata" => "88", "ketuntasan" => "93%", "mahasiswa" => "35", "status_standar" => "Memenuhi"],
+  ["kode_mk" => "STS402", "kode_cpmk" => "STS402-3", "min" => "50", "max" => "87", "rerata" => "72", "ketuntasan" => "75%", "mahasiswa" => "35", "status_standar" => "Tidak Memenuhi"],
+  ["kode_mk" => "STS402", "kode_cpmk" => "STS402-4", "min" => "75", "max" => "100", "rerata" => "90", "ketuntasan" => "96%", "mahasiswa" => "35", "status_standar" => "Memenuhi"],
+];
+foreach ($rows as $index => $row) {
+?>
+          <tr>
+            <td><?= $index + 1 ?></td>
+            <td><?= $row['kode_mk'] ?></td>
+            <td><?= $row['kode_cpmk'] ?></td>
+            <td><?= $row['min'] ?></td>
+            <td><?= $row['max'] ?></td>
+            <td><?= $row['rerata'] ?></td>
+            <td><?= $row['ketuntasan'] ?></td>
+            <td><?= $row['mahasiswa'] ?></td>
+            <td class="memenuhi"><?= $row['status_standar'] ?></td>
+          </tr>
+<?php } ?>
+</tbody>
     </table>
   </div>
 </div>
@@ -717,35 +517,24 @@
           </tr>
         </thead>
         <tbody>
+<?php
+$rows = [
+  ["indicator" => "% Mahasiswa Tuntas CPMK 1", "2_year_prior" => "85%", "1_year_prior" => "80%", "selected_year" => "92%"],
+  ["indicator" => "% Mahasiswa Tuntas CPMK 2", "2_year_prior" => "78%", "1_year_prior" => "75%", "selected_year" => "88%"],
+  ["indicator" => "% Mahasiswa Tuntas CPMK 3", "2_year_prior" => "90%", "1_year_prior" => "82%", "selected_year" => "85%"],
+  ["indicator" => "% Mahasiswa Tuntas CPMK 4", "2_year_prior" => "88%", "1_year_prior" => "86%", "selected_year" => "90%"],
+];
+foreach ($rows as $index => $row) {
+?>
           <tr>
-            <td>1</td>
-            <td>% Mahasiswa Tuntas CPMK 1</td>
-            <td>85%</td>
-            <td>80%</td>
-            <td>92%</td>
+            <td><?= $index + 1 ?></td>
+            <td><?= $row['indicator'] ?></td>
+            <td><?= $row['2_year_prior'] ?></td>
+            <td><?= $row['1_year_prior'] ?></td>
+            <td><?= $row['selected_year'] ?></td>
           </tr>
-          <tr>
-            <td>2</td>
-            <td>% Mahasiswa Tuntas CPMK 2</td>
-            <td>78%</td>
-            <td>75%</td>
-            <td>88%</td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>% Mahasiswa Tuntas CPMK 3</td>
-            <td>90%</td>
-            <td>82%</td>
-            <td>85%</td>
-          </tr>
-          <tr>
-            <td>4</td>
-            <td>% Mahasiswa Tuntas CPMK 4</td>
-            <td>88%</td>
-            <td>86%</td>
-            <td>90%</td>
-          </tr>
-        </tbody>
+<?php } ?>
+</tbody>
       </table>
     </div>
 
@@ -780,59 +569,30 @@
         </thead>
 
         <tbody class="text-center">
+<?php
+$rows = [
+  ["kelas" => "A", "cpmk_1" => "78", "cpmk_2" => "85%", "cpmk_3" => "75", "cpmk_4" => "80%", "jumlah_mahasiswa" => "82", "rerata" => "88%", "tuntas" => "79", "rerata_2" => "84%", "tuntas_2" => "40"],
+  ["kelas" => "B", "cpmk_1" => "74", "cpmk_2" => "78%", "cpmk_3" => "77", "cpmk_4" => "83%", "jumlah_mahasiswa" => "80", "rerata" => "85%", "tuntas" => "76", "rerata_2" => "79%", "tuntas_2" => "38"],
+  ["kelas" => "C", "cpmk_1" => "81", "cpmk_2" => "90%", "cpmk_3" => "79", "cpmk_4" => "86%", "jumlah_mahasiswa" => "84", "rerata" => "91%", "tuntas" => "82", "rerata_2" => "88%", "tuntas_2" => "42"],
+];
+foreach ($rows as $index => $row) {
+?>
           <tr>
-            <td>
-              <a href="detail.php" class="btn btn-sm btn-outline-info">📄</a>
-            </td>
-            <td>1</td>
-            <td>A</td>
-            <td>78</td>
-            <td>85%</td>
-            <td>75</td>
-            <td>80%</td>
-            <td>82</td>
-            <td>88%</td>
-            <td>79</td>
-            <td>84%</td>
-            <td>40</td>
+            <td><a href="detail.php" class="btn btn-sm btn-outline-info">📄</a></td>
+            <td><?= $index + 1 ?></td>
+            <td><?= $row['kelas'] ?></td>
+            <td><?= $row['cpmk_1'] ?></td>
+            <td><?= $row['cpmk_2'] ?></td>
+            <td><?= $row['cpmk_3'] ?></td>
+            <td><?= $row['cpmk_4'] ?></td>
+            <td><?= $row['jumlah_mahasiswa'] ?></td>
+            <td><?= $row['rerata'] ?></td>
+            <td><?= $row['tuntas'] ?></td>
+            <td><?= $row['rerata_2'] ?></td>
+            <td><?= $row['tuntas_2'] ?></td>
           </tr>
-
-          <tr>
-            <td>
-              <a href="detail.php" class="btn btn-sm btn-outline-info">📄</a>
-            </td>
-            <td>2</td>
-            <td>B</td>
-            <td>74</td>
-            <td>78%</td>
-            <td>77</td>
-            <td>83%</td>
-            <td>80</td>
-            <td>85%</td>
-            <td>76</td>
-            <td>79%</td>
-            <td>38</td>
-            
-          </tr>
-
-          <tr>
-            <td>
-              <a href="detail.php" class="btn btn-sm btn-outline-info">📄</a>
-            </td>
-            <td>3</td>
-            <td>C</td>
-            <td>81</td>
-            <td>90%</td>
-            <td>79</td>
-            <td>86%</td>
-            <td>84</td>
-            <td>91%</td>
-            <td>82</td>
-            <td>88%</td>
-            <td>42</td>
-          </tr>
-
-            <tr class="table-info ">
+<?php } ?>
+<tr class="table-info ">
               <td colspan="3">Agregasi Semua Kelas</td>
               <td>78</td>
               <td>84%</td>
@@ -843,9 +603,7 @@
               <td>79</td>
               <td>84%</td>
               <td>120</td>
-            </tr>
-
-        </tbody>
+            </tr></tbody>
         
       </table>
     </div>
@@ -921,157 +679,34 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td class="text-center">1</td>
-                    <td class="text-center">ST-24</td>
-                    <td>STS704</td>
-                    <td>Metode Pelaksanaan Bangunan</td>
-                    <td class="text-center"><span class="badge badge-success">Wajib</span></td>
-                    <td class="text-center">1</td>
-                    <td>3</td>
-                    <td>3</td>
-                    <td class="text-center">
-                      <button type="button" class="btn btn-sm btn-outline-info" data-bs-toggle="modal" data-bs-target="#modalDetailMK">
-                        📄 Detail
-                      </button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="text-center">2</td>
-                    <td class="text-center">ST-24</td>
-                    <td>STS913</td>
-                    <td>Struktur Komposit</td>
-                    <td class="text-center"><span class="badge badge-info">Pilihan</span></td>
-                    <td class="text-center">1</td>
-                    <td>3</td>
-                    <td>3</td>
-                    <td class="text-center">
-                      <button type="button" class="btn btn-sm btn-outline-info" data-bs-toggle="modal" data-bs-target="#modalDetailMK">
-                        📄 Detail
-                      </button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="text-center">3</td>
-                    <td class="text-center">ST-24</td>
-                    <td>51175111</td>
-                    <td>Building Structures Design</td>                   
-                    <td class="text-center"><span class="badge badge-success">Wajib</span></td>
-                    <td class="text-center">2</td>
-                    <td>3</td>
-                    <td>3</td>
-                    <td class="text-center">
-                      <button type="button" class="btn btn-sm btn-outline-info" data-bs-toggle="modal" data-bs-target="#modalDetailMK">
-                        📄 Detail
-                      </button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="text-center">4</td>
-                    <td class="text-center">ST-24</td>
-                    <td>STS-101</td>
-                    <td>Engineering Statistics</td>                    
-                    <td class="text-center"><span class="badge badge-success">Wajib</span></td>
-                    <td class="text-center">2</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td class="text-center">
-                      <button type="button" class="btn btn-sm btn-outline-info" data-bs-toggle="modal" data-bs-target="#modalDetailMK">
-                        📄 Detail
-                      </button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="text-center">5</td>
-                    <td class="text-center">ST-24</td>
-                    <td>STS307</td>
-                    <td>Bahan Perkerasan Jalan (+Pr)</td>
-                    <td class="text-center"><span class="badge badge-info">Pilihan</span></td>
-                    <td class="text-center">3</td>
-                    <td>4</td>
-                    <td>3</td>
-                    <td class="text-center">
-                      <button type="button" class="btn btn-sm btn-outline-info" data-bs-toggle="modal" data-bs-target="#modalDetailMK">
-                        📄 Detail
-                      </button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="text-center">6</td>
-                    <td class="text-center">ST-24</td>
-                    <td>STS702</td>
-                    <td>Struktur Baja</td>
-                    <td class="text-center"><span class="badge badge-info">Pilihan</span></td>
-                    <td class="text-center">4</td>
-                    <td>3</td>
-                    <td>3</td>
-                    <td class="text-center">
-                      <button type="button" class="btn btn-sm btn-outline-info" data-bs-toggle="modal" data-bs-target="#modalDetailMK">
-                        📄 Detail
-                      </button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="text-center">7</td>
-                    <td class="text-center">ST-24</td>
-                    <td>51195142</td>
-                    <td>Perancangan Struktur Jembatan</td>
-                    <td class="text-center"><span class="badge badge-info">Pilihan</span></td>
-                    <td class="text-center">5</td>
-                    <td>2</td>
-                    <td>2</td>
-                    <td class="text-center">
-                      <button type="button" class="btn btn-sm btn-outline-info" data-bs-toggle="modal" data-bs-target="#modalDetailMK">
-                        📄 Detail
-                      </button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="text-center">8</td>
-                    <td class="text-center">ST-24</td>
-                    <td>51155081</td>
-                    <td>Introduction to Earthquake Engineering</td>
-                    <td class="text-center"><span class="badge badge-info">Pilihan</span></td>
-                    <td class="text-center">6</td>
-                    <td>3</td>
-                    <td>2</td>
-                    <td class="text-center">
-                      <button type="button" class="btn btn-sm btn-outline-info" data-bs-toggle="modal" data-bs-target="#modalDetailMK">
-                        📄 Detail
-                      </button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="text-center">9</td>
-                    <td class="text-center">ST-24</td>
-                    <td>STS904</td>
-                    <td>BIM untuk Manajemen Konstruksi</td>
-                    <td class="text-center"><span class="badge badge-info">Pilihan</span></td>
-                    <td class="text-center">7</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td class="text-center">
-                      <button type="button" class="btn btn-sm btn-outline-info" data-bs-toggle="modal" data-bs-target="#modalDetailMK">
-                        📄 Detail
-                      </button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="text-center">10</td>
-                    <td class="text-center">ST-24</td>
-                    <td>51153061</td>
-                    <td>Water Structures Design</td>
-                    <td class="text-center"><span class="badge badge-info">Pilihan</span></td>
-                    <td class="text-center">8</td>
-                    <td>3</td>
-                    <td>3</td>
-                    <td class="text-center">
-                      <button type="button" class="btn btn-sm btn-outline-info" data-bs-toggle="modal" data-bs-target="#modalDetailMK">
-                        📄 Detail
-                      </button>
-                    </td>
-                  </tr>
-                </tbody>
+<?php
+$rows = [
+  ["kode_mk" => "STS704", "nama_mk" => "Metode Pelaksanaan Bangunan", "jenis" => "<span class=\"badge badge-success\">Wajib</span>", "semester_tempuh" => "1", "jumlah_cpmk" => "3", "jumlah_sks" => "3"],
+  ["kode_mk" => "STS913", "nama_mk" => "Struktur Komposit", "jenis" => "<span class=\"badge badge-info\">Pilihan</span>", "semester_tempuh" => "1", "jumlah_cpmk" => "3", "jumlah_sks" => "3"],
+  ["kode_mk" => "51175111", "nama_mk" => "Building Structures Design", "jenis" => "<span class=\"badge badge-success\">Wajib</span>", "semester_tempuh" => "2", "jumlah_cpmk" => "3", "jumlah_sks" => "3"],
+  ["kode_mk" => "STS-101", "nama_mk" => "Engineering Statistics", "jenis" => "<span class=\"badge badge-success\">Wajib</span>", "semester_tempuh" => "2", "jumlah_cpmk" => "2", "jumlah_sks" => "3"],
+  ["kode_mk" => "STS307", "nama_mk" => "Bahan Perkerasan Jalan (+Pr)", "jenis" => "<span class=\"badge badge-info\">Pilihan</span>", "semester_tempuh" => "3", "jumlah_cpmk" => "4", "jumlah_sks" => "3"],
+  ["kode_mk" => "STS702", "nama_mk" => "Struktur Baja", "jenis" => "<span class=\"badge badge-info\">Pilihan</span>", "semester_tempuh" => "4", "jumlah_cpmk" => "3", "jumlah_sks" => "3"],
+  ["kode_mk" => "51195142", "nama_mk" => "Perancangan Struktur Jembatan", "jenis" => "<span class=\"badge badge-info\">Pilihan</span>", "semester_tempuh" => "5", "jumlah_cpmk" => "2", "jumlah_sks" => "2"],
+  ["kode_mk" => "51155081", "nama_mk" => "Introduction to Earthquake Engineering", "jenis" => "<span class=\"badge badge-info\">Pilihan</span>", "semester_tempuh" => "6", "jumlah_cpmk" => "3", "jumlah_sks" => "2"],
+  ["kode_mk" => "STS904", "nama_mk" => "BIM untuk Manajemen Konstruksi", "jenis" => "<span class=\"badge badge-info\">Pilihan</span>", "semester_tempuh" => "7", "jumlah_cpmk" => "2", "jumlah_sks" => "3"],
+  ["kode_mk" => "51153061", "nama_mk" => "Water Structures Design", "jenis" => "<span class=\"badge badge-info\">Pilihan</span>", "semester_tempuh" => "8", "jumlah_cpmk" => "3", "jumlah_sks" => "3"],
+];
+foreach ($rows as $index => $row) {
+?>
+          <tr>
+            <td class="text-center"><?= $index + 1 ?></td>
+            <td class="text-center">ST-24</td>
+            <td><?= $row['kode_mk'] ?></td>
+            <td><?= $row['nama_mk'] ?></td>
+            <td class="text-center"><?= $row['jenis'] ?></td>
+            <td class="text-center"><?= $row['semester_tempuh'] ?></td>
+            <td><?= $row['jumlah_cpmk'] ?></td>
+            <td><?= $row['jumlah_sks'] ?></td>
+            <td class="text-center"><button type="button" class="btn btn-sm btn-outline-info" data-toggle="modal" data-target="#modalDetailMK"> 📄 Detail </button></td>
+          </tr>
+<?php } ?>
+</tbody>
               </table>
             </div>
           </div>
@@ -1135,7 +770,7 @@
  <!--        <div class="card">   
           <div class="card-header ">         
             <h5 class="card-title mb-0">
-              <button class="btn btn-sm btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#chartCPLIK1">
+              <button class="btn btn-sm btn-outline-primary" data-toggle="collapse" data-target="#chartCPLIK1">
                 <i class="fas fa-expand"></i>
               </button>
               CPL 1 - deskripsi CPL nya 
@@ -1162,29 +797,22 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td>IK-1</td>
-                    <td>Mahasiswa mampu menyampaikan informasi secara lisan secara runtut, jelas, dan mudah dipahami.</td>
-                    <td>82</td>
-                    <td>90%</td>
-                  </tr>
-                  <tr>
-                    <td>IK-5</td>
-                    <td>Mahasiswa mampu menulis laporan/tulisan akademik sesuai kaidah bahasa dan struktur penulisan yang baik.</td>
-                     <td>75</td>
-                    <td>80%</td>
-                  </tr>
-                  <tr>
-                    <td>CPL 1</td>
-                    <td>
-                      <a href="monev-cpl-individual2.php" target="_blank" class="btn btn-outline-info">
-                        Lihat Monev CPL Individual
-                      </a>
-                    </td>
-                    <td>???</td>
-                    <td>???</td>
-                  </tr>
-                </tbody>
+<?php
+$rows = [
+  ["kode" => "IK-1", "deskripsi" => "Mahasiswa mampu menyampaikan informasi secara lisan secara runtut, jelas, dan mudah dipahami.", "rerata" => "82", "tuntas" => "90%"],
+  ["kode" => "IK-5", "deskripsi" => "Mahasiswa mampu menulis laporan/tulisan akademik sesuai kaidah bahasa dan struktur penulisan yang baik.", "rerata" => "75", "tuntas" => "80%"],
+  ["kode" => "CPL 1", "deskripsi" => "<a href=\"monev-cpl-individual2.php\" target=\"_blank\" class=\"btn btn-outline-info\"> Lihat Monev CPL Individual </a>", "rerata" => "???", "tuntas" => "???"],
+];
+foreach ($rows as $index => $row) {
+?>
+          <tr>
+            <td><?= $row['kode'] ?></td>
+            <td><?= $row['deskripsi'] ?></td>
+            <td><?= $row['rerata'] ?></td>
+            <td><?= $row['tuntas'] ?></td>
+          </tr>
+<?php } ?>
+</tbody>
               </table>
             </div>
           </div>         
@@ -1194,7 +822,7 @@
 <!--         <div class="card">   
           <div class="card-header ">         
             <h5 class="card-title mb-0">
-              <button class="btn btn-sm btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#chartCPLIK2">
+              <button class="btn btn-sm btn-outline-primary" data-toggle="collapse" data-target="#chartCPLIK2">
                 <i class="fas fa-expand"></i>
               </button>
               IK 2 – Kemampuan untuk menginternalisasi semangat kemandirian dan Kewirausahaan
@@ -1223,8 +851,7 @@
                     <th class="pl-2 pr-2" style="vertical-align: middle;">Nilai</th>
                   </tr>
                 </thead>
-                <tbody>
-                  <tr>
+                <tbody><tr>
                     <td>IK 2</td>
                     <td colspan="2">
                       deskripsi IK nya 
@@ -1232,36 +859,25 @@
                     <td colspan="3"></td>
                     <td>77,33</td>
                   </tr>
-                  <tr>
-                    <td></td>
-                    <td>UKU100-1</td>
-                    <td>Mahasiswa mampu menyampaikan informasi secara lisan secara runtut, jelas, dan mudah dipahami.</td>
-                    <td>82</td>
-                    <td>M</td>
-                    <td>41</td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td></td>
-                    <td>STS454-1</td>
-                    <td>Mahasiswa mampu mempresentasikan ide dengan mudah dipahami.</td>
-                    <td>-</td>
-                    <td>M</td>
-                    <td>-</td>
-                    <td></td>
-                  </tr>
-                  
-                  <tr>
-                    <td></td>
-                    <td>UKU900-5</td>
-                    <td>Mahasiswa mampu menulis laporan/tulisan akademik sesuai kaidah bahasa dan struktur penulisan yang baik.</td>
-                     <td>75</td>
-                     <td>H</td>
-                     <td>75</td>
-                    <td></td>
-                  </tr>
-                  
-                </tbody>
+<?php
+$rows = [
+  ["cpmk" => "UKU100-1", "rerata_cpmk" => "Mahasiswa mampu menyampaikan informasi secara lisan secara runtut, jelas, dan mudah dipahami.", "ik" => "82", "nilai" => "M", "bobot" => "41"],
+  ["cpmk" => "STS454-1", "rerata_cpmk" => "Mahasiswa mampu mempresentasikan ide dengan mudah dipahami.", "ik" => "-", "nilai" => "M", "bobot" => "-"],
+  ["cpmk" => "UKU900-5", "rerata_cpmk" => "Mahasiswa mampu menulis laporan/tulisan akademik sesuai kaidah bahasa dan struktur penulisan yang baik.", "ik" => "75", "nilai" => "H", "bobot" => "75"],
+];
+foreach ($rows as $index => $row) {
+?>
+          <tr>
+            <td></td>
+            <td><?= $row['cpmk'] ?></td>
+            <td><?= $row['rerata_cpmk'] ?></td>
+            <td><?= $row['ik'] ?></td>
+            <td><?= $row['nilai'] ?></td>
+            <td><?= $row['bobot'] ?></td>
+            <td></td>
+          </tr>
+<?php } ?>
+</tbody>
               </table>
             </div>
           </div>
@@ -1284,7 +900,7 @@
     <div class="modal-content rounded-3 shadow">
       <div class="modal-header bg-info text-white">
         <h5 class="modal-title" id="modalFilterLabel">Filter Data</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
       </div>
       <form action="" method="GET">
 
@@ -1295,7 +911,7 @@
           </div>
           <div class="mb-3">
             <label for="angkatan" class="form-label">Angkatan</label>
-            <select name="angkatan" id="angkatan" class="form-select">
+            <select name="angkatan" id="angkatan" class="custom-select">
               <option value="">-- Pilih Angkatan --</option>
               <option value="2025">2025</option>
               <option value="2024">2024</option>
@@ -1304,7 +920,7 @@
           </div>
           <div class="mb-3">
             <label for="status" class="form-label">Status</label>
-            <select name="status" id="status" class="form-select">
+            <select name="status" id="status" class="custom-select">
               <option value="">-- Pilih Status --</option>
               <option value="Aktif">Aktif</option>
               <option value="NonAktif">NonAktif</option>
@@ -1314,7 +930,7 @@
        </div>
 
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
           <button type="submit" class="btn btn-info">Terapkan Filter</button>
         </div>
 
@@ -1330,7 +946,7 @@
     <div class="modal-content">
       <div class="modal-header bg-primary text-white">
         <h5 class="modal-title" id="modalBantuanLabel">Bantuan Tabel</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
       </div>
       <div class="modal-body">
         <p>
@@ -1500,7 +1116,7 @@ CPMK Bermasalah
         </p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
       </div>
     </div>
   </div>
@@ -1513,16 +1129,28 @@ CPMK Bermasalah
     <div class="modal-content">
       <div class="modal-header bg-secondary text-white">
         <h6 class="modal-title">Preview Performa Risiko (sample)</h6>
-        <button type="button" class="btn-close btn-close-white" data-dismiss="modal" aria-label="Close"></button>
+        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
       </div>
       <div class="modal-body">
         <table class="table table-sm table-bordered">
           <thead class="table-light"><tr><th>#</th><th>Kode</th><th>Deskripsi</th><th>Nilai Performa(pilih by Rerata atau by %Tuntas)</th></tr></thead>
           <tbody>
-            <tr><td>1</td><td>STS009-1</td><td>lorem ipsum</td><td>61 </td></tr>
-            <tr><td>2</td><td>STS544-4</td><td>lorem ipsum</td><td>48 </td></tr>
-            <tr><td>3</td><td>UKU355-6</td><td>Contoh Lain</td><td>45 </td></tr>
-          </tbody>
+<?php
+$rows = [
+  ["kode" => "STS009-1", "deskripsi" => "lorem ipsum", "nilai_performa_pilih_by_rerata" => "61"],
+  ["kode" => "STS544-4", "deskripsi" => "lorem ipsum", "nilai_performa_pilih_by_rerata" => "48"],
+  ["kode" => "UKU355-6", "deskripsi" => "Contoh Lain", "nilai_performa_pilih_by_rerata" => "45"],
+];
+foreach ($rows as $index => $row) {
+?>
+          <tr>
+            <td><?= $index + 1 ?></td>
+            <td><?= $row['kode'] ?></td>
+            <td><?= $row['deskripsi'] ?></td>
+            <td><?= $row['nilai_performa_pilih_by_rerata'] ?></td>
+          </tr>
+<?php } ?>
+</tbody>
         </table>
       </div>
       <div class="modal-footer">
@@ -1540,7 +1168,7 @@ CPMK Bermasalah
       <!-- Header -->
       <div class="modal-header bg-info text-white">
         <h5 class="modal-title" id="detailMKTitle">Detail Kelas Mata Kuliah</h5>
-        <button type="button" class="close text-white" data-bs-dismiss="modal" aria-label="Close">
+        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
@@ -1604,7 +1232,7 @@ CPMK Bermasalah
 
       <!-- Footer -->
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
       </div>
 
     </div>

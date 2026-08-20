@@ -27,7 +27,7 @@
   <section class="content-header">
     <div class="container-fluid">
       <h3 class="mb-0">Evaluasi Lulusan
-      <button type="button" class="btn btn-tool" data-bs-toggle="modal" data-bs-target="#modalBantuan" title="Bantuan"><i class="fas fa-info-circle"></i>
+      <button type="button" class="btn btn-tool" data-toggle="modal" data-target="#modalBantuan" title="Bantuan"><i class="fas fa-info-circle"></i>
         </button>
       </h3>
         <p class="text-muted mb-0">Keterangan singkat cara baca informasi halaman ini</p>
@@ -62,18 +62,18 @@
               </div>
             </div>
             <div class="card-footer">
-              <div class="card-tools ms-auto">
-                <button class="btn btn-outline-info btn-sm " data-bs-toggle="modal" data-bs-target="#modalFilter">
-                  <i class="fas fa-filter me-1"></i> Filter
+              <div class="card-tools ml-auto">
+                <button class="btn btn-outline-info btn-sm " data-toggle="modal" data-target="#modalFilter">
+                  <i class="fas fa-filter mr-1"></i> Filter
                 </button>
 
                 <button type="button" class="btn btn-outline-success btn-sm">
-                  <i class="fas fa-file-download me-1"></i> Export
+                  <i class="fas fa-file-download mr-1"></i> Export
                 </button>
-                <button class="btn btn-outline-info btn-sm " data-bs-toggle="modal" data-bs-target="#modalModel">
+                <button class="btn btn-outline-info btn-sm " data-toggle="modal" data-target="#modalModel">
                   <i class="fas fa-info-circle"></i></i> Model
                 </button>
-                <button class="btn btn-outline-info btn-sm " data-bs-toggle="modal" data-bs-target="#modalRangkuman">
+                <button class="btn btn-outline-info btn-sm " data-toggle="modal" data-target="#modalRangkuman">
                   <i class="fas fa-info-circle"></i> Rangkuman
                 </button>
               </div>
@@ -128,25 +128,25 @@
       <td class="text-center">
         <button 
         type="button" 
-        class="btn btn-sm btn-primary me-1"
-        data-bs-toggle="modal" 
-        data-bs-target="#modalActionPlan"
+        class="btn btn-sm btn-primary mr-1"
+        data-toggle="modal" 
+        data-target="#modalActionPlan"
         data-id-temuan="TM-2025-001">
         <i class="fas fa-tasks"></i> Action Plan
         </button>
         <button 
         type="button" 
         class="btn btn-sm btn-warning"
-        data-bs-toggle="modal" 
-        data-bs-target="#modalImpactReview"
+        data-toggle="modal" 
+        data-target="#modalImpactReview"
         data-id-temuan="TM-2025-001">
         <i class="fas fa-chart-line"></i> Impact Review
         </button>
         <button 
         type="button" 
         class="btn btn-sm btn-danger"
-        data-bs-toggle="modal" 
-        data-bs-target="#modalGovernanceUpdate"
+        data-toggle="modal" 
+        data-target="#modalGovernanceUpdate"
         data-id-temuan="TM-2025-001">
         <i class="fas fa-check-circle"></i>  Governance
         </button>
@@ -169,25 +169,25 @@
       <td class="text-center">
         <button 
         type="button" 
-        class="btn btn-sm btn-primary me-1"
-        data-bs-toggle="modal" 
-        data-bs-target="#modalActionPlan"
+        class="btn btn-sm btn-primary mr-1"
+        data-toggle="modal" 
+        data-target="#modalActionPlan"
         data-id-temuan="TM-2025-001">
         <i class="fas fa-tasks"></i> Action Plan
         </button>
         <button 
         type="button" 
         class="btn btn-sm btn-warning"
-        data-bs-toggle="modal" 
-        data-bs-target="#modalImpactReview"
+        data-toggle="modal" 
+        data-target="#modalImpactReview"
         data-id-temuan="TM-2025-001">
         <i class="fas fa-chart-line"></i> Impact Review
         </button>
         <button 
         type="button" 
         class="btn btn-sm btn-danger"
-        data-bs-toggle="modal" 
-        data-bs-target="#modalGovernanceUpdate"
+        data-toggle="modal" 
+        data-target="#modalGovernanceUpdate"
         data-id-temuan="TM-2025-001">
         <i class="fas fa-check-circle"></i>  Governance
         </button>
@@ -218,7 +218,7 @@
     <div class="modal-content rounded-3 shadow">
       <div class="modal-header bg-info text-white">
         <h5 class="modal-title" id="modalFilterLabel">Filter Data</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
       </div>
       <form action="" method="GET">
 
@@ -229,7 +229,7 @@
           </div>
           <div class="mb-3">
             <label for="angkatan" class="form-label">Angkatan</label>
-            <select name="angkatan" id="angkatan" class="form-select">
+            <select name="angkatan" id="angkatan" class="custom-select">
               <option value="">-- Pilih Angkatan --</option>
               <option value="2025">2025</option>
               <option value="2024">2024</option>
@@ -238,7 +238,7 @@
           </div>
           <div class="mb-3">
             <label for="status" class="form-label">Status</label>
-            <select name="status" id="status" class="form-select">
+            <select name="status" id="status" class="custom-select">
               <option value="">-- Pilih Status --</option>
               <option value="Aktif">Aktif</option>
               <option value="NonAktif">NonAktif</option>
@@ -248,7 +248,7 @@
        </div>
 
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
           <button type="submit" class="btn btn-info">Terapkan Filter</button>
         </div>
 
@@ -267,7 +267,7 @@
       
       <div class="modal-header bg-primary text-white">
         <h5 class="modal-title" id="modalTambahEvaluasiLabel">Tambah Data Evaluasi OBE</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        <button type="button" class="close text-white" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
       </div>
 
       <form action="" method="POST">
@@ -284,7 +284,7 @@
           <div class="row">
             <div class="col-md-4 mb-3">
               <label class="form-label">Reference Module <span class="text-danger">*</span></label>
-              <select name="reference_module" class="form-select" required>
+              <select name="reference_module" class="custom-select" required>
                 <option value="">-- Pilih Modul Monev --</option>
                 <option>Monev Kelas</option>
                 <option>Monev Semester</option>
@@ -309,7 +309,7 @@
           <div class="row">
             <div class="col-md-4 mb-3">
               <label class="form-label">Jenis Evaluasi <span class="text-danger">*</span></label>
-              <select name="jenis_evaluasi" class="form-select" required>
+              <select name="jenis_evaluasi" class="custom-select" required>
                 <option value="">-- Pilih Jenis --</option>
                 <option>Proses</option>
                 <option>Perkembangan</option>
@@ -325,7 +325,7 @@
 
             <div class="col-md-4 mb-3">
               <label class="form-label">Tingkat Prioritas <span class="text-danger">*</span></label>
-              <select name="tingkat_prioritas" class="form-select" required>
+              <select name="tingkat_prioritas" class="custom-select" required>
                 <option value="">-- Pilih Prioritas --</option>
                 <option>Low</option>
                 <option>Medium</option>
@@ -367,7 +367,7 @@
 
           <div class="mb-3">
             <label class="form-label">Status Aksi <span class="text-danger">*</span></label>
-            <select name="status_aksi" class="form-select" required>
+            <select name="status_aksi" class="custom-select" required>
               <option value="">-- Pilih Status --</option>
               <option>Planned</option>
               <option>Ongoing</option>
@@ -403,7 +403,7 @@
 
           <div class="mb-3">
             <label class="form-label">Kesimpulan Dampak</label>
-            <select name="kesimpulan_dampak" class="form-select">
+            <select name="kesimpulan_dampak" class="custom-select">
               <option value="">-- Pilih Kesimpulan --</option>
               <option>Effective</option>
               <option>Partially Effective</option>
@@ -417,7 +417,7 @@
           <div class="row">
             <div class="col-md-4 mb-3">
               <label class="form-label">Status Evaluasi <span class="text-danger">*</span></label>
-              <select name="status_evaluasi" class="form-select" required>
+              <select name="status_evaluasi" class="custom-select" required>
                 <option value="">-- Pilih Status --</option>
                 <option>Draft</option>
                 <option>Final</option>
@@ -440,7 +440,7 @@
         </div>
 
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
           <button type="submit" class="btn btn-primary">Simpan Evaluasi</button>
         </div>
       </form>
@@ -455,7 +455,7 @@
     <div class="modal-content">
       <div class="modal-header bg-primary text-white">
         <h5 class="modal-title" id="modalBantuanLabel">Bantuan Tabel</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
       </div>
       <div class="modal-body">
         <p>
@@ -463,7 +463,7 @@
         </p>        
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
       </div>
     </div>
   </div>
@@ -478,7 +478,7 @@
         <h5 class="modal-title">
           Matriks Unit vs Periode Evaluasi
         </h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        <button type="button" class="close text-white" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
       </div>
 
       <div class="modal-body">
@@ -495,7 +495,7 @@
 
             <tbody>
               <tr>
-                <td class="text-start">Kelas</td>
+                <td class="text-left">Kelas</td>
                 <td>✔</td>
                 <td>-</td>
                 <td>-</td>
@@ -503,7 +503,7 @@
               </tr>
 
               <tr>
-                <td class="text-start">Mata Kuliah</td>
+                <td class="text-left">Mata Kuliah</td>
                 <td>✔</td>
                 <td>✔</td>
                 <td>-</td>
@@ -511,7 +511,7 @@
               </tr>
 
               <tr>
-                <td class="text-start">Angkatan</td>
+                <td class="text-left">Angkatan</td>
                 <td>-</td>
                 <td>✔</td>
                 <td>✔</td>
@@ -519,7 +519,7 @@
               </tr>
 
               <tr>
-                <td class="text-start">Yudisium</td>
+                <td class="text-left">Yudisium</td>
                 <td>-</td>
                 <td>✔</td>
                 <td>✔</td>
@@ -527,7 +527,7 @@
               </tr>
 
               <tr>
-                <td class="text-start">Prodi</td>
+                <td class="text-left">Prodi</td>
                 <td>-</td>
                 <td>✔</td>
                 <td>✔</td>
@@ -535,7 +535,7 @@
               </tr>
 
               <tr>
-                <td class="text-start">Kurikulum</td>
+                <td class="text-left">Kurikulum</td>
                 <td>-</td>
                 <td>-</td>
                 <td>✔</td>
@@ -546,7 +546,7 @@
       </div>
 
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">
+        <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">
           Tutup
         </button>
       </div>
@@ -563,10 +563,10 @@
         <h5 class="modal-title">
           Ringkasan Refleksi Kelas – Analisis Kurikulum
         </h5>
-        <span class="badge bg-light text-dark ms-3">
+        <span class="badge badge-light text-dark ml-3">
           Semester Ganjil 2024/2025
         </span>
-        <button type="button" class="btn-close btn-close-white ms-auto" data-bs-dismiss="modal"></button>
+        <button type="button" class="close text-white ml-auto" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
       </div>
 
       <div class="modal-body">
@@ -574,11 +574,11 @@
         <!-- TAG UTAMA -->
         <div class="mb-4">
           <h5 class="text-primary"><strong>TAG Utama Kelas</strong></h5>
-          <span class="badge bg-danger">#CPMK_Tidak_Tercapai</span>
-          <span class="badge bg-warning text-dark">#Variansi_Tinggi</span>
-          <span class="badge bg-info">#Prasyarat_Lemah</span>
-          <span class="badge bg-secondary">#Instrumen_Terlalu_Sulit</span>
-          <span class="badge bg-primary">#Butuh_Pemecahan_Materi</span>
+          <span class="badge badge-danger">#CPMK_Tidak_Tercapai</span>
+          <span class="badge badge-warning text-dark">#Variansi_Tinggi</span>
+          <span class="badge badge-info">#Prasyarat_Lemah</span>
+          <span class="badge badge-secondary">#Instrumen_Terlalu_Sulit</span>
+          <span class="badge badge-primary">#Butuh_Pemecahan_Materi</span>
         </div>
 
         <hr>
@@ -647,7 +647,7 @@
         <button class="btn btn-outline-primary btn-sm">
           Unduh Ringkasan
         </button>
-        <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">
+        <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">
           Tutup
         </button>
       </div>
@@ -663,7 +663,7 @@
 
       <div class="modal-header bg-primary text-white">
         <h5 class="modal-title">Tambah Action Plan</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        <button type="button" class="close text-white" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
       </div>
 
       <form method="POST">
@@ -733,7 +733,7 @@
         </div>
 
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
           <button type="submit" class="btn btn-success">Simpan Action Plan</button>
         </div>
       </form>
@@ -749,7 +749,7 @@
 
       <div class="modal-header bg-warning">
         <h5 class="modal-title">Impact Review Temuan</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
       </div>
 
       <form method="POST">
@@ -804,7 +804,7 @@
         </div>
 
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
           <button type="submit" class="btn btn-warning">Simpan Impact Review</button>
         </div>
       </form>
@@ -820,7 +820,7 @@
         <h5 class="modal-title">
           Update Governance Temuan
         </h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        <button type="button" class="close text-white" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
       </div>
 
       <form action="/temuan/update-governance" method="POST">
@@ -831,7 +831,7 @@
 
           <div class="mb-3">
             <label class="form-label">Status Temuan</label>
-            <select name="status_temuan" class="form-select" required>
+            <select name="status_temuan" class="custom-select" required>
               <option value="Draft">Draft</option>
               <option value="Diajukan">Diajukan</option>
               <option value="Disetujui">Disetujui</option>
@@ -867,7 +867,7 @@
         </div>
 
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">
             Batal
           </button>
           <button type="submit" class="btn btn-danger">

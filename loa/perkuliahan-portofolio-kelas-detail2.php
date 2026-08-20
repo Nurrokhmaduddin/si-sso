@@ -9,7 +9,7 @@
   <section class="content-header">
     <div class="container-fluid">
       <h3 class="mb-0">Portofolio - Kelas Perkuliahan [lembar kerja dosen]
-        <button type="button" class="btn btn-tool" data-bs-toggle="modal" data-bs-target="#modalBantuan" title="Bantuan"><i class="fas fa-question-circle"></i>
+        <button type="button" class="btn btn-tool" data-toggle="modal" data-target="#modalBantuan" title="Bantuan"><i class="fas fa-question-circle"></i>
         </button> 
       </h3>
         <p class="text-muted mb-0">Keterangan singkat cara baca informasi halaman ini</p>
@@ -32,7 +32,7 @@
               <h5 class="card-title mb-0">
                 <i class="fas fa-database"></i> Data Produk/Barang        
               </h5>
-              <div class="card-tools ms-auto">
+              <div class="card-tools ml-auto">
                                
               </div>
             </div> -->
@@ -89,33 +89,33 @@
             </div>
 
             <div class="card-footer">
-              <div class="card-tools ms-auto">
+              <div class="card-tools ml-auto">
                  <button type="button" 
                 class="btn btn-outline-secondary btn-sm"
                 onclick="window.location.href='perkuliahan-portofolio-kelas.php'">
-                <span class="fas fa-reply me-1"></span> Kembali
+                <span class="fas fa-reply mr-1"></span> Kembali
               </button>
 
-                <!-- <button class="btn btn-outline-info btn-sm " data-bs-toggle="modal" data-bs-target="#modalFilter">
-                  <i class="fas fa-filter me-1"></i> Filter
+                <!-- <button class="btn btn-outline-info btn-sm " data-toggle="modal" data-target="#modalFilter">
+                  <i class="fas fa-filter mr-1"></i> Filter
                 </button> -->
-               <!--  <button type="button" class="btn btn-outline-primary btn-sm " data-bs-toggle="modal" data-bs-target="#modalTambahData">
-                  <i class="fas fa-plus me-1"></i> Add
+               <!--  <button type="button" class="btn btn-outline-primary btn-sm " data-toggle="modal" data-target="#modalTambahData">
+                  <i class="fas fa-plus mr-1"></i> Add
                 </button> -->
-                <button type="button" class="btn btn-outline-primary btn-sm " data-bs-toggle="modal" data-bs-target="#modalImpor">
-                  <i class="fas fa-file-upload me-1"></i> Import
+                <button type="button" class="btn btn-outline-primary btn-sm " data-toggle="modal" data-target="#modalImpor">
+                  <i class="fas fa-file-upload mr-1"></i> Import
                 </button>  
-                <!-- <button type="button" class="btn btn-outline-warning btn-sm " data-bs-toggle="modal" data-bs-target="#modalImpor">
-                  <i class="fas fa-cloud-upload-alt me-1"></i> Import from Gateway UII
+                <!-- <button type="button" class="btn btn-outline-warning btn-sm " data-toggle="modal" data-target="#modalImpor">
+                  <i class="fas fa-cloud-upload-alt mr-1"></i> Import from Gateway UII
                 </button> -->              
                 <button type="button" class="btn btn-outline-success btn-sm">
-                  <i class="fas fa-file-download me-1"></i> Export
+                  <i class="fas fa-file-download mr-1"></i> Export
                 </button>
                 <button type="button" class="btn btn-outline-warning btn-sm " >
                   <i class="fas fa-cloud-download-alt"></i> Export to Gateway UII
                 </button>
                 <button type="button" class="btn btn-outline-danger btn-sm">
-                  <i class="fas fa-ban me-1"></i> Reset
+                  <i class="fas fa-ban mr-1"></i> Reset
                 </button>    
               </div>
             </div>
@@ -229,248 +229,42 @@ if ($persen == 100) {
                     </tr>
                   </thead>
                   <tbody>
-                    <tr >
-                      <td align="center">1</td>
-                      <td>19511100</td>
-                      <td>ILHAM KURNIAWAN</td>
-                      <td align="center" class="bg-danger">3.57</td>
-                      <td align="center">F</td>
-                      <td align="center" class="bg-secondary"></td>
-                      <td align="center" class="bg-secondary"></td>
-                      <td align="center" class="bg-secondary"></td>
-                      <td align="center" class="bg-secondary"></td>
-                      <td align="center" class="bg-secondary"></td>
-                      <td align="center" class="bg-secondary"></td>
-                      <td align="center" class="bg-secondary"></td>
-                      <td align="center" class="bg-secondary"></td>
-                      <td align="center" class="bg-secondary"></td>
-                      <td align="center" class="bg-secondary"></td>
-                      <td align="center" class="bg-secondary"></td>
-                      <td align="center">
-                        <button class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#modalEditNilai">✏️</button>
-                        <button class="btn btn-sm btn-outline-danger" data-toggle="modal" data-target="#modalHapusNilai">🗑️</button>
-                      </td>
-                    </tr>
-                    <tr >
-                      <td align="center">2</td>
-                      <td>20511106</td>
-                      <td>NABILLAH PUTRI NUR RAHMAH</td>
-                      <td align="center" class="">76.70</td>
-                      <td align="center">B+</td>
-                      <td align="center" >75.00</td>
-                      <td align="center" class="bg-secondary"></td>
-                      <td align="center" >75.00</td>
-                      <td align="center" >78.00</td>
-                      <td align="center" class="bg-secondary"></td>
-                      <td align="center" >71.00</td>
-                      <td align="center" class="bg-secondary"></td>
-                      <td align="center" >78.00</td>
-                      <td align="center" class="bg-secondary"></td>
-                      <td align="center" >71.00</td>
-                      <td align="center" class="bg-secondary"></td>
-                      <td align="center">
-                        <button class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#modalEditNilai">✏️</button>
-                        <button class="btn btn-sm btn-outline-danger" data-toggle="modal" data-target="#modalHapusNilai">🗑️</button>
-                      </td>
-                    </tr>
-                    <tr >
-                      <td align="center">3</td>
-                      <td>20511402</td>
-                      <td>MUHAMMAD FIRDAUS SANI WIJAYA KUSUMA</td>
-                      <td align="center" class="">86.77</td>
-                      <td align="center">A</td>
-                      <td align="center" >66.00</td>
-                      <td align="center" >81.00</td>
-                      <td align="center" >81.00</td>
-                      <td align="center" >88.00</td>
-                      <td align="center" class="bg-secondary"></td>
-                      <td align="center" >82.00</td>
-                      <td align="center" class="bg-secondary"></td>
-                      <td align="center" >86.00</td>
-                      <td align="center" class="bg-secondary"></td>
-                      <td align="center" >87.00</td>
-                      <td align="center" class="bg-secondary"></td>
-                      <td align="center">
-                        <button class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#modalEditNilai">✏️</button>
-                        <button class="btn btn-sm btn-outline-danger" data-toggle="modal" data-target="#modalHapusNilai">🗑️</button>
-                      </td>
-                    </tr>
-                    <tr >
-                      <td align="center">4</td>
-                      <td>21511014</td>
-                      <td>SAHLA SALSABILA </td>
-                      <td align="center" class="">76.43</td>
-                      <td align="center">B+</td>
-                      <td align="center" >81.00</td>
-                      <td align="center" class="bg-secondary"></td>
-                      <td align="center" >81.00</td>
-                      <td align="center" >83.00</td>
-                      <td align="center" class="bg-secondary"></td>
-                      <td align="center" >69.00</td>
-                      <td align="center" class="bg-secondary"></td>
-                      <td align="center" >73.00</td>
-                      <td align="center" class="bg-secondary"></td>
-                      <td align="center" >75.00</td>
-                      <td align="center" class="bg-secondary"></td>
-                      <td align="center">
-                        <button class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#modalEditNilai">✏️</button>
-                        <button class="btn btn-sm btn-outline-danger" data-toggle="modal" data-target="#modalHapusNilai">🗑️</button>
-                      </td>
-                    </tr>
-                    <tr >
-                      <td align="center">5</td>
-                      <td>21511043</td>
-                      <td>SALWA BAGHEA MULIARAHMA</td>
-                      <td align="center" class="">63.47</td>
-                      <td align="center">B/C</td>
-                      <td align="center" >80.00</td>
-                      <td align="center" >60.00</td>
-                      <td align="center" >80.00</td>
-                      <td align="center" >63.00</td>
-                      <td align="center" class="bg-secondary"></td>
-                      <td align="center" >70.00</td>
-                      <td align="center" class="bg-secondary"></td>
-                      <td align="center" >48.00</td>
-                      <td align="center" class="bg-secondary"></td>
-                      <td align="center" >60.00</td>
-                      <td align="center" class="bg-secondary"></td>
-                      <td align="center">
-                        <button class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#modalEditNilai">✏️</button>
-                        <button class="btn btn-sm btn-outline-danger" data-toggle="modal" data-target="#modalHapusNilai">🗑️</button>
-                      </td>
-                    </tr>
-                    <tr >
-                      <td align="center">6</td>
-                      <td>21511066</td>
-                      <td>KAHFI NATAKUSUMA</td>
-                      <td align="center" class="">88.57</td>
-                      <td align="center">A</td>
-                      <td align="center" >94.00</td>
-                      <td align="center" class="bg-secondary"></td>
-                      <td align="center" >94.00</td>
-                      <td align="center" >91.00</td>
-                      <td align="center" class="bg-secondary"></td>
-                      <td align="center" >95.00</td>
-                      <td align="center" class="bg-secondary"></td>
-                      <td align="center" >95.00</td>
-                      <td align="center" class="bg-secondary"></td>
-                      <td align="center" >61.00</td>
-                      <td align="center" class="bg-secondary"></td>
-                      <td align="center">
-                        <button class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#modalEditNilai">✏️</button>
-                        <button class="btn btn-sm btn-outline-danger" data-toggle="modal" data-target="#modalHapusNilai">🗑️</button>
-                      </td>
-                    </tr>
-                    <tr >
-                      <td align="center">7</td>
-                      <td>21511073</td>
-                      <td>RAHESA ARIANO PUTRA </td>
-                      <td align="center" class="">77.78</td>
-                      <td align="center">A/B</td>
-                      <td align="center" >77.00</td>
-                      <td align="center" class="bg-secondary"></td>
-                      <td align="center" >77.00</td>
-                      <td align="center" >70.00</td>
-                      <td align="center" class="bg-secondary"></td>
-                      <td align="center" >68.00</td>
-                      <td align="center" class="bg-secondary"></td>
-                      <td align="center" >84.00</td>
-                      <td align="center" class="bg-secondary"></td>
-                      <td align="center" >82.00</td>
-                      <td align="center" class="bg-secondary"></td>
-                      <td align="center">
-                        <button class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#modalEditNilai">✏️</button>
-                        <button class="btn btn-sm btn-outline-danger" data-toggle="modal" data-target="#modalHapusNilai">🗑️</button>
-                      </td>
-                    </tr>
-                    <tr >
-                      <td align="center">8</td>
-                      <td>21511082</td>
-                      <td>MUHAMMAD SURFUN BATTAN</td>
-                      <td align="center" class="">73.01</td>
-                      <td align="center">B</td>
-                      <td align="center" >79.00</td>
-                      <td align="center" class="bg-secondary"></td>
-                      <td align="center" >79.00</td>
-                      <td align="center" >68.00</td>
-                      <td align="center" class="bg-secondary"></td>
-                      <td align="center" >75.00</td>
-                      <td align="center" class="bg-secondary"></td>
-                      <td align="center" >69.00</td>
-                      <td align="center" class="bg-secondary"></td>
-                      <td align="center" >68.00</td>
-                      <td align="center" class="bg-secondary"></td>
-                      <td align="center">
-                        <button class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#modalEditNilai">✏️</button>
-                        <button class="btn btn-sm btn-outline-danger" data-toggle="modal" data-target="#modalHapusNilai">🗑️</button>
-                      </td>
-                    </tr>
-                    <tr >
-                      <td align="center">9</td>
-                      <td>21511085</td>
-                      <td>RIDHO AHMAT FAUZI</td>
-                      <td align="center" class="">84.43</td>
-                      <td align="center">A-</td>
-                      <td align="center" >73.00</td>
-                      <td align="center" class="bg-secondary"></td>
-                      <td align="center" >73.00</td>
-                      <td align="center" >81.00</td>
-                      <td align="center" class="bg-secondary"></td>
-                      <td align="center" >79.00</td>
-                      <td align="center" class="bg-secondary"></td>
-                      <td align="center" >92.00</td>
-                      <td align="center" class="bg-secondary"></td>
-                      <td align="center" >79.00</td>
-                      <td align="center" class="bg-secondary"></td>
-                      <td align="center">
-                        <button class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#modalEditNilai">✏️</button>
-                        <button class="btn btn-sm btn-outline-danger" data-toggle="modal" data-target="#modalHapusNilai">🗑️</button>
-                      </td>
-                    </tr>
-                    <tr >
-                      <td align="center">10</td>
-                      <td>21511091</td>
-                      <td>BAYU MUHAMMAD IQBAL</td>
-                      <td align="center" class="">85.87</td>
-                      <td align="center">A</td>
-                      <td align="center" >79.00</td>
-                      <td align="center" class="bg-secondary"></td>
-                      <td align="center" >79.00</td>
-                      <td align="center" >88.00</td>
-                      <td align="center" class="bg-secondary"></td>
-                      <td align="center" >88.00</td>
-                      <td align="center" class="bg-secondary"></td>
-                      <td align="center" >88.00</td>
-                      <td align="center" class="bg-secondary"></td>
-                      <td align="center" >74.00</td>
-                      <td align="center" class="bg-secondary"></td>
-                      <td align="center">
-                        <button class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#modalEditNilai">✏️</button>
-                        <button class="btn btn-sm btn-outline-danger" data-toggle="modal" data-target="#modalHapusNilai">🗑️</button>
-                      </td>
-                    </tr>                   
-                    <tr >
-                      <td align="center">27</td>
-                      <td>22511243</td>
-                      <td>MUHAMMAD ZAIDAN SALIM </td>
-                      <td align="center" class="">83.09</td>
-                      <td align="center">A-</td>
-                      <td align="center" >84.00</td>
-                      <td align="center" class="bg-secondary"></td>
-                      <td align="center" >84.00</td>
-                      <td align="center" >79.00</td>
-                      <td align="center" class="bg-secondary"></td>
-                      <td align="center" >81.00</td>
-                      <td align="center" class="bg-secondary"></td>
-                      <td align="center" >82.00</td>
-                      <td align="center" class="bg-secondary"></td>
-                      <td align="center" >85.00</td>
-                      <td align="center" class="bg-secondary"></td>
-                      <td align="center">
-                        <button class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#modalEditNilai">✏️</button>
-                        <button class="btn btn-sm btn-outline-danger" data-toggle="modal" data-target="#modalHapusNilai">🗑️</button>
-                      </td>
-                    </tr>
+<?php
+$rows = [
+["no" => "1", "nim" => "19511100", "mahasiswa" => "ILHAM KURNIAWAN", "angka" => "3.57", "huruf" => "F", "cpmk_1" => "", "cpmk_2" => "", "cpmk_3" => "", "cpmk_4" => "", "aksi" => "", "p" => "", "a" => ""],
+["no" => "2", "nim" => "20511106", "mahasiswa" => "NABILLAH PUTRI NUR RAHMAH", "angka" => "76.70", "huruf" => "B+", "cpmk_1" => "75.00", "cpmk_2" => "", "cpmk_3" => "75.00", "cpmk_4" => "78.00", "aksi" => "71.00", "p" => "78.00", "a" => "71.00"],
+["no" => "3", "nim" => "20511402", "mahasiswa" => "MUHAMMAD FIRDAUS SANI WIJAYA KUSUMA", "angka" => "86.77", "huruf" => "A", "cpmk_1" => "66.00", "cpmk_2" => "81.00", "cpmk_3" => "81.00", "cpmk_4" => "88.00", "aksi" => "82.00", "p" => "86.00", "a" => "87.00"],
+["no" => "4", "nim" => "21511014", "mahasiswa" => "SAHLA SALSABILA", "angka" => "76.43", "huruf" => "B+", "cpmk_1" => "81.00", "cpmk_2" => "", "cpmk_3" => "81.00", "cpmk_4" => "83.00", "aksi" => "69.00", "p" => "73.00", "a" => "75.00"],
+["no" => "5", "nim" => "21511043", "mahasiswa" => "SALWA BAGHEA MULIARAHMA", "angka" => "63.47", "huruf" => "B/C", "cpmk_1" => "80.00", "cpmk_2" => "60.00", "cpmk_3" => "80.00", "cpmk_4" => "63.00", "aksi" => "70.00", "p" => "48.00", "a" => "60.00"],
+["no" => "6", "nim" => "21511066", "mahasiswa" => "KAHFI NATAKUSUMA", "angka" => "88.57", "huruf" => "A", "cpmk_1" => "94.00", "cpmk_2" => "", "cpmk_3" => "94.00", "cpmk_4" => "91.00", "aksi" => "95.00", "p" => "95.00", "a" => "61.00"],
+["no" => "7", "nim" => "21511073", "mahasiswa" => "RAHESA ARIANO PUTRA", "angka" => "77.78", "huruf" => "A/B", "cpmk_1" => "77.00", "cpmk_2" => "", "cpmk_3" => "77.00", "cpmk_4" => "70.00", "aksi" => "68.00", "p" => "84.00", "a" => "82.00"],
+["no" => "8", "nim" => "21511082", "mahasiswa" => "MUHAMMAD SURFUN BATTAN", "angka" => "73.01", "huruf" => "B", "cpmk_1" => "79.00", "cpmk_2" => "", "cpmk_3" => "79.00", "cpmk_4" => "68.00", "aksi" => "75.00", "p" => "69.00", "a" => "68.00"],
+["no" => "9", "nim" => "21511085", "mahasiswa" => "RIDHO AHMAT FAUZI", "angka" => "84.43", "huruf" => "A-", "cpmk_1" => "73.00", "cpmk_2" => "", "cpmk_3" => "73.00", "cpmk_4" => "81.00", "aksi" => "79.00", "p" => "92.00", "a" => "79.00"],
+["no" => "10", "nim" => "21511091", "mahasiswa" => "BAYU MUHAMMAD IQBAL", "angka" => "85.87", "huruf" => "A", "cpmk_1" => "79.00", "cpmk_2" => "", "cpmk_3" => "79.00", "cpmk_4" => "88.00", "aksi" => "88.00", "p" => "88.00", "a" => "74.00"],
+["no" => "27", "nim" => "22511243", "mahasiswa" => "MUHAMMAD ZAIDAN SALIM", "angka" => "83.09", "huruf" => "A-", "cpmk_1" => "84.00", "cpmk_2" => "", "cpmk_3" => "84.00", "cpmk_4" => "79.00", "aksi" => "81.00", "p" => "82.00", "a" => "85.00"],
+];
+foreach ($rows as $index => $row) {
+?>
+                      <tr >
+                        <td align="center"><?= $row['no'] ?></td>
+                        <td><?= $row['nim'] ?></td>
+                        <td><?= $row['mahasiswa'] ?></td>
+                        <td align="center" class="bg-danger"><?= $row['angka'] ?></td>
+                        <td align="center"><?= $row['huruf'] ?></td>
+                        <td align="center" class="bg-secondary"><?= $row['cpmk_1'] ?></td>
+                        <td align="center" class="bg-secondary"><?= $row['cpmk_2'] ?></td>
+                        <td align="center" class="bg-secondary"><?= $row['cpmk_3'] ?></td>
+                        <td align="center" class="bg-secondary"><?= $row['cpmk_4'] ?></td>
+                        <td align="center" class="bg-secondary"></td>
+                        <td align="center" class="bg-secondary"><?= $row['aksi'] ?></td>
+                        <td align="center" class="bg-secondary"></td>
+                        <td align="center" class="bg-secondary"><?= $row['p'] ?></td>
+                        <td align="center" class="bg-secondary"></td>
+                        <td align="center" class="bg-secondary"><?= $row['a'] ?></td>
+                        <td align="center" class="bg-secondary"></td>
+                        <td align="center"><button class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#modalEditNilai">✏️</button> <button class="btn btn-sm btn-outline-danger" data-toggle="modal" data-target="#modalHapusNilai">🗑️</button></td>
+                      </tr>
+                    <?php } ?>
                   </tbody>
                 </table>
               </div>
@@ -499,7 +293,7 @@ if ($persen == 100) {
     <div class="modal-content rounded-3 shadow">
       <div class="modal-header bg-info text-white">
         <h5 class="modal-title" id="modalFilterLabel">Filter Data</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
       </div>
       <form action="" method="GET">
         <div class="modal-body">
@@ -512,13 +306,13 @@ if ($persen == 100) {
           <!-- Pilihan -->
           <div class="mb-3">
             <label for="lembaga" class="form-label">Periode Akademik</label>
-            <select name="lembaga" id="lembaga" class="form-select">
+            <select name="lembaga" id="lembaga" class="custom-select">
             	<option value="PA019" selected>2024/2025 - Gasal - (Aktif)</option><option value="PA018" >2023/2024 - Genap</option><option value="PA017" >2023/2024 - Gasal</option><option value="PA016" >2022/2023 - Genap</option><option value="PA015" >2022/2023 - Gasal</option><option value="PA014" >2021/2022 - Genap</option><option value="PA013" >2021/2022 - Gasal</option><option value="PA012" >2020/2021 - Genap</option><option value="PA011" >2020/2021 - Gasal</option><option value="PA010" >2019/2020 - Genap</option><option value="PA009" >2019/2020 - Gasal</option><option value="PA008" >2018/2019 - Genap</option><option value="PA007" >2018/2019 - Gasal</option><option value="PA006" >2017/2018 - Genap</option><option value="PA005" >2017/2018 - Gasal</option><option value="PA004" >2016/2017 - Genap</option><option value="PA003" >2016/2017 - Gasal</option><option value="PA002" >2015/2016 - Genap</option><option value="PA001" >2015/2016 - Gasal</option> 
             </select>
           </div>
 
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
             <button type="submit" class="btn btn-info">Terapkan Filter</button>
           </div>
         </div>
@@ -534,7 +328,7 @@ if ($persen == 100) {
     <div class="modal-content">
       <div class="modal-header bg-primary text-white">
         <h5 class="modal-title" id="modalBantuanLabel">Bantuan Tabel</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
       </div>
       <div class="modal-body">
         <p>
@@ -545,7 +339,7 @@ jika ada kesamaan NIM di satu mata kuliah(artinya mahasiswa tempuh >1 kali MK ts
         </p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
       </div>
     </div>
   </div>

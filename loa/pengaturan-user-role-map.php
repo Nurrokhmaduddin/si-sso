@@ -11,7 +11,7 @@
 
       <h3 class="mb-0">
         User ↔ Role Mapping
-        <button type="button" class="btn btn-tool" data-bs-toggle="modal" data-bs-target="#modalBantuan" title="Bantuan">
+        <button type="button" class="btn btn-tool" data-toggle="modal" data-target="#modalBantuan" title="Bantuan">
           <i class="fas fa-question-circle"></i>
         </button>
       </h3>
@@ -57,30 +57,30 @@
             </div>
 
             <div class="card-footer">
-              <div class="card-tools ms-auto">
+              <div class="card-tools ml-auto">
 
-                <button class="btn btn-outline-info btn-sm" data-bs-toggle="modal" data-bs-target="#modalFilter">
-                  <i class="fas fa-filter me-1"></i> Filter
+                <button class="btn btn-outline-info btn-sm" data-toggle="modal" data-target="#modalFilter">
+                  <i class="fas fa-filter mr-1"></i> Filter
                 </button>
 
-                <button type="button" class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalTambahData">
-                  <i class="fas fa-plus me-1"></i> Add Mapping
+                <button type="button" class="btn btn-outline-primary btn-sm" data-toggle="modal" data-target="#modalTambahData">
+                  <i class="fas fa-plus mr-1"></i> Add Mapping
                 </button>
 
-                <button type="button" class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalImpor">
-                  <i class="fas fa-file-upload me-1"></i> Import
+                <button type="button" class="btn btn-outline-primary btn-sm" data-toggle="modal" data-target="#modalImpor">
+                  <i class="fas fa-file-upload mr-1"></i> Import
                 </button>
 
                 <button type="button" class="btn btn-outline-success btn-sm">
-                  <i class="fas fa-file-download me-1"></i> Export
+                  <i class="fas fa-file-download mr-1"></i> Export
                 </button>
 
-                <button type="button" class="btn btn-outline-danger btn-sm" data-bs-toggle="modal" data-bs-target="#modalResetData">
-                  <i class="fas fa-ban me-1"></i> Reset
+                <button type="button" class="btn btn-outline-danger btn-sm" data-toggle="modal" data-target="#modalResetData">
+                  <i class="fas fa-ban mr-1"></i> Reset
                 </button>
 
-                <button type="button" class="btn btn-outline-danger btn-sm" data-bs-toggle="modal" data-bs-target="#modalGagal">
-                  <i class="fas fa-exclamation-triangle me-1"></i> ErrorHandler
+                <button type="button" class="btn btn-outline-danger btn-sm" data-toggle="modal" data-target="#modalGagal">
+                  <i class="fas fa-exclamation-triangle mr-1"></i> ErrorHandler
                 </button>
 
               </div>
@@ -127,15 +127,15 @@
                       <td>Administrator</td>
                       <td>Full Access System</td>
                       <td class="text-center">1</td>
-                      <td class="text-center"><span class="badge bg-success">Aktif</span></td>
+                      <td class="text-center"><span class="badge badge-success">Aktif</span></td>
                       <td class="text-center">
-                        <button class="btn btn-sm btn-outline-info" data-bs-toggle="modal" data-bs-target="#modalView">
+                        <button class="btn btn-sm btn-outline-info" data-toggle="modal" data-target="#modalView">
                           <i class="fas fa-eye"></i>
                         </button>
-                        <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalEdit">
+                        <button class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#modalEdit">
                           <i class="fas fa-edit"></i>
                         </button>
-                        <button class="btn btn-sm btn-outline-dark" data-bs-toggle="modal" data-bs-target="#modalAksi">
+                        <button class="btn btn-sm btn-outline-dark" data-toggle="modal" data-target="#modalAksi">
                           <i class="fas fa-cogs"></i>
                         </button>
                       </td>
@@ -149,7 +149,7 @@
                       <td>Dosen</td>
                       <td>Akademik Pengajaran</td>
                       <td class="text-center">2</td>
-                      <td class="text-center"><span class="badge bg-success">Aktif</span></td>
+                      <td class="text-center"><span class="badge badge-success">Aktif</span></td>
                       <td class="text-center">
                         <button class="btn btn-sm btn-outline-info"><i class="fas fa-eye"></i></button>
                         <button class="btn btn-sm btn-outline-primary"><i class="fas fa-edit"></i></button>
@@ -165,7 +165,7 @@
                       <td>Mahasiswa</td>
                       <td>Akses Portal Akademik</td>
                       <td class="text-center">1</td>
-                      <td class="text-center"><span class="badge bg-success">Aktif</span></td>
+                      <td class="text-center"><span class="badge badge-success">Aktif</span></td>
                       <td class="text-center">
                         <button class="btn btn-sm btn-outline-info"><i class="fas fa-eye"></i></button>
                         <button class="btn btn-sm btn-outline-primary"><i class="fas fa-edit"></i></button>
@@ -181,7 +181,7 @@
                       <td>Staff Akademik</td>
                       <td>Administrasi Akademik</td>
                       <td class="text-center">1</td>
-                      <td class="text-center"><span class="badge bg-success">Aktif</span></td>
+                      <td class="text-center"><span class="badge badge-success">Aktif</span></td>
                       <td class="text-center">
                         <button class="btn btn-sm btn-outline-info"><i class="fas fa-eye"></i></button>
                         <button class="btn btn-sm btn-outline-primary"><i class="fas fa-edit"></i></button>
@@ -197,7 +197,7 @@
                       <td>Koordinator Prodi</td>
                       <td>Approval Akademik</td>
                       <td class="text-center">1</td>
-                      <td class="text-center"><span class="badge bg-success">Aktif</span></td>
+                      <td class="text-center"><span class="badge badge-success">Aktif</span></td>
                       <td class="text-center">
                         <button class="btn btn-sm btn-outline-info"><i class="fas fa-eye"></i></button>
                         <button class="btn btn-sm btn-outline-primary"><i class="fas fa-edit"></i></button>
@@ -213,7 +213,7 @@
                       <td>Peserta Seminar</td>
                       <td>Akses Event Kampus</td>
                       <td class="text-center">3</td>
-                      <td class="text-center"><span class="badge bg-success">Aktif</span></td>
+                      <td class="text-center"><span class="badge badge-success">Aktif</span></td>
                       <td class="text-center">
                         <button class="btn btn-sm btn-outline-info"><i class="fas fa-eye"></i></button>
                         <button class="btn btn-sm btn-outline-primary"><i class="fas fa-edit"></i></button>
@@ -229,7 +229,7 @@
                       <td>Warehouse Staff</td>
                       <td>Manajemen Gudang</td>
                       <td class="text-center">2</td>
-                      <td class="text-center"><span class="badge bg-warning">Pending</span></td>
+                      <td class="text-center"><span class="badge badge-warning">Pending</span></td>
                       <td class="text-center">
                         <button class="btn btn-sm btn-outline-info"><i class="fas fa-eye"></i></button>
                         <button class="btn btn-sm btn-outline-primary"><i class="fas fa-edit"></i></button>
@@ -245,7 +245,7 @@
                       <td>Supplier</td>
                       <td>Vendor Procurement</td>
                       <td class="text-center">1</td>
-                      <td class="text-center"><span class="badge bg-success">Aktif</span></td>
+                      <td class="text-center"><span class="badge badge-success">Aktif</span></td>
                       <td class="text-center">
                         <button class="btn btn-sm btn-outline-info"><i class="fas fa-eye"></i></button>
                         <button class="btn btn-sm btn-outline-primary"><i class="fas fa-edit"></i></button>
@@ -261,7 +261,7 @@
                       <td>Customer</td>
                       <td>Portal Pelanggan</td>
                       <td class="text-center">2</td>
-                      <td class="text-center"><span class="badge bg-success">Aktif</span></td>
+                      <td class="text-center"><span class="badge badge-success">Aktif</span></td>
                       <td class="text-center">
                         <button class="btn btn-sm btn-outline-info"><i class="fas fa-eye"></i></button>
                         <button class="btn btn-sm btn-outline-primary"><i class="fas fa-edit"></i></button>
@@ -277,7 +277,7 @@
                       <td>Dosen Pembimbing</td>
                       <td>Bimbingan Akademik</td>
                       <td class="text-center">1</td>
-                      <td class="text-center"><span class="badge bg-danger">Nonaktif</span></td>
+                      <td class="text-center"><span class="badge badge-danger">Nonaktif</span></td>
                       <td class="text-center">
                         <button class="btn btn-sm btn-outline-info"><i class="fas fa-eye"></i></button>
                         <button class="btn btn-sm btn-outline-primary"><i class="fas fa-edit"></i></button>
@@ -293,7 +293,7 @@
                       <td>Guest Viewer</td>
                       <td>Read Only Access</td>
                       <td class="text-center">5</td>
-                      <td class="text-center"><span class="badge bg-secondary">Readonly</span></td>
+                      <td class="text-center"><span class="badge badge-secondary">Readonly</span></td>
                       <td class="text-center">
                         <button class="btn btn-sm btn-outline-info"><i class="fas fa-eye"></i></button>
                         <button class="btn btn-sm btn-outline-primary"><i class="fas fa-edit"></i></button>
@@ -328,7 +328,7 @@
 
       <div class="modal-header bg-info text-white">
         <h5 class="modal-title">Filter User Role Mapping</h5>
-        <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        <button class="close text-white" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
       </div>
 
       <div class="modal-body">
@@ -339,7 +339,7 @@
 
         <div class="mb-3">
           <label class="form-label">Role Status</label>
-          <select class="form-select">
+          <select class="custom-select">
             <option>Semua</option>
             <option>Aktif</option>
             <option>Pending</option>
@@ -349,7 +349,7 @@
 
         <div class="mb-3">
           <label class="form-label">Priority</label>
-          <select class="form-select">
+          <select class="custom-select">
             <option>Semua</option>
             <option>1 - Utama</option>
             <option>2 - Menengah</option>
@@ -360,7 +360,7 @@
       </div>
 
       <div class="modal-footer">
-        <button class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+        <button class="btn btn-secondary" data-dismiss="modal">Batal</button>
         <button class="btn btn-info">Terapkan Filter</button>
       </div>
 
@@ -375,7 +375,7 @@
 
       <div class="modal-header bg-primary text-white">
         <h5 class="modal-title">Tambah User Role Mapping</h5>
-        <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        <button class="close text-white" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
       </div>
 
       <div class="modal-body">
@@ -388,7 +388,7 @@
 
           <div class="col-md-6 mb-3">
             <label class="form-label">User Login</label>
-            <select class="form-select">
+            <select class="custom-select">
               <option>-- Pilih User --</option>
               <option>haso333</option>
               <option>pramita19</option>
@@ -397,7 +397,7 @@
 
           <div class="col-md-6 mb-3">
             <label class="form-label">Role</label>
-            <select class="form-select">
+            <select class="custom-select">
               <option>-- Pilih Role --</option>
               <option>Administrator</option>
               <option>Dosen</option>
@@ -412,7 +412,7 @@
 
           <div class="col-md-6 mb-3">
             <label class="form-label">Is Active</label>
-            <select class="form-select">
+            <select class="custom-select">
               <option>Aktif</option>
               <option>Pending</option>
               <option>Nonaktif</option>
@@ -424,7 +424,7 @@
       </div>
 
       <div class="modal-footer">
-        <button class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+        <button class="btn btn-secondary" data-dismiss="modal">Batal</button>
         <button class="btn btn-primary">Simpan Mapping</button>
       </div>
 
@@ -439,7 +439,7 @@
 
       <div class="modal-header bg-primary text-white">
         <h5 class="modal-title">Import User Role Mapping</h5>
-        <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        <button class="close text-white" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
       </div>
 
       <div class="modal-body">
@@ -457,7 +457,7 @@
       </div>
 
       <div class="modal-footer">
-        <button class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+        <button class="btn btn-secondary" data-dismiss="modal">Batal</button>
         <button class="btn btn-primary">Import</button>
       </div>
 
@@ -472,7 +472,7 @@
 
       <div class="modal-header bg-info text-white">
         <h5 class="modal-title">Detail User Role Mapping</h5>
-        <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        <button class="close text-white" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
       </div>
 
       <div class="modal-body">
@@ -519,7 +519,7 @@
 
       <div class="modal-header bg-primary text-white">
         <h5 class="modal-title">Edit User Role Mapping</h5>
-        <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        <button class="close text-white" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
       </div>
 
       <div class="modal-body">
@@ -531,7 +531,7 @@
 
         <div class="mb-3">
           <label class="form-label">Status</label>
-          <select class="form-select">
+          <select class="custom-select">
             <option selected>Aktif</option>
             <option>Pending</option>
             <option>Nonaktif</option>
@@ -541,7 +541,7 @@
       </div>
 
       <div class="modal-footer">
-        <button class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+        <button class="btn btn-secondary" data-dismiss="modal">Batal</button>
         <button class="btn btn-primary">Update</button>
       </div>
 
@@ -556,30 +556,28 @@
 
       <div class="modal-header bg-dark text-white">
         <h5 class="modal-title">Aksi User Role Mapping</h5>
-        <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        <button class="close text-white" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
       </div>
 
       <div class="modal-body">
 
-        <div class="d-grid gap-2">
-
-          <button class="btn btn-outline-primary">
-            <i class="fas fa-user-shield me-1"></i> Set Priority Utama
+                  <button class="btn btn-outline-primary w-100 mb-2">
+            <i class="fas fa-user-shield mr-1"></i> Set Priority Utama
           </button>
 
-          <button class="btn btn-outline-success">
-            <i class="fas fa-check-circle me-1"></i> Aktivasi Role
+          <button class="btn btn-outline-success w-100 mb-2">
+            <i class="fas fa-check-circle mr-1"></i> Aktivasi Role
           </button>
 
-          <button class="btn btn-outline-warning">
-            <i class="fas fa-sync-alt me-1"></i> Sinkronisasi Hak Akses
+          <button class="btn btn-outline-warning w-100 mb-2">
+            <i class="fas fa-sync-alt mr-1"></i> Sinkronisasi Hak Akses
           </button>
 
-          <button class="btn btn-outline-danger">
-            <i class="fas fa-unlink me-1"></i> Putuskan Mapping
+          <button class="btn btn-outline-danger w-100 mb-2">
+            <i class="fas fa-unlink mr-1"></i> Putuskan Mapping
           </button>
 
-        </div>
+        
 
       </div>
 
@@ -594,7 +592,7 @@
 
       <div class="modal-header bg-primary text-white">
         <h5 class="modal-title">Bantuan User ↔ Role Mapping</h5>
-        <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        <button class="close text-white" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
       </div>
 
       <div class="modal-body">
@@ -668,7 +666,7 @@
       </div>
 
       <div class="modal-footer">
-        <button class="btn btn-secondary" data-bs-dismiss="modal">
+        <button class="btn btn-secondary" data-dismiss="modal">
           Tutup
         </button>
       </div>
@@ -684,7 +682,7 @@
 
       <div class="modal-header bg-danger text-white">
         <h5 class="modal-title">Konfirmasi Reset Mapping</h5>
-        <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        <button class="close text-white" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
       </div>
 
       <div class="modal-body text-center">
@@ -694,7 +692,7 @@
       </div>
 
       <div class="modal-footer justify-content-center">
-        <button class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+        <button class="btn btn-secondary" data-dismiss="modal">Batal</button>
         <button class="btn btn-danger">Reset</button>
       </div>
 
@@ -709,7 +707,7 @@
 
       <div class="modal-header bg-danger text-white">
         <h5 class="modal-title">
-          <i class="fas fa-times-circle me-2"></i>
+          <i class="fas fa-times-circle mr-2"></i>
           Oops! Terjadi Kesalahan
         </h5>
       </div>
@@ -738,7 +736,7 @@
       </div>
 
       <div class="modal-footer">
-        <button class="btn btn-dark" data-bs-dismiss="modal">
+        <button class="btn btn-dark" data-dismiss="modal">
           Tutup
         </button>
       </div>

@@ -9,7 +9,7 @@
   <section class="content-header">
     <div class="container-fluid">
       <h3 class="mb-0">Rekapitulasi CPL Semester
-        <button type="button" class="btn btn-tool" data-bs-toggle="modal" data-bs-target="#modalBantuan" title="Bantuan">
+        <button type="button" class="btn btn-tool" data-toggle="modal" data-target="#modalBantuan" title="Bantuan">
           <i class="fas fa-question-circle"></i>
         </button>
       </h3>
@@ -49,12 +49,12 @@
               </div>
             </div>
             <div class="card-footer">
-              <div class="card-tools ms-auto">
-                <button class="btn btn-outline-info btn-sm " data-bs-toggle="modal" data-bs-target="#modalFilter">
-                  <i class="fas fa-filter me-1"></i> Filter
+              <div class="card-tools ml-auto">
+                <button class="btn btn-outline-info btn-sm " data-toggle="modal" data-target="#modalFilter">
+                  <i class="fas fa-filter mr-1"></i> Filter
                 </button>                
                 <button type="button" class="btn btn-outline-success btn-sm">
-                  <i class="fas fa-file-download me-1"></i> Export
+                  <i class="fas fa-file-download mr-1"></i> Export
                 </button>                
               </div>
 
@@ -146,10 +146,10 @@ canvas {
 
       <!-- Tombol -->
       <div class="d-flex gap-2 mt-2">
-        <button class="btn btn-outline-info btn-sm flex-fill" data-bs-toggle="collapse" data-bs-target="#daftarIKCPL11">
+        <button class="btn btn-outline-info btn-sm flex-fill" data-toggle="collapse" data-target="#daftarIKCPL11">
           Rangking Performa
         </button>
-        <button class="btn btn-outline-info btn-sm flex-fill" data-bs-toggle="collapse" data-bs-target="#daftarIKCPL13">
+        <button class="btn btn-outline-info btn-sm flex-fill" data-toggle="collapse" data-target="#daftarIKCPL13">
           Daftar CPL
         </button>
         <button class="btn btn-outline-danger btn-sm flex-fill" onclick="openAllRisikoPreview()">
@@ -170,8 +170,8 @@ canvas {
 
         <!-- Tombol -->
         <div class="d-flex gap-2 mt-2">
-          <!-- <button class="btn btn-outline-info btn-sm flex-fill" data-bs-toggle="collapse" data-bs-target="#daftarIKCPL21">Rangking</button>
-          <button class="btn btn-outline-info btn-sm flex-fill" data-bs-toggle="collapse" data-bs-target="#daftarIKCPL23">Daftar IK</button> -->
+          <!-- <button class="btn btn-outline-info btn-sm flex-fill" data-toggle="collapse" data-target="#daftarIKCPL21">Rangking</button>
+          <button class="btn btn-outline-info btn-sm flex-fill" data-toggle="collapse" data-target="#daftarIKCPL23">Daftar IK</button> -->
           <button class="btn btn-outline-danger btn-sm flex-fill" onclick="openAllRisikoPreview()">IK Belum Tuntas</button>
         </div>
       </div>
@@ -185,8 +185,8 @@ canvas {
 
         <!-- Tombol -->
         <div class="d-flex gap-2 mt-2">
-         <!--  <button class="btn btn-outline-info btn-sm flex-fill" data-bs-toggle="collapse" data-bs-target="#daftarIKCPL31">Rangking</button>
-          <button class="btn btn-outline-info btn-sm flex-fill" data-bs-toggle="collapse" data-bs-target="#daftarIKCPL33">Daftar CPMK</button> -->
+         <!--  <button class="btn btn-outline-info btn-sm flex-fill" data-toggle="collapse" data-target="#daftarIKCPL31">Rangking</button>
+          <button class="btn btn-outline-info btn-sm flex-fill" data-toggle="collapse" data-target="#daftarIKCPL33">Daftar CPMK</button> -->
           <button class="btn btn-outline-danger btn-sm flex-fill" onclick="openAllRisikoPreview()">CPMK Belum Tuntas</button>
         </div>
       </div>
@@ -217,57 +217,24 @@ canvas {
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
-                      <td>
-                        <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                          <div style="background:#f54242; width:10%; height:12px; border-radius:4px;"></div>
-                        </div>
-                      </td>
-                      <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="min" data-value="57">20</span></td>
-                      <td>CPL-01</td>
-                      <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                          <div style="background:#f54242; width:25%; height:12px; border-radius:4px;"></div>
-                        </div>
-                      </td>
-                      <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="min" data-value="57">30</span></td>
-                      <td>CPL-04</td>
-                      <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                          <div style="background:#f54242; width:35%; height:12px; border-radius:4px;"></div>
-                        </div>
-                      </td>
-                      <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="min" data-value="57">50</span></td>
-                      <td>CPL-05</td>
-                      <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                          <div style="background:#f54242; width:50%; height:12px; border-radius:4px;"></div>
-                        </div>
-                      </td>
-                      <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="min" data-value="57">51</span></td>
-                      <td>CPL-09</td>
-                      <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                          <div style="background:#f54242; width:70%; height:12px; border-radius:4px;"></div>
-                        </div>
-                      </td>
-                      <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="min" data-value="57">57</span></td>
-                      <td>CPL-10</td>
-                      <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
-                    </tr>
-                  </tbody>
+<?php
+$rows = [
+  ["ranking" => "<div style=\"background:#eee; width:100%; height:12px; border-radius:4px;\"> <div style=\"background:#f54242; width:10%; height:12px; border-radius:4px;\"></div> </div>", "nilai" => "<span class=\"clickable\" data-cpl=\"CPL-01\" data-type=\"min\" data-value=\"57\">20</span>", "cpl" => "CPL-01"],
+  ["ranking" => "<div style=\"background:#eee; width:100%; height:12px; border-radius:4px;\"> <div style=\"background:#f54242; width:25%; height:12px; border-radius:4px;\"></div> </div>", "nilai" => "<span class=\"clickable\" data-cpl=\"CPL-01\" data-type=\"min\" data-value=\"57\">30</span>", "cpl" => "CPL-04"],
+  ["ranking" => "<div style=\"background:#eee; width:100%; height:12px; border-radius:4px;\"> <div style=\"background:#f54242; width:35%; height:12px; border-radius:4px;\"></div> </div>", "nilai" => "<span class=\"clickable\" data-cpl=\"CPL-01\" data-type=\"min\" data-value=\"57\">50</span>", "cpl" => "CPL-05"],
+  ["ranking" => "<div style=\"background:#eee; width:100%; height:12px; border-radius:4px;\"> <div style=\"background:#f54242; width:50%; height:12px; border-radius:4px;\"></div> </div>", "nilai" => "<span class=\"clickable\" data-cpl=\"CPL-01\" data-type=\"min\" data-value=\"57\">51</span>", "cpl" => "CPL-09"],
+  ["ranking" => "<div style=\"background:#eee; width:100%; height:12px; border-radius:4px;\"> <div style=\"background:#f54242; width:70%; height:12px; border-radius:4px;\"></div> </div>", "nilai" => "<span class=\"clickable\" data-cpl=\"CPL-01\" data-type=\"min\" data-value=\"57\">57</span>", "cpl" => "CPL-10"],
+];
+foreach ($rows as $index => $row) {
+?>
+          <tr>
+            <td><?= $row['ranking'] ?></td>
+            <td class="text-center"><?= $row['nilai'] ?></td>
+            <td><?= $row['cpl'] ?></td>
+            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
+          </tr>
+<?php } ?>
+</tbody>
                 </table>
               </div>
             </div>
@@ -290,57 +257,24 @@ canvas {
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>                      
-                      <td>
-                        <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                          <div style="background:#4287f5; width:95%; height:12px; border-radius:4px;"></div>
-                        </div>
-                      </td>
-                      <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="max" data-value="95">95</span></td>
-                        <td>CPL-12</td>
-                      <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                          <div style="background:#4287f5; width:85%; height:12px; border-radius:4px;"></div>
-                        </div>
-                      </td>
-                      <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="max" data-value="95">90</span></td>
-                      <td>CPL-06</td>
-                      <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                          <div style="background:#4287f5; width:78%; height:12px; border-radius:4px;"></div>
-                        </div>
-                      </td>
-                     <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="max" data-value="95">85</span></td>
-                      <td>CPL-07</td>
-                     <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                          <div style="background:#4287f5; width:65%; height:12px; border-radius:4px;"></div>
-                        </div>
-                      </td>
-                     <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="max" data-value="95">70</span></td>
-                      <td>CPL-02</td>
-                      <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                          <div style="background:#4287f5; width:50%; height:12px; border-radius:4px;"></div>
-                        </div>
-                      </td>
-                      <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="max" data-value="95">70</span></td>
-                      <td>CPL-11</td>
-                      <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
-                    </tr>
-                  </tbody>
+<?php
+$rows = [
+  ["ranking" => "<div style=\"background:#eee; width:100%; height:12px; border-radius:4px;\"> <div style=\"background:#4287f5; width:95%; height:12px; border-radius:4px;\"></div> </div>", "nilai" => "<span class=\"clickable\" data-cpl=\"CPL-01\" data-type=\"max\" data-value=\"95\">95</span>", "cpl" => "CPL-12"],
+  ["ranking" => "<div style=\"background:#eee; width:100%; height:12px; border-radius:4px;\"> <div style=\"background:#4287f5; width:85%; height:12px; border-radius:4px;\"></div> </div>", "nilai" => "<span class=\"clickable\" data-cpl=\"CPL-01\" data-type=\"max\" data-value=\"95\">90</span>", "cpl" => "CPL-06"],
+  ["ranking" => "<div style=\"background:#eee; width:100%; height:12px; border-radius:4px;\"> <div style=\"background:#4287f5; width:78%; height:12px; border-radius:4px;\"></div> </div>", "nilai" => "<span class=\"clickable\" data-cpl=\"CPL-01\" data-type=\"max\" data-value=\"95\">85</span>", "cpl" => "CPL-07"],
+  ["ranking" => "<div style=\"background:#eee; width:100%; height:12px; border-radius:4px;\"> <div style=\"background:#4287f5; width:65%; height:12px; border-radius:4px;\"></div> </div>", "nilai" => "<span class=\"clickable\" data-cpl=\"CPL-01\" data-type=\"max\" data-value=\"95\">70</span>", "cpl" => "CPL-02"],
+  ["ranking" => "<div style=\"background:#eee; width:100%; height:12px; border-radius:4px;\"> <div style=\"background:#4287f5; width:50%; height:12px; border-radius:4px;\"></div> </div>", "nilai" => "<span class=\"clickable\" data-cpl=\"CPL-01\" data-type=\"max\" data-value=\"95\">70</span>", "cpl" => "CPL-11"],
+];
+foreach ($rows as $index => $row) {
+?>
+          <tr>
+            <td><?= $row['ranking'] ?></td>
+            <td class="text-center"><?= $row['nilai'] ?></td>
+            <td><?= $row['cpl'] ?></td>
+            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
+          </tr>
+<?php } ?>
+</tbody>
                 </table>
               </div>
             </div>
@@ -349,8 +283,8 @@ canvas {
         <!-- daftar min/max/rerate -->
         <div class="card collapse" id="daftarIKCPL13" >
           <div class="card-header d-flex align-items-center">
-            <h5 class="card-title mb-0"><i class="fas fa-table me-2"></i> Tabel Pencapaian</h5>
-            <div class="card-tools ms-auto">
+            <h5 class="card-title mb-0"><i class="fas fa-table mr-2"></i> Tabel Pencapaian</h5>
+            <div class="card-tools ml-auto">
               <!-- <small class="text-muted">Klik angka Min/Max untuk melihat 1 mahasiswa (NIM / Nama / Nilai)</small> -->
             </div>
           </div>
@@ -367,76 +301,29 @@ canvas {
                 </thead>
 
                 <tbody>
-                  <tr>
-                    <td>1</td>
-                    <td>CPL-01: Pemahaman Dasar Polimer</td>
-                    <td class="text-center">72.14%</td>
-                    <td class="text-center">🟨 Cukup</td>
-                  </tr>
-
-                  <tr>
-                    <td>2</td>
-                    <td>CPL-02: Teori Komposit</td>
-                    <td class="text-center">77.86%</td>
-                    <td class="text-center">🟨 Cukup</td>
-                  </tr>
-
-                  <tr>
-                    <td>3</td>
-                    <td>CPL-03: Aplikasi Polimer</td>
-                    <td class="text-center">76.14%</td>
-                    <td class="text-center">🟨 Cukup</td>
-                  </tr>
-
-                  <tr>
-                    <td>4</td>
-                    <td>CPL-04: Proses Produksi</td>
-                    <td class="text-center">74.00%</td>
-                    <td class="text-center">🟨 Cukup</td>
-                  </tr>
-
-                  <tr>
-                    <td>5</td>
-                    <td>CPL-05: Analisis Material</td>
-                    <td class="text-center">75.30%</td>
-                    <td class="text-center">🟨 Cukup</td>
-                  </tr>
-
-                  <tr>
-                    <td>6</td>
-                    <td>CPL-06: Keselamatan & Etika</td>
-                    <td class="text-center">78.20%</td>
-                    <td class="text-center">🟨 Cukup</td>
-                  </tr>
-
-                  <tr>
-                    <td>7</td>
-                    <td>CPL-07: Desain Proses</td>
-                    <td class="text-center">73.40%</td>
-                    <td class="text-center">🟨 Cukup</td>
-                  </tr>
-
-                  <tr>
-                    <td>8</td>
-                    <td>CPL-08: Metode Eksperimental</td>
-                    <td class="text-center">76.80%</td>
-                    <td class="text-center">🟨 Cukup</td>
-                  </tr>
-
-                  <tr>
-                    <td>9</td>
-                    <td>CPL-09: Statistik & Analisis Data</td>
-                    <td class="text-center">71.50%</td>
-                    <td class="text-center">🟨 Cukup</td>
-                  </tr>
-
-                  <tr>
-                    <td>10</td>
-                    <td>CPL-10: Komunikasi Teknis</td>
-                    <td class="text-center">75.00%</td>
-                    <td class="text-center">🟨 Cukup</td>
-                  </tr>
-                </tbody>
+<?php
+$rows = [
+  ["cpl_code" => "CPL-01: Pemahaman Dasar Polimer", "capaian" => "72.14%"],
+  ["cpl_code" => "CPL-02: Teori Komposit", "capaian" => "77.86%"],
+  ["cpl_code" => "CPL-03: Aplikasi Polimer", "capaian" => "76.14%"],
+  ["cpl_code" => "CPL-04: Proses Produksi", "capaian" => "74.00%"],
+  ["cpl_code" => "CPL-05: Analisis Material", "capaian" => "75.30%"],
+  ["cpl_code" => "CPL-06: Keselamatan & Etika", "capaian" => "78.20%"],
+  ["cpl_code" => "CPL-07: Desain Proses", "capaian" => "73.40%"],
+  ["cpl_code" => "CPL-08: Metode Eksperimental", "capaian" => "76.80%"],
+  ["cpl_code" => "CPL-09: Statistik & Analisis Data", "capaian" => "71.50%"],
+  ["cpl_code" => "CPL-10: Komunikasi Teknis", "capaian" => "75.00%"],
+];
+foreach ($rows as $index => $row) {
+?>
+          <tr>
+            <td><?= $index + 1 ?></td>
+            <td><?= $row['cpl_code'] ?></td>
+            <td class="text-center"><?= $row['capaian'] ?></td>
+            <td class="text-center">🟨 Cukup</td>
+          </tr>
+<?php } ?>
+</tbody>
               </table>
 
             </div>
@@ -466,57 +353,24 @@ canvas {
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
-                      <td>
-                        <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                          <div style="background:#f54242; width:10%; height:12px; border-radius:4px;"></div>
-                        </div>
-                      </td>
-                      <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="min" data-value="57">20</span></td>
-                      <td>IK-01</td>
-                      <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                          <div style="background:#f54242; width:25%; height:12px; border-radius:4px;"></div>
-                        </div>
-                      </td>
-                      <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="min" data-value="57">30</span></td>
-                      <td>IK-04</td>
-                      <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                          <div style="background:#f54242; width:35%; height:12px; border-radius:4px;"></div>
-                        </div>
-                      </td>
-                      <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="min" data-value="57">50</span></td>
-                      <td>IK-05</td>
-                      <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                          <div style="background:#f54242; width:50%; height:12px; border-radius:4px;"></div>
-                        </div>
-                      </td>
-                      <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="min" data-value="57">51</span></td>
-                      <td>IK-09</td>
-                      <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                          <div style="background:#f54242; width:70%; height:12px; border-radius:4px;"></div>
-                        </div>
-                      </td>
-                      <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="min" data-value="57">57</span></td>
-                      <td>IK-10</td>
-                      <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
-                    </tr>
-                  </tbody>
+<?php
+$rows = [
+  ["ranking" => "<div style=\"background:#eee; width:100%; height:12px; border-radius:4px;\"> <div style=\"background:#f54242; width:10%; height:12px; border-radius:4px;\"></div> </div>", "nilai" => "<span class=\"clickable\" data-cpl=\"CPL-01\" data-type=\"min\" data-value=\"57\">20</span>", "ik" => "IK-01"],
+  ["ranking" => "<div style=\"background:#eee; width:100%; height:12px; border-radius:4px;\"> <div style=\"background:#f54242; width:25%; height:12px; border-radius:4px;\"></div> </div>", "nilai" => "<span class=\"clickable\" data-cpl=\"CPL-01\" data-type=\"min\" data-value=\"57\">30</span>", "ik" => "IK-04"],
+  ["ranking" => "<div style=\"background:#eee; width:100%; height:12px; border-radius:4px;\"> <div style=\"background:#f54242; width:35%; height:12px; border-radius:4px;\"></div> </div>", "nilai" => "<span class=\"clickable\" data-cpl=\"CPL-01\" data-type=\"min\" data-value=\"57\">50</span>", "ik" => "IK-05"],
+  ["ranking" => "<div style=\"background:#eee; width:100%; height:12px; border-radius:4px;\"> <div style=\"background:#f54242; width:50%; height:12px; border-radius:4px;\"></div> </div>", "nilai" => "<span class=\"clickable\" data-cpl=\"CPL-01\" data-type=\"min\" data-value=\"57\">51</span>", "ik" => "IK-09"],
+  ["ranking" => "<div style=\"background:#eee; width:100%; height:12px; border-radius:4px;\"> <div style=\"background:#f54242; width:70%; height:12px; border-radius:4px;\"></div> </div>", "nilai" => "<span class=\"clickable\" data-cpl=\"CPL-01\" data-type=\"min\" data-value=\"57\">57</span>", "ik" => "IK-10"],
+];
+foreach ($rows as $index => $row) {
+?>
+          <tr>
+            <td><?= $row['ranking'] ?></td>
+            <td class="text-center"><?= $row['nilai'] ?></td>
+            <td><?= $row['ik'] ?></td>
+            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
+          </tr>
+<?php } ?>
+</tbody>
                 </table>
               </div>
             </div>
@@ -539,57 +393,24 @@ canvas {
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>                      
-                      <td>
-                        <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                          <div style="background:#4287f5; width:95%; height:12px; border-radius:4px;"></div>
-                        </div>
-                      </td>
-                      <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="max" data-value="95">95</span></td>
-                        <td>IK-12</td>
-                      <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                          <div style="background:#4287f5; width:85%; height:12px; border-radius:4px;"></div>
-                        </div>
-                      </td>
-                      <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="max" data-value="95">90</span></td>
-                      <td>IK-06</td>
-                      <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                          <div style="background:#4287f5; width:78%; height:12px; border-radius:4px;"></div>
-                        </div>
-                      </td>
-                     <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="max" data-value="95">85</span></td>
-                      <td>IK-07</td>
-                     <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                          <div style="background:#4287f5; width:65%; height:12px; border-radius:4px;"></div>
-                        </div>
-                      </td>
-                     <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="max" data-value="95">70</span></td>
-                      <td>IK-02</td>
-                      <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                          <div style="background:#4287f5; width:50%; height:12px; border-radius:4px;"></div>
-                        </div>
-                      </td>
-                      <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="max" data-value="95">70</span></td>
-                      <td>IK-11</td>
-                      <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
-                    </tr>
-                  </tbody>
+<?php
+$rows = [
+  ["ranking" => "<div style=\"background:#eee; width:100%; height:12px; border-radius:4px;\"> <div style=\"background:#4287f5; width:95%; height:12px; border-radius:4px;\"></div> </div>", "nilai" => "<span class=\"clickable\" data-cpl=\"CPL-01\" data-type=\"max\" data-value=\"95\">95</span>", "ik" => "IK-12"],
+  ["ranking" => "<div style=\"background:#eee; width:100%; height:12px; border-radius:4px;\"> <div style=\"background:#4287f5; width:85%; height:12px; border-radius:4px;\"></div> </div>", "nilai" => "<span class=\"clickable\" data-cpl=\"CPL-01\" data-type=\"max\" data-value=\"95\">90</span>", "ik" => "IK-06"],
+  ["ranking" => "<div style=\"background:#eee; width:100%; height:12px; border-radius:4px;\"> <div style=\"background:#4287f5; width:78%; height:12px; border-radius:4px;\"></div> </div>", "nilai" => "<span class=\"clickable\" data-cpl=\"CPL-01\" data-type=\"max\" data-value=\"95\">85</span>", "ik" => "IK-07"],
+  ["ranking" => "<div style=\"background:#eee; width:100%; height:12px; border-radius:4px;\"> <div style=\"background:#4287f5; width:65%; height:12px; border-radius:4px;\"></div> </div>", "nilai" => "<span class=\"clickable\" data-cpl=\"CPL-01\" data-type=\"max\" data-value=\"95\">70</span>", "ik" => "IK-02"],
+  ["ranking" => "<div style=\"background:#eee; width:100%; height:12px; border-radius:4px;\"> <div style=\"background:#4287f5; width:50%; height:12px; border-radius:4px;\"></div> </div>", "nilai" => "<span class=\"clickable\" data-cpl=\"CPL-01\" data-type=\"max\" data-value=\"95\">70</span>", "ik" => "IK-11"],
+];
+foreach ($rows as $index => $row) {
+?>
+          <tr>
+            <td><?= $row['ranking'] ?></td>
+            <td class="text-center"><?= $row['nilai'] ?></td>
+            <td><?= $row['ik'] ?></td>
+            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
+          </tr>
+<?php } ?>
+</tbody>
                 </table>
               </div>
             </div>
@@ -598,8 +419,8 @@ canvas {
         <!-- daftar min/max/rerate -->
         <div class="card collapse" id="daftarIKCPL23" >
           <div class="card-header d-flex align-items-center">
-            <h5 class="card-title mb-0"><i class="fas fa-table me-2"></i> Tabel Pencapaian</h5>
-            <div class="card-tools ms-auto">
+            <h5 class="card-title mb-0"><i class="fas fa-table mr-2"></i> Tabel Pencapaian</h5>
+            <div class="card-tools ml-auto">
               <!-- <small class="text-muted">Klik angka Min/Max untuk melihat 1 mahasiswa (NIM / Nama / Nilai)</small> -->
             </div>
           </div>
@@ -616,76 +437,29 @@ canvas {
                 </thead>
 
                 <tbody>
-                  <tr>
-                    <td>1</td>
-                    <td>IK-01: Pemahaman Dasar Polimer</td>
-                    <td class="text-center">72.14%</td>
-                    <td class="text-center">🟨 Cukup</td>
-                  </tr>
-
-                  <tr>
-                    <td>2</td>
-                    <td>IK-02: Teori Komposit</td>
-                    <td class="text-center">77.86%</td>
-                    <td class="text-center">🟨 Cukup</td>
-                  </tr>
-
-                  <tr>
-                    <td>3</td>
-                    <td>IK-03: Aplikasi Polimer</td>
-                    <td class="text-center">76.14%</td>
-                    <td class="text-center">🟨 Cukup</td>
-                  </tr>
-
-                  <tr>
-                    <td>4</td>
-                    <td>IK-04: Proses Produksi</td>
-                    <td class="text-center">74.00%</td>
-                    <td class="text-center">🟨 Cukup</td>
-                  </tr>
-
-                  <tr>
-                    <td>5</td>
-                    <td>IK-05: Analisis Material</td>
-                    <td class="text-center">75.30%</td>
-                    <td class="text-center">🟨 Cukup</td>
-                  </tr>
-
-                  <tr>
-                    <td>6</td>
-                    <td>IK-06: Keselamatan & Etika</td>
-                    <td class="text-center">78.20%</td>
-                    <td class="text-center">🟨 Cukup</td>
-                  </tr>
-
-                  <tr>
-                    <td>7</td>
-                    <td>IK-07: Desain Proses</td>
-                    <td class="text-center">73.40%</td>
-                    <td class="text-center">🟨 Cukup</td>
-                  </tr>
-
-                  <tr>
-                    <td>8</td>
-                    <td>IK-08: Metode Eksperimental</td>
-                    <td class="text-center">76.80%</td>
-                    <td class="text-center">🟨 Cukup</td>
-                  </tr>
-
-                  <tr>
-                    <td>9</td>
-                    <td>IK-09: Statistik & Analisis Data</td>
-                    <td class="text-center">71.50%</td>
-                    <td class="text-center">🟨 Cukup</td>
-                  </tr>
-
-                  <tr>
-                    <td>10</td>
-                    <td>IK-10: Komunikasi Teknis</td>
-                    <td class="text-center">75.00%</td>
-                    <td class="text-center">🟨 Cukup</td>
-                  </tr>
-                </tbody>
+<?php
+$rows = [
+  ["ik_code" => "IK-01: Pemahaman Dasar Polimer", "capaian" => "72.14%"],
+  ["ik_code" => "IK-02: Teori Komposit", "capaian" => "77.86%"],
+  ["ik_code" => "IK-03: Aplikasi Polimer", "capaian" => "76.14%"],
+  ["ik_code" => "IK-04: Proses Produksi", "capaian" => "74.00%"],
+  ["ik_code" => "IK-05: Analisis Material", "capaian" => "75.30%"],
+  ["ik_code" => "IK-06: Keselamatan & Etika", "capaian" => "78.20%"],
+  ["ik_code" => "IK-07: Desain Proses", "capaian" => "73.40%"],
+  ["ik_code" => "IK-08: Metode Eksperimental", "capaian" => "76.80%"],
+  ["ik_code" => "IK-09: Statistik & Analisis Data", "capaian" => "71.50%"],
+  ["ik_code" => "IK-10: Komunikasi Teknis", "capaian" => "75.00%"],
+];
+foreach ($rows as $index => $row) {
+?>
+          <tr>
+            <td><?= $index + 1 ?></td>
+            <td><?= $row['ik_code'] ?></td>
+            <td class="text-center"><?= $row['capaian'] ?></td>
+            <td class="text-center">🟨 Cukup</td>
+          </tr>
+<?php } ?>
+</tbody>
               </table>
 
             </div>
@@ -715,57 +489,24 @@ canvas {
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
-                      <td>
-                        <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                          <div style="background:#f54242; width:10%; height:12px; border-radius:4px;"></div>
-                        </div>
-                      </td>
-                      <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="min" data-value="57">20</span></td>
-                      <td>SKS198-1</td>
-                      <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                          <div style="background:#f54242; width:25%; height:12px; border-radius:4px;"></div>
-                        </div>
-                      </td>
-                      <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="min" data-value="57">30</span></td>
-                      <td>SKT911-4</td>
-                      <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                          <div style="background:#f54242; width:35%; height:12px; border-radius:4px;"></div>
-                        </div>
-                      </td>
-                      <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="min" data-value="57">50</span></td>
-                      <td>SKS123-5</td>
-                      <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                          <div style="background:#f54242; width:50%; height:12px; border-radius:4px;"></div>
-                        </div>
-                      </td>
-                      <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="min" data-value="57">51</span></td>
-                      <td>SKS345-9</td>
-                      <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                          <div style="background:#f54242; width:70%; height:12px; border-radius:4px;"></div>
-                        </div>
-                      </td>
-                      <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="min" data-value="57">57</span></td>
-                      <td>UNI901-1</td>
-                      <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
-                    </tr>
-                  </tbody>
+<?php
+$rows = [
+  ["ranking" => "<div style=\"background:#eee; width:100%; height:12px; border-radius:4px;\"> <div style=\"background:#f54242; width:10%; height:12px; border-radius:4px;\"></div> </div>", "nilai" => "<span class=\"clickable\" data-cpl=\"CPL-01\" data-type=\"min\" data-value=\"57\">20</span>", "cpmk" => "SKS198-1"],
+  ["ranking" => "<div style=\"background:#eee; width:100%; height:12px; border-radius:4px;\"> <div style=\"background:#f54242; width:25%; height:12px; border-radius:4px;\"></div> </div>", "nilai" => "<span class=\"clickable\" data-cpl=\"CPL-01\" data-type=\"min\" data-value=\"57\">30</span>", "cpmk" => "SKT911-4"],
+  ["ranking" => "<div style=\"background:#eee; width:100%; height:12px; border-radius:4px;\"> <div style=\"background:#f54242; width:35%; height:12px; border-radius:4px;\"></div> </div>", "nilai" => "<span class=\"clickable\" data-cpl=\"CPL-01\" data-type=\"min\" data-value=\"57\">50</span>", "cpmk" => "SKS123-5"],
+  ["ranking" => "<div style=\"background:#eee; width:100%; height:12px; border-radius:4px;\"> <div style=\"background:#f54242; width:50%; height:12px; border-radius:4px;\"></div> </div>", "nilai" => "<span class=\"clickable\" data-cpl=\"CPL-01\" data-type=\"min\" data-value=\"57\">51</span>", "cpmk" => "SKS345-9"],
+  ["ranking" => "<div style=\"background:#eee; width:100%; height:12px; border-radius:4px;\"> <div style=\"background:#f54242; width:70%; height:12px; border-radius:4px;\"></div> </div>", "nilai" => "<span class=\"clickable\" data-cpl=\"CPL-01\" data-type=\"min\" data-value=\"57\">57</span>", "cpmk" => "UNI901-1"],
+];
+foreach ($rows as $index => $row) {
+?>
+          <tr>
+            <td><?= $row['ranking'] ?></td>
+            <td class="text-center"><?= $row['nilai'] ?></td>
+            <td><?= $row['cpmk'] ?></td>
+            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
+          </tr>
+<?php } ?>
+</tbody>
                 </table>
               </div>
             </div>
@@ -788,57 +529,24 @@ canvas {
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>                      
-                      <td>
-                        <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                          <div style="background:#4287f5; width:95%; height:12px; border-radius:4px;"></div>
-                        </div>
-                      </td>
-                      <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="max" data-value="95">95</span></td>
-                        <td>SKS834-2</td>
-                      <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                          <div style="background:#4287f5; width:85%; height:12px; border-radius:4px;"></div>
-                        </div>
-                      </td>
-                      <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="max" data-value="95">90</span></td>
-                      <td>SKS923-6</td>
-                      <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                          <div style="background:#4287f5; width:78%; height:12px; border-radius:4px;"></div>
-                        </div>
-                      </td>
-                     <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="max" data-value="95">85</span></td>
-                      <td>SKS723-7</td>
-                     <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                          <div style="background:#4287f5; width:65%; height:12px; border-radius:4px;"></div>
-                        </div>
-                      </td>
-                     <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="max" data-value="95">70</span></td>
-                      <td>SKS523-2</td>
-                      <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div style="background:#eee; width:100%; height:12px; border-radius:4px;">
-                          <div style="background:#4287f5; width:50%; height:12px; border-radius:4px;"></div>
-                        </div>
-                      </td>
-                      <td class="text-center"><span class="clickable" data-cpl="CPL-01" data-type="max" data-value="95">70</span></td>
-                      <td>SKS843-1</td>
-                      <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
-                    </tr>
-                  </tbody>
+<?php
+$rows = [
+  ["ranking" => "<div style=\"background:#eee; width:100%; height:12px; border-radius:4px;\"> <div style=\"background:#4287f5; width:95%; height:12px; border-radius:4px;\"></div> </div>", "nilai" => "<span class=\"clickable\" data-cpl=\"CPL-01\" data-type=\"max\" data-value=\"95\">95</span>", "cpmk" => "SKS834-2"],
+  ["ranking" => "<div style=\"background:#eee; width:100%; height:12px; border-radius:4px;\"> <div style=\"background:#4287f5; width:85%; height:12px; border-radius:4px;\"></div> </div>", "nilai" => "<span class=\"clickable\" data-cpl=\"CPL-01\" data-type=\"max\" data-value=\"95\">90</span>", "cpmk" => "SKS923-6"],
+  ["ranking" => "<div style=\"background:#eee; width:100%; height:12px; border-radius:4px;\"> <div style=\"background:#4287f5; width:78%; height:12px; border-radius:4px;\"></div> </div>", "nilai" => "<span class=\"clickable\" data-cpl=\"CPL-01\" data-type=\"max\" data-value=\"95\">85</span>", "cpmk" => "SKS723-7"],
+  ["ranking" => "<div style=\"background:#eee; width:100%; height:12px; border-radius:4px;\"> <div style=\"background:#4287f5; width:65%; height:12px; border-radius:4px;\"></div> </div>", "nilai" => "<span class=\"clickable\" data-cpl=\"CPL-01\" data-type=\"max\" data-value=\"95\">70</span>", "cpmk" => "SKS523-2"],
+  ["ranking" => "<div style=\"background:#eee; width:100%; height:12px; border-radius:4px;\"> <div style=\"background:#4287f5; width:50%; height:12px; border-radius:4px;\"></div> </div>", "nilai" => "<span class=\"clickable\" data-cpl=\"CPL-01\" data-type=\"max\" data-value=\"95\">70</span>", "cpmk" => "SKS843-1"],
+];
+foreach ($rows as $index => $row) {
+?>
+          <tr>
+            <td><?= $row['ranking'] ?></td>
+            <td class="text-center"><?= $row['nilai'] ?></td>
+            <td><?= $row['cpmk'] ?></td>
+            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
+          </tr>
+<?php } ?>
+</tbody>
                 </table>
               </div>
             </div>
@@ -847,8 +555,8 @@ canvas {
         <!-- daftar min/max/rerate -->
         <div class="card collapse" id="daftarIKCPL33" >
           <div class="card-header d-flex align-items-center">
-            <h5 class="card-title mb-0"><i class="fas fa-table me-2"></i> Tabel CPL — Min / Max / Rerata</h5>
-            <div class="card-tools ms-auto">
+            <h5 class="card-title mb-0"><i class="fas fa-table mr-2"></i> Tabel CPL — Min / Max / Rerata</h5>
+            <div class="card-tools ml-auto">
               <small class="text-muted">Klik angka Min/Max untuk melihat 1 mahasiswa (NIM / Nama / Nilai)</small>
             </div>
           </div>
@@ -863,68 +571,30 @@ canvas {
                     <th class="text-center">Status</th>
                   </tr>
                 </thead>
-                <tbody>                
-                  <tr>
-                    <td>1</td>
-                    <td>SKS982-1: Pemahaman Dasar Polimer</td>
-                    <td class="text-center">72.14%</td>
-                    <td class="text-center">🟨 Cukup</td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>SKS912-2: Teori Komposit</td>
-                    <td class="text-center">71.50%</td>
-                    <td class="text-center">🟨 Cukup</td>
-                  </tr>
-                  <tr>
-                    <td>3</td>
-                    <td>UNI902-3: Aplikasi Polimer</td>
-                    <td class="text-center">76.80%</td>
-                    <td class="text-center">🟨 Cukup</td>
-                  </tr>
-                  <tr>
-                    <td>4</td>
-                    <td>UNI912-4: Proses Produksi</td>
-                    <td class="text-center">76.80%</td>
-                    <td class="text-center">🟨 Cukup</td>
-                  </tr>
-                  <tr>
-                    <td>5</td>
-                    <td>SKS234-5: Analisis Material</td>
-                    <td class="text-center">75.30%</td>
-                   <td class="text-center">🟨 Cukup</td>
-                  </tr>
-                  <tr>
-                    <td>6</td>
-                    <td>SKS812-6: Keselamatan & Etika</td>
-                     <td class="text-center">76.80%</td>
-                    <td class="text-center">🟨 Cukup</td>
-                  </tr>
-                  <tr>
-                    <td>7</td>
-                    <td>SKS908-7: Desain Proses</td>                    
-                    <td class="text-center">73.40%</td>
-                    <td class="text-center">🟨 Cukup</td>
-                  </tr>
-                  <tr>
-                    <td>8</td>
-                    <td>SKS111-8: Metode Eksperimental</td>
-                    <td class="text-center">71.50%</td>
-                    <td class="text-center">🟨 Cukup</td>
-                  </tr>
-                  <tr>
-                    <td>9</td>
-                    <td>SKS113-9: Statistik & Analisis Data</td>
-                    <td class="text-center">71.50%</td>
-                    <td class="text-center">🟨 Cukup</td>
-                  </tr>
-                  <tr>
-                    <td>10</td>
-                    <td>SKS932-1: Komunikasi Teknis</td>                    
-                    <td class="text-center">75.00%</td>
-                    <td class="text-center">🟨 Cukup</td>
-                  </tr>
-                </tbody>
+                <tbody>
+<?php
+$rows = [
+  ["cpmk_code" => "SKS982-1: Pemahaman Dasar Polimer", "nilai" => "72.14%"],
+  ["cpmk_code" => "SKS912-2: Teori Komposit", "nilai" => "71.50%"],
+  ["cpmk_code" => "UNI902-3: Aplikasi Polimer", "nilai" => "76.80%"],
+  ["cpmk_code" => "UNI912-4: Proses Produksi", "nilai" => "76.80%"],
+  ["cpmk_code" => "SKS234-5: Analisis Material", "nilai" => "75.30%"],
+  ["cpmk_code" => "SKS812-6: Keselamatan & Etika", "nilai" => "76.80%"],
+  ["cpmk_code" => "SKS908-7: Desain Proses", "nilai" => "73.40%"],
+  ["cpmk_code" => "SKS111-8: Metode Eksperimental", "nilai" => "71.50%"],
+  ["cpmk_code" => "SKS113-9: Statistik & Analisis Data", "nilai" => "71.50%"],
+  ["cpmk_code" => "SKS932-1: Komunikasi Teknis", "nilai" => "75.00%"],
+];
+foreach ($rows as $index => $row) {
+?>
+          <tr>
+            <td><?= $index + 1 ?></td>
+            <td><?= $row['cpmk_code'] ?></td>
+            <td class="text-center"><?= $row['nilai'] ?></td>
+            <td class="text-center">🟨 Cukup</td>
+          </tr>
+<?php } ?>
+</tbody>
               </table>
             </div>
           </div>        
@@ -961,157 +631,34 @@ canvas {
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td class="text-center">1</td>
-                    <td class="text-center">ST-24</td>
-                    <td>STS704</td>
-                    <td>Metode Pelaksanaan Bangunan</td>
-                    <td class="text-center"><span class="badge badge-success">Wajib</span></td>
-                    <td class="text-center">1</td>
-                    <td>3</td>
-                    <td>3</td>
-                    <td class="text-center">
-                      <button type="button" class="btn btn-sm btn-outline-info" data-bs-toggle="modal" data-bs-target="#modalDetailMK">
-                        📄 Detail
-                      </button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="text-center">2</td>
-                    <td class="text-center">ST-24</td>
-                    <td>STS913</td>
-                    <td>Struktur Komposit</td>
-                    <td class="text-center"><span class="badge badge-info">Pilihan</span></td>
-                    <td class="text-center">1</td>
-                    <td>3</td>
-                    <td>3</td>
-                    <td class="text-center">
-                      <button type="button" class="btn btn-sm btn-outline-info" data-bs-toggle="modal" data-bs-target="#modalDetailMK">
-                        📄 Detail
-                      </button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="text-center">3</td>
-                    <td class="text-center">ST-24</td>
-                    <td>51175111</td>
-                    <td>Building Structures Design</td>                   
-                    <td class="text-center"><span class="badge badge-success">Wajib</span></td>
-                    <td class="text-center">2</td>
-                    <td>3</td>
-                    <td>3</td>
-                    <td class="text-center">
-                      <button type="button" class="btn btn-sm btn-outline-info" data-bs-toggle="modal" data-bs-target="#modalDetailMK">
-                        📄 Detail
-                      </button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="text-center">4</td>
-                    <td class="text-center">ST-24</td>
-                    <td>STS-101</td>
-                    <td>Engineering Statistics</td>                    
-                    <td class="text-center"><span class="badge badge-success">Wajib</span></td>
-                    <td class="text-center">2</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td class="text-center">
-                      <button type="button" class="btn btn-sm btn-outline-info" data-bs-toggle="modal" data-bs-target="#modalDetailMK">
-                        📄 Detail
-                      </button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="text-center">5</td>
-                    <td class="text-center">ST-24</td>
-                    <td>STS307</td>
-                    <td>Bahan Perkerasan Jalan (+Pr)</td>
-                    <td class="text-center"><span class="badge badge-info">Pilihan</span></td>
-                    <td class="text-center">3</td>
-                    <td>4</td>
-                    <td>3</td>
-                    <td class="text-center">
-                      <button type="button" class="btn btn-sm btn-outline-info" data-bs-toggle="modal" data-bs-target="#modalDetailMK">
-                        📄 Detail
-                      </button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="text-center">6</td>
-                    <td class="text-center">ST-24</td>
-                    <td>STS702</td>
-                    <td>Struktur Baja</td>
-                    <td class="text-center"><span class="badge badge-info">Pilihan</span></td>
-                    <td class="text-center">4</td>
-                    <td>3</td>
-                    <td>3</td>
-                    <td class="text-center">
-                      <button type="button" class="btn btn-sm btn-outline-info" data-bs-toggle="modal" data-bs-target="#modalDetailMK">
-                        📄 Detail
-                      </button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="text-center">7</td>
-                    <td class="text-center">ST-24</td>
-                    <td>51195142</td>
-                    <td>Perancangan Struktur Jembatan</td>
-                    <td class="text-center"><span class="badge badge-info">Pilihan</span></td>
-                    <td class="text-center">5</td>
-                    <td>2</td>
-                    <td>2</td>
-                    <td class="text-center">
-                      <button type="button" class="btn btn-sm btn-outline-info" data-bs-toggle="modal" data-bs-target="#modalDetailMK">
-                        📄 Detail
-                      </button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="text-center">8</td>
-                    <td class="text-center">ST-24</td>
-                    <td>51155081</td>
-                    <td>Introduction to Earthquake Engineering</td>
-                    <td class="text-center"><span class="badge badge-info">Pilihan</span></td>
-                    <td class="text-center">6</td>
-                    <td>3</td>
-                    <td>2</td>
-                    <td class="text-center">
-                      <button type="button" class="btn btn-sm btn-outline-info" data-bs-toggle="modal" data-bs-target="#modalDetailMK">
-                        📄 Detail
-                      </button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="text-center">9</td>
-                    <td class="text-center">ST-24</td>
-                    <td>STS904</td>
-                    <td>BIM untuk Manajemen Konstruksi</td>
-                    <td class="text-center"><span class="badge badge-info">Pilihan</span></td>
-                    <td class="text-center">7</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td class="text-center">
-                      <button type="button" class="btn btn-sm btn-outline-info" data-bs-toggle="modal" data-bs-target="#modalDetailMK">
-                        📄 Detail
-                      </button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="text-center">10</td>
-                    <td class="text-center">ST-24</td>
-                    <td>51153061</td>
-                    <td>Water Structures Design</td>
-                    <td class="text-center"><span class="badge badge-info">Pilihan</span></td>
-                    <td class="text-center">8</td>
-                    <td>3</td>
-                    <td>3</td>
-                    <td class="text-center">
-                      <button type="button" class="btn btn-sm btn-outline-info" data-bs-toggle="modal" data-bs-target="#modalDetailMK">
-                        📄 Detail
-                      </button>
-                    </td>
-                  </tr>
-                </tbody>
+<?php
+$rows = [
+  ["kode_mk" => "STS704", "nama_mk" => "Metode Pelaksanaan Bangunan", "jenis" => "<span class=\"badge badge-success\">Wajib</span>", "semester_tempuh" => "1", "jumlah_cpmk" => "3", "jumlah_sks" => "3"],
+  ["kode_mk" => "STS913", "nama_mk" => "Struktur Komposit", "jenis" => "<span class=\"badge badge-info\">Pilihan</span>", "semester_tempuh" => "1", "jumlah_cpmk" => "3", "jumlah_sks" => "3"],
+  ["kode_mk" => "51175111", "nama_mk" => "Building Structures Design", "jenis" => "<span class=\"badge badge-success\">Wajib</span>", "semester_tempuh" => "2", "jumlah_cpmk" => "3", "jumlah_sks" => "3"],
+  ["kode_mk" => "STS-101", "nama_mk" => "Engineering Statistics", "jenis" => "<span class=\"badge badge-success\">Wajib</span>", "semester_tempuh" => "2", "jumlah_cpmk" => "2", "jumlah_sks" => "3"],
+  ["kode_mk" => "STS307", "nama_mk" => "Bahan Perkerasan Jalan (+Pr)", "jenis" => "<span class=\"badge badge-info\">Pilihan</span>", "semester_tempuh" => "3", "jumlah_cpmk" => "4", "jumlah_sks" => "3"],
+  ["kode_mk" => "STS702", "nama_mk" => "Struktur Baja", "jenis" => "<span class=\"badge badge-info\">Pilihan</span>", "semester_tempuh" => "4", "jumlah_cpmk" => "3", "jumlah_sks" => "3"],
+  ["kode_mk" => "51195142", "nama_mk" => "Perancangan Struktur Jembatan", "jenis" => "<span class=\"badge badge-info\">Pilihan</span>", "semester_tempuh" => "5", "jumlah_cpmk" => "2", "jumlah_sks" => "2"],
+  ["kode_mk" => "51155081", "nama_mk" => "Introduction to Earthquake Engineering", "jenis" => "<span class=\"badge badge-info\">Pilihan</span>", "semester_tempuh" => "6", "jumlah_cpmk" => "3", "jumlah_sks" => "2"],
+  ["kode_mk" => "STS904", "nama_mk" => "BIM untuk Manajemen Konstruksi", "jenis" => "<span class=\"badge badge-info\">Pilihan</span>", "semester_tempuh" => "7", "jumlah_cpmk" => "2", "jumlah_sks" => "3"],
+  ["kode_mk" => "51153061", "nama_mk" => "Water Structures Design", "jenis" => "<span class=\"badge badge-info\">Pilihan</span>", "semester_tempuh" => "8", "jumlah_cpmk" => "3", "jumlah_sks" => "3"],
+];
+foreach ($rows as $index => $row) {
+?>
+          <tr>
+            <td class="text-center"><?= $index + 1 ?></td>
+            <td class="text-center">ST-24</td>
+            <td><?= $row['kode_mk'] ?></td>
+            <td><?= $row['nama_mk'] ?></td>
+            <td class="text-center"><?= $row['jenis'] ?></td>
+            <td class="text-center"><?= $row['semester_tempuh'] ?></td>
+            <td><?= $row['jumlah_cpmk'] ?></td>
+            <td><?= $row['jumlah_sks'] ?></td>
+            <td class="text-center"><button type="button" class="btn btn-sm btn-outline-info" data-toggle="modal" data-target="#modalDetailMK"> 📄 Detail </button></td>
+          </tr>
+<?php } ?>
+</tbody>
               </table>
             </div>
           </div>
@@ -1134,7 +681,7 @@ canvas {
     <div class="modal-content rounded-3 shadow">
       <div class="modal-header bg-info text-white">
         <h5 class="modal-title" id="modalFilterLabel">Filter Data</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
       </div>
       <form action="" method="GET">
 
@@ -1145,7 +692,7 @@ canvas {
           </div>
           <div class="mb-3">
             <label for="angkatan" class="form-label">Angkatan</label>
-            <select name="angkatan" id="angkatan" class="form-select">
+            <select name="angkatan" id="angkatan" class="custom-select">
               <option value="">-- Pilih Angkatan --</option>
               <option value="2025">2025</option>
               <option value="2024">2024</option>
@@ -1154,7 +701,7 @@ canvas {
           </div>
           <div class="mb-3">
             <label for="status" class="form-label">Status</label>
-            <select name="status" id="status" class="form-select">
+            <select name="status" id="status" class="custom-select">
               <option value="">-- Pilih Status --</option>
               <option value="Aktif">Aktif</option>
               <option value="NonAktif">NonAktif</option>
@@ -1164,7 +711,7 @@ canvas {
        </div>
 
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
           <button type="submit" class="btn btn-info">Terapkan Filter</button>
         </div>
 
@@ -1181,7 +728,7 @@ canvas {
     <div class="modal-content">
       <div class="modal-header bg-primary text-white">
         <h5 class="modal-title" id="modalBantuanLabel">Bantuan Tabel</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
       </div>
       <div class="modal-body">
         <p>
@@ -1192,7 +739,7 @@ canvas {
         </p>   
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
       </div>
     </div>
   </div>
@@ -1205,16 +752,28 @@ canvas {
       <div class="modal-content">
         <div class="modal-header bg-secondary text-white">
           <h6 class="modal-title">Preview Performa Risiko (sample)</h6>
-          <button type="button" class="btn-close btn-close-white" data-dismiss="modal" aria-label="Close"></button>
+          <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         </div>
         <div class="modal-body">
           <table class="table table-sm table-bordered">
             <thead class="table-light"><tr><th>#</th><th>Kode</th><th>Deskripsi</th><th>Nilai Performa</th></tr></thead>
             <tbody>
-              <tr><td>1</td><td>CPL-01</td><td>lorem ipsum</td><td>61 </td></tr>
-              <tr><td>2</td><td>CPL-04</td><td>lorem ipsum</td><td>48 </td></tr>
-              <tr><td>3</td><td>CPL-06</td><td>Contoh Lain</td><td>45 </td></tr>
-            </tbody>
+<?php
+$rows = [
+  ["kode" => "CPL-01", "deskripsi" => "lorem ipsum", "nilai_performa" => "61"],
+  ["kode" => "CPL-04", "deskripsi" => "lorem ipsum", "nilai_performa" => "48"],
+  ["kode" => "CPL-06", "deskripsi" => "Contoh Lain", "nilai_performa" => "45"],
+];
+foreach ($rows as $index => $row) {
+?>
+          <tr>
+            <td><?= $index + 1 ?></td>
+            <td><?= $row['kode'] ?></td>
+            <td><?= $row['deskripsi'] ?></td>
+            <td><?= $row['nilai_performa'] ?></td>
+          </tr>
+<?php } ?>
+</tbody>
           </table>
         </div>
         <div class="modal-footer">
@@ -1229,8 +788,8 @@ canvas {
     <div class="modal-dialog modal-sm">
       <div class="modal-content">
         <div class="modal-header bg-info text-white">
-          <h5 class="modal-title" id="modalStudentLabel"><i class="fas fa-user-graduate me-2"></i> Detil Mahasiswa</h5>
-          <button type="button" class="btn-close btn-close-white" data-dismiss="modal" aria-label="Close"></button>
+          <h5 class="modal-title" id="modalStudentLabel"><i class="fas fa-user-graduate mr-2"></i> Detil Mahasiswa</h5>
+          <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         </div>
         <div class="modal-body">
           <dl class="row mb-0">
@@ -1424,9 +983,7 @@ canvas {
       document.getElementById('summaryAngkatan').textContent = ang;
       document.getElementById('summaryProdi').textContent = prodi;
       // close modal if open
-      const modalEl = document.getElementById('modalFilter');
-      const bs = bootstrap.Modal.getInstance(modalEl);
-      if(bs) bs.hide();
+      $('#modalFilter').modal('hide');
       // in real app, perform XHR to backend to update data. Here we simply repopulate with same dummy.
       populateRekap();
       populateEws();

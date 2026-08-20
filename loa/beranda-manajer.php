@@ -98,7 +98,7 @@ include('3sidebar-manajer.php');
             <!-- ========== CARD 4: CHART 1 ========== -->    
             <div class="card">
               <div class="card-header">
-                <h5 class="card-title mb-0"><i class="fas fa-chart-bar me-2"></i>
+                <h5 class="card-title mb-0"><i class="fas fa-chart-bar mr-2"></i>
                   Ringkasan Kuantitatif
                 </h5>
                 <div class="card-tools">

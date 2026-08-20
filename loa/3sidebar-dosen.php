@@ -12,8 +12,8 @@
     <!-- Sidebar User Panel -->
     <div class="user-panel mt-3 pb-3 mb-3 d-flex align-items-center"
     style="border-bottom: 1px solid rgba(255,255,255,.2);"
-    data-bs-toggle="modal"
-    data-bs-target="#modalPilihPeran"
+    data-toggle="modal"
+    data-target="#modalPilihPeran"
     >
 
     <!-- User Icon -->
@@ -183,7 +183,7 @@
 
       <div class="modal-header">
         <h5 class="modal-title">Pilih Peran</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
       </div>
 
       <div class="modal-body text-center">

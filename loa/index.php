@@ -138,7 +138,7 @@ if (file_exists($sidebar_file)) {
             <!-- ========== CARD : Stacked Bar Chart ========== -->
             <!-- <div class="card">
               <div class="card-header">
-                <h5 class="card-title mb-0"><i class="fas fa-chart-bar me-2"></i> Stacked Bar Chart — Proporsi (%)</h5>
+                <h5 class="card-title mb-0"><i class="fas fa-chart-bar mr-2"></i> Stacked Bar Chart — Proporsi (%)</h5>
                 <div class="card-tools">
                   <small class="text-muted">kelas diampu dosen</small>
                 </div>

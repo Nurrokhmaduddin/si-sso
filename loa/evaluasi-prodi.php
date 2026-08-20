@@ -27,7 +27,7 @@
   <section class="content-header">
     <div class="container-fluid">
       <h3 class="mb-0">Evaluasi & Action Plan Prodi
-      <button type="button" class="btn btn-tool" data-bs-toggle="modal" data-bs-target="#modalBantuan" title="Bantuan"><i class="fas fa-info-circle"></i>
+      <button type="button" class="btn btn-tool" data-toggle="modal" data-target="#modalBantuan" title="Bantuan"><i class="fas fa-info-circle"></i>
         </button>
       </h3>
         <p class="text-muted mb-0">Keterangan singkat cara baca informasi halaman ini</p>
@@ -54,15 +54,15 @@
               </div>
             </div>
             <div class="card-footer">
-              <div class="card-tools ms-auto">
-                <button class="btn btn-outline-info btn-sm " data-bs-toggle="modal" data-bs-target="#modalFilter">
-                  <i class="fas fa-filter me-1"></i> Filter
+              <div class="card-tools ml-auto">
+                <button class="btn btn-outline-info btn-sm " data-toggle="modal" data-target="#modalFilter">
+                  <i class="fas fa-filter mr-1"></i> Filter
                 </button>
                 <button type="button" class="btn btn-outline-success btn-sm">
-                  <i class="fas fa-file-download me-1"></i> Export
+                  <i class="fas fa-file-download mr-1"></i> Export
                 </button>
-                <button type="button" class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalActionPlanSimple">
-                  <i class="fas fa-plus me-1"></i> Action Plan
+                <button type="button" class="btn btn-outline-primary btn-sm" data-toggle="modal" data-target="#modalActionPlanSimple">
+                  <i class="fas fa-plus mr-1"></i> Action Plan
                 </button>
               </div>
             </div>
@@ -102,11 +102,11 @@
                       <td>Workshop intensif revisi RPS dan modul pembelajaran berbasis OBE untuk mata kuliah terkait, serta pendampingan dosen pengampu.</td>
                       <td>≥ 85% mahasiswa mencapai indikator CPL yang ditargetkan.</td>
                       <td>Ketua Prodi & Koordinator MK terkait</td>
-                      <td><span class="badge bg-danger">Top</span></td>
+                      <td><span class="badge badge-danger">Top</span></td>
                       <td>2026-06-30</td>
                       <td>Planned</td>
                       <td>
-                        <button type="button" class="btn btn-sm btn-outline-primary me-1" data-bs-toggle="modal"  data-bs-target="#modalActionPlanSimple2"><i class="fas fa-tasks"></i></button>
+                        <button type="button" class="btn btn-sm btn-outline-primary mr-1" data-toggle="modal"  data-target="#modalActionPlanSimple2"><i class="fas fa-tasks"></i></button>
                       </td>
                     </tr>
                     <tr>
@@ -115,11 +115,11 @@
                       <td>Workshop revisi RPS</td>
                       <td>≥ 90% sesuai OBE</td>
                       <td>Ketua Prodi</td>
-                      <td><span class="badge bg-danger">Top</span></td>
+                      <td><span class="badge badge-danger">Top</span></td>
                       <td>2025-02-15</td>
                       <td>Ongoing</td>
                       <td>
-                        <button type="button" class="btn btn-sm btn-outline-primary me-1" data-bs-toggle="modal"  data-bs-target="#modalActionPlanSimple2"><i class="fas fa-tasks"></i></button>
+                        <button type="button" class="btn btn-sm btn-outline-primary mr-1" data-toggle="modal"  data-target="#modalActionPlanSimple2"><i class="fas fa-tasks"></i></button>
                       </td>
                     </tr>
 
@@ -129,11 +129,11 @@
                       <td>Standarisasi rubrik penilaian</td>
                       <td>Selisih ≤ 10%</td>
                       <td>Koordinator MK</td>
-                      <td><span class="badge bg-warning text-dark">Mid</span></td>
+                      <td><span class="badge badge-warning text-dark">Mid</span></td>
                       <td>2025-03-01</td>
                       <td>Planned</td>
                       <td>
-                        <button type="button" class="btn btn-sm btn-outline-primary me-1" data-bs-toggle="modal"  data-bs-target="#modalActionPlanSimple2"><i class="fas fa-tasks"></i></button>
+                        <button type="button" class="btn btn-sm btn-outline-primary mr-1" data-toggle="modal"  data-target="#modalActionPlanSimple2"><i class="fas fa-tasks"></i></button>
                       </td>
                     </tr>
 
@@ -143,11 +143,11 @@
                       <td>Pembuatan modul dasar</td>
                       <td>≥ 80% lulus pre-test</td>
                       <td>Dosen Pengampu</td>
-                      <td><span class="badge bg-success">Low</span></td>
+                      <td><span class="badge badge-success">Low</span></td>
                       <td>2025-02-20</td>
                       <td>Completed</td>
                       <td>
-                        <button type="button" class="btn btn-sm btn-outline-primary me-1" data-bs-toggle="modal"  data-bs-target="#modalActionPlanSimple2"><i class="fas fa-tasks"></i></button>
+                        <button type="button" class="btn btn-sm btn-outline-primary mr-1" data-toggle="modal"  data-target="#modalActionPlanSimple2"><i class="fas fa-tasks"></i></button>
                       </td>
                     </tr>
                     <tr>
@@ -156,11 +156,11 @@
                       <td>Workshop revisi RPS</td>
                       <td>≥ 90% sesuai OBE</td>
                       <td>Ketua Prodi</td>
-                      <td><span class="badge bg-danger" title="Strategis / Critical">Top</span></td>
+                      <td><span class="badge badge-danger" title="Strategis / Critical">Top</span></td>
                       <td>2025-02-15</td>
                       <td> Delayed</td>
                       <td>
-                        <button type="button" class="btn btn-sm btn-outline-primary me-1" data-bs-toggle="modal"  data-bs-target="#modalActionPlanSimple2"><i class="fas fa-tasks"></i></button>
+                        <button type="button" class="btn btn-sm btn-outline-primary mr-1" data-toggle="modal"  data-target="#modalActionPlanSimple2"><i class="fas fa-tasks"></i></button>
                       </td>
                     </tr>
                     <tr>
@@ -169,11 +169,11 @@
                       <td>Standarisasi rubrik penilaian</td>
                       <td>Selisih ≤ 10%</td>
                       <td>Koordinator MK</td>
-                      <td><span class="badge bg-warning text-dark" title="Penting">Mid</span></td>
+                      <td><span class="badge badge-warning text-dark" title="Penting">Mid</span></td>
                       <td>2025-03-01</td>
                       <td>Ineffective</td>
                       <td>
-                        <button type="button" class="btn btn-sm btn-outline-primary me-1" data-bs-toggle="modal"  data-bs-target="#modalActionPlanSimple2"><i class="fas fa-tasks"></i></button>
+                        <button type="button" class="btn btn-sm btn-outline-primary mr-1" data-toggle="modal"  data-target="#modalActionPlanSimple2"><i class="fas fa-tasks"></i></button>
                       </td>
                     </tr>
                     <tr>
@@ -182,11 +182,11 @@
                       <td>Pembuatan modul dasar</td>
                       <td>≥ 80% lulus pre-test</td>
                       <td>Dosen Pengampu</td>
-                      <td><span class="badge bg-success" title="Pendukung">Low</span></td>
+                      <td><span class="badge badge-success" title="Pendukung">Low</span></td>
                       <td>2025-02-20</td>
                       <td>Completed</td>
                       <td>
-                        <button type="button" class="btn btn-sm btn-outline-primary me-1" data-bs-toggle="modal"  data-bs-target="#modalActionPlanSimple2"><i class="fas fa-tasks"></i></button>
+                        <button type="button" class="btn btn-sm btn-outline-primary mr-1" data-toggle="modal"  data-target="#modalActionPlanSimple2"><i class="fas fa-tasks"></i></button>
                       </td>
                     </tr>
                   </tbody>
@@ -453,7 +453,7 @@
     <div class="modal-content rounded-3 shadow">
       <div class="modal-header bg-info text-white">
         <h5 class="modal-title" id="modalFilterLabel">Filter Data</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
       </div>
       <form action="" method="GET">
 
@@ -464,7 +464,7 @@
           </div>
           <div class="mb-3">
             <label for="angkatan" class="form-label">Angkatan</label>
-            <select name="angkatan" id="angkatan" class="form-select">
+            <select name="angkatan" id="angkatan" class="custom-select">
               <option value="">-- Pilih Prioritas --</option>
               <option value="Top" title="Strategis / Critical">Top (Strategis / Critical)</option>
                 <option value="Mid" title="Penting">Mid (Penting)</option>
@@ -473,7 +473,7 @@
           </div>
           <div class="mb-3">
             <label for="status" class="form-label">Status</label>
-            <select name="status" id="status" class="form-select">
+            <select name="status" id="status" class="custom-select">
               <option value="">-- Pilih Status --</option>
               <option value="Planned">Planned</option>
               <option value="Ongoing">Ongoing</option>
@@ -486,7 +486,7 @@
        </div>
 
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
           <button type="submit" class="btn btn-info">Terapkan Filter</button>
         </div>
 
@@ -506,7 +506,7 @@
     <div class="modal-content">
       <div class="modal-header bg-primary text-white">
         <h5 class="modal-title" id="modalBantuanLabel">Bantuan Tabel</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
       </div>
       <div class="modal-body">
         <p>
@@ -514,7 +514,7 @@
         </p>        
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
       </div>
     </div>
   </div>
@@ -529,7 +529,7 @@
       <!-- HEADER -->
       <div class="modal-header bg-primary text-white">
         <h5 class="modal-title">Action Plan (SMART)</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        <button type="button" class="close text-white" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
       </div>
 
       <form method="POST">
@@ -566,7 +566,7 @@
 
             <div class="col-md-6 mb-3">
               <label for="prioritas" class="form-label">Prioritas (Relevansi)<b style="color:red">*</b></label>
-              <select id="prioritas" class="form-select" name="prioritas_relevansi" required>
+              <select id="prioritas" class="custom-select" name="prioritas_relevansi" required>
                 <option value="">-- Pilih --</option>
                 <option value="Top" title="Strategis / Critical">Top (Strategis / Critical)</option>
                 <option value="Mid" title="Penting">Mid (Penting)</option>
@@ -583,7 +583,7 @@
           <!-- STATUS -->
           <div class="mb-3">
             <label for="status" class="form-label">Status</label>
-            <select id="status" class="form-select" name="status">
+            <select id="status" class="custom-select" name="status">
               <option value="Planned">Planned</option>
               <option value="Ongoing">Ongoing</option>
               <option value="Completed">Completed</option>
@@ -601,7 +601,7 @@
 
         <!-- FOOTER -->
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
           <button type="submit" class="btn btn-primary">Simpan</button>
         </div>
       </form>
@@ -617,7 +617,7 @@
       <!-- HEADER -->
       <div class="modal-header bg-primary text-white">
         <h5 class="modal-title">Action Plan (SMART)</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        <button type="button" class="close text-white" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
       </div>
 
       <form method="POST">
@@ -654,7 +654,7 @@
 
             <div class="col-md-6 mb-3">
               <label for="prioritas" class="form-label">Prioritas (Relevansi)<b style="color:red">*</b></label>
-              <select id="prioritas" class="form-select" name="prioritas_relevansi" disabled>
+              <select id="prioritas" class="custom-select" name="prioritas_relevansi" disabled>
                 <option value="">-- Pilih --</option>
                 <option value="Top" title="Strategis / Critical">Top (Strategis / Critical)</option>
                 <option value="Mid" title="Penting">Mid (Penting)</option>
@@ -671,7 +671,7 @@
           <!-- STATUS -->
           <div class="mb-3">
             <label for="status" class="form-label">Status</label>
-            <select id="status" class="form-select" name="status">
+            <select id="status" class="custom-select" name="status">
               <option value="Planned">Planned</option>
               <option value="Ongoing">Ongoing</option>
               <option value="Completed">Completed</option>
@@ -705,7 +705,7 @@
 
         <!-- FOOTER -->
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
           <button type="submit" class="btn btn-primary">Simpan</button>
         </div>
       </form>

@@ -369,7 +369,7 @@ $dataCpl = [
   <section class="content-header">
     <div class="container-fluid">
       <h3 class="mb-0">Monev CPL Individu
-        <button type="button" class="btn btn-tool" data-bs-toggle="modal" data-bs-target="#modalBantuan" title="Bantuan">
+        <button type="button" class="btn btn-tool" data-toggle="modal" data-target="#modalBantuan" title="Bantuan">
           <i class="fas fa-question-circle"></i>
         </button>
       </h3>
@@ -416,15 +416,15 @@ $dataCpl = [
               </table>
             </div>
             <div class="card-footer">
-              <div class="card-tools ms-auto">
+              <div class="card-tools ml-auto">
                 <button type="button" class="btn btn-outline-secondary btn-sm" onclick="window.location.href='monev-rekap-individual-.php'">
-                  <i class="fas fa-reply me-1"></i> Kembali
+                  <i class="fas fa-reply mr-1"></i> Kembali
                 </button>
-                <button class="btn btn-outline-info btn-sm " data-bs-toggle="modal" data-bs-target="#modalFilter">
-                  <i class="fas fa-search me-1"></i> Pencarian
+                <button class="btn btn-outline-info btn-sm " data-toggle="modal" data-target="#modalFilter">
+                  <i class="fas fa-search mr-1"></i> Pencarian
                 </button>                
                 <button type="button" class="btn btn-outline-success btn-sm">
-                  <i class="fas fa-file-download me-1"></i> Export
+                  <i class="fas fa-file-download mr-1"></i> Export
                 </button>   
               </div>
 
@@ -494,7 +494,7 @@ $dataCpl = [
 <div id="tab_1">
   <div class="card " id="cardGrafik">
     <div class="card-header">              
-      <h5 class="card-title mb-0"><i class="fas fa-clipboard-list me-2"></i> Detail CPL</h5>
+      <h5 class="card-title mb-0"><i class="fas fa-clipboard-list mr-2"></i> Detail CPL</h5>
       <div class="card-tools">
         <small class="text-muted">klik nilai cpmk untuk melihat kelas perkuliahan</small>
         <button class="btn btn-sm btn-outline-primary" onclick="showTabel()">
@@ -580,7 +580,7 @@ $dataCpl = [
 <div id="tab_1">
   <div class="card d-none" id="cardTabel">
     <div class="card-header">              
-      <h5 class="card-title mb-0"><i class="fas fa-clipboard-list me-2"></i> Detail CPL</h5>
+      <h5 class="card-title mb-0"><i class="fas fa-clipboard-list mr-2"></i> Detail CPL</h5>
       <div class="card-tools">
         <small class="text-muted">klik nilai cpmk untuk melihat kelas perkuliahan</small>
         <button class="btn btn-sm btn-outline-primary" onclick="showGrafik()">
@@ -885,7 +885,7 @@ include('4footer.php');
     <div class="modal-content rounded-3 shadow">
       <div class="modal-header bg-info text-white">
         <h5 class="modal-title" id="modalFilterLabel">Filter Data</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
       </div>
       <form action="" method="GET">
 
@@ -896,7 +896,7 @@ include('4footer.php');
           </div>
           <div class="mb-3">
             <label for="angkatan" class="form-label">Angkatan</label>
-            <select name="angkatan" id="angkatan" class="form-select">
+            <select name="angkatan" id="angkatan" class="custom-select">
               <option value="">-- Pilih Angkatan --</option>
               <option value="2025">2025</option>
               <option value="2024">2024</option>
@@ -905,7 +905,7 @@ include('4footer.php');
           </div>
           <div class="mb-3">
             <label for="status" class="form-label">Status</label>
-            <select name="status" id="status" class="form-select">
+            <select name="status" id="status" class="custom-select">
               <option value="">-- Pilih Status --</option>
               <option value="Aktif">Aktif</option>
               <option value="NonAktif">NonAktif</option>
@@ -915,7 +915,7 @@ include('4footer.php');
        </div>
 
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
           <button type="submit" class="btn btn-info">Terapkan Filter</button>
         </div>
 
@@ -932,7 +932,7 @@ include('4footer.php');
     <div class="modal-content">
       <div class="modal-header bg-primary text-white">
         <h5 class="modal-title" id="modalBantuanLabel">Bantuan Tabel</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
       </div>
       <div class="modal-body">
         <p>
@@ -940,7 +940,7 @@ include('4footer.php');
         </p>        
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
       </div>
     </div>
   </div>
@@ -953,7 +953,7 @@ include('4footer.php');
       <div class="modal-content">
         <div class="modal-header bg-secondary text-white">
           <h6 class="modal-title">Preview Performa Risiko (sample)</h6>
-          <button type="button" class="btn-close btn-close-white" data-dismiss="modal" aria-label="Close"></button>
+          <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         </div>
         <div class="modal-body">
           <table class="table table-sm table-bordered">
@@ -977,8 +977,8 @@ include('4footer.php');
     <div class="modal-dialog modal-sm">
       <div class="modal-content">
         <div class="modal-header bg-info text-white">
-          <h5 class="modal-title" id="modalStudentLabel"><i class="fas fa-user-graduate me-2"></i> Detil Mahasiswa</h5>
-          <button type="button" class="btn-close btn-close-white" data-dismiss="modal" aria-label="Close"></button>
+          <h5 class="modal-title" id="modalStudentLabel"><i class="fas fa-user-graduate mr-2"></i> Detil Mahasiswa</h5>
+          <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         </div>
         <div class="modal-body">
           <dl class="row mb-0">

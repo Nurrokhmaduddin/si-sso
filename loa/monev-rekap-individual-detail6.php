@@ -9,7 +9,7 @@
   <section class="content-header">
     <div class="container-fluid">
       <h3 class="mb-0">Monev CPL Individu
-        <button type="button" class="btn btn-tool" data-bs-toggle="modal" data-bs-target="#modalBantuan" title="Bantuan">
+        <button type="button" class="btn btn-tool" data-toggle="modal" data-target="#modalBantuan" title="Bantuan">
           <i class="fas fa-question-circle"></i>
         </button>
       </h3>
@@ -53,15 +53,15 @@
               </table>
             </div>
             <div class="card-footer">
-              <div class="card-tools ms-auto">
+              <div class="card-tools ml-auto">
                 <button type="button" class="btn btn-outline-secondary btn-sm" onclick="window.location.href='monev-rekap-individual-.php'">
-                  <i class="fas fa-reply me-1"></i> Kembali
+                  <i class="fas fa-reply mr-1"></i> Kembali
                 </button>
-                <button class="btn btn-outline-info btn-sm " data-bs-toggle="modal" data-bs-target="#modalFilter">
-                  <i class="fas fa-search me-1"></i> Pencarian
+                <button class="btn btn-outline-info btn-sm " data-toggle="modal" data-target="#modalFilter">
+                  <i class="fas fa-search mr-1"></i> Pencarian
                 </button>                
                 <button type="button" class="btn btn-outline-success btn-sm">
-                  <i class="fas fa-file-download me-1"></i> Export
+                  <i class="fas fa-file-download mr-1"></i> Export
                 </button>   
               </div>
             </div>
@@ -169,10 +169,10 @@ canvas {
 
       <!-- Tombol -->
       <div class="d-flex gap-2 mt-2">
-        <button class="btn btn-outline-info btn-sm flex-fill" data-bs-toggle="collapse" data-bs-target="#daftarIKCPL11">
+        <button class="btn btn-outline-info btn-sm flex-fill" data-toggle="collapse" data-target="#daftarIKCPL11">
           Rangking Performa
         </button>
-        <button class="btn btn-outline-info btn-sm flex-fill" data-bs-toggle="collapse" data-bs-target="#daftarIKCPL13">
+        <button class="btn btn-outline-info btn-sm flex-fill" data-toggle="collapse" data-target="#daftarIKCPL13">
           Daftar CPL
         </button>
         <button class="btn btn-outline-danger btn-sm flex-fill" onclick="openAllRisikoPreview()">
@@ -193,8 +193,8 @@ canvas {
 
         <!-- Tombol -->
         <div class="d-flex gap-2 mt-2">
-          <button class="btn btn-outline-info btn-sm flex-fill" data-bs-toggle="collapse" data-bs-target="#daftarIKCPL21">Rangking</button>
-          <button class="btn btn-outline-info btn-sm flex-fill" data-bs-toggle="collapse" data-bs-target="#daftarIKCPL23">Daftar IK</button>
+          <button class="btn btn-outline-info btn-sm flex-fill" data-toggle="collapse" data-target="#daftarIKCPL21">Rangking</button>
+          <button class="btn btn-outline-info btn-sm flex-fill" data-toggle="collapse" data-target="#daftarIKCPL23">Daftar IK</button>
           <button class="btn btn-outline-danger btn-sm flex-fill" onclick="openAllRisikoPreview()">Risiko</button>
         </div>
       </div>
@@ -208,8 +208,8 @@ canvas {
 
         <!-- Tombol -->
         <div class="d-flex gap-2 mt-2">
-          <button class="btn btn-outline-info btn-sm flex-fill" data-bs-toggle="collapse" data-bs-target="#daftarIKCPL31">Rangking</button>
-          <button class="btn btn-outline-info btn-sm flex-fill" data-bs-toggle="collapse" data-bs-target="#daftarIKCPL33">Daftar CPMK</button>
+          <button class="btn btn-outline-info btn-sm flex-fill" data-toggle="collapse" data-target="#daftarIKCPL31">Rangking</button>
+          <button class="btn btn-outline-info btn-sm flex-fill" data-toggle="collapse" data-target="#daftarIKCPL33">Daftar CPMK</button>
           <button class="btn btn-outline-danger btn-sm flex-fill" onclick="openAllRisikoPreview()">Risiko</button>
         </div>
       </div>
@@ -223,7 +223,7 @@ canvas {
         <!-- ========== CARD : Chart MK ========== -->
         <div class="card">
           <div class="card-header">
-            <h5 class="card-title mb-0"><i class="fas fa-chart-bar me-2"></i> MK - Rata-rata Capaian (Biru)</h5>
+            <h5 class="card-title mb-0"><i class="fas fa-chart-bar mr-2"></i> MK - Rata-rata Capaian (Biru)</h5>
             <div class="card-tools">
               <small class="text-muted">Angkatan Terpilih</small>
             </div>
@@ -232,18 +232,18 @@ canvas {
             <canvas id="chartMK" width="100%" height="22"></canvas>
             <div class="row text-center mt-3">
               <div class="col">
-                <button class="btn btn-outline-info btn-sm w-100" data-bs-toggle="collapse" data-bs-target="#daftarIKCPL41">
+                <button class="btn btn-outline-info btn-sm w-100" data-toggle="collapse" data-target="#daftarIKCPL41">
                   Rangking Performa
                 </button>
               </div>
              
               <div class="col">
-                <button class="btn btn-outline-info btn-sm w-100" data-bs-toggle="collapse" data-bs-target="#daftarIKCPL43">
+                <button class="btn btn-outline-info btn-sm w-100" data-toggle="collapse" data-target="#daftarIKCPL43">
                   Daftar MK
                 </button>
               </div>
               <div class="col">
-                <button class="btn btn-outline-danger btn-sm w-100" data-bs-toggle="collapse" onclick="openAllRisikoPreview()">
+                <button class="btn btn-outline-danger btn-sm w-100" data-toggle="collapse" onclick="openAllRisikoPreview()">
                   Performa Risiko
                 </button>
               </div>
@@ -408,8 +408,8 @@ canvas {
         <!-- daftar MK -->
         <div class="card " id="daftarIKCPL43" >
           <div class="card-header d-flex align-items-center">
-            <h5 class="card-title mb-0"><i class="fas fa-table me-2"></i> Tabel Pencapaian</h5>
-            <div class="card-tools ms-auto">
+            <h5 class="card-title mb-0"><i class="fas fa-table mr-2"></i> Tabel Pencapaian</h5>
+            <div class="card-tools ml-auto">
               <!-- <small class="text-muted">Klik angka Min/Max untuk melihat 1 mahasiswa (NIM / Nama / Nilai)</small> -->
             </div>
           </div>
@@ -435,7 +435,7 @@ canvas {
                     <td>1</td>
                     <td>SKS982: Pemahaman Dasar Polimer</td>
                     <td class="text-center">
-                      <button class="btn btn-sm btn-outline-info" data-bs-toggle="modal" data-bs-target="#modalStudentMK">72.14</button>
+                      <button class="btn btn-sm btn-outline-info" data-toggle="modal" data-target="#modalStudentMK">72.14</button>
                     </td>
                     <td class="text-center">B</td>
                     <td class="text-center">🟨 Cukup</td>
@@ -445,7 +445,7 @@ canvas {
                     <td>2</td>
                     <td>SKS917: Teori Komposit</td>
                     <td class="text-center">
-                      <button class="btn btn-sm btn-outline-info" data-bs-toggle="modal" data-bs-target="#modalStudentMK">71</button>
+                      <button class="btn btn-sm btn-outline-info" data-toggle="modal" data-target="#modalStudentMK">71</button>
                     </td>
                     <td class="text-center">B+</td>
                     <td class="text-center">🟨 Cukup</td>
@@ -455,7 +455,7 @@ canvas {
                     <td>3</td>
                     <td>UNI902: Aplikasi Polimer</td>
                     <td class="text-center">
-                      <button class="btn btn-sm btn-outline-info" data-bs-toggle="modal" data-bs-target="#modalStudentMK">76.80</button>
+                      <button class="btn btn-sm btn-outline-info" data-toggle="modal" data-target="#modalStudentMK">76.80</button>
                     </td>
                     <td class="text-center">B+</td>
                     <td class="text-center">🟨 Cukup</td>
@@ -465,7 +465,7 @@ canvas {
                     <td>4</td>
                     <td>UNI912: Proses Produksi</td>
                     <td class="text-center">
-                      <button class="btn btn-sm btn-outline-info" data-bs-toggle="modal" data-bs-target="#modalStudentMK">76.80</button>
+                      <button class="btn btn-sm btn-outline-info" data-toggle="modal" data-target="#modalStudentMK">76.80</button>
                     </td>
                     <td class="text-center">B+</td>
                     <td class="text-center">🟨 Cukup</td>
@@ -479,7 +479,7 @@ canvas {
                     <td>5</td>
                     <td>SKS234: Analisis Material</td>
                     <td class="text-center">
-                      <button class="btn btn-sm btn-outline-info" data-bs-toggle="modal" data-bs-target="#modalStudentMK">75.30</button>
+                      <button class="btn btn-sm btn-outline-info" data-toggle="modal" data-target="#modalStudentMK">75.30</button>
                     </td>
                     <td class="text-center">B+</td>
                     <td class="text-center">🟨 Cukup</td>
@@ -489,7 +489,7 @@ canvas {
                     <td>6</td>
                     <td>SKS812: Keselamatan & Etika</td>
                     <td class="text-center">
-                      <button class="btn btn-sm btn-outline-info" data-bs-toggle="modal" data-bs-target="#modalStudentMK">76.80</button>
+                      <button class="btn btn-sm btn-outline-info" data-toggle="modal" data-target="#modalStudentMK">76.80</button>
                     </td>
                     <td class="text-center">B+</td>
                     <td class="text-center">🟨 Cukup</td>
@@ -499,7 +499,7 @@ canvas {
                     <td>7</td>
                     <td>SKS908: Desain Proses</td>
                     <td class="text-center">
-                      <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#modalStudentMK">-</button>
+                      <button class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#modalStudentMK">-</button>
                     </td>
                     <td class="text-center"></td>
                     <td class="text-center"><i>Menunggu Penilaian</i></td>
@@ -522,7 +522,7 @@ canvas {
                     <td>9</td>
                     <td>SKS113: Statistik & Analisis Data</td>
                     <td class="text-center">
-                      <button class="btn btn-sm btn-outline-info" data-bs-toggle="modal" data-bs-target="#modalStudentMK">71.50</button>
+                      <button class="btn btn-sm btn-outline-info" data-toggle="modal" data-target="#modalStudentMK">71.50</button>
                     </td>
                     <td class="text-center">B</td>
                     <td class="text-center">🟨 Cukup</td>
@@ -532,7 +532,7 @@ canvas {
                     <td>10</td>
                     <td>SKS932: Komunikasi Teknis</td>
                     <td class="text-center">
-                      <button class="btn btn-sm btn-outline-info" data-bs-toggle="modal" data-bs-target="#modalStudentMK">59.00</button>
+                      <button class="btn btn-sm btn-outline-info" data-toggle="modal" data-target="#modalStudentMK">59.00</button>
                     </td>
                     <td class="text-center">C</td>
                     <td class="text-center">🟥 Kurang</td>
@@ -567,7 +567,7 @@ canvas {
       
       <div class="modal-header bg-info text-white">
         <h5 class="modal-title" id="modalFilterLabel"> Pencarian Mahasiswa</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
       </div>
 
       <form action="" method="GET">
@@ -595,7 +595,7 @@ canvas {
         </div>
 
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">
             Batal
           </button>
           <button type="submit" class="btn btn-info">
@@ -617,7 +617,7 @@ canvas {
     <div class="modal-content">
       <div class="modal-header bg-primary text-white">
         <h5 class="modal-title" id="modalBantuanLabel">Bantuan Tabel</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
       </div>
       <div class="modal-body">
         <p>
@@ -625,7 +625,7 @@ canvas {
         </p>        
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
       </div>
     </div>
   </div>
@@ -638,7 +638,7 @@ canvas {
       <div class="modal-content">
         <div class="modal-header bg-secondary text-white">
           <h6 class="modal-title">Preview Performa Risiko (sample)</h6>
-          <button type="button" class="btn-close btn-close-white" data-dismiss="modal" aria-label="Close"></button>
+          <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         </div>
         <div class="modal-body">
           <table class="table table-sm table-bordered">
@@ -662,8 +662,8 @@ canvas {
     <div class="modal-dialog modal-sm">
       <div class="modal-content">
         <div class="modal-header bg-info text-white">
-          <h5 class="modal-title" id="modalStudentLabel"><i class="fas fa-user-graduate me-2"></i> Detil Mahasiswa</h5>
-          <button type="button" class="btn-close btn-close-white" data-dismiss="modal" aria-label="Close"></button>
+          <h5 class="modal-title" id="modalStudentLabel"><i class="fas fa-user-graduate mr-2"></i> Detil Mahasiswa</h5>
+          <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         </div>
         <div class="modal-body">
           <dl class="row mb-0">
@@ -780,9 +780,7 @@ canvas {
       document.getElementById('summaryAngkatan').textContent = ang;
       document.getElementById('summaryProdi').textContent = prodi;
       // close modal if open
-      const modalEl = document.getElementById('modalFilter');
-      const bs = bootstrap.Modal.getInstance(modalEl);
-      if(bs) bs.hide();
+      $('#modalFilter').modal('hide');
       // in real app, perform XHR to backend to update data. Here we simply repopulate with same dummy.
       populateRekap();
       populateEws();
@@ -1075,9 +1073,9 @@ generateHorizontalChart(
       <!-- HEADER -->
       <div class="modal-header bg-info text-white py-2">
         <h6 class="modal-title mb-0" id="modalStudentMKLabel">
-          <i class="fas fa-book-open me-2"></i> Detail MK Student
+          <i class="fas fa-book-open mr-2"></i> Detail MK Student
         </h6>
-        <button type="button" class="btn-close btn-close-white" data-dismiss="modal" aria-label="Close"></button>
+        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
       </div>
 
       <!-- BODY -->

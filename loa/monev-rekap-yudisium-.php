@@ -9,7 +9,7 @@
   <section class="content-header">
     <div class="container-fluid">
       <h3 class="mb-0">Monev CPL Yudisium
-        <button type="button" class="btn btn-tool" data-bs-toggle="modal" data-bs-target="#modalBantuan" title="Bantuan">
+        <button type="button" class="btn btn-tool" data-toggle="modal" data-target="#modalBantuan" title="Bantuan">
           <i class="fas fa-question-circle"></i>
         </button>
       </h3>
@@ -45,15 +45,15 @@
               </div>
             </div>
             <div class="card-footer">
-              <div class="card-tools ms-auto">
-                <button class="btn btn-outline-info btn-sm " data-bs-toggle="modal" data-bs-target="#modalFilter">
-                  <i class="fas fa-filter me-1"></i> Filter
+              <div class="card-tools ml-auto">
+                <button class="btn btn-outline-info btn-sm " data-toggle="modal" data-target="#modalFilter">
+                  <i class="fas fa-filter mr-1"></i> Filter
                 </button>                
                 <button type="button" class="btn btn-outline-success btn-sm">
-                  <i class="fas fa-file-download me-1"></i> Export
+                  <i class="fas fa-file-download mr-1"></i> Export
                 </button>    
                 <button type="button" class="btn btn-sm btn-outline-info" onclick="window.location='detail-cpl.html'"><i class="fas fa-info-circle"></i></button> 
-                <a class="btn btn-sm btn-outline-primary" href="formulir-evaluasi.php" target="_blank"><i class="fas fa-clipboard-list me-1"> </i>Catat Temuan </a>            
+                <a class="btn btn-sm btn-outline-primary" href="formulir-evaluasi.php" target="_blank"><i class="fas fa-clipboard-list mr-1"> </i>Catat Temuan </a>            
               </div>
 
             </div>
@@ -114,7 +114,7 @@
 <!-- Level 2 -->
 <div class="card">
   <!-- <div class="card-header">
-    <h5 class="card-title mb-0"><i class="fas fa-chart-bar me-2"></i>10 CPL Lulusan</h5>
+    <h5 class="card-title mb-0"><i class="fas fa-chart-bar mr-2"></i>10 CPL Lulusan</h5>
     <div class="card-tools">
       <small class="text-muted">5 Batch Yudisium Terakhir</i></h5></small>
     </div>
@@ -209,7 +209,7 @@
 <!-- Grafik Rentang Nilai -->
 <div class="card">
   <div class="card-header">
-    <h5 class="card-title mb-0"><i class="fas fa-chart-bar me-2"></i> Distribusi CPL Lulusan</h5>
+    <h5 class="card-title mb-0"><i class="fas fa-chart-bar mr-2"></i> Distribusi CPL Lulusan</h5>
     <div class="card-tools">
       <small class="text-muted">Batch Yudisium Terpilih</i></h5></small>
     </div>
@@ -296,7 +296,7 @@
 <!-- Tabel Tren 5 batch -->
 <div class="card">
   <div class="card-header">
-    <h5 class="card-title mb-0"><i class="fas fa-chart-bar me-2"></i>Tren Perbandingan ketercapaian CPL</h5>
+    <h5 class="card-title mb-0"><i class="fas fa-chart-bar mr-2"></i>Tren Perbandingan ketercapaian CPL</h5>
     <div class="card-tools">
       <small class="text-muted">3 Batch Yudisium Terakhir</i></h5></small>
     </div>
@@ -406,7 +406,7 @@
 <!-- ========== CARD :  Grafik Radar CPL & Progress ========== --> 
 <div class="card d-none">
   <!-- <div class="card-header">
-    <h5 class="card-title mb-0"><i class="fas fa-chart-bar me-2"></i>Level 1 – Ringkasan</h5>
+    <h5 class="card-title mb-0"><i class="fas fa-chart-bar mr-2"></i>Level 1 – Ringkasan</h5>
     <div class="card-tools">
       <small class="text-muted">Batch Yudisium Terpilih</i></h5></small> 
     </div> 
@@ -419,7 +419,7 @@
 <!-- ========== CARD : Distribusi Angkatan ========== -->
 <!-- <div class="card">
   <div class="card-header">
-    <h5 class="card-title mb-0"><i class="fas fa-chart-bar me-2"></i>Distribusi Angkatan Mahasiswa</h5>
+    <h5 class="card-title mb-0"><i class="fas fa-chart-bar mr-2"></i>Distribusi Angkatan Mahasiswa</h5>
     <div class="card-tools">
       <small class="text-muted">Batch Yudisium Terpilih</small>
     </div>
@@ -484,19 +484,19 @@
       </thead>
       <tbody class="text-center">
         <tr>
-          <td class="text-start">Jumlah Lulusan</td>
+          <td class="text-left">Jumlah Lulusan</td>
           <td>80</td>
         </tr>
         <tr>
-          <td class="text-start">IPK Rata-rata</td>
+          <td class="text-left">IPK Rata-rata</td>
           <td>3.42</td>
         </tr>
         <tr>
-          <td class="text-start">CPL Rata-rata</td>
+          <td class="text-left">CPL Rata-rata</td>
           <td>83%</td>
         </tr>
         <tr>
-          <td class="text-start">% Tepat Waktu</td>
+          <td class="text-left">% Tepat Waktu</td>
           <td>72%</td>
         </tr>        
         <tr>     
@@ -538,7 +538,7 @@
   </div>
 </div> -->
 <!-- ========== CARD : tabel distribusi lulusan ========== -->
-<!-- <div class="card">
+<div class="card">
   <div class="card-header d-flex align-items-center">
     <h5 class="card-title mb-0">Daftar Lulusan</h5>    
     
@@ -673,7 +673,7 @@
     </div>
   </div>
 </div>
- -->
+
 
 
 
@@ -692,7 +692,7 @@
     <div class="modal-content rounded-3 shadow">
       <div class="modal-header bg-info text-white">
         <h5 class="modal-title" id="modalFilterLabel">Filter Data</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
       </div>
       <form action="" method="GET">
 
@@ -703,7 +703,7 @@
           </div>
           <div class="mb-3">
             <label for="angkatan" class="form-label">Angkatan</label>
-            <select name="angkatan" id="angkatan" class="form-select">
+            <select name="angkatan" id="angkatan" class="custom-select">
               <option value="">-- Pilih Angkatan --</option>
               <option value="2025">2025</option>
               <option value="2024">2024</option>
@@ -712,7 +712,7 @@
           </div>
           <div class="mb-3">
             <label for="status" class="form-label">Status</label>
-            <select name="status" id="status" class="form-select">
+            <select name="status" id="status" class="custom-select">
               <option value="">-- Pilih Status --</option>
               <option value="Aktif">Aktif</option>
               <option value="NonAktif">NonAktif</option>
@@ -722,7 +722,7 @@
        </div>
 
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
           <button type="submit" class="btn btn-info">Terapkan Filter</button>
         </div>
 
@@ -739,7 +739,7 @@
     <div class="modal-content">
       <div class="modal-header bg-primary text-white">
         <h5 class="modal-title" id="modalBantuanLabel">Bantuan Tabel</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
       </div>
       <div class="modal-body">
         <p>
@@ -796,7 +796,7 @@ Fokusnya kualitas akhir dan konsistensinya.
                
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
       </div>
     </div>
   </div>

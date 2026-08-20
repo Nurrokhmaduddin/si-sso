@@ -3,13 +3,12 @@
 <?php include('2navbar.php'); ?>
 <?php include('3sidebar.php'); ?>
 
-  
 <div class="content-wrapper" style="min-height: 626.4px;">    
 
   <section class="content-header">
     <div class="container-fluid">
       <h3 class="mb-0">Monev Semester
-        <button type="button" class="btn btn-tool" data-bs-toggle="modal" data-bs-target="#modalBantuan" title="Bantuan">
+        <button type="button" class="btn btn-tool" data-toggle="modal" data-target="#modalBantuan" title="Bantuan">
           <i class="fas fa-question-circle"></i>
         </button>
       </h3>
@@ -46,14 +45,14 @@
               </div>
             </div>
             <div class="card-footer">
-              <div class="card-tools ms-auto">
-                <button class="btn btn-outline-info btn-sm " data-bs-toggle="modal" data-bs-target="#modalFilter">
-                  <i class="fas fa-filter me-1"></i> Filter
+              <div class="card-tools ml-auto">
+                <button class="btn btn-outline-info btn-sm " data-toggle="modal" data-target="#modalFilter">
+                  <i class="fas fa-filter mr-1"></i> Filter
                 </button>                
                 <button type="button" class="btn btn-outline-success btn-sm">
-                  <i class="fas fa-file-download me-1"></i> Export
+                  <i class="fas fa-file-download mr-1"></i> Export
                 </button>    
-                <a class="btn btn-sm btn-outline-primary" href="formulir-evaluasi.php" target="_blank"><i class="fas fa-clipboard-list me-1"> </i>Catat Temuan </a>             
+                <a class="btn btn-sm btn-outline-primary" href="formulir-evaluasi.php" target="_blank"><i class="fas fa-clipboard-list mr-1"> </i>Catat Temuan </a>             
               </div>
 
             </div>
@@ -121,7 +120,7 @@
           <!-- CARD HEADER -->  
           <div class="card-header ">         
             <h5 class="card-title mb-0">
-              <button class="btn btn-sm btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#chartCPLIK1">
+              <button class="btn btn-sm btn-outline-primary" data-toggle="collapse" data-target="#chartCPLIK1">
                 <i class="fas fa-expand"></i>
               </button>
               kode IK pertama (]perbandingan %mahasiswa tuntas CPMK, periode A vs B)
@@ -199,7 +198,7 @@
 <div class="card">   
   <div class="card-header ">         
     <h5 class="card-title mb-0">
-      <button class="btn btn-sm btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#chartCPLIK2">
+      <button class="btn btn-sm btn-outline-primary" data-toggle="collapse" data-target="#chartCPLIK2">
         <i class="fas fa-expand"></i>
       </button>
       kode IK kedua (]perbandingan %mahasiswa tuntas CPMK, periode A vs B)
@@ -270,7 +269,7 @@
 <div class="card">   
   <div class="card-header ">         
     <h5 class="card-title mb-0">
-      <button class="btn btn-sm btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#chartCPLIK3">
+      <button class="btn btn-sm btn-outline-primary" data-toggle="collapse" data-target="#chartCPLIK3">
         <i class="fas fa-expand"></i>
       </button>
       kode IK ketiga (]perbandingan %mahasiswa tuntas CPMK, periode A vs B)
@@ -341,7 +340,7 @@
 <div class="card">   
   <div class="card-header ">         
     <h5 class="card-title mb-0">
-      <button class="btn btn-sm btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#chartCPLIK4">
+      <button class="btn btn-sm btn-outline-primary" data-toggle="collapse" data-target="#chartCPLIK4">
         <i class="fas fa-expand"></i>
       </button>
       kode IK keempat (]perbandingan %mahasiswa tuntas CPMK, periode A vs B)
@@ -411,7 +410,7 @@
 <div class="card">   
   <div class="card-header ">         
     <h5 class="card-title mb-0">
-      <button class="btn btn-sm btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#chartCPLIK5">
+      <button class="btn btn-sm btn-outline-primary" data-toggle="collapse" data-target="#chartCPLIK5">
         <i class="fas fa-expand"></i>
       </button>
       kode IK kelima (]perbandingan %mahasiswa tuntas CPMK, periode A vs B)
@@ -482,7 +481,7 @@
 <div class="card">   
   <div class="card-header ">         
     <h5 class="card-title mb-0">
-      <button class="btn btn-sm btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#chartCPLIK6">
+      <button class="btn btn-sm btn-outline-primary" data-toggle="collapse" data-target="#chartCPLIK6">
         <i class="fas fa-expand"></i>
       </button>
       kode IK keenam (]perbandingan %mahasiswa tuntas CPMK, periode A vs B)
@@ -552,7 +551,7 @@
 <div class="card">   
   <div class="card-header ">         
     <h5 class="card-title mb-0">
-      <button class="btn btn-sm btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#chartCPLIK7">
+      <button class="btn btn-sm btn-outline-primary" data-toggle="collapse" data-target="#chartCPLIK7">
         <i class="fas fa-expand"></i>
       </button>
       kode IK ketujuh (]perbandingan %mahasiswa tuntas CPMK, periode A vs B)
@@ -599,7 +598,7 @@
 <div class="card">   
   <div class="card-header ">         
     <h5 class="card-title mb-0">
-      <button class="btn btn-sm btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#chartCPLIK8">
+      <button class="btn btn-sm btn-outline-primary" data-toggle="collapse" data-target="#chartCPLIK8">
         <i class="fas fa-expand"></i>
       </button>
       kode IK kedelapan (]perbandingan %mahasiswa tuntas CPMK, periode A vs B)
@@ -645,7 +644,7 @@
 <div class="card">   
   <div class="card-header ">         
     <h5 class="card-title mb-0">
-      <button class="btn btn-sm btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#chartCPLIK9">
+      <button class="btn btn-sm btn-outline-primary" data-toggle="collapse" data-target="#chartCPLIK9">
         <i class="fas fa-expand"></i>
       </button>
       kode IK kesembilan (]perbandingan %mahasiswa tuntas CPMK, periode A vs B)
@@ -682,7 +681,7 @@
 <div class="card">   
   <div class="card-header ">         
     <h5 class="card-title mb-0">
-      <button class="btn btn-sm btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#chartCPLIK10">
+      <button class="btn btn-sm btn-outline-primary" data-toggle="collapse" data-target="#chartCPLIK10">
         <i class="fas fa-expand"></i>
       </button>
       kode IK kesepuluh (]perbandingan %mahasiswa tuntas CPMK, periode A vs B)
@@ -719,7 +718,7 @@
 <div class="card">   
   <div class="card-header ">         
     <h5 class="card-title mb-0">
-      <button class="btn btn-sm btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#chartCPLIK11">
+      <button class="btn btn-sm btn-outline-primary" data-toggle="collapse" data-target="#chartCPLIK11">
         <i class="fas fa-expand"></i>
       </button>
       kode IK kesebelas (]perbandingan %mahasiswa tuntas CPMK, periode A vs B)
@@ -756,7 +755,7 @@
 <div class="card">   
   <div class="card-header ">         
     <h5 class="card-title mb-0">
-      <button class="btn btn-sm btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#chartCPLIK12">
+      <button class="btn btn-sm btn-outline-primary" data-toggle="collapse" data-target="#chartCPLIK12">
         <i class="fas fa-expand"></i>
       </button>
       kode IK kedua belas (]perbandingan %mahasiswa tuntas CPMK, periode A vs B)
@@ -792,7 +791,7 @@
 <div class="card">   
   <div class="card-header ">         
     <h5 class="card-title mb-0">
-      <button class="btn btn-sm btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#chartCPLIK13">
+      <button class="btn btn-sm btn-outline-primary" data-toggle="collapse" data-target="#chartCPLIK13">
         <i class="fas fa-expand"></i>
       </button>
       kode IK ketigabelas (]perbandingan %mahasiswa tuntas CPMK, periode A vs B)
@@ -829,7 +828,7 @@
 <div class="card">   
   <div class="card-header ">         
     <h5 class="card-title mb-0">
-      <button class="btn btn-sm btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#chartCPLIK14">
+      <button class="btn btn-sm btn-outline-primary" data-toggle="collapse" data-target="#chartCPLIK14">
         <i class="fas fa-expand"></i>
       </button>
       kode IK keempatbelas (]perbandingan %mahasiswa tuntas CPMK, periode A vs B)
@@ -866,7 +865,7 @@
 <div class="card">   
   <div class="card-header ">         
     <h5 class="card-title mb-0">
-      <button class="btn btn-sm btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#chartCPLIK15">
+      <button class="btn btn-sm btn-outline-primary" data-toggle="collapse" data-target="#chartCPLIK15">
         <i class="fas fa-expand"></i>
       </button>
       kode IK kelimabelas (]perbandingan %mahasiswa tuntas CPMK, periode A vs B)
@@ -903,7 +902,7 @@
 <div class="card">   
   <div class="card-header ">         
     <h5 class="card-title mb-0">
-      <button class="btn btn-sm btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#chartCPLIK16">
+      <button class="btn btn-sm btn-outline-primary" data-toggle="collapse" data-target="#chartCPLIK16">
         <i class="fas fa-expand"></i>
       </button>
       kode IK keenambelas (]perbandingan %mahasiswa tuntas CPMK, periode A vs B)
@@ -939,7 +938,7 @@
 <div class="card">   
   <div class="card-header ">         
     <h5 class="card-title mb-0">
-      <button class="btn btn-sm btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#chartCPLIK17">
+      <button class="btn btn-sm btn-outline-primary" data-toggle="collapse" data-target="#chartCPLIK17">
         <i class="fas fa-expand"></i>
       </button>
       kode IK ketujuhbelas (]perbandingan %mahasiswa tuntas CPMK, periode A vs B)
@@ -971,7 +970,7 @@
 <div class="card">   
   <div class="card-header ">         
     <h5 class="card-title mb-0">
-      <button class="btn btn-sm btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#chartCPLIK18">
+      <button class="btn btn-sm btn-outline-primary" data-toggle="collapse" data-target="#chartCPLIK18">
         <i class="fas fa-expand"></i>
       </button>
       kode IK kedelapanbelas (]perbandingan %mahasiswa tuntas CPMK, periode A vs B)
@@ -1003,7 +1002,7 @@
 <div class="card">   
   <div class="card-header ">         
     <h5 class="card-title mb-0">
-      <button class="btn btn-sm btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#chartCPLIK19">
+      <button class="btn btn-sm btn-outline-primary" data-toggle="collapse" data-target="#chartCPLIK19">
         <i class="fas fa-expand"></i>
       </button>
       kode IK kesembilanbelas (]perbandingan %mahasiswa tuntas CPMK, periode A vs B)
@@ -1035,7 +1034,7 @@
 <div class="card">   
   <div class="card-header ">         
     <h5 class="card-title mb-0">
-      <button class="btn btn-sm btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#chartCPLIK20">
+      <button class="btn btn-sm btn-outline-primary" data-toggle="collapse" data-target="#chartCPLIK20">
         <i class="fas fa-expand"></i>
       </button>
       kode IK kedua puluh (]perbandingan %mahasiswa tuntas CPMK, periode A vs B)
@@ -1067,7 +1066,7 @@
 <div class="card">   
   <div class="card-header ">         
     <h5 class="card-title mb-0">
-      <button class="btn btn-sm btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#chartCPLIK21">
+      <button class="btn btn-sm btn-outline-primary" data-toggle="collapse" data-target="#chartCPLIK21">
         <i class="fas fa-expand"></i>
       </button>
       kode IK kedua puluh satu (]perbandingan %mahasiswa tuntas CPMK, periode A vs B)
@@ -1099,7 +1098,7 @@
 <div class="card">   
   <div class="card-header ">         
     <h5 class="card-title mb-0">
-      <button class="btn btn-sm btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#chartCPLIK22">
+      <button class="btn btn-sm btn-outline-primary" data-toggle="collapse" data-target="#chartCPLIK22">
         <i class="fas fa-expand"></i>
       </button>
       kode IK kedua puluh dua (]perbandingan %mahasiswa tuntas CPMK, periode A vs B)
@@ -1131,7 +1130,7 @@
 <div class="card">   
   <div class="card-header ">         
     <h5 class="card-title mb-0">
-      <button class="btn btn-sm btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#chartCPLIK23">
+      <button class="btn btn-sm btn-outline-primary" data-toggle="collapse" data-target="#chartCPLIK23">
         <i class="fas fa-expand"></i>
       </button>
       kode IK kedua puluh tiga (]perbandingan %mahasiswa tuntas CPMK, periode A vs B)
@@ -1163,7 +1162,7 @@
 <div class="card">   
   <div class="card-header ">         
     <h5 class="card-title mb-0">
-      <button class="btn btn-sm btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#chartCPLIK24">
+      <button class="btn btn-sm btn-outline-primary" data-toggle="collapse" data-target="#chartCPLIK24">
         <i class="fas fa-expand"></i>
       </button>
       kode IK kedua puluh empat (]perbandingan %mahasiswa tuntas CPMK, periode A vs B)
@@ -1247,7 +1246,7 @@
     <div class="modal-content rounded-3 shadow">
       <div class="modal-header bg-info text-white">
         <h5 class="modal-title" id="modalFilterLabel">Filter Data</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
       </div>
       <form action="" method="GET">
 
@@ -1258,7 +1257,7 @@
           </div>
           <div class="mb-3">
             <label for="angkatan" class="form-label">Angkatan</label>
-            <select name="angkatan" id="angkatan" class="form-select">
+            <select name="angkatan" id="angkatan" class="custom-select">
               <option value="">-- Pilih Angkatan --</option>
               <option value="2025">2025</option>
               <option value="2024">2024</option>
@@ -1267,7 +1266,7 @@
           </div>
           <div class="mb-3">
             <label for="status" class="form-label">Status</label>
-            <select name="status" id="status" class="form-select">
+            <select name="status" id="status" class="custom-select">
               <option value="">-- Pilih Status --</option>
               <option value="Aktif">Aktif</option>
               <option value="NonAktif">NonAktif</option>
@@ -1277,7 +1276,7 @@
        </div>
 
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
           <button type="submit" class="btn btn-info">Terapkan Filter</button>
         </div>
 
@@ -1293,7 +1292,7 @@
     <div class="modal-content">
       <div class="modal-header bg-primary text-white">
         <h5 class="modal-title" id="modalBantuanLabel">Bantuan Tabel</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
       </div>
       <div class="modal-body">
         <p>
@@ -1467,7 +1466,7 @@ CPMK Bermasalah
         </p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
       </div>
     </div>
   </div>
@@ -1480,7 +1479,7 @@ CPMK Bermasalah
     <div class="modal-content">
       <div class="modal-header bg-secondary text-white">
         <h6 class="modal-title">Preview Performa Risiko (sample)</h6>
-        <button type="button" class="btn-close btn-close-white" data-dismiss="modal" aria-label="Close"></button>
+        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
       </div>
       <div class="modal-body">
         <table class="table table-sm table-bordered">
@@ -1507,7 +1506,7 @@ CPMK Bermasalah
       <!-- Header -->
       <div class="modal-header bg-info text-white">
         <h5 class="modal-title" id="detailMKTitle">Detail Kelas Mata Kuliah</h5>
-        <button type="button" class="close text-white" data-bs-dismiss="modal" aria-label="Close">
+        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
@@ -1571,7 +1570,7 @@ CPMK Bermasalah
 
       <!-- Footer -->
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
       </div>
 
     </div>

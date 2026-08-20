@@ -9,7 +9,7 @@
   <section class="content-header">
     <div class="container-fluid">
       <h3 class="mb-0">Monev Semester 
-        <button type="button" class="btn btn-tool" data-bs-toggle="modal" data-bs-target="#modalBantuan" title="Bantuan">
+        <button type="button" class="btn btn-tool" data-toggle="modal" data-target="#modalBantuan" title="Bantuan">
           <i class="fas fa-question-circle"></i>
         </button>
       </h3>
@@ -46,14 +46,14 @@
               </div>
             </div>
             <div class="card-footer">
-              <div class="card-tools ms-auto">
-                <button class="btn btn-outline-info btn-sm " data-bs-toggle="modal" data-bs-target="#modalFilter">
-                  <i class="fas fa-filter me-1"></i> Filter
+              <div class="card-tools ml-auto">
+                <button class="btn btn-outline-info btn-sm " data-toggle="modal" data-target="#modalFilter">
+                  <i class="fas fa-filter mr-1"></i> Filter
                 </button>                
                 <button type="button" class="btn btn-outline-success btn-sm">
-                  <i class="fas fa-file-download me-1"></i> Export
+                  <i class="fas fa-file-download mr-1"></i> Export
                 </button>    
-                <a class="btn btn-sm btn-outline-primary" href="formulir-evaluasi.php" target="_blank"><i class="fas fa-clipboard-list me-1"> </i>Catat Temuan </a>             
+                <a class="btn btn-sm btn-outline-primary" href="formulir-evaluasi.php" target="_blank"><i class="fas fa-clipboard-list mr-1"> </i>Catat Temuan </a>             
               </div>
 
             </div>
@@ -119,7 +119,7 @@
   <!-- CARD HEADER -->
   <div class="card-header">
     <h5 class="card-title mb-0">
-      <button class="btn btn-sm btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#tabelCPL1">
+      <button class="btn btn-sm btn-outline-primary" data-toggle="collapse" data-target="#tabelCPL1">
         <i class="fas fa-expand"></i>
       </button>
       kode CPL pertama (perbandingan %mahasiswa tuntas IK, periode A vs B)
@@ -174,7 +174,7 @@
   <!-- CARD HEADER -->
   <div class="card-header">
     <h5 class="card-title mb-0">
-      <button class="btn btn-sm btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#tabelCPL2">
+      <button class="btn btn-sm btn-outline-primary" data-toggle="collapse" data-target="#tabelCPL2">
         <i class="fas fa-expand"></i>
       </button>
       kode CPL kedua (perbandingan %mahasiswa tuntas IK, periode A vs B)
@@ -234,7 +234,7 @@
   <!-- CARD HEADER -->
   <div class="card-header">
     <h5 class="card-title mb-0">
-      <button class="btn btn-sm btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#tabelCPL3">
+      <button class="btn btn-sm btn-outline-primary" data-toggle="collapse" data-target="#tabelCPL3">
         <i class="fas fa-expand"></i>
       </button>
       kode CPL ketiga (perbandingan %mahasiswa tuntas IK, periode A vs B)
@@ -287,7 +287,7 @@
   <!-- CARD HEADER -->
   <div class="card-header">
     <h5 class="card-title mb-0">
-      <button class="btn btn-sm btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#tabelCPL4">
+      <button class="btn btn-sm btn-outline-primary" data-toggle="collapse" data-target="#tabelCPL4">
         <i class="fas fa-expand"></i>
       </button>
       kode CPL keempat (perbandingan %mahasiswa tuntas IK, periode A vs B)
@@ -340,7 +340,7 @@
   <!-- CARD HEADER -->
   <div class="card-header">
     <h5 class="card-title mb-0">
-      <button class="btn btn-sm btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#tabelCPL5">
+      <button class="btn btn-sm btn-outline-primary" data-toggle="collapse" data-target="#tabelCPL5">
         <i class="fas fa-expand"></i>
       </button>
       kode CPL kelima (perbandingan %mahasiswa tuntas IK, periode A vs B)
@@ -393,7 +393,7 @@
   <!-- CARD HEADER -->
   <div class="card-header">
     <h5 class="card-title mb-0">
-      <button class="btn btn-sm btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#tabelCPL6">
+      <button class="btn btn-sm btn-outline-primary" data-toggle="collapse" data-target="#tabelCPL6">
         <i class="fas fa-expand"></i>
       </button>
       kode CPL keenam (perbandingan %mahasiswa tuntas IK, periode A vs B)
@@ -440,7 +440,7 @@
   <!-- CARD HEADER -->
   <div class="card-header">
     <h5 class="card-title mb-0">
-      <button class="btn btn-sm btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#tabelCPL9">
+      <button class="btn btn-sm btn-outline-primary" data-toggle="collapse" data-target="#tabelCPL9">
         <i class="fas fa-expand"></i>
       </button>
       kode CPL kesembilan (perbandingan %mahasiswa tuntas IK, periode A vs B)
@@ -493,7 +493,7 @@
   <!-- CARD HEADER -->
   <div class="card-header">
     <h5 class="card-title mb-0">
-      <button class="btn btn-sm btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#tabelCPL10">
+      <button class="btn btn-sm btn-outline-primary" data-toggle="collapse" data-target="#tabelCPL10">
         <i class="fas fa-expand"></i>
       </button>
       kode CPL kesepuluh (perbandingan %mahasiswa tuntas IK, periode A vs B)
@@ -546,7 +546,7 @@
   <!-- CARD HEADER -->
   <div class="card-header">
     <h5 class="card-title mb-0">
-      <button class="btn btn-sm btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#tabelCPL11">
+      <button class="btn btn-sm btn-outline-primary" data-toggle="collapse" data-target="#tabelCPL11">
         <i class="fas fa-expand"></i>
       </button>
       kode CPL kesebelas (perbandingan %mahasiswa tuntas IK, periode A vs B)
@@ -599,7 +599,7 @@
   <!-- CARD HEADER -->
   <div class="card-header">
     <h5 class="card-title mb-0">
-      <button class="btn btn-sm btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#tabelCPL12">
+      <button class="btn btn-sm btn-outline-primary" data-toggle="collapse" data-target="#tabelCPL12">
         <i class="fas fa-expand"></i>
       </button>
       kode CPL kedua belas (perbandingan %mahasiswa tuntas IK, periode A vs B)
@@ -677,7 +677,7 @@
     <div class="modal-content rounded-3 shadow">
       <div class="modal-header bg-info text-white">
         <h5 class="modal-title" id="modalFilterLabel">Filter Data</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
       </div>
       <form action="" method="GET">
 
@@ -688,7 +688,7 @@
           </div>
           <div class="mb-3">
             <label for="angkatan" class="form-label">Angkatan</label>
-            <select name="angkatan" id="angkatan" class="form-select">
+            <select name="angkatan" id="angkatan" class="custom-select">
               <option value="">-- Pilih Angkatan --</option>
               <option value="2025">2025</option>
               <option value="2024">2024</option>
@@ -697,7 +697,7 @@
           </div>
           <div class="mb-3">
             <label for="status" class="form-label">Status</label>
-            <select name="status" id="status" class="form-select">
+            <select name="status" id="status" class="custom-select">
               <option value="">-- Pilih Status --</option>
               <option value="Aktif">Aktif</option>
               <option value="NonAktif">NonAktif</option>
@@ -707,7 +707,7 @@
        </div>
 
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
           <button type="submit" class="btn btn-info">Terapkan Filter</button>
         </div>
 
@@ -724,14 +724,14 @@
     <div class="modal-content rounded-3 shadow">
       <div class="modal-header bg-primary text-white">
         <h5 class="modal-title" id="modalTambahDataLabel">Tambah Data</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
       </div>
       <form action="" method="POST" enctype="multipart/form-data">
         <div class="modal-body">
 
           <!-- Informasi -->
           <div class="alert alert-warning mb-3 py-2" role="alert" style="font-size: 0.9rem;">
-            <i class="fas fa-info-circle me-1"></i>
+            <i class="fas fa-info-circle mr-1"></i>
             <strong>Catatan:</strong> Semua field yang diberi tanda <span class="text-danger">*</span> wajib diisi.
           </div>
 
@@ -757,7 +757,7 @@
           </div>
           <div class="mb-3">
             <label for="angkatan" class="form-label">Angkatan</label>
-            <select name="angkatan" id="angkatan" class="form-select">
+            <select name="angkatan" id="angkatan" class="custom-select">
               <option value="">-- Pilih Angkatan --</option>
               <option value="2025">2025</option>
               <option value="2024">2024</option>
@@ -766,7 +766,7 @@
           </div>
           <div class="mb-3">
             <label for="angkatan" class="form-label">Peminatan</label>
-            <select name="angkatan" id="angkatan" class="form-select">
+            <select name="angkatan" id="angkatan" class="custom-select">
               <option value="">-- Pilih Peminatan --</option>
               <option value="2025">A</option>
               <option value="2024">B</option>
@@ -775,7 +775,7 @@
           </div>
           <div class="mb-3">
             <label for="status" class="form-label">Status <span class="text-danger">*</span></label>
-            <select class="form-select" id="status" name="status" required>
+            <select class="custom-select" id="status" name="status" required>
               <option value="">-- Pilih Status --</option>
               <option value="Aktif">Aktif</option>
               <option value="NonAktif">NonAktif</option>
@@ -794,7 +794,7 @@
         </div>
 
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
           <button type="submit" class="btn btn-primary">Simpan Data</button>
         </div>
       </form>
@@ -810,12 +810,12 @@
 
       <div class="modal-header bg-primary text-white">
         <h5 class="modal-title">Impor Data</h5>
-        <button class="btn-close" data-bs-dismiss="modal"></button>
+        <button class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
       </div>
 
       <div class="modal-body">   
         <div class="alert alert-warning mb-3 py-2" role="alert" style="font-size: 0.9rem;">
-          <i class="fas fa-exclamation-triangle me-1"></i>
+          <i class="fas fa-exclamation-triangle mr-1"></i>
           <strong>Penting:</strong> Pastikan file yang akan diimpor menggunakan <strong>template resmi</strong> yang sudah disediakan. Menggunakan file lain atau format berbeda dapat menyebabkan <strong>kesalahan impor</strong>.
         </div>     
 
@@ -826,7 +826,7 @@
       </div>
 
       <div class="modal-footer">
-        <button class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+        <button class="btn btn-secondary" data-dismiss="modal">Batal</button>
         <button class="btn btn-primary">Impor</button>
       </div>
 
@@ -840,7 +840,7 @@
     <div class="modal-content">
       <div class="modal-header bg-primary text-white">
         <h5 class="modal-title" id="modalBantuanLabel">Bantuan Tabel</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
       </div>
       <div class="modal-body">
         <p>
@@ -967,7 +967,7 @@ Itu bahaya untuk mutu jangka panjang.
         </p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
       </div>
     </div>
   </div>

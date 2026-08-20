@@ -11,7 +11,7 @@
 
       <h3 class="mb-0">
         User ↔ Actor Mapping
-        <button type="button" class="btn btn-tool" data-bs-toggle="modal" data-bs-target="#modalBantuan" title="Bantuan">
+        <button type="button" class="btn btn-tool" data-toggle="modal" data-target="#modalBantuan" title="Bantuan">
           <i class="fas fa-question-circle"></i>
         </button>
       </h3>
@@ -56,30 +56,30 @@
             </div>
 
             <div class="card-footer">
-              <div class="card-tools ms-auto">
+              <div class="card-tools ml-auto">
 
-                <button class="btn btn-outline-info btn-sm" data-bs-toggle="modal" data-bs-target="#modalFilter">
-                  <i class="fas fa-filter me-1"></i> Filter
+                <button class="btn btn-outline-info btn-sm" data-toggle="modal" data-target="#modalFilter">
+                  <i class="fas fa-filter mr-1"></i> Filter
                 </button>
 
-                <button type="button" class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalTambahData">
-                  <i class="fas fa-plus me-1"></i> Add Mapping
+                <button type="button" class="btn btn-outline-primary btn-sm" data-toggle="modal" data-target="#modalTambahData">
+                  <i class="fas fa-plus mr-1"></i> Add Mapping
                 </button>
 
-                <button type="button" class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalImpor">
-                  <i class="fas fa-file-upload me-1"></i> Import
+                <button type="button" class="btn btn-outline-primary btn-sm" data-toggle="modal" data-target="#modalImpor">
+                  <i class="fas fa-file-upload mr-1"></i> Import
                 </button>
 
                 <button type="button" class="btn btn-outline-success btn-sm">
-                  <i class="fas fa-file-download me-1"></i> Export
+                  <i class="fas fa-file-download mr-1"></i> Export
                 </button>
 
-                <button type="button" class="btn btn-outline-danger btn-sm" data-bs-toggle="modal" data-bs-target="#modalResetData">
-                  <i class="fas fa-ban me-1"></i> Reset
+                <button type="button" class="btn btn-outline-danger btn-sm" data-toggle="modal" data-target="#modalResetData">
+                  <i class="fas fa-ban mr-1"></i> Reset
                 </button>
 
-                <button type="button" class="btn btn-outline-danger btn-sm" data-bs-toggle="modal" data-bs-target="#modalGagal">
-                  <i class="fas fa-exclamation-triangle me-1"></i> ErrorHandler
+                <button type="button" class="btn btn-outline-danger btn-sm" data-toggle="modal" data-target="#modalGagal">
+                  <i class="fas fa-exclamation-triangle mr-1"></i> ErrorHandler
                 </button>
 
               </div>
@@ -125,14 +125,14 @@
                       <td>haso333</td>
                       <td>ACT001</td>
                       <td>Ho Aldika Novaldy</td>
-                      <td><span class="badge bg-primary">Dosen</span></td>
+                      <td><span class="badge badge-primary">Dosen</span></td>
                       <td>Dosen Pengampu</td>
-                      <td class="text-center"><span class="badge bg-success">Primary</span></td>
-                      <td class="text-center"><span class="badge bg-success">Aktif</span></td>
+                      <td class="text-center"><span class="badge badge-success">Primary</span></td>
+                      <td class="text-center"><span class="badge badge-success">Aktif</span></td>
                       <td class="text-center">
-                        <button class="btn btn-sm btn-outline-info" data-bs-toggle="modal" data-bs-target="#modalView"><i class="fas fa-eye"></i></button>
-                        <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalEdit"><i class="fas fa-edit"></i></button>
-                        <button class="btn btn-sm btn-outline-dark" data-bs-toggle="modal" data-bs-target="#modalAksi"><i class="fas fa-cogs"></i></button>
+                        <button class="btn btn-sm btn-outline-info" data-toggle="modal" data-target="#modalView"><i class="fas fa-eye"></i></button>
+                        <button class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#modalEdit"><i class="fas fa-edit"></i></button>
+                        <button class="btn btn-sm btn-outline-dark" data-toggle="modal" data-target="#modalAksi"><i class="fas fa-cogs"></i></button>
                       </td>
                     </tr>
 
@@ -142,10 +142,10 @@
                       <td>haso333</td>
                       <td>ACT008</td>
                       <td>Ho Aldika Novaldy</td>
-                      <td><span class="badge bg-warning">Staff</span></td>
+                      <td><span class="badge badge-warning">Staff</span></td>
                       <td>Staf Prodi</td>
-                      <td class="text-center"><span class="badge bg-secondary">Secondary</span></td>
-                      <td class="text-center"><span class="badge bg-success">Aktif</span></td>
+                      <td class="text-center"><span class="badge badge-secondary">Secondary</span></td>
+                      <td class="text-center"><span class="badge badge-success">Aktif</span></td>
                       <td class="text-center">
                         <button class="btn btn-sm btn-outline-info"><i class="fas fa-eye"></i></button>
                         <button class="btn btn-sm btn-outline-primary"><i class="fas fa-edit"></i></button>
@@ -159,10 +159,10 @@
                       <td>pramita19</td>
                       <td>ACT002</td>
                       <td>Pramita Widyadari</td>
-                      <td><span class="badge bg-success">Mahasiswa</span></td>
+                      <td><span class="badge badge-success">Mahasiswa</span></td>
                       <td>Peserta Kelas</td>
-                      <td class="text-center"><span class="badge bg-success">Primary</span></td>
-                      <td class="text-center"><span class="badge bg-success">Aktif</span></td>
+                      <td class="text-center"><span class="badge badge-success">Primary</span></td>
+                      <td class="text-center"><span class="badge badge-success">Aktif</span></td>
                       <td class="text-center">
                         <button class="btn btn-sm btn-outline-info"><i class="fas fa-eye"></i></button>
                         <button class="btn btn-sm btn-outline-primary"><i class="fas fa-edit"></i></button>
@@ -176,10 +176,10 @@
                       <td>claudia.staff</td>
                       <td>ACT003</td>
                       <td>Claudia Monica</td>
-                      <td><span class="badge bg-warning">Staff</span></td>
+                      <td><span class="badge badge-warning">Staff</span></td>
                       <td>Administrasi Akademik</td>
-                      <td class="text-center"><span class="badge bg-success">Primary</span></td>
-                      <td class="text-center"><span class="badge bg-success">Aktif</span></td>
+                      <td class="text-center"><span class="badge badge-success">Primary</span></td>
+                      <td class="text-center"><span class="badge badge-success">Aktif</span></td>
                       <td class="text-center">
                         <button class="btn btn-sm btn-outline-info"><i class="fas fa-eye"></i></button>
                         <button class="btn btn-sm btn-outline-primary"><i class="fas fa-edit"></i></button>
@@ -193,10 +193,10 @@
                       <td>budi.koor</td>
                       <td>ACT010</td>
                       <td>Budi Santoso</td>
-                      <td><span class="badge bg-primary">Dosen</span></td>
+                      <td><span class="badge badge-primary">Dosen</span></td>
                       <td>Koordinator Prodi</td>
-                      <td class="text-center"><span class="badge bg-success">Primary</span></td>
-                      <td class="text-center"><span class="badge bg-success">Aktif</span></td>
+                      <td class="text-center"><span class="badge badge-success">Primary</span></td>
+                      <td class="text-center"><span class="badge badge-success">Aktif</span></td>
                       <td class="text-center">
                         <button class="btn btn-sm btn-outline-info"><i class="fas fa-eye"></i></button>
                         <button class="btn btn-sm btn-outline-primary"><i class="fas fa-edit"></i></button>
@@ -210,10 +210,10 @@
                       <td>nadia.mhs</td>
                       <td>ACT009</td>
                       <td>Nadia Maharani</td>
-                      <td><span class="badge bg-success">Mahasiswa</span></td>
+                      <td><span class="badge badge-success">Mahasiswa</span></td>
                       <td>Peserta Seminar</td>
-                      <td class="text-center"><span class="badge bg-success">Primary</span></td>
-                      <td class="text-center"><span class="badge bg-success">Aktif</span></td>
+                      <td class="text-center"><span class="badge badge-success">Primary</span></td>
+                      <td class="text-center"><span class="badge badge-success">Aktif</span></td>
                       <td class="text-center">
                         <button class="btn btn-sm btn-outline-info"><i class="fas fa-eye"></i></button>
                         <button class="btn btn-sm btn-outline-primary"><i class="fas fa-edit"></i></button>
@@ -227,10 +227,10 @@
                       <td>rizky.gudang</td>
                       <td>ACT008</td>
                       <td>Rizky Ramadhan</td>
-                      <td><span class="badge bg-warning">Staff</span></td>
+                      <td><span class="badge badge-warning">Staff</span></td>
                       <td>Kepala Gudang</td>
-                      <td class="text-center"><span class="badge bg-success">Primary</span></td>
-                      <td class="text-center"><span class="badge bg-warning">Pending</span></td>
+                      <td class="text-center"><span class="badge badge-success">Primary</span></td>
+                      <td class="text-center"><span class="badge badge-warning">Pending</span></td>
                       <td class="text-center">
                         <button class="btn btn-sm btn-outline-info"><i class="fas fa-eye"></i></button>
                         <button class="btn btn-sm btn-outline-primary"><i class="fas fa-edit"></i></button>
@@ -244,10 +244,10 @@
                       <td>supplier01</td>
                       <td>ACT004</td>
                       <td>CV Sumber Makmur</td>
-                      <td><span class="badge bg-info">Supplier</span></td>
+                      <td><span class="badge badge-info">Supplier</span></td>
                       <td>Vendor Pengadaan</td>
-                      <td class="text-center"><span class="badge bg-success">Primary</span></td>
-                      <td class="text-center"><span class="badge bg-success">Aktif</span></td>
+                      <td class="text-center"><span class="badge badge-success">Primary</span></td>
+                      <td class="text-center"><span class="badge badge-success">Aktif</span></td>
                       <td class="text-center">
                         <button class="btn btn-sm btn-outline-info"><i class="fas fa-eye"></i></button>
                         <button class="btn btn-sm btn-outline-primary"><i class="fas fa-edit"></i></button>
@@ -261,10 +261,10 @@
                       <td>customer01</td>
                       <td>ACT005</td>
                       <td>PT Karya Digital</td>
-                      <td><span class="badge bg-secondary">Customer</span></td>
+                      <td><span class="badge badge-secondary">Customer</span></td>
                       <td>Pelanggan Institusi</td>
-                      <td class="text-center"><span class="badge bg-success">Primary</span></td>
-                      <td class="text-center"><span class="badge bg-success">Aktif</span></td>
+                      <td class="text-center"><span class="badge badge-success">Primary</span></td>
+                      <td class="text-center"><span class="badge badge-success">Aktif</span></td>
                       <td class="text-center">
                         <button class="btn btn-sm btn-outline-info"><i class="fas fa-eye"></i></button>
                         <button class="btn btn-sm btn-outline-primary"><i class="fas fa-edit"></i></button>
@@ -278,10 +278,10 @@
                       <td>annisa.dosen</td>
                       <td>ACT006</td>
                       <td>Annisa Regita</td>
-                      <td><span class="badge bg-primary">Dosen</span></td>
+                      <td><span class="badge badge-primary">Dosen</span></td>
                       <td>Dosen Pembimbing</td>
-                      <td class="text-center"><span class="badge bg-success">Primary</span></td>
-                      <td class="text-center"><span class="badge bg-danger">Nonaktif</span></td>
+                      <td class="text-center"><span class="badge badge-success">Primary</span></td>
+                      <td class="text-center"><span class="badge badge-danger">Nonaktif</span></td>
                       <td class="text-center">
                         <button class="btn btn-sm btn-outline-info"><i class="fas fa-eye"></i></button>
                         <button class="btn btn-sm btn-outline-primary"><i class="fas fa-edit"></i></button>
@@ -295,10 +295,10 @@
                       <td>guest.demo</td>
                       <td>-</td>
                       <td>Belum Terhubung</td>
-                      <td><span class="badge bg-danger">No Actor</span></td>
+                      <td><span class="badge badge-danger">No Actor</span></td>
                       <td>View Only</td>
-                      <td class="text-center"><span class="badge bg-secondary">-</span></td>
-                      <td class="text-center"><span class="badge bg-warning">Warning</span></td>
+                      <td class="text-center"><span class="badge badge-secondary">-</span></td>
+                      <td class="text-center"><span class="badge badge-warning">Warning</span></td>
                       <td class="text-center">
                         <button class="btn btn-sm btn-outline-info"><i class="fas fa-eye"></i></button>
                         <button class="btn btn-sm btn-outline-primary"><i class="fas fa-edit"></i></button>
@@ -333,7 +333,7 @@
 
       <div class="modal-header bg-info text-white">
         <h5 class="modal-title">Filter Mapping</h5>
-        <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        <button class="close text-white" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
       </div>
 
       <div class="modal-body">
@@ -344,7 +344,7 @@
 
         <div class="mb-3">
           <label class="form-label">Actor Type</label>
-          <select class="form-select">
+          <select class="custom-select">
             <option>Semua</option>
             <option>Dosen</option>
             <option>Mahasiswa</option>
@@ -356,7 +356,7 @@
 
         <div class="mb-3">
           <label class="form-label">Primary Mapping</label>
-          <select class="form-select">
+          <select class="custom-select">
             <option>Semua</option>
             <option>Primary</option>
             <option>Secondary</option>
@@ -366,7 +366,7 @@
       </div>
 
       <div class="modal-footer">
-        <button class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+        <button class="btn btn-secondary" data-dismiss="modal">Batal</button>
         <button class="btn btn-info">Terapkan Filter</button>
       </div>
 
@@ -381,7 +381,7 @@
 
       <div class="modal-header bg-primary text-white">
         <h5 class="modal-title">Tambah User Actor Mapping</h5>
-        <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        <button class="close text-white" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
       </div>
 
       <div class="modal-body">
@@ -394,7 +394,7 @@
 
           <div class="col-md-6 mb-3">
             <label class="form-label">User Login</label>
-            <select class="form-select">
+            <select class="custom-select">
               <option>-- Pilih User Login --</option>
               <option>haso333</option>
               <option>pramita19</option>
@@ -403,7 +403,7 @@
 
           <div class="col-md-6 mb-3">
             <label class="form-label">Actor</label>
-            <select class="form-select">
+            <select class="custom-select">
               <option>-- Pilih Actor --</option>
               <option>ACT001 - Ho Aldika Novaldy</option>
               <option>ACT002 - Pramita Widyadari</option>
@@ -417,7 +417,7 @@
 
           <div class="col-md-6 mb-3">
             <label class="form-label">Primary Mapping</label>
-            <select class="form-select">
+            <select class="custom-select">
               <option>Yes</option>
               <option>No</option>
             </select>
@@ -425,7 +425,7 @@
 
           <div class="col-md-12 mb-3">
             <label class="form-label">Status</label>
-            <select class="form-select">
+            <select class="custom-select">
               <option>Aktif</option>
               <option>Pending</option>
               <option>Nonaktif</option>
@@ -437,7 +437,7 @@
       </div>
 
       <div class="modal-footer">
-        <button class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+        <button class="btn btn-secondary" data-dismiss="modal">Batal</button>
         <button class="btn btn-primary">Simpan Mapping</button>
       </div>
 
@@ -452,7 +452,7 @@
 
       <div class="modal-header bg-primary text-white">
         <h5 class="modal-title">Import Mapping</h5>
-        <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        <button class="close text-white" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
       </div>
 
       <div class="modal-body">
@@ -470,7 +470,7 @@
       </div>
 
       <div class="modal-footer">
-        <button class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+        <button class="btn btn-secondary" data-dismiss="modal">Batal</button>
         <button class="btn btn-primary">Import</button>
       </div>
 
@@ -485,7 +485,7 @@
 
       <div class="modal-header bg-info text-white">
         <h5 class="modal-title">Detail Mapping</h5>
-        <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        <button class="close text-white" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
       </div>
 
       <div class="modal-body">
@@ -537,7 +537,7 @@
 
       <div class="modal-header bg-primary text-white">
         <h5 class="modal-title">Edit Mapping</h5>
-        <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        <button class="close text-white" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
       </div>
 
       <div class="modal-body">
@@ -549,7 +549,7 @@
 
         <div class="mb-3">
           <label class="form-label">Primary Mapping</label>
-          <select class="form-select">
+          <select class="custom-select">
             <option selected>Yes</option>
             <option>No</option>
           </select>
@@ -557,7 +557,7 @@
 
         <div class="mb-3">
           <label class="form-label">Status</label>
-          <select class="form-select">
+          <select class="custom-select">
             <option selected>Aktif</option>
             <option>Pending</option>
             <option>Nonaktif</option>
@@ -567,7 +567,7 @@
       </div>
 
       <div class="modal-footer">
-        <button class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+        <button class="btn btn-secondary" data-dismiss="modal">Batal</button>
         <button class="btn btn-primary">Update</button>
       </div>
 
@@ -582,30 +582,28 @@
 
       <div class="modal-header bg-dark text-white">
         <h5 class="modal-title">Aksi Mapping</h5>
-        <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        <button class="close text-white" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
       </div>
 
       <div class="modal-body">
 
-        <div class="d-grid gap-2">
-
-          <button class="btn btn-outline-primary">
-            <i class="fas fa-user-shield me-1"></i> Set Sebagai Primary
+                  <button class="btn btn-outline-primary w-100 mb-2">
+            <i class="fas fa-user-shield mr-1"></i> Set Sebagai Primary
           </button>
 
-          <button class="btn btn-outline-success">
-            <i class="fas fa-random me-1"></i> Pindah Mode Login
+          <button class="btn btn-outline-success w-100 mb-2">
+            <i class="fas fa-random mr-1"></i> Pindah Mode Login
           </button>
 
-          <button class="btn btn-outline-warning">
-            <i class="fas fa-key me-1"></i> Reset Scope Session
+          <button class="btn btn-outline-warning w-100 mb-2">
+            <i class="fas fa-key mr-1"></i> Reset Scope Session
           </button>
 
-          <button class="btn btn-outline-danger">
-            <i class="fas fa-unlink me-1"></i> Putuskan Mapping
+          <button class="btn btn-outline-danger w-100 mb-2">
+            <i class="fas fa-unlink mr-1"></i> Putuskan Mapping
           </button>
 
-        </div>
+        
 
       </div>
 
@@ -620,7 +618,7 @@
 
       <div class="modal-header bg-primary text-white">
         <h5 class="modal-title">Bantuan User ↔ Actor Mapping</h5>
-        <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        <button class="close text-white" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
       </div>
 
       <div class="modal-body">
@@ -694,7 +692,7 @@
       </div>
 
       <div class="modal-footer">
-        <button class="btn btn-secondary" data-bs-dismiss="modal">
+        <button class="btn btn-secondary" data-dismiss="modal">
           Tutup
         </button>
       </div>
@@ -710,7 +708,7 @@
 
       <div class="modal-header bg-danger text-white">
         <h5 class="modal-title">Konfirmasi Reset Mapping</h5>
-        <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        <button class="close text-white" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
       </div>
 
       <div class="modal-body text-center">
@@ -720,7 +718,7 @@
       </div>
 
       <div class="modal-footer justify-content-center">
-        <button class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+        <button class="btn btn-secondary" data-dismiss="modal">Batal</button>
         <button class="btn btn-danger">Reset</button>
       </div>
 
@@ -735,7 +733,7 @@
 
       <div class="modal-header bg-danger text-white">
         <h5 class="modal-title">
-          <i class="fas fa-times-circle me-2"></i>
+          <i class="fas fa-times-circle mr-2"></i>
           Oops! Terjadi Kesalahan
         </h5>
       </div>
@@ -764,7 +762,7 @@
       </div>
 
       <div class="modal-footer">
-        <button class="btn btn-dark" data-bs-dismiss="modal">
+        <button class="btn btn-dark" data-dismiss="modal">
           Tutup
         </button>
       </div>

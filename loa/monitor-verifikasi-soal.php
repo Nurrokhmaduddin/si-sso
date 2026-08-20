@@ -16,8 +16,8 @@
 
         <button type="button"
         class="btn btn-tool"
-        data-bs-toggle="modal"
-        data-bs-target="#modalBantuan"
+        data-toggle="modal"
+        data-target="#modalBantuan"
         title="Bantuan">
         <i class="fas fa-question-circle"></i>
       </button>
@@ -71,26 +71,26 @@
 
       <div class="card-footer">
 
-        <div class="card-tools ms-auto">
+        <div class="card-tools ml-auto">
 
           <button class="btn btn-outline-info btn-sm"
-          data-bs-toggle="modal"
-          data-bs-target="#modalFilter">
-          <i class="fas fa-filter me-1"></i> Filter
+          data-toggle="modal"
+          data-target="#modalFilter">
+          <i class="fas fa-filter mr-1"></i> Filter
         </button>
 
         <button class="btn btn-outline-success btn-sm">
-          <i class="fas fa-file-excel me-1"></i> Export
+          <i class="fas fa-file-excel mr-1"></i> Export
         </button>
 
         <button class="btn btn-outline-secondary btn-sm">
-          <i class="fas fa-sync me-1"></i> Refresh
+          <i class="fas fa-sync mr-1"></i> Refresh
         </button>
         <button 
           type="button"
           class="btn btn-outline-secondary btn-sm"
           onclick="window.location.href='monitor_verifikasi_soal2.php'">
-          <i class="fas fa-sync me-1"></i> Tampilan Dosen
+          <i class="fas fa-sync mr-1"></i> Tampilan Dosen
         </button>
       </div>
 
@@ -187,626 +187,32 @@
           </thead>
 
           <tbody>
-
-            <!-- ROW 0 -->
-            <tr>
-              <td class="text-center">0</td>
-
-              <td>
-                Dosen Pengampu: <b>Harun Ruddin</b> <br>
-                Kelas: Pemrograman Web Lanjut (IF402) - IF-A
-              </td>
-
-              <td>
-                Tanggal Ujian: <b>12 Mei 2026</b><br>
-                Keterangan: Ujian Tengah Semester<br>
-               
-                <span class="badge bg-light text-dark border">soal_uts_if402.pdf</span>
-              </td>
-
-              <td>
-                Verifikator: <b>Dr. Ahmad Fauzi</b><br>
-
-                Komentar:
-                <small class="text-warning">
-                  Mohon revisi CPMK nomor 3 dan typo halaman 2.
-                </small>
-                <br>
-
-               
-                <span class="badge badge-warning">
-                  Proses Revisi
-                </span>
-              </td>
-
-              <td>
-                10 Mei 2026 <br>
-                09:20 WIB
-              </td>
-
-              <td class="text-center">
-
-                <!-- DETAIL -->
-
-                <button class="btn btn-sm btn-outline-info"
-
-                data-bs-toggle="modal"
-                data-bs-target="#modalDetail"
-
-                data-kodemk="IF402"
-                data-mk="Pemrograman Web Lanjut"
-                data-dosen="<b>Harun Ruddin</b>"
-                data-validator="Dr. Ahmad Fauzi"
-                data-status="Revisi"
-
-                data-timeline='[
-                {"tanggal":"08 Mei 2026","aktivitas":"Upload soal oleh dosen"},
-                {"tanggal":"09 Mei 2026","aktivitas":"Admin menunjuk verifikator"},
-                {"tanggal":"10 Mei 2026","aktivitas":"Validator meminta revisi CPMK"}
-                ]'
-
-                onclick="showDetail(this)">
-
-                <i class="fas fa-eye"></i>
-
-              </button>
-
-              <!-- VERIFIKASI -->
-
-              <button class="btn btn-sm btn-outline-primary"
-
-              data-bs-toggle="modal"
-              data-bs-target="#modalVerifikasi">
-
-              <i class="fas fa-marker"></i>
-
-            </button>
-
-            <!-- UPLOAD -->
-
-            <button class="btn btn-sm btn-outline-primary">
-
-              <i class="fas fa-upload"></i>
-
-            </button>
-
-          </td>
-        </tr>
-   
-  <!-- ROW 1 -->
-  <tr>
-    <td class="text-center">1</td>
-
-    <td>
-      Dosen Pengampu: <b>Harun Ruddin</b> <br>
-      Kelas: Pemrograman Web Lanjut (IF402) - IF-A
-    </td>
-
-    <td>
-      Tanggal Ujian: <b>12 Mei 2026</b><br>
-      Jenis: UTS<br>
-
-      <span class="badge bg-light text-dark border">
-        soal_uts_if402.pdf
-      </span>
-    </td>
-
-    <td>
-      Validator: <b>Belum Ditentukan</b><br>
-
-      <small class="text-muted">
-        Menunggu penugasan validator oleh admin prodi.
-      </small>
-      <br><br>
-
-      <span class="badge bg-secondary">
-        Penugasan Validator
-      </span>
-    </td>
-
-    <td>
-      10 Mei 2026 <br>
-      09:20 WIB
-    </td>
-
-    <td class="text-center">
-
-      <button class="btn btn-sm btn-outline-info"
-
-      data-bs-toggle="modal"
-      data-bs-target="#modalRiwayatVerifikasi"
-
-      onclick="showDetail(this)">
-
-      <i class="fas fa-eye"></i>
-
-    </button>
-
-      <button class="btn btn-sm btn-outline-primary">
-        <i class="fas fa-user-check"></i>
-      </button>
-
-    </td>
-  </tr>
-
-  <!-- ROW 2 -->
-  <tr>
-    <td class="text-center">2</td>
-
-    <td>
-      Dosen Pengampu: Siti Rahmah <br>
-      Kelas: Basis Data (IF301) - IF-B
-    </td>
-
-    <td>
-      Tanggal Ujian: <b>15 Mei 2026</b><br>
-      Jenis: UAS<br>
-
-      <span class="badge bg-light text-dark border">
-        uas_basisdata.pdf
-      </span>
-    </td>
-
-    <td>
-      Validator: <b>Dr. Rina Kurnia</b><br>
-
-      <small class="text-info">
-        Validator sedang melakukan pemeriksaan soal.
-      </small>
-      <br><br>
-
-      <span class="badge bg-info">
-        Proses Verifikasi
-      </span>
-    </td>
-
-    <td>
-      11 Mei 2026 <br>
-      10:15 WIB
-    </td>
-
-    <td class="text-center">
-
-      <button class="btn btn-sm btn-outline-info">
-        <i class="fas fa-eye"></i>
-      </button>
-
-      <button class="btn btn-sm btn-outline-primary">
-        <i class="fas fa-marker"></i>
-      </button>
-
-    </td>
-  </tr>
-
-  <!-- ROW 3 -->
-  <tr>
-    <td class="text-center">3</td>
-
-    <td>
-      Dosen Pengampu: Nur Azizah <br>
-      Kelas: Struktur Data (IF220) - IF-C
-    </td>
-
-    <td>
-      Tanggal Ujian: <b>20 Mei 2026</b><br>
-      Jenis: UTS<br>
-
-      <span class="badge bg-light text-dark border">
-        uts_strukturdata.pdf
-      </span>
-    </td>
-
-    <td>
-      Validator: <b>Dr. Ahmad Fauzi</b><br>
-
-      <small class="text-warning">
-        Revisi CPMK dan kisi-kisi penilaian.
-      </small>
-      <br><br>
-
-      <span class="badge bg-warning text-dark">
-        Proses Revisi
-      </span>
-    </td>
-
-    <td>
-      11 Mei 2026 <br>
-      14:10 WIB
-    </td>
-
-    <td class="text-center">
-
-      <button class="btn btn-sm btn-outline-info">
-        <i class="fas fa-eye"></i>
-      </button>
-
-      <button class="btn btn-sm btn-outline-primary">
-        <i class="fas fa-upload"></i>
-      </button>
-
-    </td>
-  </tr>
-
-  <!-- ROW 4 -->
-  <tr>
-    <td class="text-center">4</td>
-
-    <td>
-      Dosen Pengampu: Dedi Saputra <br>
-      Kelas: Algoritma Pemrograman (IF101) - IF-A
-    </td>
-
-    <td>
-      Tanggal Ujian: <b>18 Mei 2026</b><br>
-      Jenis: UTS<br>
-
-      <span class="badge bg-light text-dark border">
-        algoritma_uts.pdf
-      </span>
-    </td>
-
-    <td>
-      Validator: <b>Dr. Yuniarti</b><br>
-
-      <small class="text-success">
-        Soal telah memenuhi standar verifikasi.
-      </small>
-      <br><br>
-
-      <span class="badge bg-success">
-        Approved
-      </span>
-    </td>
-
-    <td>
-      12 Mei 2026 <br>
-      08:30 WIB
-    </td>
-
-    <td class="text-center">
-
-      <button class="btn btn-sm btn-outline-info">
-        <i class="fas fa-eye"></i>
-      </button>
-
-    </td>
-  </tr>
-
-  <!-- ROW 5 -->
-  <tr>
-    <td class="text-center">5</td>
-
-    <td>
-      Dosen Pengampu: Ahmad Rizki <br>
-      Kelas: Sistem Operasi (IF305) - IF-D
-    </td>
-
-    <td>
-      Tanggal Ujian: <b>21 Mei 2026</b><br>
-      Jenis: UAS<br>
-
-      <span class="badge bg-light text-dark border">
-        uas_so.pdf
-      </span>
-    </td>
-
-    <td>
-      Validator: <b>Dr. Lina Marlina</b><br>
-
-      <small class="text-info">
-        Sedang dilakukan pemeriksaan kesesuaian CPMK.
-      </small>
-      <br><br>
-
-      <span class="badge bg-info">
-        Proses Verifikasi
-      </span>
-    </td>
-
-    <td>
-      13 Mei 2026 <br>
-      13:00 WIB
-    </td>
-
-    <td class="text-center">
-
-      <button class="btn btn-sm btn-outline-info">
-        <i class="fas fa-eye"></i>
-      </button>
-
-      <button class="btn btn-sm btn-outline-primary">
-        <i class="fas fa-marker"></i>
-      </button>
-
-    </td>
-  </tr>
-
-  <!-- ROW 6 -->
-  <tr>
-    <td class="text-center">6</td>
-
-    <td>
-      Dosen Pengampu: Wulan Sari <br>
-      Kelas: Rekayasa Perangkat Lunak (IF410) - IF-B
-    </td>
-
-    <td>
-      Tanggal Ujian: <b>22 Mei 2026</b><br>
-      Jenis: UTS<br>
-
-      <span class="badge bg-light text-dark border">
-        rpl_uts.pdf
-      </span>
-    </td>
-
-    <td>
-      Validator: <b>Dr. Budi Hartono</b><br>
-
-      <small class="text-warning">
-        Perlu revisi format rubrik penilaian.
-      </small>
-      <br><br>
-
-      <span class="badge bg-warning text-dark">
-        Proses Revisi
-      </span>
-    </td>
-
-    <td>
-      13 Mei 2026 <br>
-      15:45 WIB
-    </td>
-
-    <td class="text-center">
-
-      <button class="btn btn-sm btn-outline-info">
-        <i class="fas fa-eye"></i>
-      </button>
-
-      <button class="btn btn-sm btn-outline-primary">
-        <i class="fas fa-upload"></i>
-      </button>
-
-    </td>
-  </tr>
-
-  <!-- ROW 7 -->
-  <tr>
-    <td class="text-center">7</td>
-
-    <td>
-      Dosen Pengampu: Yoga Pratama <br>
-      Kelas: Kecerdasan Buatan (IF501) - IF-A
-    </td>
-
-    <td>
-      Tanggal Ujian: <b>24 Mei 2026</b><br>
-      Jenis: UAS<br>
-
-      <span class="badge bg-light text-dark border">
-        uas_ai.pdf
-      </span>
-    </td>
-
-    <td>
-      Validator: <b>Belum Ditentukan</b><br>
-
-      <small class="text-muted">
-        Admin prodi belum menentukan validator.
-      </small>
-      <br><br>
-
-      <span class="badge bg-secondary">
-        Penugasan Validator
-      </span>
-    </td>
-
-    <td>
-      14 Mei 2026 <br>
-      09:10 WIB
-    </td>
-
-    <td class="text-center">
-
-      <button class="btn btn-sm btn-outline-info">
-        <i class="fas fa-eye"></i>
-      </button>
-
-      <button class="btn btn-sm btn-outline-primary">
-        <i class="fas fa-user-check"></i>
-      </button>
-
-    </td>
-  </tr>
-
-  <!-- ROW 8 -->
-  <tr>
-    <td class="text-center">8</td>
-
-    <td>
-      Dosen Pengampu: Fajar Hidayat <br>
-      Kelas: Jaringan Komputer (IF330) - IF-C
-    </td>
-
-    <td>
-      Tanggal Ujian: <b>25 Mei 2026</b><br>
-      Jenis: UTS<br>
-
-      <span class="badge bg-light text-dark border">
-        uts_jaringan.pdf
-      </span>
-    </td>
-
-    <td>
-      Validator: <b>Dr. Rahmat</b><br>
-
-      <small class="text-success">
-        Dokumen soal sudah disetujui validator.
-      </small>
-      <br><br>
-
-      <span class="badge bg-success">
-        Approved
-      </span>
-    </td>
-
-    <td>
-      14 Mei 2026 <br>
-      11:00 WIB
-    </td>
-
-    <td class="text-center">
-
-      <button class="btn btn-sm btn-outline-info">
-        <i class="fas fa-eye"></i>
-      </button>
-
-    </td>
-  </tr>
-
-  <!-- ROW 9 -->
-  <tr>
-    <td class="text-center">9</td>
-
-    <td>
-      Dosen Pengampu: Intan Permata <br>
-      Kelas: Data Mining (IF520) - IF-D
-    </td>
-
-    <td>
-      Tanggal Ujian: <b>27 Mei 2026</b><br>
-      Jenis: UAS<br>
-
-      <span class="badge bg-light text-dark border">
-        uas_datamining.pdf
-      </span>
-    </td>
-
-    <td>
-      Validator: <b>Dr. Hasan Basri</b><br>
-
-      <small class="text-info">
-        Validator sedang memeriksa kesesuaian indikator.
-      </small>
-      <br><br>
-
-      <span class="badge bg-info">
-        Proses Verifikasi
-      </span>
-    </td>
-
-    <td>
-      15 Mei 2026 <br>
-      08:20 WIB
-    </td>
-
-    <td class="text-center">
-
-      <button class="btn btn-sm btn-outline-info">
-        <i class="fas fa-eye"></i>
-      </button>
-
-      <button class="btn btn-sm btn-outline-primary">
-        <i class="fas fa-marker"></i>
-      </button>
-
-    </td>
-  </tr>
-
-  <!-- ROW 10 -->
-  <tr>
-    <td class="text-center">10</td>
-
-    <td>
-      Dosen Pengampu: Rudi Kurniawan <br>
-      Kelas: Mobile Programming (IF450) - IF-E
-    </td>
-
-    <td>
-      Tanggal Ujian: <b>28 Mei 2026</b><br>
-      Jenis: UTS<br>
-
-      <span class="badge bg-light text-dark border">
-        mobile_uts.pdf
-      </span>
-    </td>
-
-    <td>
-      Validator: <b>Dr. Suryani</b><br>
-
-      <small class="text-success">
-        Verifikasi selesai tanpa revisi.
-      </small>
-      <br><br>
-
-      <span class="badge bg-success">
-        Approved
-      </span>
-    </td>
-
-    <td>
-      15 Mei 2026 <br>
-      10:45 WIB
-    </td>
-
-    <td class="text-center">
-
-      <button class="btn btn-sm btn-outline-info">
-        <i class="fas fa-eye"></i>
-      </button>
-
-    </td>
-  </tr>
-
-  <!-- ROW 11 -->
-  <tr>
-    <td class="text-center">11</td>
-
-    <td>
-      Dosen Pengampu: Eka Fitriani <br>
-      Kelas: Cloud Computing (IF550) - IF-F
-    </td>
-
-    <td>
-      Tanggal Ujian: <b>30 Mei 2026</b><br>
-      Jenis: UAS<br>
-
-      <span class="badge bg-light text-dark border">
-        uas_cloud.pdf
-      </span>
-    </td>
-
-    <td>
-      Validator: <b>Dr. Agus Salim</b><br>
-
-      <small class="text-warning">
-        Revisi penulisan indikator soal nomor 5.
-      </small>
-      <br><br>
-
-      <span class="badge bg-warning text-dark">
-        Proses Revisi
-      </span>
-    </td>
-
-    <td>
-      16 Mei 2026 <br>
-      09:30 WIB
-    </td>
-
-    <td class="text-center">
-
-      <button class="btn btn-sm btn-outline-info">
-        <i class="fas fa-eye"></i>
-      </button>
-
-      <button class="btn btn-sm btn-outline-primary">
-        <i class="fas fa-upload"></i>
-      </button>
-
-    </td>
-  </tr>
-
+<?php
+$rows = [
+  ["no" => "0", "kelas_perkuliahan" => "Dosen Pengampu: <b>Harun Ruddin</b> <br> Kelas: Pemrograman Web Lanjut (IF402) - IF-A", "soal_ujian" => "Tanggal Ujian: <b>12 Mei 2026</b><br> Keterangan: Ujian Tengah Semester<br> <span class=\"badge badge-light text-dark border\">soal_uts_if402.pdf</span>", "verifikasi_soal" => "Verifikator: <b>Dr. Ahmad Fauzi</b><br> Komentar: <small class=\"text-warning\"> Mohon revisi CPMK nomor 3 dan typo halaman 2. </small> <br> <span class=\"badge badge-warning\"> Proses Revisi </span>", "last_update" => "10 Mei 2026 <br> 09:20 WIB", "aksi" => "<!-- DETAIL --> <button class=\"btn btn-sm btn-outline-info\" data-toggle=\"modal\" data-target=\"#modalDetail\" data-kodemk=\"IF402\" data-mk=\"Pemrograman Web Lanjut\" data-dosen=\"<b>Harun Ruddin</b>\" data-validator=\"Dr. Ahmad Fauzi\" data-status=\"Revisi\" data-timeline='[ {\"tanggal\":\"08 Mei 2026\",\"aktivitas\":\"Upload soal oleh dosen\"}, {\"tanggal\":\"09 Mei 2026\",\"aktivitas\":\"Admin menunjuk verifikator\"}, {\"tanggal\":\"10 Mei 2026\",\"aktivitas\":\"Validator meminta revisi CPMK\"} ]' onclick=\"showDetail(this)\"> <i class=\"fas fa-eye\"></i> </button> <!-- VERIFIKASI --> <button class=\"btn btn-sm btn-outline-primary\" data-toggle=\"modal\" data-target=\"#modalVerifikasi\"> <i class=\"fas fa-marker\"></i> </button> <!-- UPLOAD --> <button class=\"btn btn-sm btn-outline-primary\"> <i class=\"fas fa-upload\"></i> </button>"],
+  ["no" => "1", "kelas_perkuliahan" => "Dosen Pengampu: <b>Harun Ruddin</b> <br> Kelas: Pemrograman Web Lanjut (IF402) - IF-A", "soal_ujian" => "Tanggal Ujian: <b>12 Mei 2026</b><br> Jenis: UTS<br> <span class=\"badge badge-light text-dark border\"> soal_uts_if402.pdf </span>", "verifikasi_soal" => "Validator: <b>Belum Ditentukan</b><br> <small class=\"text-muted\"> Menunggu penugasan validator oleh admin prodi. </small> <br><br> <span class=\"badge badge-secondary\"> Penugasan Validator </span>", "last_update" => "10 Mei 2026 <br> 09:20 WIB", "aksi" => "<button class=\"btn btn-sm btn-outline-info\" data-toggle=\"modal\" data-target=\"#modalRiwayatVerifikasi\" onclick=\"showDetail(this)\"> <i class=\"fas fa-eye\"></i> </button> <button class=\"btn btn-sm btn-outline-primary\"> <i class=\"fas fa-user-check\"></i> </button>"],
+  ["no" => "2", "kelas_perkuliahan" => "Dosen Pengampu: Siti Rahmah <br> Kelas: Basis Data (IF301) - IF-B", "soal_ujian" => "Tanggal Ujian: <b>15 Mei 2026</b><br> Jenis: UAS<br> <span class=\"badge badge-light text-dark border\"> uas_basisdata.pdf </span>", "verifikasi_soal" => "Validator: <b>Dr. Rina Kurnia</b><br> <small class=\"text-info\"> Validator sedang melakukan pemeriksaan soal. </small> <br><br> <span class=\"badge badge-info\"> Proses Verifikasi </span>", "last_update" => "11 Mei 2026 <br> 10:15 WIB", "aksi" => "<button class=\"btn btn-sm btn-outline-info\"> <i class=\"fas fa-eye\"></i> </button> <button class=\"btn btn-sm btn-outline-primary\"> <i class=\"fas fa-marker\"></i> </button>"],
+  ["no" => "3", "kelas_perkuliahan" => "Dosen Pengampu: Nur Azizah <br> Kelas: Struktur Data (IF220) - IF-C", "soal_ujian" => "Tanggal Ujian: <b>20 Mei 2026</b><br> Jenis: UTS<br> <span class=\"badge badge-light text-dark border\"> uts_strukturdata.pdf </span>", "verifikasi_soal" => "Validator: <b>Dr. Ahmad Fauzi</b><br> <small class=\"text-warning\"> Revisi CPMK dan kisi-kisi penilaian. </small> <br><br> <span class=\"badge badge-warning text-dark\"> Proses Revisi </span>", "last_update" => "11 Mei 2026 <br> 14:10 WIB", "aksi" => "<button class=\"btn btn-sm btn-outline-info\"> <i class=\"fas fa-eye\"></i> </button> <button class=\"btn btn-sm btn-outline-primary\"> <i class=\"fas fa-upload\"></i> </button>"],
+  ["no" => "4", "kelas_perkuliahan" => "Dosen Pengampu: Dedi Saputra <br> Kelas: Algoritma Pemrograman (IF101) - IF-A", "soal_ujian" => "Tanggal Ujian: <b>18 Mei 2026</b><br> Jenis: UTS<br> <span class=\"badge badge-light text-dark border\"> algoritma_uts.pdf </span>", "verifikasi_soal" => "Validator: <b>Dr. Yuniarti</b><br> <small class=\"text-success\"> Soal telah memenuhi standar verifikasi. </small> <br><br> <span class=\"badge badge-success\"> Approved </span>", "last_update" => "12 Mei 2026 <br> 08:30 WIB", "aksi" => "<button class=\"btn btn-sm btn-outline-info\"> <i class=\"fas fa-eye\"></i> </button>"],
+  ["no" => "5", "kelas_perkuliahan" => "Dosen Pengampu: Ahmad Rizki <br> Kelas: Sistem Operasi (IF305) - IF-D", "soal_ujian" => "Tanggal Ujian: <b>21 Mei 2026</b><br> Jenis: UAS<br> <span class=\"badge badge-light text-dark border\"> uas_so.pdf </span>", "verifikasi_soal" => "Validator: <b>Dr. Lina Marlina</b><br> <small class=\"text-info\"> Sedang dilakukan pemeriksaan kesesuaian CPMK. </small> <br><br> <span class=\"badge badge-info\"> Proses Verifikasi </span>", "last_update" => "13 Mei 2026 <br> 13:00 WIB", "aksi" => "<button class=\"btn btn-sm btn-outline-info\"> <i class=\"fas fa-eye\"></i> </button> <button class=\"btn btn-sm btn-outline-primary\"> <i class=\"fas fa-marker\"></i> </button>"],
+  ["no" => "6", "kelas_perkuliahan" => "Dosen Pengampu: Wulan Sari <br> Kelas: Rekayasa Perangkat Lunak (IF410) - IF-B", "soal_ujian" => "Tanggal Ujian: <b>22 Mei 2026</b><br> Jenis: UTS<br> <span class=\"badge badge-light text-dark border\"> rpl_uts.pdf </span>", "verifikasi_soal" => "Validator: <b>Dr. Budi Hartono</b><br> <small class=\"text-warning\"> Perlu revisi format rubrik penilaian. </small> <br><br> <span class=\"badge badge-warning text-dark\"> Proses Revisi </span>", "last_update" => "13 Mei 2026 <br> 15:45 WIB", "aksi" => "<button class=\"btn btn-sm btn-outline-info\"> <i class=\"fas fa-eye\"></i> </button> <button class=\"btn btn-sm btn-outline-primary\"> <i class=\"fas fa-upload\"></i> </button>"],
+  ["no" => "7", "kelas_perkuliahan" => "Dosen Pengampu: Yoga Pratama <br> Kelas: Kecerdasan Buatan (IF501) - IF-A", "soal_ujian" => "Tanggal Ujian: <b>24 Mei 2026</b><br> Jenis: UAS<br> <span class=\"badge badge-light text-dark border\"> uas_ai.pdf </span>", "verifikasi_soal" => "Validator: <b>Belum Ditentukan</b><br> <small class=\"text-muted\"> Admin prodi belum menentukan validator. </small> <br><br> <span class=\"badge badge-secondary\"> Penugasan Validator </span>", "last_update" => "14 Mei 2026 <br> 09:10 WIB", "aksi" => "<button class=\"btn btn-sm btn-outline-info\"> <i class=\"fas fa-eye\"></i> </button> <button class=\"btn btn-sm btn-outline-primary\"> <i class=\"fas fa-user-check\"></i> </button>"],
+  ["no" => "8", "kelas_perkuliahan" => "Dosen Pengampu: Fajar Hidayat <br> Kelas: Jaringan Komputer (IF330) - IF-C", "soal_ujian" => "Tanggal Ujian: <b>25 Mei 2026</b><br> Jenis: UTS<br> <span class=\"badge badge-light text-dark border\"> uts_jaringan.pdf </span>", "verifikasi_soal" => "Validator: <b>Dr. Rahmat</b><br> <small class=\"text-success\"> Dokumen soal sudah disetujui validator. </small> <br><br> <span class=\"badge badge-success\"> Approved </span>", "last_update" => "14 Mei 2026 <br> 11:00 WIB", "aksi" => "<button class=\"btn btn-sm btn-outline-info\"> <i class=\"fas fa-eye\"></i> </button>"],
+  ["no" => "9", "kelas_perkuliahan" => "Dosen Pengampu: Intan Permata <br> Kelas: Data Mining (IF520) - IF-D", "soal_ujian" => "Tanggal Ujian: <b>27 Mei 2026</b><br> Jenis: UAS<br> <span class=\"badge badge-light text-dark border\"> uas_datamining.pdf </span>", "verifikasi_soal" => "Validator: <b>Dr. Hasan Basri</b><br> <small class=\"text-info\"> Validator sedang memeriksa kesesuaian indikator. </small> <br><br> <span class=\"badge badge-info\"> Proses Verifikasi </span>", "last_update" => "15 Mei 2026 <br> 08:20 WIB", "aksi" => "<button class=\"btn btn-sm btn-outline-info\"> <i class=\"fas fa-eye\"></i> </button> <button class=\"btn btn-sm btn-outline-primary\"> <i class=\"fas fa-marker\"></i> </button>"],
+  ["no" => "10", "kelas_perkuliahan" => "Dosen Pengampu: Rudi Kurniawan <br> Kelas: Mobile Programming (IF450) - IF-E", "soal_ujian" => "Tanggal Ujian: <b>28 Mei 2026</b><br> Jenis: UTS<br> <span class=\"badge badge-light text-dark border\"> mobile_uts.pdf </span>", "verifikasi_soal" => "Validator: <b>Dr. Suryani</b><br> <small class=\"text-success\"> Verifikasi selesai tanpa revisi. </small> <br><br> <span class=\"badge badge-success\"> Approved </span>", "last_update" => "15 Mei 2026 <br> 10:45 WIB", "aksi" => "<button class=\"btn btn-sm btn-outline-info\"> <i class=\"fas fa-eye\"></i> </button>"],
+  ["no" => "11", "kelas_perkuliahan" => "Dosen Pengampu: Eka Fitriani <br> Kelas: Cloud Computing (IF550) - IF-F", "soal_ujian" => "Tanggal Ujian: <b>30 Mei 2026</b><br> Jenis: UAS<br> <span class=\"badge badge-light text-dark border\"> uas_cloud.pdf </span>", "verifikasi_soal" => "Validator: <b>Dr. Agus Salim</b><br> <small class=\"text-warning\"> Revisi penulisan indikator soal nomor 5. </small> <br><br> <span class=\"badge badge-warning text-dark\"> Proses Revisi </span>", "last_update" => "16 Mei 2026 <br> 09:30 WIB", "aksi" => "<button class=\"btn btn-sm btn-outline-info\"> <i class=\"fas fa-eye\"></i> </button> <button class=\"btn btn-sm btn-outline-primary\"> <i class=\"fas fa-upload\"></i> </button>"],
+];
+foreach ($rows as $index => $row) {
+?>
+          <tr>
+            <td class="text-center"><?= $row['no'] ?></td>
+            <td><?= $row['kelas_perkuliahan'] ?></td>
+            <td><?= $row['soal_ujian'] ?></td>
+            <td><?= $row['verifikasi_soal'] ?></td>
+            <td><?= $row['last_update'] ?></td>
+            <td class="text-center"><?= $row['aksi'] ?></td>
+          </tr>
+<?php } ?>
 </tbody>
 
     </table>
@@ -842,7 +248,7 @@
 
         <div>
           <h5 class="modal-title fw-bold mb-1">
-            <i class="fas fa-filter me-2"></i>
+            <i class="fas fa-filter mr-2"></i>
             Filter Monitoring Verifikasi Soal Ujian
           </h5>
 
@@ -851,8 +257,8 @@
           </small>
         </div>
 
-        <button class="btn-close btn-close-white"
-        data-bs-dismiss="modal"></button>
+        <button class="close text-white"
+        data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
 
       </div>
 
@@ -874,7 +280,7 @@
               <div class="border-bottom pb-2 mb-1">
 
                 <h6 class="fw-bold mb-1">
-                  <i class="fas fa-university text-info me-2"></i>
+                  <i class="fas fa-university text-info mr-2"></i>
                   Filter Akademik
                 </h6>
 
@@ -892,7 +298,7 @@
                 Periode Akademik
               </label>
 
-              <select class="form-select">
+              <select class="custom-select">
 
                 <option>Semua</option>
                 <option>2025/2026 - Ganjil</option>
@@ -950,7 +356,7 @@
               <div class="border-bottom pb-2 mb-1">
 
                 <h6 class="fw-bold mb-1">
-                  <i class="fas fa-project-diagram text-warning me-2"></i>
+                  <i class="fas fa-project-diagram text-warning mr-2"></i>
                   Filter Workflow Verifikasi
                 </h6>
 
@@ -969,7 +375,7 @@
                 Status Workflow
               </label>
 
-              <select class="form-select">
+              <select class="custom-select">
 
                 <option>Semua</option>
                 <option>Penugasan Validator</option>
@@ -990,7 +396,7 @@
               <div class="border-bottom pb-2 mb-1">
 
                 <h6 class="fw-bold mb-1">
-                  <i class="fas fa-calendar-alt text-success me-2"></i>
+                  <i class="fas fa-calendar-alt text-success mr-2"></i>
                   Filter Waktu
                 </h6>
 
@@ -1039,14 +445,14 @@
           <button type="reset"
           class="btn btn-outline-secondary">
 
-          <i class="fas fa-undo me-1"></i>
+          <i class="fas fa-undo mr-1"></i>
           Reset Filter
 
         </button>
 
         <button type="button"
         class="btn btn-light border"
-        data-bs-dismiss="modal">
+        data-dismiss="modal">
 
         Tutup
 
@@ -1055,7 +461,7 @@
       <button type="submit"
       class="btn btn-info text-white">
 
-      <i class="fas fa-search me-1"></i>
+      <i class="fas fa-search mr-1"></i>
       Terapkan Filter
 
     </button>
@@ -1086,8 +492,8 @@
           Detail Workflow Verifikasi
         </h5>
 
-        <button class="btn-close btn-close-white"
-        data-bs-dismiss="modal"></button>
+        <button class="close text-white"
+        data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
 
       </div>
 
@@ -1171,7 +577,7 @@
         <div>
 
           <h5 class="modal-title fw-bold">
-            <i class="fas fa-history text-primary me-2"></i>
+            <i class="fas fa-history text-primary mr-2"></i>
             Riwayat Verifikasi Soal Ujian
           </h5>
 
@@ -1182,8 +588,8 @@
         </div>
 
         <button type="button"
-          class="btn-close"
-          data-bs-dismiss="modal"></button>
+          class="close"
+          data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
 
       </div>
 
@@ -1272,9 +678,9 @@
 
                 </div>
 
-                <div class="text-end">
+                <div class="text-right">
 
-                  <span class="badge bg-primary-subtle text-dark border">
+                  <span class="badge badge-primary-subtle text-dark border">
                     Penugasan Validator
                   </span>
 
@@ -1353,9 +759,9 @@
 
                 </div>
 
-                <div class="text-end">
+                <div class="text-right">
 
-                  <span class="badge bg-info-subtle text-dark border">
+                  <span class="badge badge-info-subtle text-dark border">
                     Proses Verifikasi
                   </span>
 
@@ -1433,9 +839,9 @@
 
                 </div>
 
-                <div class="text-end">
+                <div class="text-right">
 
-                  <span class="badge bg-warning-subtle text-dark border">
+                  <span class="badge badge-warning-subtle text-dark border">
                     Proses Revisi
                   </span>
 
@@ -1515,9 +921,9 @@
 
                 </div>
 
-                <div class="text-end">
+                <div class="text-right">
 
-                  <span class="badge bg-info-subtle text-dark border">
+                  <span class="badge badge-info-subtle text-dark border">
                     Proses Verifikasi
                   </span>
 
@@ -1597,9 +1003,9 @@
 
                 </div>
 
-                <div class="text-end">
+                <div class="text-right">
 
-                  <span class="badge bg-success-subtle text-dark border">
+                  <span class="badge badge-success-subtle text-dark border">
                     Approved
                   </span>
 
@@ -1668,7 +1074,7 @@
       <div class="modal-footer bg-white border-top">
 
         <button class="btn btn-light border"
-          data-bs-dismiss="modal">
+          data-dismiss="modal">
           Tutup
         </button>
 
@@ -1696,8 +1102,8 @@
           Verifikasi Soal
         </h5>
 
-        <button class="btn-close btn-close-white"
-        data-bs-dismiss="modal"></button>
+        <button class="close text-white"
+        data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
 
       </div>
 
@@ -1709,7 +1115,7 @@
 
             <label>Status Verifikasi</label>
 
-            <select class="form-select">
+            <select class="custom-select">
 
               <option>Disetujui</option>
               <option>Revisi</option>
@@ -1734,7 +1140,7 @@
 
           <button type="button"
           class="btn btn-secondary"
-          data-bs-dismiss="modal">
+          data-dismiss="modal">
           Batal
         </button>
 
@@ -1768,8 +1174,8 @@
           Bantuan Monitor Verifikasi
         </h5>
 
-        <button class="btn-close btn-close-white"
-        data-bs-dismiss="modal"></button>
+        <button class="close text-white"
+        data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
 
       </div>
 

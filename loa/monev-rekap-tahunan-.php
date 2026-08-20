@@ -9,7 +9,7 @@
   <section class="content-header">
     <div class="container-fluid">
       <h3 class="mb-0">Monev Setahun Prodi
-        <button type="button" class="btn btn-tool" data-bs-toggle="modal" data-bs-target="#modalBantuan" title="Bantuan">
+        <button type="button" class="btn btn-tool" data-toggle="modal" data-target="#modalBantuan" title="Bantuan">
           <i class="fas fa-question-circle"></i>
         </button>
       </h3>
@@ -47,17 +47,17 @@
             </div>
             monev ini tidak relevan, karena prodi sudah punya habit evaluasi tiap semester, bukan tiap tahun. kemudian parameternya hingga IK saja, yg  merupakan agregat CPMK. tidak hingga CPL.
             <div class="card-footer">
-              <div class="card-tools ms-auto">
-                <button class="btn btn-outline-info btn-sm " data-bs-toggle="modal" data-bs-target="#modalFilter">
-                  <i class="fas fa-filter me-1"></i> Filter
+              <div class="card-tools ml-auto">
+                <button class="btn btn-outline-info btn-sm " data-toggle="modal" data-target="#modalFilter">
+                  <i class="fas fa-filter mr-1"></i> Filter
                 </button>                
                 <button type="button" class="btn btn-outline-success btn-sm">
-                  <i class="fas fa-file-download me-1"></i> Export
+                  <i class="fas fa-file-download mr-1"></i> Export
                 </button>    
-                <button type="button" class="btn btn-outline-primary btn-sm " data-bs-toggle="modal" data-bs-target="#modalTambahTemuan">
-                  <i class="fas fa-clipboard-list me-1"></i> Catat Temuan
+                <button type="button" class="btn btn-outline-primary btn-sm " data-toggle="modal" data-target="#modalTambahTemuan">
+                  <i class="fas fa-clipboard-list mr-1"></i> Catat Temuan
                 </button> 
-                <a class="btn btn-sm btn-outline-primary" href="formulir-evaluasi.php" target="_blank"><i class="fas fa-clipboard-list me-1"> </i>Catat Temuan </a>         
+                <a class="btn btn-sm btn-outline-primary" href="formulir-evaluasi.php" target="_blank"><i class="fas fa-clipboard-list mr-1"> </i>Catat Temuan </a>         
               </div>
 
             </div>
@@ -220,7 +220,7 @@ canvas {
           <td>72</td>
           <td>75</td>
           <td>80</td>
-          <td><span class="badge bg-secondary">Menaik</span></td>
+          <td><span class="badge-secondary">Menaik</span></td>
         </tr>
         <tr>
           <td><a href="monev-rekap-tahunan-detail.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td>
@@ -229,7 +229,7 @@ canvas {
           <td>85</td>
           <td>82</td>
           <td>78</td>
-          <td><span class="badge bg-danger">Menurun</span></td>
+          <td><span class="badge-danger">Menurun</span></td>
         </tr>
         <tr>
           <td><a href="monev-rekap-tahunan-detail.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td>
@@ -238,7 +238,7 @@ canvas {
           <td>90</td>
           <td>88</td>
           <td>91</td>
-          <td><span class="badge bg-warning text-dark">Fluktuatif</span></td>
+          <td><span class="badge-warning text-dark">Fluktuatif</span></td>
         </tr>
         <tr>
           <td><a href="monev-rekap-tahunan-detail.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td>
@@ -247,7 +247,7 @@ canvas {
           <td>78</td>
           <td>78</td>
           <td>79</td>
-          <td><span class="badge bg-secondary">Stabil</span></td>
+          <td><span class="badge-secondary">Stabil</span></td>
         </tr>
         <tr>
           <td><a href="monev-rekap-tahunan-detail.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td>
@@ -256,7 +256,7 @@ canvas {
           <td>65</td>
           <td>70</td>
           <td>74</td>
-          <td><span class="badge bg-secondary">Menaik</span></td>
+          <td><span class="badge-secondary">Menaik</span></td>
         </tr>
         <tr>
           <td><a href="monev-rekap-tahunan-detail.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td>
@@ -265,7 +265,7 @@ canvas {
           <td>88</td>
           <td>85</td>
           <td>83</td>
-          <td><span class="badge bg-danger">Menurun</span></td>
+          <td><span class="badge-danger">Menurun</span></td>
         </tr>
         <tr>
           <td><a href="monev-rekap-tahunan-detail.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td>
@@ -274,7 +274,7 @@ canvas {
           <td>70</td>
           <td>74</td>
           <td>73</td>
-          <td><span class="badge bg-warning text-dark">Fluktuatif</span></td>
+          <td><span class="badge-warning text-dark">Fluktuatif</span></td>
         </tr>
         <tr>
           <td><a href="monev-rekap-tahunan-detail.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td>
@@ -283,7 +283,7 @@ canvas {
           <td>92</td>
           <td>92</td>
           <td>93</td>
-          <td><span class="badge bg-secondary">Stabil</span></td>
+          <td><span class="badge-secondary">Stabil</span></td>
         </tr>
         <tr>
           <td><a href="monev-rekap-tahunan-detail.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td>
@@ -292,7 +292,7 @@ canvas {
           <td>76</td>
           <td>81</td>
           <td>84</td>
-          <td><span class="badge bg-secondary">Menaik</span></td>
+          <td><span class="badge-secondary">Menaik</span></td>
         </tr>
         <tr>
           <td><a href="monev-rekap-tahunan-detail.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td>
@@ -301,7 +301,7 @@ canvas {
           <td>83</td>
           <td>79</td>
           <td>80</td>
-          <td><span class="badge bg-warning text-dark">Fluktuatif</span></td>
+          <td><span class="badge-warning text-dark">Fluktuatif</span></td>
         </tr>
       </tbody>
     </table>
@@ -338,31 +338,31 @@ canvas {
           <td><a href="monev-rekap-tahunan-detail2.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td>
           <td>1</td><td>IK-01</td>
           <td>70</td><td>74</td><td>79</td>
-          <td><span class="badge bg-secondary">Menaik</span></td>
+          <td><span class="badge-secondary">Menaik</span></td>
         </tr>
         <tr>
           <td><a href="monev-rekap-tahunan-detail2.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td>
           <td>2</td><td>IK-02</td>
           <td>82</td><td>80</td><td>76</td>
-          <td><span class="badge bg-danger">Menurun</span></td>
+          <td><span class="badge-danger">Menurun</span></td>
         </tr>
         <tr>
           <td><a href="monev-rekap-tahunan-detail2.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td>
           <td>3</td><td>IK-03</td>
           <td>88</td><td>90</td><td>89</td>
-          <td><span class="badge bg-warning text-dark">Fluktuatif</span></td>
+          <td><span class="badge-warning text-dark">Fluktuatif</span></td>
         </tr>
         <tr>
           <td><a href="monev-rekap-tahunan-detail2.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td>
           <td>4</td><td>IK-04</td>
           <td>78</td><td>78</td><td>79</td>
-          <td><span class="badge bg-secondary">Stabil</span></td>
+          <td><span class="badge-secondary">Stabil</span></td>
         </tr>
         <tr>
           <td><a href="monev-rekap-tahunan-detail2.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td>
           <td>5</td><td>IK-05</td>
           <td>65</td><td>69</td><td>73</td>
-          <td><span class="badge bg-secondary">Menaik</span></td>
+          <td><span class="badge-secondary">Menaik</span></td>
         </tr>
 
         <!-- IK 06 - 10 -->
@@ -370,59 +370,59 @@ canvas {
           <td><a href="monev-rekap-tahunan-detail2.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td>
           <td>6</td><td>IK-06</td>
           <td>90</td><td>87</td><td>84</td>
-          <td><span class="badge bg-danger">Menurun</span></td>
+          <td><span class="badge-danger">Menurun</span></td>
         </tr>
         <tr>
           <td><a href="monev-rekap-tahunan-detail2.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td>
           <td>7</td><td>IK-07</td>
           <td>72</td><td>75</td><td>74</td>
-          <td><span class="badge bg-warning text-dark">Fluktuatif</span></td>
+          <td><span class="badge-warning text-dark">Fluktuatif</span></td>
         </tr>
         <tr>
           <td><a href="monev-rekap-tahunan-detail2.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td>
           <td>8</td><td>IK-08</td>
           <td>91</td><td>92</td><td>93</td>
-          <td><span class="badge bg-secondary">Stabil</span></td>
+          <td><span class="badge-secondary">Stabil</span></td>
         </tr>
         <tr>
           <td><a href="monev-rekap-tahunan-detail2.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td>
           <td>9</td><td>IK-09</td>
           <td>75</td><td>80</td><td>83</td>
-          <td><span class="badge bg-secondary">Menaik</span></td>
+          <td><span class="badge-secondary">Menaik</span></td>
         </tr>
         <tr>
           <td><a href="monev-rekap-tahunan-detail2.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td>
           <td>10</td><td>IK-10</td>
           <td>84</td><td>81</td><td>79</td>
-          <td><span class="badge bg-danger">Menurun</span></td>
+          <td><span class="badge-danger">Menurun</span></td>
         </tr>
 
         <!-- IK 11 - 20 -->
         <!-- Pola dibuat variasi agar realistis -->
 
-        <tr><td><a href="monev-rekap-tahunan-detail2.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td><td>11</td><td>IK-11</td><td>77</td><td>79</td><td>82</td><td><span class="badge bg-secondary">Menaik</span></td></tr>
-        <tr><td><a href="monev-rekap-tahunan-detail2.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td><td>12</td><td>IK-12</td><td>86</td><td>84</td><td>83</td><td><span class="badge bg-danger">Menurun</span></td></tr>
-        <tr><td><a href="monev-rekap-tahunan-detail2.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td><td>13</td><td>IK-13</td><td>73</td><td>73</td><td>74</td><td><span class="badge bg-secondary">Stabil</span></td></tr>
-        <tr><td><a href="monev-rekap-tahunan-detail2.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td><td>14</td><td>IK-14</td><td>68</td><td>72</td><td>76</td><td><span class="badge bg-secondary">Menaik</span></td></tr>
-        <tr><td><a href="monev-rekap-tahunan-detail2.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td><td>15</td><td>IK-15</td><td>92</td><td>90</td><td>88</td><td><span class="badge bg-danger">Menurun</span></td></tr>
-        <tr><td><a href="monev-rekap-tahunan-detail2.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td><td>16</td><td>IK-16</td><td>80</td><td>82</td><td>81</td><td><span class="badge bg-warning text-dark">Fluktuatif</span></td></tr>
-        <tr><td><a href="monev-rekap-tahunan-detail2.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td><td>17</td><td>IK-17</td><td>71</td><td>75</td><td>78</td><td><span class="badge bg-secondary">Menaik</span></td></tr>
-        <tr><td><a href="monev-rekap-tahunan-detail2.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td><td>18</td><td>IK-18</td><td>89</td><td>88</td><td>90</td><td><span class="badge bg-warning text-dark">Fluktuatif</span></td></tr>
-        <tr><td><a href="monev-rekap-tahunan-detail2.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td><td>19</td><td>IK-19</td><td>76</td><td>78</td><td>78</td><td><span class="badge bg-secondary">Stabil</span></td></tr>
-        <tr><td><a href="monev-rekap-tahunan-detail2.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td><td>20</td><td>IK-20</td><td>69</td><td>72</td><td>75</td><td><span class="badge bg-secondary">Menaik</span></td></tr>
+        <tr><td><a href="monev-rekap-tahunan-detail2.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td><td>11</td><td>IK-11</td><td>77</td><td>79</td><td>82</td><td><span class="badge-secondary">Menaik</span></td></tr>
+        <tr><td><a href="monev-rekap-tahunan-detail2.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td><td>12</td><td>IK-12</td><td>86</td><td>84</td><td>83</td><td><span class="badge-danger">Menurun</span></td></tr>
+        <tr><td><a href="monev-rekap-tahunan-detail2.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td><td>13</td><td>IK-13</td><td>73</td><td>73</td><td>74</td><td><span class="badge-secondary">Stabil</span></td></tr>
+        <tr><td><a href="monev-rekap-tahunan-detail2.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td><td>14</td><td>IK-14</td><td>68</td><td>72</td><td>76</td><td><span class="badge-secondary">Menaik</span></td></tr>
+        <tr><td><a href="monev-rekap-tahunan-detail2.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td><td>15</td><td>IK-15</td><td>92</td><td>90</td><td>88</td><td><span class="badge-danger">Menurun</span></td></tr>
+        <tr><td><a href="monev-rekap-tahunan-detail2.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td><td>16</td><td>IK-16</td><td>80</td><td>82</td><td>81</td><td><span class="badge-warning text-dark">Fluktuatif</span></td></tr>
+        <tr><td><a href="monev-rekap-tahunan-detail2.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td><td>17</td><td>IK-17</td><td>71</td><td>75</td><td>78</td><td><span class="badge-secondary">Menaik</span></td></tr>
+        <tr><td><a href="monev-rekap-tahunan-detail2.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td><td>18</td><td>IK-18</td><td>89</td><td>88</td><td>90</td><td><span class="badge-warning text-dark">Fluktuatif</span></td></tr>
+        <tr><td><a href="monev-rekap-tahunan-detail2.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td><td>19</td><td>IK-19</td><td>76</td><td>78</td><td>78</td><td><span class="badge-secondary">Stabil</span></td></tr>
+        <tr><td><a href="monev-rekap-tahunan-detail2.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td><td>20</td><td>IK-20</td><td>69</td><td>72</td><td>75</td><td><span class="badge-secondary">Menaik</span></td></tr>
 
         <!-- IK 21 - 30 -->
 
-        <tr><td><a href="monev-rekap-tahunan-detail2.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td><td>21</td><td>IK-21</td><td>83</td><td>80</td><td>77</td><td><span class="badge bg-danger">Menurun</span></td></tr>
-        <tr><td><a href="monev-rekap-tahunan-detail2.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td><td>22</td><td>IK-22</td><td>74</td><td>77</td><td>80</td><td><span class="badge bg-secondary">Menaik</span></td></tr>
-        <tr><td><a href="monev-rekap-tahunan-detail2.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td><td>23</td><td>IK-23</td><td>90</td><td>91</td><td>92</td><td><span class="badge bg-secondary">Stabil</span></td></tr>
-        <tr><td><a href="monev-rekap-tahunan-detail2.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td><td>24</td><td>IK-24</td><td>67</td><td>70</td><td>73</td><td><span class="badge bg-secondary">Menaik</span></td></tr>
-        <tr><td><a href="monev-rekap-tahunan-detail2.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td><td>25</td><td>IK-25</td><td>85</td><td>83</td><td>82</td><td><span class="badge bg-danger">Menurun</span></td></tr>
-        <tr><td><a href="monev-rekap-tahunan-detail2.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td><td>26</td><td>IK-26</td><td>79</td><td>79</td><td>80</td><td><span class="badge bg-secondary">Stabil</span></td></tr>
-        <tr><td><a href="monev-rekap-tahunan-detail2.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td><td>27</td><td>IK-27</td><td>72</td><td>76</td><td>75</td><td><span class="badge bg-warning text-dark">Fluktuatif</span></td></tr>
-        <tr><td><a href="monev-rekap-tahunan-detail2.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td><td>28</td><td>IK-28</td><td>88</td><td>86</td><td>85</td><td><span class="badge bg-danger">Menurun</span></td></tr>
-        <tr><td><a href="monev-rekap-tahunan-detail2.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td><td>29</td><td>IK-29</td><td>75</td><td>78</td><td>82</td><td><span class="badge bg-secondary">Menaik</span></td></tr>
-        <tr><td><a href="monev-rekap-tahunan-detail2.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td><td>30</td><td>IK-30</td><td>91</td><td>90</td><td>89</td><td><span class="badge bg-warning text-dark">Fluktuatif</span></td></tr>
+        <tr><td><a href="monev-rekap-tahunan-detail2.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td><td>21</td><td>IK-21</td><td>83</td><td>80</td><td>77</td><td><span class="badge-danger">Menurun</span></td></tr>
+        <tr><td><a href="monev-rekap-tahunan-detail2.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td><td>22</td><td>IK-22</td><td>74</td><td>77</td><td>80</td><td><span class="badge-secondary">Menaik</span></td></tr>
+        <tr><td><a href="monev-rekap-tahunan-detail2.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td><td>23</td><td>IK-23</td><td>90</td><td>91</td><td>92</td><td><span class="badge-secondary">Stabil</span></td></tr>
+        <tr><td><a href="monev-rekap-tahunan-detail2.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td><td>24</td><td>IK-24</td><td>67</td><td>70</td><td>73</td><td><span class="badge-secondary">Menaik</span></td></tr>
+        <tr><td><a href="monev-rekap-tahunan-detail2.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td><td>25</td><td>IK-25</td><td>85</td><td>83</td><td>82</td><td><span class="badge-danger">Menurun</span></td></tr>
+        <tr><td><a href="monev-rekap-tahunan-detail2.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td><td>26</td><td>IK-26</td><td>79</td><td>79</td><td>80</td><td><span class="badge-secondary">Stabil</span></td></tr>
+        <tr><td><a href="monev-rekap-tahunan-detail2.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td><td>27</td><td>IK-27</td><td>72</td><td>76</td><td>75</td><td><span class="badge-warning text-dark">Fluktuatif</span></td></tr>
+        <tr><td><a href="monev-rekap-tahunan-detail2.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td><td>28</td><td>IK-28</td><td>88</td><td>86</td><td>85</td><td><span class="badge-danger">Menurun</span></td></tr>
+        <tr><td><a href="monev-rekap-tahunan-detail2.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td><td>29</td><td>IK-29</td><td>75</td><td>78</td><td>82</td><td><span class="badge-secondary">Menaik</span></td></tr>
+        <tr><td><a href="monev-rekap-tahunan-detail2.php" class="btn btn-sm btn-outline-info">📄 Detail</a></td><td>30</td><td>IK-30</td><td>91</td><td>90</td><td>89</td><td><span class="badge-warning text-dark">Fluktuatif</span></td></tr>
 
       </tbody>
     </table>
@@ -502,7 +502,7 @@ canvas {
 <!--         <div class="card">   
           <div class="card-header ">         
             <h5 class="card-title mb-0">
-              <button class="btn btn-sm btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#chartCPLIK1">
+              <button class="btn btn-sm btn-outline-primary" data-toggle="collapse" data-target="#chartCPLIK1">
                 <i class="fas fa-expand"></i>
               </button>
               CPL 1 – Kemampuan berkomunikasi secara efektif baik lisan maupun tulisan
@@ -544,7 +544,7 @@ canvas {
        <!--  <div class="card">   
           <div class="card-header ">         
             <h5 class="card-title mb-0">
-              <button class="btn btn-sm btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#chartCPLIK2">
+              <button class="btn btn-sm btn-outline-primary" data-toggle="collapse" data-target="#chartCPLIK2">
                 <i class="fas fa-expand"></i>
               </button>
               IK 1 – Kemampuan untuk menginternalisasi semangat kemandirian dan Kewirausahaan
@@ -585,7 +585,7 @@ canvas {
         <!-- <div class="card">   
           <div class="card-header ">         
             <h5 class="card-title mb-0">
-              <button class="btn btn-sm btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#chartCPLIK3">
+              <button class="btn btn-sm btn-outline-primary" data-toggle="collapse" data-target="#chartCPLIK3">
                 <i class="fas fa-expand"></i>
               </button>
               IK 2 – Kemampuan untuk menginternalisasi semangat kemandirian dan Kewirausahaan
@@ -626,7 +626,7 @@ canvas {
         <!-- <div class="card">   
           <div class="card-header ">         
             <h5 class="card-title mb-0">
-              <button class="btn btn-sm btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#chartCPLIK4">
+              <button class="btn btn-sm btn-outline-primary" data-toggle="collapse" data-target="#chartCPLIK4">
                 <i class="fas fa-expand"></i>
               </button>
               IK 3 – Kemampuan untuk menginternalisasi semangat kemandirian dan Kewirausahaan
@@ -683,7 +683,7 @@ canvas {
     <div class="modal-content rounded-3 shadow">
       <div class="modal-header bg-info text-white">
         <h5 class="modal-title" id="modalFilterLabel">Filter Data</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
       </div>
       <form action="" method="GET">
 
@@ -694,7 +694,7 @@ canvas {
           </div>
           <div class="mb-3">
             <label for="angkatan" class="form-label">Angkatan</label>
-            <select name="angkatan" id="angkatan" class="form-select">
+            <select name="angkatan" id="angkatan" class="custom-select">
               <option value="">-- Pilih Angkatan --</option>
               <option value="2025">2025</option>
               <option value="2024">2024</option>
@@ -703,7 +703,7 @@ canvas {
           </div>
           <div class="mb-3">
             <label for="status" class="form-label">Status</label>
-            <select name="status" id="status" class="form-select">
+            <select name="status" id="status" class="custom-select">
               <option value="">-- Pilih Status --</option>
               <option value="Aktif">Aktif</option>
               <option value="NonAktif">NonAktif</option>
@@ -713,7 +713,7 @@ canvas {
        </div>
 
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
           <button type="submit" class="btn btn-info">Terapkan Filter</button>
         </div>
 
@@ -730,7 +730,7 @@ canvas {
     <div class="modal-content">
       <div class="modal-header bg-primary text-white">
         <h5 class="modal-title" id="modalBantuanLabel">Bantuan Tabel</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
       </div>
       <div class="modal-body">
         <p>
@@ -824,7 +824,7 @@ Keseimbangan Mapping
         </p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
       </div>
     </div>
   </div>
@@ -837,7 +837,7 @@ Keseimbangan Mapping
       <div class="modal-content">
         <div class="modal-header bg-secondary text-white">
           <h6 class="modal-title">Preview Performa Risiko (sample)</h6>
-          <button type="button" class="btn-close btn-close-white" data-dismiss="modal" aria-label="Close"></button>
+          <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         </div>
         <div class="modal-body">
           <table class="table table-sm table-bordered">
@@ -861,8 +861,8 @@ Keseimbangan Mapping
     <div class="modal-dialog modal-sm">
       <div class="modal-content">
         <div class="modal-header bg-info text-white">
-          <h5 class="modal-title" id="modalStudentLabel"><i class="fas fa-user-graduate me-2"></i> Detil Mahasiswa</h5>
-          <button type="button" class="btn-close btn-close-white" data-dismiss="modal" aria-label="Close"></button>
+          <h5 class="modal-title" id="modalStudentLabel"><i class="fas fa-user-graduate mr-2"></i> Detil Mahasiswa</h5>
+          <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         </div>
         <div class="modal-body">
           <dl class="row mb-0">
@@ -968,7 +968,7 @@ Keseimbangan Mapping
       
       <div class="modal-header bg-primary text-white">
         <h5 class="modal-title">Tambah Temuan Evaluasi</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        <button type="button" class="close text-white" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
       </div>
 
       <form method="POST">
@@ -1000,7 +1000,7 @@ Keseimbangan Mapping
 
             <div class="mb-3">
               <label class="form-label">Jenis Evaluasi <span class="text-danger">*</span></label>
-              <select name="jenis_evaluasi" class="form-select" required>
+              <select name="jenis_evaluasi" class="custom-select" required>
                 <option value="">-- Pilih Jenis --</option>
                 <option>Pembelajaran(Proses)</option>
                 <option>Kemajuan(Perkembangan)</option>
@@ -1027,7 +1027,7 @@ Keseimbangan Mapping
 
           <div class="mb-3">
             <label class="form-label">Tingkat Prioritas <span class="text-danger">*</span></label>
-            <select class="form-select" name="tingkat_prioritas" required>
+            <select class="custom-select" name="tingkat_prioritas" required>
               <option value="">-- Pilih --</option>
               <option value="Rendah">Rendah</option>
               <option value="Sedang">Sedang</option>
@@ -1038,7 +1038,7 @@ Keseimbangan Mapping
         </div>
 
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
           <button type="submit" class="btn btn-primary">Simpan Temuan</button>
         </div>
       </form>
@@ -1143,9 +1143,7 @@ Keseimbangan Mapping
       document.getElementById('summaryAngkatan').textContent = ang;
       document.getElementById('summaryProdi').textContent = prodi;
       // close modal if open
-      const modalEl = document.getElementById('modalFilter');
-      const bs = bootstrap.Modal.getInstance(modalEl);
-      if(bs) bs.hide();
+      $('#modalFilter').modal('hide');
       // in real app, perform XHR to backend to update data. Here we simply repopulate with same dummy.
       populateRekap();
       populateEws();
